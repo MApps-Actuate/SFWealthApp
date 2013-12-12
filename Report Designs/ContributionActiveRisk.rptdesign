@@ -1,0 +1,1442 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 4.2.3.v20131029-0430 Build &lt;4.2.3.v20131029-0430></property>
+    <property name="units">in</property>
+    <property name="iconFile">/templates/blank_report.gif</property>
+    <property name="bidiLayoutOrientation">ltr</property>
+    <property name="imageDPI">96</property>
+    <method name="onContentUpdate"><![CDATA[var uiOptions = this.getViewer().getUIOptions();
+uiOptions.enableEditReport(false);
+uiOptions.enableDataExtraction(false);
+uiOptions.enableHideShowItems(false);
+uiOptions.enableLinkToThisPage(false);
+uiOptions.enableParameterPage(false);
+uiOptions.enableTOC(false);
+uiOptions.enableToolBar(false);
+uiOptions.enableSaveDesign(false);
+uiOptions.enableSaveDocument(false);
+this.getViewer().setUIOptions(uiOptions);]]></method>
+    <data-sources>
+        <oda-data-source extensionID="org.eclipse.datatools.connectivity.oda.flatfile" name="Portfolio Performance Data Source" id="760">
+            <property name="HOME">Flatfiles/</property>
+            <property name="DELIMTYPE">COMMA</property>
+            <property name="CHARSET">UTF-8</property>
+            <property name="INCLCOLUMNNAME">YES</property>
+            <property name="INCLTYPELINE">NO</property>
+            <property name="TRAILNULLCOLS">NO</property>
+        </oda-data-source>
+    </data-sources>
+    <data-sets>
+        <oda-data-set extensionID="org.eclipse.datatools.connectivity.oda.flatfile.dataSet" name="TS1 Data Set" id="1039">
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">Portfolio Date</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">Portfolio Date</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Common Factor Risk</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">Common Factor Risk</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Currency Risk</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">Currency Risk</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Currency/Market Interaction</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">Currency/Market Interaction</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Emerging Market</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">Emerging Market</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Factor Interaction</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">Factor Interaction</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Industry</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">Industry</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Selection Risk</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">Selection Risk</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Spread</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">Spread</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Style</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">Style</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Term Structure</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">Term Structure</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Covariance</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">Covariance</text-property>
+                </structure>
+            </list-property>
+            <list-property name="filter">
+                <structure>
+                    <property name="operator">ge</property>
+                    <expression name="expr" type="javascript">row["Portfolio Date"]</expression>
+                    <simple-property-list name="value1">
+                        <value type="javascript">"2010-10-31"</value>
+                    </simple-property-list>
+                </structure>
+            </list-property>
+            <list-property name="parameters"/>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">Portfolio Date</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">Common Factor Risk</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">Currency Risk</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">Currency/Market Interaction</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">Emerging Market</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">6</property>
+                        <property name="name">Factor Interaction</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">7</property>
+                        <property name="name">Industry</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">8</property>
+                        <property name="name">Selection Risk</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">9</property>
+                        <property name="name">Spread</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">10</property>
+                        <property name="name">Style</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">11</property>
+                        <property name="name">Term Structure</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">12</property>
+                        <property name="name">Covariance</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Portfolio Performance Data Source</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">Portfolio Date</property>
+                    <property name="nativeName">Portfolio Date</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">Common Factor Risk</property>
+                    <property name="nativeName">Common Factor Risk</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">Currency Risk</property>
+                    <property name="nativeName">Currency Risk</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">Currency/Market Interaction</property>
+                    <property name="nativeName">Currency/Market Interaction</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">5</property>
+                    <property name="name">Emerging Market</property>
+                    <property name="nativeName">Emerging Market</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">6</property>
+                    <property name="name">Factor Interaction</property>
+                    <property name="nativeName">Factor Interaction</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">7</property>
+                    <property name="name">Industry</property>
+                    <property name="nativeName">Industry</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">8</property>
+                    <property name="name">Selection Risk</property>
+                    <property name="nativeName">Selection Risk</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">9</property>
+                    <property name="name">Spread</property>
+                    <property name="nativeName">Spread</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">10</property>
+                    <property name="name">Style</property>
+                    <property name="nativeName">Style</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">11</property>
+                    <property name="name">Term Structure</property>
+                    <property name="nativeName">Term Structure</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">12</property>
+                    <property name="name">Covariance</property>
+                    <property name="nativeName">Covariance</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[select "Portfolio Date", "Common Factor Risk", "Currency Risk", "Currency/Market Interaction", "Emerging Market", "Factor Interaction", "Industry", "Selection Risk", "Spread", "Style", "Term Structure", "Covariance" from "TS1.csv" : {"Portfolio Date","Portfolio Date",STRING;"Common Factor Risk","Common Factor Risk",STRING;"Currency Risk","Currency Risk",STRING;"Currency\/Market Interaction","Currency\/Market Interaction",STRING;"Emerging Market","Emerging Market",STRING;"Factor Interaction","Factor Interaction",STRING;"Industry","Industry",STRING;"Selection Risk","Selection Risk",STRING;"Spread","Spread",STRING;"Style","Style",STRING;"Term Structure","Term Structure",STRING;"Covariance","Covariance",STRING}]]></xml-property>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Portfolio Date</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>91</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Portfolio Date</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Common Factor Risk</design:name>
+              <design:position>2</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>2</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Common Factor Risk</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Currency Risk</design:name>
+              <design:position>3</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>2</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Currency Risk</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Currency/Market Interaction</design:name>
+              <design:position>4</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>2</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Currency/Market Interaction</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Emerging Market</design:name>
+              <design:position>5</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>2</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Emerging Market</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Factor Interaction</design:name>
+              <design:position>6</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>2</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Factor Interaction</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Industry</design:name>
+              <design:position>7</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>2</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Industry</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Selection Risk</design:name>
+              <design:position>8</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>2</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Selection Risk</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Spread</design:name>
+              <design:position>9</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>2</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Spread</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Style</design:name>
+              <design:position>10</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>2</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Style</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Term Structure</design:name>
+              <design:position>11</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>2</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Term Structure</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Covariance</design:name>
+              <design:position>12</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>2</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Covariance</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria/>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+        </oda-data-set>
+    </data-sets>
+    <styles>
+        <style name="report" id="4">
+            <property name="fontFamily">sans-serif</property>
+            <property name="fontSize">10pt</property>
+        </style>
+        <style name="crosstab-cell" id="5">
+            <property name="borderBottomColor">#CCCCCC</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">1pt</property>
+            <property name="borderLeftColor">#CCCCCC</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">1pt</property>
+            <property name="borderRightColor">#CCCCCC</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">1pt</property>
+            <property name="borderTopColor">#CCCCCC</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">1pt</property>
+        </style>
+        <style name="crosstab" id="6">
+            <property name="borderBottomColor">#CCCCCC</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">1pt</property>
+            <property name="borderLeftColor">#CCCCCC</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">1pt</property>
+            <property name="borderRightColor">#CCCCCC</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">1pt</property>
+            <property name="borderTopColor">#CCCCCC</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">1pt</property>
+        </style>
+    </styles>
+    <page-setup>
+        <simple-master-page name="Simple MasterPage" id="2">
+            <page-footer>
+                <text id="3">
+                    <property name="contentType">html</property>
+                    <text-property name="content"><![CDATA[<value-of>new Date()</value-of>]]></text-property>
+                </text>
+            </page-footer>
+        </simple-master-page>
+    </page-setup>
+    <body>
+        <extended-item extensionName="Chart" id="1038">
+            <xml-property name="xmlRepresentation"><![CDATA[<ActuateChart version="2.6.1">
+ <ChartWithAxes version="2.6.1" type="Line Chart" subType="Overlay">
+  <block>
+   <children _type="TitleBlock">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <label>
+     <caption value="% Contribution to Active Risk ">
+      <font name="Arial" size="10.0" bold="false"/>
+     </caption>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </label>
+   </children>
+   <children _type="Plot">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <clientArea>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </clientArea>
+   </children>
+   <children _type="Legend" orientation="0" position="1">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <triggers condition="2">
+     <action type="2">
+      <value _type="SeriesValue" name=""/>
+     </action>
+    </triggers>
+    <clientArea>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </clientArea>
+    <text>
+     <font size="8.0"/>
+    </text>
+    <separator>
+     <color _nil="1"/>
+    </separator>
+    <title>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </title>
+   </children>
+   <bounds _body="0.0,0.0,212.0,130.0"/>
+   <insets _body="3.0,0.0,3.0,0.0"/>
+   <outline>
+    <color _nil="1"/>
+   </outline>
+  </block>
+  <extendedProperties name="enable.area.alt" value="false"/>
+  <extendedProperties name="enable.drill.category" value="true"/>
+  <extendedProperties name="enable.drill.series" value="true"/>
+  <extendedProperties name="jschart.client.script" value=""/>
+  <extendedProperties name="jschart.zoom" value="xy"/>
+  <extendedProperties name="jschart.series.shadow" value="true"/>
+  <sampleData>
+   <baseSampleData dataSetRepresentation="01/05/2000,02/01/2000,04/12/2000,03/12/2000,02/29/2000"/>
+   <orthogonalSampleData dataSetRepresentation="6,4,12,8,10" seriesDefinitionIndex="0"/>
+   <orthogonalSampleData dataSetRepresentation="12.0,8.0,24.0,16.0,20.0" seriesDefinitionIndex="1"/>
+   <orthogonalSampleData dataSetRepresentation="18.0,12.0,36.0,24.0,30.0" seriesDefinitionIndex="2"/>
+   <orthogonalSampleData dataSetRepresentation="24.0,16.0,48.0,32.0,40.0" seriesDefinitionIndex="3"/>
+   <orthogonalSampleData dataSetRepresentation="30.0,20.0,60.0,40.0,50.0" seriesDefinitionIndex="4"/>
+   <orthogonalSampleData dataSetRepresentation="36.0,24.0,72.0,48.0,60.0" seriesDefinitionIndex="5"/>
+   <orthogonalSampleData dataSetRepresentation="42.0,28.0,84.0,56.0,70.0" seriesDefinitionIndex="6"/>
+   <orthogonalSampleData dataSetRepresentation="48.0,32.0,96.0,64.0,80.0" seriesDefinitionIndex="7"/>
+   <orthogonalSampleData dataSetRepresentation="54.0,36.0,108.0,72.0,90.0" seriesDefinitionIndex="8"/>
+   <orthogonalSampleData dataSetRepresentation="60.0,40.0,120.0,80.0,100.0" seriesDefinitionIndex="9"/>
+  </sampleData>
+  <emptyMessage>
+   <caption value="This chart contains no data."/>
+   <background _body=",64,127,127,127"/>
+   <outline>
+    <color _body=",128,127,127,127"/>
+   </outline>
+  </emptyMessage>
+  <axes type="3" staggered="false" interval="3">
+   <title>
+    <background _nil="1"/>
+    <outline>
+     <color _nil="1"/>
+    </outline>
+   </title>
+   <associatedAxes primaryAxis="true" percent="false">
+    <title visible="false">
+     <caption value="Billions">
+      <font size="6.0"/>
+     </caption>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </title>
+    <seriesDefinitions>
+     <query definition=""/>
+     <seriesPalette>
+      <entries _body=",255,0,121,193"/>
+      <entries _body=",255,241,90,34"/>
+      <entries _body=",255,19,181,234"/>
+      <entries _body=",255,250,166,26"/>
+      <entries _body=",255,154,204,0"/>
+      <entries _body=",255,255,204,0"/>
+      <entries _body=",255,51,153,102"/>
+      <entries _body=",255,102,102,153"/>
+      <entries _body=",255,0,128,128"/>
+      <entries _body=",255,244,47,47"/>
+      <entries _body=",255,128,192,128"/>
+      <entries _body=",255,7,146,94"/>
+      <entries _body=",255,0,128,255"/>
+      <entries _body=",255,255,128,192"/>
+      <entries _body=",255,0,255,255"/>
+      <entries _body=",255,255,128,128"/>
+      <entries _body=",255,0,128,192"/>
+      <entries _body=",255,128,128,192"/>
+      <entries _body=",255,255,0,255"/>
+      <entries _body=",255,128,64,64"/>
+      <entries _body=",255,255,128,64"/>
+      <entries _body=",255,80,240,120"/>
+      <entries _body=",255,0,64,128"/>
+      <entries _body=",255,128,0,64"/>
+      <entries _body=",255,255,0,128"/>
+      <entries _body=",255,128,128,64"/>
+      <entries _body=",255,128,128,128"/>
+      <entries _body=",255,255,128,255"/>
+      <entries _body=",255,0,64,0"/>
+      <entries _body=",255,0,0,0"/>
+      <entries _body=",255,255,255,255"/>
+      <entries _body=",255,255,128,0"/>
+     </seriesPalette>
+     <series _type="LineSeries" seriesIdentifier="Covariance" stacked="false">
+      <label>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dataDefinition definition="row[&quot;Covariance&quot;]">
+       <grouping/>
+      </dataDefinition>
+      <dataPoint separator=", ">
+       <components type="1"/>
+      </dataPoint>
+      <triggers condition="6">
+       <action type="1">
+        <value _type="TooltipValue" text="" delay="200"/>
+       </action>
+      </triggers>
+      <curveFitting _nil="1"/>
+      <markers visible="false">
+       <outline/>
+      </markers>
+      <lineAttributes>
+       <color _nil="1"/>
+      </lineAttributes>
+     </series>
+    </seriesDefinitions>
+    <seriesDefinitions>
+     <query definition=""/>
+     <seriesPalette>
+      <entries _body=",255,241,90,34"/>
+      <entries _body=",255,19,181,234"/>
+      <entries _body=",255,250,166,26"/>
+      <entries _body=",255,154,204,0"/>
+      <entries _body=",255,255,204,0"/>
+      <entries _body=",255,51,153,102"/>
+      <entries _body=",255,102,102,153"/>
+      <entries _body=",255,0,128,128"/>
+      <entries _body=",255,244,47,47"/>
+      <entries _body=",255,128,192,128"/>
+      <entries _body=",255,7,146,94"/>
+      <entries _body=",255,0,128,255"/>
+      <entries _body=",255,255,128,192"/>
+      <entries _body=",255,0,255,255"/>
+      <entries _body=",255,255,128,128"/>
+      <entries _body=",255,0,128,192"/>
+      <entries _body=",255,128,128,192"/>
+      <entries _body=",255,255,0,255"/>
+      <entries _body=",255,128,64,64"/>
+      <entries _body=",255,255,128,64"/>
+      <entries _body=",255,80,240,120"/>
+      <entries _body=",255,0,64,128"/>
+      <entries _body=",255,128,0,64"/>
+      <entries _body=",255,255,0,128"/>
+      <entries _body=",255,128,128,64"/>
+      <entries _body=",255,128,128,128"/>
+      <entries _body=",255,255,128,255"/>
+      <entries _body=",255,0,64,0"/>
+      <entries _body=",255,0,0,0"/>
+      <entries _body=",255,255,255,255"/>
+      <entries _body=",255,255,128,0"/>
+      <entries _body=",255,0,121,193"/>
+     </seriesPalette>
+     <series _type="LineSeries" seriesIdentifier="Term Structure" stacked="false">
+      <label>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dataDefinition definition="row[&quot;Term Structure&quot;]">
+       <grouping/>
+      </dataDefinition>
+      <dataPoint separator=", ">
+       <components type="1"/>
+      </dataPoint>
+      <triggers condition="6">
+       <action type="1">
+        <value _type="TooltipValue" text="" delay="200"/>
+       </action>
+      </triggers>
+      <curveFitting _nil="1"/>
+      <markers visible="false">
+       <outline/>
+      </markers>
+      <lineAttributes>
+       <color _nil="1"/>
+      </lineAttributes>
+     </series>
+    </seriesDefinitions>
+    <seriesDefinitions>
+     <query definition=""/>
+     <seriesPalette>
+      <entries _body=",255,19,181,234"/>
+      <entries _body=",255,250,166,26"/>
+      <entries _body=",255,154,204,0"/>
+      <entries _body=",255,255,204,0"/>
+      <entries _body=",255,51,153,102"/>
+      <entries _body=",255,102,102,153"/>
+      <entries _body=",255,0,128,128"/>
+      <entries _body=",255,244,47,47"/>
+      <entries _body=",255,128,192,128"/>
+      <entries _body=",255,7,146,94"/>
+      <entries _body=",255,0,128,255"/>
+      <entries _body=",255,255,128,192"/>
+      <entries _body=",255,0,255,255"/>
+      <entries _body=",255,255,128,128"/>
+      <entries _body=",255,0,128,192"/>
+      <entries _body=",255,128,128,192"/>
+      <entries _body=",255,255,0,255"/>
+      <entries _body=",255,128,64,64"/>
+      <entries _body=",255,255,128,64"/>
+      <entries _body=",255,80,240,120"/>
+      <entries _body=",255,0,64,128"/>
+      <entries _body=",255,128,0,64"/>
+      <entries _body=",255,255,0,128"/>
+      <entries _body=",255,128,128,64"/>
+      <entries _body=",255,128,128,128"/>
+      <entries _body=",255,255,128,255"/>
+      <entries _body=",255,0,64,0"/>
+      <entries _body=",255,0,0,0"/>
+      <entries _body=",255,255,255,255"/>
+      <entries _body=",255,255,128,0"/>
+      <entries _body=",255,0,121,193"/>
+      <entries _body=",255,241,90,34"/>
+     </seriesPalette>
+     <series _type="LineSeries" seriesIdentifier="Style" stacked="false">
+      <label>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dataDefinition definition="row[&quot;Style&quot;]">
+       <grouping/>
+      </dataDefinition>
+      <dataPoint separator=", ">
+       <components type="1"/>
+      </dataPoint>
+      <triggers condition="6">
+       <action type="1">
+        <value _type="TooltipValue" text="" delay="200"/>
+       </action>
+      </triggers>
+      <curveFitting _nil="1"/>
+      <markers visible="false">
+       <outline/>
+      </markers>
+      <lineAttributes>
+       <color _nil="1"/>
+      </lineAttributes>
+     </series>
+    </seriesDefinitions>
+    <seriesDefinitions>
+     <query definition=""/>
+     <seriesPalette>
+      <entries _body=",255,250,166,26"/>
+      <entries _body=",255,154,204,0"/>
+      <entries _body=",255,255,204,0"/>
+      <entries _body=",255,51,153,102"/>
+      <entries _body=",255,102,102,153"/>
+      <entries _body=",255,0,128,128"/>
+      <entries _body=",255,244,47,47"/>
+      <entries _body=",255,128,192,128"/>
+      <entries _body=",255,7,146,94"/>
+      <entries _body=",255,0,128,255"/>
+      <entries _body=",255,255,128,192"/>
+      <entries _body=",255,0,255,255"/>
+      <entries _body=",255,255,128,128"/>
+      <entries _body=",255,0,128,192"/>
+      <entries _body=",255,128,128,192"/>
+      <entries _body=",255,255,0,255"/>
+      <entries _body=",255,128,64,64"/>
+      <entries _body=",255,255,128,64"/>
+      <entries _body=",255,80,240,120"/>
+      <entries _body=",255,0,64,128"/>
+      <entries _body=",255,128,0,64"/>
+      <entries _body=",255,255,0,128"/>
+      <entries _body=",255,128,128,64"/>
+      <entries _body=",255,128,128,128"/>
+      <entries _body=",255,255,128,255"/>
+      <entries _body=",255,0,64,0"/>
+      <entries _body=",255,0,0,0"/>
+      <entries _body=",255,255,255,255"/>
+      <entries _body=",255,255,128,0"/>
+      <entries _body=",255,0,121,193"/>
+      <entries _body=",255,241,90,34"/>
+      <entries _body=",255,19,181,234"/>
+     </seriesPalette>
+     <series _type="LineSeries" seriesIdentifier="Spread" stacked="false">
+      <label>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dataDefinition definition="row[&quot;Spread&quot;]">
+       <grouping/>
+      </dataDefinition>
+      <dataPoint separator=", ">
+       <components type="1"/>
+      </dataPoint>
+      <triggers condition="6">
+       <action type="1">
+        <value _type="TooltipValue" text="" delay="200"/>
+       </action>
+      </triggers>
+      <curveFitting _nil="1"/>
+      <markers visible="false">
+       <outline/>
+      </markers>
+      <lineAttributes>
+       <color _nil="1"/>
+      </lineAttributes>
+     </series>
+    </seriesDefinitions>
+    <seriesDefinitions>
+     <query definition=""/>
+     <seriesPalette>
+      <entries _body=",255,154,204,0"/>
+      <entries _body=",255,255,204,0"/>
+      <entries _body=",255,51,153,102"/>
+      <entries _body=",255,102,102,153"/>
+      <entries _body=",255,0,128,128"/>
+      <entries _body=",255,244,47,47"/>
+      <entries _body=",255,128,192,128"/>
+      <entries _body=",255,7,146,94"/>
+      <entries _body=",255,0,128,255"/>
+      <entries _body=",255,255,128,192"/>
+      <entries _body=",255,0,255,255"/>
+      <entries _body=",255,255,128,128"/>
+      <entries _body=",255,0,128,192"/>
+      <entries _body=",255,128,128,192"/>
+      <entries _body=",255,255,0,255"/>
+      <entries _body=",255,128,64,64"/>
+      <entries _body=",255,255,128,64"/>
+      <entries _body=",255,80,240,120"/>
+      <entries _body=",255,0,64,128"/>
+      <entries _body=",255,128,0,64"/>
+      <entries _body=",255,255,0,128"/>
+      <entries _body=",255,128,128,64"/>
+      <entries _body=",255,128,128,128"/>
+      <entries _body=",255,255,128,255"/>
+      <entries _body=",255,0,64,0"/>
+      <entries _body=",255,0,0,0"/>
+      <entries _body=",255,255,255,255"/>
+      <entries _body=",255,255,128,0"/>
+      <entries _body=",255,0,121,193"/>
+      <entries _body=",255,241,90,34"/>
+      <entries _body=",255,19,181,234"/>
+      <entries _body=",255,250,166,26"/>
+     </seriesPalette>
+     <series _type="LineSeries" seriesIdentifier="Selection Risk" stacked="false">
+      <label>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dataDefinition definition="row[&quot;Selection Risk&quot;]">
+       <grouping/>
+      </dataDefinition>
+      <dataPoint separator=", ">
+       <components type="1"/>
+      </dataPoint>
+      <triggers condition="6">
+       <action type="1">
+        <value _type="TooltipValue" text="" delay="200"/>
+       </action>
+      </triggers>
+      <curveFitting _nil="1"/>
+      <markers visible="false">
+       <outline/>
+      </markers>
+      <lineAttributes>
+       <color _nil="1"/>
+      </lineAttributes>
+     </series>
+    </seriesDefinitions>
+    <seriesDefinitions>
+     <query definition=""/>
+     <seriesPalette>
+      <entries _body=",255,255,204,0"/>
+      <entries _body=",255,51,153,102"/>
+      <entries _body=",255,102,102,153"/>
+      <entries _body=",255,0,128,128"/>
+      <entries _body=",255,244,47,47"/>
+      <entries _body=",255,128,192,128"/>
+      <entries _body=",255,7,146,94"/>
+      <entries _body=",255,0,128,255"/>
+      <entries _body=",255,255,128,192"/>
+      <entries _body=",255,0,255,255"/>
+      <entries _body=",255,255,128,128"/>
+      <entries _body=",255,0,128,192"/>
+      <entries _body=",255,128,128,192"/>
+      <entries _body=",255,255,0,255"/>
+      <entries _body=",255,128,64,64"/>
+      <entries _body=",255,255,128,64"/>
+      <entries _body=",255,80,240,120"/>
+      <entries _body=",255,0,64,128"/>
+      <entries _body=",255,128,0,64"/>
+      <entries _body=",255,255,0,128"/>
+      <entries _body=",255,128,128,64"/>
+      <entries _body=",255,128,128,128"/>
+      <entries _body=",255,255,128,255"/>
+      <entries _body=",255,0,64,0"/>
+      <entries _body=",255,0,0,0"/>
+      <entries _body=",255,255,255,255"/>
+      <entries _body=",255,255,128,0"/>
+      <entries _body=",255,0,121,193"/>
+      <entries _body=",255,241,90,34"/>
+      <entries _body=",255,19,181,234"/>
+      <entries _body=",255,250,166,26"/>
+      <entries _body=",255,154,204,0"/>
+     </seriesPalette>
+     <series _type="LineSeries" seriesIdentifier="Industry" stacked="false">
+      <label>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dataDefinition definition="row[&quot;Industry&quot;]">
+       <grouping/>
+      </dataDefinition>
+      <dataPoint separator=", ">
+       <components type="1"/>
+      </dataPoint>
+      <triggers condition="6">
+       <action type="1">
+        <value _type="TooltipValue" text="" delay="200"/>
+       </action>
+      </triggers>
+      <curveFitting _nil="1"/>
+      <markers visible="false">
+       <outline/>
+      </markers>
+      <lineAttributes>
+       <color _nil="1"/>
+      </lineAttributes>
+     </series>
+    </seriesDefinitions>
+    <seriesDefinitions>
+     <query definition=""/>
+     <seriesPalette>
+      <entries _body=",255,51,153,102"/>
+      <entries _body=",255,102,102,153"/>
+      <entries _body=",255,0,128,128"/>
+      <entries _body=",255,244,47,47"/>
+      <entries _body=",255,128,192,128"/>
+      <entries _body=",255,7,146,94"/>
+      <entries _body=",255,0,128,255"/>
+      <entries _body=",255,255,128,192"/>
+      <entries _body=",255,0,255,255"/>
+      <entries _body=",255,255,128,128"/>
+      <entries _body=",255,0,128,192"/>
+      <entries _body=",255,128,128,192"/>
+      <entries _body=",255,255,0,255"/>
+      <entries _body=",255,128,64,64"/>
+      <entries _body=",255,255,128,64"/>
+      <entries _body=",255,80,240,120"/>
+      <entries _body=",255,0,64,128"/>
+      <entries _body=",255,128,0,64"/>
+      <entries _body=",255,255,0,128"/>
+      <entries _body=",255,128,128,64"/>
+      <entries _body=",255,128,128,128"/>
+      <entries _body=",255,255,128,255"/>
+      <entries _body=",255,0,64,0"/>
+      <entries _body=",255,0,0,0"/>
+      <entries _body=",255,255,255,255"/>
+      <entries _body=",255,255,128,0"/>
+      <entries _body=",255,0,121,193"/>
+      <entries _body=",255,241,90,34"/>
+      <entries _body=",255,19,181,234"/>
+      <entries _body=",255,250,166,26"/>
+      <entries _body=",255,154,204,0"/>
+      <entries _body=",255,255,204,0"/>
+     </seriesPalette>
+     <series _type="LineSeries" seriesIdentifier="Factor Interaction" stacked="false">
+      <label>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dataDefinition definition="row[&quot;Factor Interaction&quot;]">
+       <grouping/>
+      </dataDefinition>
+      <dataPoint separator=", ">
+       <components type="1"/>
+      </dataPoint>
+      <triggers condition="6">
+       <action type="1">
+        <value _type="TooltipValue" text="" delay="200"/>
+       </action>
+      </triggers>
+      <curveFitting _nil="1"/>
+      <markers visible="false">
+       <outline/>
+      </markers>
+      <lineAttributes>
+       <color _nil="1"/>
+      </lineAttributes>
+     </series>
+    </seriesDefinitions>
+    <seriesDefinitions>
+     <query definition=""/>
+     <seriesPalette>
+      <entries _body=",255,102,102,153"/>
+      <entries _body=",255,0,128,128"/>
+      <entries _body=",255,244,47,47"/>
+      <entries _body=",255,128,192,128"/>
+      <entries _body=",255,7,146,94"/>
+      <entries _body=",255,0,128,255"/>
+      <entries _body=",255,255,128,192"/>
+      <entries _body=",255,0,255,255"/>
+      <entries _body=",255,255,128,128"/>
+      <entries _body=",255,0,128,192"/>
+      <entries _body=",255,128,128,192"/>
+      <entries _body=",255,255,0,255"/>
+      <entries _body=",255,128,64,64"/>
+      <entries _body=",255,255,128,64"/>
+      <entries _body=",255,80,240,120"/>
+      <entries _body=",255,0,64,128"/>
+      <entries _body=",255,128,0,64"/>
+      <entries _body=",255,255,0,128"/>
+      <entries _body=",255,128,128,64"/>
+      <entries _body=",255,128,128,128"/>
+      <entries _body=",255,255,128,255"/>
+      <entries _body=",255,0,64,0"/>
+      <entries _body=",255,0,0,0"/>
+      <entries _body=",255,255,255,255"/>
+      <entries _body=",255,255,128,0"/>
+      <entries _body=",255,0,121,193"/>
+      <entries _body=",255,241,90,34"/>
+      <entries _body=",255,19,181,234"/>
+      <entries _body=",255,250,166,26"/>
+      <entries _body=",255,154,204,0"/>
+      <entries _body=",255,255,204,0"/>
+      <entries _body=",255,51,153,102"/>
+     </seriesPalette>
+     <series _type="LineSeries" seriesIdentifier="Emerging Markets" stacked="false">
+      <label>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dataDefinition definition="row[&quot;Emerging Market&quot;]">
+       <grouping/>
+      </dataDefinition>
+      <dataPoint separator=", ">
+       <components type="1"/>
+      </dataPoint>
+      <triggers condition="6">
+       <action type="1">
+        <value _type="TooltipValue" text="" delay="200"/>
+       </action>
+      </triggers>
+      <curveFitting _nil="1"/>
+      <markers visible="false">
+       <outline/>
+      </markers>
+      <lineAttributes>
+       <color _nil="1"/>
+      </lineAttributes>
+     </series>
+    </seriesDefinitions>
+    <seriesDefinitions>
+     <query definition=""/>
+     <seriesPalette>
+      <entries _body=",255,0,128,128"/>
+      <entries _body=",255,244,47,47"/>
+      <entries _body=",255,128,192,128"/>
+      <entries _body=",255,7,146,94"/>
+      <entries _body=",255,0,128,255"/>
+      <entries _body=",255,255,128,192"/>
+      <entries _body=",255,0,255,255"/>
+      <entries _body=",255,255,128,128"/>
+      <entries _body=",255,0,128,192"/>
+      <entries _body=",255,128,128,192"/>
+      <entries _body=",255,255,0,255"/>
+      <entries _body=",255,128,64,64"/>
+      <entries _body=",255,255,128,64"/>
+      <entries _body=",255,80,240,120"/>
+      <entries _body=",255,0,64,128"/>
+      <entries _body=",255,128,0,64"/>
+      <entries _body=",255,255,0,128"/>
+      <entries _body=",255,128,128,64"/>
+      <entries _body=",255,128,128,128"/>
+      <entries _body=",255,255,128,255"/>
+      <entries _body=",255,0,64,0"/>
+      <entries _body=",255,0,0,0"/>
+      <entries _body=",255,255,255,255"/>
+      <entries _body=",255,255,128,0"/>
+      <entries _body=",255,0,121,193"/>
+      <entries _body=",255,241,90,34"/>
+      <entries _body=",255,19,181,234"/>
+      <entries _body=",255,250,166,26"/>
+      <entries _body=",255,154,204,0"/>
+      <entries _body=",255,255,204,0"/>
+      <entries _body=",255,51,153,102"/>
+      <entries _body=",255,102,102,153"/>
+     </seriesPalette>
+     <series _type="LineSeries" seriesIdentifier="Currenct/Market Interaction" stacked="false">
+      <label>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dataDefinition definition="row[&quot;Currency/Market Interaction&quot;]">
+       <grouping/>
+      </dataDefinition>
+      <dataPoint separator=", ">
+       <components type="1"/>
+      </dataPoint>
+      <triggers condition="6">
+       <action type="1">
+        <value _type="TooltipValue" text="" delay="200"/>
+       </action>
+      </triggers>
+      <curveFitting _nil="1"/>
+      <markers visible="false">
+       <outline/>
+      </markers>
+      <lineAttributes>
+       <color _nil="1"/>
+      </lineAttributes>
+     </series>
+    </seriesDefinitions>
+    <seriesDefinitions>
+     <query definition=""/>
+     <seriesPalette>
+      <entries _body=",255,244,47,47"/>
+      <entries _body=",255,128,192,128"/>
+      <entries _body=",255,7,146,94"/>
+      <entries _body=",255,0,128,255"/>
+      <entries _body=",255,255,128,192"/>
+      <entries _body=",255,0,255,255"/>
+      <entries _body=",255,255,128,128"/>
+      <entries _body=",255,0,128,192"/>
+      <entries _body=",255,128,128,192"/>
+      <entries _body=",255,255,0,255"/>
+      <entries _body=",255,128,64,64"/>
+      <entries _body=",255,255,128,64"/>
+      <entries _body=",255,80,240,120"/>
+      <entries _body=",255,0,64,128"/>
+      <entries _body=",255,128,0,64"/>
+      <entries _body=",255,255,0,128"/>
+      <entries _body=",255,128,128,64"/>
+      <entries _body=",255,128,128,128"/>
+      <entries _body=",255,255,128,255"/>
+      <entries _body=",255,0,64,0"/>
+      <entries _body=",255,0,0,0"/>
+      <entries _body=",255,255,255,255"/>
+      <entries _body=",255,255,128,0"/>
+      <entries _body=",255,0,121,193"/>
+      <entries _body=",255,241,90,34"/>
+      <entries _body=",255,19,181,234"/>
+      <entries _body=",255,250,166,26"/>
+      <entries _body=",255,154,204,0"/>
+      <entries _body=",255,255,204,0"/>
+      <entries _body=",255,51,153,102"/>
+      <entries _body=",255,102,102,153"/>
+      <entries _body=",255,0,128,128"/>
+     </seriesPalette>
+     <series _type="LineSeries" seriesIdentifier="Currency Risk" stacked="false">
+      <label>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dataDefinition definition="row[&quot;Currency Risk&quot;]">
+       <grouping/>
+      </dataDefinition>
+      <dataPoint separator=", ">
+       <components type="1"/>
+      </dataPoint>
+      <triggers condition="6">
+       <action type="1">
+        <value _type="TooltipValue" text="" delay="200"/>
+       </action>
+      </triggers>
+      <curveFitting _nil="1"/>
+      <markers visible="false">
+       <outline/>
+      </markers>
+      <lineAttributes>
+       <color _nil="1"/>
+      </lineAttributes>
+     </series>
+    </seriesDefinitions>
+    <lineAttributes>
+     <color _nil="1"/>
+    </lineAttributes>
+    <label>
+     <caption>
+      <font size="8.0"/>
+     </caption>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </label>
+    <formatSpecifier _type="NumberFormatSpecifier" prefix="" suffix="%" fractionDigits="2"/>
+    <majorGrid>
+     <lineAttributes visible="true">
+      <color _nil="1"/>
+     </lineAttributes>
+     <tickAttributes>
+      <color _nil="1"/>
+     </tickAttributes>
+    </majorGrid>
+    <minorGrid>
+     <lineAttributes visible="true">
+      <color _nil="1"/>
+     </lineAttributes>
+     <tickAttributes>
+      <color _nil="1"/>
+     </tickAttributes>
+    </minorGrid>
+    <origin>
+     <value _nil="1"/>
+    </origin>
+   </associatedAxes>
+   <seriesDefinitions>
+    <query definition=""/>
+    <seriesPalette>
+     <entries _body=",255,0,121,193"/>
+     <entries _body=",255,241,90,34"/>
+     <entries _body=",255,19,181,234"/>
+     <entries _body=",255,250,166,26"/>
+     <entries _body=",255,154,204,0"/>
+     <entries _body=",255,255,204,0"/>
+     <entries _body=",255,51,153,102"/>
+     <entries _body=",255,102,102,153"/>
+     <entries _body=",255,0,128,128"/>
+     <entries _body=",255,244,47,47"/>
+     <entries _body=",255,128,192,128"/>
+     <entries _body=",255,7,146,94"/>
+     <entries _body=",255,0,128,255"/>
+     <entries _body=",255,255,128,192"/>
+     <entries _body=",255,0,255,255"/>
+     <entries _body=",255,255,128,128"/>
+     <entries _body=",255,0,128,192"/>
+     <entries _body=",255,128,128,192"/>
+     <entries _body=",255,255,0,255"/>
+     <entries _body=",255,128,64,64"/>
+     <entries _body=",255,255,128,64"/>
+     <entries _body=",255,80,240,120"/>
+     <entries _body=",255,0,64,128"/>
+     <entries _body=",255,128,0,64"/>
+     <entries _body=",255,255,0,128"/>
+     <entries _body=",255,128,128,64"/>
+     <entries _body=",255,128,128,128"/>
+     <entries _body=",255,255,128,255"/>
+     <entries _body=",255,0,64,0"/>
+     <entries _body=",255,0,0,0"/>
+     <entries _body=",255,255,255,255"/>
+     <entries _body=",255,255,128,0"/>
+    </seriesPalette>
+    <series seriesIdentifier="">
+     <label>
+      <background _nil="1"/>
+      <outline>
+       <color _nil="1"/>
+      </outline>
+     </label>
+     <dataDefinition definition="row[&quot;Portfolio Date&quot;]"/>
+     <dataPoint separator=", ">
+      <components type="1"/>
+     </dataPoint>
+     <curveFitting _nil="1"/>
+    </series>
+    <grouping enabled="true" groupingUnit="5" groupType="1"/>
+    <sortKey/>
+   </seriesDefinitions>
+   <lineAttributes>
+    <color _nil="1"/>
+   </lineAttributes>
+   <label>
+    <caption>
+     <font size="8.0"/>
+    </caption>
+    <background _nil="1"/>
+    <outline>
+     <color _nil="1"/>
+    </outline>
+   </label>
+   <formatSpecifier _type="JavaDateFormatSpecifier" pattern="M/yy"/>
+   <majorGrid>
+    <lineAttributes>
+     <color _nil="1"/>
+    </lineAttributes>
+    <tickAttributes>
+     <color _nil="1"/>
+    </tickAttributes>
+   </majorGrid>
+   <minorGrid>
+    <lineAttributes>
+     <color _nil="1"/>
+    </lineAttributes>
+    <tickAttributes>
+     <color _nil="1"/>
+    </tickAttributes>
+   </minorGrid>
+   <origin>
+    <value _nil="1"/>
+   </origin>
+  </axes>
+  <rotation>
+   <angles/>
+  </rotation>
+ </ChartWithAxes>
+</ActuateChart>
+]]></xml-property>
+            <property name="outputFormat">JS</property>
+            <list-property name="filter">
+                <structure>
+                    <property name="operator">ge</property>
+                    <expression name="expr" type="javascript">row["Portfolio Date"]</expression>
+                    <simple-property-list name="value1">
+                        <value type="javascript">"2011-01-31"</value>
+                    </simple-property-list>
+                    <property name="updateAggregation">true</property>
+                </structure>
+            </list-property>
+            <property name="inheritColumns">false</property>
+            <property name="height">4.854166666666667in</property>
+            <property name="width">7.916666666666667in</property>
+            <property name="dataSet">TS1 Data Set</property>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">Portfolio Date</property>
+                    <expression name="expression" type="javascript">dataSetRow["Portfolio Date"]</expression>
+                    <property name="dataType">date</property>
+                </structure>
+                <structure>
+                    <property name="name">Common Factor Risk</property>
+                    <expression name="expression" type="javascript">dataSetRow["Common Factor Risk"]</expression>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="name">Currency Risk</property>
+                    <expression name="expression" type="javascript">dataSetRow["Currency Risk"]</expression>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="name">Currency/Market Interaction</property>
+                    <expression name="expression" type="javascript">dataSetRow["Currency/Market Interaction"]</expression>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="name">Emerging Market</property>
+                    <expression name="expression" type="javascript">dataSetRow["Emerging Market"]</expression>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="name">Factor Interaction</property>
+                    <expression name="expression" type="javascript">dataSetRow["Factor Interaction"]</expression>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="name">Industry</property>
+                    <expression name="expression" type="javascript">dataSetRow["Industry"]</expression>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="name">Selection Risk</property>
+                    <expression name="expression" type="javascript">dataSetRow["Selection Risk"]</expression>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="name">Spread</property>
+                    <expression name="expression" type="javascript">dataSetRow["Spread"]</expression>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="name">Style</property>
+                    <expression name="expression" type="javascript">dataSetRow["Style"]</expression>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="name">Term Structure</property>
+                    <expression name="expression" type="javascript">dataSetRow["Term Structure"]</expression>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="name">Covariance</property>
+                    <expression name="expression" type="javascript">dataSetRow["Covariance"]</expression>
+                    <property name="dataType">decimal</property>
+                </structure>
+            </list-property>
+        </extended-item>
+    </body>
+</report>

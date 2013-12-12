@@ -1,0 +1,20 @@
+SFWealthApp Test Plan
+
+On __DanMorris_dashboard.dashboard:
+
+Home Tab
+- Make sure all 3 gadgets display content
+- On Index Summary gadget (PortfolioCharts.rptdocument), zoom on charts and reset
+- Click on bottom chart to launch ContributionActiveRisk.rptdocument in new window
+- Zoom, reset and tooltip should work in ContributionActiveRisk.rptdocument
+  
+My Spending History Tab
+- Content should be displayed in 6 gadgets and 2 data selectors
+- In My Merchants gadget, clicking on a vendor bar launches detail report (MySpendDetail.rptdesign) for category of merchants
+- In MySpendDetail.rptdesign, clicking on link in last column displays bestbank.rptdocument in same window
+- In My Spend This Period gadget, zoom, reset and line click changes x-axis from monthly to daily
+- In My Alerts gadget, clicking on Investment & Spend Summary link launches My Portfolio.rptdocument in new window
+
+
+
+

@@ -1,0 +1,3659 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 4.2.3.v20131029-0430 Build &lt;4.2.3.v20131029-0430></property>
+    <property name="units">in</property>
+    <property name="iconFile">/templates/blank_report.gif</property>
+    <property name="bidiLayoutOrientation">ltr</property>
+    <property name="imageDPI">96</property>
+    <list-property name="libraries">
+        <structure>
+            <property name="fileName">/ThemesReportItems.rptlibrary</property>
+            <property name="namespace">ThemesReportItems</property>
+        </structure>
+        <structure>
+            <property name="fileName">/Report Libraries/Column Header Sorter.rptlibrary</property>
+            <property name="namespace">Column Header Sorter</property>
+        </structure>
+    </list-property>
+    <method name="onContentUpdate"><![CDATA[var uiOptions = this.getViewer().getUIOptions();
+uiOptions.enableEditReport(false);
+uiOptions.enableDataExtraction(false);
+uiOptions.enableHideShowItems(false);
+uiOptions.enableLinkToThisPage(false);
+uiOptions.enableParameterPage(false);
+uiOptions.enableTOC(false);
+uiOptions.enableSaveDesign(false);
+uiOptions.enableSaveDocument(false);
+//this.getViewer().setUIOptions(uiOptions);
+
+//if (!this.getViewer().isInteractive())
+//	this.getViewer().enableIV();]]></method>
+    <data-sources>
+        <oda-data-source extensionID="org.eclipse.datatools.connectivity.oda.flatfile" name="Portfolio Performance Data Source" id="760">
+            <property name="HOME">Flatfiles/</property>
+            <property name="DELIMTYPE">COMMA</property>
+            <property name="CHARSET">UTF-8</property>
+            <property name="INCLCOLUMNNAME">YES</property>
+            <property name="INCLTYPELINE">NO</property>
+            <property name="TRAILNULLCOLS">NO</property>
+        </oda-data-source>
+    </data-sources>
+    <data-sets>
+        <oda-data-set extensionID="org.eclipse.datatools.connectivity.oda.flatfile.dataSet" name="Portfolio Performance Data Set" id="761">
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">Portfolio</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">Portfolio</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Ave#Assets</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">Ave#Assets</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Ave#AssetsRejected</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">Ave#AssetsRejected</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">AveActiveTotalRisk</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">AveActiveTotalRisk</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">AveMarketValue</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">AveMarketValue</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Current#Assets</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">Current#Assets</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Current#AssetsRejected</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">Current#AssetsRejected</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">CurrentActiveTotalRisk</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">CurrentActiveTotalRisk</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">CurrentMarketValue</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">CurrentMarketValue</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Last#Assets</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">Last#Assets</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Last#AssetsRejected</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">Last#AssetsRejected</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">LastActiveTotalRisk</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">LastActiveTotalRisk</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">LastMarketValue</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">LastMarketValue</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">AnnualRateOfReturn</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">AnnualRateOfReturn</text-property>
+                </structure>
+            </list-property>
+            <list-property name="parameters"/>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">Portfolio</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">Ave#Assets</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">Ave#AssetsRejected</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">AveActiveTotalRisk</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">AveMarketValue</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">6</property>
+                        <property name="name">Current#Assets</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">7</property>
+                        <property name="name">Current#AssetsRejected</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">8</property>
+                        <property name="name">CurrentActiveTotalRisk</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">9</property>
+                        <property name="name">CurrentMarketValue</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">10</property>
+                        <property name="name">Last#Assets</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">11</property>
+                        <property name="name">Last#AssetsRejected</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">12</property>
+                        <property name="name">LastActiveTotalRisk</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">13</property>
+                        <property name="name">LastMarketValue</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">14</property>
+                        <property name="name">AnnualRateOfReturn</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Portfolio Performance Data Source</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">Portfolio</property>
+                    <property name="nativeName">Portfolio</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">Ave#Assets</property>
+                    <property name="nativeName">Ave#Assets</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">Ave#AssetsRejected</property>
+                    <property name="nativeName">Ave#AssetsRejected</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">AveActiveTotalRisk</property>
+                    <property name="nativeName">AveActiveTotalRisk</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">5</property>
+                    <property name="name">AveMarketValue</property>
+                    <property name="nativeName">AveMarketValue</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">6</property>
+                    <property name="name">Current#Assets</property>
+                    <property name="nativeName">Current#Assets</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">7</property>
+                    <property name="name">Current#AssetsRejected</property>
+                    <property name="nativeName">Current#AssetsRejected</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">8</property>
+                    <property name="name">CurrentActiveTotalRisk</property>
+                    <property name="nativeName">CurrentActiveTotalRisk</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">9</property>
+                    <property name="name">CurrentMarketValue</property>
+                    <property name="nativeName">CurrentMarketValue</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">10</property>
+                    <property name="name">Last#Assets</property>
+                    <property name="nativeName">Last#Assets</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">11</property>
+                    <property name="name">Last#AssetsRejected</property>
+                    <property name="nativeName">Last#AssetsRejected</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">12</property>
+                    <property name="name">LastActiveTotalRisk</property>
+                    <property name="nativeName">LastActiveTotalRisk</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">13</property>
+                    <property name="name">LastMarketValue</property>
+                    <property name="nativeName">LastMarketValue</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">14</property>
+                    <property name="name">AnnualRateOfReturn</property>
+                    <property name="nativeName">AnnualRateOfReturn</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[select "Portfolio", "Ave#Assets", "Ave#AssetsRejected", "AveActiveTotalRisk", "AveMarketValue", "Current#Assets", "Current#AssetsRejected", "CurrentActiveTotalRisk", "CurrentMarketValue", "Last#Assets", "Last#AssetsRejected", "LastActiveTotalRisk", "LastMarketValue", "AnnualRateOfReturn" from "PortfolioPerformance.csv" : {"Portfolio","Portfolio",STRING;"Ave#Assets","Ave#Assets",STRING;"Ave#AssetsRejected","Ave#AssetsRejected",STRING;"AveActiveTotalRisk","AveActiveTotalRisk",STRING;"AveMarketValue","AveMarketValue",STRING;"Current#Assets","Current#Assets",STRING;"Current#AssetsRejected","Current#AssetsRejected",STRING;"CurrentActiveTotalRisk","CurrentActiveTotalRisk",STRING;"CurrentMarketValue","CurrentMarketValue",STRING;"Last#Assets","Last#Assets",STRING;"Last#AssetsRejected","Last#AssetsRejected",STRING;"LastActiveTotalRisk","LastActiveTotalRisk",STRING;"LastMarketValue","LastMarketValue",STRING;"AnnualRateOfReturn","AnnualRateOfReturn",STRING}]]></xml-property>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Portfolio</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Portfolio</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Ave#Assets</design:name>
+              <design:position>2</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>2</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Ave#Assets</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Ave#AssetsRejected</design:name>
+              <design:position>3</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>2</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Ave#AssetsRejected</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>AveActiveTotalRisk</design:name>
+              <design:position>4</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>2</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>AveActiveTotalRisk</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>AveMarketValue</design:name>
+              <design:position>5</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>2</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>AveMarketValue</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Current#Assets</design:name>
+              <design:position>6</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>2</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Current#Assets</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Current#AssetsRejected</design:name>
+              <design:position>7</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>2</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Current#AssetsRejected</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>CurrentActiveTotalRisk</design:name>
+              <design:position>8</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>2</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>CurrentActiveTotalRisk</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>CurrentMarketValue</design:name>
+              <design:position>9</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>2</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>CurrentMarketValue</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Last#Assets</design:name>
+              <design:position>10</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>2</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Last#Assets</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Last#AssetsRejected</design:name>
+              <design:position>11</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>2</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Last#AssetsRejected</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>LastActiveTotalRisk</design:name>
+              <design:position>12</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>2</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>LastActiveTotalRisk</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>LastMarketValue</design:name>
+              <design:position>13</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>2</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>LastMarketValue</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>AnnualRateOfReturn</design:name>
+              <design:position>14</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>2</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>AnnualRateOfReturn</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria/>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+        </oda-data-set>
+        <oda-data-set extensionID="org.eclipse.datatools.connectivity.oda.flatfile.dataSet" name="Portfolio Performance Detail Data Set" id="762">
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">Portfolio</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">Portfolio</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Portfolio Date</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">Portfolio Date</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Mkt Value</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">Mkt Value</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Active Total Risk</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">Active Total Risk</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName"># Assets</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading"># Assets</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName"># Assets Rejected</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading"># Assets Rejected</text-property>
+                </structure>
+            </list-property>
+            <list-property name="parameters"/>
+            <list-property name="sortHints">
+                <structure>
+                    <property name="columnName">dataSetRow["Portfolio Date"]</property>
+                    <property name="direction">asc</property>
+                    <property name="isOptional">true</property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">Portfolio</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">Portfolio Date</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">Mkt Value</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">Active Total Risk</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name"># Assets</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">6</property>
+                        <property name="name"># Assets Rejected</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Portfolio Performance Data Source</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">Portfolio</property>
+                    <property name="nativeName">Portfolio</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">Portfolio Date</property>
+                    <property name="nativeName">Portfolio Date</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">Mkt Value</property>
+                    <property name="nativeName">Mkt Value</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">Active Total Risk</property>
+                    <property name="nativeName">Active Total Risk</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">5</property>
+                    <property name="name"># Assets</property>
+                    <property name="nativeName"># Assets</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">6</property>
+                    <property name="name"># Assets Rejected</property>
+                    <property name="nativeName"># Assets Rejected</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[select "Portfolio", "Portfolio Date", "Mkt Value", "Active Total Risk", "# Assets", "# Assets Rejected" from "PortfolioPerformanceDetail.csv" : {"Portfolio","Portfolio",STRING;"Portfolio Date","Portfolio Date",STRING;"Mkt Value","Mkt Value",STRING;"Active Total Risk","Active Total Risk",STRING;"# Assets","# Assets",STRING;"# Assets Rejected","# Assets Rejected",STRING}]]></xml-property>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Portfolio</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Portfolio</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Portfolio Date</design:name>
+              <design:position>2</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Portfolio Date</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Mkt Value</design:name>
+              <design:position>3</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>2</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Mkt Value</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Active Total Risk</design:name>
+              <design:position>4</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>2</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Active Total Risk</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name># Assets</design:name>
+              <design:position>5</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>2</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label># Assets</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name># Assets Rejected</design:name>
+              <design:position>6</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>2</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label># Assets Rejected</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria/>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+        </oda-data-set>
+        <oda-data-set extensionID="org.eclipse.datatools.connectivity.oda.flatfile.dataSet" name="Portfolio Rate of Return Data Set" id="763">
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">Portfolio Date</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">Portfolio Date</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Portfolio</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">Portfolio</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Mkt Value</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">Mkt Value</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Monthly Rate of Return %</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">Monthly Rate of Return %</text-property>
+                </structure>
+            </list-property>
+            <list-property name="parameters"/>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">Portfolio Date</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">Portfolio</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">Mkt Value</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">Monthly Rate of Return %</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Portfolio Performance Data Source</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">Portfolio Date</property>
+                    <property name="nativeName">Portfolio Date</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">Portfolio</property>
+                    <property name="nativeName">Portfolio</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">Mkt Value</property>
+                    <property name="nativeName">Mkt Value</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">Monthly Rate of Return %</property>
+                    <property name="nativeName">Monthly Rate of Return %</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[select "Portfolio Date", "Portfolio", "Mkt Value", "Monthly Rate of Return %" from "PortfolioPerformanceRateReturn.csv" : {"Portfolio Date","Portfolio Date",STRING;"Portfolio","Portfolio",STRING;"Mkt Value","Mkt Value",STRING;"Monthly Rate of Return %","Monthly Rate of Return %",STRING}]]></xml-property>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Portfolio Date</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Portfolio Date</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Portfolio</design:name>
+              <design:position>2</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Portfolio</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Mkt Value</design:name>
+              <design:position>3</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>2</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Mkt Value</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Monthly Rate of Return %</design:name>
+              <design:position>4</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>2</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Monthly Rate of Return %</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria/>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+        </oda-data-set>
+        <oda-data-set extensionID="org.eclipse.datatools.connectivity.oda.flatfile.dataSet" name="Total Plan Data Set" id="1031">
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">Mkt_Value</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">Mkt_Value</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Active_Weight</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">Active_Weight</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Total_Risk</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">Total_Risk</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Active_Risk</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">Active_Risk</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Value-At-Risk-Mkt</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">Value-At-Risk-Mkt</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Value-At-Risk</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">Value-At-Risk</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Beta(Bmk)</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">Beta(Bmk)</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Effective_Duration</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">Effective_Duration</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Portfolio_Date</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">Portfolio_Date</text-property>
+                </structure>
+            </list-property>
+            <list-property name="parameters"/>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">Mkt_Value</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">Active_Weight</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">Total_Risk</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">Active_Risk</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">Value-At-Risk-Mkt</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">6</property>
+                        <property name="name">Value-At-Risk</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">7</property>
+                        <property name="name">Beta(Bmk)</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">8</property>
+                        <property name="name">Effective_Duration</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">9</property>
+                        <property name="name">Portfolio_Date</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Portfolio Performance Data Source</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">Mkt_Value</property>
+                    <property name="nativeName">Mkt_Value</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">Active_Weight</property>
+                    <property name="nativeName">Active_Weight</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">Total_Risk</property>
+                    <property name="nativeName">Total_Risk</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">Active_Risk</property>
+                    <property name="nativeName">Active_Risk</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">5</property>
+                    <property name="name">Value-At-Risk-Mkt</property>
+                    <property name="nativeName">Value-At-Risk-Mkt</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">6</property>
+                    <property name="name">Value-At-Risk</property>
+                    <property name="nativeName">Value-At-Risk</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">7</property>
+                    <property name="name">Beta(Bmk)</property>
+                    <property name="nativeName">Beta(Bmk)</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">8</property>
+                    <property name="name">Effective_Duration</property>
+                    <property name="nativeName">Effective_Duration</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">9</property>
+                    <property name="name">Portfolio_Date</property>
+                    <property name="nativeName">Portfolio_Date</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[select "Mkt_Value", "Active_Weight", "Total_Risk", "Active_Risk", "Value-At-Risk-Mkt", "Value-At-Risk", "Beta(Bmk)", "Effective_Duration", "Portfolio_Date" from "TotalPlan.csv" : {"Mkt_Value","Mkt_Value",STRING;"Active_Weight","Active_Weight",STRING;"Total_Risk","Total_Risk",STRING;"Active_Risk","Active_Risk",STRING;"Value-At-Risk-Mkt","Value-At-Risk-Mkt",STRING;"Value-At-Risk","Value-At-Risk",STRING;"Beta(Bmk)","Beta(Bmk)",STRING;"Effective_Duration","Effective_Duration",STRING;"Portfolio_Date","Portfolio_Date",STRING}]]></xml-property>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Mkt_Value</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>2</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Mkt_Value</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Active_Weight</design:name>
+              <design:position>2</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>2</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Active_Weight</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Total_Risk</design:name>
+              <design:position>3</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>2</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Total_Risk</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Active_Risk</design:name>
+              <design:position>4</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>2</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Active_Risk</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Value-At-Risk-Mkt</design:name>
+              <design:position>5</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>2</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Value-At-Risk-Mkt</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Value-At-Risk</design:name>
+              <design:position>6</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>2</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Value-At-Risk</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Beta(Bmk)</design:name>
+              <design:position>7</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>2</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Beta(Bmk)</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Effective_Duration</design:name>
+              <design:position>8</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>2</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Effective_Duration</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Portfolio_Date</design:name>
+              <design:position>9</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>91</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Portfolio_Date</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria/>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+        </oda-data-set>
+        <oda-data-set extensionID="org.eclipse.datatools.connectivity.oda.flatfile.dataSet" name="TS1 Data Set" id="1039">
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">Portfolio Date</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">Portfolio Date</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Common Factor Risk</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">Common Factor Risk</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Currency Risk</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">Currency Risk</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Currency/Market Interaction</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">Currency/Market Interaction</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Emerging Market</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">Emerging Market</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Factor Interaction</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">Factor Interaction</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Industry</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">Industry</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Selection Risk</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">Selection Risk</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Spread</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">Spread</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Style</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">Style</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Term Structure</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">Term Structure</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Covariance</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">Covariance</text-property>
+                </structure>
+            </list-property>
+            <list-property name="filter">
+                <structure>
+                    <property name="operator">ge</property>
+                    <expression name="expr" type="javascript">row["Portfolio Date"]</expression>
+                    <simple-property-list name="value1">
+                        <value type="javascript">"2010-10-31"</value>
+                    </simple-property-list>
+                </structure>
+            </list-property>
+            <list-property name="parameters"/>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">Portfolio Date</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">Common Factor Risk</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">Currency Risk</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">Currency/Market Interaction</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">Emerging Market</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">6</property>
+                        <property name="name">Factor Interaction</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">7</property>
+                        <property name="name">Industry</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">8</property>
+                        <property name="name">Selection Risk</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">9</property>
+                        <property name="name">Spread</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">10</property>
+                        <property name="name">Style</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">11</property>
+                        <property name="name">Term Structure</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">12</property>
+                        <property name="name">Covariance</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Portfolio Performance Data Source</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">Portfolio Date</property>
+                    <property name="nativeName">Portfolio Date</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">Common Factor Risk</property>
+                    <property name="nativeName">Common Factor Risk</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">Currency Risk</property>
+                    <property name="nativeName">Currency Risk</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">Currency/Market Interaction</property>
+                    <property name="nativeName">Currency/Market Interaction</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">5</property>
+                    <property name="name">Emerging Market</property>
+                    <property name="nativeName">Emerging Market</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">6</property>
+                    <property name="name">Factor Interaction</property>
+                    <property name="nativeName">Factor Interaction</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">7</property>
+                    <property name="name">Industry</property>
+                    <property name="nativeName">Industry</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">8</property>
+                    <property name="name">Selection Risk</property>
+                    <property name="nativeName">Selection Risk</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">9</property>
+                    <property name="name">Spread</property>
+                    <property name="nativeName">Spread</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">10</property>
+                    <property name="name">Style</property>
+                    <property name="nativeName">Style</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">11</property>
+                    <property name="name">Term Structure</property>
+                    <property name="nativeName">Term Structure</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">12</property>
+                    <property name="name">Covariance</property>
+                    <property name="nativeName">Covariance</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[select "Portfolio Date", "Common Factor Risk", "Currency Risk", "Currency/Market Interaction", "Emerging Market", "Factor Interaction", "Industry", "Selection Risk", "Spread", "Style", "Term Structure", "Covariance" from "TS1.csv" : {"Portfolio Date","Portfolio Date",STRING;"Common Factor Risk","Common Factor Risk",STRING;"Currency Risk","Currency Risk",STRING;"Currency\/Market Interaction","Currency\/Market Interaction",STRING;"Emerging Market","Emerging Market",STRING;"Factor Interaction","Factor Interaction",STRING;"Industry","Industry",STRING;"Selection Risk","Selection Risk",STRING;"Spread","Spread",STRING;"Style","Style",STRING;"Term Structure","Term Structure",STRING;"Covariance","Covariance",STRING}]]></xml-property>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Portfolio Date</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>91</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Portfolio Date</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Common Factor Risk</design:name>
+              <design:position>2</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>2</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Common Factor Risk</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Currency Risk</design:name>
+              <design:position>3</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>2</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Currency Risk</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Currency/Market Interaction</design:name>
+              <design:position>4</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>2</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Currency/Market Interaction</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Emerging Market</design:name>
+              <design:position>5</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>2</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Emerging Market</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Factor Interaction</design:name>
+              <design:position>6</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>2</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Factor Interaction</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Industry</design:name>
+              <design:position>7</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>2</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Industry</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Selection Risk</design:name>
+              <design:position>8</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>2</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Selection Risk</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Spread</design:name>
+              <design:position>9</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>2</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Spread</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Style</design:name>
+              <design:position>10</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>2</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Style</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Term Structure</design:name>
+              <design:position>11</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>2</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Term Structure</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Covariance</design:name>
+              <design:position>12</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>2</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Covariance</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria/>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+        </oda-data-set>
+    </data-sets>
+    <styles>
+        <style name="report" id="4">
+            <property name="fontFamily">sans-serif</property>
+            <property name="fontSize">10pt</property>
+        </style>
+        <style name="crosstab-cell" id="5">
+            <property name="borderBottomColor">#CCCCCC</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">1pt</property>
+            <property name="borderLeftColor">#CCCCCC</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">1pt</property>
+            <property name="borderRightColor">#CCCCCC</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">1pt</property>
+            <property name="borderTopColor">#CCCCCC</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">1pt</property>
+        </style>
+        <style name="crosstab" id="6">
+            <property name="borderBottomColor">#CCCCCC</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">1pt</property>
+            <property name="borderLeftColor">#CCCCCC</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">1pt</property>
+            <property name="borderRightColor">#CCCCCC</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">1pt</property>
+            <property name="borderTopColor">#CCCCCC</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">1pt</property>
+        </style>
+        <style name="AlternateColorStyle" id="386">
+            <list-property name="highlightRules">
+                <structure>
+                    <property name="operator">eq</property>
+                    <property name="backgroundColor">#F9F7F4</property>
+                    <expression name="testExpr" type="javascript">if( typeof last == 'undefined' ){&#13;
+last=0;&#13;
+}&#13;
+last++;&#13;
+last%2;</expression>
+                    <simple-property-list name="value1">
+                        <value type="javascript">0</value>
+                    </simple-property-list>
+                </structure>
+            </list-property>
+        </style>
+        <style name="ExtraBold" id="504">
+            <property name="fontWeight">bolder</property>
+        </style>
+        <style name="AlternateColorStyle1" id="696">
+            <list-property name="highlightRules">
+                <structure>
+                    <property name="operator">eq</property>
+                    <property name="backgroundColor">#F9F7F4</property>
+                    <expression name="testExpr" type="javascript">if( typeof last1 == 'undefined' ){&#13;
+last1=0;&#13;
+}&#13;
+last1++;&#13;
+last1%2;</expression>
+                    <simple-property-list name="value1">
+                        <value type="javascript">0</value>
+                    </simple-property-list>
+                </structure>
+            </list-property>
+        </style>
+    </styles>
+    <page-setup>
+        <simple-master-page name="Simple MasterPage" id="2">
+            <property name="type">custom</property>
+            <property name="orientation">landscape</property>
+            <property name="topMargin">0.25in</property>
+            <property name="bottomMargin">0.25in</property>
+            <property name="height">9in</property>
+            <property name="width">15in</property>
+            <property name="showHeaderOnFirst">false</property>
+            <property name="showFooterOnLast">false</property>
+            <property name="headerHeight">0in</property>
+            <property name="footerHeight">0in</property>
+            <page-footer>
+                <text id="3">
+                    <property name="contentType">html</property>
+                    <text-property name="content"><![CDATA[<value-of>new Date()</value-of>]]></text-property>
+                </text>
+            </page-footer>
+        </simple-master-page>
+    </page-setup>
+    <body>
+        <grid id="534">
+            <property name="height">1.1666666666666667in</property>
+            <expression name="bookmark" type="javascript">"charts"</expression>
+            <column id="535">
+                <property name="width">3.458in</property>
+            </column>
+            <row id="538">
+                <cell id="539">
+                    <property name="paddingLeft">0pt</property>
+                    <extended-item extensionName="Chart" id="1032">
+                        <xml-property name="xmlRepresentation"><![CDATA[<ActuateChart version="2.6.1">
+ <ChartWithAxes version="2.6.1" type="Line Chart" subType="Overlay">
+  <block>
+   <children _type="TitleBlock">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <label>
+     <caption value="Active Risk vs. Beta">
+      <font name="Arial" size="10.0" bold="false"/>
+     </caption>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </label>
+   </children>
+   <children _type="Plot">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <clientArea>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </clientArea>
+   </children>
+   <children _type="Legend" orientation="0" position="1">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <clientArea>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </clientArea>
+    <text>
+     <font size="7.0"/>
+     <color _body=",255,145,145,145"/>
+    </text>
+    <separator>
+     <color _nil="1"/>
+    </separator>
+    <title>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </title>
+   </children>
+   <bounds _body="0.0,0.0,212.0,130.0"/>
+   <outline>
+    <color _nil="1"/>
+   </outline>
+  </block>
+  <extendedProperties name="enable.area.alt" value="false"/>
+  <extendedProperties name="enable.drill.category" value="true"/>
+  <extendedProperties name="enable.drill.series" value="true"/>
+  <extendedProperties name="jschart.client.script" value=""/>
+  <extendedProperties name="jschart.zoom" value="xy"/>
+  <extendedProperties name="jschart.series.shadow" value="true"/>
+  <sampleData>
+   <baseSampleData dataSetRepresentation="01/05/2000,02/01/2000,04/12/2000,03/12/2000,02/29/2000"/>
+   <orthogonalSampleData dataSetRepresentation="6,4,12,8,10" seriesDefinitionIndex="0"/>
+   <orthogonalSampleData dataSetRepresentation="42,91,62,9,21" seriesDefinitionIndex="1"/>
+  </sampleData>
+  <emptyMessage>
+   <caption value="This chart contains no data."/>
+   <background _body=",64,127,127,127"/>
+   <outline>
+    <color _body=",128,127,127,127"/>
+   </outline>
+  </emptyMessage>
+  <axes type="3" staggered="false" interval="3">
+   <title>
+    <background _nil="1"/>
+    <outline>
+     <color _nil="1"/>
+    </outline>
+   </title>
+   <associatedAxes primaryAxis="true" percent="false">
+    <title>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </title>
+    <seriesDefinitions>
+     <query definition=""/>
+     <seriesPalette>
+      <entries _body=",255,60,152,171"/>
+      <entries _body=",255,242,88,106"/>
+      <entries _body=",255,232,172,57"/>
+      <entries _body=",255,128,255,128"/>
+      <entries _body=",255,64,128,128"/>
+      <entries _body=",255,128,128,192"/>
+      <entries _body=",255,170,85,85"/>
+      <entries _body=",255,128,128,0"/>
+      <entries _body=",255,192,192,192"/>
+      <entries _body=",255,255,255,128"/>
+      <entries _body=",255,128,192,128"/>
+      <entries _body=",255,7,146,94"/>
+      <entries _body=",255,0,128,255"/>
+      <entries _body=",255,255,128,192"/>
+      <entries _body=",255,0,255,255"/>
+      <entries _body=",255,255,128,128"/>
+      <entries _body=",255,0,128,192"/>
+      <entries _body=",255,128,128,192"/>
+      <entries _body=",255,255,0,255"/>
+      <entries _body=",255,128,64,64"/>
+      <entries _body=",255,255,128,64"/>
+      <entries _body=",255,80,240,120"/>
+      <entries _body=",255,0,64,128"/>
+      <entries _body=",255,128,0,64"/>
+      <entries _body=",255,255,0,128"/>
+      <entries _body=",255,128,128,64"/>
+      <entries _body=",255,128,128,128"/>
+      <entries _body=",255,255,128,255"/>
+      <entries _body=",255,0,64,0"/>
+      <entries _body=",255,0,0,0"/>
+      <entries _body=",255,255,255,255"/>
+      <entries _body=",255,255,128,0"/>
+     </seriesPalette>
+     <series _type="LineSeries" seriesIdentifier="Active Risk" stacked="false">
+      <label>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dataDefinition definition="row[&quot;Active_Risk&quot;]">
+       <grouping/>
+      </dataDefinition>
+      <dataPoint separator=", ">
+       <components type="1"/>
+      </dataPoint>
+      <triggers condition="6">
+       <action type="1">
+        <value _type="TooltipValue" text="" delay="200"/>
+       </action>
+      </triggers>
+      <curveFitting _nil="1"/>
+      <markers visible="false">
+       <outline/>
+      </markers>
+      <lineAttributes thickness="2">
+       <color _nil="1"/>
+      </lineAttributes>
+     </series>
+    </seriesDefinitions>
+    <lineAttributes>
+     <color _body=",255,192,192,192"/>
+    </lineAttributes>
+    <label>
+     <caption>
+      <font size="7.0"/>
+      <color _body=",255,145,145,145"/>
+     </caption>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </label>
+    <formatSpecifier _type="JavaNumberFormatSpecifier" pattern="0.0"/>
+    <majorGrid>
+     <lineAttributes visible="true">
+      <color _nil="1"/>
+     </lineAttributes>
+     <tickAttributes>
+      <color _nil="1"/>
+     </tickAttributes>
+    </majorGrid>
+    <minorGrid>
+     <lineAttributes>
+      <color _nil="1"/>
+     </lineAttributes>
+     <tickAttributes>
+      <color _nil="1"/>
+     </tickAttributes>
+    </minorGrid>
+    <origin>
+     <value _nil="1"/>
+    </origin>
+   </associatedAxes>
+   <associatedAxes titlePosition="3" labelPosition="3" primaryAxis="false" percent="false">
+    <title>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </title>
+    <seriesDefinitions>
+     <query definition=""/>
+     <seriesPalette>
+      <entries _body=",255,161,214,227"/>
+      <entries _body=",255,232,172,57"/>
+      <entries _body=",255,128,255,128"/>
+      <entries _body=",255,64,128,128"/>
+      <entries _body=",255,128,128,192"/>
+      <entries _body=",255,170,85,85"/>
+      <entries _body=",255,128,128,0"/>
+      <entries _body=",255,192,192,192"/>
+      <entries _body=",255,255,255,128"/>
+      <entries _body=",255,128,192,128"/>
+      <entries _body=",255,7,146,94"/>
+      <entries _body=",255,0,128,255"/>
+      <entries _body=",255,255,128,192"/>
+      <entries _body=",255,0,255,255"/>
+      <entries _body=",255,255,128,128"/>
+      <entries _body=",255,0,128,192"/>
+      <entries _body=",255,128,128,192"/>
+      <entries _body=",255,255,0,255"/>
+      <entries _body=",255,128,64,64"/>
+      <entries _body=",255,255,128,64"/>
+      <entries _body=",255,80,240,120"/>
+      <entries _body=",255,0,64,128"/>
+      <entries _body=",255,128,0,64"/>
+      <entries _body=",255,255,0,128"/>
+      <entries _body=",255,128,128,64"/>
+      <entries _body=",255,128,128,128"/>
+      <entries _body=",255,255,128,255"/>
+      <entries _body=",255,0,64,0"/>
+      <entries _body=",255,0,0,0"/>
+      <entries _body=",255,255,255,255"/>
+      <entries _body=",255,255,128,0"/>
+      <entries _body=",255,80,166,218"/>
+     </seriesPalette>
+     <series _type="LineSeries" seriesIdentifier="Beta (Bmk)" stacked="false">
+      <label>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dataDefinition definition="row[&quot;Beta(Bmk)&quot;]">
+       <grouping/>
+      </dataDefinition>
+      <dataPoint separator=", ">
+       <components type="1"/>
+      </dataPoint>
+      <triggers condition="6">
+       <action type="1">
+        <value _type="TooltipValue" text="" delay="200"/>
+       </action>
+      </triggers>
+      <curveFitting _nil="1"/>
+      <markers visible="false">
+       <outline/>
+      </markers>
+      <lineAttributes thickness="2">
+       <color _nil="1"/>
+      </lineAttributes>
+     </series>
+    </seriesDefinitions>
+    <lineAttributes>
+     <color _body=",255,192,192,192"/>
+    </lineAttributes>
+    <label>
+     <caption>
+      <font size="7.0"/>
+      <color _body=",255,145,145,145"/>
+     </caption>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </label>
+    <formatSpecifier _type="JavaNumberFormatSpecifier" pattern="0.0"/>
+    <majorGrid>
+     <lineAttributes>
+      <color _nil="1"/>
+     </lineAttributes>
+     <tickAttributes>
+      <color _nil="1"/>
+     </tickAttributes>
+    </majorGrid>
+    <minorGrid>
+     <lineAttributes>
+      <color _nil="1"/>
+     </lineAttributes>
+     <tickAttributes>
+      <color _nil="1"/>
+     </tickAttributes>
+    </minorGrid>
+    <origin type="1">
+     <value _nil="1"/>
+    </origin>
+   </associatedAxes>
+   <seriesDefinitions>
+    <query definition=""/>
+    <seriesPalette>
+     <entries _body=",255,80,166,218"/>
+     <entries _body=",255,242,88,106"/>
+     <entries _body=",255,232,172,57"/>
+     <entries _body=",255,128,255,128"/>
+     <entries _body=",255,64,128,128"/>
+     <entries _body=",255,128,128,192"/>
+     <entries _body=",255,170,85,85"/>
+     <entries _body=",255,128,128,0"/>
+     <entries _body=",255,192,192,192"/>
+     <entries _body=",255,255,255,128"/>
+     <entries _body=",255,128,192,128"/>
+     <entries _body=",255,7,146,94"/>
+     <entries _body=",255,0,128,255"/>
+     <entries _body=",255,255,128,192"/>
+     <entries _body=",255,0,255,255"/>
+     <entries _body=",255,255,128,128"/>
+     <entries _body=",255,0,128,192"/>
+     <entries _body=",255,128,128,192"/>
+     <entries _body=",255,255,0,255"/>
+     <entries _body=",255,128,64,64"/>
+     <entries _body=",255,255,128,64"/>
+     <entries _body=",255,80,240,120"/>
+     <entries _body=",255,0,64,128"/>
+     <entries _body=",255,128,0,64"/>
+     <entries _body=",255,255,0,128"/>
+     <entries _body=",255,128,128,64"/>
+     <entries _body=",255,128,128,128"/>
+     <entries _body=",255,255,128,255"/>
+     <entries _body=",255,0,64,0"/>
+     <entries _body=",255,0,0,0"/>
+     <entries _body=",255,255,255,255"/>
+     <entries _body=",255,255,128,0"/>
+    </seriesPalette>
+    <series seriesIdentifier="">
+     <label>
+      <background _nil="1"/>
+      <outline>
+       <color _nil="1"/>
+      </outline>
+     </label>
+     <dataDefinition definition="row[&quot;Portfolio_Date&quot;]"/>
+     <dataPoint separator=", ">
+      <components type="1"/>
+     </dataPoint>
+     <curveFitting _nil="1"/>
+    </series>
+    <grouping enabled="true" groupingUnit="5" groupType="1"/>
+    <sortKey/>
+   </seriesDefinitions>
+   <lineAttributes>
+    <color _body=",255,192,192,192"/>
+   </lineAttributes>
+   <label>
+    <caption>
+     <font size="7.0"/>
+     <color _body=",255,145,145,145"/>
+    </caption>
+    <background _nil="1"/>
+    <outline>
+     <color _nil="1"/>
+    </outline>
+   </label>
+   <formatSpecifier _type="JavaDateFormatSpecifier" pattern="M/yy"/>
+   <majorGrid>
+    <lineAttributes>
+     <color _nil="1"/>
+    </lineAttributes>
+    <tickAttributes>
+     <color _nil="1"/>
+    </tickAttributes>
+   </majorGrid>
+   <minorGrid>
+    <lineAttributes>
+     <color _nil="1"/>
+    </lineAttributes>
+    <tickAttributes>
+     <color _nil="1"/>
+    </tickAttributes>
+   </minorGrid>
+   <origin>
+    <value _nil="1"/>
+   </origin>
+  </axes>
+  <rotation>
+   <angles/>
+  </rotation>
+ </ChartWithAxes>
+</ActuateChart>
+]]></xml-property>
+                        <property name="outputFormat">JS</property>
+                        <list-property name="filter">
+                            <structure>
+                                <property name="operator">ge</property>
+                                <expression name="expr" type="javascript">row["Portfolio_Date"]</expression>
+                                <simple-property-list name="value1">
+                                    <value type="javascript">"2011-01-31"</value>
+                                </simple-property-list>
+                                <property name="updateAggregation">true</property>
+                            </structure>
+                        </list-property>
+                        <property name="inheritColumns">false</property>
+                        <property name="height">2in</property>
+                        <property name="width">3.4583333333333335in</property>
+                        <property name="dataSet">Total Plan Data Set</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">Mkt_Value</property>
+                                <expression name="expression" type="javascript">dataSetRow["Mkt_Value"]</expression>
+                                <property name="dataType">decimal</property>
+                            </structure>
+                            <structure>
+                                <property name="name">Active_Weight</property>
+                                <expression name="expression" type="javascript">dataSetRow["Active_Weight"]</expression>
+                                <property name="dataType">decimal</property>
+                            </structure>
+                            <structure>
+                                <property name="name">Total_Risk</property>
+                                <expression name="expression" type="javascript">dataSetRow["Total_Risk"]</expression>
+                                <property name="dataType">decimal</property>
+                            </structure>
+                            <structure>
+                                <property name="name">Active_Risk</property>
+                                <expression name="expression" type="javascript">dataSetRow["Active_Risk"]</expression>
+                                <property name="dataType">decimal</property>
+                            </structure>
+                            <structure>
+                                <property name="name">Value-At-Risk-Mkt</property>
+                                <expression name="expression" type="javascript">dataSetRow["Value-At-Risk-Mkt"]</expression>
+                                <property name="dataType">decimal</property>
+                            </structure>
+                            <structure>
+                                <property name="name">Value-At-Risk</property>
+                                <expression name="expression" type="javascript">dataSetRow["Value-At-Risk"]</expression>
+                                <property name="dataType">decimal</property>
+                            </structure>
+                            <structure>
+                                <property name="name">Beta(Bmk)</property>
+                                <expression name="expression" type="javascript">dataSetRow["Beta(Bmk)"]</expression>
+                                <property name="dataType">decimal</property>
+                            </structure>
+                            <structure>
+                                <property name="name">Effective_Duration</property>
+                                <expression name="expression" type="javascript">dataSetRow["Effective_Duration"]</expression>
+                                <property name="dataType">decimal</property>
+                            </structure>
+                            <structure>
+                                <property name="name">Portfolio_Date</property>
+                                <expression name="expression" type="javascript">dataSetRow["Portfolio_Date"]</expression>
+                                <property name="dataType">date</property>
+                            </structure>
+                        </list-property>
+                    </extended-item>
+                </cell>
+            </row>
+            <row id="540">
+                <cell id="541">
+                    <property name="paddingLeft">0pt</property>
+                    <extended-item extensionName="Chart" id="1033">
+                        <xml-property name="xmlRepresentation"><![CDATA[<ActuateChart version="2.6.1">
+ <ChartWithAxes version="2.6.1" type="Line Chart" subType="Overlay">
+  <block>
+   <children _type="TitleBlock">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <label>
+     <caption value="Market Value vs. VaR (Billions)">
+      <font name="Arial" size="10.0" bold="false"/>
+     </caption>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </label>
+   </children>
+   <children _type="Plot">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <clientArea>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </clientArea>
+   </children>
+   <children _type="Legend" orientation="0" position="1">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <clientArea>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </clientArea>
+    <text>
+     <font size="7.0"/>
+     <color _body=",255,145,145,145"/>
+    </text>
+    <separator>
+     <color _nil="1"/>
+    </separator>
+    <title>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </title>
+   </children>
+   <bounds _body="0.0,0.0,212.0,130.0"/>
+   <insets _body="3.0,0.0,3.0,0.0"/>
+   <outline>
+    <color _nil="1"/>
+   </outline>
+  </block>
+  <extendedProperties name="enable.area.alt" value="false"/>
+  <extendedProperties name="enable.drill.category" value="true"/>
+  <extendedProperties name="enable.drill.series" value="true"/>
+  <extendedProperties name="jschart.client.script" value=""/>
+  <extendedProperties name="jschart.zoom" value="xy"/>
+  <extendedProperties name="jschart.series.shadow" value="true"/>
+  <sampleData>
+   <baseSampleData dataSetRepresentation="01/05/2000,02/01/2000,04/12/2000,03/12/2000,02/29/2000"/>
+   <orthogonalSampleData dataSetRepresentation="6,4,12,8,10" seriesDefinitionIndex="0"/>
+   <orthogonalSampleData dataSetRepresentation="42,91,62,9,21" seriesDefinitionIndex="1"/>
+  </sampleData>
+  <emptyMessage>
+   <caption value="This chart contains no data."/>
+   <background _body=",64,127,127,127"/>
+   <outline>
+    <color _body=",128,127,127,127"/>
+   </outline>
+  </emptyMessage>
+  <axes type="3" staggered="false" interval="3">
+   <title>
+    <background _nil="1"/>
+    <outline>
+     <color _nil="1"/>
+    </outline>
+   </title>
+   <associatedAxes primaryAxis="true" percent="false">
+    <title visible="false">
+     <caption value="Billions">
+      <font size="6.0"/>
+     </caption>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </title>
+    <seriesDefinitions>
+     <query definition=""/>
+     <seriesPalette>
+      <entries _body=",255,60,152,171"/>
+      <entries _body=",255,242,88,106"/>
+      <entries _body=",255,232,172,57"/>
+      <entries _body=",255,128,255,128"/>
+      <entries _body=",255,64,128,128"/>
+      <entries _body=",255,128,128,192"/>
+      <entries _body=",255,170,85,85"/>
+      <entries _body=",255,128,128,0"/>
+      <entries _body=",255,192,192,192"/>
+      <entries _body=",255,255,255,128"/>
+      <entries _body=",255,128,192,128"/>
+      <entries _body=",255,7,146,94"/>
+      <entries _body=",255,0,128,255"/>
+      <entries _body=",255,255,128,192"/>
+      <entries _body=",255,0,255,255"/>
+      <entries _body=",255,255,128,128"/>
+      <entries _body=",255,0,128,192"/>
+      <entries _body=",255,128,128,192"/>
+      <entries _body=",255,255,0,255"/>
+      <entries _body=",255,128,64,64"/>
+      <entries _body=",255,255,128,64"/>
+      <entries _body=",255,80,240,120"/>
+      <entries _body=",255,0,64,128"/>
+      <entries _body=",255,128,0,64"/>
+      <entries _body=",255,255,0,128"/>
+      <entries _body=",255,128,128,64"/>
+      <entries _body=",255,128,128,128"/>
+      <entries _body=",255,255,128,255"/>
+      <entries _body=",255,0,64,0"/>
+      <entries _body=",255,0,0,0"/>
+      <entries _body=",255,255,255,255"/>
+      <entries _body=",255,255,128,0"/>
+     </seriesPalette>
+     <series _type="LineSeries" seriesIdentifier="Market Value" stacked="false" translucent="false">
+      <label>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dataDefinition definition="row[&quot;Mkt_Value&quot;]">
+       <grouping/>
+      </dataDefinition>
+      <dataPoint separator=", ">
+       <components type="1"/>
+      </dataPoint>
+      <triggers condition="6">
+       <action type="1">
+        <value _type="TooltipValue" text="" delay="200"/>
+       </action>
+      </triggers>
+      <curveFitting _nil="1"/>
+      <markers visible="false">
+       <outline/>
+      </markers>
+      <lineAttributes thickness="2">
+       <color _nil="1"/>
+      </lineAttributes>
+     </series>
+    </seriesDefinitions>
+    <lineAttributes>
+     <color _body=",255,192,192,192"/>
+    </lineAttributes>
+    <label>
+     <caption>
+      <font size="7.0"/>
+      <color _body=",255,145,145,145"/>
+     </caption>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </label>
+    <formatSpecifier _type="JavaNumberFormatSpecifier" pattern="0.0" multiplier="1.0E-9"/>
+    <majorGrid>
+     <lineAttributes visible="true">
+      <color _nil="1"/>
+     </lineAttributes>
+     <tickAttributes>
+      <color _nil="1"/>
+     </tickAttributes>
+    </majorGrid>
+    <minorGrid>
+     <lineAttributes>
+      <color _nil="1"/>
+     </lineAttributes>
+     <tickAttributes>
+      <color _nil="1"/>
+     </tickAttributes>
+    </minorGrid>
+    <origin>
+     <value _nil="1"/>
+    </origin>
+   </associatedAxes>
+   <associatedAxes titlePosition="3" labelPosition="3" primaryAxis="false" percent="false">
+    <title visible="false">
+     <caption value="Billions">
+      <font size="6.0"/>
+     </caption>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </title>
+    <seriesDefinitions>
+     <query definition=""/>
+     <seriesPalette>
+      <entries _body=",255,161,214,227"/>
+      <entries _body=",255,232,172,57"/>
+      <entries _body=",255,128,255,128"/>
+      <entries _body=",255,64,128,128"/>
+      <entries _body=",255,128,128,192"/>
+      <entries _body=",255,170,85,85"/>
+      <entries _body=",255,128,128,0"/>
+      <entries _body=",255,192,192,192"/>
+      <entries _body=",255,255,255,128"/>
+      <entries _body=",255,128,192,128"/>
+      <entries _body=",255,7,146,94"/>
+      <entries _body=",255,0,128,255"/>
+      <entries _body=",255,255,128,192"/>
+      <entries _body=",255,0,255,255"/>
+      <entries _body=",255,255,128,128"/>
+      <entries _body=",255,0,128,192"/>
+      <entries _body=",255,128,128,192"/>
+      <entries _body=",255,255,0,255"/>
+      <entries _body=",255,128,64,64"/>
+      <entries _body=",255,255,128,64"/>
+      <entries _body=",255,80,240,120"/>
+      <entries _body=",255,0,64,128"/>
+      <entries _body=",255,128,0,64"/>
+      <entries _body=",255,255,0,128"/>
+      <entries _body=",255,128,128,64"/>
+      <entries _body=",255,128,128,128"/>
+      <entries _body=",255,255,128,255"/>
+      <entries _body=",255,0,64,0"/>
+      <entries _body=",255,0,0,0"/>
+      <entries _body=",255,255,255,255"/>
+      <entries _body=",255,255,128,0"/>
+      <entries _body=",255,80,166,218"/>
+     </seriesPalette>
+     <series _type="LineSeries" seriesIdentifier="Value at Risk" stacked="false" translucent="false">
+      <label>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dataDefinition definition="row[&quot;Value-At-Risk-Mkt&quot;]">
+       <grouping/>
+      </dataDefinition>
+      <dataPoint separator=", ">
+       <components type="1"/>
+      </dataPoint>
+      <triggers condition="6">
+       <action type="1">
+        <value _type="TooltipValue" text="" delay="200"/>
+       </action>
+      </triggers>
+      <curveFitting _nil="1"/>
+      <markers visible="false">
+       <outline/>
+      </markers>
+      <lineAttributes thickness="2">
+       <color _nil="1"/>
+      </lineAttributes>
+     </series>
+    </seriesDefinitions>
+    <lineAttributes>
+     <color _body=",255,192,192,192"/>
+    </lineAttributes>
+    <label>
+     <caption>
+      <font size="7.0"/>
+      <color _body=",255,145,145,145"/>
+     </caption>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </label>
+    <formatSpecifier _type="JavaNumberFormatSpecifier" pattern="0.0" multiplier="1.0E-9"/>
+    <majorGrid>
+     <lineAttributes>
+      <color _nil="1"/>
+     </lineAttributes>
+     <tickAttributes>
+      <color _nil="1"/>
+     </tickAttributes>
+    </majorGrid>
+    <minorGrid>
+     <lineAttributes>
+      <color _nil="1"/>
+     </lineAttributes>
+     <tickAttributes>
+      <color _nil="1"/>
+     </tickAttributes>
+    </minorGrid>
+    <origin type="1">
+     <value _nil="1"/>
+    </origin>
+   </associatedAxes>
+   <seriesDefinitions>
+    <query definition=""/>
+    <seriesPalette>
+     <entries _body=",255,80,166,218"/>
+     <entries _body=",255,242,88,106"/>
+     <entries _body=",255,232,172,57"/>
+     <entries _body=",255,128,255,128"/>
+     <entries _body=",255,64,128,128"/>
+     <entries _body=",255,128,128,192"/>
+     <entries _body=",255,170,85,85"/>
+     <entries _body=",255,128,128,0"/>
+     <entries _body=",255,192,192,192"/>
+     <entries _body=",255,255,255,128"/>
+     <entries _body=",255,128,192,128"/>
+     <entries _body=",255,7,146,94"/>
+     <entries _body=",255,0,128,255"/>
+     <entries _body=",255,255,128,192"/>
+     <entries _body=",255,0,255,255"/>
+     <entries _body=",255,255,128,128"/>
+     <entries _body=",255,0,128,192"/>
+     <entries _body=",255,128,128,192"/>
+     <entries _body=",255,255,0,255"/>
+     <entries _body=",255,128,64,64"/>
+     <entries _body=",255,255,128,64"/>
+     <entries _body=",255,80,240,120"/>
+     <entries _body=",255,0,64,128"/>
+     <entries _body=",255,128,0,64"/>
+     <entries _body=",255,255,0,128"/>
+     <entries _body=",255,128,128,64"/>
+     <entries _body=",255,128,128,128"/>
+     <entries _body=",255,255,128,255"/>
+     <entries _body=",255,0,64,0"/>
+     <entries _body=",255,0,0,0"/>
+     <entries _body=",255,255,255,255"/>
+     <entries _body=",255,255,128,0"/>
+    </seriesPalette>
+    <series seriesIdentifier="">
+     <label>
+      <background _nil="1"/>
+      <outline>
+       <color _nil="1"/>
+      </outline>
+     </label>
+     <dataDefinition definition="row[&quot;Portfolio_Date&quot;]"/>
+     <dataPoint separator=", ">
+      <components type="1"/>
+     </dataPoint>
+     <curveFitting _nil="1"/>
+    </series>
+    <grouping enabled="true" groupingUnit="5" groupType="1"/>
+    <sortKey/>
+   </seriesDefinitions>
+   <lineAttributes>
+    <color _body=",255,192,192,192"/>
+   </lineAttributes>
+   <label>
+    <caption>
+     <font size="7.0"/>
+     <color _body=",255,145,145,145"/>
+    </caption>
+    <background _nil="1"/>
+    <outline>
+     <color _nil="1"/>
+    </outline>
+   </label>
+   <formatSpecifier _type="JavaDateFormatSpecifier" pattern="M/yy"/>
+   <majorGrid>
+    <lineAttributes>
+     <color _nil="1"/>
+    </lineAttributes>
+    <tickAttributes>
+     <color _nil="1"/>
+    </tickAttributes>
+   </majorGrid>
+   <minorGrid>
+    <lineAttributes>
+     <color _nil="1"/>
+    </lineAttributes>
+    <tickAttributes>
+     <color _nil="1"/>
+    </tickAttributes>
+   </minorGrid>
+   <origin>
+    <value _nil="1"/>
+   </origin>
+  </axes>
+  <rotation>
+   <angles/>
+  </rotation>
+ </ChartWithAxes>
+</ActuateChart>
+]]></xml-property>
+                        <property name="outputFormat">JS</property>
+                        <list-property name="filter">
+                            <structure>
+                                <property name="operator">ge</property>
+                                <expression name="expr" type="javascript">row["Portfolio_Date"]</expression>
+                                <simple-property-list name="value1">
+                                    <value type="javascript">"2011-01-31"</value>
+                                </simple-property-list>
+                                <property name="updateAggregation">true</property>
+                            </structure>
+                        </list-property>
+                        <property name="inheritColumns">false</property>
+                        <property name="height">2in</property>
+                        <property name="width">3.458in</property>
+                        <property name="dataSet">Total Plan Data Set</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">Mkt_Value</property>
+                                <expression name="expression" type="javascript">dataSetRow["Mkt_Value"]</expression>
+                                <property name="dataType">decimal</property>
+                            </structure>
+                            <structure>
+                                <property name="name">Active_Weight</property>
+                                <expression name="expression" type="javascript">dataSetRow["Active_Weight"]</expression>
+                                <property name="dataType">decimal</property>
+                            </structure>
+                            <structure>
+                                <property name="name">Total_Risk</property>
+                                <expression name="expression" type="javascript">dataSetRow["Total_Risk"]</expression>
+                                <property name="dataType">decimal</property>
+                            </structure>
+                            <structure>
+                                <property name="name">Active_Risk</property>
+                                <expression name="expression" type="javascript">dataSetRow["Active_Risk"]</expression>
+                                <property name="dataType">decimal</property>
+                            </structure>
+                            <structure>
+                                <property name="name">Value-At-Risk-Mkt</property>
+                                <expression name="expression" type="javascript">dataSetRow["Value-At-Risk-Mkt"]</expression>
+                                <property name="dataType">decimal</property>
+                            </structure>
+                            <structure>
+                                <property name="name">Value-At-Risk</property>
+                                <expression name="expression" type="javascript">dataSetRow["Value-At-Risk"]</expression>
+                                <property name="dataType">decimal</property>
+                            </structure>
+                            <structure>
+                                <property name="name">Beta(Bmk)</property>
+                                <expression name="expression" type="javascript">dataSetRow["Beta(Bmk)"]</expression>
+                                <property name="dataType">decimal</property>
+                            </structure>
+                            <structure>
+                                <property name="name">Effective_Duration</property>
+                                <expression name="expression" type="javascript">dataSetRow["Effective_Duration"]</expression>
+                                <property name="dataType">decimal</property>
+                            </structure>
+                            <structure>
+                                <property name="name">Portfolio_Date</property>
+                                <expression name="expression" type="javascript">dataSetRow["Portfolio_Date"]</expression>
+                                <property name="dataType">date</property>
+                            </structure>
+                        </list-property>
+                    </extended-item>
+                </cell>
+            </row>
+            <row id="1036">
+                <cell id="1037">
+                    <property name="paddingLeft">0pt</property>
+                    <extended-item extensionName="Chart" id="1038">
+                        <xml-property name="xmlRepresentation"><![CDATA[<ActuateChart version="2.6.1">
+ <ChartWithAxes version="2.6.1" type="Line Chart" subType="Overlay" dimension="0">
+  <block>
+   <children _type="TitleBlock">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <cursor type="0"/>
+    <label>
+     <caption value="% Contribution to Active Risk ">
+      <font name="Arial" size="10.0" bold="false"/>
+     </caption>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </label>
+   </children>
+   <children _type="Plot">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <clientArea>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </clientArea>
+   </children>
+   <children _type="Legend" stretch="2" orientation="0" position="1">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <triggers condition="2">
+     <action type="2">
+      <value _type="SeriesValue" name=""/>
+     </action>
+    </triggers>
+    <clientArea>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </clientArea>
+    <text>
+     <font size="7.0"/>
+     <color _body=",255,145,145,145"/>
+    </text>
+    <separator visible="false">
+     <color _nil="1"/>
+    </separator>
+    <title>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </title>
+   </children>
+   <bounds _body="0.0,0.0,212.0,130.0"/>
+   <insets _body="3.0,0.0,3.0,0.0"/>
+   <outline>
+    <color _nil="1"/>
+   </outline>
+   <triggers condition="2">
+    <action type="0">
+     <value _type="MultiURLValues">
+      <uRLValues baseUrl="&lt;structure&gt;&#10;    &lt;property name=&quot;linkType&quot;&gt;drill-through&lt;/property&gt;&#10;    &lt;property name=&quot;toolTip&quot;&gt;Click for larger chart&lt;/property&gt;&#10;    &lt;property name=&quot;reportName&quot;&gt;ContributionActiveRisk.rptdesign&lt;/property&gt;&#10;    &lt;property name=&quot;targetWindow&quot;&gt;_blank&lt;/property&gt;&#10;    &lt;property name=&quot;targetFileType&quot;&gt;report-design&lt;/property&gt;&#10;&lt;/structure&gt;&#10;" baseParameterName="" valueParameterName="" seriesParameterName="">
+       <label>
+        <caption value="Larger Chart"/>
+       </label>
+      </uRLValues>
+      <propertiesMap key="MenuItem" value="color:Black;fontSize:10pt;paddingLeft:10px;paddingRight:10px;paddingTop:2px;paddingBottom:2px"/>
+      <propertiesMap key="Menu" value="zIndex:99999;backgroundColor:#FAFFF8;width:auto;height:auto;border:1px solid #333333;filter:progid:DXImageTransform.Microsoft.Shadow(Color:#333333,Direction=120,strength=5)"/>
+      <propertiesMap key="OnMouseOut" value="backgroundColor:#FAFFF8;color:#000000"/>
+      <propertiesMap key="OnMouseOver" value="backgroundColor:#245DDB;color:#FFFFFF"/>
+     </value>
+    </action>
+   </triggers>
+  </block>
+  <extendedProperties name="enable.area.alt" value="false"/>
+  <extendedProperties name="enable.drill.category" value="true"/>
+  <extendedProperties name="enable.drill.series" value="true"/>
+  <extendedProperties name="jschart.client.script" value=""/>
+  <extendedProperties name="jschart.zoom" value="xy"/>
+  <extendedProperties name="jschart.series.shadow" value="true"/>
+  <sampleData>
+   <baseSampleData dataSetRepresentation="01/05/2000,02/01/2000,04/12/2000,03/12/2000,02/29/2000"/>
+   <orthogonalSampleData dataSetRepresentation="6,4,12,8,10" seriesDefinitionIndex="0"/>
+   <orthogonalSampleData dataSetRepresentation="12.0,8.0,24.0,16.0,20.0" seriesDefinitionIndex="1"/>
+   <orthogonalSampleData dataSetRepresentation="18.0,12.0,36.0,24.0,30.0" seriesDefinitionIndex="2"/>
+   <orthogonalSampleData dataSetRepresentation="24.0,16.0,48.0,32.0,40.0" seriesDefinitionIndex="3"/>
+   <orthogonalSampleData dataSetRepresentation="30.0,20.0,60.0,40.0,50.0" seriesDefinitionIndex="4"/>
+   <orthogonalSampleData dataSetRepresentation="36.0,24.0,72.0,48.0,60.0" seriesDefinitionIndex="5"/>
+   <orthogonalSampleData dataSetRepresentation="42.0,28.0,84.0,56.0,70.0" seriesDefinitionIndex="6"/>
+   <orthogonalSampleData dataSetRepresentation="48.0,32.0,96.0,64.0,80.0" seriesDefinitionIndex="7"/>
+   <orthogonalSampleData dataSetRepresentation="54.0,36.0,108.0,72.0,90.0" seriesDefinitionIndex="8"/>
+   <orthogonalSampleData dataSetRepresentation="60.0,40.0,120.0,80.0,100.0" seriesDefinitionIndex="9"/>
+  </sampleData>
+  <interactivity enable="true"/>
+  <emptyMessage>
+   <caption value="This chart contains no data."/>
+   <background _body=",64,127,127,127"/>
+   <outline>
+    <color _body=",128,127,127,127"/>
+   </outline>
+  </emptyMessage>
+  <axes type="3" staggered="false" interval="3">
+   <title>
+    <background _nil="1"/>
+    <outline>
+     <color _nil="1"/>
+    </outline>
+   </title>
+   <associatedAxes primaryAxis="true" percent="false">
+    <title visible="false">
+     <caption value="Billions">
+      <font size="6.0"/>
+     </caption>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </title>
+    <seriesDefinitions>
+     <query definition=""/>
+     <seriesPalette>
+      <entries _body=",255,0,121,193"/>
+      <entries _body=",255,241,90,34"/>
+      <entries _body=",255,19,181,234"/>
+      <entries _body=",255,250,166,26"/>
+      <entries _body=",255,154,204,0"/>
+      <entries _body=",255,255,204,0"/>
+      <entries _body=",255,51,153,102"/>
+      <entries _body=",255,102,102,153"/>
+      <entries _body=",255,0,128,128"/>
+      <entries _body=",255,244,47,47"/>
+      <entries _body=",255,128,192,128"/>
+      <entries _body=",255,7,146,94"/>
+      <entries _body=",255,0,128,255"/>
+      <entries _body=",255,255,128,192"/>
+      <entries _body=",255,0,255,255"/>
+      <entries _body=",255,255,128,128"/>
+      <entries _body=",255,0,128,192"/>
+      <entries _body=",255,128,128,192"/>
+      <entries _body=",255,255,0,255"/>
+      <entries _body=",255,128,64,64"/>
+      <entries _body=",255,255,128,64"/>
+      <entries _body=",255,80,240,120"/>
+      <entries _body=",255,0,64,128"/>
+      <entries _body=",255,128,0,64"/>
+      <entries _body=",255,255,0,128"/>
+      <entries _body=",255,128,128,64"/>
+      <entries _body=",255,128,128,128"/>
+      <entries _body=",255,255,128,255"/>
+      <entries _body=",255,0,64,0"/>
+      <entries _body=",255,0,0,0"/>
+      <entries _body=",255,255,255,255"/>
+      <entries _body=",255,255,128,0"/>
+     </seriesPalette>
+     <series _type="LineSeries" seriesIdentifier="Covariance" stacked="false">
+      <label>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dataDefinition definition="row[&quot;Covariance&quot;]">
+       <grouping/>
+      </dataDefinition>
+      <dataPoint separator=", ">
+       <components type="1"/>
+      </dataPoint>
+      <triggers condition="6">
+       <action type="1">
+        <value _type="TooltipValue" text="" delay="200"/>
+       </action>
+      </triggers>
+      <curveFitting _nil="1"/>
+      <markers visible="false">
+       <outline/>
+      </markers>
+      <lineAttributes>
+       <color _nil="1"/>
+      </lineAttributes>
+     </series>
+    </seriesDefinitions>
+    <seriesDefinitions>
+     <query definition=""/>
+     <seriesPalette>
+      <entries _body=",255,241,90,34"/>
+      <entries _body=",255,19,181,234"/>
+      <entries _body=",255,250,166,26"/>
+      <entries _body=",255,154,204,0"/>
+      <entries _body=",255,255,204,0"/>
+      <entries _body=",255,51,153,102"/>
+      <entries _body=",255,102,102,153"/>
+      <entries _body=",255,0,128,128"/>
+      <entries _body=",255,244,47,47"/>
+      <entries _body=",255,128,192,128"/>
+      <entries _body=",255,7,146,94"/>
+      <entries _body=",255,0,128,255"/>
+      <entries _body=",255,255,128,192"/>
+      <entries _body=",255,0,255,255"/>
+      <entries _body=",255,255,128,128"/>
+      <entries _body=",255,0,128,192"/>
+      <entries _body=",255,128,128,192"/>
+      <entries _body=",255,255,0,255"/>
+      <entries _body=",255,128,64,64"/>
+      <entries _body=",255,255,128,64"/>
+      <entries _body=",255,80,240,120"/>
+      <entries _body=",255,0,64,128"/>
+      <entries _body=",255,128,0,64"/>
+      <entries _body=",255,255,0,128"/>
+      <entries _body=",255,128,128,64"/>
+      <entries _body=",255,128,128,128"/>
+      <entries _body=",255,255,128,255"/>
+      <entries _body=",255,0,64,0"/>
+      <entries _body=",255,0,0,0"/>
+      <entries _body=",255,255,255,255"/>
+      <entries _body=",255,255,128,0"/>
+      <entries _body=",255,0,121,193"/>
+     </seriesPalette>
+     <series _type="LineSeries" seriesIdentifier="Term Structure" stacked="false">
+      <label>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dataDefinition definition="row[&quot;Term Structure&quot;]">
+       <grouping/>
+      </dataDefinition>
+      <dataPoint separator=", ">
+       <components type="1"/>
+      </dataPoint>
+      <triggers condition="6">
+       <action type="1">
+        <value _type="TooltipValue" text="" delay="200"/>
+       </action>
+      </triggers>
+      <curveFitting _nil="1"/>
+      <markers visible="false">
+       <outline/>
+      </markers>
+      <lineAttributes>
+       <color _nil="1"/>
+      </lineAttributes>
+     </series>
+    </seriesDefinitions>
+    <seriesDefinitions>
+     <query definition=""/>
+     <seriesPalette>
+      <entries _body=",255,19,181,234"/>
+      <entries _body=",255,250,166,26"/>
+      <entries _body=",255,154,204,0"/>
+      <entries _body=",255,255,204,0"/>
+      <entries _body=",255,51,153,102"/>
+      <entries _body=",255,102,102,153"/>
+      <entries _body=",255,0,128,128"/>
+      <entries _body=",255,244,47,47"/>
+      <entries _body=",255,128,192,128"/>
+      <entries _body=",255,7,146,94"/>
+      <entries _body=",255,0,128,255"/>
+      <entries _body=",255,255,128,192"/>
+      <entries _body=",255,0,255,255"/>
+      <entries _body=",255,255,128,128"/>
+      <entries _body=",255,0,128,192"/>
+      <entries _body=",255,128,128,192"/>
+      <entries _body=",255,255,0,255"/>
+      <entries _body=",255,128,64,64"/>
+      <entries _body=",255,255,128,64"/>
+      <entries _body=",255,80,240,120"/>
+      <entries _body=",255,0,64,128"/>
+      <entries _body=",255,128,0,64"/>
+      <entries _body=",255,255,0,128"/>
+      <entries _body=",255,128,128,64"/>
+      <entries _body=",255,128,128,128"/>
+      <entries _body=",255,255,128,255"/>
+      <entries _body=",255,0,64,0"/>
+      <entries _body=",255,0,0,0"/>
+      <entries _body=",255,255,255,255"/>
+      <entries _body=",255,255,128,0"/>
+      <entries _body=",255,0,121,193"/>
+      <entries _body=",255,241,90,34"/>
+     </seriesPalette>
+     <series _type="LineSeries" seriesIdentifier="Style" stacked="false">
+      <label>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dataDefinition definition="row[&quot;Style&quot;]">
+       <grouping/>
+      </dataDefinition>
+      <dataPoint separator=", ">
+       <components type="1"/>
+      </dataPoint>
+      <triggers condition="6">
+       <action type="1">
+        <value _type="TooltipValue" text="" delay="200"/>
+       </action>
+      </triggers>
+      <curveFitting _nil="1"/>
+      <markers visible="false">
+       <outline/>
+      </markers>
+      <lineAttributes>
+       <color _nil="1"/>
+      </lineAttributes>
+     </series>
+    </seriesDefinitions>
+    <seriesDefinitions>
+     <query definition=""/>
+     <seriesPalette>
+      <entries _body=",255,250,166,26"/>
+      <entries _body=",255,154,204,0"/>
+      <entries _body=",255,255,204,0"/>
+      <entries _body=",255,51,153,102"/>
+      <entries _body=",255,102,102,153"/>
+      <entries _body=",255,0,128,128"/>
+      <entries _body=",255,244,47,47"/>
+      <entries _body=",255,128,192,128"/>
+      <entries _body=",255,7,146,94"/>
+      <entries _body=",255,0,128,255"/>
+      <entries _body=",255,255,128,192"/>
+      <entries _body=",255,0,255,255"/>
+      <entries _body=",255,255,128,128"/>
+      <entries _body=",255,0,128,192"/>
+      <entries _body=",255,128,128,192"/>
+      <entries _body=",255,255,0,255"/>
+      <entries _body=",255,128,64,64"/>
+      <entries _body=",255,255,128,64"/>
+      <entries _body=",255,80,240,120"/>
+      <entries _body=",255,0,64,128"/>
+      <entries _body=",255,128,0,64"/>
+      <entries _body=",255,255,0,128"/>
+      <entries _body=",255,128,128,64"/>
+      <entries _body=",255,128,128,128"/>
+      <entries _body=",255,255,128,255"/>
+      <entries _body=",255,0,64,0"/>
+      <entries _body=",255,0,0,0"/>
+      <entries _body=",255,255,255,255"/>
+      <entries _body=",255,255,128,0"/>
+      <entries _body=",255,0,121,193"/>
+      <entries _body=",255,241,90,34"/>
+      <entries _body=",255,19,181,234"/>
+     </seriesPalette>
+     <series _type="LineSeries" seriesIdentifier="Spread" stacked="false">
+      <label>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dataDefinition definition="row[&quot;Spread&quot;]">
+       <grouping/>
+      </dataDefinition>
+      <dataPoint separator=", ">
+       <components type="1"/>
+      </dataPoint>
+      <triggers condition="6">
+       <action type="1">
+        <value _type="TooltipValue" text="" delay="200"/>
+       </action>
+      </triggers>
+      <curveFitting _nil="1"/>
+      <markers visible="false">
+       <outline/>
+      </markers>
+      <lineAttributes>
+       <color _nil="1"/>
+      </lineAttributes>
+     </series>
+    </seriesDefinitions>
+    <seriesDefinitions>
+     <query definition=""/>
+     <seriesPalette>
+      <entries _body=",255,154,204,0"/>
+      <entries _body=",255,255,204,0"/>
+      <entries _body=",255,51,153,102"/>
+      <entries _body=",255,102,102,153"/>
+      <entries _body=",255,0,128,128"/>
+      <entries _body=",255,244,47,47"/>
+      <entries _body=",255,128,192,128"/>
+      <entries _body=",255,7,146,94"/>
+      <entries _body=",255,0,128,255"/>
+      <entries _body=",255,255,128,192"/>
+      <entries _body=",255,0,255,255"/>
+      <entries _body=",255,255,128,128"/>
+      <entries _body=",255,0,128,192"/>
+      <entries _body=",255,128,128,192"/>
+      <entries _body=",255,255,0,255"/>
+      <entries _body=",255,128,64,64"/>
+      <entries _body=",255,255,128,64"/>
+      <entries _body=",255,80,240,120"/>
+      <entries _body=",255,0,64,128"/>
+      <entries _body=",255,128,0,64"/>
+      <entries _body=",255,255,0,128"/>
+      <entries _body=",255,128,128,64"/>
+      <entries _body=",255,128,128,128"/>
+      <entries _body=",255,255,128,255"/>
+      <entries _body=",255,0,64,0"/>
+      <entries _body=",255,0,0,0"/>
+      <entries _body=",255,255,255,255"/>
+      <entries _body=",255,255,128,0"/>
+      <entries _body=",255,0,121,193"/>
+      <entries _body=",255,241,90,34"/>
+      <entries _body=",255,19,181,234"/>
+      <entries _body=",255,250,166,26"/>
+     </seriesPalette>
+     <series _type="LineSeries" seriesIdentifier="Selection Risk" stacked="false">
+      <label>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dataDefinition definition="row[&quot;Selection Risk&quot;]">
+       <grouping/>
+      </dataDefinition>
+      <dataPoint separator=", ">
+       <components type="1"/>
+      </dataPoint>
+      <triggers condition="6">
+       <action type="1">
+        <value _type="TooltipValue" text="" delay="200"/>
+       </action>
+      </triggers>
+      <curveFitting _nil="1"/>
+      <markers visible="false">
+       <outline/>
+      </markers>
+      <lineAttributes>
+       <color _nil="1"/>
+      </lineAttributes>
+     </series>
+    </seriesDefinitions>
+    <seriesDefinitions>
+     <query definition=""/>
+     <seriesPalette>
+      <entries _body=",255,255,204,0"/>
+      <entries _body=",255,51,153,102"/>
+      <entries _body=",255,102,102,153"/>
+      <entries _body=",255,0,128,128"/>
+      <entries _body=",255,244,47,47"/>
+      <entries _body=",255,128,192,128"/>
+      <entries _body=",255,7,146,94"/>
+      <entries _body=",255,0,128,255"/>
+      <entries _body=",255,255,128,192"/>
+      <entries _body=",255,0,255,255"/>
+      <entries _body=",255,255,128,128"/>
+      <entries _body=",255,0,128,192"/>
+      <entries _body=",255,128,128,192"/>
+      <entries _body=",255,255,0,255"/>
+      <entries _body=",255,128,64,64"/>
+      <entries _body=",255,255,128,64"/>
+      <entries _body=",255,80,240,120"/>
+      <entries _body=",255,0,64,128"/>
+      <entries _body=",255,128,0,64"/>
+      <entries _body=",255,255,0,128"/>
+      <entries _body=",255,128,128,64"/>
+      <entries _body=",255,128,128,128"/>
+      <entries _body=",255,255,128,255"/>
+      <entries _body=",255,0,64,0"/>
+      <entries _body=",255,0,0,0"/>
+      <entries _body=",255,255,255,255"/>
+      <entries _body=",255,255,128,0"/>
+      <entries _body=",255,0,121,193"/>
+      <entries _body=",255,241,90,34"/>
+      <entries _body=",255,19,181,234"/>
+      <entries _body=",255,250,166,26"/>
+      <entries _body=",255,154,204,0"/>
+     </seriesPalette>
+     <series _type="LineSeries" seriesIdentifier="Industry" stacked="false">
+      <label>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dataDefinition definition="row[&quot;Industry&quot;]">
+       <grouping/>
+      </dataDefinition>
+      <dataPoint separator=", ">
+       <components type="1"/>
+      </dataPoint>
+      <triggers condition="6">
+       <action type="1">
+        <value _type="TooltipValue" text="" delay="200"/>
+       </action>
+      </triggers>
+      <triggers condition="2">
+       <action type="0">
+        <value _type="MultiURLValues">
+         <uRLValues baseUrl="&lt;structure&gt;&#10;    &lt;property name=&quot;linkType&quot;&gt;drill-through&lt;/property&gt;&#10;    &lt;property name=&quot;reportName&quot;&gt;ContributionActiveRisk.rptdesign&lt;/property&gt;&#10;    &lt;property name=&quot;targetWindow&quot;&gt;_blank&lt;/property&gt;&#10;    &lt;property name=&quot;targetFileType&quot;&gt;report-design&lt;/property&gt;&#10;&lt;/structure&gt;&#10;" baseParameterName="" valueParameterName="" seriesParameterName="">
+          <label>
+           <caption value="Chart"/>
+          </label>
+         </uRLValues>
+         <propertiesMap key="MenuItem" value="color:Black;fontSize:10pt;paddingLeft:10px;paddingRight:10px;paddingTop:2px;paddingBottom:2px"/>
+         <propertiesMap key="Menu" value="zIndex:99999;backgroundColor:#FAFFF8;width:auto;height:auto;border:1px solid #333333;filter:progid:DXImageTransform.Microsoft.Shadow(Color:#333333,Direction=120,strength=5)"/>
+         <propertiesMap key="OnMouseOut" value="backgroundColor:#FAFFF8;color:#000000"/>
+         <propertiesMap key="OnMouseOver" value="backgroundColor:#245DDB;color:#FFFFFF"/>
+        </value>
+       </action>
+      </triggers>
+      <curveFitting _nil="1"/>
+      <markers visible="false">
+       <outline/>
+      </markers>
+      <lineAttributes>
+       <color _nil="1"/>
+      </lineAttributes>
+     </series>
+    </seriesDefinitions>
+    <seriesDefinitions>
+     <query definition=""/>
+     <seriesPalette>
+      <entries _body=",255,51,153,102"/>
+      <entries _body=",255,102,102,153"/>
+      <entries _body=",255,0,128,128"/>
+      <entries _body=",255,244,47,47"/>
+      <entries _body=",255,128,192,128"/>
+      <entries _body=",255,7,146,94"/>
+      <entries _body=",255,0,128,255"/>
+      <entries _body=",255,255,128,192"/>
+      <entries _body=",255,0,255,255"/>
+      <entries _body=",255,255,128,128"/>
+      <entries _body=",255,0,128,192"/>
+      <entries _body=",255,128,128,192"/>
+      <entries _body=",255,255,0,255"/>
+      <entries _body=",255,128,64,64"/>
+      <entries _body=",255,255,128,64"/>
+      <entries _body=",255,80,240,120"/>
+      <entries _body=",255,0,64,128"/>
+      <entries _body=",255,128,0,64"/>
+      <entries _body=",255,255,0,128"/>
+      <entries _body=",255,128,128,64"/>
+      <entries _body=",255,128,128,128"/>
+      <entries _body=",255,255,128,255"/>
+      <entries _body=",255,0,64,0"/>
+      <entries _body=",255,0,0,0"/>
+      <entries _body=",255,255,255,255"/>
+      <entries _body=",255,255,128,0"/>
+      <entries _body=",255,0,121,193"/>
+      <entries _body=",255,241,90,34"/>
+      <entries _body=",255,19,181,234"/>
+      <entries _body=",255,250,166,26"/>
+      <entries _body=",255,154,204,0"/>
+      <entries _body=",255,255,204,0"/>
+     </seriesPalette>
+     <series _type="LineSeries" seriesIdentifier="Factor Interaction" stacked="false">
+      <label>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dataDefinition definition="row[&quot;Factor Interaction&quot;]">
+       <grouping/>
+      </dataDefinition>
+      <dataPoint separator=", ">
+       <components type="1"/>
+      </dataPoint>
+      <triggers condition="6">
+       <action type="1">
+        <value _type="TooltipValue" text="" delay="200"/>
+       </action>
+      </triggers>
+      <curveFitting _nil="1"/>
+      <markers visible="false">
+       <outline/>
+      </markers>
+      <lineAttributes>
+       <color _nil="1"/>
+      </lineAttributes>
+     </series>
+    </seriesDefinitions>
+    <seriesDefinitions>
+     <query definition=""/>
+     <seriesPalette>
+      <entries _body=",255,102,102,153"/>
+      <entries _body=",255,0,128,128"/>
+      <entries _body=",255,244,47,47"/>
+      <entries _body=",255,128,192,128"/>
+      <entries _body=",255,7,146,94"/>
+      <entries _body=",255,0,128,255"/>
+      <entries _body=",255,255,128,192"/>
+      <entries _body=",255,0,255,255"/>
+      <entries _body=",255,255,128,128"/>
+      <entries _body=",255,0,128,192"/>
+      <entries _body=",255,128,128,192"/>
+      <entries _body=",255,255,0,255"/>
+      <entries _body=",255,128,64,64"/>
+      <entries _body=",255,255,128,64"/>
+      <entries _body=",255,80,240,120"/>
+      <entries _body=",255,0,64,128"/>
+      <entries _body=",255,128,0,64"/>
+      <entries _body=",255,255,0,128"/>
+      <entries _body=",255,128,128,64"/>
+      <entries _body=",255,128,128,128"/>
+      <entries _body=",255,255,128,255"/>
+      <entries _body=",255,0,64,0"/>
+      <entries _body=",255,0,0,0"/>
+      <entries _body=",255,255,255,255"/>
+      <entries _body=",255,255,128,0"/>
+      <entries _body=",255,0,121,193"/>
+      <entries _body=",255,241,90,34"/>
+      <entries _body=",255,19,181,234"/>
+      <entries _body=",255,250,166,26"/>
+      <entries _body=",255,154,204,0"/>
+      <entries _body=",255,255,204,0"/>
+      <entries _body=",255,51,153,102"/>
+     </seriesPalette>
+     <series _type="LineSeries" seriesIdentifier="Emerging Markets" stacked="false">
+      <label>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dataDefinition definition="row[&quot;Emerging Market&quot;]">
+       <grouping/>
+      </dataDefinition>
+      <dataPoint separator=", ">
+       <components type="1"/>
+      </dataPoint>
+      <triggers condition="6">
+       <action type="1">
+        <value _type="TooltipValue" text="" delay="200"/>
+       </action>
+      </triggers>
+      <curveFitting _nil="1"/>
+      <markers visible="false">
+       <outline/>
+      </markers>
+      <lineAttributes>
+       <color _nil="1"/>
+      </lineAttributes>
+     </series>
+    </seriesDefinitions>
+    <seriesDefinitions>
+     <query definition=""/>
+     <seriesPalette>
+      <entries _body=",255,0,128,128"/>
+      <entries _body=",255,244,47,47"/>
+      <entries _body=",255,128,192,128"/>
+      <entries _body=",255,7,146,94"/>
+      <entries _body=",255,0,128,255"/>
+      <entries _body=",255,255,128,192"/>
+      <entries _body=",255,0,255,255"/>
+      <entries _body=",255,255,128,128"/>
+      <entries _body=",255,0,128,192"/>
+      <entries _body=",255,128,128,192"/>
+      <entries _body=",255,255,0,255"/>
+      <entries _body=",255,128,64,64"/>
+      <entries _body=",255,255,128,64"/>
+      <entries _body=",255,80,240,120"/>
+      <entries _body=",255,0,64,128"/>
+      <entries _body=",255,128,0,64"/>
+      <entries _body=",255,255,0,128"/>
+      <entries _body=",255,128,128,64"/>
+      <entries _body=",255,128,128,128"/>
+      <entries _body=",255,255,128,255"/>
+      <entries _body=",255,0,64,0"/>
+      <entries _body=",255,0,0,0"/>
+      <entries _body=",255,255,255,255"/>
+      <entries _body=",255,255,128,0"/>
+      <entries _body=",255,0,121,193"/>
+      <entries _body=",255,241,90,34"/>
+      <entries _body=",255,19,181,234"/>
+      <entries _body=",255,250,166,26"/>
+      <entries _body=",255,154,204,0"/>
+      <entries _body=",255,255,204,0"/>
+      <entries _body=",255,51,153,102"/>
+      <entries _body=",255,102,102,153"/>
+     </seriesPalette>
+     <series _type="LineSeries" seriesIdentifier="Currenct/Market Interaction" stacked="false">
+      <label>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dataDefinition definition="row[&quot;Currency/Market Interaction&quot;]">
+       <grouping/>
+      </dataDefinition>
+      <dataPoint separator=", ">
+       <components type="1"/>
+      </dataPoint>
+      <triggers condition="6">
+       <action type="1">
+        <value _type="TooltipValue" text="" delay="200"/>
+       </action>
+      </triggers>
+      <curveFitting _nil="1"/>
+      <markers visible="false">
+       <outline/>
+      </markers>
+      <lineAttributes>
+       <color _nil="1"/>
+      </lineAttributes>
+     </series>
+    </seriesDefinitions>
+    <seriesDefinitions>
+     <query definition=""/>
+     <seriesPalette>
+      <entries _body=",255,244,47,47"/>
+      <entries _body=",255,128,192,128"/>
+      <entries _body=",255,7,146,94"/>
+      <entries _body=",255,0,128,255"/>
+      <entries _body=",255,255,128,192"/>
+      <entries _body=",255,0,255,255"/>
+      <entries _body=",255,255,128,128"/>
+      <entries _body=",255,0,128,192"/>
+      <entries _body=",255,128,128,192"/>
+      <entries _body=",255,255,0,255"/>
+      <entries _body=",255,128,64,64"/>
+      <entries _body=",255,255,128,64"/>
+      <entries _body=",255,80,240,120"/>
+      <entries _body=",255,0,64,128"/>
+      <entries _body=",255,128,0,64"/>
+      <entries _body=",255,255,0,128"/>
+      <entries _body=",255,128,128,64"/>
+      <entries _body=",255,128,128,128"/>
+      <entries _body=",255,255,128,255"/>
+      <entries _body=",255,0,64,0"/>
+      <entries _body=",255,0,0,0"/>
+      <entries _body=",255,255,255,255"/>
+      <entries _body=",255,255,128,0"/>
+      <entries _body=",255,0,121,193"/>
+      <entries _body=",255,241,90,34"/>
+      <entries _body=",255,19,181,234"/>
+      <entries _body=",255,250,166,26"/>
+      <entries _body=",255,154,204,0"/>
+      <entries _body=",255,255,204,0"/>
+      <entries _body=",255,51,153,102"/>
+      <entries _body=",255,102,102,153"/>
+      <entries _body=",255,0,128,128"/>
+     </seriesPalette>
+     <series _type="LineSeries" seriesIdentifier="Currency Risk" stacked="false">
+      <label>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dataDefinition definition="row[&quot;Currency Risk&quot;]">
+       <grouping/>
+      </dataDefinition>
+      <dataPoint separator=", ">
+       <components type="1"/>
+      </dataPoint>
+      <triggers condition="6">
+       <action type="1">
+        <value _type="TooltipValue" text="" delay="200"/>
+       </action>
+      </triggers>
+      <curveFitting _nil="1"/>
+      <markers visible="false">
+       <outline/>
+      </markers>
+      <lineAttributes>
+       <color _nil="1"/>
+      </lineAttributes>
+     </series>
+    </seriesDefinitions>
+    <lineAttributes>
+     <color _body=",255,192,192,192"/>
+    </lineAttributes>
+    <label>
+     <caption>
+      <font size="7.0"/>
+      <color _body=",255,145,145,145"/>
+     </caption>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </label>
+    <formatSpecifier _type="NumberFormatSpecifier" prefix="" suffix="" fractionDigits="0"/>
+    <majorGrid>
+     <lineAttributes visible="true">
+      <color _nil="1"/>
+     </lineAttributes>
+     <tickAttributes>
+      <color _nil="1"/>
+     </tickAttributes>
+    </majorGrid>
+    <minorGrid>
+     <lineAttributes visible="false">
+      <color _nil="1"/>
+     </lineAttributes>
+     <tickAttributes>
+      <color _nil="1"/>
+     </tickAttributes>
+    </minorGrid>
+    <origin>
+     <value _nil="1"/>
+    </origin>
+    <cursor type="0"/>
+   </associatedAxes>
+   <seriesDefinitions>
+    <query definition=""/>
+    <seriesPalette>
+     <entries _body=",255,0,121,193"/>
+     <entries _body=",255,241,90,34"/>
+     <entries _body=",255,19,181,234"/>
+     <entries _body=",255,250,166,26"/>
+     <entries _body=",255,154,204,0"/>
+     <entries _body=",255,255,204,0"/>
+     <entries _body=",255,51,153,102"/>
+     <entries _body=",255,102,102,153"/>
+     <entries _body=",255,0,128,128"/>
+     <entries _body=",255,244,47,47"/>
+     <entries _body=",255,128,192,128"/>
+     <entries _body=",255,7,146,94"/>
+     <entries _body=",255,0,128,255"/>
+     <entries _body=",255,255,128,192"/>
+     <entries _body=",255,0,255,255"/>
+     <entries _body=",255,255,128,128"/>
+     <entries _body=",255,0,128,192"/>
+     <entries _body=",255,128,128,192"/>
+     <entries _body=",255,255,0,255"/>
+     <entries _body=",255,128,64,64"/>
+     <entries _body=",255,255,128,64"/>
+     <entries _body=",255,80,240,120"/>
+     <entries _body=",255,0,64,128"/>
+     <entries _body=",255,128,0,64"/>
+     <entries _body=",255,255,0,128"/>
+     <entries _body=",255,128,128,64"/>
+     <entries _body=",255,128,128,128"/>
+     <entries _body=",255,255,128,255"/>
+     <entries _body=",255,0,64,0"/>
+     <entries _body=",255,0,0,0"/>
+     <entries _body=",255,255,255,255"/>
+     <entries _body=",255,255,128,0"/>
+    </seriesPalette>
+    <series seriesIdentifier="">
+     <label>
+      <background _nil="1"/>
+      <outline>
+       <color _nil="1"/>
+      </outline>
+     </label>
+     <dataDefinition definition="row[&quot;Portfolio Date&quot;]"/>
+     <dataPoint separator=", ">
+      <components type="1"/>
+     </dataPoint>
+     <curveFitting _nil="1"/>
+    </series>
+    <grouping enabled="true" groupingUnit="5" groupType="1"/>
+    <sortKey/>
+   </seriesDefinitions>
+   <lineAttributes>
+    <color _body=",255,192,192,192"/>
+   </lineAttributes>
+   <label>
+    <caption>
+     <font size="7.0"/>
+     <color _body=",255,145,145,145"/>
+    </caption>
+    <background _nil="1"/>
+    <outline>
+     <color _nil="1"/>
+    </outline>
+   </label>
+   <formatSpecifier _type="JavaDateFormatSpecifier" pattern="M/yy"/>
+   <majorGrid>
+    <lineAttributes>
+     <color _nil="1"/>
+    </lineAttributes>
+    <tickAttributes>
+     <color _nil="1"/>
+    </tickAttributes>
+   </majorGrid>
+   <minorGrid>
+    <lineAttributes>
+     <color _nil="1"/>
+    </lineAttributes>
+    <tickAttributes>
+     <color _nil="1"/>
+    </tickAttributes>
+   </minorGrid>
+   <origin>
+    <value _nil="1"/>
+   </origin>
+   <cursor type="0"/>
+  </axes>
+  <rotation>
+   <angles/>
+  </rotation>
+ </ChartWithAxes>
+</ActuateChart>
+]]></xml-property>
+                        <property name="outputFormat">PNG</property>
+                        <list-property name="action">
+                            <structure>
+                                <property name="toolTip">Click for larger chart</property>
+                                <property name="targetWindow">_blank</property>
+                                <property name="linkType">drill-through</property>
+                                <property name="targetFileType">report-design</property>
+                                <property name="reportName">ContributionActiveRisk.rptdesign</property>
+                            </structure>
+                        </list-property>
+                        <list-property name="filter">
+                            <structure>
+                                <property name="operator">ge</property>
+                                <expression name="expr" type="javascript">row["Portfolio Date"]</expression>
+                                <simple-property-list name="value1">
+                                    <value type="javascript">"2011-01-31"</value>
+                                </simple-property-list>
+                                <property name="updateAggregation">true</property>
+                            </structure>
+                        </list-property>
+                        <property name="inheritColumns">false</property>
+                        <property name="height">2.5in</property>
+                        <property name="width">3.458in</property>
+                        <property name="dataSet">TS1 Data Set</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">Portfolio Date</property>
+                                <expression name="expression" type="javascript">dataSetRow["Portfolio Date"]</expression>
+                                <property name="dataType">date</property>
+                            </structure>
+                            <structure>
+                                <property name="name">Common Factor Risk</property>
+                                <expression name="expression" type="javascript">dataSetRow["Common Factor Risk"]</expression>
+                                <property name="dataType">decimal</property>
+                            </structure>
+                            <structure>
+                                <property name="name">Currency Risk</property>
+                                <expression name="expression" type="javascript">dataSetRow["Currency Risk"]</expression>
+                                <property name="dataType">decimal</property>
+                            </structure>
+                            <structure>
+                                <property name="name">Currency/Market Interaction</property>
+                                <expression name="expression" type="javascript">dataSetRow["Currency/Market Interaction"]</expression>
+                                <property name="dataType">decimal</property>
+                            </structure>
+                            <structure>
+                                <property name="name">Emerging Market</property>
+                                <expression name="expression" type="javascript">dataSetRow["Emerging Market"]</expression>
+                                <property name="dataType">decimal</property>
+                            </structure>
+                            <structure>
+                                <property name="name">Factor Interaction</property>
+                                <expression name="expression" type="javascript">dataSetRow["Factor Interaction"]</expression>
+                                <property name="dataType">decimal</property>
+                            </structure>
+                            <structure>
+                                <property name="name">Industry</property>
+                                <expression name="expression" type="javascript">dataSetRow["Industry"]</expression>
+                                <property name="dataType">decimal</property>
+                            </structure>
+                            <structure>
+                                <property name="name">Selection Risk</property>
+                                <expression name="expression" type="javascript">dataSetRow["Selection Risk"]</expression>
+                                <property name="dataType">decimal</property>
+                            </structure>
+                            <structure>
+                                <property name="name">Spread</property>
+                                <expression name="expression" type="javascript">dataSetRow["Spread"]</expression>
+                                <property name="dataType">decimal</property>
+                            </structure>
+                            <structure>
+                                <property name="name">Style</property>
+                                <expression name="expression" type="javascript">dataSetRow["Style"]</expression>
+                                <property name="dataType">decimal</property>
+                            </structure>
+                            <structure>
+                                <property name="name">Term Structure</property>
+                                <expression name="expression" type="javascript">dataSetRow["Term Structure"]</expression>
+                                <property name="dataType">decimal</property>
+                            </structure>
+                            <structure>
+                                <property name="name">Covariance</property>
+                                <expression name="expression" type="javascript">dataSetRow["Covariance"]</expression>
+                                <property name="dataType">decimal</property>
+                            </structure>
+                        </list-property>
+                    </extended-item>
+                </cell>
+            </row>
+        </grid>
+    </body>
+    <property name="pageVariables">
+        <variable-element name="g_dataXML">
+            <property name="type">report</property>
+        </variable-element>
+    </property>
+</report>
