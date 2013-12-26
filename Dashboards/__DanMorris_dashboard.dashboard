@@ -5298,7 +5298,7 @@
     </body>
     <property name="dashboardView">
         <dashboard id="2">
-            <property name="activeTab">049f219c-22c5-445b-8bb1-b28f150e1ef51</property>
+            <property name="activeTab">31d6b1b4-6e61-4c3d-84a3-0d04c91bb8961</property>
             <property name="tabs">
                 <tab-element name="3596098d-5ae6-490b-8c7d-437cd1c60c7b1" id="15">
                     <property name="title">Home</property>
@@ -5815,127 +5815,26 @@
                     <property name="showFooter">false</property>
                     <property name="headerHTML">null</property>
                     <property name="footerHTML">null</property>
-                    <property name="sections">
-                        <section id="122">
-                            <property name="width">9.137426900584796%</property>
-                            <property name="gadgets">
-                                <gadget name="Gadget_ac63871f-ad6b-40bf-b079-7a1876294af4" id="123">
-                                    <property name="title">Wealth Progress</property>
-                                    <property name="externalGadgetURI">/WM/term_goal.rptdesign</property>
-                                    <property name="showTitle">false</property>
-                                    <property name="showBorder">false</property>
-                                    <property name="zIndex">13</property>
-                                    <property name="showScrollBar">false</property>
-                                    <property name="content">
-                                        <data-view id="124">
-                                            <list-property name="userProperties">
-                                                <structure>
-                                                    <property name="name">showViewerToolbar</property>
-                                                    <property name="type">boolean</property>
-                                                </structure>
-                                            </list-property>
-                                            <property name="showViewerToolbar">false</property>
-                                            <property name="gadgetType">viewer</property>
-                                            <property name="externalContentRef">
-                                                <external-element-ref>
-                                                    <property name="sourceFile">/WM/term_goal.rptdocument</property>
-                                                    <property name="targetBookmark">chart</property>
-                                                </external-element-ref>
-                                            </property>
-                                        </data-view>
-                                    </property>
-                                </gadget>
-                                <gadget name="7d72f8c7-b11e-4fe0-9849-b2838c18c62d2" id="125">
-                                    <property name="zIndex">5</property>
-                                    <property name="isVisible">false</property>
-                                    <property name="content">
-                                        <current-selections id="126"/>
-                                    </property>
-                                    <property name="subscribeTo">
-                                        <event-subscriber>
-                                            <property name="eventName">SELECT_EVENT:SEMANTIC_filter</property>
-                                            <property name="eventObjects">
-                                                <event-object>
-                                                    <property name="gadget">Gadget_b51c1b81-6e47-4b90-aaea-a3dcea0601eb</property>
-                                                    <property name="dirty">false</property>
-                                                </event-object>
-                                            </property>
-                                        </event-subscriber>
-                                    </property>
-                                </gadget>
-                            </property>
-                        </section>
-                        <section id="127">
-                            <property name="width">29.751461988304094%</property>
-                            <property name="gadgets">
-                                <gadget name="Gadget_691236c0-a227-42af-aa53-c5aa6267b243" id="128">
-                                    <property name="title">My Account Update</property>
-                                    <property name="externalGadgetURI">/WM/Account Overview Table.rptdesign</property>
-                                    <property name="showTitle">false</property>
-                                    <property name="showBorder">false</property>
-                                    <property name="zIndex">7</property>
-                                    <property name="showScrollBar">false</property>
-                                    <property name="content">
-                                        <data-view id="129">
-                                            <list-property name="userProperties">
-                                                <structure>
-                                                    <property name="name">showViewerToolbar</property>
-                                                    <property name="type">boolean</property>
-                                                </structure>
-                                            </list-property>
-                                            <property name="showViewerToolbar">false</property>
-                                            <property name="gadgetType">viewer</property>
-                                            <property name="externalContentRef">
-                                                <external-element-ref>
-                                                    <property name="sourceFile">/WM/Account Overview Table.rptdocument</property>
-                                                    <property name="targetBookmark">table</property>
-                                                </external-element-ref>
-                                            </property>
-                                        </data-view>
-                                    </property>
-                                </gadget>
-                                <gadget name="Gadget_0f3fc0bc-9382-4a2d-ad6e-f036010e29e8" id="130">
-                                    <property name="title">My Transaction History</property>
-                                    <property name="externalGadgetURI">/WM/TransactionHistory.rptdesign</property>
-                                    <property name="showTitle">false</property>
-                                    <property name="showBorder">false</property>
-                                    <property name="zIndex">15</property>
-                                    <property name="showScrollBar">true</property>
-                                    <property name="content">
-                                        <data-view id="131">
-                                            <list-property name="userProperties">
-                                                <structure>
-                                                    <property name="name">showViewerToolbar</property>
-                                                    <property name="type">boolean</property>
-                                                </structure>
-                                            </list-property>
-                                            <property name="showViewerToolbar">false</property>
-                                            <property name="gadgetType">viewer</property>
-                                            <property name="externalContentRef">
-                                                <external-element-ref>
-                                                    <property name="sourceFile">/WM/TransactionHistory.rptdesign</property>
-                                                    <property name="targetBookmark">table</property>
-                                                </external-element-ref>
-                                            </property>
-                                        </data-view>
-                                    </property>
-                                </gadget>
-                            </property>
-                        </section>
-                        <section id="132">
-                            <property name="width">61.111111111111114%</property>
-                        </section>
-                    </property>
+                    <property name="backgroundColor">RGB(255,255,255)</property>
                     <property name="freeFormGadgets">
                         <gadget name="Gadget_7c90abfa-c3c2-4671-8ae9-8e86791407eb" id="133">
-                            <property name="x">549px</property>
-                            <property name="y">10px</property>
+                            <property name="x">576px</property>
+                            <property name="y">0px</property>
+                            <property name="height">350px</property>
+                            <property name="width">390px</property>
                             <property name="title">My Account Performance At-A-Glance</property>
                             <property name="externalGadgetURI">/WM/Account Overview.rptdesign</property>
                             <property name="showTitle">false</property>
                             <property name="showBorder">false</property>
                             <property name="zIndex">1</property>
                             <property name="showScrollBar">false</property>
+                            <property name="height">350px</property>
+                            <property name="width">390px</property>
+                            <property name="caption">
+                                <gadget-caption id="984">
+                                    <property name="horizontalAlignment">right</property>
+                                </gadget-caption>
+                            </property>
                             <property name="content">
                                 <data-view id="134">
                                     <list-property name="userProperties">
@@ -5948,7 +5847,7 @@
                                     <property name="gadgetType">viewer</property>
                                     <property name="externalContentRef">
                                         <external-element-ref>
-                                            <property name="sourceFile">/WM/Account Overview.rptdocument</property>
+                                            <property name="sourceFile">././././././././././././././././././././/Report Designs/Account Overview.rptdocument</property>
                                             <property name="targetBookmark">html5</property>
                                         </external-element-ref>
                                     </property>
@@ -6019,17 +5918,21 @@
                                 </data-view>
                             </property>
                         </gadget>
-                        <gadget name="Gadget_5a850aad-7586-4ad1-837a-b891a9c95e44" id="139">
-                            <property name="x">957px</property>
-                            <property name="y">10px</property>
-                            <property name="title">My Wealth vs Market Index</property>
-                            <property name="externalGadgetURI">/WM/My Wealth vs Indices.rptdesign</property>
+                        <gadget name="Gadget_ac63871f-ad6b-40bf-b079-7a1876294af4" id="123">
+                            <property name="x">0px</property>
+                            <property name="y">0px</property>
+                            <property name="height">500px</property>
+                            <property name="width">162px</property>
+                            <property name="title">Wealth Progress</property>
+                            <property name="externalGadgetURI">/WM/term_goal.rptdesign</property>
                             <property name="showTitle">false</property>
                             <property name="showBorder">false</property>
-                            <property name="zIndex">0</property>
+                            <property name="zIndex">13</property>
                             <property name="showScrollBar">false</property>
+                            <property name="height">500px</property>
+                            <property name="width">162px</property>
                             <property name="content">
-                                <data-view id="140">
+                                <data-view id="124">
                                     <list-property name="userProperties">
                                         <structure>
                                             <property name="name">showViewerToolbar</property>
@@ -6040,45 +5943,135 @@
                                     <property name="gadgetType">viewer</property>
                                     <property name="externalContentRef">
                                         <external-element-ref>
-                                            <property name="sourceFile">/WM/My Wealth vs Indices.rptdesign</property>
-                                            <property name="targetBookmark">chart2</property>
+                                            <property name="sourceFile">./././././/Report Designs/term_goal.rptdocument</property>
+                                            <property name="targetBookmark">chart</property>
                                         </external-element-ref>
-                                    </property>
-                                    <property name="paramSettings">
-                                        <param-setting>
-                                            <property name="paramName">pYearsBack</property>
-                                            <expression name="value">1</expression>
-                                            <property name="isHidden">true</property>
-                                            <expression name="defaultValue" type="javascript">1</expression>
-                                        </param-setting>
                                     </property>
                                 </data-view>
                             </property>
+                        </gadget>
+                        <gadget name="7d72f8c7-b11e-4fe0-9849-b2838c18c62d2" id="125">
+                            <property name="x">10px</property>
+                            <property name="y">575px</property>
+                            <property name="height">47px</property>
+                            <property name="width">106px</property>
+                            <property name="zIndex">5</property>
+                            <property name="isVisible">false</property>
+                            <property name="height">47px</property>
+                            <property name="width">106px</property>
+                            <property name="content">
+                                <current-selections id="126"/>
+                            </property>
                             <property name="subscribeTo">
                                 <event-subscriber>
-                                    <property name="eventName">SELECT_EVENT:SEMANTIC_parameter</property>
+                                    <property name="eventName">SELECT_EVENT:SEMANTIC_filter</property>
                                     <property name="eventObjects">
                                         <event-object>
-                                            <property name="appliedTo">pYearsBack</property>
-                                            <property name="gadget">Gadget_b51c1b81-6e47-4b90-aaea-a3dcea0601eb</property>
+                                            <property name="gadget">Gadget_ceb90994-45c3-4d33-9593-9c1b412327ac</property>
                                             <property name="dirty">false</property>
                                         </event-object>
                                     </property>
                                 </event-subscriber>
                             </property>
                         </gadget>
-                        <gadget name="Gadget_b51c1b81-6e47-4b90-aaea-a3dcea0601eb" id="141">
-                            <property name="x">1060px</property>
-                            <property name="y">20px</property>
-                            <property name="title">AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</property>
+                        <gadget name="Gadget_691236c0-a227-42af-aa53-c5aa6267b243" id="128">
+                            <property name="x">180px</property>
+                            <property name="y">0px</property>
+                            <property name="height">500px</property>
+                            <property name="width">390px</property>
+                            <property name="title">My Account Update</property>
+                            <property name="externalGadgetURI">/WM/Account Overview Table.rptdesign</property>
                             <property name="showTitle">false</property>
                             <property name="showBorder">false</property>
-                            <property name="zIndex">20</property>
+                            <property name="zIndex">7</property>
+                            <property name="showScrollBar">false</property>
+                            <property name="height">500px</property>
+                            <property name="width">390px</property>
+                            <property name="caption">
+                                <gadget-caption id="973">
+                                    <property name="showCaption">true</property>
+                                    <property name="horizontalAlignment">left</property>
+                                </gadget-caption>
+                            </property>
                             <property name="content">
-                                <radio-data-selector id="142">
+                                <data-view id="129">
+                                    <list-property name="userProperties">
+                                        <structure>
+                                            <property name="name">showViewerToolbar</property>
+                                            <property name="type">boolean</property>
+                                        </structure>
+                                    </list-property>
+                                    <property name="showViewerToolbar">false</property>
+                                    <property name="gadgetType">viewer</property>
                                     <property name="externalContentRef">
                                         <external-element-ref>
-                                            <property name="sourceFile">/WM/My Wealth vs Indices.rptdesign</property>
+                                            <property name="sourceFile">./././././././././././././././/Report Designs/Account Overview Table.rptdocument</property>
+                                            <property name="targetBookmark">table</property>
+                                        </external-element-ref>
+                                    </property>
+                                </data-view>
+                            </property>
+                        </gadget>
+                        <gadget name="Gadget_0f3fc0bc-9382-4a2d-ad6e-f036010e29e8" id="130">
+                            <property name="x">139px</property>
+                            <property name="y">535px</property>
+                            <property name="height">556px</property>
+                            <property name="width">390px</property>
+                            <property name="title">My Transaction History</property>
+                            <property name="externalGadgetURI">/WM/TransactionHistory.rptdesign</property>
+                            <property name="showTitle">false</property>
+                            <property name="showBorder">false</property>
+                            <property name="zIndex">15</property>
+                            <property name="showScrollBar">true</property>
+                            <property name="height">556px</property>
+                            <property name="width">390px</property>
+                            <property name="content">
+                                <data-view id="131">
+                                    <list-property name="userProperties">
+                                        <structure>
+                                            <property name="name">showViewerToolbar</property>
+                                            <property name="type">boolean</property>
+                                        </structure>
+                                    </list-property>
+                                    <property name="showViewerToolbar">false</property>
+                                    <property name="gadgetType">viewer</property>
+                                    <property name="externalContentRef">
+                                        <external-element-ref>
+                                            <property name="sourceFile">/WM/TransactionHistory.rptdesign</property>
+                                            <property name="targetBookmark">table</property>
+                                        </external-element-ref>
+                                    </property>
+                                </data-view>
+                            </property>
+                        </gadget>
+                        <gadget name="Gadget_ceb90994-45c3-4d33-9593-9c1b412327ac" id="981">
+                            <property name="x">990px</property>
+                            <property name="y">36px</property>
+                            <property name="height">31px</property>
+                            <property name="width">386px</property>
+                            <property name="title">AAAAAAAAAAAAAA</property>
+                            <property name="showTitle">false</property>
+                            <property name="showBorder">false</property>
+                            <property name="zIndex">21</property>
+                            <property name="height">31px</property>
+                            <property name="width">386px</property>
+                            <property name="caption">
+                                <gadget-caption id="982">
+                                    <property name="showCaption">false</property>
+                                    <property name="horizontalAlignment">left</property>
+                                    <property name="fontFamily">serif</property>
+                                    <property name="fontSize">10pt</property>
+                                    <property name="fontWeight">normal</property>
+                                    <property name="fontStyle">normal</property>
+                                    <property name="color">black</property>
+                                    <property name="textUnderline">none</property>
+                                </gadget-caption>
+                            </property>
+                            <property name="content">
+                                <radio-data-selector id="983">
+                                    <property name="externalContentRef">
+                                        <external-element-ref>
+                                            <property name="sourceFile">./././././././././././././././././././././././././././././././././././/Report Designs/My Wealth vs Indices.rptdesign</property>
                                             <property name="targetBookmark">pYearsBack</property>
                                             <property name="isNoValueSupported">false</property>
                                         </external-element-ref>
@@ -6089,8 +6082,8 @@
                                     <simple-property-list name="selectedValues">
                                         <value>1</value>
                                     </simple-property-list>
-                                    <property name="orientation">vertical</property>
-                                    <property name="autoAdjust">true</property>
+                                    <property name="orientation">horizontal</property>
+                                    <property name="autoAdjust">false</property>
                                     <property name="autoAdjustNumber">3</property>
                                     <property name="listLimit">1000</property>
                                 </radio-data-selector>
@@ -6110,7 +6103,64 @@
                                     <property name="eventObjects">
                                         <event-object>
                                             <property name="appliedTo">pYearsBack</property>
-                                            <property name="gadget">Gadget_5a850aad-7586-4ad1-837a-b891a9c95e44</property>
+                                            <property name="gadget">Gadget_748c94e6-dce7-4388-906a-96fb431df7f4</property>
+                                            <property name="dirty">false</property>
+                                        </event-object>
+                                    </property>
+                                </event-subscriber>
+                            </property>
+                        </gadget>
+                        <gadget name="Gadget_748c94e6-dce7-4388-906a-96fb431df7f4" id="975">
+                            <property name="x">990px</property>
+                            <property name="y">0px</property>
+                            <property name="height">338px</property>
+                            <property name="width">386px</property>
+                            <property name="title">My Wealth vs. Market Indices</property>
+                            <property name="externalGadgetURI">./././././/Report Designs/My Wealth vs Indices.rptdesign</property>
+                            <property name="showTitle">false</property>
+                            <property name="showBorder">false</property>
+                            <property name="zIndex">0</property>
+                            <property name="showScrollBar">false</property>
+                            <property name="height">338px</property>
+                            <property name="width">386px</property>
+                            <property name="caption">
+                                <gadget-caption id="976">
+                                    <property name="showCaption">true</property>
+                                    <property name="horizontalAlignment">left</property>
+                                </gadget-caption>
+                            </property>
+                            <property name="content">
+                                <data-view id="977">
+                                    <list-property name="userProperties">
+                                        <structure>
+                                            <property name="name">showViewerToolbar</property>
+                                            <property name="type">boolean</property>
+                                        </structure>
+                                    </list-property>
+                                    <property name="showViewerToolbar">false</property>
+                                    <property name="gadgetType">viewer</property>
+                                    <property name="externalContentRef">
+                                        <external-element-ref>
+                                            <property name="sourceFile">././././././././././././././././././././././././././././././././././././././././././././././././././/Report Designs/My Wealth vs Indices.rptdesign</property>
+                                        </external-element-ref>
+                                    </property>
+                                    <property name="paramSettings">
+                                        <param-setting>
+                                            <property name="paramName">pYearsBack</property>
+                                            <expression name="value">1</expression>
+                                            <property name="isHidden">true</property>
+                                            <expression name="defaultValue" type="javascript">1</expression>
+                                        </param-setting>
+                                    </property>
+                                </data-view>
+                            </property>
+                            <property name="subscribeTo">
+                                <event-subscriber>
+                                    <property name="eventName">SELECT_EVENT:SEMANTIC_parameter</property>
+                                    <property name="eventObjects">
+                                        <event-object>
+                                            <property name="appliedTo">pYearsBack</property>
+                                            <property name="gadget">Gadget_ceb90994-45c3-4d33-9593-9c1b412327ac</property>
                                             <property name="dirty">false</property>
                                         </event-object>
                                     </property>
