@@ -1,0 +1,993 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 4.2.3.v20131029-0430 Build &lt;4.2.3.v20131029-0430></property>
+    <property name="units">in</property>
+    <property name="iconFile">/templates/blank_report.gif</property>
+    <property name="layoutPreference">auto layout</property>
+    <property name="bidiLayoutOrientation">ltr</property>
+    <method name="onContentUpdate"><![CDATA[if (!this.getViewer().isInteractive())
+	this.getViewer().enableIV();]]></method>
+    <parameters>
+        <scalar-parameter name="pAccount" id="9">
+            <property name="hidden">true</property>
+            <property name="valueType">static</property>
+            <property name="isRequired">true</property>
+            <property name="dataType">integer</property>
+            <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="constant">71057540</value>
+            </simple-property-list>
+            <property name="paramType">simple</property>
+            <property name="concealValue">false</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+    </parameters>
+    <data-sources>
+        <oda-data-source extensionID="org.eclipse.datatools.connectivity.oda.flatfile" name="Data Source CSV" id="371">
+            <property name="HOME">Flatfiles/</property>
+            <property name="DELIMTYPE">COMMA</property>
+            <property name="CHARSET">UTF-8</property>
+            <property name="INCLCOLUMNNAME">YES</property>
+            <property name="INCLTYPELINE">NO</property>
+            <property name="TRAILNULLCOLS">NO</property>
+        </oda-data-source>
+    </data-sources>
+    <data-sets>
+        <oda-data-set extensionID="org.eclipse.datatools.connectivity.oda.flatfile.dataSet" name="Data Set CSV" id="372">
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">ACCT_ID</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="heading">ACCT_ID</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">ACCT_NAME</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">ACCT_NAME</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">ISS_PRICE_AM</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="heading">ISS_PRICE_AM</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">TRADE_DATE_QY</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="heading">TRADE_DATE_QY</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">ITEM_ISS_NM</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">ITEM_ISS_NM</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">ISS_SHRT_DESC_TX</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">ISS_SHRT_DESC_TX</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Total</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="heading">Total</text-property>
+                </structure>
+            </list-property>
+            <list-property name="parameters"/>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">ACCT_ID</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">ACCT_NAME</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">ISS_PRICE_AM</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">TRADE_DATE_QY</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">ITEM_ISS_NM</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">6</property>
+                        <property name="name">ISS_SHRT_DESC_TX</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">7</property>
+                        <property name="name">Total</property>
+                        <property name="dataType">float</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Data Source CSV</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">ACCT_ID</property>
+                    <property name="nativeName">ACCT_ID</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">4</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">ACCT_NAME</property>
+                    <property name="nativeName">ACCT_NAME</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">ISS_PRICE_AM</property>
+                    <property name="nativeName">ISS_PRICE_AM</property>
+                    <property name="dataType">decimal</property>
+                    <property name="nativeDataType">2</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">TRADE_DATE_QY</property>
+                    <property name="nativeName">TRADE_DATE_QY</property>
+                    <property name="dataType">decimal</property>
+                    <property name="nativeDataType">2</property>
+                </structure>
+                <structure>
+                    <property name="position">5</property>
+                    <property name="name">ITEM_ISS_NM</property>
+                    <property name="nativeName">ITEM_ISS_NM</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">6</property>
+                    <property name="name">ISS_SHRT_DESC_TX</property>
+                    <property name="nativeName">ISS_SHRT_DESC_TX</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">7</property>
+                    <property name="name">Total</property>
+                    <property name="nativeName">Total</property>
+                    <property name="dataType">float</property>
+                    <property name="nativeDataType">8</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[select "ACCT_ID", "ACCT_NAME", "ISS_PRICE_AM", "TRADE_DATE_QY", "ITEM_ISS_NM", "ISS_SHRT_DESC_TX", "Total" from "positions.csv" : {"ACCT_ID","ACCT_ID",INT;"ACCT_NAME","ACCT_NAME",STRING;"ISS_PRICE_AM","ISS_PRICE_AM",BIGDECIMAL;"TRADE_DATE_QY","TRADE_DATE_QY",BIGDECIMAL;"ITEM_ISS_NM","ITEM_ISS_NM",STRING;"ISS_SHRT_DESC_TX","ISS_SHRT_DESC_TX",STRING;"Total","Total",DOUBLE}]]></xml-property>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>ACCT_ID</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>ACCT_ID</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>ACCT_NAME</design:name>
+              <design:position>2</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>ACCT_NAME</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>ISS_PRICE_AM</design:name>
+              <design:position>3</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>ISS_PRICE_AM</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>TRADE_DATE_QY</design:name>
+              <design:position>4</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>TRADE_DATE_QY</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>ITEM_ISS_NM</design:name>
+              <design:position>5</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>ITEM_ISS_NM</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>ISS_SHRT_DESC_TX</design:name>
+              <design:position>6</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>ISS_SHRT_DESC_TX</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>TOTAL</design:name>
+              <design:position>7</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>TOTAL</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+        </oda-data-set>
+    </data-sets>
+    <styles>
+        <style name="report" id="4">
+            <property name="fontFamily">"Verdana"</property>
+            <property name="fontSize">10pt</property>
+        </style>
+        <style name="crosstab-cell" id="5">
+            <property name="borderBottomColor">#CCCCCC</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">1pt</property>
+            <property name="borderLeftColor">#CCCCCC</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">1pt</property>
+            <property name="borderRightColor">#CCCCCC</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">1pt</property>
+            <property name="borderTopColor">#CCCCCC</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">1pt</property>
+        </style>
+        <style name="crosstab" id="6">
+            <property name="borderBottomColor">#CCCCCC</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">1pt</property>
+            <property name="borderLeftColor">#CCCCCC</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">1pt</property>
+            <property name="borderRightColor">#CCCCCC</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">1pt</property>
+            <property name="borderTopColor">#CCCCCC</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">1pt</property>
+        </style>
+    </styles>
+    <page-setup>
+        <simple-master-page name="Simple MasterPage" id="2">
+            <property name="topMargin">0.25in</property>
+            <property name="leftMargin">0.25in</property>
+            <property name="bottomMargin">0.25in</property>
+            <property name="rightMargin">0.25in</property>
+            <page-footer>
+                <text id="3">
+                    <property name="contentType">html</property>
+                    <text-property name="content"><![CDATA[<value-of>new Date()</value-of>]]></text-property>
+                </text>
+            </page-footer>
+        </simple-master-page>
+    </page-setup>
+    <body>
+        <grid id="395">
+            <property name="textAlign">center</property>
+            <column id="396"/>
+            <row id="397">
+                <cell id="398">
+                    <table id="483">
+                        <property name="width">90%</property>
+                        <property name="dataSet">Data Set CSV</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">ACCT_ID</property>
+                                <expression name="expression">dataSetRow["ACCT_ID"]</expression>
+                                <property name="dataType">integer</property>
+                            </structure>
+                            <structure>
+                                <property name="name">ACCT_NAME</property>
+                                <expression name="expression">dataSetRow["ACCT_NAME"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">ISS_PRICE_AM</property>
+                                <expression name="expression">dataSetRow["ISS_PRICE_AM"]</expression>
+                                <property name="dataType">decimal</property>
+                            </structure>
+                            <structure>
+                                <property name="name">TRADE_DATE_QY</property>
+                                <expression name="expression">dataSetRow["TRADE_DATE_QY"]</expression>
+                                <property name="dataType">decimal</property>
+                            </structure>
+                            <structure>
+                                <property name="name">ITEM_ISS_NM</property>
+                                <expression name="expression">dataSetRow["ITEM_ISS_NM"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">ISS_SHRT_DESC_TX</property>
+                                <expression name="expression">dataSetRow["ISS_SHRT_DESC_TX"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">Total</property>
+                                <expression name="expression">dataSetRow["Total"]</expression>
+                                <property name="dataType">float</property>
+                            </structure>
+                        </list-property>
+                        <property name="multiViews">
+                            <multi-views id="523">
+                                <property name="index">-1</property>
+                                <property name="views">
+                                    <extended-item extensionName="Chart" name="NewChart1" id="524">
+                                        <xml-property name="xmlRepresentation"><![CDATA[<ActuateChart version="2.6.1">
+ <ChartWithoutAxes version="2.6.1" type="Pie Chart" subType="Standard" dimension="0" units="Points" seriesThickness="15.0">
+  <block>
+   <children _type="TitleBlock">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <label>
+     <caption value="Managed ETF - Allocation">
+      <font name="Verdana" size="10.0" bold="true">
+       <alignment _body="1,"/>
+      </font>
+     </caption>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </label>
+   </children>
+   <children _type="Plot">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <clientArea>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </clientArea>
+   </children>
+   <children _type="Legend" stretch="1" itemType="1">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <clientArea>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </clientArea>
+    <text value="">
+     <font name="Verdana" size="8.0"/>
+    </text>
+    <separator>
+     <color _nil="1"/>
+    </separator>
+    <title>
+     <caption value=""/>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </title>
+   </children>
+   <bounds _body=",,576.0,204.75"/>
+   <outline>
+    <color _nil="1"/>
+   </outline>
+   <background _body=",255,255,255,255"/>
+  </block>
+  <extendedProperties name="enable.area.alt" value="false"/>
+  <extendedProperties name="enable.drill.category" value="true"/>
+  <extendedProperties name="enable.drill.series" value="true"/>
+  <extendedProperties name="jschart.series.shadow" value="true"/>
+  <sampleData>
+   <baseSampleData dataSetRepresentation="&#039;A&#039;,&#039;B&#039;,&#039;C&#039;,&#039;D&#039;,&#039;E&#039;"/>
+   <orthogonalSampleData dataSetRepresentation="6,4,12,8,10"/>
+  </sampleData>
+  <interactivity legendBehavior="1"/>
+  <emptyMessage>
+   <caption value="">
+    <font>
+     <alignment _body=",0"/>
+    </font>
+   </caption>
+   <background _body=",0,255,255,255"/>
+   <outline visible="false">
+    <color _body=",255,0,0,0"/>
+   </outline>
+   <insets _body="0.0,2.0,0.0,3.0"/>
+  </emptyMessage>
+  <seriesDefinitions>
+   <query definition=""/>
+   <seriesPalette>
+    <entries _body=",255,80,166,218"/>
+    <entries _body=",255,242,88,106"/>
+    <entries _body=",255,232,172,57"/>
+    <entries _body=",255,128,255,128"/>
+    <entries _body=",255,64,128,128"/>
+    <entries _body=",255,128,128,192"/>
+    <entries _body=",255,170,85,85"/>
+    <entries _body=",255,128,128,0"/>
+    <entries _body=",255,192,192,192"/>
+    <entries _body=",255,255,255,128"/>
+    <entries _body=",255,128,192,128"/>
+    <entries _body=",255,7,146,94"/>
+    <entries _body=",255,0,128,255"/>
+    <entries _body=",255,255,128,192"/>
+    <entries _body=",255,0,255,255"/>
+    <entries _body=",255,255,128,128"/>
+    <entries _body=",255,0,128,192"/>
+    <entries _body=",255,128,128,192"/>
+    <entries _body=",255,255,0,255"/>
+    <entries _body=",255,128,64,64"/>
+    <entries _body=",255,255,128,64"/>
+    <entries _body=",255,80,240,120"/>
+    <entries _body=",255,0,64,128"/>
+    <entries _body=",255,128,0,64"/>
+    <entries _body=",255,255,0,128"/>
+    <entries _body=",255,128,128,64"/>
+    <entries _body=",255,128,128,128"/>
+    <entries _body=",255,255,128,255"/>
+    <entries _body=",255,0,64,0"/>
+    <entries _body=",255,0,0,0"/>
+    <entries _body=",255,255,255,255"/>
+    <entries _body=",255,255,128,0"/>
+   </seriesPalette>
+   <seriesDefinitions>
+    <query definition=""/>
+    <seriesPalette>
+     <entries _body=",255,80,166,218"/>
+     <entries _body=",255,242,88,106"/>
+     <entries _body=",255,232,172,57"/>
+     <entries _body=",255,128,255,128"/>
+     <entries _body=",255,64,128,128"/>
+     <entries _body=",255,128,128,192"/>
+     <entries _body=",255,170,85,85"/>
+     <entries _body=",255,128,128,0"/>
+     <entries _body=",255,192,192,192"/>
+     <entries _body=",255,255,255,128"/>
+     <entries _body=",255,128,192,128"/>
+     <entries _body=",255,7,146,94"/>
+     <entries _body=",255,0,128,255"/>
+     <entries _body=",255,255,128,192"/>
+     <entries _body=",255,0,255,255"/>
+     <entries _body=",255,255,128,128"/>
+     <entries _body=",255,0,128,192"/>
+     <entries _body=",255,128,128,192"/>
+     <entries _body=",255,255,0,255"/>
+     <entries _body=",255,128,64,64"/>
+     <entries _body=",255,255,128,64"/>
+     <entries _body=",255,80,240,120"/>
+     <entries _body=",255,0,64,128"/>
+     <entries _body=",255,128,0,64"/>
+     <entries _body=",255,255,0,128"/>
+     <entries _body=",255,128,128,64"/>
+     <entries _body=",255,128,128,128"/>
+     <entries _body=",255,255,128,255"/>
+     <entries _body=",255,0,64,0"/>
+     <entries _body=",255,0,0,0"/>
+     <entries _body=",255,255,255,255"/>
+     <entries _body=",255,255,128,0"/>
+    </seriesPalette>
+    <series _type="PieSeries" seriesIdentifier="" explosion="0" leaderLineStyle="0" leaderLineLength="10.0">
+     <label>
+      <caption value="">
+       <font name="Verdana" size="8.0"/>
+      </caption>
+      <background _nil="1"/>
+      <outline>
+       <color _nil="1"/>
+      </outline>
+     </label>
+     <dataDefinition definition="row[&quot;Total&quot;]"/>
+     <dataPoint separator=", ">
+      <components type="1"/>
+     </dataPoint>
+     <triggers condition="6">
+      <action type="1">
+       <value _type="TooltipValue" text="" delay="200"/>
+      </action>
+     </triggers>
+     <title visible="false">
+      <caption value="">
+       <font size="16.0" bold="true"/>
+      </caption>
+      <background _nil="1"/>
+      <outline>
+       <color _nil="1"/>
+      </outline>
+     </title>
+     <leaderLineAttributes>
+      <color _body=",255,192,192,192"/>
+     </leaderLineAttributes>
+     <sliceOutline _body=",255,192,192,192"/>
+    </series>
+    <grouping/>
+   </seriesDefinitions>
+   <series seriesIdentifier="">
+    <label>
+     <caption value=""/>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </label>
+    <dataDefinition definition="row[&quot;ITEM_ISS_NM&quot;]"/>
+    <dataPoint separator=", ">
+     <components type="1"/>
+    </dataPoint>
+    <curveFitting _nil="1"/>
+   </series>
+  </seriesDefinitions>
+ </ChartWithoutAxes>
+</ActuateChart>
+]]></xml-property>
+                                        <property name="outputFormat">JS</property>
+                                        <property name="inheritColumns">true</property>
+                                        <property name="height">2.84375in</property>
+                                        <property name="width">8in</property>
+                                    </extended-item>
+                                </property>
+                            </multi-views>
+                        </property>
+                        <column id="519"/>
+                        <column id="520"/>
+                        <column id="521"/>
+                        <column id="522">
+                            <property name="textAlign">right</property>
+                        </column>
+                        <header>
+                            <row id="484">
+                                <property name="backgroundColor">#FFFFFF</property>
+                                <cell id="485">
+                                    <property name="paddingLeft">20pt</property>
+                                    <property name="textAlign">left</property>
+                                    <image id="489">
+                                        <property name="borderBottomColor">#FFFFFF</property>
+                                        <property name="borderBottomStyle">solid</property>
+                                        <property name="borderBottomWidth">medium</property>
+                                        <property name="borderLeftColor">#FFFFFF</property>
+                                        <property name="borderLeftStyle">solid</property>
+                                        <property name="borderLeftWidth">medium</property>
+                                        <property name="borderRightColor">#FFFFFF</property>
+                                        <property name="borderRightStyle">solid</property>
+                                        <property name="borderRightWidth">medium</property>
+                                        <property name="borderTopColor">#FFFFFF</property>
+                                        <property name="borderTopStyle">solid</property>
+                                        <property name="borderTopWidth">medium</property>
+                                        <property name="display">inline</property>
+                                        <property name="height">16px</property>
+                                        <property name="width">16px</property>
+                                        <expression name="altText" type="constant">This Report Is INTERACTIVE, click in any column to select it, right click to see options</expression>
+                                        <property name="source">embed</property>
+                                        <property name="imageName">information.png</property>
+                                        <text-property name="helpText">This Report Is INTERACTIVE, click in any column to select it, right click to see options</text-property>
+                                        <list-property name="action">
+                                            <structure>
+                                                <property name="linkType">none</property>
+                                            </structure>
+                                        </list-property>
+                                    </image>
+                                </cell>
+                                <cell id="486"/>
+                                <cell id="487"/>
+                                <cell id="488">
+                                    <property name="paddingRight">1pt</property>
+                                    <property name="textAlign">right</property>
+                                    <property name="textTransform">none</property>
+                                </cell>
+                            </row>
+                            <row id="490">
+                                <property name="backgroundColor">#0000FF</property>
+                                <property name="fontWeight">bold</property>
+                                <property name="color">#FFFFFF</property>
+                                <cell id="491">
+                                    <property name="paddingLeft">20pt</property>
+                                    <data id="492">
+                                        <property name="fontSize">10pt</property>
+                                        <property name="fontWeight">bold</property>
+                                        <property name="textAlign">left</property>
+                                        <property name="resultSetColumn">ACCT_NAME</property>
+                                    </data>
+                                </cell>
+                                <cell id="493"/>
+                                <cell id="494"/>
+                                <cell id="495">
+                                    <property name="paddingRight">1pt</property>
+                                    <property name="textAlign">center</property>
+                                    <property name="textTransform">none</property>
+                                </cell>
+                            </row>
+                        </header>
+                        <group id="496">
+                            <property name="groupName">Account</property>
+                            <property name="interval">none</property>
+                            <property name="sortDirection">asc</property>
+                            <expression name="keyExpr">row["ACCT_NAME"]</expression>
+                            <structure name="toc">
+                                <expression name="expressionValue">row["ACCT_NAME"]</expression>
+                            </structure>
+                            <property name="repeatHeader">true</property>
+                            <property name="hideDetail">false</property>
+                            <property name="pageBreakAfter">auto</property>
+                            <property name="pageBreakBefore">auto</property>
+                            <property name="pageBreakInside">auto</property>
+                            <header>
+                                <row id="497">
+                                    <cell id="498">
+                                        <property name="paddingLeft">20pt</property>
+                                    </cell>
+                                    <cell id="499">
+                                        <label id="500">
+                                            <property name="fontSize">8pt</property>
+                                            <property name="fontWeight">bold</property>
+                                            <property name="textUnderline">underline</property>
+                                            <property name="textAlign">right</property>
+                                            <text-property name="text">Price</text-property>
+                                        </label>
+                                    </cell>
+                                    <cell id="501">
+                                        <label id="502">
+                                            <property name="fontSize">8pt</property>
+                                            <property name="fontWeight">bold</property>
+                                            <property name="textUnderline">underline</property>
+                                            <property name="textAlign">right</property>
+                                            <text-property name="text">Quantity</text-property>
+                                        </label>
+                                    </cell>
+                                    <cell id="503">
+                                        <property name="paddingRight">1pt</property>
+                                        <label id="504">
+                                            <property name="fontSize">8pt</property>
+                                            <property name="fontWeight">bold</property>
+                                            <property name="textUnderline">underline</property>
+                                            <property name="textAlign">right</property>
+                                            <text-property name="text">Total</text-property>
+                                        </label>
+                                    </cell>
+                                </row>
+                            </header>
+                            <footer>
+                                <row id="505">
+                                    <property name="fontWeight">bold</property>
+                                    <property name="textUnderline">underline</property>
+                                    <cell id="506">
+                                        <property name="paddingLeft">20pt</property>
+                                    </cell>
+                                    <cell id="507"/>
+                                    <cell id="508"/>
+                                    <cell id="509">
+                                        <property name="paddingRight">1pt</property>
+                                        <property name="textAlign">right</property>
+                                    </cell>
+                                </row>
+                            </footer>
+                        </group>
+                        <detail>
+                            <row id="510">
+                                <method name="onCreate"><![CDATA[if( typeof jj == 'undefined'  ){
+jj=0;
+}
+if( (this.getStyle().visibleFormat != "all") ){
+ if( jj !=0 ){
+  this.getStyle().backgroundColor="RGB(237,238,243)";
+  jj=0;
+ }else{
+  jj++;
+ } 
+}]]></method>
+                                <cell id="511">
+                                    <property name="paddingLeft">20pt</property>
+                                    <data id="512">
+                                        <property name="fontSize">8pt</property>
+                                        <property name="textAlign">left</property>
+                                        <property name="resultSetColumn">ITEM_ISS_NM</property>
+                                    </data>
+                                </cell>
+                                <cell id="513">
+                                    <data id="514">
+                                        <property name="fontSize">8pt</property>
+                                        <structure name="numberFormat">
+                                            <property name="category">Currency</property>
+                                            <property name="pattern">$#,##0.00</property>
+                                        </structure>
+                                        <property name="textAlign">right</property>
+                                        <property name="resultSetColumn">ISS_PRICE_AM</property>
+                                    </data>
+                                </cell>
+                                <cell id="515">
+                                    <data id="516">
+                                        <property name="fontSize">8pt</property>
+                                        <structure name="numberFormat">
+                                            <property name="category">Fixed</property>
+                                            <property name="pattern">#,##0.00</property>
+                                        </structure>
+                                        <property name="textAlign">right</property>
+                                        <property name="resultSetColumn">TRADE_DATE_QY</property>
+                                    </data>
+                                </cell>
+                                <cell id="517">
+                                    <property name="paddingRight">1pt</property>
+                                    <data id="518">
+                                        <property name="fontSize">8pt</property>
+                                        <structure name="numberFormat">
+                                            <property name="category">Currency</property>
+                                            <property name="pattern">$#,##0.00</property>
+                                        </structure>
+                                        <property name="textAlign">right</property>
+                                        <property name="resultSetColumn">Total</property>
+                                    </data>
+                                </cell>
+                            </row>
+                        </detail>
+                    </table>
+                </cell>
+            </row>
+        </grid>
+    </body>
+    <list-property name="images">
+        <structure>
+            <property name="name">information.png</property>
+            <property name="data">
+                iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAB3RJTUUH2AQPDQ0u/vpipQAAAAlwSFlz
+                AAALEgAACxIB0t1+/AAAAARnQU1BAACxjwv8YQUAAANJSURBVHjaXVNbb1RVFP72OfvsOXPmwrRTy3Q6
+                gthgwNLw0CaIBKzSiGK80Ajh3TjhgfhmGmOIDybGJv4AYuVFExWkmvRBDcY0fWhqIoaW1iJpqAPj3DrQ
+                npn2zJlzd80QGnEnX7L32mt9687wv/PeRx8fY1xkM+nUcEQVaQRAw7KL/5Qr01xiFz/74P3Z/+qzR5d3
+                xsbiye70RP+e3afzd1bZ/QcbqNUbcP0A8VgY6e4uZPr2BMu5e1fuVwrZS+Pj9W2ClnFP+slfn93VOzTz
+                2xKeOXgIHT0ZCFmGaXmo1LagVwqorNzAa8ODWPo7f71UyR+/9Ol4nbcIHnreNTSzWETf86/DdFzYehNB
+                EKDpeJSCg02eQPzAcXw/N4/Ro31DTuB/TqZn2fkLn7wwOHhg+uadDeYk+qAKmaCgp1PDiYFeIgF+uJ7D
+                7VIdjaYFw3SQcgs43N8dLN+6fVSShfSuY3tsjSVhuj5MX0LDB0zbA2MSmCRRFMQiyQQBn96rVhyO4zPH
+                88/xZGrncEm3YUkJyIyDE9Z0F3Ora/hiZgUukcpqBFE1hKhg0BQFUOPIVdcp9e4XeSwWSefWBeyWE5dh
+                OW/A9Bgms89t9+jMxDxs6ueaacOr2eiNc1Rtgf5OJS0Zuo5AFmh6Mm5Vm6TIIRSBsck/H6ZAUEIquNCg
+                iBB4SMBwAzhQYOgbkMrFQrlLk1HadBFQ+DIPUchhFJu8nX8LiiCCEMm5QGdEg0N6qZiCUqFQlkp37339
+                VMJD3bSoTrwNThHszyS3I9iXikEmuaYKxMICNcPC/i6UqsXil5LnOVcXf58LXn5aIeaWR0qc6nFhpIeM
+                WRsfjqSgcUbeBdYtHy/tlrD4x1zKC7zJdpleHX378psnT5yZqu1FmdoZVjh8pwmZmGgs2rOhUCcebFmI
+                2lW8tWMFUz9fu/zj1e/Oyi2CnR2JazcWl06eOphM7Uh0IWfIiEWiiGhhKp5Ks6GgrG/icOcmDrnz+Oqb
+                bxfsWm00n89b28u098iReIcXTGR6nzg98sobbCuxD1tyvP0X9eqI6X/hl5+mgkKpemVdYtmV2dn6Y9v4
+                6AwMDBxzfS9LMzMciWjplswwGkXb8aaFql5cWFh4bJ3/BTgoViYcs6vbAAAAAElFTkSuQmCC
+</property>
+        </structure>
+        <structure>
+            <property name="name">logo.gif</property>
+            <property name="data">
+                Qk2WJgAAAAAAADYEAAAoAAAArgAAADIAAAABAAgAAAAAAGAiAAAAAAAAAAAAAAAAAAAAAAAAn5+fAN/f
+                3wDs7OwApqamAPn5+QDZ2dkA5eXlABAQEADMzMwA8vLyADAwMAB/f38ArKysACAgIADPz88As7OzAO/v
+                7wC5ubkAxsbGAI+PjwCvr68AYGBgAFBQUADS0tIAcHBwAL+/vwBAQEAAAAAAAJmZmQD///8AAAAAAAAA
+                AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+                AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+                AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+                AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+                AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+                AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+                AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+                AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+                AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+                AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+                AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+                AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+                AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+                AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+                AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB0d
+                HR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0d
+                HR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0d
+                HR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHQAAHR0dHR0d
+                HR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0d
+                HR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0d
+                HR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dAAAdHR0dHR0dHR0d
+                HR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0d
+                HR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0d
+                HR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0AAB0dHR0dHR0dHR0dHR0d
+                HR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0d
+                HR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0d
+                HR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHQAAHR0dHR0dHR0dHR0dHR0dHR0d
+                HR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0d
+                HR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0d
+                HR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dAAAdHR0dHR0dHR0dHR0dHR0dHR0dHR0d
+                HR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0d
+                HR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0d
+                HR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0AAB0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0d
+                HR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0d
+                HR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0d
+                HR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHQAAHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0d
+                HR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0d
+                HR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0d
+                HR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dAAAdHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0d
+                HR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0d
+                HR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0d
+                HR0dHR0dHR0dHR0dHR0dHR0dHR0AAB0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0d
+                HR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0d
+                HR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0d
+                HR0dHR0dHR0dHR0dHR0dHQAAHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0d
+                HR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0d
+                HR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0d
+                HR0dHR0dHR0dHR0dAAAdHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0d
+                HR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0d
+                HR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0d
+                HR0dHR0dHR0AAB0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0d
+                HR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0d
+                HR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0d
+                HR0dHQAAHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0d
+                HR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0d
+                HR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0d
+                AAAdHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0d
+                HR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0d
+                HR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0AAB0d
+                HR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0d
+                HR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0d
+                HR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHQAAHR0dHR0d
+                HR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0d
+                HR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0d
+                HR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dAAAdHR0dHR0dHR0d
+                HR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0d
+                HR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0d
+                HR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0AAB0dHR0dHR0JBgQdHR0d
+                HR0dHR0dBAYdHR0dHQQGHR0dHQIEHR0dHR0dHR0dHR0dHQkJHR0dHR0dAgIdHR0dHR0JBh0dHR0dHR0d
+                HR0QGRkdHR0dHR0dHR0BGRkdHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0d
+                HR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHQAAHR0dHR0EDxwcHBEJHRccCB0d
+                HR0RHAAFHR0JABwcCB0CHBwSHR0dCBwFHR0dHR0BHBwRBB0dAgMcHAAIBB0EDxwcAAgdHR0dHR0BGhsN
+                CgcLHR0dHRAVBxsaChsNFA4NGxsbDQ4dFRsbGxsAHR0dHRMHHR0dHR0NGB0dFhsbGwAdHRUbGxsHGBsb
+                GxsbChYZHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dAAAdHR0dHREcHAgBGQABBRwDHR0dHRkc
+                HBwZHQgcHA8cGQYcHAMZHR0FHAMdHR0dHQgcHAAMBB0DHBwREgMMAhccAAEGDAwdHR0dHRQbFR0dExsL
+                HR0OBxsVEB0dDgoaHR0KGwodHR0dFBsbGR0dHR0dChsUHR0dDhsNHR0dExsZHR0dHQobGh0dEBsbCx0Z
+                BxsYHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0AAB0dHR0dHBwIHR0dAQMJABwFHR0dBhwcFwwS
+                CBwPHQIAEgAcAgwIHQQAHAYdHR0dARwcAhkRBhwcGR0dHQgACREJHR0GHAUdHR0dCxodHR0QGwcdEAcb
+                Gh0dHR0dDhsQHRUbGh0dHR0ZGxsdHR0dHQEbGxUdHR0VGxsOHR0dDRgdHR0BGxsUHR0dGxsZHR0AGxsB
+                HR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHQAAHR0dHR0cHAYdHR0dCR0ZHA8dHR0dAxwZBBkXHA8d
+                HQIAAxwXBBkdHRkcDx0dHR0EHBwXHRIBHBwGHR0dHQkdHR0dHQgcER0dHR0AGR0dHRQbGx0TGxsZHR0d
+                HR0dEwEdCxsaHR0dHRkbGx0dHR0dExsHBx0dHQcbBxMdHR0LDR0dHQsbBx0dHR0bGxkdHRkbGxkdHR0d
+                HR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dAAAdHR0dHRwcFx0dHR0dHQIcHAEdHR0FHBwEHQIcAB0dHQYc
+                HAwdHR0dARwcBh0dHR0RHA8dHQkcHAgdHR0dHR0dHR0GHBwZHR0dHR0dHR0ABxsHHRobBx0dHR0dHR0d
+                HR0LGxodHR0dGRsbHR0dHR0WGxUKFB0UGxsTCh0dHQEbChoaBxsYHR0dHRsbGR0dCxsbAR0dHR0dHR0d
+                HR0dHR0dHR0dHR0dHR0dHR0dHR0AAB0dHR0dAxwPHR0dHR0dHQwcAwQdHR0AHBcdHQMcAh0dHQgcHAkd
+                HR0dAxwMHR0dHQUcHAkdHQMcDB0dHR0dHR0dBAMcHAYdHR0dHR0ZChsbGwsdGhsaHR0dHR0dHR0dHQsb
+                ChkZGRkTGxsdHR0dEBsbFBMVHRYbGh0bAR0dHRYWGQsbGw4dHR0dGxsZDgsbGxgdHR0dHR0dHR0dHR0d
+                HR0dHR0dHR0dHR0dHR0dHQAAHR0dHR0IHBwJHR0dHR0dFxwcGR0dHQgcAx0dBRwSHR0dBAMcEh0dHR0S
+                HBwFHR0dHQAcFx0dBRwcAR0dHR0dHR0FHBwSHR0dHR0dABsbGwcTHR0aGxodHR0dHR0dHR0dCxsHGhoa
+                GgobGx0dHR0AGxsQDgcQGxsAHRoTHR0dFA0dFRsKHR0dHR0bGwoNGwcUHR0dHR0dHR0dHR0dHR0dHR0d
+                HR0dHR0dHR0dHR0dAAAdHR0dHQQDHA8dHR0dHR0EHBwABR0dCRwcAh0dAwAEHR0dBRwAHR0dHQYcEQMd
+                HR0dGRwMHR0dDBwcHBwAEQUdHQgcDAQdHR0dHRAHGwcLEB0dHRUbDR0dHR0dHR0dHR0LGxodHR0dGRsb
+                HR0dHRYbFh0dDRobBxAdEwodHR0dDRQHGxMdHR0dHRsbGR0AGwoQHR0dHR0dHR0dHR0dHR0dHR0dHR0d
+                HR0dHR0dHR0AAB0dHR0dHQIcHAUdHR0dHR0ZHBEABR0dDBwXHR0GHBEdHR0dAxwBHQYCHRwMCAgdHR0C
+                HBwCHR0CABwIBAEPHAwEAhwFHR0dHR0dGRsbDh0dHR0dGRsbAR0dHR0dHQAdHQsbGh0dHR0ZGxsdHR0d
+                BxsTHR0YGxsVHR0OGwEdHR0YDRsbAR0dHR0dGxsZHR0KGwsdHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0d
+                HR0dHQAAHR0dHR0dHQUAAAIdHR0FEgEcAwUcCAQMHAgdHR0FHAUdHR0SHBEdAgMEDxwJAwIdAgkMHBId
+                HR0BABwGHR0RHBkdDwUdHQIEHR0BGwodHR0LCx0dGhsWHR0dHR0ZGh0dFRsaHR0dHRkbGx0dHRQbGwEd
+                HQ4bGxQdHR0HCx0dHQEbGxYdHR0dHR0bGxkdHQ0bCx0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0d
+                AAAdHR0dHR0dHQIMAAYdBRwcHQMcAQUcHBwcCB0dHR0FHAgEHQ8cHAQdBQAcHAYCABIcAwUcAB0dHR0C
+                AwACHQEcER0CAxIDHAMdHR0aGw4dDgcAHR0QGhsWAR0dGQcaHR0KGwodHR0dABsbGR0dGhsHHR0dHQ0N
+                HR0dHRoNEB0dHRobAB0dHR0dEBsbFAEYGxsZHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0AAB0d
+                HR0dHR0dHR0FAw8cHBIdEhwRHQEAHBwBHR0dHR0JGQAAHAMcAR0dBgAcBh0FABwABAAcAR0dHR0ECAAP
+                AAACHR0CDxwcDx0dHRAVGwobDQ4dHR0dABYbDQcbDQAOGhoaGhodHRgaGhoaGBoaGhoaHR0dExMdHR0a
+                GhoaDh0dAAcdHR0dHQ4aGhoaGhoWFB0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHQAAHR0dHR0d
+                HR0dHR0dCQYJHR0CHBwJHR0GCR0dHR0dHR0dHR0dBAUdHR0dBAYdHR0EBgkdGRwRHR0dHR0dHQYGBB0d
+                HR0dAgYdHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0d
+                HR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dAAAdHR0dHR0dHR0d
+                HR0dHR0dHR0DHBcdHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0CHBwJHR0dHR0dHR0dHR0dHR0d
+                HR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0d
+                HR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0AAB0dHR0dHR0dHR0dHR0d
+                HR0dHRccAx0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0MHAgdHR0dHR0dHR0dHR0dHR0dHR0d
+                HR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0d
+                HR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHQAAHR0dHR0dHR0dHR0dHR0dHR0d
+                CRwcAh0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHQUcAx0dHR0dHR0dHR0dHR0dHR0dHR0dHR0d
+                HR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0d
+                HR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dAAAdHR0dHR0dHR0dHR0dHR0dHR0dDBwS
+                HR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dBBwcAR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0d
+                HR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0d
+                HR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0AAB0dHR0dHR0dHR0dHR0dHR0dHR0SHAMdHR0d
+                HR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dDBwZHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0d
+                HR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0d
+                HR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHQAAHR0dHR0dHR0dHR0dHR0dHR0CHBwcHAkdHR0dHR0d
+                HR0dHR0dHR0dHR0dHR0dHR0dHR0dBhwcHBwdHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0d
+                HR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0d
+                HR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dAAAdHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0d
+                HR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0d
+                HR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0d
+                HR0dHR0dHR0dHR0dHR0dHR0dHR0AAB0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0d
+                HR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0d
+                HR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0d
+                HR0dHR0dHR0dHR0dHR0dHQAAHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0d
+                HR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0d
+                HR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0d
+                HR0dHR0dHR0dHR0dAAAdHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0d
+                HR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0d
+                HR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0d
+                HR0dHR0dHR0AAB0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0d
+                HR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0d
+                HR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0d
+                HR0dHQAAHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0d
+                HR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0d
+                HR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0d
+                AAAdHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0d
+                HR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0d
+                HR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0AAB0d
+                HR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0d
+                HR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0d
+                HR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHQAAHR0dHR0d
+                HR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0d
+                HR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0d
+                HR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dAAAdHR0dHR0dHR0d
+                HR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0d
+                HR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0d
+                HR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0AAB0dHR0dHR0dHR0dHR0d
+                HR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0d
+                HR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0d
+                HR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHQAAHR0dHR0dHR0dHR0dHR0dHR0d
+                HR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0d
+                HR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0d
+                HR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dAAA=
+</property>
+        </structure>
+    </list-property>
+</report>

@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <property name="comments">Copyright (c) 2007 &lt;&lt;Your Company Name here>></property>
+    <property name="createdBy">Eclipse BIRT Designer Version 4.2.3.v20131029-0430 Build &lt;4.2.3.v20131029-0430></property>
+    <html-property name="description">Creates a blank report with no predefined content.</html-property>
+    <property name="units">in</property>
+    <text-property name="displayName">Blank Report</text-property>
+    <property name="iconFile">/templates/blank_report.gif</property>
+    <property name="layoutPreference">auto layout</property>
+    <data-sources>
+        <oda-data-source extensionID="org.eclipse.datatools.connectivity.oda.flatfile" name="map" id="51">
+            <property name="HOME">Flatfiles/</property>
+            <property name="DELIMTYPE">COMMA</property>
+            <property name="CHARSET">UTF-8</property>
+            <property name="INCLCOLUMNNAME">YES</property>
+            <property name="INCLTYPELINE">YES</property>
+            <property name="TRAILNULLCOLS">NO</property>
+        </oda-data-source>
+    </data-sources>
+    <data-sets>
+        <oda-data-set extensionID="org.eclipse.datatools.connectivity.oda.flatfile.dataSet" name="map" id="52">
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">State_Abbr</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">State_Abbr</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Per_capita_income</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="heading">Per_capita_income</text-property>
+                </structure>
+            </list-property>
+            <list-property name="parameters"/>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">State_Abbr</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">Per_capita_income</property>
+                        <property name="dataType">float</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">map</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">State_Abbr</property>
+                    <property name="nativeName">State_Abbr</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">Per_capita_income</property>
+                    <property name="nativeName">Per_capita_income</property>
+                    <property name="dataType">float</property>
+                    <property name="nativeDataType">8</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[select "State_Abbr", "Per_capita_income" from "StateAvgs.csv" : {"State_Abbr","State_Abbr",STRING;"Per_capita_income","Per_capita_income",DOUBLE}]]></xml-property>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>State_Abbr</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>State_Abbr</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Per_capita_income</design:name>
+              <design:position>2</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>8</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Per_capita_income</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+        </oda-data-set>
+    </data-sets>
+    <styles>
+        <style name="crosstab" id="4">
+            <property name="borderBottomColor">#CCCCCC</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">1pt</property>
+            <property name="borderLeftColor">#CCCCCC</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">1pt</property>
+            <property name="borderRightColor">#CCCCCC</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">1pt</property>
+            <property name="borderTopColor">#CCCCCC</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">1pt</property>
+        </style>
+        <style name="crosstab-cell" id="5">
+            <property name="borderBottomColor">#CCCCCC</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">1pt</property>
+            <property name="borderLeftColor">#CCCCCC</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">1pt</property>
+            <property name="borderRightColor">#CCCCCC</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">1pt</property>
+            <property name="borderTopColor">#CCCCCC</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">1pt</property>
+        </style>
+    </styles>
+    <page-setup>
+        <simple-master-page name="Simple MasterPage" id="2">
+            <property name="type">custom</property>
+            <property name="orientation">landscape</property>
+            <property name="topMargin">0.25in</property>
+            <property name="leftMargin">0.25in</property>
+            <property name="bottomMargin">0.25in</property>
+            <property name="rightMargin">0.25in</property>
+            <property name="height">9in</property>
+            <property name="width">8.5in</property>
+        </simple-master-page>
+    </page-setup>
+    <body>
+        <grid id="18">
+            <property name="height">2.5in</property>
+            <property name="width">3.5625in</property>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">Column Binding</property>
+                    <property name="dataType">any</property>
+                </structure>
+                <structure>
+                    <property name="name">Column Binding_1</property>
+                    <expression name="expression">reportContext.getGlobalVariable("g_dataPart" );</expression>
+                    <property name="dataType">any</property>
+                </structure>
+            </list-property>
+            <expression name="bookmark" type="javascript">"map"</expression>
+            <method name="onCreate"><![CDATA[dataPart = "";]]></method>
+            <column id="19">
+                <property name="width">3.5625in</property>
+            </column>
+            <row id="69">
+                <property name="textAlign">center</property>
+                <cell id="70">
+                    <property name="textAlign">center</property>
+                    <label id="71">
+                        <property name="fontFamily">"Calibri"</property>
+                        <property name="color">#808080</property>
+                        <text-property name="text">How does my wealth compare to other clients in the US?</text-property>
+                    </label>
+                </cell>
+            </row>
+            <row id="24">
+                <property name="textAlign">center</property>
+                <cell id="25">
+                    <property name="colSpan">1</property>
+                    <property name="rowSpan">1</property>
+                    <property name="textAlign">center</property>
+                    <extended-item extensionName="Map" id="68">
+                        <xml-property name="xmlRepresentation"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<Maps:MapModel xmlns:Maps="http://www.birt.actuate.com/Maps">
+  <Maps:Type>USA (States)</Maps:Type>
+  <Maps:AreaDefinition>
+    <Maps:ShowShadow>true</Maps:ShowShadow>
+    <Maps:Border/>
+  </Maps:AreaDefinition>
+  <Maps:MapDefinition>
+    <Maps:ShowLabels>false</Maps:ShowLabels>
+    <Maps:IncludeValueInLabels>true</Maps:IncludeValueInLabels>
+    <Maps:Border>
+      <Style>Solid</Style>
+      <Thickness>1</Thickness>
+      <Color>
+        <Transparency>255</Transparency>
+        <Red>255</Red>
+        <Green>255</Green>
+        <Blue>255</Blue>
+      </Color>
+      <Visible>true</Visible>
+    </Maps:Border>
+    <Maps:Background>
+      <Transparency>255</Transparency>
+      <Red>193</Red>
+      <Green>222</Green>
+      <Blue>139</Blue>
+    </Maps:Background>
+    <Maps:UseHoverColor>false</Maps:UseHoverColor>
+    <Maps:HoverColor>
+      <Transparency>255</Transparency>
+      <Red>158</Red>
+      <Green>204</Green>
+      <Blue>76</Blue>
+    </Maps:HoverColor>
+    <Maps:EntityQuery>
+      <Definition>row[&quot;State_Abbr&quot;]</Definition>
+      <Grouping>
+        <Enabled>true</Enabled>
+        <GroupType>Text</GroupType>
+        <AggregateExpression>Sum</AggregateExpression>
+      </Grouping>
+    </Maps:EntityQuery>
+    <Maps:ValueQuery>
+      <Definition>row[&quot;Per_capita_income&quot;]</Definition>
+      <Grouping>
+        <GroupType>Text</GroupType>
+        <AggregateExpression>Sum</AggregateExpression>
+      </Grouping>
+    </Maps:ValueQuery>
+    <Maps:Tooltip>
+      <Text></Text>
+      <Delay>200</Delay>
+    </Maps:Tooltip>
+    <Maps:Hyperlink>
+      <BaseUrl>&lt;structure>
+    &lt;property name=&quot;linkType&quot;>drill-through&lt;/property>
+    &lt;property name=&quot;reportName&quot;>State_Drilldown_MyWealth_vs_Geo.rptdesign&lt;/property>
+    &lt;property name=&quot;targetWindow&quot;>_blank&lt;/property>
+    &lt;property name=&quot;targetFileType&quot;>report-design&lt;/property>
+    &lt;list-property name=&quot;paramBindings&quot;>
+        &lt;structure>
+            &lt;property name=&quot;paramName&quot;>State&lt;/property>
+            &lt;simple-property-list name=&quot;expression&quot;>
+                &lt;value type=&quot;javascript&quot;>row[&quot;State_Abbr&quot;]&lt;/value>
+            &lt;/simple-property-list>
+        &lt;/structure>
+    &lt;/list-property>
+&lt;/structure>
+</BaseUrl>
+      <Target></Target>
+      <BaseParameterName></BaseParameterName>
+      <ValueParameterName></ValueParameterName>
+    </Maps:Hyperlink>
+    <Maps:InvokeScript>
+      <Script></Script>
+    </Maps:InvokeScript>
+  </Maps:MapDefinition>
+  <Maps:LegendDefinition>
+    <Maps:Position>Below</Maps:Position>
+  </Maps:LegendDefinition>
+  <Maps:FormatDefinition>
+    <Maps:Prefix>$</Maps:Prefix>
+    <Maps:formatNumberScale>false</Maps:formatNumberScale>
+    <Maps:DecimalNumber>2</Maps:DecimalNumber>
+  </Maps:FormatDefinition>
+  <Maps:BaseFontDefinition>
+    <Value></Value>
+    <Font>
+      <Name>Calibri</Name>
+      <Size>12.0</Size>
+      <Alignment/>
+    </Font>
+  </Maps:BaseFontDefinition>
+  <Maps:ColorRange>
+    <Maps:Elements>
+      <Maps:MaxValue>185000.0</Maps:MaxValue>
+      <Maps:DisplayValue>Above Avg</Maps:DisplayValue>
+      <Maps:Color>
+        <Transparency>255</Transparency>
+        <Red>0</Red>
+        <Green>80</Green>
+        <Blue>0</Blue>
+      </Maps:Color>
+    </Maps:Elements>
+    <Maps:Elements>
+      <Maps:MinValue>185000.0</Maps:MinValue>
+      <Maps:MaxValue>230000.0</Maps:MaxValue>
+      <Maps:DisplayValue>Avg</Maps:DisplayValue>
+      <Maps:Color>
+        <Transparency>255</Transparency>
+        <Red>250</Red>
+        <Green>166</Green>
+        <Blue>26</Blue>
+      </Maps:Color>
+    </Maps:Elements>
+    <Maps:Elements>
+      <Maps:MinValue>230000.0</Maps:MinValue>
+      <Maps:MaxValue>1000000.0</Maps:MaxValue>
+      <Maps:DisplayValue>Below Avg</Maps:DisplayValue>
+      <Maps:Color>
+        <Transparency>255</Transparency>
+        <Red>206</Red>
+        <Green>3</Green>
+        <Blue>21</Blue>
+      </Maps:Color>
+    </Maps:Elements>
+    <Maps:Color>
+      <Transparency>255</Transparency>
+      <Red>255</Red>
+      <Green>255</Green>
+      <Blue>255</Blue>
+    </Maps:Color>
+  </Maps:ColorRange>
+</Maps:MapModel>
+]]></xml-property>
+                        <list-property name="action">
+                            <structure>
+                                <property name="targetWindow">_blank</property>
+                                <property name="linkType">drill-through</property>
+                                <property name="targetFileType">report-design</property>
+                                <property name="reportName">State_Drilldown_MyWealth_vs_Geo.rptdesign</property>
+                                <list-property name="paramBindings">
+                                    <structure>
+                                        <property name="paramName">State</property>
+                                        <simple-property-list name="expression">
+                                            <value type="javascript">row["State_Abbr"]</value>
+                                        </simple-property-list>
+                                    </structure>
+                                </list-property>
+                            </structure>
+                        </list-property>
+                        <property name="height">2.4in</property>
+                        <property name="width">4.2in</property>
+                        <property name="dataSet">map</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">State_Abbr</property>
+                                <expression name="expression" type="javascript">dataSetRow["State_Abbr"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">Per_capita_income</property>
+                                <expression name="expression" type="javascript">dataSetRow["Per_capita_income"]</expression>
+                                <property name="dataType">float</property>
+                            </structure>
+                        </list-property>
+                    </extended-item>
+                </cell>
+            </row>
+        </grid>
+    </body>
+    <list-property name="images">
+        <structure>
+            <property name="name">OGI1.jpg</property>
+            <property name="data">
+                /9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAMCAgMCAgMDAwMEAwMEBQgFBQQEBQoHBwYIDAoMDAsKCwsN
+                DhIQDQ4RDgsLEBYQERMUFRUVDA8XGBYUGBIUFRT/2wBDAQMEBAUEBQkFBQkUDQsNFBQUFBQUFBQUFBQU
+                FBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBT/wAARCAAyADUDASIAAhEBAxEB/8QA
+                HwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIh
+                MUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVW
+                V1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXG
+                x8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQF
+                BgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAV
+                YnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOE
+                hYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq
+                8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD7fPxt18txa2JH/XJ//i6qal8e9dsI1/0bT2dui+W//wAXXK+T
+                sVm/u15zNfPdTNK7bmb5jX5JVz7ExWk2fJvF1l9o9cb9o/xF5i4stNCd/wB25OP++6syftIamkaN5Njz
+                1Hkv8v8A4/XizTVVmmrKnn2Kb1qEPGVv5j1jWP2ofElrJ/odtpUsWPvPbS9f+/grD0j9sTxDp/xB0Ow8
+                TWGkW/hzVJBaG8tY5EkguHP7tmLSFTG33enH96vNxdRozRT/AOpl+VvVfRh9Kx49HHiHVbrw/eeVdWoi
+                fzYWwwXcPlZfcnaRX0GGzmo4tzkc8sbiE01M/Rizulu7dZR0NTZHrXkHwB8ZT698NtPN9cSyX9pm0uJW
+                +87x/LuPuy7W/wCBV6P/AGon/PWT8q+xoYqFWnGa6n11KtGpBTvufPrwiWNkb5gy7Svsa851rwlqFlfs
+                lrby3Vu/+rZfm2+xr06OOpPL+lfiksN7Rany8qfMeSt4T1lLRp2s2+X+DcC/5CueuriSJmifcrIxUo38
+                J71720deB/EKN/DfiC6SVmkWZjPG/wDeDH/GvNxVH6qlO+hzVo+zjcxdZ1IWVrJK38PRf7x7Vi/DHUNX
+                1LXLhnuGaytoy5Xb/wAtGI29OTwGrO1LVZLiKaR1iZdpiSKTn7wPzj3Feu/Dzw5b6R4PsWiXc93ELqV/
+                7xcZ/QcVisU3C6PM1qS06HrP7P1y8dhrkbfuVa4SYJ6FlI/9lFes/af+mteZ/BjTilrqkmxmDNGox2wG
+                /wAa9J+yf9Mnr9IyurUlg6b8v1Pq8K5KjFHm0duXqZbU1qW9jv8AvVcXTx/drmhg32GqaW5zrWtfOnxw
+                v7p/GMltOuyCCJPI/wBoMMk/99V9UyaeP7teD/tBeAtX1zWNJuNI0+e+donil8leIwpBXJPHO5q8XN8v
+                qVMO1Ba3Rw4yk3S9xHhei6NeeJtbh02wVWuZt67pPuqMHcT9BXt3hH7R9ovNMgZW0vRIk08Tf897gKDI
+                /tt6Y/3q0fhR8Kn8FWUl7qixy6zcLyVwfIT+4D6nvXe+F/CsWpalHZWdusduZTNN5a4X5juJ+rGvLw2W
+                1FCNJx1Zw0MJNWvuz0T4T+F5LPwwGIJkncysT78D9BXa/wBiS/3a09LsEsbKKILjaKtbF9K/aMHl9PD4
+                eFJ9EfaUqKhBRtsSYoxRRXsWR0hikKg9hS0UWQCbR6ClAAPAooosgCiiimB//9k=
+</property>
+        </structure>
+    </list-property>
+</report>
