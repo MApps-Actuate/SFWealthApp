@@ -10,11 +10,21 @@ Home Tab
   
 My Spending History Tab
 - Content should be displayed in 6 gadgets and 2 data selectors
+- Data selectors should filter the 3 bar chart gadgets and the 1 line chart gadget
 - In My Merchants gadget, clicking on a vendor bar launches detail report (MySpendDetail.rptdesign) for category of merchants
 - In MySpendDetail.rptdesign, clicking on link in last column displays bestbank.rptdocument in same window
 - In My Spend This Period gadget, zoom, reset and line click changes x-axis from monthly to daily
 - In My Alerts gadget, clicking on Investment & Spend Summary link launches My Portfolio.rptdocument in new window
 
+My Wealth Tab
+- Content should be displayed in 7 gadgets and 1 data selector
+- In My Account Update gadget, clicking on the Managed ETF link launches detail report (Positions.rptdocument) in a new window, in fact, 
+   all links do.
+- In My Wealth vs. Market Indices gadget, selecting a year will filter the years displayed in the parameterized My Wealth vs Indices.rptdesign.
+- In My Transaction History gadget, scrollbar should be enabled and working.
+- In My Wealth vs. State Avg gadget, clicking on a state launches a detail report (State_Drilldown_MyWealth_vs_Geo.rptdesign) in a new
+   window 
+   
 
 
 
