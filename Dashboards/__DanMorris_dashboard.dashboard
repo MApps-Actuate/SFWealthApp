@@ -4696,6 +4696,8 @@
   <extendedProperties name="jschart.glass.style" value="false"/>
   <extendedProperties name="jschart.zoom" value="xy"/>
   <extendedProperties name="jschart.series.shadow" value="false"/>
+  <extendedProperties name="enable.drill.proc_" value="true"/>
+  <extendedProperties name="drilled.filters_" value="data[&quot;Spend Category/Category&quot;]eqAutomobile_@,__@,_"/>
   <sampleData>
    <baseSampleData dataSetRepresentation="QWER"/>
    <orthogonalSampleData dataSetRepresentation="2.3" seriesDefinitionIndex="0"/>
@@ -4849,6 +4851,13 @@
                     <property name="filterTarget">DataSet</property>
                     <property name="updateAggregation">true</property>
                 </filter-condition-element>
+                <filter-condition-element>
+                    <expression name="expr" type="javascript">data["Spend Category/Category"]</expression>
+                    <property name="operator">eq</property>
+                    <simple-property-list name="value1">
+                        <value type="constant">Automobile</value>
+                    </simple-property-list>
+                </filter-condition-element>
             </property>
             <property name="height">191.25pt</property>
             <property name="width">756.75pt</property>
@@ -4867,6 +4876,11 @@
                 <structure>
                     <property name="name">Account/Account</property>
                     <expression name="expression">dimension["Account"]["Account"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Spend Category/Category</property>
+                    <expression name="expression">dimension["Spend Category"]["Category"]</expression>
                     <property name="dataType">string</property>
                 </structure>
             </list-property>
@@ -5418,14 +5432,14 @@
                             </property>
                         </gadget>
                         <gadget name="Gadget_e7b612a5-a91b-4a81-ad6e-feed4b4a41351" id="113">
-                            <property name="x">287.89930534362793px</property>
-                            <property name="y">251.46875px</property>
+                            <property name="x">288px</property>
+                            <property name="y">288px</property>
                             <property name="height">326px</property>
                             <property name="width">1034px</property>
                             <property name="title">My Merchants</property>
                             <property name="showTitle">false</property>
                             <property name="showBorder">false</property>
-                            <property name="zIndex">21</property>
+                            <property name="zIndex">28</property>
                             <property name="showScrollBar">false</property>
                             <property name="height">326px</property>
                             <property name="width">1034px</property>
@@ -5464,8 +5478,8 @@
                             </property>
                         </gadget>
                         <gadget name="Gadget_1149cb71-b03e-4f78-86fa-36e0b6795d241" id="116">
-                            <property name="x">18px</property>
-                            <property name="y">594px</property>
+                            <property name="x">17.89930534362793px</property>
+                            <property name="y">647.46875px</property>
                             <property name="height">253px</property>
                             <property name="width">1320px</property>
                             <property name="title">My Spend This Period</property>
@@ -5512,7 +5526,7 @@
                         <gadget name="Gadget_6e6d05e7-e310-40aa-9c14-5e4952821357" id="967">
                             <property name="x">1098px</property>
                             <property name="y">0px</property>
-                            <property name="height">171px</property>
+                            <property name="height">204px</property>
                             <property name="width">308px</property>
                             <property name="title">My Alerts</property>
                             <property name="externalGadgetURI">./././././/Report Designs/AlertHTML.rptdesign</property>
@@ -5520,7 +5534,7 @@
                             <property name="showBorder">false</property>
                             <property name="zIndex">24</property>
                             <property name="showScrollBar">false</property>
-                            <property name="height">171px</property>
+                            <property name="height">204px</property>
                             <property name="width">308px</property>
                             <property name="caption">
                                 <gadget-caption id="968">
