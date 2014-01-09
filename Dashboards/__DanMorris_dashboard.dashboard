@@ -2,7 +2,7 @@
 <report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
     <xml-property name="externalMetadata">
         <external-datamarts>
-            <datamart-node location="file:/C:/Actuate/workspace/SFWealthApp/Data%20Objects/spendtype.DATA">
+            <datamart-node location="file:/D:/GitHub/SFWealthApp/Data%20Objects/spendtype.DATA">
                 <reference-elements>NewDataMartDataSource;</reference-elements>
                 <datamart xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
                     <property name="createdBy">Eclipse BIRT Designer Version 2.6.1.v20100926-0604 Build &lt;2.6.1.v20100926-0604></property>
@@ -375,7 +375,7 @@
                     </cubes>
                 </datamart>
             </datamart-node>
-            <datamart-node location="file:/C:/Actuate/workspace/SFWealthApp/Data%20Objects/spend_history.data">
+            <datamart-node location="file:/D:/GitHub/SFWealthApp/Data%20Objects/spend_history.data">
                 <reference-elements>NewDataMartDataSource3;</reference-elements>
                 <datamart xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
                     <property name="createdBy">Eclipse BIRT Designer Version 4.2.3.v20131029-0430 Build &lt;4.2.3.v20131029-0430></property>
@@ -5146,7 +5146,7 @@
     </body>
     <property name="dashboardView">
         <dashboard id="2">
-            <property name="activeTab">049f219c-22c5-445b-8bb1-b28f150e1ef51</property>
+            <property name="activeTab">3596098d-5ae6-490b-8c7d-437cd1c60c7b1</property>
             <property name="tabs">
                 <tab-element name="3596098d-5ae6-490b-8c7d-437cd1c60c7b1" id="15">
                     <property name="title">Home</property>
@@ -6051,7 +6051,7 @@
                                     <property name="controlType">radio-button</property>
                                     <property name="dataType">integer</property>
                                     <simple-property-list name="selectedValues">
-                                        <value>1</value>
+                                        <value>3</value>
                                     </simple-property-list>
                                     <property name="orientation">horizontal</property>
                                     <property name="autoAdjust">false</property>
@@ -6242,61 +6242,6 @@
                             </property>
                         </gadget>
                     </property>
-                </tab-element>
-                <tab-element name="7688c224-8043-40b5-8a5c-e523bafeee9d11" id="148">
-                    <property name="title">My Retirement Roadmap</property>
-                    <property name="showHeader">false</property>
-                    <property name="showFooter">false</property>
-                    <property name="headerHTML">null</property>
-                    <property name="footerHTML">null</property>
-                    <property name="freeFormGadgets">
-                        <gadget name="d4936914-13ac-43ab-8e69-f6dae07613e42" id="149">
-                            <property name="x">9px</property>
-                            <property name="y">9px</property>
-                            <property name="title">Life Event Expenditure Simulation</property>
-                            <property name="gadgetContentType">text</property>
-                            <property name="showTitle">false</property>
-                            <property name="showBorder">true</property>
-                            <property name="zIndex">6</property>
-                            <property name="showScrollBar">false</property>
-                            <property name="content">
-                                <data-view id="150">
-                                    <property name="gadgetType">embedded</property>
-                                    <property name="internalReportLetRef">e545eea4-be44-4c41-b3eb-cbc2d6ba5d95</property>
-                                </data-view>
-                            </property>
-                        </gadget>
-                        <gadget name="7df4f35f-c598-44af-b2bd-520e3705d4b4" id="152">
-                            <property name="x">360px</property>
-                            <property name="y">9px</property>
-                            <property name="title">Roadmap to Retirement</property>
-                            <property name="gadgetContentType">url</property>
-                            <property name="showTitle">false</property>
-                            <property name="showBorder">false</property>
-                            <property name="zIndex">4</property>
-                            <property name="showScrollBar">false</property>
-                            <property name="content">
-                                <data-view id="153">
-                                    <property name="gadgetType">embedded</property>
-                                    <property name="internalReportLetRef">70dd3354-6b0e-41ef-9207-542d30cb213f</property>
-                                </data-view>
-                            </property>
-                        </gadget>
-                        <gadget name="efdee4f3-35c4-433e-9aea-2113ec9eff0d22" id="155">
-                            <property name="x">10px</property>
-                            <property name="y">1153px</property>
-                            <property name="zIndex">1</property>
-                            <property name="isVisible">false</property>
-                            <property name="content">
-                                <current-selections id="156"/>
-                            </property>
-                        </gadget>
-                    </property>
-                </tab-element>
-                <tab-element name="16f8fb02-7c1e-4525-ba42-9776ed4a11a4" id="3">
-                    <property name="title">My Documents</property>
-                    <property name="externalTab">/Dashboard/Contents/Documents.dashboard</property>
-                    <property name="externalTabName">c018109c-49ff-48be-bbef-babbf9408f93</property>
                 </tab-element>
             </property>
         </dashboard>
