@@ -2,7 +2,7 @@
 <report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
     <xml-property name="externalMetadata">
         <external-datamarts>
-            <datamart-node location="file:/C:/Augusta/workspace/SFWealthApp/Data%20Objects/spendtype.DATA">
+            <datamart-node location="file:/C:/Actuate/workspace/SFWealthApp/Data%20Objects/spendtype.DATA">
                 <reference-elements>NewDataMartDataSource;</reference-elements>
                 <datamart xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
                     <property name="createdBy">Eclipse BIRT Designer Version 2.6.1.v20100926-0604 Build &lt;2.6.1.v20100926-0604></property>
@@ -375,7 +375,7 @@
                     </cubes>
                 </datamart>
             </datamart-node>
-            <datamart-node location="file:/C:/Augusta/workspace/SFWealthApp/Data%20Objects/spend_history.data">
+            <datamart-node location="file:/C:/Actuate/workspace/SFWealthApp/Data%20Objects/spend_history.data">
                 <reference-elements>NewDataMartDataSource3;</reference-elements>
                 <datamart xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
                     <property name="createdBy">Eclipse BIRT Designer Version 4.2.3.v20131029-0430 Build &lt;4.2.3.v20131029-0430></property>
@@ -4188,7 +4188,6 @@
      </outline>
     </title>
    </children>
-   <bounds _body="0.0,0.0,264.0,126.0"/>
    <outline>
     <color _nil="1"/>
    </outline>
@@ -4361,43 +4360,8 @@
             <property name="width">264pt</property>
             <list-property name="boundDataColumns">
                 <structure>
-                    <property name="name">Date/Month</property>
-                    <expression name="expression">dimension["Date"]["Month"]</expression>
-                    <property name="dataType">integer</property>
-                </structure>
-                <structure>
-                    <property name="name">Date/Month/DateTime</property>
-                    <expression name="expression">dimension["Date"]["Month"]["DateTime"]</expression>
-                    <property name="dataType">date-time</property>
-                </structure>
-                <structure>
-                    <property name="name">Date/Day</property>
-                    <expression name="expression">dimension["Date"]["Day"]</expression>
-                    <property name="dataType">integer</property>
-                </structure>
-                <structure>
-                    <property name="name">Date/Day/DateTime</property>
-                    <expression name="expression">dimension["Date"]["Day"]["DateTime"]</expression>
-                    <property name="dataType">date-time</property>
-                </structure>
-                <structure>
-                    <property name="name">Spend Category/Category</property>
-                    <expression name="expression">dimension["Spend Category"]["Category"]</expression>
-                    <property name="dataType">string</property>
-                </structure>
-                <structure>
-                    <property name="name">Spend Category/Merchant</property>
-                    <expression name="expression">dimension["Spend Category"]["Merchant"]</expression>
-                    <property name="dataType">string</property>
-                </structure>
-                <structure>
                     <property name="name">Account/Account</property>
                     <expression name="expression">dimension["Account"]["Account"]</expression>
-                    <property name="dataType">string</property>
-                </structure>
-                <structure>
-                    <property name="name">Spend Method/Method</property>
-                    <expression name="expression">dimension["Spend Method"]["Method"]</expression>
                     <property name="dataType">string</property>
                 </structure>
                 <structure>
@@ -4464,7 +4428,6 @@
      </outline>
     </title>
    </children>
-   <bounds _body="0.0,0.0,281.25,125.25"/>
    <outline>
     <color _nil="1"/>
    </outline>
@@ -4645,41 +4608,6 @@
             <property name="width">281.25pt</property>
             <list-property name="boundDataColumns">
                 <structure>
-                    <property name="name">Date/Month</property>
-                    <expression name="expression">dimension["Date"]["Month"]</expression>
-                    <property name="dataType">integer</property>
-                </structure>
-                <structure>
-                    <property name="name">Date/Month/DateTime</property>
-                    <expression name="expression">dimension["Date"]["Month"]["DateTime"]</expression>
-                    <property name="dataType">date-time</property>
-                </structure>
-                <structure>
-                    <property name="name">Date/Day</property>
-                    <expression name="expression">dimension["Date"]["Day"]</expression>
-                    <property name="dataType">integer</property>
-                </structure>
-                <structure>
-                    <property name="name">Date/Day/DateTime</property>
-                    <expression name="expression">dimension["Date"]["Day"]["DateTime"]</expression>
-                    <property name="dataType">date-time</property>
-                </structure>
-                <structure>
-                    <property name="name">Spend Category/Category</property>
-                    <expression name="expression">dimension["Spend Category"]["Category"]</expression>
-                    <property name="dataType">string</property>
-                </structure>
-                <structure>
-                    <property name="name">Spend Category/Merchant</property>
-                    <expression name="expression">dimension["Spend Category"]["Merchant"]</expression>
-                    <property name="dataType">string</property>
-                </structure>
-                <structure>
-                    <property name="name">Account/Account</property>
-                    <expression name="expression">dimension["Account"]["Account"]</expression>
-                    <property name="dataType">string</property>
-                </structure>
-                <structure>
                     <property name="name">Spend Method/Method</property>
                     <expression name="expression">dimension["Spend Method"]["Method"]</expression>
                     <property name="dataType">string</property>
@@ -4689,6 +4617,11 @@
                     <expression name="expression">measure["Amount"]</expression>
                     <property name="dataType">float</property>
                     <property name="aggregateFunction">SUM</property>
+                </structure>
+                <structure>
+                    <property name="name">Account/Account</property>
+                    <expression name="expression">dimension["Account"]["Account"]</expression>
+                    <property name="dataType">string</property>
                 </structure>
             </list-property>
             <property name="theme">ThemesReportItems.default-chart</property>
@@ -4748,7 +4681,6 @@
      </outline>
     </title>
    </children>
-   <bounds _body="0.0,0.0,756.75,191.25"/>
    <outline>
     <color _nil="1"/>
    </outline>
@@ -4756,16 +4688,14 @@
   <extendedProperties name="enable.area.alt" value="false"/>
   <extendedProperties name="enable.drill.category" value="true"/>
   <extendedProperties name="enable.drill.series" value="true"/>
-  <extendedProperties name="jschart.glass.style" value="false"/>
-  <extendedProperties name="jschart.zoom" value="xy"/>
-  <extendedProperties name="drilled.filters_" value="data[&quot;Spend Category/Category&quot;]eqAutomobile_@,__@,_"/>
-  <extendedProperties name="enable.drill.proc_" value="true"/>
-  <extendedProperties name="jschart.series.shadow" value="true"/>
   <extendedProperties name="jschart.range.selector" value="false"/>
   <extendedProperties name="jschart.navigator" value="false"/>
   <extendedProperties name="jschart.scroll" value="false"/>
   <extendedProperties name="keep.hierarchy.category" value="true"/>
   <extendedProperties name="keep.hierarchy.series" value="true"/>
+  <extendedProperties name="jschart.glass.style" value="false"/>
+  <extendedProperties name="jschart.zoom" value="xy"/>
+  <extendedProperties name="jschart.series.shadow" value="false"/>
   <sampleData>
    <baseSampleData dataSetRepresentation="QWER"/>
    <orthogonalSampleData dataSetRepresentation="2.3" seriesDefinitionIndex="0"/>
@@ -4808,9 +4738,6 @@
        </outline>
       </label>
       <dataDefinition definition="data[&quot;Spend/Amount&quot;]"/>
-      <dataPoint separator=", ">
-       <components type="1"/>
-      </dataPoint>
       <triggers condition="6">
        <action type="1">
         <value _type="TooltipValue" text="" delay="0"/>
@@ -4854,7 +4781,7 @@
    </associatedAxes>
    <seriesDefinitions>
     <query definition=""/>
-    <series seriesIdentifier="Spend Category/Category">
+    <series seriesIdentifier="Spend Category/Merchant">
      <label>
       <background _nil="1"/>
       <outline>
@@ -4862,9 +4789,6 @@
       </outline>
      </label>
      <dataDefinition definition="data[&quot;Spend Category/Merchant&quot;]"/>
-     <dataPoint separator=", ">
-      <components type="1"/>
-     </dataPoint>
      <curveFitting _nil="1"/>
     </series>
    </seriesDefinitions>
@@ -4909,6 +4833,13 @@
             <property name="outputFormat">JS</property>
             <property name="cubeFilter">
                 <filter-condition-element>
+                    <expression name="expr" type="javascript">data["Spend Category/Category"]</expression>
+                    <property name="operator">eq</property>
+                    <simple-property-list name="value1">
+                        <value type="constant">Automobile</value>
+                    </simple-property-list>
+                </filter-condition-element>
+                <filter-condition-element>
                     <expression name="expr">dimension["Date"]["Month"]</expression>
                     <property name="operator">between</property>
                     <simple-property-list name="value1">
@@ -4918,70 +4849,13 @@
                     <property name="filterTarget">DataSet</property>
                     <property name="updateAggregation">true</property>
                 </filter-condition-element>
-                <filter-condition-element>
-                    <expression name="expr">data["Spend Category/Category"]</expression>
-                    <property name="operator">ne</property>
-                    <simple-property-list name="value1">
-                        <value type="constant">Fees</value>
-                    </simple-property-list>
-                    <property name="filterTarget">ResultSet</property>
-                </filter-condition-element>
-                <filter-condition-element>
-                    <expression name="expr" type="javascript">data["Spend Category/Category"]</expression>
-                    <property name="operator">eq</property>
-                    <simple-property-list name="value1">
-                        <value type="constant">Automobile</value>
-                    </simple-property-list>
-                </filter-condition-element>
-                <filter-condition-element>
-                    <expression name="expr" type="javascript">data["Spend Category/Category"]</expression>
-                    <property name="operator">eq</property>
-                    <simple-property-list name="value1">
-                        <value type="constant">Automobile</value>
-                    </simple-property-list>
-                </filter-condition-element>
             </property>
             <property name="height">191.25pt</property>
             <property name="width">756.75pt</property>
             <list-property name="boundDataColumns">
                 <structure>
-                    <property name="name">Date/Month</property>
-                    <expression name="expression">dimension["Date"]["Month"]</expression>
-                    <property name="dataType">integer</property>
-                </structure>
-                <structure>
-                    <property name="name">Date/Month/DateTime</property>
-                    <expression name="expression">dimension["Date"]["Month"]["DateTime"]</expression>
-                    <property name="dataType">date-time</property>
-                </structure>
-                <structure>
-                    <property name="name">Date/Day</property>
-                    <expression name="expression">dimension["Date"]["Day"]</expression>
-                    <property name="dataType">integer</property>
-                </structure>
-                <structure>
-                    <property name="name">Date/Day/DateTime</property>
-                    <expression name="expression">dimension["Date"]["Day"]["DateTime"]</expression>
-                    <property name="dataType">date-time</property>
-                </structure>
-                <structure>
-                    <property name="name">Spend Category/Category</property>
-                    <expression name="expression">dimension["Spend Category"]["Category"]</expression>
-                    <property name="dataType">string</property>
-                </structure>
-                <structure>
                     <property name="name">Spend Category/Merchant</property>
                     <expression name="expression">dimension["Spend Category"]["Merchant"]</expression>
-                    <property name="dataType">string</property>
-                </structure>
-                <structure>
-                    <property name="name">Account/Account</property>
-                    <expression name="expression">dimension["Account"]["Account"]</expression>
-                    <property name="dataType">string</property>
-                </structure>
-                <structure>
-                    <property name="name">Spend Method/Method</property>
-                    <expression name="expression">dimension["Spend Method"]["Method"]</expression>
                     <property name="dataType">string</property>
                 </structure>
                 <structure>
@@ -4989,6 +4863,11 @@
                     <expression name="expression">measure["Amount"]</expression>
                     <property name="dataType">float</property>
                     <property name="aggregateFunction">SUM</property>
+                </structure>
+                <structure>
+                    <property name="name">Account/Account</property>
+                    <expression name="expression">dimension["Account"]["Account"]</expression>
+                    <property name="dataType">string</property>
                 </structure>
             </list-property>
             <property name="theme">ThemesReportItems.default-chart</property>
@@ -5048,7 +4927,6 @@
      </outline>
     </title>
    </children>
-   <bounds _body="0.0,0.0,971.25,137.25"/>
    <outline>
     <color _nil="1"/>
    </outline>
@@ -5231,50 +5109,20 @@
             <property name="width">971.25pt</property>
             <list-property name="boundDataColumns">
                 <structure>
-                    <property name="name">Date/Month</property>
-                    <expression name="expression">dimension["Date"]["Month"]</expression>
-                    <property name="dataType">integer</property>
-                </structure>
-                <structure>
                     <property name="name">Date/Month/DateTime</property>
                     <expression name="expression">dimension["Date"]["Month"]["DateTime"]</expression>
                     <property name="dataType">date-time</property>
-                </structure>
-                <structure>
-                    <property name="name">Date/Day</property>
-                    <expression name="expression">dimension["Date"]["Day"]</expression>
-                    <property name="dataType">integer</property>
-                </structure>
-                <structure>
-                    <property name="name">Date/Day/DateTime</property>
-                    <expression name="expression">dimension["Date"]["Day"]["DateTime"]</expression>
-                    <property name="dataType">date-time</property>
-                </structure>
-                <structure>
-                    <property name="name">Spend Category/Category</property>
-                    <expression name="expression">dimension["Spend Category"]["Category"]</expression>
-                    <property name="dataType">string</property>
-                </structure>
-                <structure>
-                    <property name="name">Spend Category/Merchant</property>
-                    <expression name="expression">dimension["Spend Category"]["Merchant"]</expression>
-                    <property name="dataType">string</property>
-                </structure>
-                <structure>
-                    <property name="name">Account/Account</property>
-                    <expression name="expression">dimension["Account"]["Account"]</expression>
-                    <property name="dataType">string</property>
-                </structure>
-                <structure>
-                    <property name="name">Spend Method/Method</property>
-                    <expression name="expression">dimension["Spend Method"]["Method"]</expression>
-                    <property name="dataType">string</property>
                 </structure>
                 <structure>
                     <property name="name">Spend/Amount</property>
                     <expression name="expression">measure["Amount"]</expression>
                     <property name="dataType">float</property>
                     <property name="aggregateFunction">SUM</property>
+                </structure>
+                <structure>
+                    <property name="name">Spend Method/Method</property>
+                    <expression name="expression">dimension["Spend Method"]["Method"]</expression>
+                    <property name="dataType">string</property>
                 </structure>
             </list-property>
             <property name="theme">ThemesReportItems.default-chart</property>
@@ -5298,7 +5146,7 @@
     </body>
     <property name="dashboardView">
         <dashboard id="2">
-            <property name="activeTab">31d6b1b4-6e61-4c3d-84a3-0d04c91bb8961</property>
+            <property name="activeTab">049f219c-22c5-445b-8bb1-b28f150e1ef51</property>
             <property name="tabs">
                 <tab-element name="3596098d-5ae6-490b-8c7d-437cd1c60c7b1" id="15">
                     <property name="title">Home</property>
@@ -5306,6 +5154,7 @@
                     <property name="showFooter">false</property>
                     <property name="headerHTML">null</property>
                     <property name="footerHTML">null</property>
+                    <property name="backgroundColor">RGB(255,255,255)</property>
                     <property name="freeFormGadgets">
                         <gadget name="49fa8d6e-487e-4d49-aec5-6fa3dc2c6de22" id="16">
                             <property name="x">10px</property>
@@ -5316,92 +5165,33 @@
                                 <current-selections id="17"/>
                             </property>
                         </gadget>
-                        <gadget name="Gadget_622d7ffa-27ec-49ee-a9bd-d3ca4e877fb5" id="27">
-                            <property name="x">774px</property>
-                            <property name="y">0px</property>
-                            <property name="height">665px</property>
-                            <property name="width">365px</property>
-                            <property name="title">Index Summary</property>
-                            <property name="externalGadgetURI">././././././././././/Report Designs/PortfolioCharts.rptdocument</property>
-                            <property name="showTitle">false</property>
-                            <property name="showBorder">false</property>
-                            <property name="zIndex">1</property>
-                            <property name="showScrollBar">false</property>
-                            <property name="height">665px</property>
-                            <property name="width">365px</property>
-                            <property name="caption">
-                                <gadget-caption id="959">
-                                    <property name="showCaption">true</property>
-                                    <property name="horizontalAlignment">left</property>
-                                    <property name="fontSize">10pt</property>
-                                </gadget-caption>
-                            </property>
-                            <property name="content">
-                                <data-view id="28">
-                                    <list-property name="userProperties">
-                                        <structure>
-                                            <property name="name">showViewerToolbar</property>
-                                            <property name="type">boolean</property>
-                                        </structure>
-                                    </list-property>
-                                    <property name="showViewerToolbar">false</property>
-                                    <property name="gadgetType">viewer</property>
-                                    <property name="externalContentRef">
-                                        <external-element-ref>
-                                            <property name="sourceFile">././././././././././././././././././././/Report Designs/PortfolioCharts.rptdocument</property>
-                                        </external-element-ref>
-                                    </property>
-                                </data-view>
-                            </property>
-                        </gadget>
-                        <gadget name="Gadget_24509e52-26fb-4572-99e7-158442f823ff" id="29">
-                            <property name="x">1152px</property>
-                            <property name="y">0px</property>
-                            <property name="width">221px</property>
-                            <property name="title">Wealth Progress</property>
-                            <property name="externalGadgetURI">/WM/term_goal.rptdocument</property>
-                            <property name="showTitle">false</property>
-                            <property name="showBorder">false</property>
-                            <property name="zIndex">0</property>
-                            <property name="showScrollBar">false</property>
-                            <property name="width">221px</property>
-                            <property name="content">
-                                <data-view id="30">
-                                    <list-property name="userProperties">
-                                        <structure>
-                                            <property name="name">showViewerToolbar</property>
-                                            <property name="type">boolean</property>
-                                        </structure>
-                                    </list-property>
-                                    <property name="showViewerToolbar">false</property>
-                                    <property name="gadgetType">viewer</property>
-                                    <property name="externalContentRef">
-                                        <external-element-ref>
-                                            <property name="sourceFile">./././././/Report Designs/term_goal.rptdocument</property>
-                                        </external-element-ref>
-                                    </property>
-                                </data-view>
-                            </property>
-                        </gadget>
-                        <gadget name="Gadget_0801308f-5608-46b7-a6a7-c7281aca60ce" id="171">
+                        <gadget name="Gadget_443dc893-e764-4a1e-997b-0e1134abb32d" id="1000">
                             <property name="x">36px</property>
                             <property name="y">0px</property>
+                            <property name="height">500px</property>
                             <property name="width">726px</property>
                             <property name="title">Welcome Home</property>
-                            <property name="externalGadgetURI">./././././/Report Designs/WelcomeHome.rptdesign</property>
+                            <property name="externalGadgetURI">^/Report Designs/WelcomeHome.rptdocument</property>
                             <property name="showTitle">false</property>
                             <property name="showBorder">false</property>
-                            <property name="zIndex">3</property>
+                            <property name="zIndex">4</property>
                             <property name="showScrollBar">false</property>
+                            <property name="height">500px</property>
                             <property name="width">726px</property>
                             <property name="caption">
-                                <gadget-caption id="172">
+                                <gadget-caption id="1001">
                                     <property name="showCaption">true</property>
                                     <property name="horizontalAlignment">left</property>
+                                    <property name="fontFamily">"Source Sans Pro"</property>
+                                    <property name="fontSize">18pt</property>
+                                    <property name="fontWeight">normal</property>
+                                    <property name="fontStyle">normal</property>
+                                    <property name="color">#353535</property>
+                                    <property name="textUnderline">none</property>
                                 </gadget-caption>
                             </property>
                             <property name="content">
-                                <data-view id="173">
+                                <data-view id="1002">
                                     <list-property name="userProperties">
                                         <structure>
                                             <property name="name">showViewerToolbar</property>
@@ -5412,7 +5202,90 @@
                                     <property name="gadgetType">viewer</property>
                                     <property name="externalContentRef">
                                         <external-element-ref>
-                                            <property name="sourceFile">./././././/Report Designs/WelcomeHome.rptdocument</property>
+                                            <property name="sourceFile">^/Report Designs/WelcomeHome.rptdocument</property>
+                                        </external-element-ref>
+                                    </property>
+                                </data-view>
+                            </property>
+                        </gadget>
+                        <gadget name="Gadget_90312126-3434-40fd-bc1d-e14c6b248c35" id="1006">
+                            <property name="x">773.8993053436279px</property>
+                            <property name="y">-0.53125px</property>
+                            <property name="height">665px</property>
+                            <property name="width">366px</property>
+                            <property name="title">Index Summary</property>
+                            <property name="externalGadgetURI">^/Report Designs/PortfolioCharts.rptdocument</property>
+                            <property name="showTitle">false</property>
+                            <property name="showBorder">false</property>
+                            <property name="zIndex">5</property>
+                            <property name="showScrollBar">false</property>
+                            <property name="height">665px</property>
+                            <property name="width">366px</property>
+                            <property name="caption">
+                                <gadget-caption id="1007">
+                                    <property name="showCaption">true</property>
+                                    <property name="horizontalAlignment">left</property>
+                                    <property name="fontFamily">"Source Sans Pro"</property>
+                                    <property name="fontSize">18pt</property>
+                                    <property name="color">#353535</property>
+                                </gadget-caption>
+                            </property>
+                            <property name="content">
+                                <data-view id="1008">
+                                    <list-property name="userProperties">
+                                        <structure>
+                                            <property name="name">showViewerToolbar</property>
+                                            <property name="type">boolean</property>
+                                        </structure>
+                                    </list-property>
+                                    <property name="showViewerToolbar">false</property>
+                                    <property name="gadgetType">viewer</property>
+                                    <property name="externalContentRef">
+                                        <external-element-ref>
+                                            <property name="sourceFile">^/Report Designs/PortfolioCharts.rptdocument</property>
+                                        </external-element-ref>
+                                    </property>
+                                </data-view>
+                            </property>
+                        </gadget>
+                        <gadget name="Gadget_1ea5e9fc-ec5c-47a6-942b-c74f27904b4f" id="1009">
+                            <property name="x">1151.899305343628px</property>
+                            <property name="y">-0.53125px</property>
+                            <property name="height">665px</property>
+                            <property name="width">221px</property>
+                            <property name="title">Wealth Progress</property>
+                            <property name="externalGadgetURI">^/Report Designs/term_goal.rptdocument</property>
+                            <property name="showTitle">false</property>
+                            <property name="showBorder">false</property>
+                            <property name="zIndex">6</property>
+                            <property name="showScrollBar">false</property>
+                            <property name="height">665px</property>
+                            <property name="width">221px</property>
+                            <property name="caption">
+                                <gadget-caption id="1010">
+                                    <property name="showCaption">true</property>
+                                    <property name="horizontalAlignment">left</property>
+                                    <property name="fontFamily">"Source Sans Pro"</property>
+                                    <property name="fontSize">18pt</property>
+                                    <property name="fontWeight">normal</property>
+                                    <property name="fontStyle">normal</property>
+                                    <property name="color">#353535</property>
+                                    <property name="textUnderline">none</property>
+                                </gadget-caption>
+                            </property>
+                            <property name="content">
+                                <data-view id="1011">
+                                    <list-property name="userProperties">
+                                        <structure>
+                                            <property name="name">showViewerToolbar</property>
+                                            <property name="type">boolean</property>
+                                        </structure>
+                                    </list-property>
+                                    <property name="showViewerToolbar">false</property>
+                                    <property name="gadgetType">viewer</property>
+                                    <property name="externalContentRef">
+                                        <external-element-ref>
+                                            <property name="sourceFile">^/Report Designs/term_goal.rptdocument</property>
                                         </external-element-ref>
                                     </property>
                                 </data-view>
@@ -5441,30 +5314,271 @@
                                     <property name="eventName">SELECT_EVENT:SEMANTIC_filter</property>
                                     <property name="eventObjects">
                                         <event-object>
-                                            <property name="gadget">Gadget_ff7545bb-bb67-4428-96c6-818c068eff38121</property>
+                                            <property name="gadget">Gadget_e7e4f03d-777c-4b3c-ab21-49454ea11d93</property>
                                             <property name="dirty">false</property>
                                         </event-object>
                                         <event-object>
-                                            <property name="gadget">Gadget_15032c84-cae8-4978-af58-c79d113e009e</property>
+                                            <property name="gadget">Gadget_c3c02eba-1f76-43a2-8462-2e30269fdb1e</property>
                                             <property name="dirty">false</property>
                                         </event-object>
                                     </property>
                                 </event-subscriber>
                             </property>
                         </gadget>
-                        <gadget name="Gadget_ff7545bb-bb67-4428-96c6-818c068eff38121" id="93">
-                            <property name="x">18px</property>
+                        <gadget name="Gadget_49cf5979-54a3-47ae-bf20-497f231adb9a1" id="107">
+                            <property name="x">288px</property>
                             <property name="y">0px</property>
+                            <property name="height">238px</property>
+                            <property name="width">377px</property>
+                            <property name="title">My Spend By Account</property>
+                            <property name="showTitle">false</property>
+                            <property name="showBorder">false</property>
+                            <property name="zIndex">13</property>
+                            <property name="showScrollBar">false</property>
+                            <property name="height">238px</property>
+                            <property name="width">377px</property>
+                            <property name="caption">
+                                <gadget-caption id="963">
+                                    <property name="showCaption">true</property>
+                                    <property name="horizontalAlignment">left</property>
+                                    <property name="fontFamily">"Source Sans Pro"</property>
+                                    <property name="fontSize">18pt</property>
+                                    <property name="fontWeight">normal</property>
+                                    <property name="fontStyle">normal</property>
+                                    <property name="color">#353535</property>
+                                    <property name="textUnderline">none</property>
+                                </gadget-caption>
+                            </property>
+                            <property name="content">
+                                <data-view id="108">
+                                    <property name="gadgetType">viewer</property>
+                                    <property name="internalReportLetRef">Column Chart - Data Cube_1339e175-cb81-4df1-b972-c61bc2aaeb861</property>
+                                </data-view>
+                            </property>
+                            <property name="subscribeTo">
+                                <event-subscriber>
+                                    <property name="eventName">SELECT_EVENT:SEMANTIC_filter</property>
+                                    <property name="eventObjects">
+                                        <event-object>
+                                            <property name="gadget">Gadget_e7e4f03d-777c-4b3c-ab21-49454ea11d93</property>
+                                            <property name="dirty">false</property>
+                                        </event-object>
+                                        <event-object>
+                                            <property name="gadget">Gadget_c3c02eba-1f76-43a2-8462-2e30269fdb1e</property>
+                                            <property name="dirty">false</property>
+                                        </event-object>
+                                    </property>
+                                </event-subscriber>
+                            </property>
+                        </gadget>
+                        <gadget name="Gadget_8e7ba04a-48f8-4bf0-86de-179aeb89e6e41" id="110">
+                            <property name="x">684px</property>
+                            <property name="y">0px</property>
+                            <property name="height">237px</property>
+                            <property name="width">400px</property>
+                            <property name="title">My Spend By Payment Method</property>
+                            <property name="showTitle">false</property>
+                            <property name="showBorder">false</property>
+                            <property name="zIndex">14</property>
+                            <property name="showScrollBar">false</property>
+                            <property name="height">237px</property>
+                            <property name="width">400px</property>
+                            <property name="caption">
+                                <gadget-caption id="1035">
+                                    <property name="showCaption">true</property>
+                                    <property name="horizontalAlignment">left</property>
+                                    <property name="fontFamily">"Source Sans Pro"</property>
+                                    <property name="fontSize">18pt</property>
+                                    <property name="fontWeight">normal</property>
+                                    <property name="fontStyle">normal</property>
+                                    <property name="color">#353535</property>
+                                    <property name="textUnderline">none</property>
+                                </gadget-caption>
+                            </property>
+                            <property name="content">
+                                <data-view id="111">
+                                    <property name="gadgetType">viewer</property>
+                                    <property name="internalReportLetRef">Bar Chart - Data Cube_2932b7ba-211b-498f-813d-b03dff5600dd1</property>
+                                </data-view>
+                            </property>
+                            <property name="subscribeTo">
+                                <event-subscriber>
+                                    <property name="eventName">SELECT_EVENT:SEMANTIC_filter</property>
+                                    <property name="eventObjects">
+                                        <event-object>
+                                            <property name="gadget">Gadget_e7e4f03d-777c-4b3c-ab21-49454ea11d93</property>
+                                            <property name="dirty">false</property>
+                                        </event-object>
+                                        <event-object>
+                                            <property name="gadget">Gadget_c3c02eba-1f76-43a2-8462-2e30269fdb1e</property>
+                                            <property name="dirty">false</property>
+                                        </event-object>
+                                    </property>
+                                </event-subscriber>
+                            </property>
+                        </gadget>
+                        <gadget name="Gadget_e7b612a5-a91b-4a81-ad6e-feed4b4a41351" id="113">
+                            <property name="x">287.89930534362793px</property>
+                            <property name="y">251.46875px</property>
+                            <property name="height">326px</property>
+                            <property name="width">1034px</property>
+                            <property name="title">My Merchants</property>
+                            <property name="showTitle">false</property>
+                            <property name="showBorder">false</property>
+                            <property name="zIndex">21</property>
+                            <property name="showScrollBar">false</property>
+                            <property name="height">326px</property>
+                            <property name="width">1034px</property>
+                            <property name="caption">
+                                <gadget-caption id="1034">
+                                    <property name="showCaption">true</property>
+                                    <property name="horizontalAlignment">left</property>
+                                    <property name="fontFamily">"Source Sans Pro"</property>
+                                    <property name="fontSize">18pt</property>
+                                    <property name="fontWeight">normal</property>
+                                    <property name="fontStyle">normal</property>
+                                    <property name="color">#353535</property>
+                                    <property name="textUnderline">none</property>
+                                </gadget-caption>
+                            </property>
+                            <property name="content">
+                                <data-view id="114">
+                                    <property name="gadgetType">viewer</property>
+                                    <property name="internalReportLetRef">Column Chart - Data Cube 1_a1d52553-7e38-4c45-a2eb-3a8b715344ae11</property>
+                                </data-view>
+                            </property>
+                            <property name="subscribeTo">
+                                <event-subscriber>
+                                    <property name="eventName">SELECT_EVENT:SEMANTIC_filter</property>
+                                    <property name="eventObjects">
+                                        <event-object>
+                                            <property name="gadget">Gadget_e7e4f03d-777c-4b3c-ab21-49454ea11d93</property>
+                                            <property name="dirty">false</property>
+                                        </event-object>
+                                        <event-object>
+                                            <property name="gadget">Gadget_c3c02eba-1f76-43a2-8462-2e30269fdb1e</property>
+                                            <property name="dirty">false</property>
+                                        </event-object>
+                                    </property>
+                                </event-subscriber>
+                            </property>
+                        </gadget>
+                        <gadget name="Gadget_1149cb71-b03e-4f78-86fa-36e0b6795d241" id="116">
+                            <property name="x">18px</property>
+                            <property name="y">594px</property>
+                            <property name="height">253px</property>
+                            <property name="width">1320px</property>
+                            <property name="title">My Spend This Period</property>
+                            <property name="showTitle">false</property>
+                            <property name="showBorder">false</property>
+                            <property name="zIndex">22</property>
+                            <property name="showScrollBar">false</property>
+                            <property name="height">253px</property>
+                            <property name="width">1320px</property>
+                            <property name="caption">
+                                <gadget-caption id="1030">
+                                    <property name="showCaption">true</property>
+                                    <property name="horizontalAlignment">left</property>
+                                    <property name="fontFamily">"Source Sans Pro"</property>
+                                    <property name="fontSize">18pt</property>
+                                    <property name="fontWeight">normal</property>
+                                    <property name="fontStyle">normal</property>
+                                    <property name="color">#353535</property>
+                                    <property name="textUnderline">none</property>
+                                </gadget-caption>
+                            </property>
+                            <property name="content">
+                                <data-view id="117">
+                                    <property name="gadgetType">viewer</property>
+                                    <property name="internalReportLetRef">Line Chart - Data Cube_002641bf-e2a1-40b0-b9ed-bc78cd65b6621</property>
+                                </data-view>
+                            </property>
+                            <property name="subscribeTo">
+                                <event-subscriber>
+                                    <property name="eventName">SELECT_EVENT:SEMANTIC_filter</property>
+                                    <property name="eventObjects">
+                                        <event-object>
+                                            <property name="gadget">Gadget_e7e4f03d-777c-4b3c-ab21-49454ea11d93</property>
+                                            <property name="dirty">false</property>
+                                        </event-object>
+                                        <event-object>
+                                            <property name="gadget">Gadget_c3c02eba-1f76-43a2-8462-2e30269fdb1e</property>
+                                            <property name="dirty">false</property>
+                                        </event-object>
+                                    </property>
+                                </event-subscriber>
+                            </property>
+                        </gadget>
+                        <gadget name="Gadget_6e6d05e7-e310-40aa-9c14-5e4952821357" id="967">
+                            <property name="x">1098px</property>
+                            <property name="y">0px</property>
+                            <property name="height">171px</property>
+                            <property name="width">308px</property>
+                            <property name="title">My Alerts</property>
+                            <property name="externalGadgetURI">./././././/Report Designs/AlertHTML.rptdesign</property>
+                            <property name="showTitle">false</property>
+                            <property name="showBorder">false</property>
+                            <property name="zIndex">24</property>
+                            <property name="showScrollBar">false</property>
+                            <property name="height">171px</property>
+                            <property name="width">308px</property>
+                            <property name="caption">
+                                <gadget-caption id="968">
+                                    <property name="showCaption">true</property>
+                                    <property name="horizontalAlignment">left</property>
+                                    <property name="fontFamily">"Source Sans Pro"</property>
+                                    <property name="fontSize">18pt</property>
+                                    <property name="fontWeight">normal</property>
+                                    <property name="fontStyle">normal</property>
+                                    <property name="color">#353535</property>
+                                    <property name="textUnderline">none</property>
+                                </gadget-caption>
+                            </property>
+                            <property name="content">
+                                <data-view id="969">
+                                    <list-property name="userProperties">
+                                        <structure>
+                                            <property name="name">showViewerToolbar</property>
+                                            <property name="type">boolean</property>
+                                        </structure>
+                                    </list-property>
+                                    <property name="showViewerToolbar">false</property>
+                                    <property name="gadgetType">viewer</property>
+                                    <property name="externalContentRef">
+                                        <external-element-ref>
+                                            <property name="sourceFile">./././././/Report Designs/AlertHTML.rptdocument</property>
+                                            <property name="targetBookmark">table</property>
+                                        </external-element-ref>
+                                    </property>
+                                </data-view>
+                            </property>
+                        </gadget>
+                        <gadget name="Gadget_e7e4f03d-777c-4b3c-ab21-49454ea11d93" id="1012">
+                            <property name="x">17.89930534362793px</property>
+                            <property name="y">-0.53125px</property>
                             <property name="height">142px</property>
                             <property name="width">258px</property>
                             <property name="title">Click a Category</property>
                             <property name="showTitle">false</property>
                             <property name="showBorder">false</property>
-                            <property name="zIndex">8</property>
+                            <property name="zIndex">25</property>
+                            <property name="showScrollBar">false</property>
                             <property name="height">142px</property>
                             <property name="width">258px</property>
+                            <property name="caption">
+                                <gadget-caption id="1013">
+                                    <property name="showCaption">true</property>
+                                    <property name="horizontalAlignment">left</property>
+                                    <property name="fontFamily">"Source Sans Pro"</property>
+                                    <property name="fontSize">18pt</property>
+                                    <property name="fontWeight">normal</property>
+                                    <property name="fontStyle">normal</property>
+                                    <property name="color">#353535</property>
+                                    <property name="textUnderline">none</property>
+                                </gadget-caption>
+                            </property>
                             <property name="content">
-                                <list-data-selector id="94">
+                                <list-data-selector id="1014">
                                     <property name="cube">NewDataMartDataSource4::Spend History</property>
                                     <property name="operator">in</property>
                                     <simple-property-list name="columnNames">
@@ -5501,7 +5615,7 @@
                                             <property name="dirty">false</property>
                                         </event-object>
                                         <event-object>
-                                            <property name="gadget">Gadget_15032c84-cae8-4978-af58-c79d113e009e</property>
+                                            <property name="gadget">Gadget_c3c02eba-1f76-43a2-8462-2e30269fdb1e</property>
                                             <property name="dirty">false</property>
                                         </event-object>
                                     </property>
@@ -5512,200 +5626,41 @@
                                     <property name="eventName">SELECT_EVENT:SEMANTIC_filter</property>
                                     <property name="eventObjects">
                                         <event-object>
-                                            <property name="gadget">Gadget_15032c84-cae8-4978-af58-c79d113e009e</property>
+                                            <property name="gadget">Gadget_c3c02eba-1f76-43a2-8462-2e30269fdb1e</property>
                                             <property name="dirty">false</property>
                                         </event-object>
                                     </property>
                                 </event-subscriber>
                             </property>
                         </gadget>
-                        <gadget name="Gadget_8d4e3673-8f4a-4492-a133-af81720de21a1" id="102">
-                            <property name="x">18px</property>
-                            <property name="y">342px</property>
-                            <property name="height">169px</property>
-                            <property name="width">271px</property>
-                            <property name="title">Credit Limit Meter</property>
-                            <property name="externalGadgetURI">/spend_type.rptdesign</property>
-                            <property name="showTitle">false</property>
-                            <property name="showBorder">false</property>
-                            <property name="zIndex">23</property>
-                            <property name="showScrollBar">false</property>
-                            <property name="height">169px</property>
-                            <property name="width">271px</property>
-                            <property name="content">
-                                <data-view id="103">
-                                    <list-property name="userProperties">
-                                        <structure>
-                                            <property name="name">showViewerToolbar</property>
-                                            <property name="type">boolean</property>
-                                        </structure>
-                                    </list-property>
-                                    <property name="showViewerToolbar">false</property>
-                                    <property name="gadgetType">viewer</property>
-                                    <property name="externalContentRef">
-                                        <external-element-ref>
-                                            <property name="sourceFile">./././././/Report Designs/spend_type.rptdocument</property>
-                                            <property name="targetBookmark">limit</property>
-                                        </external-element-ref>
-                                    </property>
-                                </data-view>
-                            </property>
-                        </gadget>
-                        <gadget name="Gadget_49cf5979-54a3-47ae-bf20-497f231adb9a1" id="107">
-                            <property name="x">288px</property>
-                            <property name="y">0px</property>
-                            <property name="height">238px</property>
-                            <property name="width">377px</property>
-                            <property name="title">My Spend By Account</property>
-                            <property name="showTitle">false</property>
-                            <property name="showBorder">false</property>
-                            <property name="zIndex">13</property>
-                            <property name="showScrollBar">false</property>
-                            <property name="height">238px</property>
-                            <property name="width">377px</property>
-                            <property name="caption">
-                                <gadget-caption id="963">
-                                    <property name="showCaption">true</property>
-                                </gadget-caption>
-                            </property>
-                            <property name="content">
-                                <data-view id="108">
-                                    <property name="gadgetType">viewer</property>
-                                    <property name="internalReportLetRef">Column Chart - Data Cube_1339e175-cb81-4df1-b972-c61bc2aaeb861</property>
-                                </data-view>
-                            </property>
-                            <property name="subscribeTo">
-                                <event-subscriber>
-                                    <property name="eventName">SELECT_EVENT:SEMANTIC_filter</property>
-                                    <property name="eventObjects">
-                                        <event-object>
-                                            <property name="gadget">Gadget_ff7545bb-bb67-4428-96c6-818c068eff38121</property>
-                                            <property name="dirty">false</property>
-                                        </event-object>
-                                        <event-object>
-                                            <property name="gadget">Gadget_15032c84-cae8-4978-af58-c79d113e009e</property>
-                                            <property name="dirty">false</property>
-                                        </event-object>
-                                    </property>
-                                </event-subscriber>
-                            </property>
-                        </gadget>
-                        <gadget name="Gadget_8e7ba04a-48f8-4bf0-86de-179aeb89e6e41" id="110">
-                            <property name="x">684px</property>
-                            <property name="y">0px</property>
-                            <property name="height">237px</property>
-                            <property name="width">400px</property>
-                            <property name="title">My Spend By Payment Method</property>
-                            <property name="showTitle">false</property>
-                            <property name="showBorder">false</property>
-                            <property name="zIndex">14</property>
-                            <property name="showScrollBar">false</property>
-                            <property name="height">237px</property>
-                            <property name="width">400px</property>
-                            <property name="content">
-                                <data-view id="111">
-                                    <property name="gadgetType">viewer</property>
-                                    <property name="internalReportLetRef">Bar Chart - Data Cube_2932b7ba-211b-498f-813d-b03dff5600dd1</property>
-                                </data-view>
-                            </property>
-                            <property name="subscribeTo">
-                                <event-subscriber>
-                                    <property name="eventName">SELECT_EVENT:SEMANTIC_filter</property>
-                                    <property name="eventObjects">
-                                        <event-object>
-                                            <property name="gadget">Gadget_ff7545bb-bb67-4428-96c6-818c068eff38121</property>
-                                            <property name="dirty">false</property>
-                                        </event-object>
-                                        <event-object>
-                                            <property name="gadget">Gadget_15032c84-cae8-4978-af58-c79d113e009e</property>
-                                            <property name="dirty">false</property>
-                                        </event-object>
-                                    </property>
-                                </event-subscriber>
-                            </property>
-                        </gadget>
-                        <gadget name="Gadget_e7b612a5-a91b-4a81-ad6e-feed4b4a41351" id="113">
-                            <property name="x">288px</property>
-                            <property name="y">252px</property>
-                            <property name="height">325px</property>
-                            <property name="width">1034px</property>
-                            <property name="title">My Merchants</property>
-                            <property name="showTitle">false</property>
-                            <property name="showBorder">false</property>
-                            <property name="zIndex">21</property>
-                            <property name="showScrollBar">false</property>
-                            <property name="height">325px</property>
-                            <property name="width">1034px</property>
-                            <property name="content">
-                                <data-view id="114">
-                                    <property name="gadgetType">viewer</property>
-                                    <property name="internalReportLetRef">Column Chart - Data Cube 1_a1d52553-7e38-4c45-a2eb-3a8b715344ae11</property>
-                                </data-view>
-                            </property>
-                            <property name="subscribeTo">
-                                <event-subscriber>
-                                    <property name="eventName">SELECT_EVENT:SEMANTIC_filter</property>
-                                    <property name="eventObjects">
-                                        <event-object>
-                                            <property name="gadget">Gadget_ff7545bb-bb67-4428-96c6-818c068eff38121</property>
-                                            <property name="dirty">false</property>
-                                        </event-object>
-                                        <event-object>
-                                            <property name="gadget">Gadget_15032c84-cae8-4978-af58-c79d113e009e</property>
-                                            <property name="dirty">false</property>
-                                        </event-object>
-                                    </property>
-                                </event-subscriber>
-                            </property>
-                        </gadget>
-                        <gadget name="Gadget_1149cb71-b03e-4f78-86fa-36e0b6795d241" id="116">
-                            <property name="x">18px</property>
-                            <property name="y">594px</property>
-                            <property name="height">253px</property>
-                            <property name="width">1320px</property>
-                            <property name="title">My Spend This Period</property>
-                            <property name="showTitle">false</property>
-                            <property name="showBorder">false</property>
-                            <property name="zIndex">22</property>
-                            <property name="showScrollBar">false</property>
-                            <property name="height">253px</property>
-                            <property name="width">1320px</property>
-                            <property name="content">
-                                <data-view id="117">
-                                    <property name="gadgetType">viewer</property>
-                                    <property name="internalReportLetRef">Line Chart - Data Cube_002641bf-e2a1-40b0-b9ed-bc78cd65b6621</property>
-                                </data-view>
-                            </property>
-                            <property name="subscribeTo">
-                                <event-subscriber>
-                                    <property name="eventName">SELECT_EVENT:SEMANTIC_filter</property>
-                                    <property name="eventObjects">
-                                        <event-object>
-                                            <property name="gadget">Gadget_ff7545bb-bb67-4428-96c6-818c068eff38121</property>
-                                            <property name="dirty">false</property>
-                                        </event-object>
-                                        <event-object>
-                                            <property name="gadget">Gadget_15032c84-cae8-4978-af58-c79d113e009e</property>
-                                            <property name="dirty">false</property>
-                                        </event-object>
-                                    </property>
-                                </event-subscriber>
-                            </property>
-                        </gadget>
-                        <gadget name="Gadget_15032c84-cae8-4978-af58-c79d113e009e" id="119">
-                            <property name="x">18px</property>
-                            <property name="y">198px</property>
+                        <gadget name="Gadget_c3c02eba-1f76-43a2-8462-2e30269fdb1e" id="1021">
+                            <property name="x">17.89930534362793px</property>
+                            <property name="y">197.46875px</property>
+                            <property name="height">100px</property>
                             <property name="width">248px</property>
                             <property name="title">Select Month(s)</property>
                             <property name="showTitle">false</property>
                             <property name="showBorder">false</property>
-                            <property name="zIndex">18</property>
+                            <property name="zIndex">26</property>
+                            <property name="showScrollBar">false</property>
+                            <property name="height">100px</property>
                             <property name="width">248px</property>
+                            <property name="caption">
+                                <gadget-caption id="1022">
+                                    <property name="showCaption">true</property>
+                                    <property name="horizontalAlignment">left</property>
+                                    <property name="fontFamily">"Source Sans Pro"</property>
+                                    <property name="fontSize">18pt</property>
+                                    <property name="fontWeight">normal</property>
+                                    <property name="fontStyle">normal</property>
+                                    <property name="color">#353535</property>
+                                    <property name="textUnderline">none</property>
+                                </gadget-caption>
+                            </property>
                             <property name="content">
-                                <slider-data-selector id="120">
+                                <slider-data-selector id="1023">
                                     <property name="cube">NewDataMartDataSource4::Spend History</property>
                                     <property name="operator">between</property>
-                                    <property name="dataType">decimal</property>
                                     <simple-property-list name="columnNames">
                                         <value>Date/Month</value>
                                         <value>Date/Month</value>
@@ -5735,10 +5690,6 @@
                                             <property name="dirty">false</property>
                                         </event-object>
                                         <event-object>
-                                            <property name="gadget">Gadget_ff7545bb-bb67-4428-96c6-818c068eff38121</property>
-                                            <property name="dirty">false</property>
-                                        </event-object>
-                                        <event-object>
                                             <property name="gadget">Gadget_49cf5979-54a3-47ae-bf20-497f231adb9a1</property>
                                             <property name="dirty">false</property>
                                         </event-object>
@@ -5754,6 +5705,10 @@
                                             <property name="gadget">Gadget_1149cb71-b03e-4f78-86fa-36e0b6795d241</property>
                                             <property name="dirty">false</property>
                                         </event-object>
+                                        <event-object>
+                                            <property name="gadget">Gadget_e7e4f03d-777c-4b3c-ab21-49454ea11d93</property>
+                                            <property name="dirty">false</property>
+                                        </event-object>
                                     </property>
                                 </event-subscriber>
                             </property>
@@ -5762,34 +5717,40 @@
                                     <property name="eventName">SELECT_EVENT:SEMANTIC_filter</property>
                                     <property name="eventObjects">
                                         <event-object>
-                                            <property name="gadget">Gadget_ff7545bb-bb67-4428-96c6-818c068eff38121</property>
+                                            <property name="gadget">Gadget_e7e4f03d-777c-4b3c-ab21-49454ea11d93</property>
                                             <property name="dirty">false</property>
                                         </event-object>
                                     </property>
                                 </event-subscriber>
                             </property>
                         </gadget>
-                        <gadget name="Gadget_6e6d05e7-e310-40aa-9c14-5e4952821357" id="967">
-                            <property name="x">1098px</property>
-                            <property name="y">0px</property>
-                            <property name="height">171px</property>
-                            <property name="width">308px</property>
-                            <property name="title">My Alerts</property>
-                            <property name="externalGadgetURI">./././././/Report Designs/AlertHTML.rptdesign</property>
+                        <gadget name="Gadget_342faa73-f6ef-4082-a37f-365413d1fe29" id="1024">
+                            <property name="x">17.89930534362793px</property>
+                            <property name="y">341.46875px</property>
+                            <property name="height">169px</property>
+                            <property name="width">271px</property>
+                            <property name="title">Credit Limit Meter</property>
+                            <property name="externalGadgetURI">^/Report Designs/spend_type.rptdocument</property>
                             <property name="showTitle">false</property>
                             <property name="showBorder">false</property>
-                            <property name="zIndex">24</property>
+                            <property name="zIndex">27</property>
                             <property name="showScrollBar">false</property>
-                            <property name="height">171px</property>
-                            <property name="width">308px</property>
+                            <property name="height">169px</property>
+                            <property name="width">271px</property>
                             <property name="caption">
-                                <gadget-caption id="968">
+                                <gadget-caption id="1025">
                                     <property name="showCaption">true</property>
                                     <property name="horizontalAlignment">left</property>
+                                    <property name="fontFamily">"Source Sans Pro"</property>
+                                    <property name="fontSize">18pt</property>
+                                    <property name="fontWeight">normal</property>
+                                    <property name="fontStyle">normal</property>
+                                    <property name="color">#353535</property>
+                                    <property name="textUnderline">none</property>
                                 </gadget-caption>
                             </property>
                             <property name="content">
-                                <data-view id="969">
+                                <data-view id="1026">
                                     <list-property name="userProperties">
                                         <structure>
                                             <property name="name">showViewerToolbar</property>
@@ -5800,8 +5761,8 @@
                                     <property name="gadgetType">viewer</property>
                                     <property name="externalContentRef">
                                         <external-element-ref>
-                                            <property name="sourceFile">./././././/Report Designs/AlertHTML.rptdocument</property>
-                                            <property name="targetBookmark">table</property>
+                                            <property name="sourceFile">^/Report Designs/spend_type.rptdocument</property>
+                                            <property name="targetBookmark">limit</property>
                                         </external-element-ref>
                                     </property>
                                 </data-view>
@@ -5817,44 +5778,6 @@
                     <property name="footerHTML">null</property>
                     <property name="backgroundColor">RGB(255,255,255)</property>
                     <property name="freeFormGadgets">
-                        <gadget name="Gadget_7c90abfa-c3c2-4671-8ae9-8e86791407eb" id="133">
-                            <property name="x">576px</property>
-                            <property name="y">0px</property>
-                            <property name="height">350px</property>
-                            <property name="width">390px</property>
-                            <property name="title">My Account Performance At-A-Glance</property>
-                            <property name="externalGadgetURI">/WM/Account Overview.rptdesign</property>
-                            <property name="showTitle">false</property>
-                            <property name="showBorder">false</property>
-                            <property name="zIndex">3</property>
-                            <property name="showScrollBar">false</property>
-                            <property name="height">350px</property>
-                            <property name="width">390px</property>
-                            <property name="caption">
-                                <gadget-caption id="984">
-                                    <property name="showCaption">true</property>
-                                    <property name="horizontalAlignment">right</property>
-                                </gadget-caption>
-                            </property>
-                            <property name="content">
-                                <data-view id="134">
-                                    <list-property name="userProperties">
-                                        <structure>
-                                            <property name="name">showViewerToolbar</property>
-                                            <property name="type">boolean</property>
-                                        </structure>
-                                    </list-property>
-                                    <property name="showViewerToolbar">false</property>
-                                    <property name="gadgetType">viewer</property>
-                                    <property name="externalContentRef">
-                                        <external-element-ref>
-                                            <property name="sourceFile">./././././././././././././././././././././././././/Report Designs/Account Overview.rptdocument</property>
-                                            <property name="targetBookmark">html5</property>
-                                        </external-element-ref>
-                                    </property>
-                                </data-view>
-                            </property>
-                        </gadget>
                         <gadget name="Gadget_1869f32b-d96e-47be-8bff-4b6a62796d351212" id="135">
                             <property name="x">576px</property>
                             <property name="y">450px</property>
@@ -5872,6 +5795,9 @@
                                 <gadget-caption id="988">
                                     <property name="showCaption">true</property>
                                     <property name="horizontalAlignment">left</property>
+                                    <property name="fontFamily">"Source Sans Pro"</property>
+                                    <property name="fontSize">18pt</property>
+                                    <property name="color">#353535</property>
                                 </gadget-caption>
                             </property>
                             <property name="content">
@@ -5886,7 +5812,7 @@
                                     <property name="gadgetType">viewer</property>
                                     <property name="externalContentRef">
                                         <external-element-ref>
-                                            <property name="sourceFile">./././././././././././././././/Report Designs/world_trip.rptdocument</property>
+                                            <property name="sourceFile">^./././././././././././././././/Report Designs/world_trip.rptdocument</property>
                                             <property name="targetBookmark">grid</property>
                                         </external-element-ref>
                                     </property>
@@ -5910,6 +5836,9 @@
                                 <gadget-caption id="992">
                                     <property name="showCaption">true</property>
                                     <property name="horizontalAlignment">left</property>
+                                    <property name="fontFamily">"Source Sans Pro"</property>
+                                    <property name="fontSize">18pt</property>
+                                    <property name="color">#353535</property>
                                 </gadget-caption>
                             </property>
                             <property name="content">
@@ -5924,7 +5853,7 @@
                                     <property name="gadgetType">viewer</property>
                                     <property name="externalContentRef">
                                         <external-element-ref>
-                                            <property name="sourceFile">./././././././././././././././././././././././././/Report Designs/My Wealth vs Geo L.rptdocument</property>
+                                            <property name="sourceFile">^./././././././././././././././././././././././././/Report Designs/My Wealth vs Geo L.rptdocument</property>
                                             <property name="targetBookmark">map</property>
                                         </external-element-ref>
                                     </property>
@@ -5944,6 +5873,18 @@
                             <property name="showScrollBar">false</property>
                             <property name="height">699px</property>
                             <property name="width">162px</property>
+                            <property name="caption">
+                                <gadget-caption id="1039">
+                                    <property name="showCaption">true</property>
+                                    <property name="horizontalAlignment">left</property>
+                                    <property name="fontFamily">"Source Sans Pro"</property>
+                                    <property name="fontSize">18pt</property>
+                                    <property name="fontWeight">normal</property>
+                                    <property name="fontStyle">normal</property>
+                                    <property name="color">#353535</property>
+                                    <property name="textUnderline">none</property>
+                                </gadget-caption>
+                            </property>
                             <property name="content">
                                 <data-view id="124">
                                     <list-property name="userProperties">
@@ -5956,7 +5897,7 @@
                                     <property name="gadgetType">viewer</property>
                                     <property name="externalContentRef">
                                         <external-element-ref>
-                                            <property name="sourceFile">./././././/Report Designs/term_goal.rptdocument</property>
+                                            <property name="sourceFile">^./././././/Report Designs/term_goal.rptdocument</property>
                                             <property name="targetBookmark">chart</property>
                                         </external-element-ref>
                                     </property>
@@ -6004,6 +5945,12 @@
                                 <gadget-caption id="973">
                                     <property name="showCaption">true</property>
                                     <property name="horizontalAlignment">left</property>
+                                    <property name="fontFamily">"Source Sans Pro"</property>
+                                    <property name="fontSize">18pt</property>
+                                    <property name="fontWeight">normal</property>
+                                    <property name="fontStyle">normal</property>
+                                    <property name="color">#353535</property>
+                                    <property name="textUnderline">none</property>
                                 </gadget-caption>
                             </property>
                             <property name="content">
@@ -6018,7 +5965,7 @@
                                     <property name="gadgetType">viewer</property>
                                     <property name="externalContentRef">
                                         <external-element-ref>
-                                            <property name="sourceFile">./././././././././././././././/Report Designs/Account Overview Table.rptdocument</property>
+                                            <property name="sourceFile">^./././././././././././././././/Report Designs/Account Overview Table.rptdocument</property>
                                             <property name="targetBookmark">table</property>
                                         </external-element-ref>
                                     </property>
@@ -6038,6 +5985,17 @@
                             <property name="showScrollBar">true</property>
                             <property name="height">286px</property>
                             <property name="width">367px</property>
+                            <property name="caption">
+                                <gadget-caption id="1049">
+                                    <property name="showCaption">true</property>
+                                    <property name="fontFamily">"Source Sans Pro"</property>
+                                    <property name="fontSize">18pt</property>
+                                    <property name="fontWeight">normal</property>
+                                    <property name="fontStyle">normal</property>
+                                    <property name="color">#353535</property>
+                                    <property name="textUnderline">none</property>
+                                </gadget-caption>
+                            </property>
                             <property name="content">
                                 <data-view id="131">
                                     <list-property name="userProperties">
@@ -6050,7 +6008,7 @@
                                     <property name="gadgetType">viewer</property>
                                     <property name="externalContentRef">
                                         <external-element-ref>
-                                            <property name="sourceFile">./././././/Report Designs/TransactionHistory.rptdocument</property>
+                                            <property name="sourceFile">^./././././/Report Designs/TransactionHistory.rptdocument</property>
                                             <property name="targetBookmark">table</property>
                                         </external-element-ref>
                                     </property>
@@ -6072,11 +6030,11 @@
                                 <gadget-caption id="982">
                                     <property name="showCaption">true</property>
                                     <property name="horizontalAlignment">left</property>
-                                    <property name="fontFamily">serif</property>
-                                    <property name="fontSize">10pt</property>
+                                    <property name="fontFamily">"Source Sans Pro"</property>
+                                    <property name="fontSize">18pt</property>
                                     <property name="fontWeight">normal</property>
                                     <property name="fontStyle">normal</property>
-                                    <property name="color">black</property>
+                                    <property name="color">#353535</property>
                                     <property name="textUnderline">none</property>
                                 </gadget-caption>
                             </property>
@@ -6180,6 +6138,50 @@
                                 </event-subscriber>
                             </property>
                         </gadget>
+                        <gadget name="Gadget_9bdd651e-d57d-45b8-89d8-14234d155e38" id="1043">
+                            <property name="x">575.8993053436279px</property>
+                            <property name="y">-0.53125px</property>
+                            <property name="height">350px</property>
+                            <property name="width">390px</property>
+                            <property name="title">My Account Performance At-A-Glance</property>
+                            <property name="externalGadgetURI">^/Report Designs/Account Overview.rptdocument</property>
+                            <property name="showTitle">false</property>
+                            <property name="showBorder">false</property>
+                            <property name="zIndex">21</property>
+                            <property name="showScrollBar">false</property>
+                            <property name="height">350px</property>
+                            <property name="width">390px</property>
+                            <property name="caption">
+                                <gadget-caption id="1044">
+                                    <property name="showCaption">true</property>
+                                    <property name="horizontalAlignment">left</property>
+                                    <property name="fontFamily">"Source Sans Pro"</property>
+                                    <property name="fontSize">18pt</property>
+                                    <property name="fontWeight">normal</property>
+                                    <property name="fontStyle">normal</property>
+                                    <property name="color">#353535</property>
+                                    <property name="textUnderline">none</property>
+                                </gadget-caption>
+                            </property>
+                            <property name="content">
+                                <data-view id="1045">
+                                    <list-property name="userProperties">
+                                        <structure>
+                                            <property name="name">showViewerToolbar</property>
+                                            <property name="type">boolean</property>
+                                        </structure>
+                                    </list-property>
+                                    <property name="showViewerToolbar">false</property>
+                                    <property name="gadgetType">viewer</property>
+                                    <property name="externalContentRef">
+                                        <external-element-ref>
+                                            <property name="sourceFile">^/Report Designs/Account Overview.rptdocument</property>
+                                            <property name="targetBookmark">html5</property>
+                                        </external-element-ref>
+                                    </property>
+                                </data-view>
+                            </property>
+                        </gadget>
                     </property>
                 </tab-element>
                 <tab-element name="26d62da6-da15-4ddb-9349-a6f447b1ed29" id="143">
@@ -6188,6 +6190,7 @@
                     <property name="showFooter">false</property>
                     <property name="headerHTML">null</property>
                     <property name="footerHTML">null</property>
+                    <property name="backgroundColor">auto</property>
                     <property name="freeFormGadgets">
                         <gadget name="87a03aea-a9a9-481a-8019-a4b7f745a17b" id="146">
                             <property name="x">10px</property>
@@ -6201,12 +6204,25 @@
                         <gadget name="Gadget_6ec15be4-ccbe-4d02-812c-6326d8a752d7" id="144">
                             <property name="x">0px</property>
                             <property name="y">0px</property>
+                            <property name="height">617px</property>
+                            <property name="width">1387px</property>
                             <property name="title">Portfolio Performance</property>
                             <property name="externalGadgetURI">/WM/Portfolio Performance Dashboard_NoHTML.RPTDOCUMENT</property>
                             <property name="showTitle">false</property>
                             <property name="showBorder">false</property>
                             <property name="zIndex">2</property>
                             <property name="showScrollBar">false</property>
+                            <property name="height">617px</property>
+                            <property name="width">1387px</property>
+                            <property name="caption">
+                                <gadget-caption id="996">
+                                    <property name="showCaption">true</property>
+                                    <property name="horizontalAlignment">left</property>
+                                    <property name="fontFamily">"Source Sans Pro"</property>
+                                    <property name="fontSize">18pt</property>
+                                    <property name="color">#353535</property>
+                                </gadget-caption>
+                            </property>
                             <property name="content">
                                 <data-view id="145">
                                     <list-property name="userProperties">
@@ -6219,7 +6235,7 @@
                                     <property name="gadgetType">viewer</property>
                                     <property name="externalContentRef">
                                         <external-element-ref>
-                                            <property name="sourceFile">/WM/Portfolio Performance Dashboard_NoHTML.RPTDOCUMENT</property>
+                                            <property name="sourceFile">^/Report Designs/Portfolio Performance Dashboard_NoHTML.rptdesign</property>
                                         </external-element-ref>
                                     </property>
                                 </data-view>

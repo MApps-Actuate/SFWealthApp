@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
-    <property name="createdBy">Eclipse BIRT Designer Version 4.2.3.v20131029-0430 Build &lt;4.2.3.v20131029-0430></property>
+    <property name="createdBy">Eclipse BIRT Designer Version 4.2.3.v20131216-0430 Build &lt;4.2.3.v20131216-0430></property>
     <property name="units">in</property>
     <property name="iconFile">/templates/blank_report.gif</property>
     <property name="bidiLayoutOrientation">ltr</property>
@@ -84,7 +84,7 @@
                         <property name="height">0.11458333333333333in</property>
                         <property name="width">0.15625in</property>
                         <property name="source">file</property>
-                        <expression name="uri" type="constant">Report Designs/bullet.png</expression>
+                        <expression name="uri" type="constant">images/bullet.png</expression>
                     </image>
                 </cell>
                 <cell id="13">
@@ -113,7 +113,7 @@
                         <property name="height">0.11458333333333333in</property>
                         <property name="width">0.15625in</property>
                         <property name="source">file</property>
-                        <expression name="uri" type="constant">Report Designs/bullet.png</expression>
+                        <expression name="uri" type="constant">images/bullet.png</expression>
                     </image>
                 </cell>
                 <cell id="16">
@@ -138,7 +138,7 @@
                         <property name="height">0.11458333333333333in</property>
                         <property name="width">0.15625in</property>
                         <property name="source">file</property>
-                        <expression name="uri" type="constant">Report Designs/bullet.png</expression>
+                        <expression name="uri" type="constant">images/bullet.png</expression>
                     </image>
                 </cell>
                 <cell id="19">
@@ -167,7 +167,7 @@
                         <property name="height">0.11458333333333333in</property>
                         <property name="width">0.15625in</property>
                         <property name="source">file</property>
-                        <expression name="uri" type="constant">Report Designs/bullet.png</expression>
+                        <expression name="uri" type="constant">images/bullet.png</expression>
                     </image>
                 </cell>
                 <cell id="22">
