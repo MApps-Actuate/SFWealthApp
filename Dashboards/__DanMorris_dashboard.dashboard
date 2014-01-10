@@ -5529,7 +5529,7 @@
                             <property name="height">204px</property>
                             <property name="width">308px</property>
                             <property name="title">My Alerts</property>
-                            <property name="externalGadgetURI">./././././/Report Designs/AlertHTML.rptdesign</property>
+                            <property name="externalGadgetURI">^/Report Designs/AlertHTML.rptdesign</property>
                             <property name="showTitle">false</property>
                             <property name="showBorder">false</property>
                             <property name="zIndex">24</property>
@@ -5560,7 +5560,7 @@
                                     <property name="gadgetType">viewer</property>
                                     <property name="externalContentRef">
                                         <external-element-ref>
-                                            <property name="sourceFile">./././././/Report Designs/AlertHTML.rptdocument</property>
+                                            <property name="sourceFile">^/Report Designs/AlertHTML.rptdocument</property>
                                             <property name="targetBookmark">table</property>
                                         </external-element-ref>
                                     </property>
@@ -5798,7 +5798,7 @@
                             <property name="height">321px</property>
                             <property name="width">400px</property>
                             <property name="title">My Travel Goal Progress</property>
-                            <property name="externalGadgetURI">/WM/world_trip.rptdesign</property>
+                            <property name="externalGadgetURI">^/Report Designs/world_trip.rptdesign</property>
                             <property name="showTitle">false</property>
                             <property name="showBorder">false</property>
                             <property name="zIndex">19</property>
@@ -5826,7 +5826,7 @@
                                     <property name="gadgetType">viewer</property>
                                     <property name="externalContentRef">
                                         <external-element-ref>
-                                            <property name="sourceFile">^./././././././././././././././/Report Designs/world_trip.rptdocument</property>
+                                            <property name="sourceFile">^/Report Designs/world_trip.rptdocument</property>
                                             <property name="targetBookmark">grid</property>
                                         </external-element-ref>
                                     </property>
@@ -5839,7 +5839,7 @@
                             <property name="height">300px</property>
                             <property name="width">386px</property>
                             <property name="title">My Wealth vs. State Avg</property>
-                            <property name="externalGadgetURI">/WM/My Wealth vs Geo.rptdesign</property>
+                            <property name="externalGadgetURI">^/Report Designs/My Wealth vs Geo.rptdesign</property>
                             <property name="showTitle">false</property>
                             <property name="showBorder">false</property>
                             <property name="zIndex">20</property>
@@ -5867,7 +5867,7 @@
                                     <property name="gadgetType">viewer</property>
                                     <property name="externalContentRef">
                                         <external-element-ref>
-                                            <property name="sourceFile">^./././././././././././././././././././././././././/Report Designs/My Wealth vs Geo L.rptdocument</property>
+                                            <property name="sourceFile">^/Report Designs/My Wealth vs Geo L.rptdocument</property>
                                             <property name="targetBookmark">map</property>
                                         </external-element-ref>
                                     </property>
@@ -5880,7 +5880,7 @@
                             <property name="height">699px</property>
                             <property name="width">162px</property>
                             <property name="title">Wealth Progress</property>
-                            <property name="externalGadgetURI">/WM/term_goal.rptdesign</property>
+                            <property name="externalGadgetURI">^/Report Designs/term_goal.rptdesign</property>
                             <property name="showTitle">false</property>
                             <property name="showBorder">false</property>
                             <property name="zIndex">15</property>
@@ -5911,7 +5911,7 @@
                                     <property name="gadgetType">viewer</property>
                                     <property name="externalContentRef">
                                         <external-element-ref>
-                                            <property name="sourceFile">^./././././/Report Designs/term_goal.rptdocument</property>
+                                            <property name="sourceFile">^/Report Designs/term_goal.rptdocument</property>
                                             <property name="targetBookmark">chart</property>
                                         </external-element-ref>
                                     </property>
@@ -5948,7 +5948,7 @@
                             <property name="height">500px</property>
                             <property name="width">390px</property>
                             <property name="title">My Account Update</property>
-                            <property name="externalGadgetURI">/WM/Account Overview Table.rptdesign</property>
+                            <property name="externalGadgetURI">^/Report Designs/Account Overview Table.rptdesign</property>
                             <property name="showTitle">false</property>
                             <property name="showBorder">false</property>
                             <property name="zIndex">9</property>
@@ -5979,7 +5979,7 @@
                                     <property name="gadgetType">viewer</property>
                                     <property name="externalContentRef">
                                         <external-element-ref>
-                                            <property name="sourceFile">^./././././././././././././././/Report Designs/Account Overview Table.rptdocument</property>
+                                            <property name="sourceFile">^/Report Designs/Account Overview Table.rptdocument</property>
                                             <property name="targetBookmark">table</property>
                                         </external-element-ref>
                                     </property>
@@ -5992,7 +5992,7 @@
                             <property name="height">286px</property>
                             <property name="width">367px</property>
                             <property name="title">My Transaction History</property>
-                            <property name="externalGadgetURI">/WM/TransactionHistory.rptdesign</property>
+                            <property name="externalGadgetURI">^/Report Designs/TransactionHistory.rptdesign</property>
                             <property name="showTitle">false</property>
                             <property name="showBorder">false</property>
                             <property name="zIndex">17</property>
@@ -6022,7 +6022,7 @@
                                     <property name="gadgetType">viewer</property>
                                     <property name="externalContentRef">
                                         <external-element-ref>
-                                            <property name="sourceFile">^./././././/Report Designs/TransactionHistory.rptdocument</property>
+                                            <property name="sourceFile">^/Report Designs/TransactionHistory.rptdocument</property>
                                             <property name="targetBookmark">table</property>
                                         </external-element-ref>
                                     </property>
@@ -6056,7 +6056,7 @@
                                 <radio-data-selector id="983">
                                     <property name="externalContentRef">
                                         <external-element-ref>
-                                            <property name="sourceFile">./././././././././././././././././././././././././././././././././././/Report Designs/My Wealth vs Indices.rptdesign</property>
+                                            <property name="sourceFile">^/Report Designs/My Wealth vs Indices.rptdesign</property>
                                             <property name="targetBookmark">pYearsBack</property>
                                             <property name="isNoValueSupported">false</property>
                                         </external-element-ref>
@@ -6065,7 +6065,7 @@
                                     <property name="controlType">radio-button</property>
                                     <property name="dataType">integer</property>
                                     <simple-property-list name="selectedValues">
-                                        <value>3</value>
+                                        <value>1</value>
                                     </simple-property-list>
                                     <property name="orientation">horizontal</property>
                                     <property name="autoAdjust">false</property>
@@ -6101,7 +6101,7 @@
                             <property name="height">317px</property>
                             <property name="width">386px</property>
                             <property name="title">A</property>
-                            <property name="externalGadgetURI">./././././/Report Designs/My Wealth vs Indices.rptdesign</property>
+                            <property name="externalGadgetURI">^/Report Designs/My Wealth vs Indices.rptdesign</property>
                             <property name="showTitle">false</property>
                             <property name="showBorder">false</property>
                             <property name="zIndex">0</property>
@@ -6126,7 +6126,7 @@
                                     <property name="gadgetType">viewer</property>
                                     <property name="externalContentRef">
                                         <external-element-ref>
-                                            <property name="sourceFile">./././././././././././././././././././././././././././././././././././././././././././././././././././././././/Report Designs/My Wealth vs Indices.rptdesign</property>
+                                            <property name="sourceFile">^/Report Designs/My Wealth vs Indices.rptdesign</property>
                                         </external-element-ref>
                                     </property>
                                     <property name="paramSettings">
@@ -6221,7 +6221,7 @@
                             <property name="height">617px</property>
                             <property name="width">1387px</property>
                             <property name="title">Portfolio Performance</property>
-                            <property name="externalGadgetURI">/WM/Portfolio Performance Dashboard_NoHTML.RPTDOCUMENT</property>
+                            <property name="externalGadgetURI">^/Report Designs/Portfolio Performance Dashboard_NoHTML.rptdesign</property>
                             <property name="showTitle">false</property>
                             <property name="showBorder">false</property>
                             <property name="zIndex">2</property>
