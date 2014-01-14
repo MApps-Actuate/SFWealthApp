@@ -378,7 +378,7 @@
             <datamart-node location="file:/C:/Users/ActuateUser/git/SFWealthApp/Data%20Objects/spend_history.data">
                 <reference-elements>NewDataMartDataSource3;</reference-elements>
                 <datamart xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
-                    <property name="createdBy">Eclipse BIRT Designer Version 4.2.3.v20131029-0430 Build &lt;4.2.3.v20131029-0430></property>
+                    <property name="createdBy">Eclipse BIRT Designer Version 4.2.3.v20131216-0430 Build &lt;4.2.3.v20131216-0430></property>
                     <data-sources>
                         <oda-data-source extensionID="org.eclipse.datatools.connectivity.oda.flatfile" name="ff" id="2">
                             <property name="HOME">Flatfiles/</property>
@@ -711,7 +711,7 @@
                                                     <list-property name="action">
                                                         <structure>
                                                             <property name="linkType">drill-through</property>
-                                                            <property name="reportName">/Report Designs/MySpendDetail.rptdesign</property>
+                                                            <property name="reportName">/Applications/SFWealthApp/Report Designs/MySpendDetail.rptdesign</property>
                                                             <property name="targetWindow">_blank</property>
                                                             <property name="targetFileType">report-design</property>
                                                             <list-property name="paramBindings">
@@ -5155,7 +5155,7 @@
     </body>
     <property name="dashboardView">
         <dashboard id="2">
-            <property name="activeTab">049f219c-22c5-445b-8bb1-b28f150e1ef51</property>
+            <property name="activeTab">3596098d-5ae6-490b-8c7d-437cd1c60c7b1</property>
             <property name="tabs">
                 <tab-element name="3596098d-5ae6-490b-8c7d-437cd1c60c7b1" id="15">
                     <property name="title">Home</property>
