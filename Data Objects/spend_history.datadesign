@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <datamart xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
-    <property name="createdBy">Eclipse BIRT Designer Version 4.2.3.v20131029-0430 Build &lt;4.2.3.v20131029-0430></property>
+    <property name="createdBy">Eclipse BIRT Designer Version 4.2.3.v20131216-0430 Build &lt;4.2.3.v20131216-0430></property>
     <data-sources>
         <oda-data-source extensionID="org.eclipse.datatools.connectivity.oda.flatfile" name="ff" id="2">
             <property name="HOME">Flatfiles/</property>
@@ -333,7 +333,7 @@
                                     <list-property name="action">
                                         <structure>
                                             <property name="linkType">drill-through</property>
-                                            <property name="reportName">/Report Designs/MySpendDetail.rptdesign</property>
+                                            <property name="reportName">/Applications/SFWealthApp/Report Designs/MySpendDetail.rptdesign</property>
                                             <property name="targetWindow">_blank</property>
                                             <property name="targetFileType">report-design</property>
                                             <list-property name="paramBindings">
