@@ -5,12 +5,6 @@
     <property name="iconFile">/templates/blank_report.gif</property>
     <property name="bidiLayoutOrientation">ltr</property>
     <property name="imageDPI">96</property>
-    <list-property name="libraries">
-        <structure>
-            <property name="fileName">/Report Libraries/Column Header Sorter.rptlibrary</property>
-            <property name="namespace">Column Header Sorter</property>
-        </structure>
-    </list-property>
     <method name="onContentUpdate"><![CDATA[var uiOptions = this.getViewer().getUIOptions();
 uiOptions.enableEditReport(false);
 uiOptions.enableDataExtraction(false);
@@ -2726,7 +2720,7 @@ last1%2;</expression>
    <triggers condition="2">
     <action type="0">
      <value _type="MultiURLValues">
-      <uRLValues baseUrl="&lt;structure&gt;&#10;    &lt;property name=&quot;linkType&quot;&gt;drill-through&lt;/property&gt;&#10;    &lt;property name=&quot;toolTip&quot;&gt;Click for larger chart&lt;/property&gt;&#10;    &lt;property name=&quot;reportName&quot;&gt;ContributionActiveRisk.rptdesign&lt;/property&gt;&#10;    &lt;property name=&quot;targetWindow&quot;&gt;_blank&lt;/property&gt;&#10;    &lt;property name=&quot;targetFileType&quot;&gt;report-design&lt;/property&gt;&#10;&lt;/structure&gt;&#10;" baseParameterName="" valueParameterName="" seriesParameterName="">
+      <uRLValues baseUrl="&lt;structure&gt;&#10;    &lt;property name=&quot;linkType&quot;&gt;drill-through&lt;/property&gt;&#10;    &lt;property name=&quot;toolTip&quot;&gt;Click for larger chart&lt;/property&gt;&#10;    &lt;property name=&quot;reportName&quot;&gt;ContributionActiveRisk.rptdocument&lt;/property&gt;&#10;    &lt;property name=&quot;targetWindow&quot;&gt;_blank&lt;/property&gt;&#10;    &lt;property name=&quot;targetFileType&quot;&gt;report-document&lt;/property&gt;&#10;&lt;/structure&gt;&#10;" baseParameterName="" valueParameterName="" seriesParameterName="">
        <label>
         <caption value="Larger Chart"/>
        </label>
@@ -3160,10 +3154,10 @@ last1%2;</expression>
            <caption value="Chart"/>
           </label>
          </uRLValues>
-         <propertiesMap key="MenuItem" value="color:Black;fontSize:10pt;paddingLeft:10px;paddingRight:10px;paddingTop:2px;paddingBottom:2px"/>
          <propertiesMap key="Menu" value="zIndex:99999;backgroundColor:#FAFFF8;width:auto;height:auto;border:1px solid #333333;filter:progid:DXImageTransform.Microsoft.Shadow(Color:#333333,Direction=120,strength=5)"/>
          <propertiesMap key="OnMouseOut" value="backgroundColor:#FAFFF8;color:#000000"/>
          <propertiesMap key="OnMouseOver" value="backgroundColor:#245DDB;color:#FFFFFF"/>
+         <propertiesMap key="MenuItem" value="color:Black;fontSize:10pt;paddingLeft:10px;paddingRight:10px;paddingTop:2px;paddingBottom:2px"/>
         </value>
        </action>
       </triggers>
@@ -3562,8 +3556,8 @@ last1%2;</expression>
                                 <property name="toolTip">Click for larger chart</property>
                                 <property name="targetWindow">_blank</property>
                                 <property name="linkType">drill-through</property>
-                                <property name="targetFileType">report-design</property>
-                                <property name="reportName">ContributionActiveRisk.rptdesign</property>
+                                <property name="targetFileType">report-document</property>
+                                <property name="reportName">ContributionActiveRisk.rptdocument</property>
                             </structure>
                         </list-property>
                         <list-property name="filter">
