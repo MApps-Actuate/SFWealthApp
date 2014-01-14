@@ -4526,11 +4526,11 @@
                                                 <image id="236">
                                                     <property name="source">file</property>
                                                     <expression name="uri" type="javascript">if (row["PercentChg"] > 0.0)&#13;
-"/images/up.gif";&#13;
+"../images/up.gif";&#13;
 else if(row["PercentChg"] &lt; 0.0 )&#13;
-"/images/down.gif";&#13;
+"../images/down.gif";&#13;
 else&#13;
-"/images/even.gif";</expression>
+"../images/even.gif";</expression>
                                                 </image>
                                             </cell>
                                         </row>
