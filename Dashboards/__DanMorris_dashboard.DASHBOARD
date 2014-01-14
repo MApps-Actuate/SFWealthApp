@@ -2,7 +2,7 @@
 <report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
     <xml-property name="externalMetadata">
         <external-datamarts>
-            <datamart-node location="file:/C:/Users/ActuateUser/git/SFWealthApp/Data%20Objects/spendtype.DATA">
+            <datamart-node location="file:/C:/Actuate/iHub3/modules/BIRTiHub/iHub/shared/storage/file/004/246.dat">
                 <reference-elements>NewDataMartDataSource;</reference-elements>
                 <datamart xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
                     <property name="createdBy">Eclipse BIRT Designer Version 2.6.1.v20100926-0604 Build &lt;2.6.1.v20100926-0604></property>
@@ -375,7 +375,7 @@
                     </cubes>
                 </datamart>
             </datamart-node>
-            <datamart-node location="file:/C:/Users/ActuateUser/git/SFWealthApp/Data%20Objects/spend_history.data">
+            <datamart-node location="file:/C:/Actuate/iHub3/modules/BIRTiHub/iHub/shared/storage/file/004/244.dat">
                 <reference-elements>NewDataMartDataSource3;</reference-elements>
                 <datamart xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
                     <property name="createdBy">Eclipse BIRT Designer Version 4.2.3.v20131216-0430 Build &lt;4.2.3.v20131216-0430></property>
@@ -4705,7 +4705,7 @@
   <extendedProperties name="jschart.glass.style" value="false"/>
   <extendedProperties name="jschart.zoom" value="xy"/>
   <extendedProperties name="enable.drill.proc_" value="true"/>
-  <extendedProperties name="drilled.filters_" value="data[&quot;Spend Category/Category&quot;]eqRestaurant_@,__@,_"/>
+  <extendedProperties name="drilled.filters_" value="_@,_"/>
   <extendedProperties name="jschart.series.shadow" value="false"/>
   <sampleData>
    <baseSampleData dataSetRepresentation="QWER"/>
@@ -4799,7 +4799,7 @@
        <color _nil="1"/>
       </outline>
      </label>
-     <dataDefinition definition="data[&quot;Spend Category/Merchant&quot;]"/>
+     <dataDefinition definition="data[&quot;Spend Category/Category&quot;]"/>
      <curveFitting _nil="1"/>
     </series>
    </seriesDefinitions>
@@ -4852,13 +4852,6 @@
                     <expression name="value2" type="constant">8</expression>
                     <property name="filterTarget">DataSet</property>
                     <property name="updateAggregation">true</property>
-                </filter-condition-element>
-                <filter-condition-element>
-                    <expression name="expr" type="javascript">data["Spend Category/Category"]</expression>
-                    <property name="operator">eq</property>
-                    <simple-property-list name="value1">
-                        <value type="constant">Restaurant</value>
-                    </simple-property-list>
                 </filter-condition-element>
             </property>
             <property name="height">191pt</property>
@@ -6244,7 +6237,7 @@
                                     <property name="gadgetType">viewer</property>
                                     <property name="externalContentRef">
                                         <external-element-ref>
-                                            <property name="sourceFile">^/Report Designs/Portfolio Performance Dashboard_NoHTML.rptdesign</property>
+                                            <property name="sourceFile">/Applications/SFWealthApp/Report Designs/Portfolio Performance Dashboard_NoHTML.rptdocument</property>
                                         </external-element-ref>
                                     </property>
                                 </data-view>
