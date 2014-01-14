@@ -1,0 +1,3318 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CCDATA>
+    <CUSTOMER customer_id="1">
+        <CUSTDETAIL>
+            <ACCOUNTNUMBER>4555-9999-0001</ACCOUNTNUMBER>
+            <INTERNALREF>XNS0150150_4282620_030119249</INTERNALREF>
+            <FORNAME>April</FORNAME>
+            <SURNAME>Black</SURNAME>
+            <DOB>1975-10-05</DOB>
+            <ADDRESS1>110-4297 Main St.</ADDRESS1>
+            <ADDRESS2>Birmingham </ADDRESS2>
+            <ADDRESS3>AL</ADDRESS3>
+            <ADDRESS4/>
+            <POSTCODE>35203</POSTCODE>
+            <TELEPHONE/>
+            <FAX/>
+            <EMAIL/>
+            <PROFILE/>
+            <MARKETING/>
+            <MESSAGE1/>
+            <MESSAGE2/>
+            <MESSAGE3/>
+        </CUSTDETAIL>
+        <CORPINFO>
+            <CUSTSERVICENUMBER>1-800-555-5550</CUSTSERVICENUMBER>
+            <COLLECTOUTSIDENA>(416) 555-5551</COLLECTOUTSIDENA>
+            <SELFSERVICE>1-877-555-5552</SELFSERVICE>
+            <TELEPHONEBANKING>1-800-555-5555</TELEPHONEBANKING>
+            <WEBSITE>www.xenos.com</WEBSITE>
+            <CORPADD1>2207 Bridgepointe Parkway, Suite 500</CORPADD1>
+            <CORPADD2>San Mateo</CORPADD2>
+            <CORPADD3>CA</CORPADD3>
+            <CORPADD4>USA</CORPADD4>
+            <CORPPOST>94404</CORPPOST>
+        </CORPINFO>
+        <STATEMENT Customer_id="1">
+            <STARTDATE>2010-08-13</STARTDATE>
+            <ENDDATE>2010-09-12</ENDDATE>
+            <PREVIOUSBALANCE>8410.61</PREVIOUSBALANCE>
+            <PAYMENTSANDCREDITS>2500</PAYMENTSANDCREDITS>
+            <PURCHASESANDDEBTS>4044.12</PURCHASESANDDEBTS>
+            <CASHADVANCES>0</CASHADVANCES>
+            <FINANCECHARGES>156.79</FINANCECHARGES>
+            <NEWBALANCE>10111.51</NEWBALANCE>
+            <MINIMUMPAYMENT>203.00</MINIMUMPAYMENT>
+            <DUEDATE>2010-10-07</DUEDATE>
+            <TOTALCREDIT>15000.00</TOTALCREDIT>
+            <CREDITAVAILABLE>4888.49</CREDITAVAILABLE>
+            <CREDITFORCASH>5000.00</CREDITFORCASH>
+            <CASHAVAILABLE>4888.49</CASHAVAILABLE>
+            <PURCHASEBALANCERATE>0.00</PURCHASEBALANCERATE>
+            <PURCHASEPERIODRATE>1.58</PURCHASEPERIODRATE>
+            <PURCHASEAPR>18.90</PURCHASEAPR>
+            <PURCHASEFINANCECHARGE>156.79</PURCHASEFINANCECHARGE>
+            <CASHBALANCERATE>0.00</CASHBALANCERATE>
+            <CASHPERIODRATE>1.83</CASHPERIODRATE>
+            <CASHAPR>21.90</CASHAPR>
+            <CASHFINANCECHARGE>0.00</CASHFINANCECHARGE>
+            <TRANSACTIONS>
+                <TABLEDATA>
+                    <FLOW>
+                        <DATE>2010-08-13</DATE>
+                        <VALUE>8410.61</VALUE>
+                    </FLOW>
+                </TABLEDATA>
+                <TABLEDATA>
+                    <FLOW>
+                        <DATE>2010-07-13</DATE>
+                        <VALUE>7865.43</VALUE>
+                    </FLOW>
+                </TABLEDATA>
+                <TABLEDATA>
+                    <FLOW>
+                        <DATE>2010-06-13</DATE>
+                        <VALUE>3561.21</VALUE>
+                    </FLOW>
+                </TABLEDATA>
+                <TABLEDATA>
+                    <FLOW>
+                        <DATE>2010-05-13</DATE>
+                        <VALUE>4720.57</VALUE>
+                    </FLOW>
+                </TABLEDATA>
+                <TABLEDATA>
+                    <FLOW>
+                        <DATE>2010-04-13</DATE>
+                        <VALUE>1963.90</VALUE>
+                    </FLOW>
+                </TABLEDATA>
+                <PAYMENT>
+                    <PAYMENTDATE>2010-08-20</PAYMENTDATE>
+                    <PAYMENTDESCRIPTION>PAYMENT RECEIVED - THANK YOU</PAYMENTDESCRIPTION>
+                    <PAYMENTAMOUNT>1800.00</PAYMENTAMOUNT>
+                </PAYMENT>
+                <PAYMENT>
+                    <PAYMENTDATE>2010-08-27</PAYMENTDATE>
+                    <PAYMENTDESCRIPTION>PAYMENT RECEIVED - THANK YOU</PAYMENTDESCRIPTION>
+                    <PAYMENTAMOUNT>700.00</PAYMENTAMOUNT>
+                </PAYMENT>
+                <CHARGE>
+                    <CHARGEDATE>2010-08-13</CHARGEDATE>
+                    <CHARGEDESCRIPTION>BEST BUY #1950</CHARGEDESCRIPTION>
+                    <CHARGEAMOUNT>103.01</CHARGEAMOUNT>
+                </CHARGE>
+                <CHARGE>
+                    <CHARGEDATE>2010-08-13</CHARGEDATE>
+                    <CHARGEDESCRIPTION>KFC #614</CHARGEDESCRIPTION>
+                    <CHARGEAMOUNT>74.32</CHARGEAMOUNT>
+                </CHARGE>
+                <CHARGE>
+                    <CHARGEDATE>2010-08-13</CHARGEDATE>
+                    <CHARGEDESCRIPTION>SHELL OIL #2253</CHARGEDESCRIPTION>
+                    <CHARGEAMOUNT>56.78</CHARGEAMOUNT>
+                </CHARGE>
+                <CHARGE>
+                    <CHARGEDATE>2010-08-14</CHARGEDATE>
+                    <CHARGEDESCRIPTION>VERIZON WIRELESS</CHARGEDESCRIPTION>
+                    <CHARGEAMOUNT>63.13</CHARGEAMOUNT>
+                </CHARGE>
+                <CHARGE>
+                    <CHARGEDATE>2010-08-17</CHARGEDATE>
+                    <CHARGEDESCRIPTION>EXPRESS #2467</CHARGEDESCRIPTION>
+                    <CHARGEAMOUNT>26.43</CHARGEAMOUNT>
+                </CHARGE>
+                <CHARGE>
+                    <CHARGEDATE>2010-08-17</CHARGEDATE>
+                    <CHARGEDESCRIPTION>VICTORIA'S SECRET #507</CHARGEDESCRIPTION>
+                    <CHARGEAMOUNT>28.34</CHARGEAMOUNT>
+                </CHARGE>
+                <CHARGE>
+                    <CHARGEDATE>2010-08-17</CHARGEDATE>
+                    <CHARGEDESCRIPTION>SHELL OIL #737</CHARGEDESCRIPTION>
+                    <CHARGEAMOUNT>59.21</CHARGEAMOUNT>
+                </CHARGE>
+                <CHARGE>
+                    <CHARGEDATE>2010-08-19</CHARGEDATE>
+                    <CHARGEDESCRIPTION>JIFFY LUBE #676</CHARGEDESCRIPTION>
+                    <CHARGEAMOUNT>152.45</CHARGEAMOUNT>
+                </CHARGE>
+                <CHARGE>
+                    <CHARGEDATE>2010-08-20</CHARGEDATE>
+                    <CHARGEDESCRIPTION>BEST BUY #959</CHARGEDESCRIPTION>
+                    <CHARGEAMOUNT>187.00</CHARGEAMOUNT>
+                </CHARGE>
+                <CHARGE>
+                    <CHARGEDATE>2010-08-21</CHARGEDATE>
+                    <CHARGEDESCRIPTION>BURGER KING #800</CHARGEDESCRIPTION>
+                    <CHARGEAMOUNT>87.43</CHARGEAMOUNT>
+                </CHARGE>
+                <CHARGE>
+                    <CHARGEDATE>2010-08-22</CHARGEDATE>
+                    <CHARGEDESCRIPTION>DISH NETWORK</CHARGEDESCRIPTION>
+                    <CHARGEAMOUNT>16.08</CHARGEAMOUNT>
+                </CHARGE>
+                <CHARGE>
+                    <CHARGEDATE>2010-08-23</CHARGEDATE>
+                    <CHARGEDESCRIPTION>SEARS #221</CHARGEDESCRIPTION>
+                    <CHARGEAMOUNT>187.50</CHARGEAMOUNT>
+                </CHARGE>
+                <CHARGE>
+                    <CHARGEDATE>2010-08-23</CHARGEDATE>
+                    <CHARGEDESCRIPTION>BLOOMINGDALE'S #922</CHARGEDESCRIPTION>
+                    <CHARGEAMOUNT>25.90</CHARGEAMOUNT>
+                </CHARGE>
+                <CHARGE>
+                    <CHARGEDATE>2010-08-24</CHARGEDATE>
+                    <CHARGEDESCRIPTION>AT&amp;T WIRELESS</CHARGEDESCRIPTION>
+                    <CHARGEAMOUNT>67.43</CHARGEAMOUNT>
+                </CHARGE>
+                <CHARGE>
+                    <CHARGEDATE>2010-08-24</CHARGEDATE>
+                    <CHARGEDESCRIPTION>AT&amp;T WIRELESS</CHARGEDESCRIPTION>
+                    <CHARGEAMOUNT>138.88</CHARGEAMOUNT>
+                </CHARGE>
+                <CHARGE>
+                    <CHARGEDATE>2010-08-25</CHARGEDATE>
+                    <CHARGEDESCRIPTION>EXPRESS #1302</CHARGEDESCRIPTION>
+                    <CHARGEAMOUNT>34.51</CHARGEAMOUNT>
+                </CHARGE>
+                <CHARGE>
+                    <CHARGEDATE>2010-08-26</CHARGEDATE>
+                    <CHARGEDESCRIPTION>TACO BELL #2084</CHARGEDESCRIPTION>
+                    <CHARGEAMOUNT>435.67</CHARGEAMOUNT>
+                </CHARGE>
+                <CHARGE>
+                    <CHARGEDATE>2010-08-28</CHARGEDATE>
+                    <CHARGEDESCRIPTION>TGI FRIDAYS #2287</CHARGEDESCRIPTION>
+                    <CHARGEAMOUNT>25.05</CHARGEAMOUNT>
+                </CHARGE>
+                <CHARGE>
+                    <CHARGEDATE>2010-08-30</CHARGEDATE>
+                    <CHARGEDESCRIPTION>BOB'S BAR AND GRILL</CHARGEDESCRIPTION>
+                    <CHARGEAMOUNT>147.40</CHARGEAMOUNT>
+                </CHARGE>
+                <CHARGE>
+                    <CHARGEDATE>2010-09-01</CHARGEDATE>
+                    <CHARGEDESCRIPTION>7-ELEVEN #567</CHARGEDESCRIPTION>
+                    <CHARGEAMOUNT>87.92</CHARGEAMOUNT>
+                </CHARGE>
+                <CHARGE>
+                    <CHARGEDATE>2010-09-03</CHARGEDATE>
+                    <CHARGEDESCRIPTION>MACY'S #52</CHARGEDESCRIPTION>
+                    <CHARGEAMOUNT>243.98</CHARGEAMOUNT>
+                </CHARGE>
+                <CHARGE>
+                    <CHARGEDATE>2010-09-05</CHARGEDATE>
+                    <CHARGEDESCRIPTION>AT&amp;T WIRELESS</CHARGEDESCRIPTION>
+                    <CHARGEAMOUNT>26.10</CHARGEAMOUNT>
+                </CHARGE>
+                <CHARGE>
+                    <CHARGEDATE>2010-09-06</CHARGEDATE>
+                    <CHARGEDESCRIPTION>JACK-IN-THE-BOX #823</CHARGEDESCRIPTION>
+                    <CHARGEAMOUNT>15.22</CHARGEAMOUNT>
+                </CHARGE>
+                <CHARGE>
+                    <CHARGEDATE>2010-09-06</CHARGEDATE>
+                    <CHARGEDESCRIPTION>DIRECTV</CHARGEDESCRIPTION>
+                    <CHARGEAMOUNT>812.35</CHARGEAMOUNT>
+                </CHARGE>
+                <CHARGE>
+                    <CHARGEDATE>2010-09-08</CHARGEDATE>
+                    <CHARGEDESCRIPTION>AMAZON #284</CHARGEDESCRIPTION>
+                    <CHARGEAMOUNT>83.96</CHARGEAMOUNT>
+                </CHARGE>
+                <CHARGE>
+                    <CHARGEDATE>2010-09-09</CHARGEDATE>
+                    <CHARGEDESCRIPTION>EXPRESS #1302</CHARGEDESCRIPTION>
+                    <CHARGEAMOUNT>169.53</CHARGEAMOUNT>
+                </CHARGE>
+                <CHARGE>
+                    <CHARGEDATE>2010-09-11</CHARGEDATE>
+                    <CHARGEDESCRIPTION>VERIZON WIRELESS</CHARGEDESCRIPTION>
+                    <CHARGEAMOUNT>598.32</CHARGEAMOUNT>
+                </CHARGE>
+                <CHARGE>
+                    <CHARGEDATE>2010-09-11</CHARGEDATE>
+                    <CHARGEDESCRIPTION>NIKESTORE #2424</CHARGEDESCRIPTION>
+                    <CHARGEAMOUNT>90.22</CHARGEAMOUNT>
+                </CHARGE>
+            </TRANSACTIONS>
+        </STATEMENT>
+    </CUSTOMER>
+<CUSTOMER customer_id="2">
+    <CUSTDETAIL>
+        <ACCOUNTNUMBER>4555-9999-0002</ACCOUNTNUMBER>
+        <INTERNALREF>XNS0150150_4282620_030119250</INTERNALREF>
+        <FORNAME>Marie</FORNAME>
+        <SURNAME>Cortez</SURNAME>
+        <DOB>1985-02-07</DOB>
+        <ADDRESS1>135 Primis Road</ADDRESS1>
+        <ADDRESS2>Phoenix </ADDRESS2>
+        <ADDRESS3>AZ</ADDRESS3>
+        <ADDRESS4/>
+        <POSTCODE>85026</POSTCODE>
+        <TELEPHONE/>
+        <FAX/>
+        <EMAIL/>
+        <PROFILE/>
+        <MARKETING/>
+        <MESSAGE1/>
+        <MESSAGE2/>
+        <MESSAGE3/>
+    </CUSTDETAIL>
+    <CORPINFO>
+        <CUSTSERVICENUMBER>1-800-555-5550</CUSTSERVICENUMBER>
+        <COLLECTOUTSIDENA>(416) 555-5551</COLLECTOUTSIDENA>
+        <SELFSERVICE>1-877-555-5552</SELFSERVICE>
+        <TELEPHONEBANKING>1-800-555-5555</TELEPHONEBANKING>
+        <WEBSITE>www.xenos.com</WEBSITE>
+        <CORPADD1>2207 Bridgepointe Parkway, Suite 500</CORPADD1>
+        <CORPADD2>San Mateo</CORPADD2>
+        <CORPADD3>CA</CORPADD3>
+        <CORPADD4>USA</CORPADD4>
+        <CORPPOST>94404</CORPPOST>
+    </CORPINFO>
+    <STATEMENT Customer_id="2">
+        <STARTDATE>2010-08-13</STARTDATE>
+        <ENDDATE>2010-09-12</ENDDATE>
+        <PREVIOUSBALANCE>6547.40</PREVIOUSBALANCE>
+        <PAYMENTSANDCREDITS>4900</PAYMENTSANDCREDITS>
+        <PURCHASESANDDEBTS>2848.43</PURCHASESANDDEBTS>
+        <CASHADVANCES>0</CASHADVANCES>
+        <FINANCECHARGES>70.81</FINANCECHARGES>
+        <NEWBALANCE>4566.64</NEWBALANCE>
+        <MINIMUMPAYMENT>92.00</MINIMUMPAYMENT>
+        <DUEDATE>2010-10-07</DUEDATE>
+        <TOTALCREDIT>11000.00</TOTALCREDIT>
+        <CREDITAVAILABLE>6433.36</CREDITAVAILABLE>
+        <CREDITFORCASH>5000.00</CREDITFORCASH>
+        <CASHAVAILABLE>5000.00</CASHAVAILABLE>
+        <PURCHASEBALANCERATE>0.00</PURCHASEBALANCERATE>
+        <PURCHASEPERIODRATE>1.58</PURCHASEPERIODRATE>
+        <PURCHASEAPR>18.90</PURCHASEAPR>
+        <PURCHASEFINANCECHARGE>70.81</PURCHASEFINANCECHARGE>
+        <CASHBALANCERATE>0.00</CASHBALANCERATE>
+        <CASHPERIODRATE>1.83</CASHPERIODRATE>
+        <CASHAPR>21.90</CASHAPR>
+        <CASHFINANCECHARGE>0.00</CASHFINANCECHARGE>
+        <TRANSACTIONS>
+            <TABLEDATA>
+                <FLOW>
+                    <DATE>2010-08-13</DATE>
+                    <VALUE>6547.40</VALUE>
+                </FLOW>
+            </TABLEDATA>
+            <TABLEDATA>
+                <FLOW>
+                    <DATE>2010-07-13</DATE>
+                    <VALUE>5789.51</VALUE>
+                </FLOW>
+            </TABLEDATA>
+            <TABLEDATA>
+                <FLOW>
+                    <DATE>2010-06-13</DATE>
+                    <VALUE>4453.01</VALUE>
+                </FLOW>
+            </TABLEDATA>
+            <TABLEDATA>
+                <FLOW>
+                    <DATE>2010-05-13</DATE>
+                    <VALUE>3029.98</VALUE>
+                </FLOW>
+            </TABLEDATA>
+            <TABLEDATA>
+                <FLOW>
+                    <DATE>2010-04-13</DATE>
+                    <VALUE>1704.09</VALUE>
+                </FLOW>
+            </TABLEDATA>
+            <PAYMENT>
+                <PAYMENTDATE>2010-08-22</PAYMENTDATE>
+                <PAYMENTDESCRIPTION>PAYMENT RECEIVED - THANK YOU</PAYMENTDESCRIPTION>
+                <PAYMENTAMOUNT>3000.00</PAYMENTAMOUNT>
+            </PAYMENT>
+            <PAYMENT>
+                <PAYMENTDATE>2010-08-29</PAYMENTDATE>
+                <PAYMENTDESCRIPTION>PAYMENT RECEIVED - THANK YOU</PAYMENTDESCRIPTION>
+                <PAYMENTAMOUNT>1900.00</PAYMENTAMOUNT>
+            </PAYMENT>
+            <CHARGE>
+                <CHARGEDATE>2010-08-13</CHARGEDATE>
+                <CHARGEDESCRIPTION>DISH NETWORK</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>429.19</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-14</CHARGEDATE>
+                <CHARGEDESCRIPTION>EXPRESS #1520</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>54.76</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-17</CHARGEDATE>
+                <CHARGEDESCRIPTION>NINE WEST #1698</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>634.74</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-18</CHARGEDATE>
+                <CHARGEDESCRIPTION>EXXON #400</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>362.84</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-18</CHARGEDATE>
+                <CHARGEDESCRIPTION>TACO BELL #435</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>6.16</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-19</CHARGEDATE>
+                <CHARGEDESCRIPTION>MCDONALD'S #990</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>36.22</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-22</CHARGEDATE>
+                <CHARGEDESCRIPTION>OLD NAVY #569</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>57.99</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-22</CHARGEDATE>
+                <CHARGEDESCRIPTION>TEXACO OIL #1097</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>15.36</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-22</CHARGEDATE>
+                <CHARGEDESCRIPTION>SHELL OIL #2353</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>28.98</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-23</CHARGEDATE>
+                <CHARGEDESCRIPTION>NIKESTORE #117</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>78.82</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-25</CHARGEDATE>
+                <CHARGEDESCRIPTION>SHELL OIL #1703</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>125.05</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-26</CHARGEDATE>
+                <CHARGEDESCRIPTION>JIFFY LUBE #2401</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>13.99</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-27</CHARGEDATE>
+                <CHARGEDESCRIPTION>DONNA'S SWEETS</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>80.09</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-29</CHARGEDATE>
+                <CHARGEDESCRIPTION>EXXON #2271</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>36.38</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-30</CHARGEDATE>
+                <CHARGEDESCRIPTION>SEARS #1475</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>13.88</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-31</CHARGEDATE>
+                <CHARGEDESCRIPTION>MOBIL #309</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>33.83</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-09-01</CHARGEDATE>
+                <CHARGEDESCRIPTION>BARNES &amp; NOBLE #1119</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>141.84</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-09-01</CHARGEDATE>
+                <CHARGEDESCRIPTION>ICHIBAN SUSHI #1401</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>47.71</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-09-02</CHARGEDATE>
+                <CHARGEDESCRIPTION>FORMOSA CAFE</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>166.35</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-09-02</CHARGEDATE>
+                <CHARGEDESCRIPTION>SEARS #221</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>138.85</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-09-03</CHARGEDATE>
+                <CHARGEDESCRIPTION>DISNEY STORE #2236</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>7.80</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-09-03</CHARGEDATE>
+                <CHARGEDESCRIPTION>VICTORIA'S SECRET #608</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>75.60</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-09-07</CHARGEDATE>
+                <CHARGEDESCRIPTION>STEVE MADDEN #532</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>73.96</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-09-08</CHARGEDATE>
+                <CHARGEDESCRIPTION>MCDONALD'S #990</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>26.51</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-09-09</CHARGEDATE>
+                <CHARGEDESCRIPTION>WILLIAMS SONOMA #1785</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>11.83</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-09-10</CHARGEDATE>
+                <CHARGEDESCRIPTION>BEST BUY #147</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>84.69</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-09-11</CHARGEDATE>
+                <CHARGEDESCRIPTION>EXXON #447</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>65.01</CHARGEAMOUNT>
+            </CHARGE>
+        </TRANSACTIONS>
+    </STATEMENT>
+</CUSTOMER>
+<CUSTOMER customer_id="3">
+    <CUSTDETAIL>
+        <ACCOUNTNUMBER>4555-9999-0003</ACCOUNTNUMBER>
+        <INTERNALREF>XNS0150150_4282620_030119251</INTERNALREF>
+        <FORNAME>Deepinder</FORNAME>
+        <SURNAME>Mitwar</SURNAME>
+        <DOB>1965-06-07</DOB>
+        <ADDRESS1>185-9531 Fringilla, St.</ADDRESS1>
+        <ADDRESS2>Huntington Beach</ADDRESS2>
+        <ADDRESS3>CA</ADDRESS3>
+        <ADDRESS4/>
+        <POSTCODE>92647</POSTCODE>
+        <TELEPHONE/>
+        <FAX/>
+        <EMAIL/>
+        <PROFILE/>
+        <MARKETING/>
+        <MESSAGE1/>
+        <MESSAGE2/>
+        <MESSAGE3/>
+    </CUSTDETAIL>
+    <CORPINFO>
+        <CUSTSERVICENUMBER>1-800-555-5550</CUSTSERVICENUMBER>
+        <COLLECTOUTSIDENA>(416) 555-5551</COLLECTOUTSIDENA>
+        <SELFSERVICE>1-877-555-5552</SELFSERVICE>
+        <TELEPHONEBANKING>1-800-555-5555</TELEPHONEBANKING>
+        <WEBSITE>www.xenos.com</WEBSITE>
+        <CORPADD1>2207 Bridgepointe Parkway, Suite 500</CORPADD1>
+        <CORPADD2>San Mateo</CORPADD2>
+        <CORPADD3>CA</CORPADD3>
+        <CORPADD4>USA</CORPADD4>
+        <CORPPOST>94404</CORPPOST>
+    </CORPINFO>
+    <STATEMENT Customer_id="3">
+        <STARTDATE>2010-08-13</STARTDATE>
+        <ENDDATE>2010-09-12</ENDDATE>
+        <PREVIOUSBALANCE>6650.73</PREVIOUSBALANCE>
+        <PAYMENTSANDCREDITS>4000</PAYMENTSANDCREDITS>
+        <PURCHASESANDDEBTS>4744.07</PURCHASESANDDEBTS>
+        <CASHADVANCES>0</CASHADVANCES>
+        <FINANCECHARGES>116.47</FINANCECHARGES>
+        <NEWBALANCE>7511.27</NEWBALANCE>
+        <MINIMUMPAYMENT>151.00</MINIMUMPAYMENT>
+        <DUEDATE>2010-10-07</DUEDATE>
+        <TOTALCREDIT>8000.00</TOTALCREDIT>
+        <CREDITAVAILABLE>488.73</CREDITAVAILABLE>
+        <CREDITFORCASH>4000.00</CREDITFORCASH>
+        <CASHAVAILABLE>488.73</CASHAVAILABLE>
+        <PURCHASEBALANCERATE>0.00</PURCHASEBALANCERATE>
+        <PURCHASEPERIODRATE>1.58</PURCHASEPERIODRATE>
+        <PURCHASEAPR>18.90</PURCHASEAPR>
+        <PURCHASEFINANCECHARGE>116.47</PURCHASEFINANCECHARGE>
+        <CASHBALANCERATE>0.00</CASHBALANCERATE>
+        <CASHPERIODRATE>1.83</CASHPERIODRATE>
+        <CASHAPR>21.90</CASHAPR>
+        <CASHFINANCECHARGE>0.00</CASHFINANCECHARGE>
+        <TRANSACTIONS>
+            <TABLEDATA>
+                <FLOW>
+                    <DATE>2010-08-13</DATE>
+                    <VALUE>6650.73</VALUE>
+                </FLOW>
+            </TABLEDATA>
+            <TABLEDATA>
+                <FLOW>
+                    <DATE>2010-07-13</DATE>
+                    <VALUE>8982.09</VALUE>
+                </FLOW>
+            </TABLEDATA>
+            <TABLEDATA>
+                <FLOW>
+                    <DATE>2010-06-13</DATE>
+                    <VALUE>4896.93</VALUE>
+                </FLOW>
+            </TABLEDATA>
+            <TABLEDATA>
+                <FLOW>
+                    <DATE>2010-05-13</DATE>
+                    <VALUE>3461.73</VALUE>
+                </FLOW>
+            </TABLEDATA>
+            <TABLEDATA>
+                <FLOW>
+                    <DATE>2010-04-13</DATE>
+                    <VALUE>4339.67</VALUE>
+                </FLOW>
+            </TABLEDATA>
+            <PAYMENT>
+                <PAYMENTDATE>2010-08-24</PAYMENTDATE>
+                <PAYMENTDESCRIPTION>PAYMENT RECEIVED - THANK YOU</PAYMENTDESCRIPTION>
+                <PAYMENTAMOUNT>4000.00</PAYMENTAMOUNT>
+            </PAYMENT>
+            <CHARGE>
+                <CHARGEDATE>2010-08-14</CHARGEDATE>
+                <CHARGEDESCRIPTION>AMAZON #284</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>138.82</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-15</CHARGEDATE>
+                <CHARGEDESCRIPTION>7-ELEVEN #742</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>141.65</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-17</CHARGEDATE>
+                <CHARGEDESCRIPTION>7-ELEVEN #2435</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>5.15</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-17</CHARGEDATE>
+                <CHARGEDESCRIPTION>KFC #614</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>56.20</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-18</CHARGEDATE>
+                <CHARGEDESCRIPTION>MCDONALD'S #2497</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>25.73</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-19</CHARGEDATE>
+                <CHARGEDESCRIPTION>STEVE MADDEN #532</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>13.43</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-19</CHARGEDATE>
+                <CHARGEDESCRIPTION>EXXON #168</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>73.20</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-20</CHARGEDATE>
+                <CHARGEDESCRIPTION>DISNEY STORE #2236</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>24.67</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-21</CHARGEDATE>
+                <CHARGEDESCRIPTION>KFC #1774</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>69.38</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-24</CHARGEDATE>
+                <CHARGEDESCRIPTION>NINE WEST #1698</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>29.30</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-24</CHARGEDATE>
+                <CHARGEDESCRIPTION>NINE WEST #1698</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>36.98</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-25</CHARGEDATE>
+                <CHARGEDESCRIPTION>VICTORIA'S SECRET #1138</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>64.52</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-25</CHARGEDATE>
+                <CHARGEDESCRIPTION>JIFFY LUBE #676</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>289.60</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-26</CHARGEDATE>
+                <CHARGEDESCRIPTION>KFC #714</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>48.52</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-28</CHARGEDATE>
+                <CHARGEDESCRIPTION>BEST BUY #147</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>56.26</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-29</CHARGEDATE>
+                <CHARGEDESCRIPTION>COACH #1106</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>9.03</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-30</CHARGEDATE>
+                <CHARGEDESCRIPTION>STEVE MADDEN #1463</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>37.98</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-31</CHARGEDATE>
+                <CHARGEDESCRIPTION>ICHIBAN SUSHI #2227</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>65.11</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-09-03</CHARGEDATE>
+                <CHARGEDESCRIPTION>BLOOMINGDALE'S #405</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>106.10</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-09-04</CHARGEDATE>
+                <CHARGEDESCRIPTION>DIRECTV</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>113.02</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-09-04</CHARGEDATE>
+                <CHARGEDESCRIPTION>SHELL OIL #2165</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>1465.25</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-09-06</CHARGEDATE>
+                <CHARGEDESCRIPTION>AT&amp;T WIRELESS</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>13.17</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-09-06</CHARGEDATE>
+                <CHARGEDESCRIPTION>WALGREEN'S #2300</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>175.63</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-09-06</CHARGEDATE>
+                <CHARGEDESCRIPTION>AT&amp;T WIRELESS</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>55.85</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-09-06</CHARGEDATE>
+                <CHARGEDESCRIPTION>BATH AND BODY WORKS #913</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>166.74</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-09-07</CHARGEDATE>
+                <CHARGEDESCRIPTION>BATH AND BODY WORKS #913</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>111.59</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-09-07</CHARGEDATE>
+                <CHARGEDESCRIPTION>7-ELEVEN #938</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>81.69</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-09-07</CHARGEDATE>
+                <CHARGEDESCRIPTION>SEARS #1475</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>131.81</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-09-09</CHARGEDATE>
+                <CHARGEDESCRIPTION>TEXACO OIL #2002</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>526.79</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-09-09</CHARGEDATE>
+                <CHARGEDESCRIPTION>STEVE'S WINE AND SPIRITS</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>428.53</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-09-09</CHARGEDATE>
+                <CHARGEDESCRIPTION>MACY'S #52</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>48.18</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-09-10</CHARGEDATE>
+                <CHARGEDESCRIPTION>NORDSTROM #864</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>134.19</CHARGEAMOUNT>
+            </CHARGE>
+        </TRANSACTIONS>
+    </STATEMENT>
+</CUSTOMER>
+<CUSTOMER customer_id="4">
+    <CUSTDETAIL>
+        <ACCOUNTNUMBER>4555-9999-0004</ACCOUNTNUMBER>
+        <INTERNALREF>XNS0150150_4282620_030119252</INTERNALREF>
+        <FORNAME>Peter</FORNAME>
+        <SURNAME>Mcmillan</SURNAME>
+        <DOB>1973-05-01</DOB>
+        <ADDRESS1>2197 Standard St.</ADDRESS1>
+        <ADDRESS2>Scottsdale</ADDRESS2>
+        <ADDRESS3>AZ</ADDRESS3>
+        <ADDRESS4/>
+        <POSTCODE>85251</POSTCODE>
+        <TELEPHONE/>
+        <FAX/>
+        <EMAIL/>
+        <PROFILE/>
+        <MARKETING/>
+        <MESSAGE1/>
+        <MESSAGE2/>
+        <MESSAGE3/>
+    </CUSTDETAIL>
+    <CORPINFO>
+        <CUSTSERVICENUMBER>1-800-555-5550</CUSTSERVICENUMBER>
+        <COLLECTOUTSIDENA>(416) 555-5551</COLLECTOUTSIDENA>
+        <SELFSERVICE>1-877-555-5552</SELFSERVICE>
+        <TELEPHONEBANKING>1-800-555-5555</TELEPHONEBANKING>
+        <WEBSITE>www.xenos.com</WEBSITE>
+        <CORPADD1>2207 Bridgepointe Parkway, Suite 500</CORPADD1>
+        <CORPADD2>San Mateo</CORPADD2>
+        <CORPADD3>CA</CORPADD3>
+        <CORPADD4>USA</CORPADD4>
+        <CORPPOST>94404</CORPPOST>
+    </CORPINFO>
+    <STATEMENT Customer_id="4">
+        <STARTDATE>2010-08-13</STARTDATE>
+        <ENDDATE>2010-09-12</ENDDATE>
+        <PREVIOUSBALANCE>1372.00</PREVIOUSBALANCE>
+        <PAYMENTSANDCREDITS>2500</PAYMENTSANDCREDITS>
+        <PURCHASESANDDEBTS>1629.94</PURCHASESANDDEBTS>
+        <CASHADVANCES>0</CASHADVANCES>
+        <FINANCECHARGES>8.32</FINANCECHARGES>
+        <NEWBALANCE>510.26</NEWBALANCE>
+        <MINIMUMPAYMENT>11.00</MINIMUMPAYMENT>
+        <DUEDATE>2010-10-07</DUEDATE>
+        <TOTALCREDIT>10000.00</TOTALCREDIT>
+        <CREDITAVAILABLE>9489.74</CREDITAVAILABLE>
+        <CREDITFORCASH>4000.00</CREDITFORCASH>
+        <CASHAVAILABLE>4000.00</CASHAVAILABLE>
+        <PURCHASEBALANCERATE>0.00</PURCHASEBALANCERATE>
+        <PURCHASEPERIODRATE>1.66</PURCHASEPERIODRATE>
+        <PURCHASEAPR>19.90</PURCHASEAPR>
+        <PURCHASEFINANCECHARGE>8.32</PURCHASEFINANCECHARGE>
+        <CASHBALANCERATE>0.00</CASHBALANCERATE>
+        <CASHPERIODRATE>1.83</CASHPERIODRATE>
+        <CASHAPR>21.90</CASHAPR>
+        <CASHFINANCECHARGE>0.00</CASHFINANCECHARGE>
+        <TRANSACTIONS>
+            <TABLEDATA>
+                <FLOW>
+                    <DATE>2010-08-13</DATE>
+                    <VALUE>1372.00</VALUE>
+                </FLOW>
+            </TABLEDATA>
+            <TABLEDATA>
+                <FLOW>
+                    <DATE>2010-07-13</DATE>
+                    <VALUE>0.00</VALUE>
+                </FLOW>
+            </TABLEDATA>
+            <TABLEDATA>
+                <FLOW>
+                    <DATE>2010-06-13</DATE>
+                    <VALUE>450.64</VALUE>
+                </FLOW>
+            </TABLEDATA>
+            <TABLEDATA>
+                <FLOW>
+                    <DATE>2010-05-13</DATE>
+                    <VALUE>1154.43</VALUE>
+                </FLOW>
+            </TABLEDATA>
+            <TABLEDATA>
+                <FLOW>
+                    <DATE>2010-04-13</DATE>
+                    <VALUE>998.65</VALUE>
+                </FLOW>
+            </TABLEDATA>
+            <PAYMENT>
+                <PAYMENTDATE>2010-08-18</PAYMENTDATE>
+                <PAYMENTDESCRIPTION>PAYMENT RECEIVED - THANK YOU</PAYMENTDESCRIPTION>
+                <PAYMENTAMOUNT>2500.00</PAYMENTAMOUNT>
+            </PAYMENT>
+            <CHARGE>
+                <CHARGEDATE>2010-08-13</CHARGEDATE>
+                <CHARGEDESCRIPTION>AT&amp;T WIRELESS</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>29.46</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-15</CHARGEDATE>
+                <CHARGEDESCRIPTION>NINE WEST #96</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>44.72</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-18</CHARGEDATE>
+                <CHARGEDESCRIPTION>BEST BUY #147</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>197.03</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-19</CHARGEDATE>
+                <CHARGEDESCRIPTION>SHELL OIL #2165</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>73.72</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-21</CHARGEDATE>
+                <CHARGEDESCRIPTION>NINE WEST #1698</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>95.46</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-21</CHARGEDATE>
+                <CHARGEDESCRIPTION>MOBIL #1265</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>181.79</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-22</CHARGEDATE>
+                <CHARGEDESCRIPTION>EXXON #824</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>20.92</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-22</CHARGEDATE>
+                <CHARGEDESCRIPTION>7-ELEVEN #2435</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>46.59</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-23</CHARGEDATE>
+                <CHARGEDESCRIPTION>WILLIAMS SONOMA #1785</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>24.48</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-23</CHARGEDATE>
+                <CHARGEDESCRIPTION>SHELL OIL #737</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>114.08</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-24</CHARGEDATE>
+                <CHARGEDESCRIPTION>DISNEY STORE #1214</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>34.13</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-25</CHARGEDATE>
+                <CHARGEDESCRIPTION>EXXON #2271</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>56.33</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-28</CHARGEDATE>
+                <CHARGEDESCRIPTION>PAYLESS SHOES #1476</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>158.47</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-09-01</CHARGEDATE>
+                <CHARGEDESCRIPTION>SHELL OIL #2304</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>122.32</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-09-03</CHARGEDATE>
+                <CHARGEDESCRIPTION>WALGREEN'S #706</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>117.59</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-09-05</CHARGEDATE>
+                <CHARGEDESCRIPTION>VICTORIA'S SECRET #507</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>29.34</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-09-08</CHARGEDATE>
+                <CHARGEDESCRIPTION>VICTORIA'S SECRET #608</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>114.93</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-09-10</CHARGEDATE>
+                <CHARGEDESCRIPTION>JACK-IN-THE-BOX #1441</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>73.91</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-09-10</CHARGEDATE>
+                <CHARGEDESCRIPTION>JOE'S GARAGE</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>36.91</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-09-11</CHARGEDATE>
+                <CHARGEDESCRIPTION>SHELL OIL #2165</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>57.76</CHARGEAMOUNT>
+            </CHARGE>
+        </TRANSACTIONS>
+    </STATEMENT>
+</CUSTOMER>
+<CUSTOMER customer_id="5">
+    <CUSTDETAIL>
+        <ACCOUNTNUMBER>4555-9999-0005</ACCOUNTNUMBER>
+        <INTERNALREF>XNS0150150_4282620_030119253</INTERNALREF>
+        <FORNAME>Mudassar</FORNAME>
+        <SURNAME>Nazar</SURNAME>
+        <DOB>1992-04-07</DOB>
+        <ADDRESS1>221-3590 Albert Av.</ADDRESS1>
+        <ADDRESS2>Fort Collins</ADDRESS2>
+        <ADDRESS3>CO</ADDRESS3>
+        <ADDRESS4/>
+        <POSTCODE>80525</POSTCODE>
+        <TELEPHONE/>
+        <FAX/>
+        <EMAIL/>
+        <PROFILE/>
+        <MARKETING/>
+        <MESSAGE1/>
+        <MESSAGE2/>
+        <MESSAGE3/>
+    </CUSTDETAIL>
+    <CORPINFO>
+        <CUSTSERVICENUMBER>1-800-555-5550</CUSTSERVICENUMBER>
+        <COLLECTOUTSIDENA>(416) 555-5551</COLLECTOUTSIDENA>
+        <SELFSERVICE>1-877-555-5552</SELFSERVICE>
+        <TELEPHONEBANKING>1-800-555-5555</TELEPHONEBANKING>
+        <WEBSITE>www.xenos.com</WEBSITE>
+        <CORPADD1>2207 Bridgepointe Parkway, Suite 500</CORPADD1>
+        <CORPADD2>San Mateo</CORPADD2>
+        <CORPADD3>CA</CORPADD3>
+        <CORPADD4>USA</CORPADD4>
+        <CORPPOST>94404</CORPPOST>
+    </CORPINFO>
+    <STATEMENT Customer_id="5">
+        <STARTDATE>2010-08-13</STARTDATE>
+        <ENDDATE>2010-09-12</ENDDATE>
+        <PREVIOUSBALANCE>1793.83</PREVIOUSBALANCE>
+        <PAYMENTSANDCREDITS>1200</PAYMENTSANDCREDITS>
+        <PURCHASESANDDEBTS>2229</PURCHASESANDDEBTS>
+        <CASHADVANCES>0</CASHADVANCES>
+        <FINANCECHARGES>46.81</FINANCECHARGES>
+        <NEWBALANCE>2869.64</NEWBALANCE>
+        <MINIMUMPAYMENT>58.00</MINIMUMPAYMENT>
+        <DUEDATE>2010-10-07</DUEDATE>
+        <TOTALCREDIT>7500.00</TOTALCREDIT>
+        <CREDITAVAILABLE>4630.36</CREDITAVAILABLE>
+        <CREDITFORCASH>2000.00</CREDITFORCASH>
+        <CASHAVAILABLE>2000.00</CASHAVAILABLE>
+        <PURCHASEBALANCERATE>0.00</PURCHASEBALANCERATE>
+        <PURCHASEPERIODRATE>1.66</PURCHASEPERIODRATE>
+        <PURCHASEAPR>19.90</PURCHASEAPR>
+        <PURCHASEFINANCECHARGE>46.81</PURCHASEFINANCECHARGE>
+        <CASHBALANCERATE>0.00</CASHBALANCERATE>
+        <CASHPERIODRATE>1.83</CASHPERIODRATE>
+        <CASHAPR>21.90</CASHAPR>
+        <CASHFINANCECHARGE>0.00</CASHFINANCECHARGE>
+        <TRANSACTIONS>
+            <TABLEDATA>
+                <FLOW>
+                    <DATE>2010-08-13</DATE>
+                    <VALUE>1793.83</VALUE>
+                </FLOW>
+            </TABLEDATA>
+            <TABLEDATA>
+                <FLOW>
+                    <DATE>2010-07-13</DATE>
+                    <VALUE>1657.90</VALUE>
+                </FLOW>
+            </TABLEDATA>
+            <TABLEDATA>
+                <FLOW>
+                    <DATE>2010-06-13</DATE>
+                    <VALUE>1765.03</VALUE>
+                </FLOW>
+            </TABLEDATA>
+            <TABLEDATA>
+                <FLOW>
+                    <DATE>2010-05-13</DATE>
+                    <VALUE>1182.90</VALUE>
+                </FLOW>
+            </TABLEDATA>
+            <TABLEDATA>
+                <FLOW>
+                    <DATE>2010-04-13</DATE>
+                    <VALUE>998.93</VALUE>
+                </FLOW>
+            </TABLEDATA>
+            <PAYMENT>
+                <PAYMENTDATE>2010-08-26</PAYMENTDATE>
+                <PAYMENTDESCRIPTION>PAYMENT RECEIVED - THANK YOU</PAYMENTDESCRIPTION>
+                <PAYMENTAMOUNT>1200.00</PAYMENTAMOUNT>
+            </PAYMENT>
+            <CHARGE>
+                <CHARGEDATE>2010-08-14</CHARGEDATE>
+                <CHARGEDESCRIPTION>EXXON #824</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>144.30</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-15</CHARGEDATE>
+                <CHARGEDESCRIPTION>NORDSTROM #864</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>55.36</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-16</CHARGEDATE>
+                <CHARGEDESCRIPTION>SEARS #221</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>7.91</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-17</CHARGEDATE>
+                <CHARGEDESCRIPTION>BEST BUY #1950</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>26.46</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-17</CHARGEDATE>
+                <CHARGEDESCRIPTION>MOBIL #1265</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>33.52</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-19</CHARGEDATE>
+                <CHARGEDESCRIPTION>DISH NETWORK</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>31.47</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-19</CHARGEDATE>
+                <CHARGEDESCRIPTION>TACO BELL #824</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>304.87</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-19</CHARGEDATE>
+                <CHARGEDESCRIPTION>PAYLESS SHOES #1943</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>372.66</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-21</CHARGEDATE>
+                <CHARGEDESCRIPTION>NORDSTROM #864</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>5.48</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-22</CHARGEDATE>
+                <CHARGEDESCRIPTION>MOBIL #1265</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>22.44</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-22</CHARGEDATE>
+                <CHARGEDESCRIPTION>THE GAP #2129</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>85.32</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-23</CHARGEDATE>
+                <CHARGEDESCRIPTION>FORMOSA CAFE</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>84.83</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-25</CHARGEDATE>
+                <CHARGEDESCRIPTION>EXXON #1937</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>21.43</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-25</CHARGEDATE>
+                <CHARGEDESCRIPTION>STEVE MADDEN #532</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>67.05</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-25</CHARGEDATE>
+                <CHARGEDESCRIPTION>BATH AND BODY WORKS #545</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>191.26</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-28</CHARGEDATE>
+                <CHARGEDESCRIPTION>BATH AND BODY WORKS #1697</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>68.74</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-30</CHARGEDATE>
+                <CHARGEDESCRIPTION>DISNEY STORE #2236</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>31.22</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-30</CHARGEDATE>
+                <CHARGEDESCRIPTION>MACY'S #52</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>37.20</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-30</CHARGEDATE>
+                <CHARGEDESCRIPTION>STEVE'S WINE AND SPIRITS</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>16.96</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-31</CHARGEDATE>
+                <CHARGEDESCRIPTION>MARSHALLS #1196</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>55.12</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-09-03</CHARGEDATE>
+                <CHARGEDESCRIPTION>KFC #614</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>187.20</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-09-03</CHARGEDATE>
+                <CHARGEDESCRIPTION>TACO BELL #435</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>38.76</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-09-07</CHARGEDATE>
+                <CHARGEDESCRIPTION>SHELL OIL #2304</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>27.40</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-09-07</CHARGEDATE>
+                <CHARGEDESCRIPTION>KFC #1454</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>225.32</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-09-09</CHARGEDATE>
+                <CHARGEDESCRIPTION>WILLIAMS SONOMA #1478</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>34.48</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-09-10</CHARGEDATE>
+                <CHARGEDESCRIPTION>WALGREEN'S #706</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>35.77</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-09-11</CHARGEDATE>
+                <CHARGEDESCRIPTION>BATH AND BODY WORKS #545</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>16.47</CHARGEAMOUNT>
+            </CHARGE>
+        </TRANSACTIONS>
+    </STATEMENT>
+</CUSTOMER>
+<CUSTOMER customer_id="6">
+    <CUSTDETAIL>
+        <ACCOUNTNUMBER>4555-9999-0006</ACCOUNTNUMBER>
+        <INTERNALREF>XNS0150150_4282620_030119254</INTERNALREF>
+        <FORNAME>Belle</FORNAME>
+        <SURNAME>Harmon</SURNAME>
+        <DOB>1958-02-08</DOB>
+        <ADDRESS1>2343 Oakborough Rd.</ADDRESS1>
+        <ADDRESS2>Ann Arbor</ADDRESS2>
+        <ADDRESS3>MI</ADDRESS3>
+        <ADDRESS4/>
+        <POSTCODE>48104</POSTCODE>
+        <TELEPHONE/>
+        <FAX/>
+        <EMAIL/>
+        <PROFILE/>
+        <MARKETING/>
+        <MESSAGE1/>
+        <MESSAGE2/>
+        <MESSAGE3/>
+    </CUSTDETAIL>
+    <CORPINFO>
+        <CUSTSERVICENUMBER>1-800-555-5550</CUSTSERVICENUMBER>
+        <COLLECTOUTSIDENA>(416) 555-5551</COLLECTOUTSIDENA>
+        <SELFSERVICE>1-877-555-5552</SELFSERVICE>
+        <TELEPHONEBANKING>1-800-555-5555</TELEPHONEBANKING>
+        <WEBSITE>www.xenos.com</WEBSITE>
+        <CORPADD1>2207 Bridgepointe Parkway, Suite 500</CORPADD1>
+        <CORPADD2>San Mateo</CORPADD2>
+        <CORPADD3>CA</CORPADD3>
+        <CORPADD4>USA</CORPADD4>
+        <CORPPOST>94404</CORPPOST>
+    </CORPINFO>
+    <STATEMENT Customer_id="6">
+        <STARTDATE>2010-08-13</STARTDATE>
+        <ENDDATE>2010-09-12</ENDDATE>
+        <PREVIOUSBALANCE>492.46</PREVIOUSBALANCE>
+        <PAYMENTSANDCREDITS>1100</PAYMENTSANDCREDITS>
+        <PURCHASESANDDEBTS>2116.21</PURCHASESANDDEBTS>
+        <CASHADVANCES>0</CASHADVANCES>
+        <FINANCECHARGES>23.87</FINANCECHARGES>
+        <NEWBALANCE>1532.55</NEWBALANCE>
+        <MINIMUMPAYMENT>31.00</MINIMUMPAYMENT>
+        <DUEDATE>2010-10-07</DUEDATE>
+        <TOTALCREDIT>5000.00</TOTALCREDIT>
+        <CREDITAVAILABLE>3467.45</CREDITAVAILABLE>
+        <CREDITFORCASH>1000.00</CREDITFORCASH>
+        <CASHAVAILABLE>1000.00</CASHAVAILABLE>
+        <PURCHASEBALANCERATE>0.00</PURCHASEBALANCERATE>
+        <PURCHASEPERIODRATE>1.58</PURCHASEPERIODRATE>
+        <PURCHASEAPR>18.99</PURCHASEAPR>
+        <PURCHASEFINANCECHARGE>23.87</PURCHASEFINANCECHARGE>
+        <CASHBALANCERATE>0.00</CASHBALANCERATE>
+        <CASHPERIODRATE>1.83</CASHPERIODRATE>
+        <CASHAPR>21.90</CASHAPR>
+        <CASHFINANCECHARGE>0.00</CASHFINANCECHARGE>
+        <TRANSACTIONS>
+            <TABLEDATA>
+                <FLOW>
+                    <DATE>2010-08-13</DATE>
+                    <VALUE>492.46</VALUE>
+                </FLOW>
+            </TABLEDATA>
+            <TABLEDATA>
+                <FLOW>
+                    <DATE>2010-07-13</DATE>
+                    <VALUE>339.02</VALUE>
+                </FLOW>
+            </TABLEDATA>
+            <TABLEDATA>
+                <FLOW>
+                    <DATE>2010-06-13</DATE>
+                    <VALUE>432.98</VALUE>
+                </FLOW>
+            </TABLEDATA>
+            <TABLEDATA>
+                <FLOW>
+                    <DATE>2010-05-13</DATE>
+                    <VALUE>376.90</VALUE>
+                </FLOW>
+            </TABLEDATA>
+            <TABLEDATA>
+                <FLOW>
+                    <DATE>2010-04-13</DATE>
+                    <VALUE>224.32</VALUE>
+                </FLOW>
+            </TABLEDATA>
+            <PAYMENT>
+                <PAYMENTDATE>2010-08-25</PAYMENTDATE>
+                <PAYMENTDESCRIPTION>PAYMENT RECEIVED - THANK YOU</PAYMENTDESCRIPTION>
+                <PAYMENTAMOUNT>700.00</PAYMENTAMOUNT>
+            </PAYMENT>
+            <PAYMENT>
+                <PAYMENTDATE>2010-09-03</PAYMENTDATE>
+                <PAYMENTDESCRIPTION>PAYMENT RECEIVED - THANK YOU</PAYMENTDESCRIPTION>
+                <PAYMENTAMOUNT>400.00</PAYMENTAMOUNT>
+            </PAYMENT>
+            <CHARGE>
+                <CHARGEDATE>2010-08-14</CHARGEDATE>
+                <CHARGEDESCRIPTION>NORDSTROM #1563</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>65.36</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-15</CHARGEDATE>
+                <CHARGEDESCRIPTION>MOBIL #975</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>139.82</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-15</CHARGEDATE>
+                <CHARGEDESCRIPTION>PAYLESS SHOES #1355</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>46.53</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-16</CHARGEDATE>
+                <CHARGEDESCRIPTION>TACO BELL #2084</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>137.64</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-19</CHARGEDATE>
+                <CHARGEDESCRIPTION>MCDONALD'S #1456</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>19.99</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-19</CHARGEDATE>
+                <CHARGEDESCRIPTION>EXXON #334</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>176.04</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-21</CHARGEDATE>
+                <CHARGEDESCRIPTION>EXPRESS #1302</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>39.81</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-24</CHARGEDATE>
+                <CHARGEDESCRIPTION>OLD NAVY #1820</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>9.96</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-25</CHARGEDATE>
+                <CHARGEDESCRIPTION>TOYS R US #2220</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>127.12</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-26</CHARGEDATE>
+                <CHARGEDESCRIPTION>THE GAP #2129</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>76.26</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-28</CHARGEDATE>
+                <CHARGEDESCRIPTION>TEXACO OIL #1097</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>25.61</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-29</CHARGEDATE>
+                <CHARGEDESCRIPTION>FOSSIL #1077</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>86.90</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-30</CHARGEDATE>
+                <CHARGEDESCRIPTION>BATH AND BODY WORKS #545</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>117.48</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-30</CHARGEDATE>
+                <CHARGEDESCRIPTION>MCDONALD'S #990</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>80.96</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-30</CHARGEDATE>
+                <CHARGEDESCRIPTION>JIFFY LUBE #676</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>59.22</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-09-01</CHARGEDATE>
+                <CHARGEDESCRIPTION>SHELL OIL #1703</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>54.87</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-09-04</CHARGEDATE>
+                <CHARGEDESCRIPTION>OLD NAVY #1221</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>60.19</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-09-06</CHARGEDATE>
+                <CHARGEDESCRIPTION>SHELL OIL #245</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>23.56</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-09-07</CHARGEDATE>
+                <CHARGEDESCRIPTION>AMAZON #284</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>39.78</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-09-07</CHARGEDATE>
+                <CHARGEDESCRIPTION>DIRECTV</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>380.36</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-09-08</CHARGEDATE>
+                <CHARGEDESCRIPTION>SHELL OIL #737</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>20.69</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-09-08</CHARGEDATE>
+                <CHARGEDESCRIPTION>AT&amp;T WIRELESS</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>139.04</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-09-10</CHARGEDATE>
+                <CHARGEDESCRIPTION>WALGREEN'S #2300</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>189.02</CHARGEAMOUNT>
+            </CHARGE>
+        </TRANSACTIONS>
+    </STATEMENT>
+</CUSTOMER>
+<CUSTOMER customer_id="7">
+    <CUSTDETAIL>
+        <ACCOUNTNUMBER>4555-9999-0007</ACCOUNTNUMBER>
+        <INTERNALREF>XNS0150150_4282620_030119255</INTERNALREF>
+        <FORNAME>Andreas</FORNAME>
+        <SURNAME>Figueroa</SURNAME>
+        <DOB>1955-07-05</DOB>
+        <ADDRESS1>255 Erie St.</ADDRESS1>
+        <ADDRESS2>New York </ADDRESS2>
+        <ADDRESS3>NY</ADDRESS3>
+        <ADDRESS4/>
+        <POSTCODE>10199</POSTCODE>
+        <TELEPHONE/>
+        <FAX/>
+        <EMAIL/>
+        <PROFILE/>
+        <MARKETING/>
+        <MESSAGE1/>
+        <MESSAGE2/>
+        <MESSAGE3/>
+    </CUSTDETAIL>
+    <CORPINFO>
+        <CUSTSERVICENUMBER>1-800-555-5550</CUSTSERVICENUMBER>
+        <COLLECTOUTSIDENA>(416) 555-5551</COLLECTOUTSIDENA>
+        <SELFSERVICE>1-877-555-5552</SELFSERVICE>
+        <TELEPHONEBANKING>1-800-555-5555</TELEPHONEBANKING>
+        <WEBSITE>www.xenos.com</WEBSITE>
+        <CORPADD1>2207 Bridgepointe Parkway, Suite 500</CORPADD1>
+        <CORPADD2>San Mateo</CORPADD2>
+        <CORPADD3>CA</CORPADD3>
+        <CORPADD4>USA</CORPADD4>
+        <CORPPOST>94404</CORPPOST>
+    </CORPINFO>
+    <STATEMENT Customer_id="7">
+        <STARTDATE>2010-08-13</STARTDATE>
+        <ENDDATE>2010-09-12</ENDDATE>
+        <PREVIOUSBALANCE>226.57</PREVIOUSBALANCE>
+        <PAYMENTSANDCREDITS>1800</PAYMENTSANDCREDITS>
+        <PURCHASESANDDEBTS>2780.48</PURCHASESANDDEBTS>
+        <CASHADVANCES>0</CASHADVANCES>
+        <FINANCECHARGES>19.10</FINANCECHARGES>
+        <NEWBALANCE>1226.15</NEWBALANCE>
+        <MINIMUMPAYMENT>25.00</MINIMUMPAYMENT>
+        <DUEDATE>2010-10-07</DUEDATE>
+        <TOTALCREDIT>20000.00</TOTALCREDIT>
+        <CREDITAVAILABLE>18773.85</CREDITAVAILABLE>
+        <CREDITFORCASH>8000.00</CREDITFORCASH>
+        <CASHAVAILABLE>8000.00</CASHAVAILABLE>
+        <PURCHASEBALANCERATE>0.00</PURCHASEBALANCERATE>
+        <PURCHASEPERIODRATE>1.58</PURCHASEPERIODRATE>
+        <PURCHASEAPR>18.99</PURCHASEAPR>
+        <PURCHASEFINANCECHARGE>19.10</PURCHASEFINANCECHARGE>
+        <CASHBALANCERATE>0.00</CASHBALANCERATE>
+        <CASHPERIODRATE>1.83</CASHPERIODRATE>
+        <CASHAPR>21.90</CASHAPR>
+        <CASHFINANCECHARGE>0.00</CASHFINANCECHARGE>
+        <TRANSACTIONS>
+            <TABLEDATA>
+                <FLOW>
+                    <DATE>2010-08-13</DATE>
+                    <VALUE>226.57</VALUE>
+                </FLOW>
+            </TABLEDATA>
+            <TABLEDATA>
+                <FLOW>
+                    <DATE>2010-07-13</DATE>
+                    <VALUE>356.98</VALUE>
+                </FLOW>
+            </TABLEDATA>
+            <TABLEDATA>
+                <FLOW>
+                    <DATE>2010-06-13</DATE>
+                    <VALUE>320.91</VALUE>
+                </FLOW>
+            </TABLEDATA>
+            <TABLEDATA>
+                <FLOW>
+                    <DATE>2010-05-13</DATE>
+                    <VALUE>234.00</VALUE>
+                </FLOW>
+            </TABLEDATA>
+            <TABLEDATA>
+                <FLOW>
+                    <DATE>2010-04-13</DATE>
+                    <VALUE>123.36</VALUE>
+                </FLOW>
+            </TABLEDATA>
+            <PAYMENT>
+                <PAYMENTDATE>2010-09-09</PAYMENTDATE>
+                <PAYMENTDESCRIPTION>PAYMENT RECEIVED - THANK YOU</PAYMENTDESCRIPTION>
+                <PAYMENTAMOUNT>1800.00</PAYMENTAMOUNT>
+            </PAYMENT>
+            <CHARGE>
+                <CHARGEDATE>2010-08-13</CHARGEDATE>
+                <CHARGEDESCRIPTION>STEVE MADDEN #1463</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>33.20</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-13</CHARGEDATE>
+                <CHARGEDESCRIPTION>ICHIBAN SUSHI #2227</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>256.02</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-13</CHARGEDATE>
+                <CHARGEDESCRIPTION>BATH AND BODY WORKS #1697</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>77.32</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-16</CHARGEDATE>
+                <CHARGEDESCRIPTION>EXXON #447</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>25.46</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-19</CHARGEDATE>
+                <CHARGEDESCRIPTION>MOBIL #111</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>65.70</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-19</CHARGEDATE>
+                <CHARGEDESCRIPTION>7-ELEVEN #2435</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>28.77</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-20</CHARGEDATE>
+                <CHARGEDESCRIPTION>DISH NETWORK</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>12.16</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-22</CHARGEDATE>
+                <CHARGEDESCRIPTION>AT&amp;T WIRELESS</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>25.44</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-22</CHARGEDATE>
+                <CHARGEDESCRIPTION>WILLIAMS SONOMA #1478</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>179.32</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-23</CHARGEDATE>
+                <CHARGEDESCRIPTION>EXPRESS #24</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>8.00</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-23</CHARGEDATE>
+                <CHARGEDESCRIPTION>BATH AND BODY WORKS #545</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>8.68</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-23</CHARGEDATE>
+                <CHARGEDESCRIPTION>WILLIAMS SONOMA #1478</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>29.55</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-24</CHARGEDATE>
+                <CHARGEDESCRIPTION>VERIZON WIRELESS</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>125.50</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-24</CHARGEDATE>
+                <CHARGEDESCRIPTION>KFC #714</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>87.04</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-25</CHARGEDATE>
+                <CHARGEDESCRIPTION>VICTORIA'S SECRET #1138</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>189.97</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-26</CHARGEDATE>
+                <CHARGEDESCRIPTION>SHELL OIL #2297</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>9.82</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-27</CHARGEDATE>
+                <CHARGEDESCRIPTION>TACO BELL #1999</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>57.67</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-28</CHARGEDATE>
+                <CHARGEDESCRIPTION>MOBIL #1429</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>31.79</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-28</CHARGEDATE>
+                <CHARGEDESCRIPTION>SHELL OIL #2297</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>30.32</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-28</CHARGEDATE>
+                <CHARGEDESCRIPTION>BURGER KING #800</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>881.64</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-29</CHARGEDATE>
+                <CHARGEDESCRIPTION>NORDSTROM #864</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>49.17</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-30</CHARGEDATE>
+                <CHARGEDESCRIPTION>EXXON #447</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>103.44</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-31</CHARGEDATE>
+                <CHARGEDESCRIPTION>TACO BELL #824</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>27.11</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-09-03</CHARGEDATE>
+                <CHARGEDESCRIPTION>SEARS #221</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>71.83</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-09-04</CHARGEDATE>
+                <CHARGEDESCRIPTION>EXXON #2079</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>36.45</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-09-06</CHARGEDATE>
+                <CHARGEDESCRIPTION>BATH AND BODY WORKS #913</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>107.42</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-09-07</CHARGEDATE>
+                <CHARGEDESCRIPTION>TGI FRIDAYS #2287</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>34.91</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-09-07</CHARGEDATE>
+                <CHARGEDESCRIPTION>MCDONALD'S #1456</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>35.77</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-09-07</CHARGEDATE>
+                <CHARGEDESCRIPTION>STEVE'S WINE AND SPIRITS</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>82.53</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-09-09</CHARGEDATE>
+                <CHARGEDESCRIPTION>AT&amp;T WIRELESS</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>68.48</CHARGEAMOUNT>
+            </CHARGE>
+        </TRANSACTIONS>
+    </STATEMENT>
+</CUSTOMER>
+<CUSTOMER customer_id="8">
+    <CUSTDETAIL>
+        <ACCOUNTNUMBER>4555-9999-0008</ACCOUNTNUMBER>
+        <INTERNALREF>XNS0150150_4282620_030119256</INTERNALREF>
+        <FORNAME>Mariam</FORNAME>
+        <SURNAME>Kemp</SURNAME>
+        <DOB>1964-12-08</DOB>
+        <ADDRESS1>255-5167 Lobortis Road</ADDRESS1>
+        <ADDRESS2>Raleigh</ADDRESS2>
+        <ADDRESS3>NC</ADDRESS3>
+        <ADDRESS4/>
+        <POSTCODE>27913</POSTCODE>
+        <TELEPHONE/>
+        <FAX/>
+        <EMAIL/>
+        <PROFILE/>
+        <MARKETING/>
+        <MESSAGE1/>
+        <MESSAGE2/>
+        <MESSAGE3/>
+    </CUSTDETAIL>
+    <CORPINFO>
+        <CUSTSERVICENUMBER>1-800-555-5550</CUSTSERVICENUMBER>
+        <COLLECTOUTSIDENA>(416) 555-5551</COLLECTOUTSIDENA>
+        <SELFSERVICE>1-877-555-5552</SELFSERVICE>
+        <TELEPHONEBANKING>1-800-555-5555</TELEPHONEBANKING>
+        <WEBSITE>www.xenos.com</WEBSITE>
+        <CORPADD1>2207 Bridgepointe Parkway, Suite 500</CORPADD1>
+        <CORPADD2>San Mateo</CORPADD2>
+        <CORPADD3>CA</CORPADD3>
+        <CORPADD4>USA</CORPADD4>
+        <CORPPOST>94404</CORPPOST>
+    </CORPINFO>
+    <STATEMENT Customer_id="8">
+        <STARTDATE>2010-08-13</STARTDATE>
+        <ENDDATE>2010-09-12</ENDDATE>
+        <PREVIOUSBALANCE>2226.11</PREVIOUSBALANCE>
+        <PAYMENTSANDCREDITS>2000</PAYMENTSANDCREDITS>
+        <PURCHASESANDDEBTS>2071.06</PURCHASESANDDEBTS>
+        <CASHADVANCES>0</CASHADVANCES>
+        <FINANCECHARGES>36.35</FINANCECHARGES>
+        <NEWBALANCE>2333.53</NEWBALANCE>
+        <MINIMUMPAYMENT>47.00</MINIMUMPAYMENT>
+        <DUEDATE>2010-10-07</DUEDATE>
+        <TOTALCREDIT>6000.00</TOTALCREDIT>
+        <CREDITAVAILABLE>3666.47</CREDITAVAILABLE>
+        <CREDITFORCASH>2500.00</CREDITFORCASH>
+        <CASHAVAILABLE>2500.00</CASHAVAILABLE>
+        <PURCHASEBALANCERATE>0.00</PURCHASEBALANCERATE>
+        <PURCHASEPERIODRATE>1.58</PURCHASEPERIODRATE>
+        <PURCHASEAPR>18.99</PURCHASEAPR>
+        <PURCHASEFINANCECHARGE>36.35</PURCHASEFINANCECHARGE>
+        <CASHBALANCERATE>0.00</CASHBALANCERATE>
+        <CASHPERIODRATE>1.83</CASHPERIODRATE>
+        <CASHAPR>21.90</CASHAPR>
+        <CASHFINANCECHARGE>0.00</CASHFINANCECHARGE>
+        <TRANSACTIONS>
+            <TABLEDATA>
+                <FLOW>
+                    <DATE>2010-08-13</DATE>
+                    <VALUE>2226.11</VALUE>
+                </FLOW>
+            </TABLEDATA>
+            <TABLEDATA>
+                <FLOW>
+                    <DATE>2010-07-13</DATE>
+                    <VALUE>1872.93</VALUE>
+                </FLOW>
+            </TABLEDATA>
+            <TABLEDATA>
+                <FLOW>
+                    <DATE>2010-06-13</DATE>
+                    <VALUE>1342.93</VALUE>
+                </FLOW>
+            </TABLEDATA>
+            <TABLEDATA>
+                <FLOW>
+                    <DATE>2010-05-13</DATE>
+                    <VALUE>1182.36</VALUE>
+                </FLOW>
+            </TABLEDATA>
+            <TABLEDATA>
+                <FLOW>
+                    <DATE>2010-04-13</DATE>
+                    <VALUE>942.09</VALUE>
+                </FLOW>
+            </TABLEDATA>
+            <PAYMENT>
+                <PAYMENTDATE>2010-08-24</PAYMENTDATE>
+                <PAYMENTDESCRIPTION>PAYMENT RECEIVED - THANK YOU</PAYMENTDESCRIPTION>
+                <PAYMENTAMOUNT>500.00</PAYMENTAMOUNT>
+            </PAYMENT>
+            <PAYMENT>
+                <PAYMENTDATE>2010-08-30</PAYMENTDATE>
+                <PAYMENTDESCRIPTION>PAYMENT RECEIVED - THANK YOU</PAYMENTDESCRIPTION>
+                <PAYMENTAMOUNT>800.00</PAYMENTAMOUNT>
+            </PAYMENT>
+            <PAYMENT>
+                <PAYMENTDATE>2010-09-03</PAYMENTDATE>
+                <PAYMENTDESCRIPTION>PAYMENT RECEIVED - THANK YOU</PAYMENTDESCRIPTION>
+                <PAYMENTAMOUNT>700.00</PAYMENTAMOUNT>
+            </PAYMENT>
+            <CHARGE>
+                <CHARGEDATE>2010-08-13</CHARGEDATE>
+                <CHARGEDESCRIPTION>THE GAP #686</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>63.82</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-13</CHARGEDATE>
+                <CHARGEDESCRIPTION>TACO BELL #1618</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>48.12</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-14</CHARGEDATE>
+                <CHARGEDESCRIPTION>DISH NETWORK</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>11.39</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-16</CHARGEDATE>
+                <CHARGEDESCRIPTION>MCDONALD'S #1456</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>120.44</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-17</CHARGEDATE>
+                <CHARGEDESCRIPTION>SEARS #1475</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>57.29</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-17</CHARGEDATE>
+                <CHARGEDESCRIPTION>MARSHALLS #1196</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>65.55</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-18</CHARGEDATE>
+                <CHARGEDESCRIPTION>STEVE MADDEN #1463</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>26.06</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-19</CHARGEDATE>
+                <CHARGEDESCRIPTION>JIFFY LUBE #1981</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>275.54</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-21</CHARGEDATE>
+                <CHARGEDESCRIPTION>SHELL OIL #2353</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>31.82</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-21</CHARGEDATE>
+                <CHARGEDESCRIPTION>SHELL OIL #737</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>177.22</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-24</CHARGEDATE>
+                <CHARGEDESCRIPTION>AT&amp;T WIRELESS</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>106.15</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-25</CHARGEDATE>
+                <CHARGEDESCRIPTION>OLD NAVY #569</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>79.29</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-26</CHARGEDATE>
+                <CHARGEDESCRIPTION>KFC #1454</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>54.61</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-29</CHARGEDATE>
+                <CHARGEDESCRIPTION>AT&amp;T WIRELESS</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>164.52</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-30</CHARGEDATE>
+                <CHARGEDESCRIPTION>EXXON #1937</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>25.07</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-31</CHARGEDATE>
+                <CHARGEDESCRIPTION>SHELL OIL #1703</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>13.81</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-09-04</CHARGEDATE>
+                <CHARGEDESCRIPTION>JIFFY LUBE #2401</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>159.00</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-09-06</CHARGEDATE>
+                <CHARGEDESCRIPTION>NINE WEST #96</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>19.86</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-09-08</CHARGEDATE>
+                <CHARGEDESCRIPTION>EXPRESS #2467</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>50.78</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-09-08</CHARGEDATE>
+                <CHARGEDESCRIPTION>DISNEY STORE #2236</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>45.63</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-09-08</CHARGEDATE>
+                <CHARGEDESCRIPTION>MACY'S #52</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>75.36</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-09-09</CHARGEDATE>
+                <CHARGEDESCRIPTION>DONNA'S SWEETS</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>285.18</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-09-09</CHARGEDATE>
+                <CHARGEDESCRIPTION>BEST BUY #2294</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>39.99</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-09-10</CHARGEDATE>
+                <CHARGEDESCRIPTION>TACO BELL #2084</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>32.16</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-09-11</CHARGEDATE>
+                <CHARGEDESCRIPTION>TACO BELL #2084</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>42.40</CHARGEAMOUNT>
+            </CHARGE>
+        </TRANSACTIONS>
+    </STATEMENT>
+</CUSTOMER>
+<CUSTOMER customer_id="9">
+    <CUSTDETAIL>
+        <ACCOUNTNUMBER>4555-9999-0009</ACCOUNTNUMBER>
+        <INTERNALREF>XNS0150150_4282620_030119257</INTERNALREF>
+        <FORNAME>Candace</FORNAME>
+        <SURNAME>Wallace</SURNAME>
+        <DOB>1963-03-02</DOB>
+        <ADDRESS1>271 Bibendum Av.</ADDRESS1>
+        <ADDRESS2>Toledo</ADDRESS2>
+        <ADDRESS3>OH</ADDRESS3>
+        <ADDRESS4/>
+        <POSTCODE>43601</POSTCODE>
+        <TELEPHONE/>
+        <FAX/>
+        <EMAIL/>
+        <PROFILE/>
+        <MARKETING/>
+        <MESSAGE1/>
+        <MESSAGE2/>
+        <MESSAGE3/>
+    </CUSTDETAIL>
+    <CORPINFO>
+        <CUSTSERVICENUMBER>1-800-555-5550</CUSTSERVICENUMBER>
+        <COLLECTOUTSIDENA>(416) 555-5551</COLLECTOUTSIDENA>
+        <SELFSERVICE>1-877-555-5552</SELFSERVICE>
+        <TELEPHONEBANKING>1-800-555-5555</TELEPHONEBANKING>
+        <WEBSITE>www.xenos.com</WEBSITE>
+        <CORPADD1>2207 Bridgepointe Parkway, Suite 500</CORPADD1>
+        <CORPADD2>San Mateo</CORPADD2>
+        <CORPADD3>CA</CORPADD3>
+        <CORPADD4>USA</CORPADD4>
+        <CORPPOST>94404</CORPPOST>
+    </CORPINFO>
+    <STATEMENT Customer_id="9">
+        <STARTDATE>2010-08-13</STARTDATE>
+        <ENDDATE>2010-09-12</ENDDATE>
+        <PREVIOUSBALANCE>1360.72</PREVIOUSBALANCE>
+        <PAYMENTSANDCREDITS>1300</PAYMENTSANDCREDITS>
+        <PURCHASESANDDEBTS>1017.82</PURCHASESANDDEBTS>
+        <CASHADVANCES>0</CASHADVANCES>
+        <FINANCECHARGES>17.07</FINANCECHARGES>
+        <NEWBALANCE>1095.61</NEWBALANCE>
+        <MINIMUMPAYMENT>22.00</MINIMUMPAYMENT>
+        <DUEDATE>2010-10-07</DUEDATE>
+        <TOTALCREDIT>18000.00</TOTALCREDIT>
+        <CREDITAVAILABLE>16904.39</CREDITAVAILABLE>
+        <CREDITFORCASH>7500.00</CREDITFORCASH>
+        <CASHAVAILABLE>7500.00</CASHAVAILABLE>
+        <PURCHASEBALANCERATE>0.00</PURCHASEBALANCERATE>
+        <PURCHASEPERIODRATE>1.58</PURCHASEPERIODRATE>
+        <PURCHASEAPR>18.99</PURCHASEAPR>
+        <PURCHASEFINANCECHARGE>17.07</PURCHASEFINANCECHARGE>
+        <CASHBALANCERATE>0.00</CASHBALANCERATE>
+        <CASHPERIODRATE>1.83</CASHPERIODRATE>
+        <CASHAPR>21.90</CASHAPR>
+        <CASHFINANCECHARGE>0.00</CASHFINANCECHARGE>
+        <TRANSACTIONS>
+            <TABLEDATA>
+                <FLOW>
+                    <DATE>2010-08-13</DATE>
+                    <VALUE>1360.72</VALUE>
+                </FLOW>
+            </TABLEDATA>
+            <TABLEDATA>
+                <FLOW>
+                    <DATE>2010-07-13</DATE>
+                    <VALUE>554.93</VALUE>
+                </FLOW>
+            </TABLEDATA>
+            <TABLEDATA>
+                <FLOW>
+                    <DATE>2010-06-13</DATE>
+                    <VALUE>0.00</VALUE>
+                </FLOW>
+            </TABLEDATA>
+            <TABLEDATA>
+                <FLOW>
+                    <DATE>2010-05-13</DATE>
+                    <VALUE>201.73</VALUE>
+                </FLOW>
+            </TABLEDATA>
+            <TABLEDATA>
+                <FLOW>
+                    <DATE>2010-04-13</DATE>
+                    <VALUE>335.93</VALUE>
+                </FLOW>
+            </TABLEDATA>
+            <PAYMENT>
+                <PAYMENTDATE>2010-08-21</PAYMENTDATE>
+                <PAYMENTDESCRIPTION>PAYMENT RECEIVED - THANK YOU</PAYMENTDESCRIPTION>
+                <PAYMENTAMOUNT>1300.00</PAYMENTAMOUNT>
+            </PAYMENT>
+            <CHARGE>
+                <CHARGEDATE>2010-08-13</CHARGEDATE>
+                <CHARGEDESCRIPTION>DIRECTV</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>147.15</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-15</CHARGEDATE>
+                <CHARGEDESCRIPTION>THE GAP #686</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>82.88</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-19</CHARGEDATE>
+                <CHARGEDESCRIPTION>MCDONALD'S #1456</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>59.48</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-22</CHARGEDATE>
+                <CHARGEDESCRIPTION>WILLIAMS SONOMA #1785</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>54.85</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-24</CHARGEDATE>
+                <CHARGEDESCRIPTION>EXXON #168</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>65.89</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-26</CHARGEDATE>
+                <CHARGEDESCRIPTION>STEVE'S WINE AND SPIRITS</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>162.04</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-27</CHARGEDATE>
+                <CHARGEDESCRIPTION>SHELL OIL #737</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>53.36</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-28</CHARGEDATE>
+                <CHARGEDESCRIPTION>BLOOMINGDALE'S #922</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>17.14</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-28</CHARGEDATE>
+                <CHARGEDESCRIPTION>TEXACO OIL #992</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>13.56</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-29</CHARGEDATE>
+                <CHARGEDESCRIPTION>MARSHALLS #1196</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>31.87</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-30</CHARGEDATE>
+                <CHARGEDESCRIPTION>SHELL OIL #737</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>64.06</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-09-01</CHARGEDATE>
+                <CHARGEDESCRIPTION>VERIZON WIRELESS</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>94.97</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-09-01</CHARGEDATE>
+                <CHARGEDESCRIPTION>AT&amp;T WIRELESS</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>8.16</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-09-07</CHARGEDATE>
+                <CHARGEDESCRIPTION>DISH NETWORK</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>58.68</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-09-08</CHARGEDATE>
+                <CHARGEDESCRIPTION>MOBIL #1429</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>62.88</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-09-08</CHARGEDATE>
+                <CHARGEDESCRIPTION>DONNA'S SWEETS</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>23.81</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-09-11</CHARGEDATE>
+                <CHARGEDESCRIPTION>SHELL OIL #245</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>17.04</CHARGEAMOUNT>
+            </CHARGE>
+        </TRANSACTIONS>
+    </STATEMENT>
+</CUSTOMER>
+<CUSTOMER customer_id="10">
+    <CUSTDETAIL>
+        <ACCOUNTNUMBER>4555-9999-0011</ACCOUNTNUMBER>
+        <INTERNALREF>XNS0150150_4282620_030119259</INTERNALREF>
+        <FORNAME>Gabina</FORNAME>
+        <SURNAME>Montano</SURNAME>
+        <DOB>1970-10-06</DOB>
+        <ADDRESS1>3297 Alvin St.</ADDRESS1>
+        <ADDRESS2>Dallas</ADDRESS2>
+        <ADDRESS3>TX</ADDRESS3>
+        <ADDRESS4/>
+        <POSTCODE>75260</POSTCODE>
+        <TELEPHONE/>
+        <FAX/>
+        <EMAIL/>
+        <PROFILE/>
+        <MARKETING/>
+        <MESSAGE1/>
+        <MESSAGE2/>
+        <MESSAGE3/>
+    </CUSTDETAIL>
+    <CORPINFO>
+        <CUSTSERVICENUMBER>1-800-555-5550</CUSTSERVICENUMBER>
+        <COLLECTOUTSIDENA>(416) 555-5551</COLLECTOUTSIDENA>
+        <SELFSERVICE>1-877-555-5552</SELFSERVICE>
+        <TELEPHONEBANKING>1-800-555-5555</TELEPHONEBANKING>
+        <WEBSITE>www.xenos.com</WEBSITE>
+        <CORPADD1>2207 Bridgepointe Parkway, Suite 500</CORPADD1>
+        <CORPADD2>San Mateo</CORPADD2>
+        <CORPADD3>CA</CORPADD3>
+        <CORPADD4>USA</CORPADD4>
+        <CORPPOST>94404</CORPPOST>
+    </CORPINFO>
+    <STATEMENT Customer_id="10">
+        <STARTDATE>2010-08-13</STARTDATE>
+        <ENDDATE>2010-09-12</ENDDATE>
+        <PREVIOUSBALANCE>8316.22</PREVIOUSBALANCE>
+        <PAYMENTSANDCREDITS>700</PAYMENTSANDCREDITS>
+        <PURCHASESANDDEBTS>1475.86</PURCHASESANDDEBTS>
+        <CASHADVANCES>0</CASHADVANCES>
+        <FINANCECHARGES>143.88</FINANCECHARGES>
+        <NEWBALANCE>9235.96</NEWBALANCE>
+        <MINIMUMPAYMENT>185.00</MINIMUMPAYMENT>
+        <DUEDATE>2010-10-07</DUEDATE>
+        <TOTALCREDIT>9000.00</TOTALCREDIT>
+        <CREDITAVAILABLE>235.96</CREDITAVAILABLE>
+        <CREDITFORCASH>4000.00</CREDITFORCASH>
+        <CASHAVAILABLE>235.96</CASHAVAILABLE>
+        <PURCHASEBALANCERATE>0.00</PURCHASEBALANCERATE>
+        <PURCHASEPERIODRATE>1.58</PURCHASEPERIODRATE>
+        <PURCHASEAPR>18.99</PURCHASEAPR>
+        <PURCHASEFINANCECHARGE>143.88</PURCHASEFINANCECHARGE>
+        <CASHBALANCERATE>0.00</CASHBALANCERATE>
+        <CASHPERIODRATE>1.83</CASHPERIODRATE>
+        <CASHAPR>21.90</CASHAPR>
+        <CASHFINANCECHARGE>0.00</CASHFINANCECHARGE>
+        <TRANSACTIONS>
+            <TABLEDATA>
+                <FLOW>
+                    <DATE>2010-08-13</DATE>
+                    <VALUE>4746.84</VALUE>
+                </FLOW>
+            </TABLEDATA>
+            <TABLEDATA>
+                <FLOW>
+                    <DATE>2010-07-13</DATE>
+                    <VALUE>3432.93</VALUE>
+                </FLOW>
+            </TABLEDATA>
+            <TABLEDATA>
+                <FLOW>
+                    <DATE>2010-06-13</DATE>
+                    <VALUE>3874.62</VALUE>
+                </FLOW>
+            </TABLEDATA>
+            <TABLEDATA>
+                <FLOW>
+                    <DATE>2010-05-13</DATE>
+                    <VALUE>2992.25</VALUE>
+                </FLOW>
+            </TABLEDATA>
+            <TABLEDATA>
+                <FLOW>
+                    <DATE>2010-04-13</DATE>
+                    <VALUE>3126.12</VALUE>
+                </FLOW>
+            </TABLEDATA>
+            <PAYMENT>
+                <PAYMENTDATE>2010-08-23</PAYMENTDATE>
+                <PAYMENTDESCRIPTION>PAYMENT RECEIVED - THANK YOU</PAYMENTDESCRIPTION>
+                <PAYMENTAMOUNT>600.00</PAYMENTAMOUNT>
+            </PAYMENT>
+            <PAYMENT>
+                <PAYMENTDATE>2010-09-06</PAYMENTDATE>
+                <PAYMENTDESCRIPTION>PAYMENT RECEIVED - THANK YOU</PAYMENTDESCRIPTION>
+                <PAYMENTAMOUNT>100.00</PAYMENTAMOUNT>
+            </PAYMENT>
+            <CHARGE>
+                <CHARGEDATE>2010-08-13</CHARGEDATE>
+                <CHARGEDESCRIPTION>PAYLESS SHOES #1355</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>132.65</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-14</CHARGEDATE>
+                <CHARGEDESCRIPTION>OLD NAVY #1820</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>77.97</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-15</CHARGEDATE>
+                <CHARGEDESCRIPTION>STEVE MADDEN #532</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>97.89</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-19</CHARGEDATE>
+                <CHARGEDESCRIPTION>TEXACO OIL #2002</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>14.18</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-20</CHARGEDATE>
+                <CHARGEDESCRIPTION>JACK-IN-THE-BOX #1441</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>80.73</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-24</CHARGEDATE>
+                <CHARGEDESCRIPTION>DISH NETWORK</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>19.41</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-25</CHARGEDATE>
+                <CHARGEDESCRIPTION>NORDSTROM #864</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>64.53</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-26</CHARGEDATE>
+                <CHARGEDESCRIPTION>NIKESTORE #117</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>24.00</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-28</CHARGEDATE>
+                <CHARGEDESCRIPTION>BATH AND BODY WORKS #1697</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>16.17</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-29</CHARGEDATE>
+                <CHARGEDESCRIPTION>JACK-IN-THE-BOX #1441</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>33.67</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-30</CHARGEDATE>
+                <CHARGEDESCRIPTION>KFC #714</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>157.11</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-09-01</CHARGEDATE>
+                <CHARGEDESCRIPTION>EXXON #447</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>38.05</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-09-04</CHARGEDATE>
+                <CHARGEDESCRIPTION>BED, BATH AND BEYOND #1861</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>18.54</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-09-06</CHARGEDATE>
+                <CHARGEDESCRIPTION>MARSHALLS #1196</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>164.20</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-09-07</CHARGEDATE>
+                <CHARGEDESCRIPTION>DISH NETWORK</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>35.05</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-09-08</CHARGEDATE>
+                <CHARGEDESCRIPTION>MCDONALD'S #990</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>76.79</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-09-08</CHARGEDATE>
+                <CHARGEDESCRIPTION>EXXON #447</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>189.00</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-09-09</CHARGEDATE>
+                <CHARGEDESCRIPTION>BEST BUY #1950</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>13.58</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-09-10</CHARGEDATE>
+                <CHARGEDESCRIPTION>DISNEY STORE #17</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>26.87</CHARGEAMOUNT>
+            </CHARGE>
+        </TRANSACTIONS>
+    </STATEMENT>
+</CUSTOMER>
+<CUSTOMER customer_id="11">
+    <CUSTDETAIL>
+        <ACCOUNTNUMBER>4555-9999-0012</ACCOUNTNUMBER>
+        <INTERNALREF>XNS0150150_4282620_030119260</INTERNALREF>
+        <FORNAME>Evangeline</FORNAME>
+        <SURNAME>Morrow</SURNAME>
+        <DOB>1966-05-03</DOB>
+        <ADDRESS1>3298 Cider Street</ADDRESS1>
+        <ADDRESS2>Arlington </ADDRESS2>
+        <ADDRESS3>TX</ADDRESS3>
+        <ADDRESS4/>
+        <POSTCODE>76004</POSTCODE>
+        <TELEPHONE/>
+        <FAX/>
+        <EMAIL/>
+        <PROFILE/>
+        <MARKETING/>
+        <MESSAGE1/>
+        <MESSAGE2/>
+        <MESSAGE3/>
+    </CUSTDETAIL>
+    <CORPINFO>
+        <CUSTSERVICENUMBER>1-800-555-5550</CUSTSERVICENUMBER>
+        <COLLECTOUTSIDENA>(416) 555-5551</COLLECTOUTSIDENA>
+        <SELFSERVICE>1-877-555-5552</SELFSERVICE>
+        <TELEPHONEBANKING>1-800-555-5555</TELEPHONEBANKING>
+        <WEBSITE>www.xenos.com</WEBSITE>
+        <CORPADD1>2207 Bridgepointe Parkway, Suite 500</CORPADD1>
+        <CORPADD2>San Mateo</CORPADD2>
+        <CORPADD3>CA</CORPADD3>
+        <CORPADD4>USA</CORPADD4>
+        <CORPPOST>94404</CORPPOST>
+    </CORPINFO>
+    <STATEMENT Customer_id="11">
+        <STARTDATE>2010-08-13</STARTDATE>
+        <ENDDATE>2010-09-12</ENDDATE>
+        <PREVIOUSBALANCE>3441.61</PREVIOUSBALANCE>
+        <PAYMENTSANDCREDITS>1500</PAYMENTSANDCREDITS>
+        <PURCHASESANDDEBTS>2324.93</PURCHASESANDDEBTS>
+        <CASHADVANCES>0</CASHADVANCES>
+        <FINANCECHARGES>67.52</FINANCECHARGES>
+        <NEWBALANCE>4334.06</NEWBALANCE>
+        <MINIMUMPAYMENT>87.00</MINIMUMPAYMENT>
+        <DUEDATE>2010-10-07</DUEDATE>
+        <TOTALCREDIT>15000.00</TOTALCREDIT>
+        <CREDITAVAILABLE>10665.94</CREDITAVAILABLE>
+        <CREDITFORCASH>6000.00</CREDITFORCASH>
+        <CASHAVAILABLE>6000.00</CASHAVAILABLE>
+        <PURCHASEBALANCERATE>0.00</PURCHASEBALANCERATE>
+        <PURCHASEPERIODRATE>1.58</PURCHASEPERIODRATE>
+        <PURCHASEAPR>18.99</PURCHASEAPR>
+        <PURCHASEFINANCECHARGE>67.52</PURCHASEFINANCECHARGE>
+        <CASHBALANCERATE>0.00</CASHBALANCERATE>
+        <CASHPERIODRATE>1.83</CASHPERIODRATE>
+        <CASHAPR>21.90</CASHAPR>
+        <CASHFINANCECHARGE>0.00</CASHFINANCECHARGE>
+        <TRANSACTIONS>
+            <TABLEDATA>
+                <FLOW>
+                    <DATE>2010-08-13</DATE>
+                    <VALUE>8316.22</VALUE>
+                </FLOW>
+            </TABLEDATA>
+            <TABLEDATA>
+                <FLOW>
+                    <DATE>2010-07-13</DATE>
+                    <VALUE>7982.32</VALUE>
+                </FLOW>
+            </TABLEDATA>
+            <TABLEDATA>
+                <FLOW>
+                    <DATE>2010-06-13</DATE>
+                    <VALUE>7652.63</VALUE>
+                </FLOW>
+            </TABLEDATA>
+            <TABLEDATA>
+                <FLOW>
+                    <DATE>2010-05-13</DATE>
+                    <VALUE>6993.88</VALUE>
+                </FLOW>
+            </TABLEDATA>
+            <TABLEDATA>
+                <FLOW>
+                    <DATE>2010-04-13</DATE>
+                    <VALUE>5763.92</VALUE>
+                </FLOW>
+            </TABLEDATA>
+            <PAYMENT>
+                <PAYMENTDATE>2010-08-24</PAYMENTDATE>
+                <PAYMENTDESCRIPTION>PAYMENT RECEIVED - THANK YOU</PAYMENTDESCRIPTION>
+                <PAYMENTAMOUNT>1500.00</PAYMENTAMOUNT>
+            </PAYMENT>
+            <CHARGE>
+                <CHARGEDATE>2010-08-13</CHARGEDATE>
+                <CHARGEDESCRIPTION>STEVE MADDEN #532</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>23.58</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-18</CHARGEDATE>
+                <CHARGEDESCRIPTION>EXPRESS #24</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>53.28</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-18</CHARGEDATE>
+                <CHARGEDESCRIPTION>BLOOMINGDALE'S #405</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>59.67</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-19</CHARGEDATE>
+                <CHARGEDESCRIPTION>JOE'S GARAGE</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>59.70</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-26</CHARGEDATE>
+                <CHARGEDESCRIPTION>BEST BUY #959</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>54.30</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-26</CHARGEDATE>
+                <CHARGEDESCRIPTION>TEXACO OIL #244</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>84.08</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-28</CHARGEDATE>
+                <CHARGEDESCRIPTION>TACO BELL #824</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>24.82</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-29</CHARGEDATE>
+                <CHARGEDESCRIPTION>PAYLESS SHOES #1943</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>71.63</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-29</CHARGEDATE>
+                <CHARGEDESCRIPTION>DIRECTV</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>62.79</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-30</CHARGEDATE>
+                <CHARGEDESCRIPTION>TEXACO OIL #1097</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>14.43</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-30</CHARGEDATE>
+                <CHARGEDESCRIPTION>VERIZON WIRELESS</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>116.77</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-30</CHARGEDATE>
+                <CHARGEDESCRIPTION>VERIZON WIRELESS</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>145.92</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-30</CHARGEDATE>
+                <CHARGEDESCRIPTION>THE GAP #2129</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>84.98</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-09-01</CHARGEDATE>
+                <CHARGEDESCRIPTION>MCDONALD'S #2497</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>14.22</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-09-04</CHARGEDATE>
+                <CHARGEDESCRIPTION>DIRECTV</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>17.69</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-09-06</CHARGEDATE>
+                <CHARGEDESCRIPTION>NINE WEST #1698</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>85.53</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-09-07</CHARGEDATE>
+                <CHARGEDESCRIPTION>SHELL OIL #2297</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>32.22</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-09-08</CHARGEDATE>
+                <CHARGEDESCRIPTION>TACO BELL #2084</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>41.00</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-09-09</CHARGEDATE>
+                <CHARGEDESCRIPTION>SHELL OIL #2144</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>392.08</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-09-10</CHARGEDATE>
+                <CHARGEDESCRIPTION>SHELL OIL #737</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>15.33</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-09-10</CHARGEDATE>
+                <CHARGEDESCRIPTION>SEARS #134</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>21.84</CHARGEAMOUNT>
+            </CHARGE>
+        </TRANSACTIONS>
+    </STATEMENT>
+</CUSTOMER>
+<CUSTOMER customer_id="12">
+    <CUSTDETAIL>
+        <ACCOUNTNUMBER>4555-9999-0013</ACCOUNTNUMBER>
+        <INTERNALREF>XNS0150150_4282620_030119261</INTERNALREF>
+        <FORNAME>Stewart</FORNAME>
+        <SURNAME>Valdez</SURNAME>
+        <DOB>1971-07-11</DOB>
+        <ADDRESS1>346 Ornare Av.</ADDRESS1>
+        <ADDRESS2>Seattle</ADDRESS2>
+        <ADDRESS3>WA</ADDRESS3>
+        <ADDRESS4/>
+        <POSTCODE>98108</POSTCODE>
+        <TELEPHONE/>
+        <FAX/>
+        <EMAIL/>
+        <PROFILE/>
+        <MARKETING/>
+        <MESSAGE1/>
+        <MESSAGE2/>
+        <MESSAGE3/>
+    </CUSTDETAIL>
+    <CORPINFO>
+        <CUSTSERVICENUMBER>1-800-555-5550</CUSTSERVICENUMBER>
+        <COLLECTOUTSIDENA>(416) 555-5551</COLLECTOUTSIDENA>
+        <SELFSERVICE>1-877-555-5552</SELFSERVICE>
+        <TELEPHONEBANKING>1-800-555-5555</TELEPHONEBANKING>
+        <WEBSITE>www.xenos.com</WEBSITE>
+        <CORPADD1>2207 Bridgepointe Parkway, Suite 500</CORPADD1>
+        <CORPADD2>San Mateo</CORPADD2>
+        <CORPADD3>CA</CORPADD3>
+        <CORPADD4>USA</CORPADD4>
+        <CORPPOST>94404</CORPPOST>
+    </CORPINFO>
+    <STATEMENT Customer_id="12">
+        <STARTDATE>2010-08-13</STARTDATE>
+        <ENDDATE>2010-09-12</ENDDATE>
+        <PREVIOUSBALANCE>978.98</PREVIOUSBALANCE>
+        <PAYMENTSANDCREDITS>1600</PAYMENTSANDCREDITS>
+        <PURCHASESANDDEBTS>1796.54</PURCHASESANDDEBTS>
+        <CASHADVANCES>0</CASHADVANCES>
+        <FINANCECHARGES>18.60</FINANCECHARGES>
+        <NEWBALANCE>1194.13</NEWBALANCE>
+        <MINIMUMPAYMENT>24.00</MINIMUMPAYMENT>
+        <DUEDATE>2010-10-07</DUEDATE>
+        <TOTALCREDIT>2500.00</TOTALCREDIT>
+        <CREDITAVAILABLE>1305.87</CREDITAVAILABLE>
+        <CREDITFORCASH>500.00</CREDITFORCASH>
+        <CASHAVAILABLE>500.00</CASHAVAILABLE>
+        <PURCHASEBALANCERATE>0.00</PURCHASEBALANCERATE>
+        <PURCHASEPERIODRATE>1.58</PURCHASEPERIODRATE>
+        <PURCHASEAPR>18.99</PURCHASEAPR>
+        <PURCHASEFINANCECHARGE>18.60</PURCHASEFINANCECHARGE>
+        <CASHBALANCERATE>0.00</CASHBALANCERATE>
+        <CASHPERIODRATE>1.83</CASHPERIODRATE>
+        <CASHAPR>21.90</CASHAPR>
+        <CASHFINANCECHARGE>0.00</CASHFINANCECHARGE>
+        <TRANSACTIONS>
+            <TABLEDATA>
+                <FLOW>
+                    <DATE>2010-08-13</DATE>
+                    <VALUE>3441.61</VALUE>
+                </FLOW>
+            </TABLEDATA>
+            <TABLEDATA>
+                <FLOW>
+                    <DATE>2010-07-13</DATE>
+                    <VALUE>2880.02</VALUE>
+                </FLOW>
+            </TABLEDATA>
+            <TABLEDATA>
+                <FLOW>
+                    <DATE>2010-06-13</DATE>
+                    <VALUE>2092.34</VALUE>
+                </FLOW>
+            </TABLEDATA>
+            <TABLEDATA>
+                <FLOW>
+                    <DATE>2010-05-13</DATE>
+                    <VALUE>1802.80</VALUE>
+                </FLOW>
+            </TABLEDATA>
+            <TABLEDATA>
+                <FLOW>
+                    <DATE>2010-04-13</DATE>
+                    <VALUE>1342.75</VALUE>
+                </FLOW>
+            </TABLEDATA>
+            <PAYMENT>
+                <PAYMENTDATE>2010-08-29</PAYMENTDATE>
+                <PAYMENTDESCRIPTION>PAYMENT RECEIVED - THANK YOU</PAYMENTDESCRIPTION>
+                <PAYMENTAMOUNT>1600.00</PAYMENTAMOUNT>
+            </PAYMENT>
+            <CHARGE>
+                <CHARGEDATE>2010-08-14</CHARGEDATE>
+                <CHARGEDESCRIPTION>BATH AND BODY WORKS #1141</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>73.90</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-15</CHARGEDATE>
+                <CHARGEDESCRIPTION>MOBIL #814</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>39.05</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-15</CHARGEDATE>
+                <CHARGEDESCRIPTION>ALDO #828</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>37.27</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-15</CHARGEDATE>
+                <CHARGEDESCRIPTION>BED, BATH AND BEYOND #1804</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>36.87</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-15</CHARGEDATE>
+                <CHARGEDESCRIPTION>SHELL OIL #2353</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>36.14</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-16</CHARGEDATE>
+                <CHARGEDESCRIPTION>STEVE'S WINE AND SPIRITS</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>301.14</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-16</CHARGEDATE>
+                <CHARGEDESCRIPTION>MARSHALLS #1196</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>125.92</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-16</CHARGEDATE>
+                <CHARGEDESCRIPTION>JACK-IN-THE-BOX #823</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>31.06</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-17</CHARGEDATE>
+                <CHARGEDESCRIPTION>KFC #614</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>99.23</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-19</CHARGEDATE>
+                <CHARGEDESCRIPTION>VICTORIA'S SECRET #608</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>173.75</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-22</CHARGEDATE>
+                <CHARGEDESCRIPTION>SHELL OIL #2304</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>144.56</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-23</CHARGEDATE>
+                <CHARGEDESCRIPTION>SHELL OIL #2253</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>53.39</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-25</CHARGEDATE>
+                <CHARGEDESCRIPTION>SHELL OIL #2353</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>119.93</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-26</CHARGEDATE>
+                <CHARGEDESCRIPTION>TACO BELL #435</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>31.62</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-28</CHARGEDATE>
+                <CHARGEDESCRIPTION>WALGREEN'S #2337</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>146.92</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-30</CHARGEDATE>
+                <CHARGEDESCRIPTION>7-ELEVEN #742</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>48.07</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-31</CHARGEDATE>
+                <CHARGEDESCRIPTION>BARNES &amp; NOBLE #1119</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>52.00</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-09-01</CHARGEDATE>
+                <CHARGEDESCRIPTION>EXXON #400</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>39.61</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-09-02</CHARGEDATE>
+                <CHARGEDESCRIPTION>MOBIL #309</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>84.72</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-09-02</CHARGEDATE>
+                <CHARGEDESCRIPTION>STEVE'S WINE AND SPIRITS</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>8.21</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-09-03</CHARGEDATE>
+                <CHARGEDESCRIPTION>EXPRESS #1520</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>48.60</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-09-04</CHARGEDATE>
+                <CHARGEDESCRIPTION>MOBIL #975</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>63.09</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-09-04</CHARGEDATE>
+                <CHARGEDESCRIPTION>BED, BATH AND BEYOND #592</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>5.41</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-09-06</CHARGEDATE>
+                <CHARGEDESCRIPTION>AT&amp;T WIRELESS</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>137.74</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-09-06</CHARGEDATE>
+                <CHARGEDESCRIPTION>NINE WEST #96</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>12.18</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-09-06</CHARGEDATE>
+                <CHARGEDESCRIPTION>PAYLESS SHOES #1476</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>149.60</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-09-07</CHARGEDATE>
+                <CHARGEDESCRIPTION>EXPRESS #1520</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>49.70</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-09-09</CHARGEDATE>
+                <CHARGEDESCRIPTION>BURGER KING #800</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>29.45</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-09-11</CHARGEDATE>
+                <CHARGEDESCRIPTION>NINE WEST #1698</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>145.80</CHARGEAMOUNT>
+            </CHARGE>
+        </TRANSACTIONS>
+    </STATEMENT>
+</CUSTOMER>
+<CUSTOMER customer_id="13">
+    <CUSTDETAIL>
+        <ACCOUNTNUMBER>4555-9999-0014</ACCOUNTNUMBER>
+        <INTERNALREF>XNS0150150_4282620_030119262</INTERNALREF>
+        <FORNAME>Seth</FORNAME>
+        <SURNAME>Soto</SURNAME>
+        <DOB>1970-05-08</DOB>
+        <ADDRESS1>391-6175 Sagittis Rd.</ADDRESS1>
+        <ADDRESS2>Norfolk</ADDRESS2>
+        <ADDRESS3>VA</ADDRESS3>
+        <ADDRESS4/>
+        <POSTCODE>23707</POSTCODE>
+        <TELEPHONE/>
+        <FAX/>
+        <EMAIL/>
+        <PROFILE/>
+        <MARKETING/>
+        <MESSAGE1/>
+        <MESSAGE2/>
+        <MESSAGE3/>
+    </CUSTDETAIL>
+    <CORPINFO>
+        <CUSTSERVICENUMBER>1-800-555-5550</CUSTSERVICENUMBER>
+        <COLLECTOUTSIDENA>(416) 555-5551</COLLECTOUTSIDENA>
+        <SELFSERVICE>1-877-555-5552</SELFSERVICE>
+        <TELEPHONEBANKING>1-800-555-5555</TELEPHONEBANKING>
+        <WEBSITE>www.xenos.com</WEBSITE>
+        <CORPADD1>2207 Bridgepointe Parkway, Suite 500</CORPADD1>
+        <CORPADD2>San Mateo</CORPADD2>
+        <CORPADD3>CA</CORPADD3>
+        <CORPADD4>USA</CORPADD4>
+        <CORPPOST>94404</CORPPOST>
+    </CORPINFO>
+    <STATEMENT Customer_id="13">
+        <STARTDATE>2010-08-13</STARTDATE>
+        <ENDDATE>2010-09-12</ENDDATE>
+        <PREVIOUSBALANCE>1731.57</PREVIOUSBALANCE>
+        <PAYMENTSANDCREDITS>1800</PAYMENTSANDCREDITS>
+        <PURCHASESANDDEBTS>2704.39</PURCHASESANDDEBTS>
+        <CASHADVANCES>0</CASHADVANCES>
+        <FINANCECHARGES>41.71</FINANCECHARGES>
+        <NEWBALANCE>2677.67</NEWBALANCE>
+        <MINIMUMPAYMENT>54.00</MINIMUMPAYMENT>
+        <DUEDATE>2010-10-07</DUEDATE>
+        <TOTALCREDIT>15000.00</TOTALCREDIT>
+        <CREDITAVAILABLE>12322.33</CREDITAVAILABLE>
+        <CREDITFORCASH>5000.00</CREDITFORCASH>
+        <CASHAVAILABLE>5000.00</CASHAVAILABLE>
+        <PURCHASEBALANCERATE>0.00</PURCHASEBALANCERATE>
+        <PURCHASEPERIODRATE>1.58</PURCHASEPERIODRATE>
+        <PURCHASEAPR>18.99</PURCHASEAPR>
+        <PURCHASEFINANCECHARGE>41.71</PURCHASEFINANCECHARGE>
+        <CASHBALANCERATE>0.00</CASHBALANCERATE>
+        <CASHPERIODRATE>1.83</CASHPERIODRATE>
+        <CASHAPR>21.90</CASHAPR>
+        <CASHFINANCECHARGE>0.00</CASHFINANCECHARGE>
+        <TRANSACTIONS>
+            <TABLEDATA>
+                <FLOW>
+                    <DATE>2010-08-13</DATE>
+                    <VALUE>978.98</VALUE>
+                </FLOW>
+            </TABLEDATA>
+            <TABLEDATA>
+                <FLOW>
+                    <DATE>2010-07-13</DATE>
+                    <VALUE>1200.92</VALUE>
+                </FLOW>
+            </TABLEDATA>
+            <TABLEDATA>
+                <FLOW>
+                    <DATE>2010-06-13</DATE>
+                    <VALUE>1502.31</VALUE>
+                </FLOW>
+            </TABLEDATA>
+            <TABLEDATA>
+                <FLOW>
+                    <DATE>2010-05-13</DATE>
+                    <VALUE>903.74</VALUE>
+                </FLOW>
+            </TABLEDATA>
+            <TABLEDATA>
+                <FLOW>
+                    <DATE>2010-04-13</DATE>
+                    <VALUE>724.25</VALUE>
+                </FLOW>
+            </TABLEDATA>
+            <PAYMENT>
+                <PAYMENTDATE>2010-08-01</PAYMENTDATE>
+                <PAYMENTDESCRIPTION>PAYMENT WAS MISSED</PAYMENTDESCRIPTION>
+                <PAYMENTAMOUNT>0.00</PAYMENTAMOUNT>
+            </PAYMENT>
+            <CHARGE>
+                <CHARGEDATE>2010-08-14</CHARGEDATE>
+                <CHARGEDESCRIPTION>EXXON #400</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>31.48</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-14</CHARGEDATE>
+                <CHARGEDESCRIPTION>AT&amp;T WIRELESS</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>185.86</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-18</CHARGEDATE>
+                <CHARGEDESCRIPTION>DISNEY STORE #17</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>66.78</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-19</CHARGEDATE>
+                <CHARGEDESCRIPTION>EXXON #334</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>119.59</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-21</CHARGEDATE>
+                <CHARGEDESCRIPTION>SHELL OIL #1703</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>56.82</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-22</CHARGEDATE>
+                <CHARGEDESCRIPTION>DISNEY STORE #17</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>180.20</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-25</CHARGEDATE>
+                <CHARGEDESCRIPTION>SPRINT WIRELESS #117</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>62.80</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-26</CHARGEDATE>
+                <CHARGEDESCRIPTION>MCDONALD'S #2497</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>25.53</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-28</CHARGEDATE>
+                <CHARGEDESCRIPTION>MCDONALD'S #990</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>100.28</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-28</CHARGEDATE>
+                <CHARGEDESCRIPTION>BURGER KING #800</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>37.01</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-29</CHARGEDATE>
+                <CHARGEDESCRIPTION>PAYLESS SHOES #1355</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>32.41</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-30</CHARGEDATE>
+                <CHARGEDESCRIPTION>BLOOMINGDALE'S #405</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>72.74</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-30</CHARGEDATE>
+                <CHARGEDESCRIPTION>MOBIL #814</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>64.61</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-09-01</CHARGEDATE>
+                <CHARGEDESCRIPTION>KFC #614</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>203.83</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-09-03</CHARGEDATE>
+                <CHARGEDESCRIPTION>JIFFY LUBE #676</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>42.45</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-09-04</CHARGEDATE>
+                <CHARGEDESCRIPTION>STEVE'S WINE AND SPIRITS</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>8.10</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-09-05</CHARGEDATE>
+                <CHARGEDESCRIPTION>BURGER KING #1858</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>68.16</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-09-07</CHARGEDATE>
+                <CHARGEDESCRIPTION>SPRINT WIRELESS #117</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>187.71</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-09-07</CHARGEDATE>
+                <CHARGEDESCRIPTION>JIFFY LUBE #2401</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>40.75</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-09-08</CHARGEDATE>
+                <CHARGEDESCRIPTION>MARSHALLS #1196</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>8.39</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-09-08</CHARGEDATE>
+                <CHARGEDESCRIPTION>BATH AND BODY WORKS #913</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>61.11</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-09-10</CHARGEDATE>
+                <CHARGEDESCRIPTION>SHELL OIL #2165</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>11.82</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-09-10</CHARGEDATE>
+                <CHARGEDESCRIPTION>BEST BUY #959</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>63.82</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-09-11</CHARGEDATE>
+                <CHARGEDESCRIPTION>BURGER KING #800</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>64.29</CHARGEAMOUNT>
+            </CHARGE>
+        </TRANSACTIONS>
+    </STATEMENT>
+</CUSTOMER>
+<CUSTOMER customer_id="14">
+    <CUSTDETAIL>
+        <ACCOUNTNUMBER>4555-9999-0015</ACCOUNTNUMBER>
+        <INTERNALREF>XNS0150150_4282620_030119263</INTERNALREF>
+        <FORNAME>Maxine</FORNAME>
+        <SURNAME>Powers</SURNAME>
+        <DOB>1978-03-09</DOB>
+        <ADDRESS1>4012 Dollar St.</ADDRESS1>
+        <ADDRESS2>New Orleans</ADDRESS2>
+        <ADDRESS3>LA</ADDRESS3>
+        <ADDRESS4/>
+        <POSTCODE>70113</POSTCODE>
+        <TELEPHONE/>
+        <FAX/>
+        <EMAIL/>
+        <PROFILE/>
+        <MARKETING/>
+        <MESSAGE1/>
+        <MESSAGE2/>
+        <MESSAGE3/>
+    </CUSTDETAIL>
+    <CORPINFO>
+        <CUSTSERVICENUMBER>1-800-555-5550</CUSTSERVICENUMBER>
+        <COLLECTOUTSIDENA>(416) 555-5551</COLLECTOUTSIDENA>
+        <SELFSERVICE>1-877-555-5552</SELFSERVICE>
+        <TELEPHONEBANKING>1-800-555-5555</TELEPHONEBANKING>
+        <WEBSITE>www.xenos.com</WEBSITE>
+        <CORPADD1>2207 Bridgepointe Parkway, Suite 500</CORPADD1>
+        <CORPADD2>San Mateo</CORPADD2>
+        <CORPADD3>CA</CORPADD3>
+        <CORPADD4>USA</CORPADD4>
+        <CORPPOST>94404</CORPPOST>
+    </CORPINFO>
+    <STATEMENT Customer_id="14">
+        <STARTDATE>2010-08-13</STARTDATE>
+        <ENDDATE>2010-09-12</ENDDATE>
+        <PREVIOUSBALANCE>2498.50</PREVIOUSBALANCE>
+        <PAYMENTSANDCREDITS>2100</PAYMENTSANDCREDITS>
+        <PURCHASESANDDEBTS>2257.27</PURCHASESANDDEBTS>
+        <CASHADVANCES>0</CASHADVANCES>
+        <FINANCECHARGES>42.03</FINANCECHARGES>
+        <NEWBALANCE>2697.80</NEWBALANCE>
+        <MINIMUMPAYMENT>54.00</MINIMUMPAYMENT>
+        <DUEDATE>2010-10-07</DUEDATE>
+        <TOTALCREDIT>4000.00</TOTALCREDIT>
+        <CREDITAVAILABLE>1302.20</CREDITAVAILABLE>
+        <CREDITFORCASH>500.00</CREDITFORCASH>
+        <CASHAVAILABLE>500.00</CASHAVAILABLE>
+        <PURCHASEBALANCERATE>0.00</PURCHASEBALANCERATE>
+        <PURCHASEPERIODRATE>1.58</PURCHASEPERIODRATE>
+        <PURCHASEAPR>18.99</PURCHASEAPR>
+        <PURCHASEFINANCECHARGE>42.03</PURCHASEFINANCECHARGE>
+        <CASHBALANCERATE>0.00</CASHBALANCERATE>
+        <CASHPERIODRATE>1.83</CASHPERIODRATE>
+        <CASHAPR>21.90</CASHAPR>
+        <CASHFINANCECHARGE>0.00</CASHFINANCECHARGE>
+        <TRANSACTIONS>
+            <TABLEDATA>
+                <FLOW>
+                    <DATE>2010-08-13</DATE>
+                    <VALUE>1731.57</VALUE>
+                </FLOW>
+            </TABLEDATA>
+            <TABLEDATA>
+                <FLOW>
+                    <DATE>2010-07-13</DATE>
+                    <VALUE>1564.23</VALUE>
+                </FLOW>
+            </TABLEDATA>
+            <TABLEDATA>
+                <FLOW>
+                    <DATE>2010-06-13</DATE>
+                    <VALUE>1202.53</VALUE>
+                </FLOW>
+            </TABLEDATA>
+            <TABLEDATA>
+                <FLOW>
+                    <DATE>2010-05-13</DATE>
+                    <VALUE>896.93</VALUE>
+                </FLOW>
+            </TABLEDATA>
+            <TABLEDATA>
+                <FLOW>
+                    <DATE>2010-04-13</DATE>
+                    <VALUE>652.01</VALUE>
+                </FLOW>
+            </TABLEDATA>
+            <PAYMENT>
+                <PAYMENTDATE>2010-08-25</PAYMENTDATE>
+                <PAYMENTDESCRIPTION>PAYMENT RECEIVED - THANK YOU</PAYMENTDESCRIPTION>
+                <PAYMENTAMOUNT>1800.00</PAYMENTAMOUNT>
+            </PAYMENT>
+            <PAYMENT>
+                <PAYMENTDATE>2010-08-26</PAYMENTDATE>
+                <PAYMENTDESCRIPTION>PAYMENT RECEIVED - THANK YOU</PAYMENTDESCRIPTION>
+                <PAYMENTAMOUNT>900.00</PAYMENTAMOUNT>
+            </PAYMENT>
+            <PAYMENT>
+                <PAYMENTDATE>2010-09-01</PAYMENTDATE>
+                <PAYMENTDESCRIPTION>PAYMENT RECEIVED - THANK YOU</PAYMENTDESCRIPTION>
+                <PAYMENTAMOUNT>1200.00</PAYMENTAMOUNT>
+            </PAYMENT>
+            <CHARGE>
+                <CHARGEDATE>2010-08-14</CHARGEDATE>
+                <CHARGEDESCRIPTION>BATH AND BODY WORKS #545</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>207.87</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-14</CHARGEDATE>
+                <CHARGEDESCRIPTION>MOBIL #814</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>56.82</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-16</CHARGEDATE>
+                <CHARGEDESCRIPTION>SHELL OIL #2353</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>52.17</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-17</CHARGEDATE>
+                <CHARGEDESCRIPTION>MARSHALLS #1196</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>123.82</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-17</CHARGEDATE>
+                <CHARGEDESCRIPTION>TEXACO OIL #1786</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>62.62</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-17</CHARGEDATE>
+                <CHARGEDESCRIPTION>THE GAP #2129</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>306.54</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-17</CHARGEDATE>
+                <CHARGEDESCRIPTION>VERIZON WIRELESS</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>34.18</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-19</CHARGEDATE>
+                <CHARGEDESCRIPTION>MOBIL #111</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>125.24</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-23</CHARGEDATE>
+                <CHARGEDESCRIPTION>BATH AND BODY WORKS #913</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>12.20</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-23</CHARGEDATE>
+                <CHARGEDESCRIPTION>STEVE MADDEN #532</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>20.41</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-24</CHARGEDATE>
+                <CHARGEDESCRIPTION>SHELL OIL #1703</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>135.30</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-25</CHARGEDATE>
+                <CHARGEDESCRIPTION>SHELL OIL #2165</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>63.22</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-25</CHARGEDATE>
+                <CHARGEDESCRIPTION>BED, BATH AND BEYOND #2185</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>87.88</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-28</CHARGEDATE>
+                <CHARGEDESCRIPTION>BOB'S BAR AND GRILL</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>16.11</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-30</CHARGEDATE>
+                <CHARGEDESCRIPTION>DISH NETWORK</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>62.95</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-31</CHARGEDATE>
+                <CHARGEDESCRIPTION>EXXON #400</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>147.54</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-09-01</CHARGEDATE>
+                <CHARGEDESCRIPTION>EXPRESS #24</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>36.25</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-09-03</CHARGEDATE>
+                <CHARGEDESCRIPTION>BED, BATH AND BEYOND #1804</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>63.41</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-09-04</CHARGEDATE>
+                <CHARGEDESCRIPTION>JACK-IN-THE-BOX #1441</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>57.56</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-09-04</CHARGEDATE>
+                <CHARGEDESCRIPTION>TACO BELL #2084</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>458.22</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-09-07</CHARGEDATE>
+                <CHARGEDESCRIPTION>NIKESTORE #2424</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>56.13</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-09-09</CHARGEDATE>
+                <CHARGEDESCRIPTION>EXPRESS #1302</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>52.72</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-09-09</CHARGEDATE>
+                <CHARGEDESCRIPTION>DIRECTV</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>465.23</CHARGEAMOUNT>
+            </CHARGE>
+        </TRANSACTIONS>
+    </STATEMENT>
+</CUSTOMER>
+<CUSTOMER customer_id="15">
+    <CUSTDETAIL>
+        <ACCOUNTNUMBER>4555-9999-0017</ACCOUNTNUMBER>
+        <INTERNALREF>XNS0150150_4282620_030119265</INTERNALREF>
+        <FORNAME>Cameron</FORNAME>
+        <SURNAME>Fisher</SURNAME>
+        <DOB>1966-07-02</DOB>
+        <ADDRESS1>271 Bibendum Av.</ADDRESS1>
+        <ADDRESS2>Miami</ADDRESS2>
+        <ADDRESS3>FL</ADDRESS3>
+        <ADDRESS4/>
+        <POSTCODE>33152</POSTCODE>
+        <TELEPHONE/>
+        <FAX/>
+        <EMAIL/>
+        <PROFILE/>
+        <MARKETING/>
+        <MESSAGE1/>
+        <MESSAGE2/>
+        <MESSAGE3/>
+    </CUSTDETAIL>
+    <CORPINFO>
+        <CUSTSERVICENUMBER>1-800-555-5550</CUSTSERVICENUMBER>
+        <COLLECTOUTSIDENA>(416) 555-5551</COLLECTOUTSIDENA>
+        <SELFSERVICE>1-877-555-5552</SELFSERVICE>
+        <TELEPHONEBANKING>1-800-555-5555</TELEPHONEBANKING>
+        <WEBSITE>www.xenos.com</WEBSITE>
+        <CORPADD1>2207 Bridgepointe Parkway, Suite 500</CORPADD1>
+        <CORPADD2>San Mateo</CORPADD2>
+        <CORPADD3>CA</CORPADD3>
+        <CORPADD4>USA</CORPADD4>
+        <CORPPOST>94404</CORPPOST>
+    </CORPINFO>
+    <STATEMENT Customer_id="15">
+        <STARTDATE>2010-08-13</STARTDATE>
+        <ENDDATE>2010-09-12</ENDDATE>
+        <PREVIOUSBALANCE>6172.38</PREVIOUSBALANCE>
+        <PAYMENTSANDCREDITS>1450</PAYMENTSANDCREDITS>
+        <PURCHASESANDDEBTS>2008.76</PURCHASESANDDEBTS>
+        <CASHADVANCES>0</CASHADVANCES>
+        <FINANCECHARGES>55.53</FINANCECHARGES>
+        <NEWBALANCE>6786.68</NEWBALANCE>
+        <MINIMUMPAYMENT>136.00</MINIMUMPAYMENT>
+        <DUEDATE>2010-10-07</DUEDATE>
+        <TOTALCREDIT>35000.00</TOTALCREDIT>
+        <CREDITAVAILABLE>28213.32</CREDITAVAILABLE>
+        <CREDITFORCASH>15000.00</CREDITFORCASH>
+        <CASHAVAILABLE>15000.00</CASHAVAILABLE>
+        <PURCHASEBALANCERATE>0.00</PURCHASEBALANCERATE>
+        <PURCHASEPERIODRATE>0.83</PURCHASEPERIODRATE>
+        <PURCHASEAPR>9.90</PURCHASEAPR>
+        <PURCHASEFINANCECHARGE>55.53</PURCHASEFINANCECHARGE>
+        <CASHBALANCERATE>0.00</CASHBALANCERATE>
+        <CASHPERIODRATE>1.83</CASHPERIODRATE>
+        <CASHAPR>21.90</CASHAPR>
+        <CASHFINANCECHARGE>0.00</CASHFINANCECHARGE>
+        <TRANSACTIONS>
+            <TABLEDATA>
+                <FLOW>
+                    <DATE>2010-08-13</DATE>
+                    <VALUE>2498.50</VALUE>
+                </FLOW>
+            </TABLEDATA>
+            <TABLEDATA>
+                <FLOW>
+                    <DATE>2010-07-13</DATE>
+                    <VALUE>2263.23</VALUE>
+                </FLOW>
+            </TABLEDATA>
+            <TABLEDATA>
+                <FLOW>
+                    <DATE>2010-06-13</DATE>
+                    <VALUE>2595.92</VALUE>
+                </FLOW>
+            </TABLEDATA>
+            <TABLEDATA>
+                <FLOW>
+                    <DATE>2010-05-13</DATE>
+                    <VALUE>2102.40</VALUE>
+                </FLOW>
+            </TABLEDATA>
+            <TABLEDATA>
+                <FLOW>
+                    <DATE>2010-04-13</DATE>
+                    <VALUE>1972.42</VALUE>
+                </FLOW>
+            </TABLEDATA>
+            <PAYMENT>
+                <PAYMENTDATE>2010-08-30</PAYMENTDATE>
+                <PAYMENTDESCRIPTION>PAYMENT RECEIVED - THANK YOU</PAYMENTDESCRIPTION>
+                <PAYMENTAMOUNT>1450.00</PAYMENTAMOUNT>
+            </PAYMENT>
+            <CHARGE>
+                <CHARGEDATE>2010-08-13</CHARGEDATE>
+                <CHARGEDESCRIPTION>BLOOMINGDALE'S #922</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>61.77</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-15</CHARGEDATE>
+                <CHARGEDESCRIPTION>BED, BATH AND BEYOND #2185</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>172.19</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-16</CHARGEDATE>
+                <CHARGEDESCRIPTION>7-ELEVEN #742</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>56.87</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-17</CHARGEDATE>
+                <CHARGEDESCRIPTION>BOB'S BAR AND GRILL</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>68.47</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-22</CHARGEDATE>
+                <CHARGEDESCRIPTION>STEVE MADDEN #532</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>196.49</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-22</CHARGEDATE>
+                <CHARGEDESCRIPTION>BATH AND BODY WORKS #545</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>374.00</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-24</CHARGEDATE>
+                <CHARGEDESCRIPTION>DISH NETWORK</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>19.10</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-25</CHARGEDATE>
+                <CHARGEDESCRIPTION>COACH #1106</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>34.17</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-25</CHARGEDATE>
+                <CHARGEDESCRIPTION>TACO BELL #1618</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>52.78</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-25</CHARGEDATE>
+                <CHARGEDESCRIPTION>JIFFY LUBE #1920</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>20.89</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-26</CHARGEDATE>
+                <CHARGEDESCRIPTION>FOSSIL #1077</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>17.23</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-26</CHARGEDATE>
+                <CHARGEDESCRIPTION>BEST BUY #959</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>135.90</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-27</CHARGEDATE>
+                <CHARGEDESCRIPTION>OLD NAVY #569</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>89.35</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-28</CHARGEDATE>
+                <CHARGEDESCRIPTION>NORDSTROM #1563</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>145.49</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-28</CHARGEDATE>
+                <CHARGEDESCRIPTION>TOYS R US #2220</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>8.88</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-30</CHARGEDATE>
+                <CHARGEDESCRIPTION>NORDSTROM #370</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>52.57</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-08-31</CHARGEDATE>
+                <CHARGEDESCRIPTION>WILLIAMS SONOMA #1785</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>344.59</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-09-01</CHARGEDATE>
+                <CHARGEDESCRIPTION>VERIZON WIRELESS</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>26.79</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-09-01</CHARGEDATE>
+                <CHARGEDESCRIPTION>VICTORIA'S SECRET #507</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>38.05</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-09-03</CHARGEDATE>
+                <CHARGEDESCRIPTION>EXPRESS #2467</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>104.60</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-09-03</CHARGEDATE>
+                <CHARGEDESCRIPTION>BATH AND BODY WORKS #1697</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>128.19</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-09-04</CHARGEDATE>
+                <CHARGEDESCRIPTION>SEARS #1475</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>11.88</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-09-06</CHARGEDATE>
+                <CHARGEDESCRIPTION>KFC #714</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>44.13</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-09-08</CHARGEDATE>
+                <CHARGEDESCRIPTION>THE GAP #2129</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>37.10</CHARGEAMOUNT>
+            </CHARGE>
+            <CHARGE>
+                <CHARGEDATE>2010-09-11</CHARGEDATE>
+                <CHARGEDESCRIPTION>JIFFY LUBE #1920</CHARGEDESCRIPTION>
+                <CHARGEAMOUNT>15.79</CHARGEAMOUNT>
+            </CHARGE>
+        </TRANSACTIONS>
+    </STATEMENT>
+</CUSTOMER>
+</CCDATA>

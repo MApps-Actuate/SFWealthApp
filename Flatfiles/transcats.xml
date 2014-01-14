@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transcats>
+	<vendors>
+		<vendor name="WILLIAMS SONOMA" cat="Home" />
+		<vendor name="BATH AND BODY WORKS" cat="Home" />
+		<vendor name="KFC" cat="Restaurant" />
+		<vendor name="TACO BELL" cat="Restaurant" />
+		<vendor name="BURGER KING" cat="Restaurant" />
+		<vendor name="TGI FRIDAYS" cat="Restaurant" />
+		<vendor name="BOB'S BAR AND GRILL" cat="Restaurant" />
+		<vendor name="JACK-IN-THE-BOX" cat="Restaurant" />
+		<vendor name="MCDONALD'S" cat="Restaurant" />
+		<vendor name="ICHIBAN SUSHI" cat="Restaurant" />
+		<vendor name="FORMOSA CAFE" cat="Restaurant" />
+		<vendor name="STEVE'S WINE AND SPIRITS" cat="Restaurant" />
+		<vendor name="SHELL OIL" cat="Automobile" />
+		<vendor name="TEXACO OIL" cat="Automobile" />
+		<vendor name="MOBIL" cat="Automobile" />
+		<vendor name="JIFFY LUBE" cat="Automobile" />
+		<vendor name="EXXON" cat="Automobile" />
+		<vendor name="JOE'S GARAGE" cat="Automobile" />
+		<vendor name="VICTORIA'S SECRET" cat="Clothing and Personal" />
+		<vendor name="EXPRESS" cat="Clothing and Personal" />
+		<vendor name="BLOOMINGDALES" cat="Clothing and Personal" />
+		<vendor name="MACY'S" cat="Clothing and Personal" />
+		<vendor name="NIKESTORE" cat="Clothing and Personal" />
+		<vendor name="NINE WEST" cat="Clothing and Personal" />
+		<vendor name="OLD NAVY" cat="Clothing and Personal" />
+		<vendor name="COACH" cat="Clothing and Personal" />
+		<vendor name="NORDSTROM" cat="Clothing and Personal" />
+		<vendor name="MARSHALLS" cat="Clothing and Personal" />
+		<vendor name="PAYLESS SHOES" cat="Clothing and Personal" />
+		<vendor name="THE GAP" cat="Clothing and Personal" />
+		<vendor name="FOSSIL" cat="Clothing and Personal" />
+		<vendor name="AMAZON" cat="Discretionary" />
+		<vendor name="ALDO" cat="Discretionary" />
+		<vendor name="DONNA'S SWEETS" cat="Discretionary" />
+		<vendor name="DISH NETWORK" cat="Entertainment" />
+		<vendor name="DIRECTV" cat="Entertainment" />
+		<vendor name="BARNES &amp; NOBLE" cat="Entertainment" />
+		<vendor name="DISNEY STORE" cat="Entertainment" />
+		<vendor name="BEST BUY" cat="Entertainment" />
+		<vendor name="TOYS R US" cat="Entertainment" />
+		<vendor name="VERIZON WIRELESS" cat="Wireless" />
+		<vendor name="AT&amp;T WIRELESS" cat="Wireless" />
+		<vendor name="SPRINT WIRELESS" cat="Wireless" />
+		<vendor name="SEARS" cat="Misc" />
+		<vendor name="WALGREEN'S" cat="Misc" />
+		<vendor name="7-ELEVEN" cat="Misc" />
+	</vendors>
+</transcats>

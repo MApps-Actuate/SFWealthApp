@@ -10,8 +10,8 @@ if (user != null)
     <property name="bidiLayoutOrientation">ltr</property>
     <list-property name="libraries">
         <structure>
-            <property name="fileName">ThemesReportItems.rptlibrary</property>
-            <property name="namespace">ThemesReportItems</property>
+            <property name="fileName">ThemesReportItems3.rptlibrary</property>
+            <property name="namespace">ThemesReportItems3</property>
         </structure>
     </list-property>
     <parameters>
@@ -755,7 +755,7 @@ if (user != null)
                     <property name="dataType">decimal</property>
                 </structure>
             </list-property>
-            <property name="theme">ThemesReportItems.default-chart</property>
+            <property name="theme">ThemesReportItems3.Clean Blue</property>
         </extended-item>
     </body>
 </report>

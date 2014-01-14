@@ -5,12 +5,6 @@
     <property name="iconFile">/templates/blank_report.gif</property>
     <property name="bidiLayoutOrientation">ltr</property>
     <property name="imageDPI">96</property>
-    <list-property name="libraries">
-        <structure>
-            <property name="fileName">/ThemesReportItems.rptlibrary</property>
-            <property name="namespace">ThemesReportItems</property>
-        </structure>
-    </list-property>
     <method name="onContentUpdate"><![CDATA[var uiOptions = this.getViewer().getUIOptions();
 uiOptions.enableEditReport(false);
 uiOptions.enableDataExtraction(false);
