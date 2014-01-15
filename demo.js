@@ -14,6 +14,7 @@ $(document).ready(function(){
 		var dashboard = new actuate.Dashboard("dashboardDiv");
 		dashboard.setDashboardName(demoProps.dashboardName);			
 		dashboard.setHeight($(document).height() - 4);
+		dashboard.setIsDesigner(true);
 		dashboard.submit();			
 	});		
 });
