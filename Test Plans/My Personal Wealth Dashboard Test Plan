@@ -1,6 +1,6 @@
 SFWealthApp Test Plan
 
-On __DanMorris_dashboard.dashboard:
+On My Personal Wealth.dashboard:
 
 Home Tab
 - Make sure all 3 gadgets display content
@@ -24,6 +24,14 @@ My Wealth Tab
 - In My Transaction History gadget, scrollbar should be enabled and working.
 - In My Wealth vs. State Avg gadget, clicking on a state launches a detail report (State_Drilldown_MyWealth_vs_Geo.rptdesign) in a new
    window 
+- In Edit mode, the Investment Comparison gadget and the Currency Converter Google gadget should be draggable from the Gadget Gallery 
+   onto the dashboard.
+   
+Portfolio Performance Tab
+- The Portfolio Performance Dashboard_NoHTML.rptdocument should be displayed
+- All red circle icons and column header icons should be displayed properly
+
+
    
 
 
