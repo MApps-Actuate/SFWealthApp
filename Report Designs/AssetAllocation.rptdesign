@@ -393,7 +393,7 @@
                                 <cell id="126">
                                     <label id="127">
                                         <property name="textAlign">left</property>
-                                        <text-property name="text">Account Type</text-property>
+                                        <text-property name="text">Account Type </text-property>
                                     </label>
                                 </cell>
                                 <cell id="128">
