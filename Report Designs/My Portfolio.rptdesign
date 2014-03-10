@@ -396,6 +396,17 @@
             <property name="namespace">ThemesReportItems3</property>
         </structure>
     </list-property>
+    <method name="onContentUpdate"><![CDATA[var uiOptions = this.getViewer().getUIOptions();
+
+// Remove ability for user to change interactivity options
+uiOptions.enableEditReport(false);
+
+// Set the modified UI Options back into the Viewer
+this.getViewer().setUIOptions(uiOptions);
+
+// If Interactivity is not enabled, enable it
+if (!this.getViewer().isInteractive())
+	this.getViewer().enableIV();]]></method>
     <data-sources>
         <data-mart-data-source name="spendtype" id="684">
             <property name="datamartURL">Data Objects/spend_history</property>

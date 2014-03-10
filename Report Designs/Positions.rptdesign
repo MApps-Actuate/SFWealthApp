@@ -1,10 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
-    <property name="createdBy">Eclipse BIRT Designer Version 4.2.3.v20131029-0430 Build &lt;4.2.3.v20131029-0430></property>
+    <property name="createdBy">Eclipse BIRT Designer Version 4.2.3.v20131216-0430 Build &lt;4.2.3.v20131216-0430></property>
     <property name="units">in</property>
     <property name="iconFile">/templates/blank_report.gif</property>
     <property name="layoutPreference">auto layout</property>
     <property name="bidiLayoutOrientation">ltr</property>
+    <list-property name="libraries">
+        <structure>
+            <property name="fileName">ThemesReportItems3.rptlibrary</property>
+            <property name="namespace">ThemesReportItems3</property>
+        </structure>
+    </list-property>
     <method name="onContentUpdate"><![CDATA[if (!this.getViewer().isInteractive())
 	this.getViewer().enableIV();]]></method>
     <parameters>
@@ -348,6 +354,7 @@
                     <table id="483">
                         <property name="width">90%</property>
                         <property name="dataSet">Data Set CSV</property>
+                        <property name="theme">ThemesReportItems3.Modern Table</property>
                         <list-property name="boundDataColumns">
                             <structure>
                                 <property name="name">ACCT_ID</property>
@@ -471,76 +478,9 @@
   </emptyMessage>
   <seriesDefinitions>
    <query definition=""/>
-   <seriesPalette>
-    <entries _body=",255,80,166,218"/>
-    <entries _body=",255,242,88,106"/>
-    <entries _body=",255,232,172,57"/>
-    <entries _body=",255,128,255,128"/>
-    <entries _body=",255,64,128,128"/>
-    <entries _body=",255,128,128,192"/>
-    <entries _body=",255,170,85,85"/>
-    <entries _body=",255,128,128,0"/>
-    <entries _body=",255,192,192,192"/>
-    <entries _body=",255,255,255,128"/>
-    <entries _body=",255,128,192,128"/>
-    <entries _body=",255,7,146,94"/>
-    <entries _body=",255,0,128,255"/>
-    <entries _body=",255,255,128,192"/>
-    <entries _body=",255,0,255,255"/>
-    <entries _body=",255,255,128,128"/>
-    <entries _body=",255,0,128,192"/>
-    <entries _body=",255,128,128,192"/>
-    <entries _body=",255,255,0,255"/>
-    <entries _body=",255,128,64,64"/>
-    <entries _body=",255,255,128,64"/>
-    <entries _body=",255,80,240,120"/>
-    <entries _body=",255,0,64,128"/>
-    <entries _body=",255,128,0,64"/>
-    <entries _body=",255,255,0,128"/>
-    <entries _body=",255,128,128,64"/>
-    <entries _body=",255,128,128,128"/>
-    <entries _body=",255,255,128,255"/>
-    <entries _body=",255,0,64,0"/>
-    <entries _body=",255,0,0,0"/>
-    <entries _body=",255,255,255,255"/>
-    <entries _body=",255,255,128,0"/>
-   </seriesPalette>
    <seriesDefinitions>
     <query definition=""/>
-    <seriesPalette>
-     <entries _body=",255,80,166,218"/>
-     <entries _body=",255,242,88,106"/>
-     <entries _body=",255,232,172,57"/>
-     <entries _body=",255,128,255,128"/>
-     <entries _body=",255,64,128,128"/>
-     <entries _body=",255,128,128,192"/>
-     <entries _body=",255,170,85,85"/>
-     <entries _body=",255,128,128,0"/>
-     <entries _body=",255,192,192,192"/>
-     <entries _body=",255,255,255,128"/>
-     <entries _body=",255,128,192,128"/>
-     <entries _body=",255,7,146,94"/>
-     <entries _body=",255,0,128,255"/>
-     <entries _body=",255,255,128,192"/>
-     <entries _body=",255,0,255,255"/>
-     <entries _body=",255,255,128,128"/>
-     <entries _body=",255,0,128,192"/>
-     <entries _body=",255,128,128,192"/>
-     <entries _body=",255,255,0,255"/>
-     <entries _body=",255,128,64,64"/>
-     <entries _body=",255,255,128,64"/>
-     <entries _body=",255,80,240,120"/>
-     <entries _body=",255,0,64,128"/>
-     <entries _body=",255,128,0,64"/>
-     <entries _body=",255,255,0,128"/>
-     <entries _body=",255,128,128,64"/>
-     <entries _body=",255,128,128,128"/>
-     <entries _body=",255,255,128,255"/>
-     <entries _body=",255,0,64,0"/>
-     <entries _body=",255,0,0,0"/>
-     <entries _body=",255,255,255,255"/>
-     <entries _body=",255,255,128,0"/>
-    </seriesPalette>
+    <seriesPalette/>
     <series _type="PieSeries" seriesIdentifier="" explosion="0" leaderLineStyle="0" leaderLineLength="10.0">
      <label>
       <caption value="">
@@ -598,6 +538,7 @@
                                         <property name="inheritColumns">true</property>
                                         <property name="height">2.84375in</property>
                                         <property name="width">8in</property>
+                                        <property name="theme">ThemesReportItems3.Modern</property>
                                     </extended-item>
                                 </property>
                             </multi-views>

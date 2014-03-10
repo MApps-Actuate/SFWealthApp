@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
     <property name="comments">Copyright (c) 2007 &lt;&lt;Your Company Name here>></property>
-    <property name="createdBy">Eclipse BIRT Designer Version 4.2.3.v20131029-0430 Build &lt;4.2.3.v20131029-0430></property>
+    <property name="createdBy">Eclipse BIRT Designer Version 4.2.3.v20131216-0430 Build &lt;4.2.3.v20131216-0430></property>
     <html-property name="description">Creates a blank report with no predefined content.</html-property>
     <property name="units">in</property>
     <text-property name="displayName">Blank Report</text-property>
@@ -287,9 +287,9 @@
       <Maps:DisplayValue>Above Avg</Maps:DisplayValue>
       <Maps:Color>
         <Transparency>255</Transparency>
-        <Red>0</Red>
-        <Green>80</Green>
-        <Blue>0</Blue>
+        <Red>158</Red>
+        <Green>204</Green>
+        <Blue>76</Blue>
       </Maps:Color>
     </Maps:Elements>
     <Maps:Elements>
@@ -298,9 +298,9 @@
       <Maps:DisplayValue>Avg</Maps:DisplayValue>
       <Maps:Color>
         <Transparency>255</Transparency>
-        <Red>250</Red>
-        <Green>166</Green>
-        <Blue>26</Blue>
+        <Red>102</Red>
+        <Green>176</Green>
+        <Blue>209</Blue>
       </Maps:Color>
     </Maps:Elements>
     <Maps:Elements>
@@ -339,6 +339,7 @@
                                 </list-property>
                             </structure>
                         </list-property>
+                        <property name="inheritColumns">true</property>
                         <property name="height">2.4in</property>
                         <property name="width">4.2in</property>
                         <property name="dataSet">map</property>

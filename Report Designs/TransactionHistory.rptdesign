@@ -1,10 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
-    <property name="createdBy">Eclipse BIRT Designer Version 4.2.3.v20131029-0430 Build &lt;4.2.3.v20131029-0430></property>
+    <property name="createdBy">Eclipse BIRT Designer Version 4.2.3.v20131216-0430 Build &lt;4.2.3.v20131216-0430></property>
     <property name="units">in</property>
     <property name="iconFile">/templates/blank_report.gif</property>
     <property name="layoutPreference">fixed layout</property>
     <property name="bidiLayoutOrientation">ltr</property>
+    <list-property name="libraries">
+        <structure>
+            <property name="fileName">ThemesReportItems3.rptlibrary</property>
+            <property name="namespace">ThemesReportItems3</property>
+        </structure>
+    </list-property>
     <parameters>
         <scalar-parameter name="pUser" id="63">
             <property name="hidden">true</property>
@@ -370,9 +376,11 @@
                         <property name="marginTop">0pt</property>
                         <property name="textAlign">left</property>
                         <property name="pageBreakAfter">avoid</property>
+                        <property name="canShrink">true</property>
                         <property name="height">1.3125in</property>
                         <property name="width">3.1458333333333335in</property>
                         <property name="dataSet">Data Set CSV</property>
+                        <property name="theme">ThemesReportItems3.Modern Table</property>
                         <list-property name="boundDataColumns">
                             <structure>
                                 <property name="name">ACCT_ID</property>

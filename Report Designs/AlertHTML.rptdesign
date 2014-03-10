@@ -96,7 +96,7 @@
                     <text id="35">
                         <property name="fontFamily">"Verdana"</property>
                         <property name="contentType">auto</property>
-                        <text-property name="content"><![CDATA[       has identified IBM. Get a quote.]]></text-property>
+                        <text-property name="content"><![CDATA[has identified IBM. Get a quote.]]></text-property>
                     </text>
                 </cell>
             </row>
@@ -150,7 +150,7 @@
                     <text id="39">
                         <property name="fontFamily">"Verdana"</property>
                         <property name="contentType">auto</property>
-                        <text-property name="content"><![CDATA[       New Rate - 6% for 30k (3 hrs ago)]]></text-property>
+                        <text-property name="content"><![CDATA[New Rate - 6% for 30k (3 hrs ago)]]></text-property>
                     </text>
                 </cell>
             </row>

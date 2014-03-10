@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
     <property name="comments">Copyright (c) 2007 &lt;&lt;Your Company Name here>></property>
-    <property name="createdBy">Eclipse BIRT Designer Version 4.2.3.v20131029-0430 Build &lt;4.2.3.v20131029-0430></property>
+    <property name="createdBy">Eclipse BIRT Designer Version 4.2.3.v20131216-0430 Build &lt;4.2.3.v20131216-0430></property>
     <html-property name="description">Creates a blank report with no predefined content.</html-property>
     <list-property name="propertyBindings">
         <structure>
@@ -239,7 +239,7 @@
                                     <property name="verticalAlign">middle</property>
                                     <extended-item extensionName="FlashGadgets" id="84">
                                         <xml-property name="xmlRepresentation"><![CDATA[<ActuateChart version="1.0">
- <Gadget backgroundColor="FEFEFE" borderColor="000000" borderThickness="2" borderTransparency="255" colorScheme="3" prefix="" showBorder="false" showGaugeLabels="false" showValueAboveNeedle="false" subTitle="" subType="VBullet" suffix="" title="" turnOffAnimation="false" turnOffDefaultAnimination="false" type="Bullet" version="1.0.0">
+ <Gadget backgroundColor="FEFEFE" borderColor="000000" borderThickness="2" borderTransparency="255" colorScheme="3" prefix="" showBorder="false" showGaugeLabels="false" showGlassStyle="false" showValueAboveNeedle="false" subTitle="" subType="VBullet" suffix="" title="" turnOffAnimation="false" turnOffDefaultAnimination="false" type="Bullet" version="1.0.0">
   <gadgetPartsSupportingEffects _body="background"/>
   <gadgetPartsSupportingEffects _body="caption"/>
   <gadgetPartsSupportingEffects _body="subcaption"/>
@@ -281,9 +281,9 @@
   <gadgetPartsSupportingEffects _body="target"/>
   <gadgetPartsSupportingEffects _body="tooltip"/>
   <scale autoAdjustMajorTickMarks="true" majorTickMarksCount="10" max="2000000" min="0" minorTickMarksCount="8"/>
-  <region color="ff0000" endValue="500000.0" label="A" startValue="0.0" transparency="255"/>
-  <region color="faa61a" endValue="1500000.0" label="B" startValue="500000.0" transparency="255"/>
-  <region color="9acc00" endValue="2000000.0" label="C" startValue="1500000.0" transparency="255"/>
+  <region color="ce0315" endValue="500000.0" label="A" startValue="0.0" transparency="255"/>
+  <region color="66b0d1" endValue="1500000.0" label="B" startValue="500000.0" transparency="255"/>
+  <region color="9ecc4c" endValue="2000000.0" label="C" startValue="1500000.0" transparency="255"/>
   <thresholds color="99ccff" isDashed="false" isTrendZone="false" length="100" lineWidth="3" markerRadius="4" showMarker="false" showThreshold="true" showValueOnTop="true" startValue="200000.0" transparency="255"/>
   <ticks maxLabel="" minLabel="" placeTicksInside="false" placeValuesInside="false" showLimits="true" showTickMarks="true" showTickValues="true" ticksBelowGauge="true" ticksOnRight="false">
    <major height="8" width="1"/>
@@ -295,7 +295,7 @@
    <needle borderColor="000000" borderTransparency="255" borderWidth="1" fillColor="000000" fillTransparency="255" shape="0" size="10" tooltipShowValue="true"/>
   </linearGauge>
   <bullet showRoundCorners="false">
-   <valueIndicator borderColor="fefefe" borderTransparency="255" borderWidth="1" color="0079c1" showBorder="true" transparency="255" width="40"/>
+   <valueIndicator borderColor="fefefe" borderTransparency="255" borderWidth="1" color="3578ad" showBorder="true" transparency="255" width="40"/>
    <bulletPlot borderTransparency="255" borderWidth="2" showAsDot="false" showBorder="false" showShadow="false" showValueLabel="true"/>
   </bullet>
   <thermometer bulbRadius="5" fillTransparency="255" height="75" showValue="false"/>
@@ -304,8 +304,9 @@
 </ActuateChart>
 ]]></xml-property>
                                         <property name="inheritColumns">true</property>
-                                        <property name="height">6.239583333333333in</property>
-                                        <property name="width">0.9895833333333334in</property>
+                                        <property name="outputFormat">JS</property>
+                                        <property name="height">7.177083333333333in</property>
+                                        <property name="width">1.625in</property>
                                     </extended-item>
                                 </cell>
                             </row>

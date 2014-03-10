@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
-    <property name="createdBy">Eclipse BIRT Designer Version 4.2.3.v20131029-0430 Build &lt;4.2.3.v20131029-0430></property>
+    <property name="createdBy">Eclipse BIRT Designer Version 4.2.3.v20131216-0430 Build &lt;4.2.3.v20131216-0430></property>
     <property name="units">in</property>
     <method name="initialize"><![CDATA[var user = reportContext.getAppContext().get("ServerUserName");
 if (user != null)
@@ -372,40 +372,6 @@ if (user != null)
     </title>
     <seriesDefinitions>
      <query definition=""/>
-     <seriesPalette>
-      <entries _body=",255,0,121,193"/>
-      <entries _body=",255,154,204,0"/>
-      <entries _body=",255,241,90,34"/>
-      <entries _body=",255,250,166,26"/>
-      <entries _body=",255,64,128,128"/>
-      <entries _body=",255,128,128,192"/>
-      <entries _body=",255,170,85,85"/>
-      <entries _body=",255,128,128,0"/>
-      <entries _body=",255,192,192,192"/>
-      <entries _body=",255,255,255,128"/>
-      <entries _body=",255,128,192,128"/>
-      <entries _body=",255,7,146,94"/>
-      <entries _body=",255,0,128,255"/>
-      <entries _body=",255,255,128,192"/>
-      <entries _body=",255,0,255,255"/>
-      <entries _body=",255,255,128,128"/>
-      <entries _body=",255,0,128,192"/>
-      <entries _body=",255,128,128,192"/>
-      <entries _body=",255,255,0,255"/>
-      <entries _body=",255,128,64,64"/>
-      <entries _body=",255,255,128,64"/>
-      <entries _body=",255,80,240,120"/>
-      <entries _body=",255,0,64,128"/>
-      <entries _body=",255,128,0,64"/>
-      <entries _body=",255,255,0,128"/>
-      <entries _body=",255,128,128,64"/>
-      <entries _body=",255,128,128,128"/>
-      <entries _body=",255,255,128,255"/>
-      <entries _body=",255,0,64,0"/>
-      <entries _body=",255,0,0,0"/>
-      <entries _body=",255,255,255,255"/>
-      <entries _body=",255,255,128,0"/>
-     </seriesPalette>
      <series _type="BarSeries" seriesIdentifier="Start" labelPosition="4" stacked="true" translucent="false">
       <label>
        <caption value=""/>
@@ -414,7 +380,9 @@ if (user != null)
         <color _nil="1"/>
        </outline>
       </label>
-      <dataDefinition definition="if (row[&quot;currentamount&quot;] - row[&quot;startamount&quot;] &lt; 0)&#13;&#10;0;&#13;&#10;else&#13;&#10;row[&quot;startamount&quot;];"/>
+      <dataDefinition definition="if (row[&quot;currentamount&quot;] - row[&quot;startamount&quot;] &lt; 0)&#13;&#10;0;&#13;&#10;else&#13;&#10;row[&quot;startamount&quot;];">
+       <grouping/>
+      </dataDefinition>
       <dataPoint separator=", ">
        <components type="1"/>
       </dataPoint>
@@ -428,40 +396,6 @@ if (user != null)
     </seriesDefinitions>
     <seriesDefinitions>
      <query definition=""/>
-     <seriesPalette>
-      <entries _body=",255,154,204,0"/>
-      <entries _body=",255,241,90,34"/>
-      <entries _body=",255,250,166,26"/>
-      <entries _body=",255,64,128,128"/>
-      <entries _body=",255,128,128,192"/>
-      <entries _body=",255,170,85,85"/>
-      <entries _body=",255,128,128,0"/>
-      <entries _body=",255,192,192,192"/>
-      <entries _body=",255,255,255,128"/>
-      <entries _body=",255,128,192,128"/>
-      <entries _body=",255,7,146,94"/>
-      <entries _body=",255,0,128,255"/>
-      <entries _body=",255,255,128,192"/>
-      <entries _body=",255,0,255,255"/>
-      <entries _body=",255,255,128,128"/>
-      <entries _body=",255,0,128,192"/>
-      <entries _body=",255,128,128,192"/>
-      <entries _body=",255,255,0,255"/>
-      <entries _body=",255,128,64,64"/>
-      <entries _body=",255,255,128,64"/>
-      <entries _body=",255,80,240,120"/>
-      <entries _body=",255,0,64,128"/>
-      <entries _body=",255,128,0,64"/>
-      <entries _body=",255,255,0,128"/>
-      <entries _body=",255,128,128,64"/>
-      <entries _body=",255,128,128,128"/>
-      <entries _body=",255,255,128,255"/>
-      <entries _body=",255,0,64,0"/>
-      <entries _body=",255,0,0,0"/>
-      <entries _body=",255,255,255,255"/>
-      <entries _body=",255,255,128,0"/>
-      <entries _body=",255,0,121,193"/>
-     </seriesPalette>
      <series _type="BarSeries" seriesIdentifier="Growth" labelPosition="4" stacked="true" translucent="false" riser="0">
       <label>
        <caption value=""/>
@@ -484,40 +418,6 @@ if (user != null)
     </seriesDefinitions>
     <seriesDefinitions>
      <query definition=""/>
-     <seriesPalette>
-      <entries _body=",255,241,90,34"/>
-      <entries _body=",255,250,166,26"/>
-      <entries _body=",255,64,128,128"/>
-      <entries _body=",255,128,128,192"/>
-      <entries _body=",255,170,85,85"/>
-      <entries _body=",255,128,128,0"/>
-      <entries _body=",255,192,192,192"/>
-      <entries _body=",255,255,255,128"/>
-      <entries _body=",255,128,192,128"/>
-      <entries _body=",255,7,146,94"/>
-      <entries _body=",255,0,128,255"/>
-      <entries _body=",255,255,128,192"/>
-      <entries _body=",255,0,255,255"/>
-      <entries _body=",255,255,128,128"/>
-      <entries _body=",255,0,128,192"/>
-      <entries _body=",255,128,128,192"/>
-      <entries _body=",255,255,0,255"/>
-      <entries _body=",255,128,64,64"/>
-      <entries _body=",255,255,128,64"/>
-      <entries _body=",255,80,240,120"/>
-      <entries _body=",255,0,64,128"/>
-      <entries _body=",255,128,0,64"/>
-      <entries _body=",255,255,0,128"/>
-      <entries _body=",255,128,128,64"/>
-      <entries _body=",255,128,128,128"/>
-      <entries _body=",255,255,128,255"/>
-      <entries _body=",255,0,64,0"/>
-      <entries _body=",255,0,0,0"/>
-      <entries _body=",255,255,255,255"/>
-      <entries _body=",255,255,128,0"/>
-      <entries _body=",255,0,121,193"/>
-      <entries _body=",255,154,204,0"/>
-     </seriesPalette>
      <series _type="BarSeries" seriesIdentifier="Current (after loss)" labelPosition="4" stacked="true" translucent="false" riser="0">
       <label>
        <caption value=""/>
@@ -540,40 +440,6 @@ if (user != null)
     </seriesDefinitions>
     <seriesDefinitions>
      <query definition=""/>
-     <seriesPalette>
-      <entries _body=",255,250,166,26"/>
-      <entries _body=",255,64,128,128"/>
-      <entries _body=",255,128,128,192"/>
-      <entries _body=",255,170,85,85"/>
-      <entries _body=",255,128,128,0"/>
-      <entries _body=",255,192,192,192"/>
-      <entries _body=",255,255,255,128"/>
-      <entries _body=",255,128,192,128"/>
-      <entries _body=",255,7,146,94"/>
-      <entries _body=",255,0,128,255"/>
-      <entries _body=",255,255,128,192"/>
-      <entries _body=",255,0,255,255"/>
-      <entries _body=",255,255,128,128"/>
-      <entries _body=",255,0,128,192"/>
-      <entries _body=",255,128,128,192"/>
-      <entries _body=",255,255,0,255"/>
-      <entries _body=",255,128,64,64"/>
-      <entries _body=",255,255,128,64"/>
-      <entries _body=",255,80,240,120"/>
-      <entries _body=",255,0,64,128"/>
-      <entries _body=",255,128,0,64"/>
-      <entries _body=",255,255,0,128"/>
-      <entries _body=",255,128,128,64"/>
-      <entries _body=",255,128,128,128"/>
-      <entries _body=",255,255,128,255"/>
-      <entries _body=",255,0,64,0"/>
-      <entries _body=",255,0,0,0"/>
-      <entries _body=",255,255,255,255"/>
-      <entries _body=",255,255,128,0"/>
-      <entries _body=",255,0,121,193"/>
-      <entries _body=",255,154,204,0"/>
-      <entries _body=",255,241,90,34"/>
-     </seriesPalette>
      <series _type="BarSeries" seriesIdentifier="Loss" labelPosition="4" stacked="true" translucent="false" riser="0">
       <label>
        <caption value=""/>
@@ -633,40 +499,6 @@ if (user != null)
    </associatedAxes>
    <seriesDefinitions sorting="1">
     <query definition=""/>
-    <seriesPalette>
-     <entries _body=",255,0,121,193"/>
-     <entries _body=",255,154,204,0"/>
-     <entries _body=",255,241,90,34"/>
-     <entries _body=",255,250,166,26"/>
-     <entries _body=",255,64,128,128"/>
-     <entries _body=",255,128,128,192"/>
-     <entries _body=",255,170,85,85"/>
-     <entries _body=",255,128,128,0"/>
-     <entries _body=",255,192,192,192"/>
-     <entries _body=",255,255,255,128"/>
-     <entries _body=",255,128,192,128"/>
-     <entries _body=",255,7,146,94"/>
-     <entries _body=",255,0,128,255"/>
-     <entries _body=",255,255,128,192"/>
-     <entries _body=",255,0,255,255"/>
-     <entries _body=",255,255,128,128"/>
-     <entries _body=",255,0,128,192"/>
-     <entries _body=",255,128,128,192"/>
-     <entries _body=",255,255,0,255"/>
-     <entries _body=",255,128,64,64"/>
-     <entries _body=",255,255,128,64"/>
-     <entries _body=",255,80,240,120"/>
-     <entries _body=",255,0,64,128"/>
-     <entries _body=",255,128,0,64"/>
-     <entries _body=",255,255,0,128"/>
-     <entries _body=",255,128,128,64"/>
-     <entries _body=",255,128,128,128"/>
-     <entries _body=",255,255,128,255"/>
-     <entries _body=",255,0,64,0"/>
-     <entries _body=",255,0,0,0"/>
-     <entries _body=",255,255,255,255"/>
-     <entries _body=",255,255,128,0"/>
-    </seriesPalette>
     <series seriesIdentifier="">
      <label>
       <caption value=""/>
@@ -755,7 +587,7 @@ if (user != null)
                     <property name="dataType">decimal</property>
                 </structure>
             </list-property>
-            <property name="theme">ThemesReportItems3.Clean Blue</property>
+            <property name="theme">ThemesReportItems3.Modern</property>
         </extended-item>
     </body>
 </report>
