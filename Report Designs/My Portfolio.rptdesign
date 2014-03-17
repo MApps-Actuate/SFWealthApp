@@ -3515,7 +3515,7 @@ if (!this.getViewer().isInteractive())
     </title>
     <seriesDefinitions>
      <query definition=""/>
-     <series _type="BarSeries" seriesIdentifier="Series 1" riser="0">
+     <series _type="BarSeries" seriesIdentifier="Current Value" riser="0">
       <label>
        <background _nil="1"/>
        <outline>
@@ -3525,7 +3525,7 @@ if (!this.getViewer().isInteractive())
       <dataDefinition definition="row[&quot;Current Value&quot;]">
        <grouping/>
       </dataDefinition>
-      <dataPoint separator=", ">
+      <dataPoint prefix="$" separator=", ">
        <components type="1"/>
       </dataPoint>
       <triggers condition="6">
@@ -3549,6 +3549,7 @@ if (!this.getViewer().isInteractive())
       <color _nil="1"/>
      </outline>
     </label>
+    <formatSpecifier _type="NumberFormatSpecifier" prefix="$" suffix="" fractionDigits="0"/>
     <majorGrid>
      <lineAttributes visible="true">
       <color _body=",255,243,243,243"/>
@@ -3639,6 +3640,7 @@ if (!this.getViewer().isInteractive())
                             <cell id="1061">
                                 <property name="textAlign">center</property>
                                 <table name="Portfolio Table" id="190">
+                                    <property name="fontFamily">"Verdana"</property>
                                     <property name="fontSize">8pt</property>
                                     <property name="borderBottomColor">#D7D7D7</property>
                                     <property name="borderBottomStyle">solid</property>
@@ -4865,7 +4867,7 @@ else&#13;
                                 </property>
                             </multi-views>
                         </property>
-                        <property name="theme">ThemesReportItems3.clean blue-crosstab</property>
+                        <property name="theme">ThemesReportItems3.modern-crosstab</property>
                     </extended-item>
                 </cell>
             </row>
