@@ -767,7 +767,7 @@
                                 <property name="dataType">date-time</property>
                             </structure>
                         </list-property>
-                        <property name="theme">ThemesReportItems3.Clean Blue</property>
+                        <property name="theme">ThemesReportItems3.Modern</property>
                     </extended-item>
                 </cell>
             </row>

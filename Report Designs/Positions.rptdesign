@@ -553,6 +553,7 @@
                             <row id="484">
                                 <property name="backgroundColor">#FFFFFF</property>
                                 <cell id="485">
+                                    <property name="backgroundColor">#E6E6E6</property>
                                     <property name="paddingLeft">20pt</property>
                                     <property name="textAlign">left</property>
                                     <image id="489">
@@ -582,9 +583,14 @@
                                         </list-property>
                                     </image>
                                 </cell>
-                                <cell id="486"/>
-                                <cell id="487"/>
+                                <cell id="486">
+                                    <property name="backgroundColor">#E6E6E6</property>
+                                </cell>
+                                <cell id="487">
+                                    <property name="backgroundColor">#E6E6E6</property>
+                                </cell>
                                 <cell id="488">
+                                    <property name="backgroundColor">#E6E6E6</property>
                                     <property name="paddingRight">1pt</property>
                                     <property name="textAlign">right</property>
                                     <property name="textTransform">none</property>
@@ -603,8 +609,12 @@
                                         <property name="resultSetColumn">ACCT_NAME</property>
                                     </data>
                                 </cell>
-                                <cell id="493"/>
-                                <cell id="494"/>
+                                <cell id="493">
+                                    <property name="backgroundColor">#0079C1</property>
+                                </cell>
+                                <cell id="494">
+                                    <property name="backgroundColor">#0079C1</property>
+                                </cell>
                                 <cell id="495">
                                     <property name="paddingRight">1pt</property>
                                     <property name="textAlign">center</property>

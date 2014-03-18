@@ -2,7 +2,7 @@
 <report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
     <xml-property name="externalMetadata">
         <external-datamarts>
-            <datamart-node location="file:/C:/Actuate/iHub3/modules/BIRTiHub/iHub/shared/storage/file/014/111.dat">
+            <datamart-node location="file:/C:/Users/ActuateUser/git/SFWealthApp/Data%20Objects/spendtype.DATA">
                 <reference-elements>NewDataMartDataSource;</reference-elements>
                 <datamart xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
                     <property name="createdBy">Eclipse BIRT Designer Version 2.6.1.v20100926-0604 Build &lt;2.6.1.v20100926-0604></property>
@@ -375,7 +375,7 @@
                     </cubes>
                 </datamart>
             </datamart-node>
-            <datamart-node location="file:/C:/Actuate/iHub3/modules/BIRTiHub/iHub/shared/storage/file/014/109.dat">
+            <datamart-node location="file:/C:/Users/ActuateUser/git/SFWealthApp/Data%20Objects/spend_history.data">
                 <reference-elements>NewDataMartDataSource3;</reference-elements>
                 <datamart xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
                     <property name="createdBy">Eclipse BIRT Designer Version 4.2.3.v20131216-0430 Build &lt;4.2.3.v20131216-0430></property>
@@ -5268,7 +5268,7 @@
                                             <property name="gadgetType">viewer</property>
                                             <property name="externalContentRef">
                                                 <external-element-ref>
-                                                    <property name="sourceFile">/Applications/SFWealthApp/Report Designs/AlertHTML.RPTDOCUMENT</property>
+                                                    <property name="sourceFile">^/Report Designs/AlertHTML.RPTDOCUMENT</property>
                                                     <property name="targetBookmark">table</property>
                                                 </external-element-ref>
                                             </property>
@@ -5523,7 +5523,7 @@
                                             <property name="gadgetType">viewer</property>
                                             <property name="externalContentRef">
                                                 <external-element-ref>
-                                                    <property name="sourceFile">/Applications/SFWealthApp/Report Designs/term_goal.rptdocument</property>
+                                                    <property name="sourceFile">^/Report Designs/term_goal.rptdocument</property>
                                                     <property name="targetBookmark">chart</property>
                                                 </external-element-ref>
                                             </property>
@@ -5627,7 +5627,7 @@
                                             <property name="gadgetType">viewer</property>
                                             <property name="externalContentRef">
                                                 <external-element-ref>
-                                                    <property name="sourceFile">/Applications/SFWealthApp/Report Designs/TransactionHistory.rptdocument</property>
+                                                    <property name="sourceFile">^/Report Designs/TransactionHistory.rptdocument</property>
                                                     <property name="targetBookmark">table</property>
                                                 </external-element-ref>
                                             </property>
@@ -5694,6 +5694,7 @@
                             <property name="showTitle">false</property>
                             <property name="showBorder">false</property>
                             <property name="zIndex">25</property>
+                            <property name="showScrollBar">true</property>
                             <property name="height">28px</property>
                             <property name="width">369px</property>
                             <property name="caption">
@@ -6046,7 +6047,7 @@
                                             <property name="gadgetType">viewer</property>
                                             <property name="externalContentRef">
                                                 <external-element-ref>
-                                                    <property name="sourceFile">/Applications/SFWealthApp/Report Designs/Portfolio Performance Dashboard_NoHTML.rptdocument</property>
+                                                    <property name="sourceFile">^/Report Designs/Portfolio Performance Dashboard_NoHTML.rptdocument</property>
                                                 </external-element-ref>
                                             </property>
                                         </data-view>

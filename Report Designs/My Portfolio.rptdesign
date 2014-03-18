@@ -2930,7 +2930,7 @@ if (!this.getViewer().isInteractive())
                                                     <property name="width">3.8333333333333335in</property>
                                                     <property name="zIndex">0</property>
                                                     <property name="allowExport">true</property>
-                                                    <property name="theme">ThemesReportItems3.Clean Blue</property>
+                                                    <property name="theme">ThemesReportItems3.Modern</property>
                                                 </extended-item>
                                             </property>
                                         </multi-views>
@@ -2950,8 +2950,8 @@ if (!this.getViewer().isInteractive())
                                                 <property name="rowSpan">1</property>
                                                 <property name="color">#FFFFFF</property>
                                                 <label id="486">
+                                                    <property name="backgroundColor">#0079C1</property>
                                                     <property name="fontFamily">"Verdana"</property>
-                                                    <property name="fontSize">8pt</property>
                                                     <property name="fontWeight">bold</property>
                                                     <property name="marginTop">0pt</property>
                                                     <property name="paddingLeft">5pt</property>
@@ -2966,7 +2966,7 @@ if (!this.getViewer().isInteractive())
                                                 <property name="backgroundColor">#0079C1</property>
                                                 <property name="color">#FFFFFF</property>
                                                 <label id="469">
-                                                    <property name="textAlign">left</property>
+                                                    <property name="textAlign">center</property>
                                                     <text-property name="text">Accounts</text-property>
                                                 </label>
                                             </cell>
@@ -2974,6 +2974,7 @@ if (!this.getViewer().isInteractive())
                                                 <property name="backgroundColor">#0079C1</property>
                                                 <property name="color">#FFFFFF</property>
                                                 <label id="471">
+                                                    <property name="textAlign">center</property>
                                                     <text-property name="text">Current Qty</text-property>
                                                 </label>
                                             </cell>
@@ -2981,6 +2982,7 @@ if (!this.getViewer().isInteractive())
                                                 <property name="backgroundColor">#0079C1</property>
                                                 <property name="color">#FFFFFF</property>
                                                 <label id="473">
+                                                    <property name="textAlign">center</property>
                                                     <text-property name="text">Value</text-property>
                                                 </label>
                                             </cell>
@@ -3000,12 +3002,14 @@ if (!this.getViewer().isInteractive())
                                             </list-property>
                                             <cell id="475">
                                                 <data id="476">
+                                                    <property name="paddingLeft">3pt</property>
                                                     <property name="textAlign">left</property>
                                                     <property name="resultSetColumn">Accounts</property>
                                                 </data>
                                             </cell>
                                             <cell id="477">
                                                 <data id="478">
+                                                    <property name="paddingRight">3pt</property>
                                                     <structure name="numberFormat">
                                                         <property name="category">Fixed</property>
                                                         <property name="pattern">###0;(###0)</property>
@@ -3015,6 +3019,7 @@ if (!this.getViewer().isInteractive())
                                             </cell>
                                             <cell id="479">
                                                 <data id="480">
+                                                    <property name="paddingRight">3pt</property>
                                                     <structure name="numberFormat">
                                                         <property name="category">Currency</property>
                                                         <property name="pattern">$#,##0</property>
@@ -3318,7 +3323,7 @@ if (!this.getViewer().isInteractive())
                                                     </list-property>
                                                     <property name="zIndex">0</property>
                                                     <property name="allowExport">true</property>
-                                                    <property name="theme">ThemesReportItems3.Clean Blue</property>
+                                                    <property name="theme">ThemesReportItems3.Modern</property>
                                                 </extended-item>
                                             </property>
                                         </multi-views>
@@ -3337,8 +3342,8 @@ if (!this.getViewer().isInteractive())
                                                 <property name="rowSpan">1</property>
                                                 <property name="color">#FFFFFF</property>
                                                 <label id="1075">
+                                                    <property name="backgroundColor">#0079C1</property>
                                                     <property name="fontFamily">"Verdana"</property>
-                                                    <property name="fontSize">8pt</property>
                                                     <property name="fontWeight">bold</property>
                                                     <property name="marginTop">0pt</property>
                                                     <property name="paddingLeft">5pt</property>
@@ -3353,7 +3358,7 @@ if (!this.getViewer().isInteractive())
                                                 <property name="backgroundColor">#0079C1</property>
                                                 <property name="color">#FFFFFF</property>
                                                 <label id="448">
-                                                    <property name="textAlign">left</property>
+                                                    <property name="textAlign">center</property>
                                                     <text-property name="text">Categories</text-property>
                                                 </label>
                                             </cell>
@@ -3361,6 +3366,7 @@ if (!this.getViewer().isInteractive())
                                                 <property name="backgroundColor">#0079C1</property>
                                                 <property name="color">#FFFFFF</property>
                                                 <label id="450">
+                                                    <property name="textAlign">center</property>
                                                     <text-property name="text">Orig Value</text-property>
                                                 </label>
                                             </cell>
@@ -3368,6 +3374,7 @@ if (!this.getViewer().isInteractive())
                                                 <property name="backgroundColor">#0079C1</property>
                                                 <property name="color">#FFFFFF</property>
                                                 <label id="452">
+                                                    <property name="textAlign">center</property>
                                                     <text-property name="text">Curr Value</text-property>
                                                 </label>
                                             </cell>
@@ -3387,12 +3394,14 @@ if (!this.getViewer().isInteractive())
                                             </list-property>
                                             <cell id="454">
                                                 <data id="455">
+                                                    <property name="paddingLeft">3pt</property>
                                                     <property name="textAlign">left</property>
                                                     <property name="resultSetColumn">Account Categories</property>
                                                 </data>
                                             </cell>
                                             <cell id="456">
                                                 <data id="457">
+                                                    <property name="paddingRight">3pt</property>
                                                     <structure name="numberFormat">
                                                         <property name="category">Currency</property>
                                                         <property name="pattern">$#,##0</property>
@@ -3402,6 +3411,7 @@ if (!this.getViewer().isInteractive())
                                             </cell>
                                             <cell id="458">
                                                 <data id="459">
+                                                    <property name="paddingRight">3pt</property>
                                                     <structure name="numberFormat">
                                                         <property name="category">Currency</property>
                                                         <property name="pattern">$#,##0</property>
@@ -4131,6 +4141,7 @@ if (!this.getViewer().isInteractive())
                                             <property name="backgroundColor">#0079C1</property>
                                             <property name="fontFamily">"Verdana"</property>
                                             <property name="color">#FFFFFF</property>
+                                            <property name="verticalAlign">middle</property>
                                             <cell id="195">
                                                 <property name="backgroundColor">#0079C1</property>
                                                 <property name="color">#FFFFFF</property>
@@ -4167,7 +4178,7 @@ if (!this.getViewer().isInteractive())
                                                 <property name="textAlign">left</property>
                                                 <property name="verticalAlign">middle</property>
                                                 <label id="578">
-                                                    <property name="textAlign">left</property>
+                                                    <property name="textAlign">center</property>
                                                     <text-property name="text">Asset Class</text-property>
                                                 </label>
                                             </cell>
@@ -4187,6 +4198,7 @@ if (!this.getViewer().isInteractive())
                                                 <property name="borderTopStyle">solid</property>
                                                 <property name="borderTopWidth">1px</property>
                                                 <label id="198">
+                                                    <property name="textAlign">center</property>
                                                     <text-property name="text">Volume</text-property>
                                                 </label>
                                             </cell>
@@ -4206,6 +4218,7 @@ if (!this.getViewer().isInteractive())
                                                 <property name="borderTopStyle">solid</property>
                                                 <property name="borderTopWidth">1px</property>
                                                 <label id="200">
+                                                    <property name="textAlign">center</property>
                                                     <text-property name="text">Curr Share Price</text-property>
                                                 </label>
                                             </cell>
@@ -4225,6 +4238,7 @@ if (!this.getViewer().isInteractive())
                                                 <property name="borderTopStyle">solid</property>
                                                 <property name="borderTopWidth">1px</property>
                                                 <label id="202">
+                                                    <property name="textAlign">center</property>
                                                     <text-property name="text">Orig Share Price</text-property>
                                                 </label>
                                             </cell>
@@ -4244,6 +4258,7 @@ if (!this.getViewer().isInteractive())
                                                 <property name="borderTopStyle">solid</property>
                                                 <property name="borderTopWidth">1px</property>
                                                 <label id="204">
+                                                    <property name="textAlign">center</property>
                                                     <text-property name="text">%Change</text-property>
                                                 </label>
                                             </cell>
@@ -4263,6 +4278,7 @@ if (!this.getViewer().isInteractive())
                                                 <property name="borderTopStyle">solid</property>
                                                 <property name="borderTopWidth">1px</property>
                                                 <label id="206">
+                                                    <property name="textAlign">center</property>
                                                     <text-property name="text">Current Value</text-property>
                                                 </label>
                                             </cell>
@@ -4284,13 +4300,13 @@ if (!this.getViewer().isInteractive())
                                             </cell>
                                         </row>
                                         <row id="208">
-                                            <property name="backgroundColor">#EDEEE9</property>
                                             <property name="backgroundImage">banner_bgGRN.png</property>
                                             <property name="fontFamily">"Verdana"</property>
                                             <property name="color">#808080</property>
                                             <cell id="209">
                                                 <property name="colSpan">6</property>
                                                 <property name="rowSpan">1</property>
+                                                <property name="backgroundColor">#0079C1</property>
                                                 <property name="color">#FFFFFF</property>
                                                 <property name="borderBottomColor">#D7D7D7</property>
                                                 <property name="borderBottomStyle">solid</property>
@@ -4310,6 +4326,7 @@ if (!this.getViewer().isInteractive())
                                                 </label>
                                             </cell>
                                             <cell id="211">
+                                                <property name="backgroundColor">#0079C1</property>
                                                 <property name="color">#FFFFFF</property>
                                                 <property name="borderBottomColor">#D7D7D7</property>
                                                 <property name="borderBottomStyle">solid</property>
@@ -4332,6 +4349,7 @@ if (!this.getViewer().isInteractive())
                                                 </data>
                                             </cell>
                                             <cell id="213">
+                                                <property name="backgroundColor">#0079C1</property>
                                                 <property name="color">#FFFFFF</property>
                                                 <property name="borderBottomColor">#D7D7D7</property>
                                                 <property name="borderBottomStyle">solid</property>
@@ -4377,6 +4395,7 @@ if (!this.getViewer().isInteractive())
                                                 <property name="borderTopStyle">solid</property>
                                                 <property name="borderTopWidth">1px</property>
                                                 <data id="224">
+                                                    <property name="paddingLeft">3pt</property>
                                                     <property name="textAlign">left</property>
                                                     <property name="resultSetColumn">Stock Name</property>
                                                     <list-property name="action">
@@ -4402,6 +4421,7 @@ if (!this.getViewer().isInteractive())
                                                 <property name="borderTopStyle">solid</property>
                                                 <property name="borderTopWidth">1px</property>
                                                 <data id="338">
+                                                    <property name="paddingLeft">3pt</property>
                                                     <property name="textAlign">left</property>
                                                     <list-property name="mapRules">
                                                         <structure>
@@ -4430,6 +4450,7 @@ if (!this.getViewer().isInteractive())
                                                 <property name="borderTopStyle">solid</property>
                                                 <property name="borderTopWidth">1px</property>
                                                 <data id="226">
+                                                    <property name="paddingRight">3pt</property>
                                                     <property name="resultSetColumn">Current Volume</property>
                                                 </data>
                                             </cell>
@@ -4447,6 +4468,7 @@ if (!this.getViewer().isInteractive())
                                                 <property name="borderTopStyle">solid</property>
                                                 <property name="borderTopWidth">1px</property>
                                                 <data id="228">
+                                                    <property name="paddingRight">3pt</property>
                                                     <structure name="numberFormat">
                                                         <property name="category">Currency</property>
                                                         <property name="pattern">$###0.00</property>
@@ -4468,6 +4490,7 @@ if (!this.getViewer().isInteractive())
                                                 <property name="borderTopStyle">solid</property>
                                                 <property name="borderTopWidth">1px</property>
                                                 <data id="230">
+                                                    <property name="paddingRight">3pt</property>
                                                     <structure name="numberFormat">
                                                         <property name="category">Currency</property>
                                                         <property name="pattern">$###0.00</property>
@@ -4489,6 +4512,7 @@ if (!this.getViewer().isInteractive())
                                                 <property name="borderTopStyle">solid</property>
                                                 <property name="borderTopWidth">1px</property>
                                                 <data id="629">
+                                                    <property name="paddingRight">3pt</property>
                                                     <structure name="numberFormat">
                                                         <property name="category">Fixed</property>
                                                         <property name="pattern">###0.0;(###0.0){RoundingMode=HALF_UP}</property>
@@ -4510,6 +4534,7 @@ if (!this.getViewer().isInteractive())
                                                 <property name="borderTopStyle">solid</property>
                                                 <property name="borderTopWidth">1px</property>
                                                 <data id="625">
+                                                    <property name="paddingRight">3pt</property>
                                                     <structure name="numberFormat">
                                                         <property name="category">Currency</property>
                                                         <property name="pattern">$#,##0{RoundingMode=HALF_UP}</property>

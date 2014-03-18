@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
-    <property name="createdBy">Eclipse BIRT Designer Version 4.2.3.v20131029-0430 Build &lt;4.2.3.v20131029-0430></property>
+    <property name="createdBy">Eclipse BIRT Designer Version 4.2.3.v20131216-0430 Build &lt;4.2.3.v20131216-0430></property>
     <xml-property name="externalMetadata">
         <external-datamarts>
             <datamart-node location="file:/C:/Augusta/workspace/SFWealthApp/Data%20Objects/spendtype.DATA">
@@ -382,6 +382,12 @@
     <property name="iconFile">/templates/blank_report.gif</property>
     <property name="bidiLayoutOrientation">ltr</property>
     <property name="imageDPI">96</property>
+    <list-property name="libraries">
+        <structure>
+            <property name="fileName">ThemesReportItems3.rptlibrary</property>
+            <property name="namespace">ThemesReportItems3</property>
+        </structure>
+    </list-property>
     <parameters>
         <scalar-parameter name="SpendCategory" id="120">
             <text-property name="promptText">Enter Spend Category</text-property>
@@ -463,6 +469,7 @@
             <property name="fontFamily">"Arial"</property>
             <property name="fontSize">9pt</property>
             <property name="dataSet">Data Set</property>
+            <property name="theme">ThemesReportItems3.Modern Table</property>
             <list-property name="boundDataColumns">
                 <structure>
                     <property name="name">Account</property>
@@ -546,7 +553,6 @@
                         <property name="paddingLeft">10pt</property>
                         <data id="152">
                             <property name="fontWeight">bold</property>
-                            <property name="color">#004080</property>
                             <list-property name="boundDataColumns">
                                 <structure>
                                     <property name="name">SpendCategory</property>
@@ -563,7 +569,6 @@
                         <property name="paddingLeft">10pt</property>
                         <label id="150">
                             <property name="fontWeight">bold</property>
-                            <property name="color">#004080</property>
                             <text-property name="text">Customer: Dan Morris</text-property>
                         </label>
                     </cell>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
-    <property name="createdBy">Eclipse BIRT Designer Version 4.2.3.v20131029-0430 Build &lt;4.2.3.v20131029-0430></property>
+    <property name="createdBy">Eclipse BIRT Designer Version 4.2.3.v20131216-0430 Build &lt;4.2.3.v20131216-0430></property>
     <property name="units">in</property>
     <method name="initialize"><![CDATA[var user = reportContext.getAppContext().get("ServerUserName");
 if (user != null &amp;&amp; user != "anonymous")
@@ -507,7 +507,7 @@ if (user != null &amp;&amp; user != "anonymous")
                             <property name="textAlign">right</property>
                             <property name="verticalAlign">middle</property>
                             <data id="143">
-                                <property name="fontSize">7pt</property>
+                                <property name="fontSize">8pt</property>
                                 <structure name="numberFormat">
                                     <property name="category">Currency</property>
                                     <property name="pattern">$ #,##0.00;$ (#,##0.00)</property>

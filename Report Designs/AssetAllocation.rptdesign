@@ -326,7 +326,7 @@
                                 <property name="dataType">string</property>
                             </structure>
                         </list-property>
-                        <property name="theme">ThemesReportItems3.Clean Blue</property>
+                        <property name="theme">ThemesReportItems3.Modern</property>
                     </extended-item>
                 </cell>
             </row>
@@ -353,6 +353,7 @@
                         <property name="height">0.4895833333333333in</property>
                         <property name="width">3.5in</property>
                         <property name="dataSet">Data Set</property>
+                        <property name="theme">ThemesReportItems3.Modern Table</property>
                         <list-property name="boundDataColumns">
                             <structure>
                                 <property name="name">Account Type</property>
