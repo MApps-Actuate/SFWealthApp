@@ -2676,7 +2676,7 @@ if (!this.getViewer().isInteractive())
                                     <property name="marginTop">0pt</property>
                                     <property name="width">4.239583333333333in</property>
                                     <property name="dataSet">ASSETALLOC</property>
-                                    <property name="theme">default-table</property>
+                                    <property name="theme">ThemesReportItems3.Modern Table</property>
                                     <list-property name="boundDataColumns">
                                         <structure>
                                             <property name="name">Accounts</property>
@@ -2953,7 +2953,6 @@ if (!this.getViewer().isInteractive())
                                                     <property name="fontFamily">"Verdana"</property>
                                                     <property name="fontSize">8pt</property>
                                                     <property name="fontWeight">bold</property>
-                                                    <property name="color">#808080</property>
                                                     <property name="marginTop">0pt</property>
                                                     <property name="paddingLeft">5pt</property>
                                                     <property name="textAlign">center</property>
@@ -3048,7 +3047,7 @@ if (!this.getViewer().isInteractive())
                                     <property name="borderTopWidth">thin</property>
                                     <property name="width">4.24in</property>
                                     <property name="dataSet">ACCTPERF</property>
-                                    <property name="theme">default-table</property>
+                                    <property name="theme">ThemesReportItems3.Modern Table</property>
                                     <list-property name="boundDataColumns">
                                         <structure>
                                             <property name="name">Account Categories</property>
@@ -3333,7 +3332,6 @@ if (!this.getViewer().isInteractive())
                                     </column>
                                     <header>
                                         <row id="1071">
-                                            <property name="color">#FFFFFF</property>
                                             <cell id="1072">
                                                 <property name="colSpan">3</property>
                                                 <property name="rowSpan">1</property>
@@ -3342,7 +3340,6 @@ if (!this.getViewer().isInteractive())
                                                     <property name="fontFamily">"Verdana"</property>
                                                     <property name="fontSize">8pt</property>
                                                     <property name="fontWeight">bold</property>
-                                                    <property name="color">#808080</property>
                                                     <property name="marginTop">0pt</property>
                                                     <property name="paddingLeft">5pt</property>
                                                     <property name="textAlign">center</property>
@@ -3433,7 +3430,7 @@ if (!this.getViewer().isInteractive())
     </outline>
     <label>
      <caption value="My Portfolio">
-      <font name="Verdana" size="8.0"/>
+      <font name="Verdana" size="8.0" bold="true"/>
       <color _body=",255,128,128,128"/>
      </caption>
      <background _nil="1"/>
@@ -3632,7 +3629,7 @@ if (!this.getViewer().isInteractive())
                                     <property name="height">3.1875in</property>
                                     <property name="width">9.083333333333334in</property>
                                     <property name="dataBindingRef">Portfolio Table</property>
-                                    <property name="theme">ThemesReportItems3.Clean Blue</property>
+                                    <property name="theme">ThemesReportItems3.Modern</property>
                                 </extended-item>
                             </cell>
                         </row>
@@ -3656,6 +3653,7 @@ if (!this.getViewer().isInteractive())
                                     <property name="borderTopWidth">thin</property>
                                     <property name="pageBreakAfter">always</property>
                                     <property name="dataSet">PORTFOLIO</property>
+                                    <property name="theme">ThemesReportItems3.Modern Table</property>
                                     <list-property name="boundDataColumns">
                                         <structure>
                                             <property name="name">%Change</property>
@@ -4094,7 +4092,7 @@ if (!this.getViewer().isInteractive())
                                                     <property name="width">9.115in</property>
                                                     <property name="zIndex">0</property>
                                                     <property name="allowExport">true</property>
-                                                    <property name="theme">ThemesReportItems3.Clean Blue</property>
+                                                    <property name="theme">ThemesReportItems3.Modern</property>
                                                 </extended-item>
                                             </property>
                                         </multi-views>
@@ -4307,7 +4305,6 @@ if (!this.getViewer().isInteractive())
                                                 <property name="borderTopStyle">solid</property>
                                                 <property name="borderTopWidth">1px</property>
                                                 <label id="210">
-                                                    <property name="color">#000000</property>
                                                     <property name="textAlign">left</property>
                                                     <text-property name="text">My Total Portfolio:</text-property>
                                                 </label>
@@ -4327,7 +4324,6 @@ if (!this.getViewer().isInteractive())
                                                 <property name="borderTopStyle">solid</property>
                                                 <property name="borderTopWidth">1px</property>
                                                 <data id="1057">
-                                                    <property name="color">#000000</property>
                                                     <structure name="numberFormat">
                                                         <property name="category">Currency</property>
                                                         <property name="pattern">$#,##0;$(#,##0){RoundingMode=HALF_UP}</property>
