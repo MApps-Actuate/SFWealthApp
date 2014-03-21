@@ -456,6 +456,12 @@
     <outline>
      <color _nil="1"/>
     </outline>
+    <triggers condition="2">
+     <action type="2">
+      <value _type="SeriesValue" name=""/>
+     </action>
+    </triggers>
+    <cursor type="0"/>
     <clientArea>
      <outline>
       <color _nil="1"/>

@@ -711,7 +711,7 @@
                                                     <list-property name="action">
                                                         <structure>
                                                             <property name="linkType">drill-through</property>
-                                                            <property name="reportName">/Applications/SFWealthApp/Report Designs/MySpendDetail.rptdesign</property>
+                                                            <property name="reportName">^/Report Designs/MySpendDetail.rptdesign</property>
                                                             <property name="targetWindow">_blank</property>
                                                             <property name="targetFileType">report-design</property>
                                                             <list-property name="paramBindings">
@@ -4190,7 +4190,6 @@
      </outline>
     </title>
    </children>
-   <bounds _body=",,393.75,234.0"/>
    <outline>
     <color _nil="1"/>
    </outline>
@@ -4841,7 +4840,6 @@
      </outline>
     </title>
    </children>
-   <bounds _body=",,391.5,206.25"/>
    <outline>
     <color _nil="1"/>
    </outline>
@@ -4973,6 +4971,7 @@
      <color _nil="1"/>
     </outline>
    </label>
+   <formatSpecifier _type="JavaNumberFormatSpecifier" pattern="###"/>
    <majorGrid>
     <lineAttributes>
      <color _nil="1"/>
@@ -5016,9 +5015,9 @@
             <property name="width">391.5pt</property>
             <list-property name="boundDataColumns">
                 <structure>
-                    <property name="name">Date/Month/DateTime</property>
-                    <expression name="expression">dimension["Date"]["Month"]["DateTime"]</expression>
-                    <property name="dataType">date-time</property>
+                    <property name="name">Date/Month</property>
+                    <expression name="expression">dimension["Date"]["Month"]</expression>
+                    <property name="dataType">integer</property>
                 </structure>
                 <structure>
                     <property name="name">Spend/Amount</property>
@@ -5030,16 +5029,6 @@
                     <property name="name">Spend Method/Method</property>
                     <expression name="expression">dimension["Spend Method"]["Method"]</expression>
                     <property name="dataType">string</property>
-                </structure>
-                <structure>
-                    <property name="name">Date/Day</property>
-                    <expression name="expression">dimension["Date"]["Day"]</expression>
-                    <property name="dataType">integer</property>
-                </structure>
-                <structure>
-                    <property name="name">Date/Month</property>
-                    <expression name="expression">dimension["Date"]["Month"]</expression>
-                    <property name="dataType">integer</property>
                 </structure>
             </list-property>
             <property name="theme">ThemesReportItems3.Modern</property>
@@ -5434,13 +5423,13 @@
                                     </property>
                                 </gadget>
                                 <gadget name="Gadget_49cf5979-54a3-47ae-bf20-497f231adb9a1" id="107">
-                                    <property name="height">347px</property>
+                                    <property name="height">310px</property>
                                     <property name="title">My Spend By Account</property>
                                     <property name="showTitle">false</property>
                                     <property name="showBorder">false</property>
                                     <property name="zIndex">13</property>
                                     <property name="showScrollBar">false</property>
-                                    <property name="height">347px</property>
+                                    <property name="height">310px</property>
                                     <property name="caption">
                                         <gadget-caption id="963">
                                             <property name="showCaption">true</property>
