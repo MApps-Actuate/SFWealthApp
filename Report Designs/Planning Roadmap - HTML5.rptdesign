@@ -7,6 +7,13 @@
 The main focus is the Retirement Roadmap chart, which is very dynamic in nature, and attempts to predict the likelyhood to retire and meet life goals.&#13;
 &#13;
 The form underneath the chart can be used to add new life events, or edit existing ones, as well the monthly contribution amount, and investement style.  Together all these options are used to calculate the chart, and determine if retirement and life goals can be met.</html-property>
+    <list-property name="userProperties">
+        <structure>
+            <property name="name">Version</property>
+            <property name="type">string</property>
+        </structure>
+    </list-property>
+    <property name="Version">iHub3 - 140402PT</property>
     <property name="units">in</property>
     <method name="beforeFactory"><![CDATA[monthlyContribution = params["pMonthlyContribution"].value;
 returnpct = params["pInvestmentStyle"].value;
@@ -921,7 +928,7 @@ var planningData = <VALUE-OF>vars["planningData"]</VALUE-OF>;
   <extendedProperties name="enable.area.alt" value="false"/>
   <extendedProperties name="enable.drill.category" value="true"/>
   <extendedProperties name="enable.drill.series" value="true"/>
-  <extendedProperties name="jschart.client.script" value="beforeRendering: function(options, chart)&#13;&#10;{&#13;&#10;    options.plotOptions = {&#13;&#10;        area: {&#13;&#10;            animation: {duration:1500},&#13;&#10;            shadow:true,&#13;&#10;            lineWidth:1&#13;&#10;        }&#13;&#10;    };&#13;&#10;    &#13;&#10;    options.xAxis = {&#13;&#10;        startOnTick: true,&#13;&#10;        endOnTick: true,&#13;&#10;        maxPadding: 0&#13;&#10;         &#13;&#10;    };&#13;&#10;},&#13;&#10;&#13;&#10;afterRendering: function(chart)&#13;&#10;{  &#13;&#10;&#13;&#10;    // Goal Amount line&#13;&#10;    chart.getCore().yAxis[0].addPlotLine({&#13;&#10;     color: &quot;#C0C0C0&quot;,&#13;&#10;     width: 1,&#13;&#10;     zIndex: 5,&#13;&#10;     value: planningData.goalAmount,&#13;&#10;     label: {&#13;&#10;      text: &quot;Retirement Goal amount: &quot; + planningData.goalAmountValue,&#13;&#10;      align: &quot;right&quot;,&#13;&#10;         style: {&#13;&#10;          color: &quot;#C0C0C0&quot;,&#13;&#10;          fontSize: &quot;9pt&quot;&#13;&#10;         },&#13;&#10;         x: -10&#13;&#10;     },&#13;&#10;     id: &quot;goalAmountLine&quot;&#13;&#10;    });&#13;&#10;&#13;&#10;    // Goal Age line&#13;&#10;    chart.getCore().xAxis[0].addPlotLine({&#13;&#10;        color: &quot;#C0C0C0&quot;,&#13;&#10;        width: 1,&#13;&#10;        zIndex: 5,&#13;&#10;        value: planningData.goalAge,&#13;&#10;        label: {&#13;&#10;         text: &quot;Years: &quot; + planningData.goalAgeValue,&#13;&#10;         rotation: 270,&#13;&#10;         verticalAlign: &quot;middle&quot;,&#13;&#10;         style: {&#13;&#10;          color: &quot;#C0C0C0&quot;,&#13;&#10;          fontSize: &quot;10pt&quot;&#13;&#10;         },&#13;&#10;         x: 14&#13;&#10;        },&#13;&#10;        id: &quot;goalAgeLine&quot;&#13;&#10;    });&#13;&#10;    &#13;&#10;    // Actual/Projected dividing line&#13;&#10;    chart.getCore().xAxis[0].addPlotLine({&#13;&#10;        color: &quot;grey&quot;,&#13;&#10;        width: 1,&#13;&#10;        dashStyle: &quot;Dash&quot;,&#13;&#10;        zIndex: 5,&#13;&#10;        value: planningData.baseChartRows,&#13;&#10;        id: &quot;actualProjectedLine&quot;&#13;&#10;    });&#13;&#10;   &#13;&#10;    // Actual section band &#13;&#10;    chart.getCore().xAxis[0].addPlotBand({&#13;&#10;     from: 0,&#13;&#10;     to: planningData.baseChartRows,&#13;&#10;     label: {&#13;&#10;      text: &quot;Actual&quot;,&#13;&#10;      verticalAlign: &quot;top&quot;,&#13;&#10;      style: {&#13;&#10;       color: &quot;black&quot;,&#13;&#10;       fontWeight: &quot;bold&quot;,&#13;&#10;       fontSize: &quot;9pt&quot;&#13;&#10;      }&#13;&#10;     },&#13;&#10;     id: &quot;actualBand&quot;&#13;&#10;    });&#13;&#10;    &#13;&#10;    // Projected section band &#13;&#10;    chart.getCore().xAxis[0].addPlotBand({&#13;&#10;     from: planningData.baseChartRows,&#13;&#10;     to: planningData.totalChartRows,&#13;&#10;     label: {&#13;&#10;      text: &quot;Projected&quot;,&#13;&#10;      verticalAlign: &quot;top&quot;,&#13;&#10;      style: {&#13;&#10;       color: &quot;black&quot;,&#13;&#10;       fontWeight: &quot;bold&quot;,&#13;&#10;       fontSize: &quot;9pt&quot;&#13;&#10;      }&#13;&#10;     },&#13;&#10;     id: &quot;projectedBand&quot;&#13;&#10;    });&#13;&#10;},&#13;&#10;&#13;&#10;beforeDrawDataPoint: function(point, pointOptions, chart, seriesIndex, pointIndex)&#13;&#10;{&#13;&#10;&#13;&#10;    if (pointOptions.y == 0) {&#13;&#10;        if (seriesIndex == 0 &amp;&amp; pointIndex &gt;= planningData.baseChartRows)&#13;&#10;            pointOptions.y = null;&#13;&#10;        else if (seriesIndex == 1 &amp;&amp; pointIndex &lt;= planningData.baseChartRows)&#13;&#10;            pointOptions.y = null;&#13;&#10;    }&#13;&#10;&#13;&#10;    if (seriesIndex == 1) {&#13;&#10;    &#13;&#10;&#13;&#10;&#13;&#10;        for (var i = 0; i &lt; planningData.events.length; i++) {&#13;&#10;         if (planningData.events[i].state &amp;&amp; pointIndex == planningData.events[i].rec) {&#13;&#10;          var type = planningData.events[i].type;    &#13;&#10;          // If you want images on Info Console path&#13;&#10;          //var markerURL = &quot;images/&quot;;&#13;&#10;          // If you want images in the Resources of the Application on the iHub&#13;&#10;          //var markerURL = &quot;servlet/DownloadFile?name=/Resources/images/&quot;;&#13;&#10;          var markerURL = &quot;servlet/DownloadFile?name=/Applications/SFWealthApp/images/&quot;;&#13;&#10;          if (location.href.indexOf(&quot;/apps/&quot;) &gt; -1)&#13;&#10;           markerURL = &quot;../../&quot; + markerURL;&#13;&#10;           &#13;&#10;                    if (type == 1)&#13;&#10;                  markerURL += &quot;Home.png&quot;;&#13;&#10;                 else if (type == 2)&#13;&#10;                        markerURL += &quot;Vehicle.png&quot;;&#13;&#10;                    else if (type == 3)&#13;&#10;                        markerURL += &quot;College.png&quot;;&#13;&#10;                    else if (type == 4)&#13;&#10;                        markerURL += &quot;Wedding.png&quot;;&#13;&#10;                    else if (type == 5)&#13;&#10;                        markerURL += &quot;Vacation.png&quot;;&#13;&#10;                    else if (type == 6)&#13;&#10;                        markerURL += &quot;Misc.png&quot;;&#13;&#10;&#13;&#10;         &#13;&#10;         &#13;&#10;        pointOptions.dataLabels = {&#13;&#10;        enabled: true,&#13;&#10;                    useHTML: true,&#13;&#10;                    formatter: function() {&#13;&#10;                        return &#039;&lt;div  style=&quot;position:absolute;bottom:-27px;left:-27px;&quot;&gt;&lt;img src=&quot;&#039; + markerURL + &#039;&quot;&gt;&lt;/div&gt;&#039;;&#13;&#10;                        } &#13;&#10;        }  &#13;&#10;    &#13;&#10;         &#13;&#10;         &#13;&#10;         &#13;&#10;         }   //if&#13;&#10;        }  // for&#13;&#10;    &#13;&#10;    }  //  if (seriesIndex == 1)&#13;&#10;},"/>
+  <extendedProperties name="jschart.client.script" value="beforeRendering: function(options, chart)&#13;&#10;{&#13;&#10;    options.plotOptions = {&#13;&#10;        area: {&#13;&#10;            animation: {duration:1500},&#13;&#10;            shadow:true,&#13;&#10;            lineWidth:1&#13;&#10;        }&#13;&#10;    };&#13;&#10;    &#13;&#10;    options.xAxis = {&#13;&#10;        startOnTick: true,&#13;&#10;        endOnTick: true,&#13;&#10;        maxPadding: 0&#13;&#10;         &#13;&#10;    };&#13;&#10;},&#13;&#10;&#13;&#10;afterRendering: function(chart)&#13;&#10;{  &#13;&#10;&#13;&#10;    // Goal Amount line&#13;&#10;    chart.getCore().yAxis[0].addPlotLine({&#13;&#10;     color: &quot;#C0C0C0&quot;,&#13;&#10;     width: 1,&#13;&#10;     zIndex: 5,&#13;&#10;     value: planningData.goalAmount,&#13;&#10;     label: {&#13;&#10;      text: &quot;Retirement Goal amount: &quot; + planningData.goalAmountValue,&#13;&#10;      align: &quot;right&quot;,&#13;&#10;         style: {&#13;&#10;          color: &quot;#C0C0C0&quot;,&#13;&#10;          fontSize: &quot;9pt&quot;&#13;&#10;         },&#13;&#10;         x: -10&#13;&#10;     },&#13;&#10;     id: &quot;goalAmountLine&quot;&#13;&#10;    });&#13;&#10;&#13;&#10;    // Goal Age line&#13;&#10;    chart.getCore().xAxis[0].addPlotLine({&#13;&#10;        color: &quot;#C0C0C0&quot;,&#13;&#10;        width: 1,&#13;&#10;        zIndex: 5,&#13;&#10;        value: planningData.goalAge,&#13;&#10;        label: {&#13;&#10;         text: &quot;Years: &quot; + planningData.goalAgeValue,&#13;&#10;         rotation: 270,&#13;&#10;         verticalAlign: &quot;middle&quot;,&#13;&#10;         style: {&#13;&#10;          color: &quot;#C0C0C0&quot;,&#13;&#10;          fontSize: &quot;10pt&quot;&#13;&#10;         },&#13;&#10;         x: 14&#13;&#10;        },&#13;&#10;        id: &quot;goalAgeLine&quot;&#13;&#10;    });&#13;&#10;    &#13;&#10;    // Actual/Projected dividing line&#13;&#10;    chart.getCore().xAxis[0].addPlotLine({&#13;&#10;        color: &quot;grey&quot;,&#13;&#10;        width: 1,&#13;&#10;        dashStyle: &quot;Dash&quot;,&#13;&#10;        zIndex: 5,&#13;&#10;        value: planningData.baseChartRows,&#13;&#10;        id: &quot;actualProjectedLine&quot;&#13;&#10;    });&#13;&#10;   &#13;&#10;    // Actual section band &#13;&#10;    chart.getCore().xAxis[0].addPlotBand({&#13;&#10;     from: 0,&#13;&#10;     to: planningData.baseChartRows,&#13;&#10;     label: {&#13;&#10;      text: &quot;Actual&quot;,&#13;&#10;      verticalAlign: &quot;top&quot;,&#13;&#10;      style: {&#13;&#10;       color: &quot;black&quot;,&#13;&#10;       fontWeight: &quot;bold&quot;,&#13;&#10;       fontSize: &quot;9pt&quot;&#13;&#10;      }&#13;&#10;     },&#13;&#10;     id: &quot;actualBand&quot;&#13;&#10;    });&#13;&#10;    &#13;&#10;    // Projected section band &#13;&#10;    chart.getCore().xAxis[0].addPlotBand({&#13;&#10;     from: planningData.baseChartRows,&#13;&#10;     to: planningData.totalChartRows,&#13;&#10;     label: {&#13;&#10;      text: &quot;Projected&quot;,&#13;&#10;      verticalAlign: &quot;top&quot;,&#13;&#10;      style: {&#13;&#10;       color: &quot;black&quot;,&#13;&#10;       fontWeight: &quot;bold&quot;,&#13;&#10;       fontSize: &quot;9pt&quot;&#13;&#10;      }&#13;&#10;     },&#13;&#10;     id: &quot;projectedBand&quot;&#13;&#10;    });&#13;&#10;},&#13;&#10;&#13;&#10;beforeDrawDataPoint: function(point, pointOptions, chart, seriesIndex, pointIndex)&#13;&#10;{&#13;&#10;&#13;&#10;    if (pointOptions.y == 0) {&#13;&#10;        if (seriesIndex == 0 &amp;&amp; pointIndex &gt;= planningData.baseChartRows)&#13;&#10;            pointOptions.y = null;&#13;&#10;        else if (seriesIndex == 1 &amp;&amp; pointIndex &lt;= planningData.baseChartRows)&#13;&#10;            pointOptions.y = null;&#13;&#10;    }&#13;&#10;&#13;&#10;    if (seriesIndex == 1) {&#13;&#10;    &#13;&#10;&#13;&#10;&#13;&#10;        for (var i = 0; i &lt; planningData.events.length; i++) {&#13;&#10;         if (planningData.events[i].state &amp;&amp; pointIndex == planningData.events[i].rec) {&#13;&#10;          var type = planningData.events[i].type;    &#13;&#10;          // If you want images on Info Console path&#13;&#10;          var markerURL = &quot;images/&quot;;&#13;&#10;          // If you want images in the Resources of the Application on the iHub&#13;&#10;          //var markerURL = &quot;servlet/DownloadFile?name=/Resources/images/&quot;;&#13;&#10;          //var markerURL = &quot;servlet/DownloadFile?name=/Applications/Retirement Roadmap/images/&quot;;&#13;&#10;                    if (type == 1)&#13;&#10;                  markerURL += &quot;Home.png&quot;;&#13;&#10;                 else if (type == 2)&#13;&#10;                        markerURL += &quot;Vehicle.png&quot;;&#13;&#10;                    else if (type == 3)&#13;&#10;                        markerURL += &quot;College.png&quot;;&#13;&#10;                    else if (type == 4)&#13;&#10;                        markerURL += &quot;Wedding.png&quot;;&#13;&#10;                    else if (type == 5)&#13;&#10;                        markerURL += &quot;Vacation.png&quot;;&#13;&#10;                    else if (type == 6)&#13;&#10;                        markerURL += &quot;Misc.png&quot;;&#13;&#10;                        &#13;&#10;          //pointOptions.marker.symbol = &quot;url(&quot; + markerURL + &quot;)&quot;;&#13;&#10;         // hasMarker = true;&#13;&#10;         &#13;&#10;         &#13;&#10;        pointOptions.dataLabels = {&#13;&#10;        enabled: true,&#13;&#10;                    useHTML: true,&#13;&#10;                    formatter: function() {&#13;&#10;                        return &#039;&lt;div  style=&quot;position:absolute;bottom:-27px;left:-27px;&quot;&gt;&lt;img src=&quot;&#039; + markerURL + &#039;&quot;&gt;&lt;/div&gt;&#039;;&#13;&#10;                        } &#13;&#10;        }  &#13;&#10;    &#13;&#10;         &#13;&#10;         &#13;&#10;         &#13;&#10;         }   //if&#13;&#10;        }  // for&#13;&#10;        &#13;&#10;        //if (!hasMarker)&#13;&#10;      // If you want images on Info Console path&#13;&#10;      //pointOptions.marker.symbol = &quot;url(images/1x1Pixel.png)&quot;;&#13;&#10;          // If you want images in the Resources of the Application on the iHub&#13;&#10;           //pointOptions.marker.symbol = &quot;url(servlet/DownloadFile?name=/Resources/images/1x1Pixel.png)&quot;;&#13;&#10;           //pointOptions.marker.symbol = &quot;url(servlet/DownloadFile?name=/Applications/Retirement Roadmap/images/1x1Pixel.png)&quot;;&#13;&#10;           &#13;&#10;&#13;&#10;    &#13;&#10;    &#13;&#10;    }  //  if (seriesIndex == 1)&#13;&#10;},"/>
   <extendedProperties name="jschart.zoom" value="x"/>
   <extendedProperties name="jschart.animation" value="true"/>
   <extendedProperties name="keep.hierarchy.category" value="false"/>
@@ -1204,7 +1211,7 @@ var planningData = <VALUE-OF>vars["planningData"]</VALUE-OF>;
                         <property name="outputFormat">JS</property>
                         <property name="inheritColumns">false</property>
                         <property name="marginTop">10pt</property>
-                        <property name="height">3.8020833333333335in</property>
+                        <property name="height">350px</property>
                         <property name="width">1000px</property>
                         <property name="dataSet">Data Set</property>
                         <list-property name="boundDataColumns">
@@ -1309,15 +1316,21 @@ function displayLifeEvents() {
 		html += "<div id='lifeEventContainer" + i + "' style='width:310px; padding:3px;'>";
 		html += "<div id='lifeEvent" + i + "' style='font-size:13pt'>";
 		html += "<span style='vertical-align:top'>";
-		html += "<input type='checkbox' style='vertical-align:top' id='lifeEventState" + i + "' onclick='event.stopPropagation()' ";
+		html += "<input type='checkbox' style='zoom:1.5; vertical-align:top; margin: 2px' "; 
+		html += "id='lifeEventState" + i + "' onclick='event.stopPropagation()' ";
 		if (lifeEventStates[i] == 1)
 			html += " checked ";
-		html += "></input><span style='vertical-align:top;cursor:default' onclick='toggleLifeEventState(" + i + ")'>";
+		html += "/>";
+		html += "<span style='vertical-align:top;cursor:default' onclick='toggleLifeEventState(" + i + ")'>";
 		html += lifeEventNames[i];
-		html += "</span></span>";
-		html += "<img title='Edit Event' style='margin-left:10px;' src='../../servlet/DownloadFile?name=/Applications/SFWealthApp/images/edit.png' ontouchstart='displayLifeEventEdit(event," + i + ")' onclick='displayLifeEventEdit(event," + i + ")' />";
+		html += "</span>";
+		html += "</span>";
+		html += "<span style='border:1px solid #0079C1; cursor:default; color:#0079C1; font-size:10pt; margin-left:5px' ";
+		html += "ontouchstart='displayLifeEventEdit(event," + i + ")' onclick='displayLifeEventEdit(event," + i + ")' >";
+		html += "&amp;nbsp;...&amp;nbsp";
+		html += "</span>";
 		html += "</div>";
-		html += "</div>";
+		html += "</div>"; 
 		html += "</td>";
 		if ((i + 1) % 3 == 0)
 			html += "</tr><tr>";
@@ -1332,17 +1345,24 @@ function displayLifeEventEdit(event, idx) {
 	displayLifeEvents();
 
 	var html = "";
-	html += "<div id='lifeEvent" + idx + "' style='padding:2px; border:1px solid #4F91CD; border-radius:3px'>";
-	html += "<input type='checkbox' id='lifeEventState" + idx + "'";
+	html += "<div id='lifeEvent" + idx + "' style='padding:2px; border:1px solid #0079C1; border-radius:3px'>";
+	html += "<input type='checkbox' id='lifeEventState" + idx + "' style='zoom:1.5; vertical-align:top;' ";
 	if (lifeEventStates[idx] == 1)
 		html += " checked ";
-	html += "></input>";
-	html += "<input type='text' style='width:255px;float:right;margin-right:3px;font-size:12pt' id='lifeEventName" + idx + "' value=\"" + lifeEventNames[idx] + "\"></input>";
+	html += " />";
+	html += "<input type='text' style='width:255px; float:right; margin-right:3px; font-size:12pt; border-color:#b1b1b1' ";
+	html += "id='lifeEventName" + idx + "' value=\"" + lifeEventNames[idx] + "\" />";
 	html += "<table border='0' style='width:304px'>";
 	html += "<tr><td>Amount $</td>";
-	html += "<td align='right'><input type='number' style='width:190px;font-size:12pt' id='lifeEventAmount" + idx + "' value='" + lifeEventAmounts[idx] + "'></input></td></tr>";	
+	html += "<td align='right'>";
+	html += "<input type='number' style='width:190px; font-size:12pt; border-color:#b1b1b1 ' ";
+	html += "id='lifeEventAmount" + idx + "' value='" + lifeEventAmounts[idx] + "' />";
+	html += "</td></tr>";	
 	html += "<tr><td>Year-Month</td>";
-	html += "<td align='right'><input type='text' pattern='[0-9]*' style='width:190px;font-size:12pt' id='lifeEventDate" + idx + "' value='" + formatYearMonth(parseYearMonth(lifeEventDates[idx])) + "'></input></td></tr>";	
+	html += "<td align='right'>";
+	html += "<input type='text' pattern='[0-9]*' style='width:190px; font-size:12pt; border-color:#b1b1b1' ";
+	html += "id='lifeEventDate" + idx + "' value='" + formatYearMonth(parseYearMonth(lifeEventDates[idx])) + "' />";
+	html += "</td></tr>";	
 	html += "</table>"
 	html += "</div>";
 	_$("lifeEventContainer" + idx).innerHTML = html;	
@@ -1469,7 +1489,7 @@ function runReportViewer() {
 	</select>
 </td>
 <td align="center">
-	Monthly Contribution $<input type="number" size="10" id="monthlyContibution" name="monthlyContribution" value="<VALUE-OF>params["pMonthlyContribution"].value</VALUE-OF>" style="font-size:13pt;width:100px"></input>
+	Monthly Contribution $<input type="number" size="10" id="monthlyContibution" name="monthlyContribution" value="<VALUE-OF>params["pMonthlyContribution"].value</VALUE-OF>" style="margin:0; font-size:13pt; width:100px"></input>
 </td>
 <td align="right">
 	Investment Style
@@ -1515,8 +1535,8 @@ Please contact your Financial Advisor to help you plan for and acheive your inve
                                 </text>
                                 <text id="417">
                                     <property name="contentType">html</property>
-                                    <text-property name="content"><![CDATA[<div style="margin-top: 15px; text-align:center; width:95%">
-	<button ontouchstart="allocate(event)" onclick="allocate(event)" style="padding:2px;font-size:14pt;font-weight:bold;width:250px">Re-Allocate</button>
+                                    <text-property name="content"><![CDATA[<div style="margin: 15px 0; text-align:center; width:95%">
+	<span ontouchstart="allocate(event)" onclick="allocate(event)" style="border:1px solid #0079C1; color:#0079C1; padding:5px 10px; font-size:14pt; font-weight:bold; cursor:default;">Re-Allocate</span>
 </div>
 
 <script>
