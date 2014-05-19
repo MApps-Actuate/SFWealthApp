@@ -711,7 +711,7 @@
                                                     <list-property name="action">
                                                         <structure>
                                                             <property name="linkType">drill-through</property>
-                                                            <property name="reportName">/Applications/SFWealthApp/Report Designs/MySpendDetail.rptdesign</property>
+                                                            <property name="reportName">^/Report Designs/MySpendDetail.rptdesign</property>
                                                             <property name="targetWindow">_blank</property>
                                                             <property name="targetFileType">report-design</property>
                                                             <list-property name="paramBindings">
@@ -5054,7 +5054,7 @@
     </body>
     <property name="dashboardView">
         <dashboard id="2">
-            <property name="activeTab">799ed753-f99f-4741-ac5c-4717d38cee13</property>
+            <property name="activeTab">049f219c-22c5-445b-8bb1-b28f150e1ef51</property>
             <property name="tabs">
                 <tab-element name="799ed753-f99f-4741-ac5c-4717d38cee13" id="1113">
                     <property name="title">Home</property>
