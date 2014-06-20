@@ -2,7 +2,7 @@
 <report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
     <xml-property name="externalMetadata">
         <external-datamarts>
-            <datamart-node location="file:/C:/Users/ActuateUser/git/SFWealthApp/Data%20Objects/spendtype.DATA">
+            <datamart-node location="file:/C:/Actuate/iHub3/modules/BIRTiHub/iHub/shared/storage/file/012/251.dat">
                 <reference-elements>NewDataMartDataSource;</reference-elements>
                 <datamart xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
                     <property name="createdBy">Eclipse BIRT Designer Version 2.6.1.v20100926-0604 Build &lt;2.6.1.v20100926-0604></property>
@@ -375,7 +375,7 @@
                     </cubes>
                 </datamart>
             </datamart-node>
-            <datamart-node location="file:/C:/Users/ActuateUser/git/SFWealthApp/Data%20Objects/spend_history.data">
+            <datamart-node location="file:/C:/Actuate/iHub3/modules/BIRTiHub/iHub/shared/storage/file/012/249.dat">
                 <reference-elements>NewDataMartDataSource3;</reference-elements>
                 <datamart xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
                     <property name="createdBy">Eclipse BIRT Designer Version 4.2.3.v20131216-0430 Build &lt;4.2.3.v20131216-0430></property>
@@ -4170,7 +4170,7 @@
      </outline>
     </clientArea>
    </children>
-   <children _type="Legend" visible="false" orientation="1" position="3" itemType="1">
+   <children _type="Legend" visible="false" orientation="1" position="2" itemType="1">
     <outline>
      <color _nil="1"/>
     </outline>
@@ -4190,7 +4190,6 @@
      </outline>
     </title>
    </children>
-   <bounds _body=",,393.75,234.0"/>
    <outline>
     <color _nil="1"/>
    </outline>
@@ -4359,6 +4358,7 @@
   <extendedProperties name="keep.hierarchy.series" value="true"/>
   <extendedProperties name="jschart.glass.style" value="false"/>
   <extendedProperties name="jschart.zoom" value=""/>
+  <extendedProperties name="jschart.series.shadow" value="false"/>
   <sampleData>
    <baseSampleData dataSetRepresentation="QWER"/>
    <orthogonalSampleData dataSetRepresentation="2.3" seriesDefinitionIndex="0"/>
@@ -4606,6 +4606,7 @@
   <extendedProperties name="keep.hierarchy.series" value="true"/>
   <extendedProperties name="jschart.glass.style" value="false"/>
   <extendedProperties name="jschart.zoom" value="xy"/>
+  <extendedProperties name="jschart.series.shadow" value="false"/>
   <sampleData>
    <baseSampleData dataSetRepresentation="QWER"/>
    <orthogonalSampleData dataSetRepresentation="2.3" seriesDefinitionIndex="0"/>
