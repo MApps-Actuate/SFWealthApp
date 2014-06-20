@@ -4300,7 +4300,7 @@
         <extended-item extensionName="Chart" name="Bar Chart - Data Cube_2932b7ba-211b-498f-813d-b03dff5600dd1" id="112">
             <property name="cube">NewDataMartDataSource4::Spend History</property>
             <xml-property name="xmlRepresentation"><![CDATA[<ActuateChart version="2.6.1">
- <ChartWithAxes version="2.6.1" type="Column Chart" subType="Stacked" orientation="1">
+ <ChartWithAxes version="2.6.1" type="Bar Chart" subType="Stacked" orientation="0">
   <block>
    <children _type="TitleBlock" visible="false" auto="false">
     <outline>
@@ -4345,7 +4345,6 @@
      </outline>
     </title>
    </children>
-   <bounds _body=",,393.75,"/>
    <outline>
     <color _nil="1"/>
    </outline>
@@ -4360,7 +4359,6 @@
   <extendedProperties name="keep.hierarchy.series" value="true"/>
   <extendedProperties name="jschart.glass.style" value="false"/>
   <extendedProperties name="jschart.zoom" value=""/>
-  <extendedProperties name="jschart.series.shadow" value="false"/>
   <sampleData>
    <baseSampleData dataSetRepresentation="QWER"/>
    <orthogonalSampleData dataSetRepresentation="2.3" seriesDefinitionIndex="0"/>
@@ -4376,17 +4374,17 @@
   <axes type="2" gapWidth="0.5" labelPosition="1" staggered="false" interval="1" categoryAxis="true">
    <title visible="false">
     <caption value="">
-     <font bold="false" italic="false" underline="false"/>
+     <font bold="false" italic="false" underline="false" rotation="90.0"/>
     </caption>
     <background _nil="1"/>
     <outline>
      <color _nil="1"/>
     </outline>
    </title>
-   <associatedAxes type="0" labelPosition="2" primaryAxis="true" percent="false">
+   <associatedAxes type="0" labelPosition="2" staggered="false" primaryAxis="true" percent="false">
     <title visible="false">
      <caption value="">
-      <font bold="false" italic="false" underline="false"/>
+      <font bold="false" italic="false" underline="false" rotation="0.0"/>
      </caption>
      <background _nil="1"/>
      <outline>
@@ -4395,7 +4393,7 @@
     </title>
     <seriesDefinitions sorting="0">
      <query definition="data[&quot;Account/Account&quot;]"/>
-     <series _type="BarSeries" seriesIdentifier="Spend/Amount" stacked="true">
+     <series _type="BarSeries" seriesIdentifier="Spend/Amount" labelPosition="4" stacked="true">
       <label>
        <background _nil="1"/>
        <outline>
@@ -4549,7 +4547,7 @@
         <extended-item extensionName="Chart" name="My Merchants_e90a6d23-4457-457a-a9d5-4f3afdf9388b" id="1055">
             <property name="cube">NewDataMartDataSource4::Spend History</property>
             <xml-property name="xmlRepresentation"><![CDATA[<ActuateChart version="2.6.1">
- <ChartWithAxes version="2.6.1" type="Bar Chart" subType="Stacked" orientation="0">
+ <ChartWithAxes version="2.6.1" type="Column Chart" subType="Stacked" orientation="1">
   <block>
    <children _type="TitleBlock" visible="false" auto="false">
     <outline>
@@ -4594,7 +4592,6 @@
      </outline>
     </title>
    </children>
-   <bounds _body=",,391.5,"/>
    <outline>
     <color _nil="1"/>
    </outline>
@@ -4609,9 +4606,6 @@
   <extendedProperties name="keep.hierarchy.series" value="true"/>
   <extendedProperties name="jschart.glass.style" value="false"/>
   <extendedProperties name="jschart.zoom" value="xy"/>
-  <extendedProperties name="jschart.series.shadow" value="false"/>
-  <extendedProperties name="drilled.filters_" value="_@,_"/>
-  <extendedProperties name="enable.drill.proc_" value="true"/>
   <sampleData>
    <baseSampleData dataSetRepresentation="QWER"/>
    <orthogonalSampleData dataSetRepresentation="2.3" seriesDefinitionIndex="0"/>
@@ -4627,17 +4621,17 @@
   <axes type="2" gapWidth="0.5" labelPosition="1" staggered="false" interval="1" categoryAxis="true">
    <title visible="false">
     <caption value="">
-     <font bold="false" italic="false" underline="false" rotation="90.0"/>
+     <font bold="false" italic="false" underline="false"/>
     </caption>
     <background _nil="1"/>
     <outline>
      <color _nil="1"/>
     </outline>
    </title>
-   <associatedAxes type="0" labelPosition="2" staggered="false" primaryAxis="true" percent="false">
+   <associatedAxes type="0" labelPosition="2" primaryAxis="true" percent="false">
     <title visible="false">
      <caption value="">
-      <font bold="false" italic="false" underline="false" rotation="0.0"/>
+      <font bold="false" italic="false" underline="false"/>
      </caption>
      <background _nil="1"/>
      <outline>
@@ -4646,7 +4640,7 @@
     </title>
     <seriesDefinitions sorting="0">
      <query definition="data[&quot;Account/Account&quot;]"/>
-     <series _type="BarSeries" seriesIdentifier="Spend/Amount" labelPosition="4" stacked="true">
+     <series _type="BarSeries" seriesIdentifier="Spend/Amount" stacked="true">
       <label>
        <background _nil="1"/>
        <outline>
@@ -4713,7 +4707,7 @@
    </lineAttributes>
    <label visible="true">
     <caption>
-     <font bold="false" italic="false" underline="false" rotation="0.0"/>
+     <font bold="false" italic="false" underline="false" rotation="90.0"/>
     </caption>
     <background _nil="1"/>
     <outline>
@@ -4776,11 +4770,6 @@
                 <structure>
                     <property name="name">Account/Account</property>
                     <expression name="expression">dimension["Account"]["Account"]</expression>
-                    <property name="dataType">string</property>
-                </structure>
-                <structure>
-                    <property name="name">Spend Category/Merchant</property>
-                    <expression name="expression">dimension["Spend Category"]["Merchant"]</expression>
                     <property name="dataType">string</property>
                 </structure>
             </list-property>
