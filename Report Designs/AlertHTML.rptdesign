@@ -172,6 +172,30 @@
                     </text>
                 </cell>
             </row>
+            <row id="50">
+                <property name="verticalAlign">middle</property>
+                <cell id="51">
+                    <image id="49">
+                        <property name="height">0.11458333333333333in</property>
+                        <property name="width">0.15625in</property>
+                        <property name="source">file</property>
+                        <expression name="uri" type="constant">images/bullet.png</expression>
+                    </image>
+                </cell>
+                <cell id="52">
+                    <label id="47">
+                        <property name="fontFamily">"Verdana"</property>
+                        <text-property name="text">Download Credit Card Statement.</text-property>
+                        <list-property name="action">
+                            <structure>
+                                <property name="linkType">hyperlink</property>
+                                <expression name="uri" type="constant">servlet/Applications/SFWealthApp/Composition/Report%20Designs/SF_Wealth_Credit_Card_Statement.pdf</expression>
+                                <property name="targetWindow">_blank</property>
+                            </structure>
+                        </list-property>
+                    </label>
+                </cell>
+            </row>
         </grid>
     </body>
 </report>

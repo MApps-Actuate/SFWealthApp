@@ -4190,6 +4190,7 @@
      </outline>
     </title>
    </children>
+   <bounds _body=",,390.75,"/>
    <outline>
     <color _nil="1"/>
    </outline>
@@ -4273,7 +4274,7 @@
                 </filter-condition-element>
             </property>
             <property name="height">234pt</property>
-            <property name="width">393.75pt</property>
+            <property name="width">390.75pt</property>
             <list-property name="boundDataColumns">
                 <structure>
                     <property name="name">Account/Account</property>
@@ -4344,6 +4345,7 @@
      </outline>
     </title>
    </children>
+   <bounds _body=",,390.75,"/>
    <outline>
     <color _nil="1"/>
    </outline>
@@ -4507,7 +4509,7 @@
                 </filter-condition-element>
             </property>
             <property name="height">246pt</property>
-            <property name="width">393.75pt</property>
+            <property name="width">390.75pt</property>
             <list-property name="boundDataColumns">
                 <structure>
                     <property name="name">Spend Method/Method</property>
@@ -4582,16 +4584,23 @@
       <color _nil="1"/>
      </outline>
     </clientArea>
+    <text>
+     <font bold="false" italic="false" underline="false"/>
+    </text>
     <separator>
      <color _nil="1"/>
     </separator>
     <title visible="true">
+     <caption>
+      <font bold="false" italic="false" underline="false"/>
+     </caption>
      <background _nil="1"/>
      <outline>
       <color _nil="1"/>
      </outline>
     </title>
    </children>
+   <bounds _body=",,388.5,265.5"/>
    <outline>
     <color _nil="1"/>
    </outline>
@@ -4622,17 +4631,17 @@
   <axes type="2" gapWidth="0.5" labelPosition="1" staggered="false" interval="1" categoryAxis="true">
    <title visible="false">
     <caption value="">
-     <font bold="false" italic="false" underline="false"/>
+     <font bold="false" italic="false" underline="false" rotation="0.0"/>
     </caption>
     <background _nil="1"/>
     <outline>
      <color _nil="1"/>
     </outline>
    </title>
-   <associatedAxes type="0" labelPosition="2" primaryAxis="true" percent="false">
+   <associatedAxes type="0" labelPosition="2" staggered="false" primaryAxis="true" percent="false">
     <title visible="false">
      <caption value="">
-      <font bold="false" italic="false" underline="false"/>
+      <font bold="false" italic="false" underline="false" rotation="90.0"/>
      </caption>
      <background _nil="1"/>
      <outline>
@@ -4685,7 +4694,7 @@
       <color _nil="1"/>
      </tickAttributes>
     </minorGrid>
-    <scale step="0.0" stepNumber="1"/>
+    <scale stepNumber="1"/>
     <origin>
      <value _nil="1"/>
     </origin>
@@ -4708,7 +4717,7 @@
    </lineAttributes>
    <label visible="true">
     <caption>
-     <font bold="false" italic="false" underline="false" rotation="90.0"/>
+     <font bold="false" italic="false" underline="false" rotation="60.0"/>
     </caption>
     <background _nil="1"/>
     <outline>
@@ -4755,7 +4764,7 @@
                 </filter-condition-element>
             </property>
             <property name="height">265.5pt</property>
-            <property name="width">391.5pt</property>
+            <property name="width">388.5pt</property>
             <list-property name="boundDataColumns">
                 <structure>
                     <property name="name">Spend Category/Category</property>
@@ -4831,7 +4840,7 @@
      </outline>
     </title>
    </children>
-   <bounds _body=",,391.5,206.25"/>
+   <bounds _body=",,388.5,206.25"/>
    <outline>
     <color _nil="1"/>
    </outline>
@@ -5003,7 +5012,7 @@
                 </filter-condition-element>
             </property>
             <property name="height">206.25pt</property>
-            <property name="width">391.5pt</property>
+            <property name="width">388.5pt</property>
             <list-property name="boundDataColumns">
                 <structure>
                     <property name="name">Date/Month/DateTime</property>
@@ -5060,7 +5069,7 @@
                     <property name="backgroundColor">RGB(255,255,255)</property>
                     <property name="sections">
                         <section id="1073">
-                            <property name="width">20.366300366300365%</property>
+                            <property name="width">20.369003690036898%</property>
                             <property name="gadgets">
                                 <gadget name="Gadget_e7e4f03d-777c-4b3c-ab21-49454ea11d93" id="1012">
                                     <property name="height">299px</property>
@@ -5225,17 +5234,17 @@
                                         </event-subscriber>
                                     </property>
                                 </gadget>
-                                <gadget name="Gadget_6e6d05e7-e310-40aa-9c14-5e4952821357" id="967">
-                                    <property name="height">152px</property>
+                                <gadget name="Gadget_f51023d6-360f-4026-b231-e16e74b652e7" id="1117">
+                                    <property name="height">203px</property>
                                     <property name="title">My Alerts</property>
-                                    <property name="externalGadgetURI">^/Report Designs/AlertHTML.rptdesign</property>
+                                    <property name="externalGadgetURI">/Applications/SFWealthApp/Report Designs/AlertHTML.rptdocument</property>
                                     <property name="showTitle">false</property>
                                     <property name="showBorder">false</property>
-                                    <property name="zIndex">31</property>
+                                    <property name="zIndex">36</property>
                                     <property name="showScrollBar">false</property>
-                                    <property name="height">152px</property>
+                                    <property name="height">203px</property>
                                     <property name="caption">
-                                        <gadget-caption id="968">
+                                        <gadget-caption id="1118">
                                             <property name="showCaption">true</property>
                                             <property name="horizontalAlignment">left</property>
                                             <property name="fontFamily">"Source Sans Pro"</property>
@@ -5247,7 +5256,7 @@
                                         </gadget-caption>
                                     </property>
                                     <property name="content">
-                                        <data-view id="969">
+                                        <data-view id="1119">
                                             <list-property name="userProperties">
                                                 <structure>
                                                     <property name="name">showViewerToolbar</property>
@@ -5258,7 +5267,7 @@
                                             <property name="gadgetType">viewer</property>
                                             <property name="externalContentRef">
                                                 <external-element-ref>
-                                                    <property name="sourceFile">^/Report Designs/AlertHTML.RPTDOCUMENT</property>
+                                                    <property name="sourceFile">/Applications/SFWealthApp/Report Designs/AlertHTML.rptdocument</property>
                                                     <property name="targetBookmark">table</property>
                                                 </external-element-ref>
                                             </property>
@@ -5290,7 +5299,7 @@
                             </property>
                         </section>
                         <section id="1074">
-                            <property name="width">39.70695970695971%</property>
+                            <property name="width">39.70479704797048%</property>
                             <property name="gadgets">
                                 <gadget name="Gadget_1eed2406-fae5-4a25-9f27-0d90e4f2db3b" id="1053">
                                     <property name="height">365px</property>
