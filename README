@@ -2,7 +2,7 @@ This is Actuate's SFWealth demo application
 
 Starting with the June final release of the image, this demo will be upgraded to include this.
 
-The demo now includes a link from the "My Alerts" gadget on the "My Spending History" tab which will download a pdf version of a new SFWealth Credit Card Statement.  This report can be localized.  The property files are available.  All you need to do is substitute the appropriate values.
+The demo now includes a link from the "My Alerts" gadget on the "My Spending History" tab which will download a pdf version of a new SFWealth Credit Card Statement.  This report is localized.  The property files are available.  All you need to do is substitute the strings with the desired values.
 
 To install the demo if it is not on your system:
 
@@ -11,5 +11,8 @@ To install the demo if it is not on your system:
    Import all the .sql statements into mySQL under the sql subfolder.
    Install the fonts located in the Fonts subfolder. (These support the barcodes)  (To install fonts, open a windows explorer, peruse to the directory containing the fonts and double click.  The font installer will then prompt you to ask if you want to install the fonts.
    Install the rotated tex.jar file into the bdpro\eclipse\plugin folder and ihub\eclipse\plugin folders
+   Upload the new alertHTML.rptdesign and alertHTML.rptdocument into the Report Design folder
+   Upload the My Personal Wealth.DASHBOARD file to the dashboard folder.
 
-Dan Morris is the first user that appears in the drop down.
+Dan Morris is the first user that appears in the drop down if you run the report.
+If you want to generate a new .pdf file, be sure mySQL is running.
