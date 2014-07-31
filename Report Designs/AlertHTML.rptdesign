@@ -189,7 +189,7 @@
                         <list-property name="action">
                             <structure>
                                 <property name="linkType">hyperlink</property>
-                                <expression name="uri" type="constant">servlet/Applications/SFWealthApp/Composition/Report%20Designs/SF_Wealth_Credit_Card_Statement.pdf</expression>
+                                <expression name="uri" type="constant">Composition/Report%20Designs/SF_Wealth_Credit_Card_Statement.pdf</expression>
                                 <property name="targetWindow">_blank</property>
                             </structure>
                         </list-property>
