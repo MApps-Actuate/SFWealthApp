@@ -1,3 +1,6 @@
+SFWealthApp
+===========
+
 The SFWealth demo shows how details of your personal spending habits can be made available through dashboards, drilldown and interactive statements. This demo could be shown to prospects that require great looking customer-facing content that can be made interactive. Heavy use of our BIRT Data Object hierarchy is used in drilldown scenarios within various dashboards. The interactive capabilities of the beautifully crafted billing statement is a big differentiator. This demo helps our prospects see how interactive our dashboards and report content can be.
 
 Personal Finance Management, Wealth Management, Portfolio Statements. 
@@ -18,3 +21,9 @@ To install the demo if it is not on your system:
 
 Dan Morris is the first user that appears in the drop down if you run the report.
 If you want to generate a new .pdf file, be sure mySQL is running.
+
+To learn how to use GitHub in Eclipse with this repository, check out the following link:
+http://saleswiki.actuate.com/MApps%20Demo%20Deployment.ashx
+
+To see more BIRT examples and get support from the BIRT community, go to:
+http://developer.actuate.com
