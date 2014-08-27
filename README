@@ -1,4 +1,6 @@
-This is Actuate's SFWealth demo application 
+The SFWealth demo shows how details of your personal spending habits can be made available through dashboards, drilldown and interactive statements. This demo could be shown to prospects that require great looking customer-facing content that can be made interactive. Heavy use of our BIRT Data Object hierarchy is used in drilldown scenarios within various dashboards. The interactive capabilities of the beautifully crafted billing statement is a big differentiator. This demo helps our prospects see how interactive our dashboards and report content can be.
+
+Personal Finance Management, Wealth Management, Portfolio Statements. 
 
 Starting with the June final release of the image, this demo will be upgraded to include this.
 
