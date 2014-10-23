@@ -1801,6 +1801,16 @@ last1%2;</expression>
                                 <label id="492">
                                     <property name="fontSize">12pt</property>
                                     <property name="fontWeight">bold</property>
+                                    <list-property name="visibility">
+                                        <structure>
+                                            <property name="format">html</property>
+                                            <expression name="valueExpr" type="javascript">true</expression>
+                                        </structure>
+                                        <structure>
+                                            <property name="format">xhtml</property>
+                                            <expression name="valueExpr" type="javascript">true</expression>
+                                        </structure>
+                                    </list-property>
                                     <text-property name="text">Portfolio Performance Dashboard</text-property>
                                 </label>
                             </cell>
