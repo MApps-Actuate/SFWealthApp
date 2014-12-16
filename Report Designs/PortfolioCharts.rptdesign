@@ -5,6 +5,12 @@
     <property name="iconFile">/templates/blank_report.gif</property>
     <property name="bidiLayoutOrientation">ltr</property>
     <property name="imageDPI">96</property>
+    <list-property name="cssStyleSheets">
+        <structure>
+            <property name="useExternalCss">true</property>
+            <property name="externalCssURI">http://fonts.googleapis.com/css?family=Raleway</property>
+        </structure>
+    </list-property>
     <method name="onContentUpdate"><![CDATA[var uiOptions = this.getViewer().getUIOptions();
 uiOptions.enableEditReport(false);
 uiOptions.enableDataExtraction(false);
@@ -1760,7 +1766,7 @@ last1%2;</expression>
     </outline>
     <label>
      <caption value="Active Risk vs. Beta">
-      <font name="Arial" size="10.0" bold="false"/>
+      <font name="Raleway" size="10.0" bold="false"/>
      </caption>
      <background _nil="1"/>
      <outline>
@@ -2209,7 +2215,7 @@ last1%2;</expression>
     </outline>
     <label>
      <caption value="Market Value vs. VaR (Billions)">
-      <font name="Arial" size="10.0" bold="false"/>
+      <font name="Raleway" size="10.0" bold="false"/>
      </caption>
      <background _nil="1"/>
      <outline>
@@ -2666,7 +2672,7 @@ last1%2;</expression>
     <cursor type="0"/>
     <label>
      <caption value="% Contribution to Active Risk ">
-      <font name="Arial" size="10.0" bold="false"/>
+      <font name="Raleway" size="10.0" bold="false"/>
      </caption>
      <background _nil="1"/>
      <outline>

@@ -21,6 +21,13 @@ chart4.getReportItem().getProperty("chart.instance").getTitle().getLabel().getCa
             <property name="namespace">ThemesReportItems3</property>
         </structure>
     </list-property>
+    <list-property name="cssStyleSheets">
+        <structure>
+            <property name="fileName">CSS/style.css</property>
+            <property name="useExternalCss">true</property>
+            <property name="externalCssURI">http://fonts.googleapis.com/css?family=Raleway</property>
+        </structure>
+    </list-property>
     <data-sources>
         <oda-data-source extensionID="com.actuate.data.oda.static" name="Data Source" id="187"/>
     </data-sources>
@@ -263,14 +270,22 @@ chart4.getReportItem().getProperty("chart.instance").getTitle().getLabel().getCa
             <property name="leftMargin">0.25in</property>
             <property name="bottomMargin">0in</property>
             <property name="rightMargin">0.25in</property>
+            <property name="backgroundColor">#FFFFFF</property>
             <property name="showHeaderOnFirst">true</property>
             <property name="showFooterOnLast">false</property>
         </simple-master-page>
     </page-setup>
     <body>
         <grid id="1219">
+            <property name="backgroundColor">white</property>
+            <property name="width">4.041666666666667in</property>
             <expression name="bookmark" type="javascript">"rings"</expression>
-            <column id="1220"/>
+            <column id="1220">
+                <property name="width">1.875in</property>
+            </column>
+            <column id="1251">
+                <property name="width">1.84375in</property>
+            </column>
             <row id="1222">
                 <cell id="1223">
                     <extended-item extensionName="Chart" name="Chart1" id="1224">
@@ -327,6 +342,7 @@ chart4.getReportItem().getProperty("chart.instance").getTitle().getLabel().getCa
    <outline visible="false">
     <color _nil="1"/>
    </outline>
+   <background _body=",255,255,255,255"/>
    <cursor type="0"/>
   </block>
   <extendedProperties name="enable.area.alt" value="false"/>
@@ -471,8 +487,9 @@ chart4.getReportItem().getProperty("chart.instance").getTitle().getLabel().getCa
                         </list-property>
                         <property name="inheritColumns">false</property>
                         <property name="marginBottom">0pt</property>
-                        <property name="height">1.6in</property>
-                        <property name="width">1.53in</property>
+                        <property name="height">1.8in</property>
+                        <property name="width">1.7in</property>
+                        <expression name="bookmark" type="javascript">"Chart 1"</expression>
                         <property name="dataSet">Data Set</property>
                         <list-property name="boundDataColumns">
                             <structure>
@@ -493,9 +510,7 @@ chart4.getReportItem().getProperty("chart.instance").getTitle().getLabel().getCa
                         </list-property>
                     </extended-item>
                 </cell>
-            </row>
-            <row id="1235">
-                <cell id="1236">
+                <cell id="1247">
                     <extended-item extensionName="Chart" name="Chart2" id="176">
                         <xml-property name="xmlRepresentation"><![CDATA[<ActuateChart version="2.6.1">
  <ChartWithoutAxes version="2.6.1" type="Pie Chart" subType="Standard" script="&#10;/**&#10; * Called after populating the series dataset.&#10; * &#10; * @param series&#10; *            Series&#10; * @param dataSet&#10; *            DataSet&#10; * @param icsc&#10; *            IChartScriptContext&#10; */&#10;&#10;function afterDataSetFilled( series, dataSet, icsc )&#10;{&#10; if( series.getSeriesIdentifier() == &quot;Series 1&quot; )&#10; {&#10;  var list = dataSet.getValues();&#10;  }&#10;}&#10;&#10;">
@@ -693,8 +708,9 @@ chart4.getReportItem().getProperty("chart.instance").getTitle().getLabel().getCa
                             </structure>
                         </list-property>
                         <property name="inheritColumns">false</property>
-                        <property name="height">1.6in</property>
-                        <property name="width">1.53in</property>
+                        <property name="height">1.8in</property>
+                        <property name="width">1.7in</property>
+                        <expression name="bookmark" type="javascript">"Chart 2"</expression>
                         <property name="dataSet">Data Set</property>
                         <list-property name="boundDataColumns">
                             <structure>
@@ -716,8 +732,13 @@ chart4.getReportItem().getProperty("chart.instance").getTitle().getLabel().getCa
                     </extended-item>
                 </cell>
             </row>
-            <row id="1245">
-                <cell id="1246">
+            <row id="1252">
+                <property name="height">0.5in</property>
+                <cell id="1253"/>
+                <cell id="1254"/>
+            </row>
+            <row id="1235">
+                <cell id="1236">
                     <extended-item extensionName="Chart" name="Chart3" id="177">
                         <xml-property name="xmlRepresentation"><![CDATA[<ActuateChart version="2.6.1">
  <ChartWithoutAxes version="2.6.1" type="Pie Chart" subType="Standard" script="&#10;/**&#10; * Called after populating the series dataset.&#10; * &#10; * @param series&#10; *            Series&#10; * @param dataSet&#10; *            DataSet&#10; * @param icsc&#10; *            IChartScriptContext&#10; */&#10;&#10;function afterDataSetFilled( series, dataSet, icsc )&#10;{&#10; if( series.getSeriesIdentifier() == &quot;Series 1&quot; )&#10; {&#10;  var list = dataSet.getValues();&#10;  }&#10;}&#10;&#10;">
@@ -772,6 +793,7 @@ chart4.getReportItem().getProperty("chart.instance").getTitle().getLabel().getCa
    <outline>
     <color _nil="1"/>
    </outline>
+   <background _body=",255,255,255,255"/>
    <cursor type="0"/>
   </block>
   <extendedProperties name="enable.area.alt" value="false"/>
@@ -915,8 +937,9 @@ chart4.getReportItem().getProperty("chart.instance").getTitle().getLabel().getCa
                             </structure>
                         </list-property>
                         <property name="inheritColumns">false</property>
-                        <property name="height">1.6in</property>
-                        <property name="width">1.53in</property>
+                        <property name="height">1.8in</property>
+                        <property name="width">1.7in</property>
+                        <expression name="bookmark" type="javascript">"Chart 3"</expression>
                         <property name="dataSet">Data Set</property>
                         <list-property name="boundDataColumns">
                             <structure>
@@ -937,9 +960,7 @@ chart4.getReportItem().getProperty("chart.instance").getTitle().getLabel().getCa
                         </list-property>
                     </extended-item>
                 </cell>
-            </row>
-            <row id="1240">
-                <cell id="1241">
+                <cell id="1248">
                     <extended-item extensionName="Chart" name="Chart4" id="178">
                         <xml-property name="xmlRepresentation"><![CDATA[<ActuateChart version="2.6.1">
  <ChartWithoutAxes version="2.6.1" type="Pie Chart" subType="Standard" script="&#10;/**&#10; * Called after populating the series dataset.&#10; * &#10; * @param series&#10; *            Series&#10; * @param dataSet&#10; *            DataSet&#10; * @param icsc&#10; *            IChartScriptContext&#10; */&#10;&#10;function afterDataSetFilled( series, dataSet, icsc )&#10;{&#10; if( series.getSeriesIdentifier() == &quot;Series 1&quot; )&#10; {&#10;  var list = dataSet.getValues();&#10;  }&#10;}&#10;&#10;">
@@ -1137,8 +1158,9 @@ chart4.getReportItem().getProperty("chart.instance").getTitle().getLabel().getCa
                             </structure>
                         </list-property>
                         <property name="inheritColumns">false</property>
-                        <property name="height">1.6in</property>
-                        <property name="width">1.53in</property>
+                        <property name="height">1.8in</property>
+                        <property name="width">1.7in</property>
+                        <expression name="bookmark" type="javascript">"Chart 4"</expression>
                         <property name="dataSet">Data Set</property>
                         <list-property name="boundDataColumns">
                             <structure>
