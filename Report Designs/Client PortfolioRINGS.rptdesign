@@ -733,7 +733,7 @@ chart4.getReportItem().getProperty("chart.instance").getTitle().getLabel().getCa
                 </cell>
             </row>
             <row id="1252">
-                <property name="height">0.5in</property>
+                <property name="height">0.51in</property>
                 <cell id="1253"/>
                 <cell id="1254"/>
             </row>
