@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <library xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
-    <property name="createdBy">Eclipse BIRT Designer Version 4.2.3.v20131216-0430 Build &lt;4.2.3.v20131216-0430></property>
+    <property name="createdBy">Eclipse BIRT Designer Version 4.4.0.v20150128-0131 Build &lt;4.2.3.v20150128-0131></property>
     <themes>
         <report-item-theme type="Crosstab" name="modern-crosstab" id="10">
             <text-property name="displayName">Modern</text-property>
@@ -1533,7 +1533,7 @@
       <entries _body=",255,158,204,76"/>
       <entries _body=",255,46,152,140"/>
       <entries _body=",255,44,142,60"/>
-      <entries _body=",255,140,234,156"/>
+      <entries _body=",255,34,168,168"/>
       <entries _body=",255,0,83,119"/>
       <entries _body=",255,147,214,226"/>
       <entries _body=",255,12,107,23"/>
@@ -1944,7 +1944,7 @@
      <entries _body=",255,158,204,76"/>
      <entries _body=",255,46,152,140"/>
      <entries _body=",255,44,142,60"/>
-     <entries _body=",255,140,234,156"/>
+     <entries _body=",255,34,168,168"/>
      <entries _body=",255,0,83,119"/>
      <entries _body=",255,147,214,226"/>
      <entries _body=",255,12,107,23"/>
@@ -3244,6 +3244,81 @@
                     <property name="borderTopColor">#DADADA</property>
                     <property name="borderTopStyle">solid</property>
                     <property name="borderTopWidth">1px</property>
+                </style>
+            </styles>
+        </report-item-theme>
+        <report-item-theme type="Crosstab" name="modern-crosstab-blue" id="956">
+            <text-property name="displayName">Modern</text-property>
+            <styles>
+                <style name="crosstab" id="957">
+                    <property name="fontFamily">"Verdana"</property>
+                    <property name="fontSize">10pt</property>
+                    <property name="color">#353535</property>
+                </style>
+                <style name="crosstab-header" id="958">
+                    <property name="backgroundColor">#0079C1</property>
+                    <property name="fontFamily">"Verdana"</property>
+                    <property name="fontSize">10pt</property>
+                    <property name="fontWeight">bold</property>
+                    <property name="color">#FFFFFF</property>
+                    <property name="borderBottomColor">#BBBBBB</property>
+                    <property name="borderBottomStyle">solid</property>
+                    <property name="borderBottomWidth">1px</property>
+                    <property name="borderLeftColor">#BBBBBB</property>
+                    <property name="borderLeftStyle">solid</property>
+                    <property name="borderLeftWidth">1px</property>
+                    <property name="borderRightColor">#BBBBBB</property>
+                    <property name="borderRightStyle">solid</property>
+                    <property name="borderRightWidth">1px</property>
+                    <property name="borderTopColor">#BBBBBB</property>
+                    <property name="borderTopStyle">solid</property>
+                    <property name="borderTopWidth">1px</property>
+                </style>
+                <style name="crosstab-detail" id="959">
+                    <property name="backgroundColor">#FFFFFF</property>
+                    <property name="fontFamily">"Verdana"</property>
+                    <property name="borderBottomColor">#BBBBBB</property>
+                    <property name="borderBottomStyle">solid</property>
+                    <property name="borderBottomWidth">1px</property>
+                    <property name="borderLeftColor">#BBBBBB</property>
+                    <property name="borderLeftStyle">solid</property>
+                    <property name="borderLeftWidth">1px</property>
+                    <property name="borderRightColor">#BBBBBB</property>
+                    <property name="borderRightStyle">solid</property>
+                    <property name="borderRightWidth">1px</property>
+                    <property name="borderTopColor">#BBBBBB</property>
+                    <property name="borderTopStyle">solid</property>
+                    <property name="borderTopWidth">1px</property>
+                    <property name="textAlign">right</property>
+                </style>
+                <style name="crosstab-row-header" id="960">
+                    <property name="backgroundColor">#0079C1</property>
+                    <property name="fontFamily">"Verdana"</property>
+                    <property name="textAlign">left</property>
+                </style>
+                <style name="crosstab-column-sub-total" id="961">
+                    <property name="backgroundColor">#0079C1</property>
+                    <property name="fontFamily">"Verdana"</property>
+                    <property name="fontWeight">bold</property>
+                    <property name="fontStyle">italic</property>
+                </style>
+                <style name="crosstab-row-sub-total" id="962">
+                    <property name="backgroundColor">#0079C1</property>
+                    <property name="fontFamily">"Verdana"</property>
+                    <property name="fontWeight">bold</property>
+                    <property name="fontStyle">italic</property>
+                </style>
+                <style name="crosstab-column-grand-total" id="963">
+                    <property name="backgroundColor">#0079C1</property>
+                    <property name="fontFamily">"Verdana"</property>
+                    <property name="fontWeight">bold</property>
+                    <property name="fontStyle">italic</property>
+                </style>
+                <style name="crosstab-row-grand-total" id="964">
+                    <property name="backgroundColor">#0079C1</property>
+                    <property name="fontFamily">"Verdana"</property>
+                    <property name="fontWeight">bold</property>
+                    <property name="fontStyle">italic</property>
                 </style>
             </styles>
         </report-item-theme>

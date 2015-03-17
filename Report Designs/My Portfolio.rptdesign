@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
-    <property name="createdBy">Eclipse BIRT Designer Version 4.2.3.v20131216-0430 Build &lt;4.2.3.v20131216-0430></property>
+    <property name="createdBy">Eclipse BIRT Designer Version 4.4.0.v20150128-0131 Build &lt;4.2.3.v20150128-0131></property>
     <xml-property name="externalMetadata">
         <external-datamarts>
             <datamart-node location="file:/C:/workspace/PFM/Data%20Objects/spend_history.data">
@@ -2614,6 +2614,7 @@ if (!this.getViewer().isInteractive())
                     <grid id="8">
                         <property name="fontFamily">"Arial"</property>
                         <property name="fontSize">8%</property>
+                        <property name="marginRight">auto</property>
                         <property name="textAlign">center</property>
                         <column id="10"/>
                         <column id="444"/>
@@ -2642,13 +2643,6 @@ if (!this.getViewer().isInteractive())
                                 <property name="rowSpan">1</property>
                                 <property name="paddingRight">5pt</property>
                                 <property name="textAlign">center</property>
-                                <label id="635">
-                                    <property name="fontFamily">"Verdana"</property>
-                                    <property name="fontSize">12pt</property>
-                                    <property name="color">#808080</property>
-                                    <property name="display">inline</property>
-                                    <text-property name="text">My Portfolio Summary</text-property>
-                                </label>
                             </cell>
                         </row>
                         <row id="420">
@@ -2658,7 +2652,20 @@ if (!this.getViewer().isInteractive())
                                 <property name="paddingLeft">1pt</property>
                                 <property name="paddingRight">20pt</property>
                                 <property name="textAlign">right</property>
-                                <table name="Asset Allocation" id="466">
+                                <label id="486">
+                                    <property name="backgroundColor">white</property>
+                                    <property name="fontFamily">"Verdana"</property>
+                                    <property name="fontSize">12pt</property>
+                                    <property name="fontWeight">normal</property>
+                                    <property name="color">gray</property>
+                                    <property name="marginTop">0pt</property>
+                                    <property name="marginLeft">1in</property>
+                                    <property name="paddingLeft">1pt</property>
+                                    <property name="paddingBottom">5pt</property>
+                                    <property name="textAlign">center</property>
+                                    <text-property name="text">My Asset Allocation</text-property>
+                                </label>
+                                <table name="Account Performance1" id="1218">
                                     <property name="fontFamily">"Verdana"</property>
                                     <property name="fontSize">8pt</property>
                                     <property name="borderBottomColor">#D2DCFF</property>
@@ -2673,8 +2680,7 @@ if (!this.getViewer().isInteractive())
                                     <property name="borderTopColor">#D2DCFF</property>
                                     <property name="borderTopStyle">solid</property>
                                     <property name="borderTopWidth">thin</property>
-                                    <property name="marginTop">0pt</property>
-                                    <property name="width">4.239583333333333in</property>
+                                    <property name="width">6in</property>
                                     <property name="dataSet">ASSETALLOC</property>
                                     <property name="theme">ThemesReportItems3.Modern Table</property>
                                     <list-property name="boundDataColumns">
@@ -2688,7 +2694,8 @@ if (!this.getViewer().isInteractive())
                                             <property name="name">Current Qty</property>
                                             <text-property name="displayName">Current Qty</text-property>
                                             <expression name="expression" type="javascript">dataSetRow["Current Qty"]</expression>
-                                            <property name="dataType">float</property>
+                                            <property name="dataType">integer</property>
+                                            <property name="allowExport">true</property>
                                         </structure>
                                         <structure>
                                             <property name="name">Original Qty</property>
@@ -2710,26 +2717,20 @@ if (!this.getViewer().isInteractive())
                                         </structure>
                                     </list-property>
                                     <property name="multiViews">
-                                        <multi-views id="484">
+                                        <multi-views id="1236">
                                             <property name="index">-1</property>
                                             <property name="views">
-                                                <extended-item extensionName="Chart" name="Asset Chart" id="485">
+                                                <extended-item extensionName="Chart" name="Acct Chart1" id="1237">
                                                     <xml-property name="xmlRepresentation"><![CDATA[<ActuateChart version="2.6.1">
- <ChartWithAxes version="2.6.1" type="Bar Chart" subType="Side-by-side" units="Points" seriesThickness="15.0" orientation="0">
-  <description value="">
-   <font>
-    <alignment/>
-   </font>
-  </description>
+ <ChartWithAxes version="2.6.1" type="Bar Chart" subType="Side-by-side" units="Points" orientation="0">
   <block>
-   <children _type="TitleBlock" visible="true">
-    <insets _body="0.0,0.0,0.0,0.0"/>
+   <children _type="TitleBlock" visible="false">
     <outline>
      <color _nil="1"/>
     </outline>
     <label>
-     <caption value="My Asset Allocation">
-      <font name="Verdana" size="8.0" bold="true">
+     <caption value="My Account Comparison">
+      <font name="Verdana" size="12.0" bold="false">
        <alignment _body="1,"/>
       </font>
       <color _body=",255,128,128,128"/>
@@ -2740,7 +2741,7 @@ if (!this.getViewer().isInteractive())
      </outline>
     </label>
    </children>
-   <children _type="Plot" horizontalSpacing="0" verticalSpacing="0">
+   <children _type="Plot">
     <outline>
      <color _nil="1"/>
     </outline>
@@ -2750,7 +2751,7 @@ if (!this.getViewer().isInteractive())
      </outline>
     </clientArea>
    </children>
-   <children _type="Legend" visible="false" orientation="0" position="1" itemType="1">
+   <children _type="Legend" visible="false" itemType="1">
     <outline>
      <color _nil="1"/>
     </outline>
@@ -2759,14 +2760,11 @@ if (!this.getViewer().isInteractive())
       <color _nil="1"/>
      </outline>
     </clientArea>
-    <text value="">
-     <font name="Verdana" size="7.0"/>
-     <color _body=",255,128,128,128"/>
-    </text>
+    <text value=""/>
     <separator>
      <color _nil="1"/>
     </separator>
-    <title visible="false">
+    <title>
      <caption value=""/>
      <background _nil="1"/>
      <outline>
@@ -2774,7 +2772,7 @@ if (!this.getViewer().isInteractive())
      </outline>
     </title>
    </children>
-   <bounds _body=",,212.0,130.0"/>
+   <bounds _body=",,276.0,130.0"/>
    <outline>
     <color _nil="1"/>
    </outline>
@@ -2783,29 +2781,44 @@ if (!this.getViewer().isInteractive())
   <extendedProperties name="enable.area.alt" value="false"/>
   <extendedProperties name="enable.drill.category" value="true"/>
   <extendedProperties name="enable.drill.series" value="true"/>
-  <extendedProperties name="jschart.series.shadow" value="true"/>
+  <extendedProperties name="jschart.glass.style" value="false"/>
   <extendedProperties name="jschart.client.script" value="beforeRendering: function(options, chart)&#13;&#10;&#13;&#10;{&#13;&#10;&#13;&#10;            //You can change options here.&#13;&#10;&#13;&#10;            options.plotOptions = {&#13;&#10;&#13;&#10;                        series : {&#13;&#10;&#13;&#10;                                    pointPadding: 0,&#13;&#10;                                    groupPadding: 0.05&#13;&#10;                        }&#13;&#10;&#13;&#10;            };&#13;&#10;&#13;&#10;},"/>
+  <extendedProperties name="jschart.series.shadow" value="true"/>
   <sampleData>
    <baseSampleData dataSetRepresentation="&#039;A&#039;,&#039;B&#039;,&#039;C&#039;,&#039;D&#039;,&#039;E&#039;"/>
    <orthogonalSampleData dataSetRepresentation="6,4,12,8,10"/>
   </sampleData>
-  <interactivity legendBehavior="1"/>
   <emptyMessage>
-   <caption value="This chart contains no data."/>
-   <background _body=",64,127,127,127"/>
-   <outline>
-    <color _body=",128,127,127,127"/>
+   <caption value="">
+    <font>
+     <alignment _body=",0"/>
+    </font>
+   </caption>
+   <background _body=",0,255,255,255"/>
+   <outline visible="false">
+    <color _body=",255,0,0,0"/>
    </outline>
+   <insets _body="0.0,2.0,0.0,3.0"/>
   </emptyMessage>
   <axes>
    <title>
+    <caption value="X-Axis Title">
+     <font size="14.0" bold="true" rotation="0.0">
+      <alignment _body="1,"/>
+     </font>
+    </caption>
     <background _nil="1"/>
     <outline>
      <color _nil="1"/>
     </outline>
    </title>
-   <associatedAxes primaryAxis="true">
+   <associatedAxes>
     <title>
+     <caption value="Y-Axis Title">
+      <font size="14.0" bold="true" rotation="90.0">
+       <alignment _body="1,"/>
+      </font>
+     </caption>
      <background _nil="1"/>
      <outline>
       <color _nil="1"/>
@@ -2813,20 +2826,23 @@ if (!this.getViewer().isInteractive())
     </title>
     <seriesDefinitions>
      <query definition=""/>
-     <series _type="BarSeries" seriesIdentifier="" stacked="false" riser="0">
-      <label visible="false">
-       <caption value=""/>
+     <series _type="BarSeries" seriesIdentifier="Series 1" labelPosition="4">
+      <label>
+       <caption value="">
+        <font name="Verdana" size="7.0"/>
+        <color _body=",255,128,128,128"/>
+       </caption>
        <background _nil="1"/>
        <outline>
         <color _nil="1"/>
        </outline>
       </label>
       <dataDefinition definition="row[&quot;Value&quot;]">
-       <grouping enabled="true" aggregateExpression="Min"/>
+       <grouping/>
       </dataDefinition>
-      <dataPoint suffix="" separator=", ">
-       <components type="3">
-        <formatSpecifier _type="JavaNumberFormatSpecifier" pattern="##.##%"/>
+      <dataPoint separator=", ">
+       <components type="1">
+        <formatSpecifier _type="NumberFormatSpecifier" prefix="" suffix="" fractionDigits="0"/>
        </components>
       </dataPoint>
       <triggers condition="6">
@@ -2838,11 +2854,12 @@ if (!this.getViewer().isInteractive())
      </series>
     </seriesDefinitions>
     <lineAttributes>
-     <color _nil="1"/>
+     <color _body=",255,192,192,192"/>
     </lineAttributes>
     <label>
-     <caption>
+     <caption value="">
       <font name="Verdana" size="7.0"/>
+      <color _body=",255,128,128,128"/>
      </caption>
      <background _nil="1"/>
      <outline>
@@ -2851,7 +2868,7 @@ if (!this.getViewer().isInteractive())
     </label>
     <majorGrid>
      <lineAttributes visible="true">
-      <color _body=",255,234,234,234"/>
+      <color _body=",255,243,243,243"/>
      </lineAttributes>
      <tickAttributes>
       <color _nil="1"/>
@@ -2871,7 +2888,7 @@ if (!this.getViewer().isInteractive())
    </associatedAxes>
    <seriesDefinitions>
     <query definition=""/>
-    <series seriesIdentifier="Asset Class">
+    <series seriesIdentifier="">
      <label>
       <caption value=""/>
       <background _nil="1"/>
@@ -2879,7 +2896,7 @@ if (!this.getViewer().isInteractive())
        <color _nil="1"/>
       </outline>
      </label>
-     <dataDefinition definition="row[&quot;Accounts&quot;]"/>
+     <dataDefinition definition="row[&quot;Account Categories&quot;]"/>
      <dataPoint separator=", ">
       <components type="1"/>
      </dataPoint>
@@ -2887,11 +2904,12 @@ if (!this.getViewer().isInteractive())
     </series>
    </seriesDefinitions>
    <lineAttributes>
-    <color _nil="1"/>
+    <color _body=",255,192,192,192"/>
    </lineAttributes>
    <label>
-    <caption>
-     <font name="Verdana" size="7.0"/>
+    <caption value="">
+     <font name="Verdana" size="7.0" rotation="0.0"/>
+     <color _body=",255,128,128,128"/>
     </caption>
     <background _nil="1"/>
     <outline>
@@ -2926,8 +2944,8 @@ if (!this.getViewer().isInteractive())
 ]]></xml-property>
                                                     <property name="outputFormat">JS</property>
                                                     <property name="inheritColumns">true</property>
-                                                    <property name="height">2.0416666666666665in</property>
-                                                    <property name="width">3.8333333333333335in</property>
+                                                    <property name="height">2.042in</property>
+                                                    <property name="width">6in</property>
                                                     <property name="zIndex">0</property>
                                                     <property name="allowExport">true</property>
                                                     <property name="theme">ThemesReportItems3.Modern</property>
@@ -2935,53 +2953,39 @@ if (!this.getViewer().isInteractive())
                                             </property>
                                         </multi-views>
                                     </property>
-                                    <column id="481"/>
-                                    <column id="482">
+                                    <column id="1233"/>
+                                    <column id="1234">
                                         <property name="textAlign">right</property>
                                     </column>
-                                    <column id="483">
+                                    <column id="1235">
                                         <property name="textAlign">right</property>
                                     </column>
                                     <header>
-                                        <row id="1067">
+                                        <row id="1219">
                                             <property name="color">#FFFFFF</property>
-                                            <cell id="1068">
-                                                <property name="colSpan">3</property>
-                                                <property name="rowSpan">1</property>
-                                                <property name="color">#FFFFFF</property>
-                                                <label id="486">
-                                                    <property name="backgroundColor">#0079C1</property>
-                                                    <property name="fontFamily">"Verdana"</property>
-                                                    <property name="fontWeight">bold</property>
-                                                    <property name="marginTop">0pt</property>
-                                                    <property name="paddingLeft">5pt</property>
-                                                    <property name="textAlign">center</property>
-                                                    <text-property name="text">My Asset Allocation</text-property>
-                                                </label>
-                                            </cell>
-                                        </row>
-                                        <row id="467">
-                                            <property name="color">#FFFFFF</property>
-                                            <cell id="468">
+                                            <cell id="1220">
                                                 <property name="backgroundColor">#0079C1</property>
                                                 <property name="color">#FFFFFF</property>
-                                                <label id="469">
+                                                <label id="1221">
+                                                    <property name="fontSize">12pt</property>
                                                     <property name="textAlign">center</property>
                                                     <text-property name="text">Accounts</text-property>
                                                 </label>
                                             </cell>
-                                            <cell id="470">
+                                            <cell id="1222">
                                                 <property name="backgroundColor">#0079C1</property>
                                                 <property name="color">#FFFFFF</property>
-                                                <label id="471">
+                                                <label id="1223">
+                                                    <property name="fontSize">12pt</property>
                                                     <property name="textAlign">center</property>
                                                     <text-property name="text">Current Qty</text-property>
                                                 </label>
                                             </cell>
-                                            <cell id="472">
+                                            <cell id="1224">
                                                 <property name="backgroundColor">#0079C1</property>
                                                 <property name="color">#FFFFFF</property>
-                                                <label id="473">
+                                                <label id="1225">
+                                                    <property name="fontSize">12pt</property>
                                                     <property name="textAlign">center</property>
                                                     <text-property name="text">Value</text-property>
                                                 </label>
@@ -2989,7 +2993,7 @@ if (!this.getViewer().isInteractive())
                                         </row>
                                     </header>
                                     <detail>
-                                        <row id="474">
+                                        <row id="1226">
                                             <list-property name="highlightRules">
                                                 <structure>
                                                     <property name="operator">eq</property>
@@ -3000,29 +3004,32 @@ if (!this.getViewer().isInteractive())
                                                     </simple-property-list>
                                                 </structure>
                                             </list-property>
-                                            <cell id="475">
-                                                <data id="476">
+                                            <cell id="1227">
+                                                <data id="1238">
+                                                    <property name="fontSize">12pt</property>
                                                     <property name="paddingLeft">3pt</property>
                                                     <property name="textAlign">left</property>
                                                     <property name="resultSetColumn">Accounts</property>
                                                 </data>
                                             </cell>
-                                            <cell id="477">
-                                                <data id="478">
+                                            <cell id="1229">
+                                                <data id="1241">
+                                                    <property name="fontSize">12pt</property>
                                                     <property name="paddingRight">3pt</property>
                                                     <structure name="numberFormat">
                                                         <property name="category">Fixed</property>
-                                                        <property name="pattern">###0;(###0)</property>
+                                                        <property name="pattern">#,##0{RoundingMode=HALF_UP}</property>
                                                     </structure>
                                                     <property name="resultSetColumn">Current Qty</property>
                                                 </data>
                                             </cell>
-                                            <cell id="479">
-                                                <data id="480">
+                                            <cell id="1231">
+                                                <data id="1240">
+                                                    <property name="fontSize">12pt</property>
                                                     <property name="paddingRight">3pt</property>
                                                     <structure name="numberFormat">
                                                         <property name="category">Currency</property>
-                                                        <property name="pattern">$#,##0</property>
+                                                        <property name="pattern">#,##0{RoundingMode=HALF_UP}</property>
                                                     </structure>
                                                     <property name="resultSetColumn">Value</property>
                                                 </data>
@@ -3035,6 +3042,20 @@ if (!this.getViewer().isInteractive())
                                 <property name="paddingLeft">20pt</property>
                                 <property name="paddingRight">1pt</property>
                                 <property name="textAlign">left</property>
+                                <label id="1075">
+                                    <property name="backgroundColor">white</property>
+                                    <property name="fontFamily">"Verdana"</property>
+                                    <property name="fontSize">12pt</property>
+                                    <property name="fontWeight">normal</property>
+                                    <property name="color">gray</property>
+                                    <property name="marginTop">0pt</property>
+                                    <property name="marginBottom">5pt</property>
+                                    <property name="marginRight">1in</property>
+                                    <property name="paddingLeft">1pt</property>
+                                    <property name="paddingBottom">1pt</property>
+                                    <property name="textAlign">center</property>
+                                    <text-property name="text">My Account Comparison</text-property>
+                                </label>
                                 <table name="Account Performance" id="445">
                                     <property name="fontFamily">"Verdana"</property>
                                     <property name="fontSize">8pt</property>
@@ -3050,7 +3071,7 @@ if (!this.getViewer().isInteractive())
                                     <property name="borderTopColor">#D2DCFF</property>
                                     <property name="borderTopStyle">solid</property>
                                     <property name="borderTopWidth">thin</property>
-                                    <property name="width">4.24in</property>
+                                    <property name="width">6in</property>
                                     <property name="dataSet">ACCTPERF</property>
                                     <property name="theme">ThemesReportItems3.Modern Table</property>
                                     <list-property name="boundDataColumns">
@@ -3081,13 +3102,13 @@ if (!this.getViewer().isInteractive())
                                                     <xml-property name="xmlRepresentation"><![CDATA[<ActuateChart version="2.6.1">
  <ChartWithAxes version="2.6.1" type="Bar Chart" subType="Side-by-side" units="Points" orientation="0">
   <block>
-   <children _type="TitleBlock">
+   <children _type="TitleBlock" visible="false">
     <outline>
      <color _nil="1"/>
     </outline>
     <label>
      <caption value="My Account Comparison">
-      <font name="Verdana" size="8.0" bold="true">
+      <font name="Verdana" size="12.0" bold="false">
        <alignment _body="1,"/>
       </font>
       <color _body=",255,128,128,128"/>
@@ -3300,7 +3321,7 @@ if (!this.getViewer().isInteractive())
                                                     <property name="outputFormat">JS</property>
                                                     <property name="inheritColumns">true</property>
                                                     <property name="height">2.042in</property>
-                                                    <property name="width">3.8333333333333335in</property>
+                                                    <property name="width">6in</property>
                                                     <list-property name="boundDataColumns">
                                                         <structure>
                                                             <property name="name">Account Categories</property>
@@ -3336,28 +3357,13 @@ if (!this.getViewer().isInteractive())
                                         <property name="textAlign">right</property>
                                     </column>
                                     <header>
-                                        <row id="1071">
-                                            <cell id="1072">
-                                                <property name="colSpan">3</property>
-                                                <property name="rowSpan">1</property>
-                                                <property name="color">#FFFFFF</property>
-                                                <label id="1075">
-                                                    <property name="backgroundColor">#0079C1</property>
-                                                    <property name="fontFamily">"Verdana"</property>
-                                                    <property name="fontWeight">bold</property>
-                                                    <property name="marginTop">0pt</property>
-                                                    <property name="paddingLeft">5pt</property>
-                                                    <property name="textAlign">center</property>
-                                                    <text-property name="text">My Account Comparison</text-property>
-                                                </label>
-                                            </cell>
-                                        </row>
                                         <row id="446">
                                             <property name="color">#FFFFFF</property>
                                             <cell id="447">
                                                 <property name="backgroundColor">#0079C1</property>
                                                 <property name="color">#FFFFFF</property>
                                                 <label id="448">
+                                                    <property name="fontSize">12pt</property>
                                                     <property name="textAlign">center</property>
                                                     <text-property name="text">Categories</text-property>
                                                 </label>
@@ -3366,6 +3372,7 @@ if (!this.getViewer().isInteractive())
                                                 <property name="backgroundColor">#0079C1</property>
                                                 <property name="color">#FFFFFF</property>
                                                 <label id="450">
+                                                    <property name="fontSize">12pt</property>
                                                     <property name="textAlign">center</property>
                                                     <text-property name="text">Orig Value</text-property>
                                                 </label>
@@ -3374,6 +3381,7 @@ if (!this.getViewer().isInteractive())
                                                 <property name="backgroundColor">#0079C1</property>
                                                 <property name="color">#FFFFFF</property>
                                                 <label id="452">
+                                                    <property name="fontSize">12pt</property>
                                                     <property name="textAlign">center</property>
                                                     <text-property name="text">Curr Value</text-property>
                                                 </label>
@@ -3394,6 +3402,7 @@ if (!this.getViewer().isInteractive())
                                             </list-property>
                                             <cell id="454">
                                                 <data id="455">
+                                                    <property name="fontSize">12pt</property>
                                                     <property name="paddingLeft">3pt</property>
                                                     <property name="textAlign">left</property>
                                                     <property name="resultSetColumn">Account Categories</property>
@@ -3401,6 +3410,7 @@ if (!this.getViewer().isInteractive())
                                             </cell>
                                             <cell id="456">
                                                 <data id="457">
+                                                    <property name="fontSize">12pt</property>
                                                     <property name="paddingRight">3pt</property>
                                                     <structure name="numberFormat">
                                                         <property name="category">Currency</property>
@@ -3411,6 +3421,7 @@ if (!this.getViewer().isInteractive())
                                             </cell>
                                             <cell id="458">
                                                 <data id="459">
+                                                    <property name="fontSize">12pt</property>
                                                     <property name="paddingRight">3pt</property>
                                                     <structure name="numberFormat">
                                                         <property name="category">Currency</property>
@@ -3430,17 +3441,22 @@ if (!this.getViewer().isInteractive())
                         <row id="961">
                             <cell id="962">
                                 <property name="textAlign">center</property>
-                                <extended-item extensionName="Chart" name="My Portfolio Chart" id="1065">
-                                    <xml-property name="xmlRepresentation"><![CDATA[<ActuateChart version="2.6.1">
- <ChartWithAxes version="2.6.1" type="Bar Chart" subType="Side-by-side">
+                                <grid id="1206">
+                                    <column id="1207"/>
+                                    <column id="1208"/>
+                                    <row id="1209">
+                                        <cell id="1210">
+                                            <extended-item extensionName="Chart" name="My Portfolio Chart" id="1065">
+                                                <xml-property name="xmlRepresentation"><![CDATA[<ActuateChart version="2.6.1">
+ <ChartWithAxes version="2.6.1" type="Bar Chart" subType="Side-by-side" orientation="0">
   <block>
    <children _type="TitleBlock" visible="true">
     <outline>
      <color _nil="1"/>
     </outline>
     <label>
-     <caption value="My Portfolio">
-      <font name="Verdana" size="8.0" bold="true"/>
+     <caption value="My Stocks Performance">
+      <font name="Verdana" size="12.0" bold="false"/>
       <color _body=",255,128,128,128"/>
      </caption>
      <background _nil="1"/>
@@ -3459,7 +3475,224 @@ if (!this.getViewer().isInteractive())
      </outline>
     </clientArea>
    </children>
-   <children _type="Legend" visible="false" itemType="1">
+   <children _type="Legend" visible="false" itemType="0">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <clientArea>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </clientArea>
+    <text>
+     <font name="Verdana" size="8.0"/>
+     <color _body=",255,128,128,128"/>
+    </text>
+    <separator>
+     <color _nil="1"/>
+    </separator>
+    <title>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </title>
+   </children>
+   <bounds _body="0.0,0.0,212.0,130.0"/>
+   <outline>
+    <color _nil="1"/>
+   </outline>
+  </block>
+  <extendedProperties name="enable.area.alt" value="false"/>
+  <extendedProperties name="enable.drill.category" value="true"/>
+  <extendedProperties name="enable.drill.series" value="true"/>
+  <extendedProperties name="jschart.glass.style" value="false"/>
+  <extendedProperties name="jschart.zoom" value="xy"/>
+  <extendedProperties name="jschart.client.script" value=""/>
+  <extendedProperties name="jschart.series.shadow" value="true"/>
+  <sampleData>
+   <baseSampleData dataSetRepresentation="&#039;A&#039;,&#039;B&#039;,&#039;C&#039;,&#039;D&#039;,&#039;E&#039;"/>
+   <orthogonalSampleData dataSetRepresentation="6,4,12,8,10"/>
+   <ancillarySampleData dataSetRepresentation="Series 1"/>
+  </sampleData>
+  <emptyMessage>
+   <caption value="This chart contains no data."/>
+   <background _body=",64,127,127,127"/>
+   <outline>
+    <color _body=",128,127,127,127"/>
+   </outline>
+  </emptyMessage>
+  <axes>
+   <title>
+    <caption>
+     <font size="10.0"/>
+    </caption>
+    <background _nil="1"/>
+    <outline>
+     <color _nil="1"/>
+    </outline>
+   </title>
+   <associatedAxes primaryAxis="true">
+    <title>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </title>
+    <seriesDefinitions>
+     <query definition=""/>
+     <series _type="BarSeries" seriesIdentifier="Current Value" stacked="false" riser="0">
+      <label>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dataDefinition definition="))bre(([%Change]">
+       <grouping/>
+      </dataDefinition>
+      <dataPoint prefix="$" separator=", ">
+       <components type="1"/>
+      </dataPoint>
+      <triggers condition="6">
+       <action type="1">
+        <value _type="TooltipValue" text="" delay="200"/>
+       </action>
+      </triggers>
+      <curveFitting _nil="1"/>
+     </series>
+    </seriesDefinitions>
+    <lineAttributes>
+     <color _body=",255,192,192,192"/>
+    </lineAttributes>
+    <label>
+     <caption>
+      <font name="Verdana" size="8.0" italic="false"/>
+      <color _body=",255,128,128,128"/>
+     </caption>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </label>
+    <formatSpecifier _type="NumberFormatSpecifier" prefix="$" suffix="" fractionDigits="0"/>
+    <majorGrid>
+     <lineAttributes visible="true">
+      <color _body=",255,243,243,243"/>
+     </lineAttributes>
+     <tickAttributes>
+      <color _nil="1"/>
+     </tickAttributes>
+    </majorGrid>
+    <minorGrid>
+     <lineAttributes>
+      <color _nil="1"/>
+     </lineAttributes>
+     <tickAttributes>
+      <color _nil="1"/>
+     </tickAttributes>
+    </minorGrid>
+    <origin>
+     <value _nil="1"/>
+    </origin>
+   </associatedAxes>
+   <seriesDefinitions>
+    <query definition=""/>
+    <series seriesIdentifier="">
+     <label>
+      <background _nil="1"/>
+      <outline>
+       <color _nil="1"/>
+      </outline>
+     </label>
+     <dataDefinition definition="row[&quot;Ticker&quot;]"/>
+     <dataPoint separator=", ">
+      <components type="1"/>
+     </dataPoint>
+     <curveFitting _nil="1"/>
+    </series>
+   </seriesDefinitions>
+   <lineAttributes>
+    <color _body=",255,128,128,128"/>
+   </lineAttributes>
+   <label>
+    <caption>
+     <font name="Verdana" size="10.0" rotation="0.0"/>
+     <color _body=",255,128,128,128"/>
+    </caption>
+    <background _nil="1"/>
+    <outline>
+     <color _nil="1"/>
+    </outline>
+   </label>
+   <majorGrid>
+    <lineAttributes visible="false">
+     <color _nil="1"/>
+    </lineAttributes>
+    <tickAttributes>
+     <color _nil="1"/>
+    </tickAttributes>
+   </majorGrid>
+   <minorGrid>
+    <lineAttributes>
+     <color _nil="1"/>
+    </lineAttributes>
+    <tickAttributes>
+     <color _nil="1"/>
+    </tickAttributes>
+   </minorGrid>
+   <scale tickBetweenCategories="false"/>
+   <origin>
+    <value _nil="1"/>
+   </origin>
+  </axes>
+  <rotation>
+   <angles/>
+  </rotation>
+ </ChartWithAxes>
+</ActuateChart>
+]]></xml-property>
+                                                <property name="outputFormat">JS</property>
+                                                <property name="inheritColumns">false</property>
+                                                <property name="display">block</property>
+                                                <property name="marginLeft">1.5in</property>
+                                                <property name="height">3.1875in</property>
+                                                <property name="width">5.5in</property>
+                                                <property name="dataBindingRef">Portfolio Table</property>
+                                                <property name="theme">ThemesReportItems3.Modern</property>
+                                            </extended-item>
+                                        </cell>
+                                        <cell id="1211">
+                                            <extended-item extensionName="Chart" name="My Portfolio Chart1" id="1212">
+                                                <xml-property name="xmlRepresentation"><![CDATA[<ActuateChart version="2.6.1">
+ <ChartWithAxes version="2.6.1" type="Bar Chart" subType="Side-by-side">
+  <block>
+   <children _type="TitleBlock" visible="true">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <label>
+     <caption value="My Portfolio Value">
+      <font name="Verdana" size="12.0" bold="false"/>
+      <color _body=",255,128,128,128"/>
+     </caption>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </label>
+   </children>
+   <children _type="Plot">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <clientArea>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </clientArea>
+   </children>
+   <children _type="Legend" visible="false" itemType="0">
     <outline>
      <color _nil="1"/>
     </outline>
@@ -3548,7 +3781,7 @@ if (!this.getViewer().isInteractive())
     </lineAttributes>
     <label>
      <caption>
-      <font name="Verdana" size="8.0" italic="true"/>
+      <font name="Verdana" size="10.0" italic="false"/>
       <color _body=",255,128,128,128"/>
      </caption>
      <background _nil="1"/>
@@ -3598,7 +3831,7 @@ if (!this.getViewer().isInteractive())
    </lineAttributes>
    <label>
     <caption>
-     <font name="Verdana" size="8.0" rotation="0.0"/>
+     <font name="Verdana" size="10.0" rotation="0.0"/>
      <color _body=",255,128,128,128"/>
     </caption>
     <background _nil="1"/>
@@ -3633,14 +3866,18 @@ if (!this.getViewer().isInteractive())
  </ChartWithAxes>
 </ActuateChart>
 ]]></xml-property>
-                                    <property name="outputFormat">JS</property>
-                                    <property name="inheritColumns">false</property>
-                                    <property name="display">block</property>
-                                    <property name="height">3.1875in</property>
-                                    <property name="width">9.083333333333334in</property>
-                                    <property name="dataBindingRef">Portfolio Table</property>
-                                    <property name="theme">ThemesReportItems3.Modern</property>
-                                </extended-item>
+                                                <property name="outputFormat">JS</property>
+                                                <property name="inheritColumns">false</property>
+                                                <property name="display">block</property>
+                                                <property name="marginRight">0.5in</property>
+                                                <property name="height">3.1875in</property>
+                                                <property name="width">5.5in</property>
+                                                <property name="dataBindingRef">Portfolio Table</property>
+                                                <property name="theme">ThemesReportItems3.Modern</property>
+                                            </extended-item>
+                                        </cell>
+                                    </row>
+                                </grid>
                             </cell>
                         </row>
                         <row id="1060">
@@ -4178,6 +4415,7 @@ if (!this.getViewer().isInteractive())
                                                 <property name="textAlign">left</property>
                                                 <property name="verticalAlign">middle</property>
                                                 <label id="578">
+                                                    <property name="fontSize">12pt</property>
                                                     <property name="textAlign">center</property>
                                                     <text-property name="text">Asset Class</text-property>
                                                 </label>
@@ -4198,6 +4436,7 @@ if (!this.getViewer().isInteractive())
                                                 <property name="borderTopStyle">solid</property>
                                                 <property name="borderTopWidth">1px</property>
                                                 <label id="198">
+                                                    <property name="fontSize">12pt</property>
                                                     <property name="textAlign">center</property>
                                                     <text-property name="text">Volume</text-property>
                                                 </label>
@@ -4218,6 +4457,7 @@ if (!this.getViewer().isInteractive())
                                                 <property name="borderTopStyle">solid</property>
                                                 <property name="borderTopWidth">1px</property>
                                                 <label id="200">
+                                                    <property name="fontSize">12pt</property>
                                                     <property name="textAlign">center</property>
                                                     <text-property name="text">Curr Share Price</text-property>
                                                 </label>
@@ -4238,6 +4478,7 @@ if (!this.getViewer().isInteractive())
                                                 <property name="borderTopStyle">solid</property>
                                                 <property name="borderTopWidth">1px</property>
                                                 <label id="202">
+                                                    <property name="fontSize">12pt</property>
                                                     <property name="textAlign">center</property>
                                                     <text-property name="text">Orig Share Price</text-property>
                                                 </label>
@@ -4258,6 +4499,7 @@ if (!this.getViewer().isInteractive())
                                                 <property name="borderTopStyle">solid</property>
                                                 <property name="borderTopWidth">1px</property>
                                                 <label id="204">
+                                                    <property name="fontSize">12pt</property>
                                                     <property name="textAlign">center</property>
                                                     <text-property name="text">%Change</text-property>
                                                 </label>
@@ -4278,6 +4520,7 @@ if (!this.getViewer().isInteractive())
                                                 <property name="borderTopStyle">solid</property>
                                                 <property name="borderTopWidth">1px</property>
                                                 <label id="206">
+                                                    <property name="fontSize">12pt</property>
                                                     <property name="textAlign">center</property>
                                                     <text-property name="text">Current Value</text-property>
                                                 </label>
@@ -4321,6 +4564,7 @@ if (!this.getViewer().isInteractive())
                                                 <property name="borderTopStyle">solid</property>
                                                 <property name="borderTopWidth">1px</property>
                                                 <label id="210">
+                                                    <property name="fontSize">12pt</property>
                                                     <property name="textAlign">left</property>
                                                     <text-property name="text">My Total Portfolio:</text-property>
                                                 </label>
@@ -4341,6 +4585,8 @@ if (!this.getViewer().isInteractive())
                                                 <property name="borderTopStyle">solid</property>
                                                 <property name="borderTopWidth">1px</property>
                                                 <data id="1057">
+                                                    <property name="fontSize">12pt</property>
+                                                    <property name="color">white</property>
                                                     <structure name="numberFormat">
                                                         <property name="category">Currency</property>
                                                         <property name="pattern">$#,##0;$(#,##0){RoundingMode=HALF_UP}</property>
@@ -4395,6 +4641,7 @@ if (!this.getViewer().isInteractive())
                                                 <property name="borderTopStyle">solid</property>
                                                 <property name="borderTopWidth">1px</property>
                                                 <data id="224">
+                                                    <property name="fontSize">10pt</property>
                                                     <property name="paddingLeft">3pt</property>
                                                     <property name="textAlign">left</property>
                                                     <property name="resultSetColumn">Stock Name</property>
@@ -4421,6 +4668,7 @@ if (!this.getViewer().isInteractive())
                                                 <property name="borderTopStyle">solid</property>
                                                 <property name="borderTopWidth">1px</property>
                                                 <data id="338">
+                                                    <property name="fontSize">10pt</property>
                                                     <property name="paddingLeft">3pt</property>
                                                     <property name="textAlign">left</property>
                                                     <list-property name="mapRules">
@@ -4450,6 +4698,7 @@ if (!this.getViewer().isInteractive())
                                                 <property name="borderTopStyle">solid</property>
                                                 <property name="borderTopWidth">1px</property>
                                                 <data id="226">
+                                                    <property name="fontSize">10pt</property>
                                                     <property name="paddingRight">3pt</property>
                                                     <property name="resultSetColumn">Current Volume</property>
                                                 </data>
@@ -4468,6 +4717,7 @@ if (!this.getViewer().isInteractive())
                                                 <property name="borderTopStyle">solid</property>
                                                 <property name="borderTopWidth">1px</property>
                                                 <data id="228">
+                                                    <property name="fontSize">10pt</property>
                                                     <property name="paddingRight">3pt</property>
                                                     <structure name="numberFormat">
                                                         <property name="category">Currency</property>
@@ -4490,6 +4740,7 @@ if (!this.getViewer().isInteractive())
                                                 <property name="borderTopStyle">solid</property>
                                                 <property name="borderTopWidth">1px</property>
                                                 <data id="230">
+                                                    <property name="fontSize">10pt</property>
                                                     <property name="paddingRight">3pt</property>
                                                     <structure name="numberFormat">
                                                         <property name="category">Currency</property>
@@ -4512,6 +4763,7 @@ if (!this.getViewer().isInteractive())
                                                 <property name="borderTopStyle">solid</property>
                                                 <property name="borderTopWidth">1px</property>
                                                 <data id="629">
+                                                    <property name="fontSize">10pt</property>
                                                     <property name="paddingRight">3pt</property>
                                                     <structure name="numberFormat">
                                                         <property name="category">Fixed</property>
@@ -4534,6 +4786,7 @@ if (!this.getViewer().isInteractive())
                                                 <property name="borderTopStyle">solid</property>
                                                 <property name="borderTopWidth">1px</property>
                                                 <data id="625">
+                                                    <property name="fontSize">10pt</property>
                                                     <property name="paddingRight">3pt</property>
                                                     <structure name="numberFormat">
                                                         <property name="category">Currency</property>
@@ -4600,6 +4853,7 @@ else&#13;
                                         <property name="aggregationOnColumn">Spend Method/Method</property>
                                         <property name="content">
                                             <data id="1192">
+                                                <property name="fontSize">12pt</property>
                                                 <structure name="numberFormat">
                                                     <property name="category">Currency</property>
                                                     <property name="pattern">$#,##0.00{RoundingMode=HALF_UP}</property>
@@ -4626,6 +4880,7 @@ else&#13;
                                                     <extended-item extensionName="CrosstabCell" id="1182">
                                                         <property name="content">
                                                             <data name="Month" id="1183">
+                                                                <property name="fontSize">12pt</property>
                                                                 <structure name="dateTimeFormat">
                                                                     <property name="category">Custom</property>
                                                                     <property name="pattern">MMM</property>
@@ -4653,6 +4908,7 @@ else&#13;
                                                     <extended-item extensionName="CrosstabCell" id="1188">
                                                         <property name="content">
                                                             <data name="Method" id="1189">
+                                                                <property name="fontSize">12pt</property>
                                                                 <property name="resultSetColumn">Method</property>
                                                             </data>
                                                         </property>
@@ -4668,6 +4924,7 @@ else&#13;
                             <extended-item extensionName="CrosstabCell" id="1162">
                                 <property name="content">
                                     <label id="1197">
+                                        <property name="fontSize">12pt</property>
                                         <text-property name="text">Month</text-property>
                                     </label>
                                 </property>
@@ -4888,7 +5145,7 @@ else&#13;
                                 </property>
                             </multi-views>
                         </property>
-                        <property name="theme">ThemesReportItems3.modern-crosstab</property>
+                        <property name="theme">ThemesReportItems3.modern-crosstab-blue</property>
                     </extended-item>
                 </cell>
             </row>

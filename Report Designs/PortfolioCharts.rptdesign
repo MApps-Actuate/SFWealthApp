@@ -1,10 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
-    <property name="createdBy">Eclipse BIRT Designer Version 4.2.3.v20131216-0430 Build &lt;4.2.3.v20131216-0430></property>
+    <property name="createdBy">Eclipse BIRT Designer Version 4.4.0.v20150128-0131 Build &lt;4.2.3.v20150128-0131></property>
     <property name="units">in</property>
     <property name="iconFile">/templates/blank_report.gif</property>
     <property name="bidiLayoutOrientation">ltr</property>
     <property name="imageDPI">96</property>
+    <list-property name="libraries">
+        <structure>
+            <property name="fileName">ThemesReportItems3.rptlibrary</property>
+            <property name="namespace">ThemesReportItems3</property>
+        </structure>
+    </list-property>
     <list-property name="cssStyleSheets">
         <structure>
             <property name="useExternalCss">true</property>
@@ -1766,7 +1772,7 @@ last1%2;</expression>
     </outline>
     <label>
      <caption value="Active Risk vs. Beta">
-      <font name="Raleway" size="10.0" bold="false"/>
+      <font name="Verdana" size="10.0" bold="false"/>
      </caption>
      <background _nil="1"/>
      <outline>
@@ -1801,6 +1807,9 @@ last1%2;</expression>
      <color _nil="1"/>
     </separator>
     <title>
+     <caption>
+      <font name="Verdana"/>
+     </caption>
      <background _nil="1"/>
      <outline>
       <color _nil="1"/>
@@ -2199,6 +2208,7 @@ last1%2;</expression>
                                 <property name="dataType">date</property>
                             </structure>
                         </list-property>
+                        <property name="theme">ThemesReportItems3.Modern</property>
                     </extended-item>
                 </cell>
             </row>
@@ -2215,7 +2225,7 @@ last1%2;</expression>
     </outline>
     <label>
      <caption value="Market Value vs. VaR (Billions)">
-      <font name="Raleway" size="10.0" bold="false"/>
+      <font name="Verdana" size="10.0" bold="false"/>
      </caption>
      <background _nil="1"/>
      <outline>
@@ -2655,6 +2665,7 @@ last1%2;</expression>
                                 <property name="dataType">date</property>
                             </structure>
                         </list-property>
+                        <property name="theme">ThemesReportItems3.Modern</property>
                     </extended-item>
                 </cell>
             </row>
@@ -2672,7 +2683,7 @@ last1%2;</expression>
     <cursor type="0"/>
     <label>
      <caption value="% Contribution to Active Risk ">
-      <font name="Raleway" size="10.0" bold="false"/>
+      <font name="Verdana" size="10.0" bold="false"/>
      </caption>
      <background _nil="1"/>
      <outline>
@@ -2785,40 +2796,6 @@ last1%2;</expression>
     </title>
     <seriesDefinitions>
      <query definition=""/>
-     <seriesPalette>
-      <entries _body=",255,0,121,193"/>
-      <entries _body=",255,241,90,34"/>
-      <entries _body=",255,19,181,234"/>
-      <entries _body=",255,250,166,26"/>
-      <entries _body=",255,154,204,0"/>
-      <entries _body=",255,255,204,0"/>
-      <entries _body=",255,51,153,102"/>
-      <entries _body=",255,102,102,153"/>
-      <entries _body=",255,0,128,128"/>
-      <entries _body=",255,244,47,47"/>
-      <entries _body=",255,128,192,128"/>
-      <entries _body=",255,7,146,94"/>
-      <entries _body=",255,0,128,255"/>
-      <entries _body=",255,255,128,192"/>
-      <entries _body=",255,0,255,255"/>
-      <entries _body=",255,255,128,128"/>
-      <entries _body=",255,0,128,192"/>
-      <entries _body=",255,128,128,192"/>
-      <entries _body=",255,255,0,255"/>
-      <entries _body=",255,128,64,64"/>
-      <entries _body=",255,255,128,64"/>
-      <entries _body=",255,80,240,120"/>
-      <entries _body=",255,0,64,128"/>
-      <entries _body=",255,128,0,64"/>
-      <entries _body=",255,255,0,128"/>
-      <entries _body=",255,128,128,64"/>
-      <entries _body=",255,128,128,128"/>
-      <entries _body=",255,255,128,255"/>
-      <entries _body=",255,0,64,0"/>
-      <entries _body=",255,0,0,0"/>
-      <entries _body=",255,255,255,255"/>
-      <entries _body=",255,255,128,0"/>
-     </seriesPalette>
      <series _type="LineSeries" seriesIdentifier="Covariance" stacked="false">
       <label>
        <background _nil="1"/>
@@ -2848,40 +2825,6 @@ last1%2;</expression>
     </seriesDefinitions>
     <seriesDefinitions>
      <query definition=""/>
-     <seriesPalette>
-      <entries _body=",255,241,90,34"/>
-      <entries _body=",255,19,181,234"/>
-      <entries _body=",255,250,166,26"/>
-      <entries _body=",255,154,204,0"/>
-      <entries _body=",255,255,204,0"/>
-      <entries _body=",255,51,153,102"/>
-      <entries _body=",255,102,102,153"/>
-      <entries _body=",255,0,128,128"/>
-      <entries _body=",255,244,47,47"/>
-      <entries _body=",255,128,192,128"/>
-      <entries _body=",255,7,146,94"/>
-      <entries _body=",255,0,128,255"/>
-      <entries _body=",255,255,128,192"/>
-      <entries _body=",255,0,255,255"/>
-      <entries _body=",255,255,128,128"/>
-      <entries _body=",255,0,128,192"/>
-      <entries _body=",255,128,128,192"/>
-      <entries _body=",255,255,0,255"/>
-      <entries _body=",255,128,64,64"/>
-      <entries _body=",255,255,128,64"/>
-      <entries _body=",255,80,240,120"/>
-      <entries _body=",255,0,64,128"/>
-      <entries _body=",255,128,0,64"/>
-      <entries _body=",255,255,0,128"/>
-      <entries _body=",255,128,128,64"/>
-      <entries _body=",255,128,128,128"/>
-      <entries _body=",255,255,128,255"/>
-      <entries _body=",255,0,64,0"/>
-      <entries _body=",255,0,0,0"/>
-      <entries _body=",255,255,255,255"/>
-      <entries _body=",255,255,128,0"/>
-      <entries _body=",255,0,121,193"/>
-     </seriesPalette>
      <series _type="LineSeries" seriesIdentifier="Term Structure" stacked="false">
       <label>
        <background _nil="1"/>
@@ -2911,40 +2854,6 @@ last1%2;</expression>
     </seriesDefinitions>
     <seriesDefinitions>
      <query definition=""/>
-     <seriesPalette>
-      <entries _body=",255,19,181,234"/>
-      <entries _body=",255,250,166,26"/>
-      <entries _body=",255,154,204,0"/>
-      <entries _body=",255,255,204,0"/>
-      <entries _body=",255,51,153,102"/>
-      <entries _body=",255,102,102,153"/>
-      <entries _body=",255,0,128,128"/>
-      <entries _body=",255,244,47,47"/>
-      <entries _body=",255,128,192,128"/>
-      <entries _body=",255,7,146,94"/>
-      <entries _body=",255,0,128,255"/>
-      <entries _body=",255,255,128,192"/>
-      <entries _body=",255,0,255,255"/>
-      <entries _body=",255,255,128,128"/>
-      <entries _body=",255,0,128,192"/>
-      <entries _body=",255,128,128,192"/>
-      <entries _body=",255,255,0,255"/>
-      <entries _body=",255,128,64,64"/>
-      <entries _body=",255,255,128,64"/>
-      <entries _body=",255,80,240,120"/>
-      <entries _body=",255,0,64,128"/>
-      <entries _body=",255,128,0,64"/>
-      <entries _body=",255,255,0,128"/>
-      <entries _body=",255,128,128,64"/>
-      <entries _body=",255,128,128,128"/>
-      <entries _body=",255,255,128,255"/>
-      <entries _body=",255,0,64,0"/>
-      <entries _body=",255,0,0,0"/>
-      <entries _body=",255,255,255,255"/>
-      <entries _body=",255,255,128,0"/>
-      <entries _body=",255,0,121,193"/>
-      <entries _body=",255,241,90,34"/>
-     </seriesPalette>
      <series _type="LineSeries" seriesIdentifier="Style" stacked="false">
       <label>
        <background _nil="1"/>
@@ -2974,40 +2883,6 @@ last1%2;</expression>
     </seriesDefinitions>
     <seriesDefinitions>
      <query definition=""/>
-     <seriesPalette>
-      <entries _body=",255,250,166,26"/>
-      <entries _body=",255,154,204,0"/>
-      <entries _body=",255,255,204,0"/>
-      <entries _body=",255,51,153,102"/>
-      <entries _body=",255,102,102,153"/>
-      <entries _body=",255,0,128,128"/>
-      <entries _body=",255,244,47,47"/>
-      <entries _body=",255,128,192,128"/>
-      <entries _body=",255,7,146,94"/>
-      <entries _body=",255,0,128,255"/>
-      <entries _body=",255,255,128,192"/>
-      <entries _body=",255,0,255,255"/>
-      <entries _body=",255,255,128,128"/>
-      <entries _body=",255,0,128,192"/>
-      <entries _body=",255,128,128,192"/>
-      <entries _body=",255,255,0,255"/>
-      <entries _body=",255,128,64,64"/>
-      <entries _body=",255,255,128,64"/>
-      <entries _body=",255,80,240,120"/>
-      <entries _body=",255,0,64,128"/>
-      <entries _body=",255,128,0,64"/>
-      <entries _body=",255,255,0,128"/>
-      <entries _body=",255,128,128,64"/>
-      <entries _body=",255,128,128,128"/>
-      <entries _body=",255,255,128,255"/>
-      <entries _body=",255,0,64,0"/>
-      <entries _body=",255,0,0,0"/>
-      <entries _body=",255,255,255,255"/>
-      <entries _body=",255,255,128,0"/>
-      <entries _body=",255,0,121,193"/>
-      <entries _body=",255,241,90,34"/>
-      <entries _body=",255,19,181,234"/>
-     </seriesPalette>
      <series _type="LineSeries" seriesIdentifier="Spread" stacked="false">
       <label>
        <background _nil="1"/>
@@ -3037,40 +2912,6 @@ last1%2;</expression>
     </seriesDefinitions>
     <seriesDefinitions>
      <query definition=""/>
-     <seriesPalette>
-      <entries _body=",255,154,204,0"/>
-      <entries _body=",255,255,204,0"/>
-      <entries _body=",255,51,153,102"/>
-      <entries _body=",255,102,102,153"/>
-      <entries _body=",255,0,128,128"/>
-      <entries _body=",255,244,47,47"/>
-      <entries _body=",255,128,192,128"/>
-      <entries _body=",255,7,146,94"/>
-      <entries _body=",255,0,128,255"/>
-      <entries _body=",255,255,128,192"/>
-      <entries _body=",255,0,255,255"/>
-      <entries _body=",255,255,128,128"/>
-      <entries _body=",255,0,128,192"/>
-      <entries _body=",255,128,128,192"/>
-      <entries _body=",255,255,0,255"/>
-      <entries _body=",255,128,64,64"/>
-      <entries _body=",255,255,128,64"/>
-      <entries _body=",255,80,240,120"/>
-      <entries _body=",255,0,64,128"/>
-      <entries _body=",255,128,0,64"/>
-      <entries _body=",255,255,0,128"/>
-      <entries _body=",255,128,128,64"/>
-      <entries _body=",255,128,128,128"/>
-      <entries _body=",255,255,128,255"/>
-      <entries _body=",255,0,64,0"/>
-      <entries _body=",255,0,0,0"/>
-      <entries _body=",255,255,255,255"/>
-      <entries _body=",255,255,128,0"/>
-      <entries _body=",255,0,121,193"/>
-      <entries _body=",255,241,90,34"/>
-      <entries _body=",255,19,181,234"/>
-      <entries _body=",255,250,166,26"/>
-     </seriesPalette>
      <series _type="LineSeries" seriesIdentifier="Selection Risk" stacked="false">
       <label>
        <background _nil="1"/>
@@ -3100,40 +2941,6 @@ last1%2;</expression>
     </seriesDefinitions>
     <seriesDefinitions>
      <query definition=""/>
-     <seriesPalette>
-      <entries _body=",255,255,204,0"/>
-      <entries _body=",255,51,153,102"/>
-      <entries _body=",255,102,102,153"/>
-      <entries _body=",255,0,128,128"/>
-      <entries _body=",255,244,47,47"/>
-      <entries _body=",255,128,192,128"/>
-      <entries _body=",255,7,146,94"/>
-      <entries _body=",255,0,128,255"/>
-      <entries _body=",255,255,128,192"/>
-      <entries _body=",255,0,255,255"/>
-      <entries _body=",255,255,128,128"/>
-      <entries _body=",255,0,128,192"/>
-      <entries _body=",255,128,128,192"/>
-      <entries _body=",255,255,0,255"/>
-      <entries _body=",255,128,64,64"/>
-      <entries _body=",255,255,128,64"/>
-      <entries _body=",255,80,240,120"/>
-      <entries _body=",255,0,64,128"/>
-      <entries _body=",255,128,0,64"/>
-      <entries _body=",255,255,0,128"/>
-      <entries _body=",255,128,128,64"/>
-      <entries _body=",255,128,128,128"/>
-      <entries _body=",255,255,128,255"/>
-      <entries _body=",255,0,64,0"/>
-      <entries _body=",255,0,0,0"/>
-      <entries _body=",255,255,255,255"/>
-      <entries _body=",255,255,128,0"/>
-      <entries _body=",255,0,121,193"/>
-      <entries _body=",255,241,90,34"/>
-      <entries _body=",255,19,181,234"/>
-      <entries _body=",255,250,166,26"/>
-      <entries _body=",255,154,204,0"/>
-     </seriesPalette>
      <series _type="LineSeries" seriesIdentifier="Industry" stacked="false">
       <label>
        <background _nil="1"/>
@@ -3160,10 +2967,10 @@ last1%2;</expression>
            <caption value="Chart"/>
           </label>
          </uRLValues>
+         <propertiesMap key="MenuItem" value="color:Black;fontSize:10pt;paddingLeft:10px;paddingRight:10px;paddingTop:2px;paddingBottom:2px"/>
          <propertiesMap key="Menu" value="zIndex:99999;backgroundColor:#FAFFF8;width:auto;height:auto;border:1px solid #333333;filter:progid:DXImageTransform.Microsoft.Shadow(Color:#333333,Direction=120,strength=5)"/>
          <propertiesMap key="OnMouseOut" value="backgroundColor:#FAFFF8;color:#000000"/>
          <propertiesMap key="OnMouseOver" value="backgroundColor:#245DDB;color:#FFFFFF"/>
-         <propertiesMap key="MenuItem" value="color:Black;fontSize:10pt;paddingLeft:10px;paddingRight:10px;paddingTop:2px;paddingBottom:2px"/>
         </value>
        </action>
       </triggers>
@@ -3178,40 +2985,6 @@ last1%2;</expression>
     </seriesDefinitions>
     <seriesDefinitions>
      <query definition=""/>
-     <seriesPalette>
-      <entries _body=",255,51,153,102"/>
-      <entries _body=",255,102,102,153"/>
-      <entries _body=",255,0,128,128"/>
-      <entries _body=",255,244,47,47"/>
-      <entries _body=",255,128,192,128"/>
-      <entries _body=",255,7,146,94"/>
-      <entries _body=",255,0,128,255"/>
-      <entries _body=",255,255,128,192"/>
-      <entries _body=",255,0,255,255"/>
-      <entries _body=",255,255,128,128"/>
-      <entries _body=",255,0,128,192"/>
-      <entries _body=",255,128,128,192"/>
-      <entries _body=",255,255,0,255"/>
-      <entries _body=",255,128,64,64"/>
-      <entries _body=",255,255,128,64"/>
-      <entries _body=",255,80,240,120"/>
-      <entries _body=",255,0,64,128"/>
-      <entries _body=",255,128,0,64"/>
-      <entries _body=",255,255,0,128"/>
-      <entries _body=",255,128,128,64"/>
-      <entries _body=",255,128,128,128"/>
-      <entries _body=",255,255,128,255"/>
-      <entries _body=",255,0,64,0"/>
-      <entries _body=",255,0,0,0"/>
-      <entries _body=",255,255,255,255"/>
-      <entries _body=",255,255,128,0"/>
-      <entries _body=",255,0,121,193"/>
-      <entries _body=",255,241,90,34"/>
-      <entries _body=",255,19,181,234"/>
-      <entries _body=",255,250,166,26"/>
-      <entries _body=",255,154,204,0"/>
-      <entries _body=",255,255,204,0"/>
-     </seriesPalette>
      <series _type="LineSeries" seriesIdentifier="Factor Interaction" stacked="false">
       <label>
        <background _nil="1"/>
@@ -3241,40 +3014,6 @@ last1%2;</expression>
     </seriesDefinitions>
     <seriesDefinitions>
      <query definition=""/>
-     <seriesPalette>
-      <entries _body=",255,102,102,153"/>
-      <entries _body=",255,0,128,128"/>
-      <entries _body=",255,244,47,47"/>
-      <entries _body=",255,128,192,128"/>
-      <entries _body=",255,7,146,94"/>
-      <entries _body=",255,0,128,255"/>
-      <entries _body=",255,255,128,192"/>
-      <entries _body=",255,0,255,255"/>
-      <entries _body=",255,255,128,128"/>
-      <entries _body=",255,0,128,192"/>
-      <entries _body=",255,128,128,192"/>
-      <entries _body=",255,255,0,255"/>
-      <entries _body=",255,128,64,64"/>
-      <entries _body=",255,255,128,64"/>
-      <entries _body=",255,80,240,120"/>
-      <entries _body=",255,0,64,128"/>
-      <entries _body=",255,128,0,64"/>
-      <entries _body=",255,255,0,128"/>
-      <entries _body=",255,128,128,64"/>
-      <entries _body=",255,128,128,128"/>
-      <entries _body=",255,255,128,255"/>
-      <entries _body=",255,0,64,0"/>
-      <entries _body=",255,0,0,0"/>
-      <entries _body=",255,255,255,255"/>
-      <entries _body=",255,255,128,0"/>
-      <entries _body=",255,0,121,193"/>
-      <entries _body=",255,241,90,34"/>
-      <entries _body=",255,19,181,234"/>
-      <entries _body=",255,250,166,26"/>
-      <entries _body=",255,154,204,0"/>
-      <entries _body=",255,255,204,0"/>
-      <entries _body=",255,51,153,102"/>
-     </seriesPalette>
      <series _type="LineSeries" seriesIdentifier="Emerging Markets" stacked="false">
       <label>
        <background _nil="1"/>
@@ -3304,40 +3043,6 @@ last1%2;</expression>
     </seriesDefinitions>
     <seriesDefinitions>
      <query definition=""/>
-     <seriesPalette>
-      <entries _body=",255,0,128,128"/>
-      <entries _body=",255,244,47,47"/>
-      <entries _body=",255,128,192,128"/>
-      <entries _body=",255,7,146,94"/>
-      <entries _body=",255,0,128,255"/>
-      <entries _body=",255,255,128,192"/>
-      <entries _body=",255,0,255,255"/>
-      <entries _body=",255,255,128,128"/>
-      <entries _body=",255,0,128,192"/>
-      <entries _body=",255,128,128,192"/>
-      <entries _body=",255,255,0,255"/>
-      <entries _body=",255,128,64,64"/>
-      <entries _body=",255,255,128,64"/>
-      <entries _body=",255,80,240,120"/>
-      <entries _body=",255,0,64,128"/>
-      <entries _body=",255,128,0,64"/>
-      <entries _body=",255,255,0,128"/>
-      <entries _body=",255,128,128,64"/>
-      <entries _body=",255,128,128,128"/>
-      <entries _body=",255,255,128,255"/>
-      <entries _body=",255,0,64,0"/>
-      <entries _body=",255,0,0,0"/>
-      <entries _body=",255,255,255,255"/>
-      <entries _body=",255,255,128,0"/>
-      <entries _body=",255,0,121,193"/>
-      <entries _body=",255,241,90,34"/>
-      <entries _body=",255,19,181,234"/>
-      <entries _body=",255,250,166,26"/>
-      <entries _body=",255,154,204,0"/>
-      <entries _body=",255,255,204,0"/>
-      <entries _body=",255,51,153,102"/>
-      <entries _body=",255,102,102,153"/>
-     </seriesPalette>
      <series _type="LineSeries" seriesIdentifier="Currenct/Market Interaction" stacked="false">
       <label>
        <background _nil="1"/>
@@ -3367,40 +3072,6 @@ last1%2;</expression>
     </seriesDefinitions>
     <seriesDefinitions>
      <query definition=""/>
-     <seriesPalette>
-      <entries _body=",255,244,47,47"/>
-      <entries _body=",255,128,192,128"/>
-      <entries _body=",255,7,146,94"/>
-      <entries _body=",255,0,128,255"/>
-      <entries _body=",255,255,128,192"/>
-      <entries _body=",255,0,255,255"/>
-      <entries _body=",255,255,128,128"/>
-      <entries _body=",255,0,128,192"/>
-      <entries _body=",255,128,128,192"/>
-      <entries _body=",255,255,0,255"/>
-      <entries _body=",255,128,64,64"/>
-      <entries _body=",255,255,128,64"/>
-      <entries _body=",255,80,240,120"/>
-      <entries _body=",255,0,64,128"/>
-      <entries _body=",255,128,0,64"/>
-      <entries _body=",255,255,0,128"/>
-      <entries _body=",255,128,128,64"/>
-      <entries _body=",255,128,128,128"/>
-      <entries _body=",255,255,128,255"/>
-      <entries _body=",255,0,64,0"/>
-      <entries _body=",255,0,0,0"/>
-      <entries _body=",255,255,255,255"/>
-      <entries _body=",255,255,128,0"/>
-      <entries _body=",255,0,121,193"/>
-      <entries _body=",255,241,90,34"/>
-      <entries _body=",255,19,181,234"/>
-      <entries _body=",255,250,166,26"/>
-      <entries _body=",255,154,204,0"/>
-      <entries _body=",255,255,204,0"/>
-      <entries _body=",255,51,153,102"/>
-      <entries _body=",255,102,102,153"/>
-      <entries _body=",255,0,128,128"/>
-     </seriesPalette>
      <series _type="LineSeries" seriesIdentifier="Currency Risk" stacked="false">
       <label>
        <background _nil="1"/>
@@ -3465,40 +3136,6 @@ last1%2;</expression>
    </associatedAxes>
    <seriesDefinitions>
     <query definition=""/>
-    <seriesPalette>
-     <entries _body=",255,0,121,193"/>
-     <entries _body=",255,241,90,34"/>
-     <entries _body=",255,19,181,234"/>
-     <entries _body=",255,250,166,26"/>
-     <entries _body=",255,154,204,0"/>
-     <entries _body=",255,255,204,0"/>
-     <entries _body=",255,51,153,102"/>
-     <entries _body=",255,102,102,153"/>
-     <entries _body=",255,0,128,128"/>
-     <entries _body=",255,244,47,47"/>
-     <entries _body=",255,128,192,128"/>
-     <entries _body=",255,7,146,94"/>
-     <entries _body=",255,0,128,255"/>
-     <entries _body=",255,255,128,192"/>
-     <entries _body=",255,0,255,255"/>
-     <entries _body=",255,255,128,128"/>
-     <entries _body=",255,0,128,192"/>
-     <entries _body=",255,128,128,192"/>
-     <entries _body=",255,255,0,255"/>
-     <entries _body=",255,128,64,64"/>
-     <entries _body=",255,255,128,64"/>
-     <entries _body=",255,80,240,120"/>
-     <entries _body=",255,0,64,128"/>
-     <entries _body=",255,128,0,64"/>
-     <entries _body=",255,255,0,128"/>
-     <entries _body=",255,128,128,64"/>
-     <entries _body=",255,128,128,128"/>
-     <entries _body=",255,255,128,255"/>
-     <entries _body=",255,0,64,0"/>
-     <entries _body=",255,0,0,0"/>
-     <entries _body=",255,255,255,255"/>
-     <entries _body=",255,255,128,0"/>
-    </seriesPalette>
     <series seriesIdentifier="">
      <label>
       <background _nil="1"/>
@@ -3642,6 +3279,7 @@ last1%2;</expression>
                                 <property name="dataType">decimal</property>
                             </structure>
                         </list-property>
+                        <property name="theme">ThemesReportItems3.Modern</property>
                     </extended-item>
                 </cell>
             </row>
