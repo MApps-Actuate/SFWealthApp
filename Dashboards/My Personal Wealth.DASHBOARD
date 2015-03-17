@@ -5060,7 +5060,7 @@
     </body>
     <property name="dashboardView">
         <dashboard id="2">
-            <property name="activeTab">d2eb69ca-a3df-4920-8983-9f42670367bb</property>
+            <property name="activeTab">799ed753-f99f-4741-ac5c-4717d38cee13</property>
             <property name="tabs">
                 <tab-element name="799ed753-f99f-4741-ac5c-4717d38cee13" id="1113">
                     <property name="title">Home</property>
