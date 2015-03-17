@@ -711,7 +711,7 @@
                                                     <list-property name="action">
                                                         <structure>
                                                             <property name="linkType">drill-through</property>
-                                                            <property name="reportName">/Applications/SFWealthApp/Report Designs/MySpendDetail.rptdesign</property>
+                                                            <property name="reportName">^/Report Designs/MySpendDetail.rptdesign</property>
                                                             <property name="targetWindow">_blank</property>
                                                             <property name="targetFileType">report-design</property>
                                                             <list-property name="paramBindings">
@@ -4236,7 +4236,7 @@
                                     <property name="gadgetType">viewer</property>
                                     <property name="externalContentRef">
                                         <external-element-ref>
-                                            <property name="sourceFile">/Applications/SFWealthApp/Report Designs/Webinars.rptdesign</property>
+                                            <property name="sourceFile">^/Report Designs/Webinars.rptdesign</property>
                                         </external-element-ref>
                                     </property>
                                 </data-view>
@@ -4276,7 +4276,7 @@
                                     <property name="gadgetType">viewer</property>
                                     <property name="externalContentRef">
                                         <external-element-ref>
-                                            <property name="sourceFile">/Applications/SFWealthApp/Report Designs/EventsInterestNews.rptdesign</property>
+                                            <property name="sourceFile">^/Report Designs/EventsInterestNews.rptdesign</property>
                                             <property name="targetBookmark">News</property>
                                         </external-element-ref>
                                     </property>
@@ -4317,7 +4317,7 @@
                                     <property name="gadgetType">viewer</property>
                                     <property name="externalContentRef">
                                         <external-element-ref>
-                                            <property name="sourceFile">/Applications/SFWealthApp/Report Designs/EventsInterestNews.rptdesign</property>
+                                            <property name="sourceFile">^/Report Designs/EventsInterestNews.rptdesign</property>
                                             <property name="targetBookmark">Events</property>
                                         </external-element-ref>
                                     </property>

@@ -2,7 +2,7 @@
 <report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
     <xml-property name="externalMetadata">
         <external-datamarts>
-            <datamart-node location="file:/C:/Actuate/iHub3/modules/BIRTiHub/iHub/shared/storage/file/012/251.dat">
+            <datamart-node location="file:/C:/Users/ActuateUser/git/SFWealthApp/Data%20Objects/spendtype.DATA">
                 <reference-elements>NewDataMartDataSource;</reference-elements>
                 <datamart xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
                     <property name="createdBy">Eclipse BIRT Designer Version 2.6.1.v20100926-0604 Build &lt;2.6.1.v20100926-0604></property>
@@ -375,7 +375,7 @@
                     </cubes>
                 </datamart>
             </datamart-node>
-            <datamart-node location="file:/C:/Actuate/iHub3/modules/BIRTiHub/iHub/shared/storage/file/012/249.dat">
+            <datamart-node location="file:/C:/Users/ActuateUser/git/SFWealthApp/Data%20Objects/spend_history.data">
                 <reference-elements>NewDataMartDataSource3;</reference-elements>
                 <datamart xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
                     <property name="createdBy">Eclipse BIRT Designer Version 4.2.3.v20131216-0430 Build &lt;4.2.3.v20131216-0430></property>
@@ -711,7 +711,7 @@
                                                     <list-property name="action">
                                                         <structure>
                                                             <property name="linkType">drill-through</property>
-                                                            <property name="reportName">/Applications/SFWealthApp/Report Designs/MySpendDetail.rptdesign</property>
+                                                            <property name="reportName">^/Report Designs/MySpendDetail.rptdesign</property>
                                                             <property name="targetWindow">_blank</property>
                                                             <property name="targetFileType">report-design</property>
                                                             <list-property name="paramBindings">
@@ -4270,6 +4270,12 @@
                     <expression name="value2" type="constant">9</expression>
                     <property name="filterTarget">DataSet</property>
                     <property name="updateAggregation">true</property>
+                    <list-property name="userProperties">
+                        <structure>
+                            <property name="name">customValue</property>
+                            <property name="type">string</property>
+                        </structure>
+                    </list-property>
                 </filter-condition-element>
             </property>
             <property name="height">195pt</property>
@@ -4505,6 +4511,12 @@
                     <expression name="value2" type="constant">9</expression>
                     <property name="filterTarget">DataSet</property>
                     <property name="updateAggregation">true</property>
+                    <list-property name="userProperties">
+                        <structure>
+                            <property name="name">customValue</property>
+                            <property name="type">string</property>
+                        </structure>
+                    </list-property>
                 </filter-condition-element>
             </property>
             <property name="height">246pt</property>
@@ -4753,6 +4765,12 @@
                     <expression name="value2" type="constant">9</expression>
                     <property name="filterTarget">DataSet</property>
                     <property name="updateAggregation">true</property>
+                    <list-property name="userProperties">
+                        <structure>
+                            <property name="name">customValue</property>
+                            <property name="type">string</property>
+                        </structure>
+                    </list-property>
                 </filter-condition-element>
             </property>
             <property name="height">265.5pt</property>
@@ -5002,6 +5020,12 @@
                     <expression name="value2" type="constant">9</expression>
                     <property name="filterTarget">DataSet</property>
                     <property name="updateAggregation">true</property>
+                    <list-property name="userProperties">
+                        <structure>
+                            <property name="name">customValue</property>
+                            <property name="type">string</property>
+                        </structure>
+                    </list-property>
                 </filter-condition-element>
             </property>
             <property name="height">203.25pt</property>
@@ -5036,7 +5060,7 @@
     </body>
     <property name="dashboardView">
         <dashboard id="2">
-            <property name="activeTab">799ed753-f99f-4741-ac5c-4717d38cee13</property>
+            <property name="activeTab">d2eb69ca-a3df-4920-8983-9f42670367bb</property>
             <property name="tabs">
                 <tab-element name="799ed753-f99f-4741-ac5c-4717d38cee13" id="1113">
                     <property name="title">Home</property>
@@ -5133,15 +5157,15 @@
                         </gadget>
                         <gadget name="Gadget_c3c02eba-1f76-43a2-8462-2e30269fdb1e" id="1021">
                             <property name="x">18px</property>
-                            <property name="y">414px</property>
-                            <property name="height">67px</property>
+                            <property name="y">400px</property>
+                            <property name="height">99px</property>
                             <property name="width">267px</property>
                             <property name="title">Month Range</property>
                             <property name="showTitle">false</property>
                             <property name="showBorder">false</property>
                             <property name="zIndex">26</property>
                             <property name="showScrollBar">false</property>
-                            <property name="height">67px</property>
+                            <property name="height">99px</property>
                             <property name="width">267px</property>
                             <property name="caption">
                                 <gadget-caption id="1022">
@@ -5228,7 +5252,7 @@
                             <property name="height">202px</property>
                             <property name="width">267px</property>
                             <property name="title">My Alerts</property>
-                            <property name="externalGadgetURI">/Applications/SFWealthApp/Report Designs/AlertHTML.rptdocument</property>
+                            <property name="externalGadgetURI">^/Report Designs/AlertHTML.rptdocument</property>
                             <property name="showTitle">false</property>
                             <property name="showBorder">false</property>
                             <property name="zIndex">36</property>
@@ -5491,7 +5515,7 @@
                         <gadget name="Gadget_9bdd651e-d57d-45b8-89d8-14234d155e38" id="1043">
                             <property name="x">594px</property>
                             <property name="y">0px</property>
-                            <property name="height">353px</property>
+                            <property name="height">375px</property>
                             <property name="width">392px</property>
                             <property name="title">My Account Performance At-A-Glance</property>
                             <property name="externalGadgetURI">^/Report Designs/Account Overview.rptdocument</property>
@@ -5499,7 +5523,7 @@
                             <property name="showBorder">false</property>
                             <property name="zIndex">21</property>
                             <property name="showScrollBar">false</property>
-                            <property name="height">353px</property>
+                            <property name="height">375px</property>
                             <property name="width">392px</property>
                             <property name="caption">
                                 <gadget-caption id="1044">
@@ -5535,14 +5559,14 @@
                         <gadget name="Gadget_ceb90994-45c3-4d33-9593-9c1b412327ac" id="981">
                             <property name="x">1008px</property>
                             <property name="y">0px</property>
-                            <property name="height">28px</property>
+                            <property name="height">60px</property>
                             <property name="width">369px</property>
                             <property name="title">My Wealth vs. Market Indices</property>
                             <property name="showTitle">false</property>
                             <property name="showBorder">false</property>
                             <property name="zIndex">25</property>
                             <property name="showScrollBar">true</property>
-                            <property name="height">28px</property>
+                            <property name="height">60px</property>
                             <property name="width">369px</property>
                             <property name="caption">
                                 <gadget-caption id="982">
@@ -5643,7 +5667,7 @@
                         <gadget name="Gadget_748c94e6-dce7-4388-906a-96fb431df7f4" id="975">
                             <property name="x">1026px</property>
                             <property name="y">108px</property>
-                            <property name="height">302px</property>
+                            <property name="height">310px</property>
                             <property name="width">369px</property>
                             <property name="title">A</property>
                             <property name="externalGadgetURI">^/Report Designs/My Wealth vs Indices.rptdesign</property>
@@ -5651,7 +5675,7 @@
                             <property name="showBorder">false</property>
                             <property name="zIndex">24</property>
                             <property name="showScrollBar">false</property>
-                            <property name="height">302px</property>
+                            <property name="height">310px</property>
                             <property name="width">369px</property>
                             <property name="caption">
                                 <gadget-caption id="976">
@@ -5671,7 +5695,7 @@
                                     <property name="gadgetType">viewer</property>
                                     <property name="externalContentRef">
                                         <external-element-ref>
-                                            <property name="sourceFile">/Applications/SFWealthApp/Report Designs/My Wealth vs Indices.rptdesign</property>
+                                            <property name="sourceFile">^/Report Designs/My Wealth vs Indices.rptdesign</property>
                                         </external-element-ref>
                                     </property>
                                     <property name="paramSettings">
@@ -5731,7 +5755,7 @@
                                     <property name="gadgetType">viewer</property>
                                     <property name="externalContentRef">
                                         <external-element-ref>
-                                            <property name="sourceFile">/Applications/SFWealthApp/Report Designs/world_trip.rptdocument</property>
+                                            <property name="sourceFile">^/Report Designs/world_trip.rptdocument</property>
                                             <property name="targetBookmark">grid</property>
                                         </external-element-ref>
                                     </property>
@@ -5895,118 +5919,10 @@
                         </gadget>
                     </property>
                 </tab-element>
-                <tab-element name="a85ab8ca-5c7e-4d97-9024-ba6434bf4881" id="1088">
+                <tab-element name="d2eb69ca-a3df-4920-8983-9f42670367bb" id="1120">
                     <property name="title">Retirement Roadmap</property>
-                    <property name="backgroundColor">RGB(255,255,255)</property>
-                    <property name="sections">
-                        <section id="1089">
-                            <property name="width">25.401459854014597%</property>
-                            <property name="gadgets">
-                                <gadget name="Gadget_1e60ced4-f984-4be0-b040-aa4ab313168f" id="1107">
-                                    <property name="height">238px</property>
-                                    <property name="title">Retirement Planner App</property>
-                                    <property name="externalGadgetURI">^/Report Designs/roadmap descr.rptdesign</property>
-                                    <property name="showTitle">false</property>
-                                    <property name="showBorder">true</property>
-                                    <property name="zIndex">3</property>
-                                    <property name="showScrollBar">false</property>
-                                    <property name="height">238px</property>
-                                    <property name="caption">
-                                        <gadget-caption id="1108">
-                                            <property name="showCaption">true</property>
-                                            <property name="horizontalAlignment">left</property>
-                                            <property name="fontFamily">"Raleway"</property>
-                                            <property name="fontSize">16pt</property>
-                                            <property name="fontWeight">normal</property>
-                                            <property name="fontStyle">normal</property>
-                                            <property name="color">#353535</property>
-                                            <property name="textUnderline">none</property>
-                                        </gadget-caption>
-                                    </property>
-                                    <property name="content">
-                                        <data-view id="1109">
-                                            <list-property name="userProperties">
-                                                <structure>
-                                                    <property name="name">showViewerToolbar</property>
-                                                    <property name="type">boolean</property>
-                                                </structure>
-                                            </list-property>
-                                            <property name="showViewerToolbar">false</property>
-                                            <property name="gadgetType">viewer</property>
-                                            <property name="externalContentRef">
-                                                <external-element-ref>
-                                                    <property name="sourceFile">^/Report Designs/roadmap descr.rptdesign</property>
-                                                </external-element-ref>
-                                            </property>
-                                        </data-view>
-                                    </property>
-                                </gadget>
-                                <gadget name="64785e37-4d0d-49b0-a9b2-bdcea2213e06" id="1091">
-                                    <property name="height">150px</property>
-                                    <property name="zIndex">1</property>
-                                    <property name="isVisible">false</property>
-                                    <property name="height">150px</property>
-                                    <property name="caption">
-                                        <gadget-caption id="1093">
-                                            <property name="showCaption">true</property>
-                                            <property name="horizontalAlignment">left</property>
-                                            <property name="fontFamily">"Raleway"</property>
-                                            <property name="fontSize">24pt</property>
-                                            <property name="fontWeight">bold</property>
-                                            <property name="color">#000000</property>
-                                        </gadget-caption>
-                                    </property>
-                                    <property name="content">
-                                        <current-selections id="1092"/>
-                                    </property>
-                                </gadget>
-                            </property>
-                        </section>
-                        <section id="1090">
-                            <property name="width">74.59854014598541%</property>
-                            <property name="gadgets">
-                                <gadget name="Gadget_518f038a-d69f-42f3-b23c-10594abf53a9" id="1094">
-                                    <property name="height">682px</property>
-                                    <property name="title">Retirement Roadmap Application</property>
-                                    <property name="externalGadgetURI">^/Report Designs/Planning Roadmap - HTML5.rptdesign</property>
-                                    <property name="showTitle">false</property>
-                                    <property name="showBorder">false</property>
-                                    <property name="zIndex">2</property>
-                                    <property name="showScrollBar">false</property>
-                                    <property name="height">682px</property>
-                                    <property name="caption">
-                                        <gadget-caption id="1095">
-                                            <property name="showCaption">false</property>
-                                            <property name="horizontalAlignment">left</property>
-                                            <property name="fontFamily">"Raleway"</property>
-                                            <property name="fontSize">16pt</property>
-                                            <property name="fontWeight">normal</property>
-                                            <property name="fontStyle">normal</property>
-                                            <property name="color">#353535</property>
-                                            <property name="textUnderline">none</property>
-                                        </gadget-caption>
-                                    </property>
-                                    <property name="content">
-                                        <data-view id="1096">
-                                            <list-property name="userProperties">
-                                                <structure>
-                                                    <property name="name">showViewerToolbar</property>
-                                                    <property name="type">boolean</property>
-                                                </structure>
-                                            </list-property>
-                                            <property name="showViewerToolbar">false</property>
-                                            <property name="gadgetType">viewer</property>
-                                            <property name="externalContentRef">
-                                                <external-element-ref>
-                                                    <property name="sourceFile">^/Report Designs/Planning Roadmap - HTML5.rptdesign</property>
-                                                </external-element-ref>
-                                            </property>
-                                        </data-view>
-                                    </property>
-                                </gadget>
-                            </property>
-                        </section>
-                    </property>
+                    <property name="externalTab">^/Dashboards/Retirement.dashboard</property>
+                    <property name="externalTabName">a85ab8ca-5c7e-4d97-9024-ba6434bf4881</property>
                 </tab-element>
                 <tab-element name="26d62da6-da15-4ddb-9349-a6f447b1ed29" id="143">
                     <property name="title">Portfolio Performance</property>
@@ -6049,7 +5965,7 @@
                                             <property name="gadgetType">viewer</property>
                                             <property name="externalContentRef">
                                                 <external-element-ref>
-                                                    <property name="sourceFile">/Applications/SFWealthApp/Report Designs/Portfolio Performance Dashboard_NoHTML.rptdocument</property>
+                                                    <property name="sourceFile">^/Report Designs/Portfolio Performance Dashboard_NoHTML.rptdocument</property>
                                                 </external-element-ref>
                                             </property>
                                         </data-view>
