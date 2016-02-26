@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
-    <property name="createdBy">Eclipse BIRT Designer Version 4.2.3.v20131216-0430 Build &lt;4.2.3.v20131216-0430></property>
+    <property name="createdBy">Eclipse BIRT Designer Version 4.4.0.v20150710-0101 Build &lt;4.2.3.v20150710-0101></property>
     <property name="units">in</property>
     <property name="iconFile">/templates/blank_report.gif</property>
     <property name="bidiLayoutOrientation">ltr</property>
@@ -98,7 +98,7 @@
                                     <property name="fontSize">12pt</property>
                                     <property name="marginLeft">0pt</property>
                                     <property name="marginBottom">5pt</property>
-                                    <text-property name="text">Actuate Gears Up for IoT at JavaOne</text-property>
+                                    <text-property name="text">OpenText Gears Up for IoT at JavaOne</text-property>
                                 </label>
                             </cell>
                         </row>
