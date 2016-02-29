@@ -1,787 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
-    <xml-property name="externalMetadata">
-        <external-datamarts>
-            <datamart-node location="file:/C:/Actuate/iHub3/modules/BIRTiHub/iHub/shared/storage/file/038/352.dat">
-                <reference-elements>NewDataMartDataSource;</reference-elements>
-                <datamart xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
-                    <property name="createdBy">Eclipse BIRT Designer Version 2.6.1.v20100926-0604 Build &lt;2.6.1.v20100926-0604></property>
-                    <data-sources>
-                        <oda-data-source extensionID="org.eclipse.datatools.connectivity.oda.flatfile" name="Data Source" id="2">
-                            <property name="HOME">C:\data</property>
-                            <property name="DELIMTYPE">COMMA</property>
-                            <property name="CHARSET">UTF-8</property>
-                            <property name="INCLCOLUMNNAME">YES</property>
-                            <property name="INCLTYPELINE">YES</property>
-                        </oda-data-source>
-                    </data-sources>
-                    <data-sets>
-                        <oda-data-set extensionID="org.eclipse.datatools.connectivity.oda.flatfile.dataSet" name="Data Set" id="3">
-                            <list-property name="columnHints">
-                                <structure>
-                                    <property name="columnName">Account</property>
-                                    <property name="analysis">attribute</property>
-                                </structure>
-                                <structure>
-                                    <property name="columnName">Amount</property>
-                                    <text-property name="heading">Amount</text-property>
-                                </structure>
-                                <structure>
-                                    <property name="columnName">Amt</property>
-                                    <text-property name="heading">Amt</text-property>
-                                </structure>
-                                <structure>
-                                    <property name="columnName">Merchant</property>
-                                    <text-property name="heading">Merchant</text-property>
-                                </structure>
-                                <structure>
-                                    <property name="columnName">Reference #</property>
-                                    <text-property name="heading">Reference #</text-property>
-                                </structure>
-                                <structure>
-                                    <property name="columnName">spend category</property>
-                                    <text-property name="heading">spend category</text-property>
-                                </structure>
-                                <structure>
-                                    <property name="columnName">Date</property>
-                                    <text-property name="heading">Date</text-property>
-                                </structure>
-                                <structure>
-                                    <property name="columnName">type</property>
-                                    <text-property name="heading">type</text-property>
-                                </structure>
-                            </list-property>
-                            <list-property name="filter">
-                                <structure>
-                                    <property name="operator">ne</property>
-                                    <expression name="expr" type="javascript">row["type"]</expression>
-                                    <simple-property-list name="value1">
-                                        <value type="javascript">"INTEREST"</value>
-                                    </simple-property-list>
-                                </structure>
-                            </list-property>
-                            <structure name="cachedMetaData">
-                                <list-property name="resultSet">
-                                    <structure>
-                                        <property name="position">1</property>
-                                        <property name="name">Account</property>
-                                        <property name="dataType">string</property>
-                                    </structure>
-                                    <structure>
-                                        <property name="position">2</property>
-                                        <property name="name">Amount</property>
-                                        <property name="dataType">float</property>
-                                    </structure>
-                                    <structure>
-                                        <property name="position">3</property>
-                                        <property name="name">Amt</property>
-                                        <property name="dataType">float</property>
-                                    </structure>
-                                    <structure>
-                                        <property name="position">4</property>
-                                        <property name="name">Merchant</property>
-                                        <property name="dataType">string</property>
-                                    </structure>
-                                    <structure>
-                                        <property name="position">5</property>
-                                        <property name="name">Reference #</property>
-                                        <property name="dataType">float</property>
-                                    </structure>
-                                    <structure>
-                                        <property name="position">6</property>
-                                        <property name="name">spend category</property>
-                                        <property name="dataType">string</property>
-                                    </structure>
-                                    <structure>
-                                        <property name="position">7</property>
-                                        <property name="name">Date</property>
-                                        <property name="dataType">date</property>
-                                    </structure>
-                                    <structure>
-                                        <property name="position">8</property>
-                                        <property name="name">type</property>
-                                        <property name="dataType">string</property>
-                                    </structure>
-                                </list-property>
-                            </structure>
-                            <property name="dataSource">Data Source</property>
-                            <list-property name="resultSet">
-                                <structure>
-                                    <property name="position">1</property>
-                                    <property name="name">Account</property>
-                                    <property name="nativeName">Account</property>
-                                    <property name="dataType">string</property>
-                                </structure>
-                                <structure>
-                                    <property name="position">2</property>
-                                    <property name="name">Amount</property>
-                                    <property name="nativeName">Amount</property>
-                                    <property name="dataType">float</property>
-                                </structure>
-                                <structure>
-                                    <property name="position">3</property>
-                                    <property name="name">Amt</property>
-                                    <property name="nativeName">Amt</property>
-                                    <property name="dataType">float</property>
-                                </structure>
-                                <structure>
-                                    <property name="position">4</property>
-                                    <property name="name">Merchant</property>
-                                    <property name="nativeName">Merchant</property>
-                                    <property name="dataType">string</property>
-                                </structure>
-                                <structure>
-                                    <property name="position">5</property>
-                                    <property name="name">Reference #</property>
-                                    <property name="nativeName">Reference #</property>
-                                    <property name="dataType">float</property>
-                                </structure>
-                                <structure>
-                                    <property name="position">6</property>
-                                    <property name="name">spend category</property>
-                                    <property name="nativeName">spend category</property>
-                                    <property name="dataType">string</property>
-                                </structure>
-                                <structure>
-                                    <property name="position">7</property>
-                                    <property name="name">Date</property>
-                                    <property name="nativeName">Date</property>
-                                    <property name="dataType">date</property>
-                                </structure>
-                                <structure>
-                                    <property name="position">8</property>
-                                    <property name="name">type</property>
-                                    <property name="nativeName">type</property>
-                                    <property name="dataType">string</property>
-                                </structure>
-                            </list-property>
-                            <xml-property name="queryText"><![CDATA[select "Account", "Amount", "Amt", "Merchant", "Reference #", "spend category", "Date", "type" from SPEND.csv : {"Account","Account",STRING;"Amount","Amount",DOUBLE;"Amt","Amt",DOUBLE;"Merchant","Merchant",STRING;"Reference #","Reference #",DOUBLE;"spend category","spend category",STRING;"Date","Date",DATE;"type","type",STRING}]]></xml-property>
-                            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
-<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
-  <Version>1.0</Version>
-  <design:ResultSets derivedMetaData="true">
-    <design:resultSetDefinitions>
-      <design:resultSetColumns>
-        <design:resultColumnDefinitions>
-          <design:attributes>
-            <design:name>Account</design:name>
-            <design:position>1</design:position>
-            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
-            <design:precision>-1</design:precision>
-            <design:scale>-1</design:scale>
-            <design:nullability>Unknown</design:nullability>
-          </design:attributes>
-          <design:usageHints>
-            <design:label>Account</design:label>
-            <design:formattingHints/>
-          </design:usageHints>
-        </design:resultColumnDefinitions>
-        <design:resultColumnDefinitions>
-          <design:attributes>
-            <design:name>Amount</design:name>
-            <design:position>2</design:position>
-            <design:nativeDataTypeCode>8</design:nativeDataTypeCode>
-            <design:precision>-1</design:precision>
-            <design:scale>-1</design:scale>
-            <design:nullability>Unknown</design:nullability>
-          </design:attributes>
-          <design:usageHints>
-            <design:label>Amount</design:label>
-            <design:formattingHints/>
-          </design:usageHints>
-        </design:resultColumnDefinitions>
-        <design:resultColumnDefinitions>
-          <design:attributes>
-            <design:name>Description</design:name>
-            <design:position>3</design:position>
-            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
-            <design:precision>-1</design:precision>
-            <design:scale>-1</design:scale>
-            <design:nullability>Unknown</design:nullability>
-          </design:attributes>
-          <design:usageHints>
-            <design:label>Description</design:label>
-            <design:formattingHints/>
-          </design:usageHints>
-        </design:resultColumnDefinitions>
-        <design:resultColumnDefinitions>
-          <design:attributes>
-            <design:name>Reference #</design:name>
-            <design:position>4</design:position>
-            <design:nativeDataTypeCode>8</design:nativeDataTypeCode>
-            <design:precision>-1</design:precision>
-            <design:scale>-1</design:scale>
-            <design:nullability>Unknown</design:nullability>
-          </design:attributes>
-          <design:usageHints>
-            <design:label>Reference #</design:label>
-            <design:formattingHints/>
-          </design:usageHints>
-        </design:resultColumnDefinitions>
-        <design:resultColumnDefinitions>
-          <design:attributes>
-            <design:name>spend category</design:name>
-            <design:position>5</design:position>
-            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
-            <design:precision>-1</design:precision>
-            <design:scale>-1</design:scale>
-            <design:nullability>Unknown</design:nullability>
-          </design:attributes>
-          <design:usageHints>
-            <design:label>spend category</design:label>
-            <design:formattingHints/>
-          </design:usageHints>
-        </design:resultColumnDefinitions>
-        <design:resultColumnDefinitions>
-          <design:attributes>
-            <design:name>Date</design:name>
-            <design:position>6</design:position>
-            <design:nativeDataTypeCode>91</design:nativeDataTypeCode>
-            <design:precision>-1</design:precision>
-            <design:scale>-1</design:scale>
-            <design:nullability>Unknown</design:nullability>
-          </design:attributes>
-          <design:usageHints>
-            <design:label>Date</design:label>
-            <design:formattingHints/>
-          </design:usageHints>
-        </design:resultColumnDefinitions>
-        <design:resultColumnDefinitions>
-          <design:attributes>
-            <design:name>type</design:name>
-            <design:position>7</design:position>
-            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
-            <design:precision>-1</design:precision>
-            <design:scale>-1</design:scale>
-            <design:nullability>Unknown</design:nullability>
-          </design:attributes>
-          <design:usageHints>
-            <design:label>type</design:label>
-            <design:formattingHints/>
-          </design:usageHints>
-        </design:resultColumnDefinitions>
-      </design:resultSetColumns>
-      <design:criteria/>
-    </design:resultSetDefinitions>
-  </design:ResultSets>
-</model:DesignValues>]]></xml-property>
-                        </oda-data-set>
-                    </data-sets>
-                    <cubes>
-                        <tabular-cube name="Data Cube" id="4">
-                            <property name="dimensions">
-                                <tabular-dimension name="Group" id="7">
-                                    <property name="isTimeType">true</property>
-                                    <property name="defaultHierarchy">NewTabularHierarchy</property>
-                                    <property name="hierarchies">
-                                        <tabular-hierarchy name="NewTabularHierarchy" id="8">
-                                            <property name="levels">
-                                                <tabular-level name="Year" id="9">
-                                                    <property name="dataType">integer</property>
-                                                    <property name="dateTimeLevelType">year</property>
-                                                    <list-property name="attributes">
-                                                        <structure>
-                                                            <property name="name">DateTime</property>
-                                                            <property name="dataType">date-time</property>
-                                                        </structure>
-                                                    </list-property>
-                                                    <property name="columnName">Date</property>
-                                                </tabular-level>
-                                                <tabular-level name="Month" id="10">
-                                                    <property name="dataType">integer</property>
-                                                    <property name="dateTimeLevelType">month</property>
-                                                    <property name="dateTimeFormat">MMM</property>
-                                                    <list-property name="attributes">
-                                                        <structure>
-                                                            <property name="name">DateTime</property>
-                                                            <property name="dataType">date-time</property>
-                                                        </structure>
-                                                    </list-property>
-                                                    <property name="columnName">Date</property>
-                                                </tabular-level>
-                                                <tabular-level name="Day Of Month" id="11">
-                                                    <property name="dataType">integer</property>
-                                                    <property name="dateTimeLevelType">day-of-month</property>
-                                                    <list-property name="attributes">
-                                                        <structure>
-                                                            <property name="name">DateTime</property>
-                                                            <property name="dataType">date-time</property>
-                                                        </structure>
-                                                    </list-property>
-                                                    <property name="columnName">Date</property>
-                                                </tabular-level>
-                                            </property>
-                                        </tabular-hierarchy>
-                                    </property>
-                                </tabular-dimension>
-                                <tabular-dimension name="Spend Category" id="12">
-                                    <property name="defaultHierarchy">NewTabularHierarchy1</property>
-                                    <property name="hierarchies">
-                                        <tabular-hierarchy name="NewTabularHierarchy1" id="13">
-                                            <property name="levels">
-                                                <tabular-level name="Category" id="14">
-                                                    <property name="dataType">string</property>
-                                                    <property name="levelType">dynamic</property>
-                                                    <property name="columnName">spend category</property>
-                                                </tabular-level>
-                                                <tabular-level name="Merchant" id="26">
-                                                    <property name="dataType">string</property>
-                                                    <property name="columnName">Merchant</property>
-                                                </tabular-level>
-                                            </property>
-                                        </tabular-hierarchy>
-                                    </property>
-                                </tabular-dimension>
-                                <tabular-dimension name="Spend Type" id="16">
-                                    <property name="defaultHierarchy">NewTabularHierarchy2</property>
-                                    <property name="hierarchies">
-                                        <tabular-hierarchy name="NewTabularHierarchy2" id="17">
-                                            <property name="levels">
-                                                <tabular-level name="Type" id="18">
-                                                    <property name="dataType">string</property>
-                                                    <property name="levelType">dynamic</property>
-                                                    <property name="columnName">type</property>
-                                                </tabular-level>
-                                            </property>
-                                        </tabular-hierarchy>
-                                    </property>
-                                </tabular-dimension>
-                                <tabular-dimension name="Accounts" id="19">
-                                    <property name="defaultHierarchy">NewTabularHierarchy3</property>
-                                    <property name="hierarchies">
-                                        <tabular-hierarchy name="NewTabularHierarchy3" id="20">
-                                            <property name="levels">
-                                                <tabular-level name="Account" id="21">
-                                                    <property name="dataType">string</property>
-                                                    <property name="columnName">Account</property>
-                                                </tabular-level>
-                                            </property>
-                                        </tabular-hierarchy>
-                                    </property>
-                                </tabular-dimension>
-                            </property>
-                            <property name="measureGroups">
-                                <tabular-measure-group name="Summary Field" id="24">
-                                    <property name="measures">
-                                        <tabular-measure name="Amt" id="25">
-                                            <expression name="measureExpression" type="javascript">dataSetRow["Amt"]</expression>
-                                            <property name="dataType">float</property>
-                                        </tabular-measure>
-                                    </property>
-                                </tabular-measure-group>
-                            </property>
-                            <property name="dataSet">Data Set</property>
-                        </tabular-cube>
-                    </cubes>
-                </datamart>
-            </datamart-node>
-            <datamart-node location="file:/C:/Actuate/iHub3/modules/BIRTiHub/iHub/shared/storage/file/038/350.dat">
-                <reference-elements>NewDataMartDataSource3;</reference-elements>
-                <datamart xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
-                    <property name="createdBy">Eclipse BIRT Designer Version 4.2.3.v20131216-0430 Build &lt;4.2.3.v20131216-0430></property>
-                    <data-sources>
-                        <oda-data-source extensionID="org.eclipse.datatools.connectivity.oda.flatfile" name="ff" id="2">
-                            <property name="HOME">Flatfiles/</property>
-                            <property name="DELIMTYPE">COMMA</property>
-                            <property name="CHARSET">UTF-8</property>
-                            <property name="INCLCOLUMNNAME">YES</property>
-                            <property name="INCLTYPELINE">YES</property>
-                            <property name="TRAILNULLCOLS">NO</property>
-                        </oda-data-source>
-                    </data-sources>
-                    <data-sets>
-                        <oda-data-set extensionID="org.eclipse.datatools.connectivity.oda.flatfile.dataSet" name="spend data" id="4">
-                            <list-property name="columnHints">
-                                <structure>
-                                    <property name="columnName">Account</property>
-                                    <property name="analysis">dimension</property>
-                                    <text-property name="heading">Account</text-property>
-                                    <property name="indexColumn">false</property>
-                                    <property name="compressed">false</property>
-                                </structure>
-                                <structure>
-                                    <property name="columnName">Amount</property>
-                                    <property name="analysis">measure</property>
-                                    <text-property name="heading">Amount</text-property>
-                                    <property name="indexColumn">false</property>
-                                    <property name="compressed">false</property>
-                                </structure>
-                                <structure>
-                                    <property name="columnName">Date</property>
-                                    <property name="analysis">dimension</property>
-                                    <text-property name="heading">Date</text-property>
-                                    <property name="indexColumn">false</property>
-                                    <property name="compressed">false</property>
-                                </structure>
-                                <structure>
-                                    <property name="columnName">Merchant</property>
-                                    <property name="analysis">dimension</property>
-                                    <text-property name="heading">Merchant</text-property>
-                                    <property name="indexColumn">false</property>
-                                    <property name="compressed">false</property>
-                                </structure>
-                                <structure>
-                                    <property name="columnName">Reference</property>
-                                    <property name="analysis">dimension</property>
-                                    <text-property name="heading">Reference</text-property>
-                                    <property name="indexColumn">false</property>
-                                    <property name="compressed">false</property>
-                                </structure>
-                                <structure>
-                                    <property name="columnName">spend category</property>
-                                    <property name="analysis">dimension</property>
-                                    <text-property name="heading">spend category</text-property>
-                                    <property name="indexColumn">false</property>
-                                    <property name="compressed">false</property>
-                                </structure>
-                                <structure>
-                                    <property name="columnName">type</property>
-                                    <property name="analysis">dimension</property>
-                                    <text-property name="heading">type</text-property>
-                                    <property name="indexColumn">false</property>
-                                    <property name="compressed">false</property>
-                                </structure>
-                            </list-property>
-                            <structure name="cachedMetaData">
-                                <list-property name="resultSet">
-                                    <structure>
-                                        <property name="position">1</property>
-                                        <property name="name">Account</property>
-                                        <property name="dataType">string</property>
-                                    </structure>
-                                    <structure>
-                                        <property name="position">2</property>
-                                        <property name="name">Amount</property>
-                                        <property name="dataType">float</property>
-                                    </structure>
-                                    <structure>
-                                        <property name="position">3</property>
-                                        <property name="name">Date</property>
-                                        <property name="dataType">date</property>
-                                    </structure>
-                                    <structure>
-                                        <property name="position">4</property>
-                                        <property name="name">Merchant</property>
-                                        <property name="dataType">string</property>
-                                    </structure>
-                                    <structure>
-                                        <property name="position">5</property>
-                                        <property name="name">Reference</property>
-                                        <property name="dataType">string</property>
-                                    </structure>
-                                    <structure>
-                                        <property name="position">6</property>
-                                        <property name="name">spend category</property>
-                                        <property name="dataType">string</property>
-                                    </structure>
-                                    <structure>
-                                        <property name="position">7</property>
-                                        <property name="name">type</property>
-                                        <property name="dataType">string</property>
-                                    </structure>
-                                </list-property>
-                            </structure>
-                            <property name="dataSource">ff</property>
-                            <list-property name="resultSet">
-                                <structure>
-                                    <property name="position">1</property>
-                                    <property name="name">Account</property>
-                                    <property name="nativeName">Account</property>
-                                    <property name="dataType">string</property>
-                                    <property name="nativeDataType">12</property>
-                                </structure>
-                                <structure>
-                                    <property name="position">2</property>
-                                    <property name="name">Amount</property>
-                                    <property name="nativeName">Amount</property>
-                                    <property name="dataType">float</property>
-                                    <property name="nativeDataType">8</property>
-                                </structure>
-                                <structure>
-                                    <property name="position">3</property>
-                                    <property name="name">Date</property>
-                                    <property name="nativeName">Date</property>
-                                    <property name="dataType">date</property>
-                                    <property name="nativeDataType">91</property>
-                                </structure>
-                                <structure>
-                                    <property name="position">4</property>
-                                    <property name="name">Merchant</property>
-                                    <property name="nativeName">Merchant</property>
-                                    <property name="dataType">string</property>
-                                    <property name="nativeDataType">12</property>
-                                </structure>
-                                <structure>
-                                    <property name="position">5</property>
-                                    <property name="name">Reference</property>
-                                    <property name="nativeName">Reference</property>
-                                    <property name="dataType">string</property>
-                                    <property name="nativeDataType">12</property>
-                                </structure>
-                                <structure>
-                                    <property name="position">6</property>
-                                    <property name="name">spend category</property>
-                                    <property name="nativeName">spend category</property>
-                                    <property name="dataType">string</property>
-                                    <property name="nativeDataType">12</property>
-                                </structure>
-                                <structure>
-                                    <property name="position">7</property>
-                                    <property name="name">type</property>
-                                    <property name="nativeName">type</property>
-                                    <property name="dataType">string</property>
-                                    <property name="nativeDataType">12</property>
-                                </structure>
-                            </list-property>
-                            <xml-property name="queryText"><![CDATA[select "Account", "Amount", "Date", "Merchant", "Reference", "spend category", "type" from "creditdata_6mos.csv" : {"Account","Account",STRING;"Amount","Amount",DOUBLE;"Date","Date",DATE;"Merchant","Merchant",STRING;"Reference","Reference",STRING;"spend category","spend category",STRING;"type","type",STRING}]]></xml-property>
-                            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
-<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
-  <Version>2.0</Version>
-  <design:ResultSets derivedMetaData="true">
-    <design:resultSetDefinitions>
-      <design:resultSetColumns>
-        <design:resultColumnDefinitions>
-          <design:attributes>
-            <design:identifier>
-              <design:name>Account</design:name>
-              <design:position>1</design:position>
-            </design:identifier>
-            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
-            <design:precision>-1</design:precision>
-            <design:scale>-1</design:scale>
-            <design:nullability>Unknown</design:nullability>
-          </design:attributes>
-          <design:usageHints>
-            <design:label>Account</design:label>
-            <design:formattingHints/>
-          </design:usageHints>
-        </design:resultColumnDefinitions>
-        <design:resultColumnDefinitions>
-          <design:attributes>
-            <design:identifier>
-              <design:name>Amount</design:name>
-              <design:position>2</design:position>
-            </design:identifier>
-            <design:nativeDataTypeCode>8</design:nativeDataTypeCode>
-            <design:precision>-1</design:precision>
-            <design:scale>-1</design:scale>
-            <design:nullability>Unknown</design:nullability>
-          </design:attributes>
-          <design:usageHints>
-            <design:label>Amount</design:label>
-            <design:formattingHints/>
-          </design:usageHints>
-        </design:resultColumnDefinitions>
-        <design:resultColumnDefinitions>
-          <design:attributes>
-            <design:identifier>
-              <design:name>Date</design:name>
-              <design:position>3</design:position>
-            </design:identifier>
-            <design:nativeDataTypeCode>91</design:nativeDataTypeCode>
-            <design:precision>-1</design:precision>
-            <design:scale>-1</design:scale>
-            <design:nullability>Unknown</design:nullability>
-          </design:attributes>
-          <design:usageHints>
-            <design:label>Date</design:label>
-            <design:formattingHints/>
-          </design:usageHints>
-        </design:resultColumnDefinitions>
-        <design:resultColumnDefinitions>
-          <design:attributes>
-            <design:identifier>
-              <design:name>Merchant</design:name>
-              <design:position>4</design:position>
-            </design:identifier>
-            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
-            <design:precision>-1</design:precision>
-            <design:scale>-1</design:scale>
-            <design:nullability>Unknown</design:nullability>
-          </design:attributes>
-          <design:usageHints>
-            <design:label>Merchant</design:label>
-            <design:formattingHints/>
-          </design:usageHints>
-        </design:resultColumnDefinitions>
-        <design:resultColumnDefinitions>
-          <design:attributes>
-            <design:identifier>
-              <design:name>Reference</design:name>
-              <design:position>5</design:position>
-            </design:identifier>
-            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
-            <design:precision>-1</design:precision>
-            <design:scale>-1</design:scale>
-            <design:nullability>Unknown</design:nullability>
-          </design:attributes>
-          <design:usageHints>
-            <design:label>Reference</design:label>
-            <design:formattingHints/>
-          </design:usageHints>
-        </design:resultColumnDefinitions>
-        <design:resultColumnDefinitions>
-          <design:attributes>
-            <design:identifier>
-              <design:name>spend category</design:name>
-              <design:position>6</design:position>
-            </design:identifier>
-            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
-            <design:precision>-1</design:precision>
-            <design:scale>-1</design:scale>
-            <design:nullability>Unknown</design:nullability>
-          </design:attributes>
-          <design:usageHints>
-            <design:label>spend category</design:label>
-            <design:formattingHints/>
-          </design:usageHints>
-        </design:resultColumnDefinitions>
-        <design:resultColumnDefinitions>
-          <design:attributes>
-            <design:identifier>
-              <design:name>type</design:name>
-              <design:position>7</design:position>
-            </design:identifier>
-            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
-            <design:precision>-1</design:precision>
-            <design:scale>-1</design:scale>
-            <design:nullability>Unknown</design:nullability>
-          </design:attributes>
-          <design:usageHints>
-            <design:label>type</design:label>
-            <design:formattingHints/>
-          </design:usageHints>
-        </design:resultColumnDefinitions>
-      </design:resultSetColumns>
-      <design:criteria/>
-    </design:resultSetDefinitions>
-  </design:ResultSets>
-</model:DesignValues>]]></xml-property>
-                        </oda-data-set>
-                    </data-sets>
-                    <cubes>
-                        <tabular-cube name="Spend History" id="5">
-                            <property name="dimensions">
-                                <tabular-dimension name="Date" id="8">
-                                    <property name="isTimeType">true</property>
-                                    <property name="defaultHierarchy">NewTabularHierarchy1</property>
-                                    <property name="hierarchies">
-                                        <tabular-hierarchy name="NewTabularHierarchy1" id="9">
-                                            <property name="levels">
-                                                <tabular-level name="Month" id="10">
-                                                    <property name="dataType">integer</property>
-                                                    <property name="dateTimeLevelType">month</property>
-                                                    <property name="dateTimeFormat">MMM</property>
-                                                    <list-property name="attributes">
-                                                        <structure>
-                                                            <property name="name">DateTime</property>
-                                                            <property name="dataType">date-time</property>
-                                                        </structure>
-                                                    </list-property>
-                                                    <property name="columnName">Date</property>
-                                                </tabular-level>
-                                                <tabular-level name="Day" id="11">
-                                                    <property name="dataType">integer</property>
-                                                    <property name="dateTimeLevelType">day-of-month</property>
-                                                    <list-property name="attributes">
-                                                        <structure>
-                                                            <property name="name">DateTime</property>
-                                                            <property name="dataType">date-time</property>
-                                                        </structure>
-                                                    </list-property>
-                                                    <property name="columnName">Date</property>
-                                                </tabular-level>
-                                            </property>
-                                        </tabular-hierarchy>
-                                    </property>
-                                </tabular-dimension>
-                                <tabular-dimension name="Spend Category" id="12">
-                                    <property name="defaultHierarchy">NewTabularHierarchy2</property>
-                                    <property name="hierarchies">
-                                        <tabular-hierarchy name="NewTabularHierarchy2" id="13">
-                                            <property name="levels">
-                                                <tabular-level name="Category" id="14">
-                                                    <property name="dataType">string</property>
-                                                    <property name="levelType">dynamic</property>
-                                                    <property name="columnName">spend category</property>
-                                                </tabular-level>
-                                                <tabular-level name="Merchant" id="15">
-                                                    <property name="dataType">string</property>
-                                                    <property name="levelType">dynamic</property>
-                                                    <list-property name="action">
-                                                        <structure>
-                                                            <property name="linkType">drill-through</property>
-                                                            <property name="reportName">^/Report Designs/MySpendDetail.rptdesign</property>
-                                                            <property name="targetWindow">_blank</property>
-                                                            <property name="targetFileType">report-design</property>
-                                                            <list-property name="paramBindings">
-                                                                <structure>
-                                                                    <property name="paramName">SpendCategory</property>
-                                                                    <simple-property-list name="expression">
-                                                                        <value type="javascript">dimension["Spend Category"]["Category"]</value>
-                                                                    </simple-property-list>
-                                                                </structure>
-                                                            </list-property>
-                                                        </structure>
-                                                    </list-property>
-                                                    <property name="columnName">Merchant</property>
-                                                </tabular-level>
-                                            </property>
-                                        </tabular-hierarchy>
-                                    </property>
-                                </tabular-dimension>
-                                <tabular-dimension name="Account" id="16">
-                                    <property name="defaultHierarchy">NewTabularHierarchy3</property>
-                                    <property name="hierarchies">
-                                        <tabular-hierarchy name="NewTabularHierarchy3" id="17">
-                                            <property name="levels">
-                                                <tabular-level name="Account" id="18">
-                                                    <property name="dataType">string</property>
-                                                    <property name="columnName">Account</property>
-                                                </tabular-level>
-                                            </property>
-                                        </tabular-hierarchy>
-                                    </property>
-                                </tabular-dimension>
-                                <tabular-dimension name="Spend Method" id="19">
-                                    <property name="defaultHierarchy">NewTabularHierarchy4</property>
-                                    <property name="hierarchies">
-                                        <tabular-hierarchy name="NewTabularHierarchy4" id="20">
-                                            <property name="levels">
-                                                <tabular-level name="Method" id="21">
-                                                    <property name="dataType">string</property>
-                                                    <property name="levelType">dynamic</property>
-                                                    <property name="columnName">type</property>
-                                                </tabular-level>
-                                            </property>
-                                        </tabular-hierarchy>
-                                    </property>
-                                </tabular-dimension>
-                            </property>
-                            <property name="measureGroups">
-                                <tabular-measure-group name="Spend" id="6">
-                                    <property name="measures">
-                                        <tabular-measure name="Amount" id="7">
-                                            <expression name="measureExpression" type="javascript">dataSetRow["Amount"]</expression>
-                                            <property name="dataType">float</property>
-                                        </tabular-measure>
-                                    </property>
-                                </tabular-measure-group>
-                            </property>
-                            <property name="dataSet">spend data</property>
-                        </tabular-cube>
-                    </cubes>
-                </datamart>
-            </datamart-node>
-        </external-datamarts>
-    </xml-property>
     <property name="layoutPreference">auto layout</property>
-    <list-property name="libraries">
-        <structure>
-            <property name="fileName">ThemesReportItems3.rptlibrary</property>
-            <property name="namespace">ThemesReportItems3</property>
-        </structure>
-    </list-property>
     <data-sources>
         <data-mart-data-source name="NewDataMartDataSource" id="32">
             <property name="datamartURL">Data Objects/spendtype</property>
@@ -4139,6 +3358,3326 @@
  </ChartWithAxes>
 </ActuateChart>]]></xml-property>
         </report-item-theme>
+        <report-item-theme type="Crosstab" name="modern-crosstab-ThemesReportItems3" id="1126">
+            <text-property name="displayName">Modern</text-property>
+            <styles>
+                <style name="crosstab" id="1127">
+                    <property name="fontFamily">"Verdana"</property>
+                    <property name="fontSize">10pt</property>
+                    <property name="color">#353535</property>
+                </style>
+                <style name="crosstab-header" id="1128">
+                    <property name="backgroundColor">#DDDDDD</property>
+                    <property name="fontFamily">"Verdana"</property>
+                    <property name="fontSize">10pt</property>
+                    <property name="fontWeight">bold</property>
+                    <property name="color">#000000</property>
+                    <property name="borderBottomColor">#BBBBBB</property>
+                    <property name="borderBottomStyle">solid</property>
+                    <property name="borderBottomWidth">1px</property>
+                    <property name="borderLeftColor">#BBBBBB</property>
+                    <property name="borderLeftStyle">solid</property>
+                    <property name="borderLeftWidth">1px</property>
+                    <property name="borderRightColor">#BBBBBB</property>
+                    <property name="borderRightStyle">solid</property>
+                    <property name="borderRightWidth">1px</property>
+                    <property name="borderTopColor">#BBBBBB</property>
+                    <property name="borderTopStyle">solid</property>
+                    <property name="borderTopWidth">1px</property>
+                </style>
+                <style name="crosstab-detail" id="1129">
+                    <property name="backgroundColor">#FFFFFF</property>
+                    <property name="fontFamily">"Verdana"</property>
+                    <property name="borderBottomColor">#BBBBBB</property>
+                    <property name="borderBottomStyle">solid</property>
+                    <property name="borderBottomWidth">1px</property>
+                    <property name="borderLeftColor">#BBBBBB</property>
+                    <property name="borderLeftStyle">solid</property>
+                    <property name="borderLeftWidth">1px</property>
+                    <property name="borderRightColor">#BBBBBB</property>
+                    <property name="borderRightStyle">solid</property>
+                    <property name="borderRightWidth">1px</property>
+                    <property name="borderTopColor">#BBBBBB</property>
+                    <property name="borderTopStyle">solid</property>
+                    <property name="borderTopWidth">1px</property>
+                    <property name="textAlign">right</property>
+                </style>
+                <style name="crosstab-row-header" id="1130">
+                    <property name="backgroundColor">#DDDDDD</property>
+                    <property name="fontFamily">"Verdana"</property>
+                    <property name="textAlign">left</property>
+                </style>
+                <style name="crosstab-column-sub-total" id="1131">
+                    <property name="backgroundColor">#F1F1F1</property>
+                    <property name="fontFamily">"Verdana"</property>
+                    <property name="fontWeight">bold</property>
+                    <property name="fontStyle">italic</property>
+                </style>
+                <style name="crosstab-row-sub-total" id="1132">
+                    <property name="backgroundColor">#F1F1F1</property>
+                    <property name="fontFamily">"Verdana"</property>
+                    <property name="fontWeight">bold</property>
+                    <property name="fontStyle">italic</property>
+                </style>
+                <style name="crosstab-column-grand-total" id="1133">
+                    <property name="backgroundColor">#F1F1F1</property>
+                    <property name="fontFamily">"Verdana"</property>
+                    <property name="fontWeight">bold</property>
+                    <property name="fontStyle">italic</property>
+                </style>
+                <style name="crosstab-row-grand-total" id="1134">
+                    <property name="backgroundColor">#F1F1F1</property>
+                    <property name="fontFamily">"Verdana"</property>
+                    <property name="fontWeight">bold</property>
+                    <property name="fontStyle">italic</property>
+                </style>
+            </styles>
+        </report-item-theme>
+        <report-item-theme type="Crosstab" name="clean blue-crosstab-ThemesReportItems3" id="1135">
+            <text-property name="displayName">Clean Blue</text-property>
+            <styles>
+                <style name="crosstab" id="1136">
+                    <property name="fontFamily">"Tahoma"</property>
+                    <property name="fontSize">10pt</property>
+                    <property name="color">#353535</property>
+                </style>
+                <style name="crosstab-header" id="1137">
+                    <property name="backgroundColor">#66B0D1</property>
+                    <property name="fontSize">10pt</property>
+                    <property name="fontWeight">bold</property>
+                    <property name="color">#353535</property>
+                    <property name="borderBottomColor">#DDDDDD</property>
+                    <property name="borderBottomStyle">solid</property>
+                    <property name="borderBottomWidth">1px</property>
+                    <property name="borderLeftColor">#DDDDDD</property>
+                    <property name="borderLeftStyle">solid</property>
+                    <property name="borderLeftWidth">1px</property>
+                    <property name="borderRightColor">#DDDDDD</property>
+                    <property name="borderRightStyle">solid</property>
+                    <property name="borderRightWidth">1px</property>
+                </style>
+                <style name="crosstab-row-sub-total" id="1138">
+                    <property name="backgroundColor">#D3E8F1</property>
+                    <property name="fontWeight">bold</property>
+                    <property name="fontStyle">italic</property>
+                    <property name="color">#353535</property>
+                </style>
+                <style name="crosstab-column-sub-total" id="1139">
+                    <property name="backgroundColor">#D3E8F1</property>
+                    <property name="fontWeight">bold</property>
+                    <property name="fontStyle">italic</property>
+                    <property name="color">#353535</property>
+                </style>
+                <style name="crosstab-row-grand-total" id="1140">
+                    <property name="backgroundColor">#D3E8F1</property>
+                    <property name="fontWeight">bold</property>
+                    <property name="fontStyle">italic</property>
+                    <property name="color">#353535</property>
+                </style>
+                <style name="crosstab-column-grand-total" id="1141">
+                    <property name="backgroundColor">#D3E8F1</property>
+                    <property name="fontWeight">bold</property>
+                    <property name="fontStyle">italic</property>
+                    <property name="color">#353535</property>
+                </style>
+                <style name="crosstab-row-header" id="1142">
+                    <property name="backgroundColor">#66B0D1</property>
+                    <property name="textAlign">left</property>
+                </style>
+                <style name="crosstab-detail" id="1143">
+                    <property name="backgroundColor">#FFFFFF</property>
+                    <property name="borderBottomColor">#DDDDDD</property>
+                    <property name="borderBottomStyle">solid</property>
+                    <property name="borderBottomWidth">1px</property>
+                    <property name="borderLeftColor">#DDDDDD</property>
+                    <property name="borderLeftStyle">solid</property>
+                    <property name="borderLeftWidth">1px</property>
+                    <property name="borderRightColor">#DDDDDD</property>
+                    <property name="borderRightStyle">solid</property>
+                    <property name="borderRightWidth">1px</property>
+                    <property name="borderTopColor">#DDDDDD</property>
+                    <property name="borderTopStyle">solid</property>
+                    <property name="borderTopWidth">1px</property>
+                    <property name="textAlign">right</property>
+                </style>
+            </styles>
+        </report-item-theme>
+        <report-item-theme type="Crosstab" name="warm red-crosstab-ThemesReportItems3" id="1144">
+            <text-property name="displayName">Warm Red</text-property>
+            <styles>
+                <style name="crosstab" id="1145">
+                    <property name="fontFamily">"Tahoma"</property>
+                    <property name="fontSize">10pt</property>
+                    <property name="color">#353535</property>
+                </style>
+                <style name="crosstab-header" id="1146">
+                    <property name="backgroundColor">#DF5E34</property>
+                    <property name="fontSize">10pt</property>
+                    <property name="fontWeight">bold</property>
+                    <property name="color">#FFFFFF</property>
+                    <property name="borderBottomColor">#DDDDDD</property>
+                    <property name="borderBottomStyle">solid</property>
+                    <property name="borderBottomWidth">1px</property>
+                    <property name="borderLeftColor">#DDDDDD</property>
+                    <property name="borderLeftStyle">solid</property>
+                    <property name="borderLeftWidth">1px</property>
+                    <property name="borderRightColor">#DDDDDD</property>
+                    <property name="borderRightStyle">solid</property>
+                    <property name="borderRightWidth">1px</property>
+                </style>
+                <style name="crosstab-row-sub-total" id="1147">
+                    <property name="backgroundColor">#FAC9BA</property>
+                    <property name="fontWeight">bold</property>
+                    <property name="fontStyle">italic</property>
+                    <property name="color">#353535</property>
+                </style>
+                <style name="crosstab-column-sub-total" id="1148">
+                    <property name="backgroundColor">#FAC9BA</property>
+                    <property name="fontWeight">bold</property>
+                    <property name="fontStyle">italic</property>
+                    <property name="color">#353535</property>
+                </style>
+                <style name="crosstab-row-grand-total" id="1149">
+                    <property name="backgroundColor">#FAC9BA</property>
+                    <property name="fontWeight">bold</property>
+                    <property name="fontStyle">italic</property>
+                    <property name="color">#353535</property>
+                </style>
+                <style name="crosstab-column-grand-total" id="1150">
+                    <property name="backgroundColor">#FAC9BA</property>
+                    <property name="fontWeight">bold</property>
+                    <property name="fontStyle">italic</property>
+                    <property name="color">#353535</property>
+                </style>
+                <style name="crosstab-row-header" id="1151">
+                    <property name="backgroundColor">#DF5E34</property>
+                    <property name="color">#FFFFFF</property>
+                    <property name="textAlign">left</property>
+                </style>
+                <style name="crosstab-detail" id="1152">
+                    <property name="backgroundColor">#FFFFFF</property>
+                    <property name="borderBottomColor">#DDDDDD</property>
+                    <property name="borderBottomStyle">solid</property>
+                    <property name="borderBottomWidth">1px</property>
+                    <property name="borderLeftColor">#DDDDDD</property>
+                    <property name="borderLeftStyle">solid</property>
+                    <property name="borderLeftWidth">1px</property>
+                    <property name="borderRightColor">#DDDDDD</property>
+                    <property name="borderRightStyle">solid</property>
+                    <property name="borderRightWidth">1px</property>
+                    <property name="borderTopColor">#DDDDDD</property>
+                    <property name="borderTopStyle">solid</property>
+                    <property name="borderTopWidth">1px</property>
+                    <property name="textAlign">right</property>
+                </style>
+            </styles>
+        </report-item-theme>
+        <report-item-theme type="Crosstab" name="grayscale-crosstab-ThemesReportItems3" id="1153">
+            <text-property name="displayName">Grayscale</text-property>
+            <styles>
+                <style name="crosstab" id="1154">
+                    <property name="fontFamily">"Tahoma"</property>
+                    <property name="fontSize">10pt</property>
+                    <property name="color">#353535</property>
+                </style>
+                <style name="crosstab-header" id="1155">
+                    <property name="backgroundColor">#353535</property>
+                    <property name="fontSize">10pt</property>
+                    <property name="fontWeight">bold</property>
+                    <property name="color">#FFFFFF</property>
+                    <property name="borderBottomColor">#BBBBBB</property>
+                    <property name="borderBottomStyle">solid</property>
+                    <property name="borderBottomWidth">1px</property>
+                    <property name="borderLeftColor">#BBBBBB</property>
+                    <property name="borderLeftStyle">solid</property>
+                    <property name="borderLeftWidth">1px</property>
+                    <property name="borderRightColor">#BBBBBB</property>
+                    <property name="borderRightStyle">solid</property>
+                    <property name="borderRightWidth">1px</property>
+                </style>
+                <style name="crosstab-row-sub-total" id="1156">
+                    <property name="backgroundColor">#DDDDDD</property>
+                    <property name="fontWeight">bold</property>
+                    <property name="fontStyle">italic</property>
+                    <property name="color">#353535</property>
+                </style>
+                <style name="crosstab-column-sub-total" id="1157">
+                    <property name="backgroundColor">#DDDDDD</property>
+                    <property name="fontWeight">bold</property>
+                    <property name="fontStyle">italic</property>
+                    <property name="color">#353535</property>
+                </style>
+                <style name="crosstab-row-grand-total" id="1158">
+                    <property name="backgroundColor">#DDDDDD</property>
+                    <property name="fontWeight">bold</property>
+                    <property name="fontStyle">italic</property>
+                    <property name="color">#353535</property>
+                </style>
+                <style name="crosstab-column-grand-total" id="1159">
+                    <property name="backgroundColor">#DDDDDD</property>
+                    <property name="fontWeight">bold</property>
+                    <property name="fontStyle">italic</property>
+                    <property name="color">#353535</property>
+                </style>
+                <style name="crosstab-row-header" id="1160">
+                    <property name="backgroundColor">#777777</property>
+                    <property name="color">#FFFFFF</property>
+                    <property name="textAlign">left</property>
+                </style>
+                <style name="crosstab-detail" id="1161">
+                    <property name="backgroundColor">#FFFFFF</property>
+                    <property name="borderBottomColor">#BBBBBB</property>
+                    <property name="borderBottomStyle">solid</property>
+                    <property name="borderBottomWidth">1px</property>
+                    <property name="borderLeftColor">#BBBBBB</property>
+                    <property name="borderLeftStyle">solid</property>
+                    <property name="borderLeftWidth">1px</property>
+                    <property name="borderRightColor">#BBBBBB</property>
+                    <property name="borderRightStyle">solid</property>
+                    <property name="borderRightWidth">1px</property>
+                    <property name="borderTopColor">#BBBBBB</property>
+                    <property name="borderTopStyle">solid</property>
+                    <property name="borderTopWidth">1px</property>
+                    <property name="textAlign">right</property>
+                </style>
+            </styles>
+        </report-item-theme>
+        <report-item-theme type="Chart" name="Modern Original-ThemesReportItems3" id="1162">
+            <xml-property name="customValues"><![CDATA[<type>1</type><ActuateChart version="2.6.1">
+ <ChartWithAxes version="2.6.1" type="Bar Chart" subType="Side-by-side" unitSpacing="15.0">
+  <block>
+   <children _type="TitleBlock" anchor="7">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <label>
+     <caption>
+      <font name="Tahoma" size="14.0" bold="false"/>
+      <color _body=",255,85,85,85"/>
+     </caption>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </label>
+   </children>
+   <children _type="Plot">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <clientArea>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </clientArea>
+   </children>
+   <children _type="Legend" itemType="0" showValue="false">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <clientArea>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </clientArea>
+    <text>
+     <font name="Tahoma" size="10.0"/>
+     <color _body=",255,85,85,85"/>
+    </text>
+    <separator>
+     <color _nil="1"/>
+    </separator>
+    <title>
+     <caption>
+      <font name="Tahoma" size="10.0"/>
+      <color _body=",255,85,85,85"/>
+     </caption>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </title>
+   </children>
+   <outline>
+    <color _nil="1"/>
+   </outline>
+  </block>
+  <extendedProperties name="enable.area.alt" value="false"/>
+  <extendedProperties name="enable.drill.category" value="true"/>
+  <extendedProperties name="enable.drill.series" value="true"/>
+  <extendedProperties name="theme.withoutaxes" value=""/>
+  <extendedProperties name="jschart.animation" value="true"/>
+  <extendedProperties name="jschart.client.script" value="beforeGeneration: function(options)&amp;#13;&amp;#10;{&amp;#13;&amp;#10;    var pointFormat = &amp;#039;{series.name}: {point.y}&amp;#039;;&amp;#13;&amp;#10;    if(options.series &amp;amp;&amp;amp; options.series[0] &amp;amp;&amp;amp; options.series[0].type===&amp;#039;pie&amp;#039;){&amp;#13;&amp;#10;        pointFormat = &amp;#039;{point.y} ({point.percentage:.2f}%)&amp;#039;;&amp;#13;&amp;#10;    }&amp;#13;&amp;#10;    options.tooltip={&amp;#13;&amp;#10;        animation:false,&amp;#13;&amp;#10;        backgroundColor: &amp;quot;#fff&amp;quot;,&amp;#13;&amp;#10;        borderRadius: 0,&amp;#13;&amp;#10;        borderColor: &amp;quot;#e1e1e1&amp;quot;,&amp;#13;&amp;#10;        borderWidth: 1,&amp;#13;&amp;#10;        style: {&amp;#13;&amp;#10;            color:&amp;quot;#363636&amp;quot;,&amp;#13;&amp;#10;            fontSize: &amp;quot;16px&amp;quot;,&amp;#13;&amp;#10;            fontWeight: 400,&amp;#13;&amp;#10;            padding: &amp;quot;12px&amp;quot;&amp;#13;&amp;#10;        },&amp;#13;&amp;#10;        useHTML: true,&amp;#13;&amp;#10;        headerFormat: &amp;#039;&amp;lt;div style=&amp;quot; color:#363636;font-size: 16px;font-weight: 400;&amp;quot;&amp;gt;{point.key}&amp;lt;/div&amp;gt;&amp;#039;,&amp;#13;&amp;#10;        pointFormat: &amp;#039;&amp;lt;div style=&amp;quot; font-size: 12px;font-weight: 600;margin-top: 4px;&amp;quot;&amp;gt;&amp;#039;+pointFormat+&amp;#039;&amp;lt;/div&amp;gt;&amp;#039;&amp;#13;&amp;#10;    }&amp;#13;&amp;#10;}"/>
+  <emptyMessage>
+   <caption value="This chart contains no data."/>
+   <background _body=",64,127,127,127"/>
+   <outline>
+    <color _body=",128,127,127,127"/>
+   </outline>
+  </emptyMessage>
+  <axes>
+   <title>
+    <caption>
+     <font name="Tahoma"/>
+     <color _body=",255,85,85,85"/>
+    </caption>
+    <background _nil="1"/>
+    <outline>
+     <color _nil="1"/>
+    </outline>
+   </title>
+   <associatedAxes primaryAxis="true">
+    <title>
+     <caption>
+      <font name="Tahoma"/>
+      <color _body=",255,85,85,85"/>
+     </caption>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </title>
+    <seriesDefinitions>
+     <query definition=""/>
+     <seriesPalette>
+      <entries _body=",255,158,204,76"/>
+      <entries _body=",255,229,107,46"/>
+      <entries _body=",255,102,176,209"/>
+      <entries _body=",255,244,215,96"/>
+      <entries _body=",255,201,17,47"/>
+      <entries _body=",255,46,152,140"/>
+      <entries _body=",255,244,172,69"/>
+      <entries _body=",255,53,120,173"/>
+      <entries _body=",255,242,150,130"/>
+      <entries _body=",255,44,142,60"/>
+     </seriesPalette>
+     <series _type="BarSeries" seriesIdentifier="" riser="0">
+      <label>
+       <caption>
+        <font name="Tahoma"/>
+        <color _body=",255,85,85,85"/>
+       </caption>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dataDefinition definition=""/>
+      <dataPoint separator=", ">
+       <components type="1"/>
+      </dataPoint>
+      <curveFitting _nil="1"/>
+      <riserOutline _body=",0,255,255,255"/>
+     </series>
+     <series _type="LineSeries" seriesIdentifier="">
+      <label>
+       <caption>
+        <font name="Tahoma"/>
+        <color _body=",255,85,85,85"/>
+       </caption>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dataPoint separator=", ">
+       <components type="1"/>
+      </dataPoint>
+      <curveFitting _nil="1"/>
+      <markers visible="false">
+       <outline/>
+      </markers>
+      <lineAttributes thickness="4">
+       <color _nil="1"/>
+      </lineAttributes>
+      <shadowColor _body=",0,255,255,255"/>
+     </series>
+     <series _type="AreaSeries" seriesIdentifier="" stacked="false" curve="false">
+      <label>
+       <caption>
+        <font name="Tahoma"/>
+        <color _body=",255,85,85,85"/>
+       </caption>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dataPoint separator=", ">
+       <components type="1"/>
+      </dataPoint>
+      <curveFitting _nil="1"/>
+      <markers visible="false">
+       <outline/>
+      </markers>
+      <lineAttributes visible="false">
+       <color _nil="1"/>
+      </lineAttributes>
+     </series>
+     <series _type="PieSeries" seriesIdentifier="">
+      <label>
+       <caption>
+        <font name="Tahoma" size="10.0"/>
+        <color _body=",255,85,85,85"/>
+       </caption>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dataPoint separator=", ">
+       <components type="0"/>
+      </dataPoint>
+      <title>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </title>
+      <leaderLineAttributes visible="true">
+       <color _body=",255,85,85,85"/>
+      </leaderLineAttributes>
+      <sliceOutline _body=",255,255,255,255"/>
+     </series>
+     <series _type="DialSeries" seriesIdentifier="">
+      <label>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dataPoint separator=", ">
+       <components type="1"/>
+      </dataPoint>
+      <dial>
+       <lineAttributes>
+        <color _nil="1"/>
+       </lineAttributes>
+       <majorGrid>
+        <lineAttributes>
+         <color _nil="1"/>
+        </lineAttributes>
+        <tickAttributes>
+         <color _nil="1"/>
+        </tickAttributes>
+       </majorGrid>
+       <minorGrid>
+        <lineAttributes>
+         <color _nil="1"/>
+        </lineAttributes>
+        <tickAttributes>
+         <color _nil="1"/>
+        </tickAttributes>
+       </minorGrid>
+       <label>
+        <caption>
+         <font name="Tahoma"/>
+         <color _body=",255,85,85,85"/>
+        </caption>
+        <background _nil="1"/>
+        <outline>
+         <color _nil="1"/>
+        </outline>
+       </label>
+      </dial>
+      <needle>
+       <lineAttributes>
+        <color _nil="1"/>
+       </lineAttributes>
+      </needle>
+     </series>
+     <series _type="ScatterSeries" seriesIdentifier="">
+      <label>
+       <caption>
+        <font name="Tahoma"/>
+        <color _body=",255,85,85,85"/>
+       </caption>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dataPoint separator=", ">
+       <components type="1"/>
+      </dataPoint>
+      <curveFitting _nil="1"/>
+      <markers type="3" size="3">
+       <outline visible="false"/>
+      </markers>
+      <lineAttributes>
+       <color _nil="1"/>
+      </lineAttributes>
+     </series>
+     <series _type="StockSeries" seriesIdentifier="">
+      <label>
+       <caption>
+        <font name="Tahoma"/>
+        <color _body=",255,85,85,85"/>
+       </caption>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dataPoint separator=", ">
+       <components type="1"/>
+      </dataPoint>
+      <curveFitting _nil="1"/>
+     </series>
+     <series _type="BubbleSeries" seriesIdentifier="">
+      <label>
+       <caption>
+        <font name="Tahoma"/>
+        <color _body=",255,85,85,85"/>
+       </caption>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dataPoint separator=", ">
+       <components type="1"/>
+      </dataPoint>
+      <curveFitting _nil="1"/>
+      <markers>
+       <outline/>
+      </markers>
+      <lineAttributes>
+       <color _nil="1"/>
+      </lineAttributes>
+      <accLineAttributes>
+       <color _nil="1"/>
+      </accLineAttributes>
+     </series>
+     <series _type="DifferenceSeries" seriesIdentifier="">
+      <label>
+       <caption>
+        <font name="Tahoma"/>
+        <color _body=",255,85,85,85"/>
+       </caption>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dataPoint separator=", ">
+       <components type="1"/>
+      </dataPoint>
+      <markers>
+       <outline/>
+      </markers>
+      <lineAttributes>
+       <color _nil="1"/>
+      </lineAttributes>
+      <negativeMarkers>
+       <outline/>
+      </negativeMarkers>
+      <negativeLineAttributes>
+       <color _nil="1"/>
+      </negativeLineAttributes>
+     </series>
+     <series _type="GanttSeries" seriesIdentifier="">
+      <label>
+       <caption>
+        <font name="Tahoma"/>
+        <color _body=",255,85,85,85"/>
+       </caption>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dataPoint separator=", ">
+       <components type="1"/>
+      </dataPoint>
+      <curveFitting _nil="1"/>
+      <connectionLine>
+       <color _nil="1"/>
+      </connectionLine>
+      <outline>
+       <color _nil="1"/>
+      </outline>
+      <decorationLabel>
+       <caption>
+        <font name="Tahoma"/>
+        <color _body=",255,85,85,85"/>
+       </caption>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </decorationLabel>
+     </series>
+     <series _type="RadarSeries" seriesIdentifier="" paletteLineColor="true">
+      <label>
+       <caption>
+        <font name="Tahoma">
+         <alignment/>
+        </font>
+        <color _body=",255,85,85,85"/>
+       </caption>
+       <outline/>
+       <insets/>
+      </label>
+      <dataPoint separator=", ">
+       <components type="1"/>
+      </dataPoint>
+      <marker type="3" size="3" visible="true">
+       <outline/>
+      </marker>
+      <lineAttributes/>
+      <webLineAttributes>
+       <color _body=",255,85,85,85"/>
+      </webLineAttributes>
+      <webLabel>
+       <caption>
+        <font name="Tahoma" size="10.0">
+         <alignment/>
+        </font>
+        <color _body=",255,85,85,85"/>
+       </caption>
+       <outline/>
+       <insets/>
+      </webLabel>
+      <catLabel>
+       <caption>
+        <font name="Tahoma">
+         <alignment/>
+        </font>
+        <color _body=",255,85,85,85"/>
+       </caption>
+       <outline/>
+       <insets/>
+      </catLabel>
+     </series>
+    </seriesDefinitions>
+    <lineAttributes>
+     <color _body=",255,85,85,85"/>
+    </lineAttributes>
+    <label>
+     <caption>
+      <font name="Tahoma" size="10.0"/>
+      <color _body=",255,85,85,85"/>
+     </caption>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </label>
+    <majorGrid>
+     <lineAttributes>
+      <color _nil="1"/>
+     </lineAttributes>
+     <tickAttributes visible="false">
+      <color _nil="1"/>
+     </tickAttributes>
+    </majorGrid>
+    <minorGrid>
+     <lineAttributes>
+      <color _nil="1"/>
+     </lineAttributes>
+     <tickAttributes visible="false">
+      <color _nil="1"/>
+     </tickAttributes>
+    </minorGrid>
+    <origin>
+     <value _nil="1"/>
+    </origin>
+   </associatedAxes>
+   <ancillaryAxes>
+    <title>
+     <caption>
+      <font name="Tahoma"/>
+      <color _body=",255,85,85,85"/>
+     </caption>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </title>
+    <seriesDefinitions>
+     <query definition=""/>
+     <series seriesIdentifier="">
+      <label>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dataPoint separator=", ">
+       <components type="1"/>
+      </dataPoint>
+      <curveFitting _nil="1"/>
+     </series>
+    </seriesDefinitions>
+    <lineAttributes>
+     <color _body=",255,85,85,85"/>
+    </lineAttributes>
+    <label>
+     <caption>
+      <font name="Tahoma" size="10.0"/>
+      <color _body=",255,85,85,85"/>
+     </caption>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </label>
+    <majorGrid>
+     <lineAttributes>
+      <color _nil="1"/>
+     </lineAttributes>
+     <tickAttributes>
+      <color _nil="1"/>
+     </tickAttributes>
+    </majorGrid>
+    <minorGrid>
+     <lineAttributes>
+      <color _nil="1"/>
+     </lineAttributes>
+     <tickAttributes>
+      <color _nil="1"/>
+     </tickAttributes>
+    </minorGrid>
+    <origin>
+     <value _type="NumberDataElement" value="0.0"/>
+    </origin>
+   </ancillaryAxes>
+   <seriesDefinitions>
+    <query definition=""/>
+    <seriesPalette>
+     <entries _body=",255,158,204,76"/>
+     <entries _body=",255,229,107,46"/>
+     <entries _body=",255,102,176,209"/>
+     <entries _body=",255,244,215,96"/>
+     <entries _body=",255,201,17,47"/>
+     <entries _body=",255,46,152,140"/>
+     <entries _body=",255,244,172,69"/>
+     <entries _body=",255,53,120,173"/>
+     <entries _body=",255,242,150,130"/>
+     <entries _body=",255,44,142,60"/>
+    </seriesPalette>
+    <series seriesIdentifier="">
+     <label>
+      <background _nil="1"/>
+      <outline>
+       <color _nil="1"/>
+      </outline>
+     </label>
+     <dataDefinition definition=""/>
+     <dataPoint separator=", ">
+      <components type="1"/>
+     </dataPoint>
+     <curveFitting _nil="1"/>
+    </series>
+   </seriesDefinitions>
+   <lineAttributes>
+    <color _body=",255,85,85,85"/>
+   </lineAttributes>
+   <label>
+    <caption>
+     <font name="Tahoma" size="10.0"/>
+     <color _body=",255,85,85,85"/>
+    </caption>
+    <background _nil="1"/>
+    <outline>
+     <color _nil="1"/>
+    </outline>
+   </label>
+   <majorGrid>
+    <lineAttributes>
+     <color _nil="1"/>
+    </lineAttributes>
+    <tickAttributes visible="false">
+     <color _nil="1"/>
+    </tickAttributes>
+   </majorGrid>
+   <minorGrid>
+    <lineAttributes>
+     <color _nil="1"/>
+    </lineAttributes>
+    <tickAttributes visible="false">
+     <color _nil="1"/>
+    </tickAttributes>
+   </minorGrid>
+   <origin>
+    <value _nil="1"/>
+   </origin>
+  </axes>
+  <rotation>
+   <angles/>
+  </rotation>
+ </ChartWithAxes>
+</ActuateChart>]]></xml-property>
+        </report-item-theme>
+        <report-item-theme type="Chart" name="Clean Blue-ThemesReportItems3" id="1163">
+            <xml-property name="customValues"><![CDATA[<type>1</type><ActuateChart version="2.6.1">
+ <ChartWithAxes version="2.6.1" type="Bar Chart" subType="Side-by-side" unitSpacing="15.0">
+  <block>
+   <children _type="TitleBlock" anchor="7">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <label>
+     <caption>
+      <font name="Tahoma" size="14.0" bold="false"/>
+      <color _body=",255,85,85,85"/>
+     </caption>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </label>
+   </children>
+   <children _type="Plot">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <clientArea>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </clientArea>
+   </children>
+   <children _type="Legend" itemType="0" showValue="false">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <clientArea>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </clientArea>
+    <text>
+     <font name="Tahoma" size="10.0"/>
+     <color _body=",255,85,85,85"/>
+    </text>
+    <separator>
+     <color _nil="1"/>
+    </separator>
+    <title>
+     <caption>
+      <font name="Tahoma" size="10.0"/>
+      <color _body=",255,85,85,85"/>
+     </caption>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </title>
+   </children>
+   <outline>
+    <color _nil="1"/>
+   </outline>
+  </block>
+  <extendedProperties name="enable.area.alt" value="false"/>
+  <extendedProperties name="enable.drill.category" value="true"/>
+  <extendedProperties name="enable.drill.series" value="true"/>
+  <extendedProperties name="theme.withoutaxes" value=""/>
+  <extendedProperties name="jschart.animation" value="true"/>
+  <extendedProperties name="jschart.client.script" value="beforeGeneration: function(options)&amp;#13;&amp;#10;{&amp;#13;&amp;#10;    var pointFormat = &amp;#039;{series.name}: {point.y}&amp;#039;;&amp;#13;&amp;#10;    if(options.series &amp;amp;&amp;amp; options.series[0] &amp;amp;&amp;amp; options.series[0].type===&amp;#039;pie&amp;#039;){&amp;#13;&amp;#10;        pointFormat = &amp;#039;{point.y} ({point.percentage:.2f}%)&amp;#039;;&amp;#13;&amp;#10;    }&amp;#13;&amp;#10;    options.tooltip={&amp;#13;&amp;#10;        animation:false,&amp;#13;&amp;#10;        backgroundColor: &amp;quot;#fff&amp;quot;,&amp;#13;&amp;#10;        borderRadius: 0,&amp;#13;&amp;#10;        borderColor: &amp;quot;#e1e1e1&amp;quot;,&amp;#13;&amp;#10;        borderWidth: 1,&amp;#13;&amp;#10;        style: {&amp;#13;&amp;#10;            color:&amp;quot;#363636&amp;quot;,&amp;#13;&amp;#10;            fontSize: &amp;quot;16px&amp;quot;,&amp;#13;&amp;#10;            fontWeight: 400,&amp;#13;&amp;#10;            padding: &amp;quot;12px&amp;quot;&amp;#13;&amp;#10;        },&amp;#13;&amp;#10;        useHTML: true,&amp;#13;&amp;#10;        headerFormat: &amp;#039;&amp;lt;div style=&amp;quot; color:#363636;font-size: 16px;font-weight: 400;&amp;quot;&amp;gt;{point.key}&amp;lt;/div&amp;gt;&amp;#039;,&amp;#13;&amp;#10;        pointFormat: &amp;#039;&amp;lt;div style=&amp;quot; font-size: 12px;font-weight: 600;margin-top: 4px;&amp;quot;&amp;gt;&amp;#039;+pointFormat+&amp;#039;&amp;lt;/div&amp;gt;&amp;#039;&amp;#13;&amp;#10;    }&amp;#13;&amp;#10;}"/>
+  <emptyMessage>
+   <caption value="This chart contains no data."/>
+   <background _body=",64,127,127,127"/>
+   <outline>
+    <color _body=",128,127,127,127"/>
+   </outline>
+  </emptyMessage>
+  <axes>
+   <title>
+    <caption>
+     <font name="Tahoma"/>
+     <color _body=",255,85,85,85"/>
+    </caption>
+    <background _nil="1"/>
+    <outline>
+     <color _nil="1"/>
+    </outline>
+   </title>
+   <associatedAxes primaryAxis="true">
+    <title>
+     <caption>
+      <font name="Tahoma"/>
+      <color _body=",255,85,85,85"/>
+     </caption>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </title>
+    <seriesDefinitions>
+     <query definition=""/>
+     <seriesPalette>
+      <entries _body=",255,102,176,209"/>
+      <entries _body=",255,53,120,173"/>
+      <entries _body=",255,158,204,76"/>
+      <entries _body=",255,46,152,140"/>
+      <entries _body=",255,44,142,60"/>
+      <entries _body=",255,140,234,156"/>
+      <entries _body=",255,0,83,119"/>
+      <entries _body=",255,147,214,226"/>
+      <entries _body=",255,12,107,23"/>
+      <entries _body=",255,117,198,177"/>
+     </seriesPalette>
+     <series _type="BarSeries" seriesIdentifier="" riser="0">
+      <label>
+       <caption>
+        <font name="Tahoma"/>
+        <color _body=",255,85,85,85"/>
+       </caption>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dataDefinition definition=""/>
+      <dataPoint separator=", ">
+       <components type="1"/>
+      </dataPoint>
+      <curveFitting _nil="1"/>
+      <riserOutline _body=",0,255,255,255"/>
+     </series>
+     <series _type="LineSeries" seriesIdentifier="">
+      <label>
+       <caption>
+        <font name="Tahoma"/>
+        <color _body=",255,85,85,85"/>
+       </caption>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dataPoint separator=", ">
+       <components type="1"/>
+      </dataPoint>
+      <curveFitting _nil="1"/>
+      <markers visible="false">
+       <outline/>
+      </markers>
+      <lineAttributes thickness="4">
+       <color _nil="1"/>
+      </lineAttributes>
+      <shadowColor _body=",0,255,255,255"/>
+     </series>
+     <series _type="AreaSeries" seriesIdentifier="" stacked="false" curve="false">
+      <label>
+       <caption>
+        <font name="Tahoma"/>
+        <color _body=",255,85,85,85"/>
+       </caption>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dataPoint separator=", ">
+       <components type="1"/>
+      </dataPoint>
+      <curveFitting _nil="1"/>
+      <markers visible="false">
+       <outline/>
+      </markers>
+      <lineAttributes visible="false">
+       <color _nil="1"/>
+      </lineAttributes>
+     </series>
+     <series _type="PieSeries" seriesIdentifier="">
+      <label>
+       <caption>
+        <font name="Tahoma" size="10.0"/>
+        <color _body=",255,85,85,85"/>
+       </caption>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dataPoint separator=", ">
+       <components type="0"/>
+      </dataPoint>
+      <title>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </title>
+      <leaderLineAttributes visible="true">
+       <color _body=",255,85,85,85"/>
+      </leaderLineAttributes>
+      <sliceOutline _body=",255,255,255,255"/>
+     </series>
+     <series _type="DialSeries" seriesIdentifier="">
+      <label>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dataPoint separator=", ">
+       <components type="1"/>
+      </dataPoint>
+      <dial>
+       <lineAttributes>
+        <color _nil="1"/>
+       </lineAttributes>
+       <majorGrid>
+        <lineAttributes>
+         <color _nil="1"/>
+        </lineAttributes>
+        <tickAttributes>
+         <color _body=",255,85,85,85"/>
+        </tickAttributes>
+       </majorGrid>
+       <minorGrid>
+        <lineAttributes>
+         <color _nil="1"/>
+        </lineAttributes>
+        <tickAttributes>
+         <color _nil="1"/>
+        </tickAttributes>
+       </minorGrid>
+       <label>
+        <caption>
+         <font name="Tahoma" size="10.0"/>
+         <color _body=",255,85,85,85"/>
+        </caption>
+        <background _nil="1"/>
+        <outline>
+         <color _nil="1"/>
+        </outline>
+       </label>
+      </dial>
+      <needle>
+       <lineAttributes>
+        <color _nil="1"/>
+       </lineAttributes>
+      </needle>
+     </series>
+     <series _type="ScatterSeries" seriesIdentifier="">
+      <label>
+       <caption>
+        <font name="Tahoma"/>
+        <color _body=",255,85,85,85"/>
+       </caption>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dataPoint separator=", ">
+       <components type="1"/>
+      </dataPoint>
+      <curveFitting _nil="1"/>
+      <markers type="3" size="3" visible="true">
+       <outline visible="false"/>
+      </markers>
+      <lineAttributes>
+       <color _nil="1"/>
+      </lineAttributes>
+     </series>
+     <series _type="StockSeries" seriesIdentifier="">
+      <label>
+       <caption>
+        <font name="Tahoma"/>
+        <color _body=",255,85,85,85"/>
+       </caption>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dataPoint separator=", ">
+       <components type="1"/>
+      </dataPoint>
+      <curveFitting _nil="1"/>
+      <lineAttributes>
+       <color _body=",255,85,85,85"/>
+      </lineAttributes>
+     </series>
+     <series _type="BubbleSeries" seriesIdentifier="">
+      <label>
+       <caption>
+        <font name="Tahoma"/>
+        <color _body=",255,85,85,85"/>
+       </caption>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dataPoint separator=", ">
+       <components type="1"/>
+      </dataPoint>
+      <curveFitting _nil="1"/>
+      <markers>
+       <outline/>
+      </markers>
+      <lineAttributes>
+       <color _nil="1"/>
+      </lineAttributes>
+      <shadowColor _body=",0,255,255,255"/>
+      <accLineAttributes>
+       <color _nil="1"/>
+      </accLineAttributes>
+     </series>
+     <series _type="DifferenceSeries" seriesIdentifier="">
+      <label>
+       <caption>
+        <font name="Tahoma"/>
+        <color _body=",255,85,85,85"/>
+       </caption>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dataPoint separator=", ">
+       <components type="1"/>
+      </dataPoint>
+      <markers>
+       <outline/>
+      </markers>
+      <lineAttributes>
+       <color _nil="1"/>
+      </lineAttributes>
+      <negativeMarkers>
+       <outline/>
+      </negativeMarkers>
+      <negativeLineAttributes>
+       <color _nil="1"/>
+      </negativeLineAttributes>
+     </series>
+     <series _type="GanttSeries" seriesIdentifier="">
+      <label>
+       <caption>
+        <font name="Tahoma"/>
+        <color _body=",255,85,85,85"/>
+       </caption>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dataPoint separator=", ">
+       <components type="1"/>
+      </dataPoint>
+      <curveFitting _nil="1"/>
+      <connectionLine>
+       <color _nil="1"/>
+      </connectionLine>
+      <outline>
+       <color _nil="1"/>
+      </outline>
+      <decorationLabel>
+       <caption>
+        <font name="Tahoma"/>
+        <color _body=",255,85,85,85"/>
+       </caption>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </decorationLabel>
+     </series>
+     <series _type="RadarSeries" seriesIdentifier="" paletteLineColor="true" showWebLabels="false" fillPolys="false">
+      <label>
+       <caption>
+        <font name="Tahoma" size="10.0">
+         <alignment/>
+        </font>
+        <color _body=",255,85,85,85"/>
+       </caption>
+       <outline visible="false">
+        <color _body=",255,255,0,255"/>
+       </outline>
+       <insets/>
+      </label>
+      <dataPoint separator=", ">
+       <components type="1"/>
+      </dataPoint>
+      <marker type="3" size="4">
+       <outline/>
+      </marker>
+      <lineAttributes visible="true">
+       <color _body=",255,85,85,85"/>
+      </lineAttributes>
+      <webLineAttributes>
+       <color _body=",255,85,85,85"/>
+      </webLineAttributes>
+      <webLabel>
+       <caption>
+        <font name="Tahoma" size="10.0">
+         <alignment/>
+        </font>
+        <color _body=",255,85,85,85"/>
+       </caption>
+       <outline/>
+       <insets/>
+      </webLabel>
+      <catLabel>
+       <caption>
+        <font name="Tahoma" size="10.0">
+         <alignment/>
+        </font>
+        <color _body=",255,85,85,85"/>
+       </caption>
+       <outline/>
+       <insets/>
+      </catLabel>
+     </series>
+    </seriesDefinitions>
+    <lineAttributes>
+     <color _body=",255,85,85,85"/>
+    </lineAttributes>
+    <label>
+     <caption>
+      <font name="Tahoma" size="10.0"/>
+      <color _body=",255,85,85,85"/>
+     </caption>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </label>
+    <majorGrid>
+     <lineAttributes>
+      <color _nil="1"/>
+     </lineAttributes>
+     <tickAttributes visible="false">
+      <color _nil="1"/>
+     </tickAttributes>
+    </majorGrid>
+    <minorGrid>
+     <lineAttributes>
+      <color _nil="1"/>
+     </lineAttributes>
+     <tickAttributes visible="false">
+      <color _nil="1"/>
+     </tickAttributes>
+    </minorGrid>
+    <origin>
+     <value _nil="1"/>
+    </origin>
+   </associatedAxes>
+   <ancillaryAxes>
+    <title>
+     <caption>
+      <font name="Tahoma"/>
+      <color _body=",255,85,85,85"/>
+     </caption>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </title>
+    <seriesDefinitions>
+     <query definition=""/>
+     <series seriesIdentifier="">
+      <label>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dataPoint separator=", ">
+       <components type="1"/>
+      </dataPoint>
+      <curveFitting _nil="1"/>
+     </series>
+    </seriesDefinitions>
+    <lineAttributes>
+     <color _body=",255,85,85,85"/>
+    </lineAttributes>
+    <label>
+     <caption>
+      <font name="Tahoma" size="10.0"/>
+      <color _body=",255,85,85,85"/>
+     </caption>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </label>
+    <majorGrid>
+     <lineAttributes>
+      <color _nil="1"/>
+     </lineAttributes>
+     <tickAttributes>
+      <color _nil="1"/>
+     </tickAttributes>
+    </majorGrid>
+    <minorGrid>
+     <lineAttributes>
+      <color _nil="1"/>
+     </lineAttributes>
+     <tickAttributes>
+      <color _nil="1"/>
+     </tickAttributes>
+    </minorGrid>
+    <origin>
+     <value _type="NumberDataElement" value="0.0"/>
+    </origin>
+   </ancillaryAxes>
+   <seriesDefinitions>
+    <query definition=""/>
+    <seriesPalette>
+     <entries _body=",255,102,176,209"/>
+     <entries _body=",255,53,120,173"/>
+     <entries _body=",255,158,204,76"/>
+     <entries _body=",255,46,152,140"/>
+     <entries _body=",255,44,142,60"/>
+     <entries _body=",255,140,234,156"/>
+     <entries _body=",255,0,83,119"/>
+     <entries _body=",255,147,214,226"/>
+     <entries _body=",255,12,107,23"/>
+     <entries _body=",255,117,198,177"/>
+    </seriesPalette>
+    <series seriesIdentifier="">
+     <label>
+      <background _nil="1"/>
+      <outline>
+       <color _nil="1"/>
+      </outline>
+     </label>
+     <dataDefinition definition=""/>
+     <dataPoint separator=", ">
+      <components type="1"/>
+     </dataPoint>
+     <curveFitting _nil="1"/>
+    </series>
+   </seriesDefinitions>
+   <lineAttributes>
+    <color _body=",255,85,85,85"/>
+   </lineAttributes>
+   <label>
+    <caption>
+     <font name="Tahoma" size="10.0"/>
+     <color _body=",255,85,85,85"/>
+    </caption>
+    <background _nil="1"/>
+    <outline>
+     <color _nil="1"/>
+    </outline>
+   </label>
+   <majorGrid>
+    <lineAttributes>
+     <color _nil="1"/>
+    </lineAttributes>
+    <tickAttributes visible="false">
+     <color _nil="1"/>
+    </tickAttributes>
+   </majorGrid>
+   <minorGrid>
+    <lineAttributes>
+     <color _nil="1"/>
+    </lineAttributes>
+    <tickAttributes visible="false">
+     <color _nil="1"/>
+    </tickAttributes>
+   </minorGrid>
+   <origin>
+    <value _nil="1"/>
+   </origin>
+  </axes>
+  <rotation>
+   <angles/>
+  </rotation>
+ </ChartWithAxes>
+</ActuateChart>]]></xml-property>
+        </report-item-theme>
+        <report-item-theme type="Chart" name="Modern-ThemesReportItems3" id="1164">
+            <xml-property name="customValues"><![CDATA[<type>1</type><ActuateChart version="2.6.1">
+ <ChartWithAxes version="2.6.1" type="Bar Chart" subType="Side-by-side" unitSpacing="15.0">
+  <block>
+   <children _type="TitleBlock" anchor="0">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <label>
+     <caption>
+      <font name="Verdana" size="10.0" bold="false"/>
+      <color _body=",255,85,85,85"/>
+     </caption>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </label>
+   </children>
+   <children _type="Plot">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <clientArea>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </clientArea>
+   </children>
+   <children _type="Legend" orientation="0" position="0" itemType="0" showValue="false">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <clientArea>
+     <outline visible="false">
+      <color _nil="1"/>
+     </outline>
+    </clientArea>
+    <text>
+     <font name="Tahoma" size="10.0" bold="false"/>
+     <color _body=",255,145,145,145"/>
+    </text>
+    <separator>
+     <color _nil="1"/>
+    </separator>
+    <title>
+     <caption>
+      <font name="Verdana" size="10.0"/>
+      <color _body=",255,85,85,85"/>
+     </caption>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </title>
+   </children>
+   <outline>
+    <color _nil="1"/>
+   </outline>
+  </block>
+  <extendedProperties name="enable.area.alt" value="false"/>
+  <extendedProperties name="enable.drill.category" value="true"/>
+  <extendedProperties name="enable.drill.series" value="true"/>
+  <extendedProperties name="theme.withoutaxes" value=""/>
+  <extendedProperties name="jschart.animation" value="true"/>
+  <extendedProperties name="jschart.client.script" value="beforeGeneration: function(options)&amp;#13;&amp;#10;{&amp;#13;&amp;#10;    var formatter = function () {&amp;#13;&amp;#10;        if (this.isFirst === undefined)&amp;#13;&amp;#10;            return this.value.toFixed(2);&amp;#13;&amp;#10;        var val = this.value;&amp;#13;&amp;#10;        if (Math.abs(val) &amp;gt;= 1000000000000) {&amp;#13;&amp;#10;            val = parseInt(val / 100000000000) / 10;&amp;#13;&amp;#10;            val = &amp;quot;&amp;quot; + val + &amp;quot;T&amp;quot;;&amp;#13;&amp;#10;        } else if (Math.abs(val) &amp;gt;= 1000000000) {&amp;#13;&amp;#10;            val = parseInt(val / 100000000) / 10;&amp;#13;&amp;#10;            val = &amp;quot;&amp;quot; + val + &amp;quot;B&amp;quot;;&amp;#13;&amp;#10;        } else if (Math.abs(val) &amp;gt;= 1000000) {&amp;#13;&amp;#10;            val = parseInt(val / 100000) / 10;&amp;#13;&amp;#10;            val = &amp;quot;&amp;quot; + val + &amp;quot;M&amp;quot;;&amp;#13;&amp;#10;        } else if (Math.abs(val) &amp;gt;= 1000) {&amp;#13;&amp;#10;            val = parseInt(val / 100) / 10;&amp;#13;&amp;#10;            val = &amp;quot;&amp;quot; + val + &amp;quot;K&amp;quot;;&amp;#13;&amp;#10;        }&amp;#13;&amp;#10;        return val;&amp;#13;&amp;#10;    };&amp;#13;&amp;#10;        if (options.yAxis &amp;amp;&amp;amp; options.yAxis.length) {&amp;#13;&amp;#10;        for (var i = 0; i &amp;lt; options.yAxis.length; i++) {&amp;#13;&amp;#10;            options.yAxis[i].labels.formatter = formatter;&amp;#13;&amp;#10;        }&amp;#13;&amp;#10;    }&amp;#13;&amp;#10;}"/>
+  <emptyMessage>
+   <caption value="This chart contains no data."/>
+   <background _body=",64,127,127,127"/>
+   <outline>
+    <color _body=",128,127,127,127"/>
+   </outline>
+  </emptyMessage>
+  <axes>
+   <title>
+    <caption>
+     <font name="Tahoma"/>
+     <color _body=",255,85,85,85"/>
+    </caption>
+    <background _nil="1"/>
+    <outline>
+     <color _nil="1"/>
+    </outline>
+   </title>
+   <associatedAxes primaryAxis="true">
+    <title>
+     <caption>
+      <font name="Tahoma"/>
+      <color _body=",255,85,85,85"/>
+     </caption>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </title>
+    <seriesDefinitions>
+     <query definition=""/>
+     <seriesPalette>
+      <entries _body=",255,102,176,209"/>
+      <entries _body=",255,53,120,173"/>
+      <entries _body=",255,158,204,76"/>
+      <entries _body=",255,46,152,140"/>
+      <entries _body=",255,44,142,60"/>
+      <entries _body=",255,34,168,168"/>
+      <entries _body=",255,0,83,119"/>
+      <entries _body=",255,147,214,226"/>
+      <entries _body=",255,12,107,23"/>
+      <entries _body=",255,117,198,177"/>
+     </seriesPalette>
+     <series _type="BarSeries" seriesIdentifier="" riser="0">
+      <label>
+       <caption>
+        <font name="Tahoma"/>
+        <color _body=",255,85,85,85"/>
+       </caption>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dataDefinition definition=""/>
+      <dataPoint separator=", ">
+       <components type="1"/>
+      </dataPoint>
+      <curveFitting _nil="1"/>
+      <riserOutline _body=",0,255,255,255"/>
+     </series>
+     <series _type="LineSeries" seriesIdentifier="">
+      <label>
+       <caption>
+        <font name="Tahoma"/>
+        <color _body=",255,85,85,85"/>
+       </caption>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dataPoint separator=", ">
+       <components type="1"/>
+      </dataPoint>
+      <curveFitting _nil="1"/>
+      <markers visible="false">
+       <outline/>
+      </markers>
+      <lineAttributes thickness="4">
+       <color _nil="1"/>
+      </lineAttributes>
+      <shadowColor _body=",0,255,255,255"/>
+     </series>
+     <series _type="AreaSeries" seriesIdentifier="" stacked="false" curve="false">
+      <label>
+       <caption>
+        <font name="Tahoma"/>
+        <color _body=",255,85,85,85"/>
+       </caption>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dataPoint separator=", ">
+       <components type="1"/>
+      </dataPoint>
+      <curveFitting _nil="1"/>
+      <markers visible="false">
+       <outline/>
+      </markers>
+      <lineAttributes visible="false">
+       <color _nil="1"/>
+      </lineAttributes>
+     </series>
+     <series _type="PieSeries" seriesIdentifier="" leaderLineLength="1.0">
+      <label>
+       <caption>
+        <font name="Tahoma" size="10.0"/>
+        <color _body=",255,85,85,85"/>
+       </caption>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dataPoint separator=", ">
+       <components type="0"/>
+      </dataPoint>
+      <title>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </title>
+      <leaderLineAttributes visible="true">
+       <color _body=",255,192,192,192"/>
+      </leaderLineAttributes>
+      <sliceOutline _body=",255,255,255,255"/>
+     </series>
+     <series _type="DialSeries" seriesIdentifier="">
+      <label>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dataPoint separator=", ">
+       <components type="1"/>
+      </dataPoint>
+      <dial>
+       <lineAttributes>
+        <color _nil="1"/>
+       </lineAttributes>
+       <majorGrid>
+        <lineAttributes>
+         <color _nil="1"/>
+        </lineAttributes>
+        <tickAttributes>
+         <color _body=",255,85,85,85"/>
+        </tickAttributes>
+       </majorGrid>
+       <minorGrid>
+        <lineAttributes>
+         <color _nil="1"/>
+        </lineAttributes>
+        <tickAttributes>
+         <color _nil="1"/>
+        </tickAttributes>
+       </minorGrid>
+       <label>
+        <caption>
+         <font name="Tahoma" size="10.0"/>
+         <color _body=",255,85,85,85"/>
+        </caption>
+        <background _nil="1"/>
+        <outline>
+         <color _nil="1"/>
+        </outline>
+       </label>
+      </dial>
+      <needle>
+       <lineAttributes>
+        <color _nil="1"/>
+       </lineAttributes>
+      </needle>
+     </series>
+     <series _type="ScatterSeries" seriesIdentifier="">
+      <label>
+       <caption>
+        <font name="Tahoma"/>
+        <color _body=",255,85,85,85"/>
+       </caption>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dataPoint separator=", ">
+       <components type="1"/>
+      </dataPoint>
+      <curveFitting _nil="1"/>
+      <markers type="3" size="3" visible="true">
+       <outline visible="false"/>
+      </markers>
+      <lineAttributes>
+       <color _nil="1"/>
+      </lineAttributes>
+     </series>
+     <series _type="StockSeries" seriesIdentifier="">
+      <label>
+       <caption>
+        <font name="Tahoma"/>
+        <color _body=",255,85,85,85"/>
+       </caption>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dataPoint separator=", ">
+       <components type="1"/>
+      </dataPoint>
+      <curveFitting _nil="1"/>
+      <lineAttributes>
+       <color _body=",255,85,85,85"/>
+      </lineAttributes>
+     </series>
+     <series _type="BubbleSeries" seriesIdentifier="">
+      <label>
+       <caption>
+        <font name="Tahoma"/>
+        <color _body=",255,85,85,85"/>
+       </caption>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dataPoint separator=", ">
+       <components type="1"/>
+      </dataPoint>
+      <curveFitting _nil="1"/>
+      <markers>
+       <outline/>
+      </markers>
+      <lineAttributes>
+       <color _nil="1"/>
+      </lineAttributes>
+      <accLineAttributes visible="false">
+       <color _nil="1"/>
+      </accLineAttributes>
+     </series>
+     <series _type="DifferenceSeries" seriesIdentifier="">
+      <label>
+       <caption>
+        <font name="Tahoma"/>
+        <color _body=",255,85,85,85"/>
+       </caption>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dataPoint separator=", ">
+       <components type="1"/>
+      </dataPoint>
+      <markers>
+       <outline/>
+      </markers>
+      <lineAttributes>
+       <color _nil="1"/>
+      </lineAttributes>
+      <negativeMarkers>
+       <outline/>
+      </negativeMarkers>
+      <negativeLineAttributes>
+       <color _nil="1"/>
+      </negativeLineAttributes>
+     </series>
+     <series _type="GanttSeries" seriesIdentifier="">
+      <label>
+       <caption>
+        <font name="Tahoma"/>
+        <color _body=",255,85,85,85"/>
+       </caption>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dataPoint separator=", ">
+       <components type="1"/>
+      </dataPoint>
+      <curveFitting _nil="1"/>
+      <connectionLine>
+       <color _nil="1"/>
+      </connectionLine>
+      <outline visible="false">
+       <color _nil="1"/>
+      </outline>
+      <decorationLabel>
+       <caption>
+        <font name="Tahoma"/>
+        <color _body=",255,85,85,85"/>
+       </caption>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </decorationLabel>
+     </series>
+     <series _type="RadarSeries" seriesIdentifier="" paletteLineColor="true" showWebLabels="false" fillPolys="false" connectEndpoints="true">
+      <label>
+       <caption>
+        <font name="Tahoma" size="10.0">
+         <alignment/>
+        </font>
+        <color _body=",255,85,85,85"/>
+       </caption>
+       <outline visible="false">
+        <color _body=",255,255,0,255"/>
+       </outline>
+       <insets/>
+      </label>
+      <dataPoint separator=", ">
+       <components type="1"/>
+      </dataPoint>
+      <marker type="3" size="3">
+       <outline/>
+      </marker>
+      <lineAttributes visible="true"/>
+      <webLineAttributes>
+       <color _body=",255,192,192,192"/>
+      </webLineAttributes>
+      <webLabel>
+       <caption>
+        <font name="Tahoma" size="10.0">
+         <alignment/>
+        </font>
+        <color _body=",255,85,85,85"/>
+       </caption>
+       <outline/>
+       <insets/>
+      </webLabel>
+      <catLabel>
+       <caption>
+        <font name="Tahoma" size="10.0">
+         <alignment/>
+        </font>
+        <color _body=",255,85,85,85"/>
+       </caption>
+       <outline/>
+       <insets/>
+      </catLabel>
+     </series>
+    </seriesDefinitions>
+    <lineAttributes>
+     <color _body=",255,192,192,192"/>
+    </lineAttributes>
+    <label>
+     <caption>
+      <font name="Verdana" size="10.0" bold="false"/>
+      <color _body=",255,85,85,85"/>
+     </caption>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </label>
+    <majorGrid>
+     <lineAttributes visible="true">
+      <color _body=",255,249,249,249"/>
+     </lineAttributes>
+     <tickAttributes visible="false">
+      <color _nil="1"/>
+     </tickAttributes>
+    </majorGrid>
+    <minorGrid>
+     <lineAttributes visible="true">
+      <color _body=",255,253,253,253"/>
+     </lineAttributes>
+     <tickAttributes visible="false">
+      <color _nil="1"/>
+     </tickAttributes>
+    </minorGrid>
+    <origin>
+     <value _nil="1"/>
+    </origin>
+   </associatedAxes>
+   <ancillaryAxes>
+    <title>
+     <caption>
+      <font name="Tahoma"/>
+      <color _body=",255,85,85,85"/>
+     </caption>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </title>
+    <seriesDefinitions>
+     <query definition=""/>
+     <series seriesIdentifier="">
+      <label>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dataPoint separator=", ">
+       <components type="1"/>
+      </dataPoint>
+      <curveFitting _nil="1"/>
+     </series>
+    </seriesDefinitions>
+    <lineAttributes>
+     <color _body=",255,85,85,85"/>
+    </lineAttributes>
+    <label>
+     <caption>
+      <font name="Verdana" size="10.0"/>
+      <color _body=",255,85,85,85"/>
+     </caption>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </label>
+    <majorGrid>
+     <lineAttributes>
+      <color _nil="1"/>
+     </lineAttributes>
+     <tickAttributes>
+      <color _nil="1"/>
+     </tickAttributes>
+    </majorGrid>
+    <minorGrid>
+     <lineAttributes>
+      <color _nil="1"/>
+     </lineAttributes>
+     <tickAttributes>
+      <color _nil="1"/>
+     </tickAttributes>
+    </minorGrid>
+    <origin>
+     <value _type="NumberDataElement" value="0.0"/>
+    </origin>
+   </ancillaryAxes>
+   <seriesDefinitions>
+    <query definition=""/>
+    <seriesPalette>
+     <entries _body=",255,102,176,209"/>
+     <entries _body=",255,53,120,173"/>
+     <entries _body=",255,158,204,76"/>
+     <entries _body=",255,46,152,140"/>
+     <entries _body=",255,44,142,60"/>
+     <entries _body=",255,34,168,168"/>
+     <entries _body=",255,0,83,119"/>
+     <entries _body=",255,147,214,226"/>
+     <entries _body=",255,12,107,23"/>
+     <entries _body=",255,117,198,177"/>
+    </seriesPalette>
+    <series seriesIdentifier="">
+     <label>
+      <background _nil="1"/>
+      <outline>
+       <color _nil="1"/>
+      </outline>
+     </label>
+     <dataDefinition definition=""/>
+     <dataPoint separator=", ">
+      <components type="1"/>
+     </dataPoint>
+     <curveFitting _nil="1"/>
+    </series>
+   </seriesDefinitions>
+   <lineAttributes>
+    <color _body=",255,192,192,192"/>
+   </lineAttributes>
+   <label>
+    <caption>
+     <font name="Verdana" size="10.0" bold="false"/>
+     <color _body=",255,85,85,85"/>
+    </caption>
+    <background _nil="1"/>
+    <outline>
+     <color _nil="1"/>
+    </outline>
+   </label>
+   <majorGrid>
+    <lineAttributes visible="true">
+     <color _body=",255,253,253,253"/>
+    </lineAttributes>
+    <tickAttributes visible="false">
+     <color _nil="1"/>
+    </tickAttributes>
+   </majorGrid>
+   <minorGrid>
+    <lineAttributes>
+     <color _nil="1"/>
+    </lineAttributes>
+    <tickAttributes visible="false">
+     <color _nil="1"/>
+    </tickAttributes>
+   </minorGrid>
+   <origin>
+    <value _nil="1"/>
+   </origin>
+  </axes>
+  <rotation>
+   <angles/>
+  </rotation>
+ </ChartWithAxes>
+</ActuateChart>]]></xml-property>
+        </report-item-theme>
+        <report-item-theme type="Chart" name="Warm Red-ThemesReportItems3" id="1165">
+            <xml-property name="customValues"><![CDATA[<type>1</type><ActuateChart version="2.6.1">
+ <ChartWithAxes version="2.6.1" type="Bar Chart" subType="Side-by-side" unitSpacing="15.0">
+  <block>
+   <children _type="TitleBlock" anchor="7">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <label>
+     <caption>
+      <font name="Trebuchet MS" size="14.0" bold="false"/>
+      <color _body=",255,85,85,85"/>
+     </caption>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </label>
+   </children>
+   <children _type="Plot">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <clientArea>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </clientArea>
+   </children>
+   <children _type="Legend" itemType="0" showValue="false">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <clientArea>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </clientArea>
+    <text>
+     <font name="Tahoma" size="10.0"/>
+     <color _body=",255,85,85,85"/>
+    </text>
+    <separator>
+     <color _nil="1"/>
+    </separator>
+    <title>
+     <caption>
+      <font name="Tahoma" size="10.0"/>
+      <color _body=",255,85,85,85"/>
+     </caption>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </title>
+   </children>
+   <outline>
+    <color _nil="1"/>
+   </outline>
+  </block>
+  <extendedProperties name="enable.area.alt" value="false"/>
+  <extendedProperties name="enable.drill.category" value="true"/>
+  <extendedProperties name="enable.drill.series" value="true"/>
+  <extendedProperties name="theme.withoutaxes" value=""/>
+  <extendedProperties name="jschart.animation" value="true"/>
+  <extendedProperties name="jschart.client.script" value="beforeGeneration: function(options)&amp;#13;&amp;#10;{&amp;#13;&amp;#10;    var pointFormat = &amp;#039;{series.name}: {point.y}&amp;#039;;&amp;#13;&amp;#10;    if(options.series &amp;amp;&amp;amp; options.series[0] &amp;amp;&amp;amp; options.series[0].type===&amp;#039;pie&amp;#039;){&amp;#13;&amp;#10;        pointFormat = &amp;#039;{point.y} ({point.percentage:.2f}%)&amp;#039;;&amp;#13;&amp;#10;    }&amp;#13;&amp;#10;    options.tooltip={&amp;#13;&amp;#10;        animation:false,&amp;#13;&amp;#10;        backgroundColor: &amp;quot;#fff&amp;quot;,&amp;#13;&amp;#10;        borderRadius: 0,&amp;#13;&amp;#10;        borderColor: &amp;quot;#e1e1e1&amp;quot;,&amp;#13;&amp;#10;        borderWidth: 1,&amp;#13;&amp;#10;        style: {&amp;#13;&amp;#10;            color:&amp;quot;#363636&amp;quot;,&amp;#13;&amp;#10;            fontSize: &amp;quot;16px&amp;quot;,&amp;#13;&amp;#10;            fontWeight: 400,&amp;#13;&amp;#10;            padding: &amp;quot;12px&amp;quot;&amp;#13;&amp;#10;        },&amp;#13;&amp;#10;        useHTML: true,&amp;#13;&amp;#10;        headerFormat: &amp;#039;&amp;lt;div style=&amp;quot; color:#363636;font-size: 16px;font-weight: 400;&amp;quot;&amp;gt;{point.key}&amp;lt;/div&amp;gt;&amp;#039;,&amp;#13;&amp;#10;        pointFormat: &amp;#039;&amp;lt;div style=&amp;quot; font-size: 12px;font-weight: 600;margin-top: 4px;&amp;quot;&amp;gt;&amp;#039;+pointFormat+&amp;#039;&amp;lt;/div&amp;gt;&amp;#039;&amp;#13;&amp;#10;    }&amp;#13;&amp;#10;}"/>
+  <emptyMessage>
+   <caption value="This chart contains no data."/>
+   <background _body=",64,127,127,127"/>
+   <outline>
+    <color _body=",128,127,127,127"/>
+   </outline>
+  </emptyMessage>
+  <axes>
+   <title>
+    <caption>
+     <font name="Trebuchet MS"/>
+     <color _body=",255,85,85,85"/>
+    </caption>
+    <background _nil="1"/>
+    <outline>
+     <color _nil="1"/>
+    </outline>
+   </title>
+   <associatedAxes primaryAxis="true">
+    <title>
+     <caption>
+      <font name="Trebuchet MS"/>
+      <color _body=",255,85,85,85"/>
+     </caption>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </title>
+    <seriesDefinitions>
+     <query definition=""/>
+     <seriesPalette>
+      <entries _body=",255,223,94,52"/>
+      <entries _body=",255,244,172,69"/>
+      <entries _body=",255,201,17,47"/>
+      <entries _body=",255,242,150,130"/>
+      <entries _body=",255,244,215,96"/>
+      <entries _body=",255,147,18,5"/>
+      <entries _body=",255,214,94,81"/>
+      <entries _body=",255,132,32,73"/>
+      <entries _body=",255,242,140,70"/>
+      <entries _body=",255,178,80,118"/>
+     </seriesPalette>
+     <series _type="BarSeries" seriesIdentifier="" riser="0">
+      <label>
+       <caption>
+        <font name="Trebuchet MS"/>
+        <color _body=",255,85,85,85"/>
+       </caption>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dataDefinition definition=""/>
+      <dataPoint separator=", ">
+       <components type="1"/>
+      </dataPoint>
+      <curveFitting _nil="1"/>
+      <riserOutline _body=",0,255,255,255"/>
+     </series>
+     <series _type="LineSeries" seriesIdentifier="">
+      <label>
+       <caption>
+        <font name="Trebuchet MS"/>
+        <color _body=",255,85,85,85"/>
+       </caption>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dataPoint separator=", ">
+       <components type="1"/>
+      </dataPoint>
+      <curveFitting _nil="1"/>
+      <markers visible="false">
+       <outline/>
+      </markers>
+      <lineAttributes thickness="4">
+       <color _nil="1"/>
+      </lineAttributes>
+      <shadowColor _body=",0,255,255,255"/>
+     </series>
+     <series _type="AreaSeries" seriesIdentifier="" stacked="false" curve="false">
+      <label>
+       <caption>
+        <font name="Trebuchet MS"/>
+        <color _body=",255,85,85,85"/>
+       </caption>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dataPoint separator=", ">
+       <components type="1"/>
+      </dataPoint>
+      <curveFitting _nil="1"/>
+      <markers visible="false">
+       <outline/>
+      </markers>
+      <lineAttributes visible="false">
+       <color _nil="1"/>
+      </lineAttributes>
+     </series>
+     <series _type="PieSeries" seriesIdentifier="">
+      <label>
+       <caption>
+        <font name="Trebuchet MS" size="10.0"/>
+        <color _body=",255,85,85,85"/>
+       </caption>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dataPoint separator=", ">
+       <components type="0"/>
+      </dataPoint>
+      <title>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </title>
+      <leaderLineAttributes visible="true">
+       <color _body=",255,85,85,85"/>
+      </leaderLineAttributes>
+      <sliceOutline _body=",255,255,255,255"/>
+     </series>
+     <series _type="DialSeries" seriesIdentifier="">
+      <label>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dataPoint separator=", ">
+       <components type="1"/>
+      </dataPoint>
+      <dial>
+       <lineAttributes>
+        <color _nil="1"/>
+       </lineAttributes>
+       <majorGrid>
+        <lineAttributes>
+         <color _nil="1"/>
+        </lineAttributes>
+        <tickAttributes>
+         <color _nil="1"/>
+        </tickAttributes>
+       </majorGrid>
+       <minorGrid>
+        <lineAttributes>
+         <color _nil="1"/>
+        </lineAttributes>
+        <tickAttributes>
+         <color _nil="1"/>
+        </tickAttributes>
+       </minorGrid>
+       <label>
+        <caption>
+         <font name="Trebuchet MS" size="10.0"/>
+         <color _body=",255,85,85,85"/>
+        </caption>
+        <background _nil="1"/>
+        <outline>
+         <color _nil="1"/>
+        </outline>
+       </label>
+      </dial>
+      <needle>
+       <lineAttributes>
+        <color _nil="1"/>
+       </lineAttributes>
+      </needle>
+     </series>
+     <series _type="ScatterSeries" seriesIdentifier="" paletteLineColor="true">
+      <label>
+       <caption>
+        <font name="Trebuchet MS"/>
+        <color _body=",255,85,85,85"/>
+       </caption>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dataPoint separator=", ">
+       <components type="1"/>
+      </dataPoint>
+      <curveFitting _nil="1"/>
+      <markers type="3" size="3">
+       <outline visible="false"/>
+      </markers>
+      <lineAttributes>
+       <color _nil="1"/>
+      </lineAttributes>
+     </series>
+     <series _type="StockSeries" seriesIdentifier="">
+      <label>
+       <caption>
+        <font name="Trebuchet MS"/>
+        <color _body=",255,85,85,85"/>
+       </caption>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dataPoint separator=", ">
+       <components type="1"/>
+      </dataPoint>
+      <curveFitting _nil="1"/>
+      <lineAttributes>
+       <color _body=",255,85,85,85"/>
+      </lineAttributes>
+     </series>
+     <series _type="BubbleSeries" seriesIdentifier="">
+      <label>
+       <caption>
+        <font name="Trebuchet MS"/>
+        <color _body=",255,85,85,85"/>
+       </caption>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dataPoint separator=", ">
+       <components type="1"/>
+      </dataPoint>
+      <curveFitting _nil="1"/>
+      <markers>
+       <outline/>
+      </markers>
+      <lineAttributes>
+       <color _nil="1"/>
+      </lineAttributes>
+      <accLineAttributes>
+       <color _nil="1"/>
+      </accLineAttributes>
+     </series>
+     <series _type="DifferenceSeries" seriesIdentifier="">
+      <label>
+       <caption>
+        <font name="Trebuchet MS"/>
+        <color _body=",255,85,85,85"/>
+       </caption>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dataPoint separator=", ">
+       <components type="1"/>
+      </dataPoint>
+      <markers>
+       <outline/>
+      </markers>
+      <lineAttributes>
+       <color _nil="1"/>
+      </lineAttributes>
+      <negativeMarkers>
+       <outline/>
+      </negativeMarkers>
+      <negativeLineAttributes>
+       <color _nil="1"/>
+      </negativeLineAttributes>
+     </series>
+     <series _type="GanttSeries" seriesIdentifier="">
+      <label>
+       <caption>
+        <font name="Tahoma" size="10.0"/>
+        <color _body=",255,85,85,85"/>
+       </caption>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dataPoint separator=", ">
+       <components type="1"/>
+      </dataPoint>
+      <curveFitting _nil="1"/>
+      <connectionLine>
+       <color _nil="1"/>
+      </connectionLine>
+      <outline>
+       <color _nil="1"/>
+      </outline>
+      <decorationLabel>
+       <caption>
+        <font name="Tahoma" size="10.0"/>
+        <color _body=",255,85,85,85"/>
+       </caption>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </decorationLabel>
+     </series>
+     <series _type="RadarSeries" seriesIdentifier="" paletteLineColor="true">
+      <label>
+       <caption>
+        <font name="Trebuchet MS">
+         <alignment/>
+        </font>
+        <color _body=",255,85,85,85"/>
+       </caption>
+       <outline/>
+       <insets/>
+      </label>
+      <dataPoint separator=", ">
+       <components type="1"/>
+      </dataPoint>
+      <marker size="3">
+       <outline/>
+      </marker>
+      <lineAttributes/>
+      <webLineAttributes>
+       <color _body=",255,85,85,85"/>
+      </webLineAttributes>
+      <webLabel>
+       <caption>
+        <font name="Trebuchet MS">
+         <alignment/>
+        </font>
+        <color _body=",255,85,85,85"/>
+       </caption>
+       <outline/>
+       <insets/>
+      </webLabel>
+      <catLabel>
+       <caption>
+        <font name="Trebuchet MS" size="10.0">
+         <alignment/>
+        </font>
+        <color _body=",255,85,85,85"/>
+       </caption>
+       <outline/>
+       <insets/>
+      </catLabel>
+     </series>
+    </seriesDefinitions>
+    <lineAttributes>
+     <color _body=",255,85,85,85"/>
+    </lineAttributes>
+    <label>
+     <caption>
+      <font name="Trebuchet MS" size="10.0"/>
+      <color _body=",255,85,85,85"/>
+     </caption>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </label>
+    <majorGrid>
+     <lineAttributes>
+      <color _nil="1"/>
+     </lineAttributes>
+     <tickAttributes visible="false">
+      <color _nil="1"/>
+     </tickAttributes>
+    </majorGrid>
+    <minorGrid>
+     <lineAttributes>
+      <color _nil="1"/>
+     </lineAttributes>
+     <tickAttributes visible="false">
+      <color _nil="1"/>
+     </tickAttributes>
+    </minorGrid>
+    <origin>
+     <value _nil="1"/>
+    </origin>
+   </associatedAxes>
+   <ancillaryAxes>
+    <title>
+     <caption>
+      <font name="Trebuchet MS"/>
+      <color _body=",255,85,85,85"/>
+     </caption>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </title>
+    <seriesDefinitions>
+     <query definition=""/>
+     <series seriesIdentifier="">
+      <label>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dataPoint separator=", ">
+       <components type="1"/>
+      </dataPoint>
+      <curveFitting _nil="1"/>
+     </series>
+    </seriesDefinitions>
+    <lineAttributes>
+     <color _body=",255,85,85,85"/>
+    </lineAttributes>
+    <label>
+     <caption>
+      <font name="Trebuchet MS" size="12.0"/>
+      <color _body=",255,85,85,85"/>
+     </caption>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </label>
+    <majorGrid>
+     <lineAttributes>
+      <color _nil="1"/>
+     </lineAttributes>
+     <tickAttributes>
+      <color _nil="1"/>
+     </tickAttributes>
+    </majorGrid>
+    <minorGrid>
+     <lineAttributes>
+      <color _nil="1"/>
+     </lineAttributes>
+     <tickAttributes>
+      <color _nil="1"/>
+     </tickAttributes>
+    </minorGrid>
+    <origin>
+     <value _type="NumberDataElement" value="0.0"/>
+    </origin>
+   </ancillaryAxes>
+   <seriesDefinitions>
+    <query definition=""/>
+    <seriesPalette>
+     <entries _body=",255,223,94,52"/>
+     <entries _body=",255,244,172,69"/>
+     <entries _body=",255,201,17,47"/>
+     <entries _body=",255,242,150,130"/>
+     <entries _body=",255,244,215,96"/>
+     <entries _body=",255,147,18,5"/>
+     <entries _body=",255,214,94,81"/>
+     <entries _body=",255,132,32,73"/>
+     <entries _body=",255,242,140,70"/>
+     <entries _body=",255,178,80,118"/>
+    </seriesPalette>
+    <series seriesIdentifier="">
+     <label>
+      <background _nil="1"/>
+      <outline>
+       <color _nil="1"/>
+      </outline>
+     </label>
+     <dataDefinition definition=""/>
+     <dataPoint separator=", ">
+      <components type="1"/>
+     </dataPoint>
+     <curveFitting _nil="1"/>
+    </series>
+   </seriesDefinitions>
+   <lineAttributes>
+    <color _body=",255,85,85,85"/>
+   </lineAttributes>
+   <label>
+    <caption>
+     <font name="Trebuchet MS" size="10.0"/>
+     <color _body=",255,85,85,85"/>
+    </caption>
+    <background _nil="1"/>
+    <outline>
+     <color _nil="1"/>
+    </outline>
+   </label>
+   <majorGrid>
+    <lineAttributes>
+     <color _nil="1"/>
+    </lineAttributes>
+    <tickAttributes visible="false">
+     <color _nil="1"/>
+    </tickAttributes>
+   </majorGrid>
+   <minorGrid>
+    <lineAttributes>
+     <color _nil="1"/>
+    </lineAttributes>
+    <tickAttributes visible="false">
+     <color _nil="1"/>
+    </tickAttributes>
+   </minorGrid>
+   <origin>
+    <value _nil="1"/>
+   </origin>
+  </axes>
+  <rotation>
+   <angles/>
+  </rotation>
+ </ChartWithAxes>
+</ActuateChart>]]></xml-property>
+        </report-item-theme>
+        <report-item-theme type="Chart" name="Grayscale-ThemesReportItems3" id="1166">
+            <xml-property name="customValues"><![CDATA[<type>1</type><ActuateChart version="2.6.1">
+ <ChartWithAxes version="2.6.1" type="Bar Chart" subType="Side-by-side" unitSpacing="15.0">
+  <block>
+   <children _type="TitleBlock" anchor="7">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <label>
+     <caption>
+      <font name="Tahoma" size="14.0" bold="false"/>
+      <color _body=",255,85,85,85"/>
+     </caption>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </label>
+   </children>
+   <children _type="Plot">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <clientArea>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </clientArea>
+   </children>
+   <children _type="Legend" itemType="0" showValue="false">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <clientArea>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </clientArea>
+    <text>
+     <font name="Tahoma" size="10.0"/>
+     <color _body=",255,85,85,85"/>
+    </text>
+    <separator>
+     <color _nil="1"/>
+    </separator>
+    <title>
+     <caption>
+      <font name="Tahoma" size="10.0"/>
+      <color _body=",255,85,85,85"/>
+     </caption>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </title>
+   </children>
+   <outline>
+    <color _nil="1"/>
+   </outline>
+  </block>
+  <extendedProperties name="enable.area.alt" value="false"/>
+  <extendedProperties name="enable.drill.category" value="true"/>
+  <extendedProperties name="enable.drill.series" value="true"/>
+  <extendedProperties name="theme.withoutaxes" value=""/>
+  <extendedProperties name="jschart.animation" value="true"/>
+  <extendedProperties name="jschart.client.script" value="beforeGeneration: function(options)&amp;#13;&amp;#10;{&amp;#13;&amp;#10;    var pointFormat = &amp;#039;{series.name}: {point.y}&amp;#039;;&amp;#13;&amp;#10;    if(options.series &amp;amp;&amp;amp; options.series[0] &amp;amp;&amp;amp; options.series[0].type===&amp;#039;pie&amp;#039;){&amp;#13;&amp;#10;        pointFormat = &amp;#039;{point.y} ({point.percentage:.2f}%)&amp;#039;;&amp;#13;&amp;#10;    }&amp;#13;&amp;#10;    options.tooltip={&amp;#13;&amp;#10;        animation:false,&amp;#13;&amp;#10;        backgroundColor: &amp;quot;#fff&amp;quot;,&amp;#13;&amp;#10;        borderRadius: 0,&amp;#13;&amp;#10;        borderColor: &amp;quot;#e1e1e1&amp;quot;,&amp;#13;&amp;#10;        borderWidth: 1,&amp;#13;&amp;#10;        style: {&amp;#13;&amp;#10;            color:&amp;quot;#363636&amp;quot;,&amp;#13;&amp;#10;            fontSize: &amp;quot;16px&amp;quot;,&amp;#13;&amp;#10;            fontWeight: 400,&amp;#13;&amp;#10;            padding: &amp;quot;12px&amp;quot;&amp;#13;&amp;#10;        },&amp;#13;&amp;#10;        useHTML: true,&amp;#13;&amp;#10;        headerFormat: &amp;#039;&amp;lt;div style=&amp;quot; color:#363636;font-size: 16px;font-weight: 400;&amp;quot;&amp;gt;{point.key}&amp;lt;/div&amp;gt;&amp;#039;,&amp;#13;&amp;#10;        pointFormat: &amp;#039;&amp;lt;div style=&amp;quot; font-size: 12px;font-weight: 600;margin-top: 4px;&amp;quot;&amp;gt;&amp;#039;+pointFormat+&amp;#039;&amp;lt;/div&amp;gt;&amp;#039;&amp;#13;&amp;#10;    }&amp;#13;&amp;#10;}"/>
+  <emptyMessage>
+   <caption value="This chart contains no data."/>
+   <background _body=",64,127,127,127"/>
+   <outline>
+    <color _body=",128,127,127,127"/>
+   </outline>
+  </emptyMessage>
+  <axes>
+   <title>
+    <caption>
+     <font name="Tahoma"/>
+     <color _body=",255,85,85,85"/>
+    </caption>
+    <background _nil="1"/>
+    <outline>
+     <color _nil="1"/>
+    </outline>
+   </title>
+   <associatedAxes primaryAxis="true">
+    <title>
+     <caption>
+      <font name="Tahoma"/>
+      <color _body=",255,85,85,85"/>
+     </caption>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </title>
+    <seriesDefinitions>
+     <query definition=""/>
+     <seriesPalette>
+      <entries _body=",255,53,53,53"/>
+      <entries _body=",255,195,195,195"/>
+      <entries _body=",255,93,93,93"/>
+      <entries _body=",255,164,164,164"/>
+      <entries _body=",255,74,74,74"/>
+      <entries _body=",255,134,134,134"/>
+      <entries _body=",255,215,215,215"/>
+      <entries _body=",255,53,53,53"/>
+      <entries _body=",255,195,195,195"/>
+      <entries _body=",255,164,164,164"/>
+     </seriesPalette>
+     <series _type="BarSeries" seriesIdentifier="" riser="0">
+      <label>
+       <caption>
+        <font name="Tahoma"/>
+        <color _body=",255,85,85,85"/>
+       </caption>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dataDefinition definition=""/>
+      <dataPoint separator=", ">
+       <components type="1"/>
+      </dataPoint>
+      <curveFitting _nil="1"/>
+      <riserOutline _body=",0,255,255,255"/>
+     </series>
+     <series _type="LineSeries" seriesIdentifier="">
+      <label>
+       <caption>
+        <font name="Tahoma"/>
+        <color _body=",255,85,85,85"/>
+       </caption>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dataPoint separator=", ">
+       <components type="1"/>
+      </dataPoint>
+      <curveFitting _nil="1"/>
+      <markers visible="false">
+       <outline/>
+      </markers>
+      <lineAttributes thickness="4">
+       <color _nil="1"/>
+      </lineAttributes>
+      <shadowColor _body=",0,255,255,255"/>
+     </series>
+     <series _type="AreaSeries" seriesIdentifier="" stacked="false" curve="false">
+      <label>
+       <caption>
+        <font name="Tahoma"/>
+        <color _body=",255,85,85,85"/>
+       </caption>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dataPoint separator=", ">
+       <components type="1"/>
+      </dataPoint>
+      <curveFitting _nil="1"/>
+      <markers visible="false">
+       <outline/>
+      </markers>
+      <lineAttributes visible="false">
+       <color _nil="1"/>
+      </lineAttributes>
+     </series>
+     <series _type="PieSeries" seriesIdentifier="">
+      <label>
+       <caption>
+        <font name="Tahoma" size="10.0"/>
+        <color _body=",255,85,85,85"/>
+       </caption>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dataPoint separator=", ">
+       <components type="0"/>
+      </dataPoint>
+      <title>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </title>
+      <leaderLineAttributes visible="true">
+       <color _body=",255,85,85,85"/>
+      </leaderLineAttributes>
+      <sliceOutline _body=",255,255,255,255"/>
+     </series>
+     <series _type="DialSeries" seriesIdentifier="">
+      <label>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dataPoint separator=", ">
+       <components type="1"/>
+      </dataPoint>
+      <dial>
+       <lineAttributes>
+        <color _nil="1"/>
+       </lineAttributes>
+       <majorGrid>
+        <lineAttributes>
+         <color _nil="1"/>
+        </lineAttributes>
+        <tickAttributes>
+         <color _nil="1"/>
+        </tickAttributes>
+       </majorGrid>
+       <minorGrid>
+        <lineAttributes>
+         <color _nil="1"/>
+        </lineAttributes>
+        <tickAttributes>
+         <color _nil="1"/>
+        </tickAttributes>
+       </minorGrid>
+       <label>
+        <caption>
+         <font name="Tahoma" size="10.0"/>
+         <color _body=",255,85,85,85"/>
+        </caption>
+        <background _nil="1"/>
+        <outline>
+         <color _nil="1"/>
+        </outline>
+       </label>
+      </dial>
+      <needle>
+       <lineAttributes>
+        <color _nil="1"/>
+       </lineAttributes>
+      </needle>
+     </series>
+     <series _type="ScatterSeries" seriesIdentifier="">
+      <label>
+       <caption>
+        <font name="Tahoma"/>
+        <color _body=",255,85,85,85"/>
+       </caption>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dataPoint separator=", ">
+       <components type="1"/>
+      </dataPoint>
+      <curveFitting _nil="1"/>
+      <markers type="3" size="3">
+       <outline visible="false"/>
+      </markers>
+      <lineAttributes>
+       <color _nil="1"/>
+      </lineAttributes>
+     </series>
+     <series _type="StockSeries" seriesIdentifier="">
+      <label>
+       <caption>
+        <font name="Tahoma"/>
+        <color _body=",255,85,85,85"/>
+       </caption>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dataPoint separator=", ">
+       <components type="1"/>
+      </dataPoint>
+      <curveFitting _nil="1"/>
+      <lineAttributes>
+       <color _body=",255,85,85,85"/>
+      </lineAttributes>
+     </series>
+     <series _type="BubbleSeries" seriesIdentifier="">
+      <label>
+       <caption>
+        <font name="Tahoma"/>
+        <color _body=",255,85,85,85"/>
+       </caption>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dataPoint separator=", ">
+       <components type="1"/>
+      </dataPoint>
+      <curveFitting _nil="1"/>
+      <markers>
+       <outline/>
+      </markers>
+      <lineAttributes>
+       <color _nil="1"/>
+      </lineAttributes>
+      <accLineAttributes>
+       <color _nil="1"/>
+      </accLineAttributes>
+     </series>
+     <series _type="DifferenceSeries" seriesIdentifier="">
+      <label>
+       <caption>
+        <font name="Tahoma"/>
+        <color _body=",255,85,85,85"/>
+       </caption>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dataPoint separator=", ">
+       <components type="1"/>
+      </dataPoint>
+      <markers>
+       <outline/>
+      </markers>
+      <lineAttributes>
+       <color _nil="1"/>
+      </lineAttributes>
+      <negativeMarkers>
+       <outline/>
+      </negativeMarkers>
+      <negativeLineAttributes>
+       <color _nil="1"/>
+      </negativeLineAttributes>
+     </series>
+     <series _type="GanttSeries" seriesIdentifier="">
+      <label>
+       <caption>
+        <font name="Tahoma"/>
+        <color _body=",255,85,85,85"/>
+       </caption>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dataPoint separator=", ">
+       <components type="1"/>
+      </dataPoint>
+      <curveFitting _nil="1"/>
+      <connectionLine>
+       <color _nil="1"/>
+      </connectionLine>
+      <outline>
+       <color _nil="1"/>
+      </outline>
+      <decorationLabel>
+       <caption>
+        <font name="Tahoma"/>
+        <color _body=",255,85,85,85"/>
+       </caption>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </decorationLabel>
+     </series>
+     <series _type="RadarSeries" seriesIdentifier="">
+      <label>
+       <caption>
+        <font name="Tahoma" size="10.0">
+         <alignment/>
+        </font>
+        <color _body=",255,85,85,85"/>
+       </caption>
+       <outline/>
+       <insets/>
+      </label>
+      <dataPoint separator=", ">
+       <components type="1"/>
+      </dataPoint>
+      <marker type="3" size="3">
+       <outline/>
+      </marker>
+      <lineAttributes/>
+      <webLineAttributes>
+       <color _body=",255,85,85,85"/>
+      </webLineAttributes>
+      <webLabel>
+       <caption>
+        <font name="Tahoma" size="10.0">
+         <alignment/>
+        </font>
+        <color _body=",255,85,85,85"/>
+       </caption>
+       <outline/>
+       <insets/>
+      </webLabel>
+      <catLabel>
+       <caption>
+        <font name="Tahoma" size="10.0">
+         <alignment/>
+        </font>
+        <color _body=",255,85,85,85"/>
+       </caption>
+       <outline/>
+       <insets/>
+      </catLabel>
+     </series>
+    </seriesDefinitions>
+    <lineAttributes>
+     <color _body=",255,85,85,85"/>
+    </lineAttributes>
+    <label>
+     <caption>
+      <font name="Tahoma" size="10.0"/>
+      <color _body=",255,85,85,85"/>
+     </caption>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </label>
+    <majorGrid>
+     <lineAttributes>
+      <color _nil="1"/>
+     </lineAttributes>
+     <tickAttributes visible="false">
+      <color _nil="1"/>
+     </tickAttributes>
+    </majorGrid>
+    <minorGrid>
+     <lineAttributes>
+      <color _nil="1"/>
+     </lineAttributes>
+     <tickAttributes visible="false">
+      <color _nil="1"/>
+     </tickAttributes>
+    </minorGrid>
+    <origin>
+     <value _nil="1"/>
+    </origin>
+   </associatedAxes>
+   <ancillaryAxes>
+    <title>
+     <caption>
+      <font name="Tahoma"/>
+      <color _body=",255,85,85,85"/>
+     </caption>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </title>
+    <seriesDefinitions>
+     <query definition=""/>
+     <series seriesIdentifier="">
+      <label>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dataPoint separator=", ">
+       <components type="1"/>
+      </dataPoint>
+      <curveFitting _nil="1"/>
+     </series>
+    </seriesDefinitions>
+    <lineAttributes>
+     <color _body=",255,85,85,85"/>
+    </lineAttributes>
+    <label>
+     <caption>
+      <font name="Tahoma" size="10.0"/>
+      <color _body=",255,85,85,85"/>
+     </caption>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </label>
+    <majorGrid>
+     <lineAttributes>
+      <color _nil="1"/>
+     </lineAttributes>
+     <tickAttributes>
+      <color _nil="1"/>
+     </tickAttributes>
+    </majorGrid>
+    <minorGrid>
+     <lineAttributes>
+      <color _nil="1"/>
+     </lineAttributes>
+     <tickAttributes>
+      <color _nil="1"/>
+     </tickAttributes>
+    </minorGrid>
+    <origin>
+     <value _type="NumberDataElement" value="0.0"/>
+    </origin>
+   </ancillaryAxes>
+   <seriesDefinitions>
+    <query definition=""/>
+    <seriesPalette>
+     <entries _body=",255,53,53,53"/>
+     <entries _body=",255,195,195,195"/>
+     <entries _body=",255,93,93,93"/>
+     <entries _body=",255,164,164,164"/>
+     <entries _body=",255,74,74,74"/>
+     <entries _body=",255,134,134,134"/>
+     <entries _body=",255,215,215,215"/>
+     <entries _body=",255,53,53,53"/>
+     <entries _body=",255,195,195,195"/>
+     <entries _body=",255,164,164,164"/>
+    </seriesPalette>
+    <series seriesIdentifier="">
+     <label>
+      <background _nil="1"/>
+      <outline>
+       <color _nil="1"/>
+      </outline>
+     </label>
+     <dataDefinition definition=""/>
+     <dataPoint separator=", ">
+      <components type="1"/>
+     </dataPoint>
+     <curveFitting _nil="1"/>
+    </series>
+   </seriesDefinitions>
+   <lineAttributes>
+    <color _body=",255,85,85,85"/>
+   </lineAttributes>
+   <label>
+    <caption>
+     <font name="Tahoma" size="10.0"/>
+     <color _body=",255,85,85,85"/>
+    </caption>
+    <background _nil="1"/>
+    <outline>
+     <color _nil="1"/>
+    </outline>
+   </label>
+   <majorGrid>
+    <lineAttributes>
+     <color _nil="1"/>
+    </lineAttributes>
+    <tickAttributes visible="false">
+     <color _nil="1"/>
+    </tickAttributes>
+   </majorGrid>
+   <minorGrid>
+    <lineAttributes>
+     <color _nil="1"/>
+    </lineAttributes>
+    <tickAttributes visible="false">
+     <color _nil="1"/>
+    </tickAttributes>
+   </minorGrid>
+   <origin>
+    <value _nil="1"/>
+   </origin>
+  </axes>
+  <rotation>
+   <angles/>
+  </rotation>
+ </ChartWithAxes>
+</ActuateChart>]]></xml-property>
+        </report-item-theme>
+        <report-item-theme type="Table" name="Modern Table-ThemesReportItems3" id="1167">
+            <styles>
+                <style name="table" id="1168">
+                    <property name="fontFamily">"Verdana"</property>
+                    <property name="fontSize">10pt</property>
+                    <property name="color">#666666</property>
+                    <property name="borderBottomColor">#DADADA</property>
+                    <property name="borderBottomStyle">solid</property>
+                    <property name="borderBottomWidth">1px</property>
+                    <property name="borderLeftColor">#DADADA</property>
+                    <property name="borderLeftStyle">solid</property>
+                    <property name="borderLeftWidth">1px</property>
+                    <property name="borderRightColor">#DADADA</property>
+                    <property name="borderRightStyle">solid</property>
+                    <property name="borderRightWidth">1px</property>
+                    <property name="borderTopColor">#DADADA</property>
+                    <property name="borderTopStyle">solid</property>
+                    <property name="borderTopWidth">1px</property>
+                </style>
+                <style name="table-detail-cell" id="1169">
+                    <property name="fontFamily">"Verdana"</property>
+                    <property name="borderBottomColor">#DADADA</property>
+                    <property name="borderBottomStyle">solid</property>
+                    <property name="borderBottomWidth">1px</property>
+                    <property name="borderLeftColor">#DADADA</property>
+                    <property name="borderLeftStyle">solid</property>
+                    <property name="borderLeftWidth">1px</property>
+                    <property name="borderRightColor">#DADADA</property>
+                    <property name="borderRightStyle">solid</property>
+                    <property name="borderRightWidth">1px</property>
+                    <property name="borderTopColor">#DADADA</property>
+                    <property name="borderTopStyle">solid</property>
+                    <property name="borderTopWidth">1px</property>
+                </style>
+                <style name="table-footer-cell" id="1170">
+                    <property name="backgroundColor">#EDEEF3</property>
+                    <property name="fontFamily">"Verdana"</property>
+                    <property name="fontWeight">bold</property>
+                    <property name="color">#666666</property>
+                    <property name="borderBottomColor">#DADADA</property>
+                    <property name="borderBottomStyle">solid</property>
+                    <property name="borderBottomWidth">1px</property>
+                    <property name="borderLeftColor">#DADADA</property>
+                    <property name="borderLeftStyle">solid</property>
+                    <property name="borderLeftWidth">1px</property>
+                    <property name="borderRightColor">#DADADA</property>
+                    <property name="borderRightStyle">solid</property>
+                    <property name="borderRightWidth">1px</property>
+                    <property name="borderTopColor">#DADADA</property>
+                    <property name="borderTopStyle">solid</property>
+                    <property name="borderTopWidth">1px</property>
+                </style>
+                <style name="table-group-footer-cell" id="1171">
+                    <property name="fontFamily">"Verdana"</property>
+                    <property name="borderBottomColor">#DADADA</property>
+                    <property name="borderBottomStyle">solid</property>
+                    <property name="borderBottomWidth">1px</property>
+                    <property name="borderLeftColor">#DADADA</property>
+                    <property name="borderLeftStyle">solid</property>
+                    <property name="borderLeftWidth">1px</property>
+                    <property name="borderRightColor">#DADADA</property>
+                    <property name="borderRightStyle">solid</property>
+                    <property name="borderRightWidth">1px</property>
+                    <property name="borderTopColor">#DADADA</property>
+                    <property name="borderTopStyle">solid</property>
+                    <property name="borderTopWidth">1px</property>
+                </style>
+                <style name="table-group-header-cell" id="1172">
+                    <property name="fontFamily">"Verdana"</property>
+                    <property name="borderBottomColor">#DADADA</property>
+                    <property name="borderBottomStyle">solid</property>
+                    <property name="borderBottomWidth">1px</property>
+                    <property name="borderLeftColor">#DADADA</property>
+                    <property name="borderLeftStyle">solid</property>
+                    <property name="borderLeftWidth">1px</property>
+                    <property name="borderRightColor">#DADADA</property>
+                    <property name="borderRightStyle">solid</property>
+                    <property name="borderRightWidth">1px</property>
+                    <property name="borderTopColor">#DADADA</property>
+                    <property name="borderTopStyle">solid</property>
+                    <property name="borderTopWidth">1px</property>
+                </style>
+                <style name="table-header-cell" id="1173">
+                    <property name="backgroundColor">#0079C1</property>
+                    <property name="fontFamily">"Verdana"</property>
+                    <property name="fontWeight">bold</property>
+                    <property name="color">#FFFFFF</property>
+                    <property name="borderBottomColor">#DADADA</property>
+                    <property name="borderBottomStyle">solid</property>
+                    <property name="borderBottomWidth">1px</property>
+                    <property name="borderLeftColor">#DADADA</property>
+                    <property name="borderLeftStyle">solid</property>
+                    <property name="borderLeftWidth">1px</property>
+                    <property name="borderRightColor">#DADADA</property>
+                    <property name="borderRightStyle">solid</property>
+                    <property name="borderRightWidth">1px</property>
+                    <property name="borderTopColor">#DADADA</property>
+                    <property name="borderTopStyle">solid</property>
+                    <property name="borderTopWidth">1px</property>
+                </style>
+            </styles>
+        </report-item-theme>
+        <report-item-theme type="Crosstab" name="modern-crosstab-blue-ThemesReportItems3" id="956">
+            <text-property name="displayName">Modern</text-property>
+            <styles>
+                <style name="crosstab" id="957">
+                    <property name="fontFamily">"Verdana"</property>
+                    <property name="fontSize">10pt</property>
+                    <property name="color">#353535</property>
+                </style>
+                <style name="crosstab-header" id="958">
+                    <property name="backgroundColor">#0079C1</property>
+                    <property name="fontFamily">"Verdana"</property>
+                    <property name="fontSize">10pt</property>
+                    <property name="fontWeight">bold</property>
+                    <property name="color">#FFFFFF</property>
+                    <property name="borderBottomColor">#BBBBBB</property>
+                    <property name="borderBottomStyle">solid</property>
+                    <property name="borderBottomWidth">1px</property>
+                    <property name="borderLeftColor">#BBBBBB</property>
+                    <property name="borderLeftStyle">solid</property>
+                    <property name="borderLeftWidth">1px</property>
+                    <property name="borderRightColor">#BBBBBB</property>
+                    <property name="borderRightStyle">solid</property>
+                    <property name="borderRightWidth">1px</property>
+                    <property name="borderTopColor">#BBBBBB</property>
+                    <property name="borderTopStyle">solid</property>
+                    <property name="borderTopWidth">1px</property>
+                </style>
+                <style name="crosstab-detail" id="959">
+                    <property name="backgroundColor">#FFFFFF</property>
+                    <property name="fontFamily">"Verdana"</property>
+                    <property name="borderBottomColor">#BBBBBB</property>
+                    <property name="borderBottomStyle">solid</property>
+                    <property name="borderBottomWidth">1px</property>
+                    <property name="borderLeftColor">#BBBBBB</property>
+                    <property name="borderLeftStyle">solid</property>
+                    <property name="borderLeftWidth">1px</property>
+                    <property name="borderRightColor">#BBBBBB</property>
+                    <property name="borderRightStyle">solid</property>
+                    <property name="borderRightWidth">1px</property>
+                    <property name="borderTopColor">#BBBBBB</property>
+                    <property name="borderTopStyle">solid</property>
+                    <property name="borderTopWidth">1px</property>
+                    <property name="textAlign">right</property>
+                </style>
+                <style name="crosstab-row-header" id="960">
+                    <property name="backgroundColor">#0079C1</property>
+                    <property name="fontFamily">"Verdana"</property>
+                    <property name="textAlign">left</property>
+                </style>
+                <style name="crosstab-column-sub-total" id="961">
+                    <property name="backgroundColor">#0079C1</property>
+                    <property name="fontFamily">"Verdana"</property>
+                    <property name="fontWeight">bold</property>
+                    <property name="fontStyle">italic</property>
+                </style>
+                <style name="crosstab-row-sub-total" id="962">
+                    <property name="backgroundColor">#0079C1</property>
+                    <property name="fontFamily">"Verdana"</property>
+                    <property name="fontWeight">bold</property>
+                    <property name="fontStyle">italic</property>
+                </style>
+                <style name="crosstab-column-grand-total" id="963">
+                    <property name="backgroundColor">#0079C1</property>
+                    <property name="fontFamily">"Verdana"</property>
+                    <property name="fontWeight">bold</property>
+                    <property name="fontStyle">italic</property>
+                </style>
+                <style name="crosstab-row-grand-total" id="964">
+                    <property name="backgroundColor">#0079C1</property>
+                    <property name="fontFamily">"Verdana"</property>
+                    <property name="fontWeight">bold</property>
+                    <property name="fontStyle">italic</property>
+                </style>
+            </styles>
+        </report-item-theme>
     </themes>
     <body>
         <text name="e545eea4-be44-4c41-b3eb-cbc2d6ba5d95" id="151">
@@ -4163,24 +6702,16 @@
                             <property name="width">28.978102189781023%</property>
                             <property name="gadgets">
                                 <gadget name="Gadget_1e60ced4-f984-4be0-b040-aa4ab313168f" id="1107">
-                                    <property name="height">690px</property>
                                     <property name="title">Retirement Planner App</property>
                                     <property name="externalGadgetURI">^/Report Designs/roadmap descr.rptdesign</property>
                                     <property name="showTitle">false</property>
                                     <property name="showBorder">false</property>
                                     <property name="zIndex">3</property>
                                     <property name="showScrollBar">false</property>
-                                    <property name="height">690px</property>
                                     <property name="caption">
                                         <gadget-caption id="1108">
                                             <property name="showCaption">true</property>
                                             <property name="horizontalAlignment">left</property>
-                                            <property name="fontFamily">"Source Sans Pro"</property>
-                                            <property name="fontSize">18pt</property>
-                                            <property name="fontWeight">normal</property>
-                                            <property name="fontStyle">normal</property>
-                                            <property name="color">#353535</property>
-                                            <property name="textUnderline">none</property>
                                         </gadget-caption>
                                     </property>
                                     <property name="content">
@@ -4202,18 +6733,12 @@
                                     </property>
                                 </gadget>
                                 <gadget name="64785e37-4d0d-49b0-a9b2-bdcea2213e06" id="1091">
-                                    <property name="height">150px</property>
                                     <property name="zIndex">1</property>
                                     <property name="isVisible">false</property>
-                                    <property name="height">150px</property>
                                     <property name="caption">
                                         <gadget-caption id="1093">
                                             <property name="showCaption">true</property>
                                             <property name="horizontalAlignment">left</property>
-                                            <property name="fontFamily">"Source Sans Pro"</property>
-                                            <property name="fontSize">24pt</property>
-                                            <property name="fontWeight">bold</property>
-                                            <property name="color">#000000</property>
                                         </gadget-caption>
                                     </property>
                                     <property name="content">
@@ -4226,24 +6751,18 @@
                             <property name="width">71.02189781021899%</property>
                             <property name="gadgets">
                                 <gadget name="Gadget_ebae94ca-a76a-4a95-bd12-dad9eab792dd12" id="1123">
-                                    <property name="height">881px</property>
+                                    <property name="height">814px</property>
                                     <property name="title">Retirement Forecast</property>
                                     <property name="externalGadgetURI">/Report Designs/Retirement.rptdesign</property>
                                     <property name="showTitle">false</property>
                                     <property name="showBorder">false</property>
                                     <property name="zIndex">4</property>
                                     <property name="showScrollBar">false</property>
-                                    <property name="height">881px</property>
+                                    <property name="height">814px</property>
                                     <property name="caption">
                                         <gadget-caption id="1125">
                                             <property name="showCaption">false</property>
                                             <property name="horizontalAlignment">left</property>
-                                            <property name="fontFamily">"Source Sans Pro"</property>
-                                            <property name="fontSize">18pt</property>
-                                            <property name="fontWeight">normal</property>
-                                            <property name="fontStyle">normal</property>
-                                            <property name="color">#353535</property>
-                                            <property name="textUnderline">none</property>
                                         </gadget-caption>
                                     </property>
                                     <property name="content">
@@ -4264,10 +6783,10 @@
                                             <property name="paramSettings">
                                                 <param-setting>
                                                     <property name="paramName">pRetireYear</property>
-                                                    <property name="displayText">2040</property>
-                                                    <expression name="value">2040</expression>
+                                                    <property name="displayText">2041</property>
+                                                    <expression name="value">2041</expression>
                                                     <property name="isHidden">true</property>
-                                                    <expression name="defaultValue" type="javascript">2040</expression>
+                                                    <expression name="defaultValue" type="javascript">2041</expression>
                                                 </param-setting>
                                                 <param-setting>
                                                     <property name="paramName">pStrategy</property>
@@ -4275,6 +6794,13 @@
                                                     <expression name="value">Moderate</expression>
                                                     <property name="isHidden">true</property>
                                                     <expression name="defaultValue" type="javascript">Moderate</expression>
+                                                </param-setting>
+                                                <param-setting>
+                                                    <property name="paramName">pRetireYear1</property>
+                                                    <property name="displayText">2041</property>
+                                                    <expression name="value">2041</expression>
+                                                    <property name="isHidden">true</property>
+                                                    <expression name="defaultValue" type="javascript">2041</expression>
                                                 </param-setting>
                                             </property>
                                         </data-view>
