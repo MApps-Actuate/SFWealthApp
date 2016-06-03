@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
-    <property name="createdBy">Eclipse BIRT Designer Version 4.2.3.v20131216-0430 Build &lt;4.2.3.v20131216-0430></property>
+    <property name="createdBy">Eclipse BIRT Designer Version 4.4.0.v20150710-0101 Build &lt;4.2.3.v20150710-0101></property>
     <property name="units">in</property>
     <property name="iconFile">/templates/blank_report.gif</property>
     <property name="bidiLayoutOrientation">ltr</property>
@@ -51,6 +51,7 @@
     </page-setup>
     <body>
         <grid id="8">
+            <property name="fontFamily">"Lato"</property>
             <property name="width">3in</property>
             <expression name="bookmark" type="javascript">"table"</expression>
             <column id="9">
@@ -65,7 +66,6 @@
                     <property name="colSpan">2</property>
                     <property name="rowSpan">1</property>
                     <label id="31">
-                        <property name="fontFamily">"Verdana"</property>
                         <property name="color">#6F0700</property>
                         <text-property name="text">Today</text-property>
                     </label>
@@ -74,16 +74,17 @@
             <row id="11">
                 <property name="verticalAlign">middle</property>
                 <cell id="12">
-                    <image id="23">
-                        <property name="height">0.11458333333333333in</property>
-                        <property name="width">0.15625in</property>
-                        <property name="source">file</property>
-                        <expression name="uri" type="constant">images/bullet.png</expression>
-                    </image>
+                    <label id="53">
+                        <property name="fontFamily">"FontAwesome"</property>
+                        <property name="fontSize">9pt</property>
+                        <property name="fontWeight">normal</property>
+                        <property name="color">#6A8AC7</property>
+                        <property name="textAlign">center</property>
+                        <text-property name="text"></text-property>
+                    </label>
                 </cell>
                 <cell id="13">
                     <text id="27">
-                        <property name="fontFamily">"Verdana"</property>
                         <property name="contentType">auto</property>
                         <text-property name="content"><![CDATA[Stock screening criteria]]></text-property>
                     </text>
@@ -94,7 +95,6 @@
                 <cell id="33"/>
                 <cell id="34">
                     <text id="35">
-                        <property name="fontFamily">"Verdana"</property>
                         <property name="contentType">auto</property>
                         <text-property name="content"><![CDATA[has identified IBM. Get a quote.]]></text-property>
                     </text>
@@ -103,21 +103,21 @@
             <row id="14">
                 <property name="verticalAlign">middle</property>
                 <cell id="15">
-                    <image id="24">
-                        <property name="height">0.11458333333333333in</property>
-                        <property name="width">0.15625in</property>
-                        <property name="source">file</property>
-                        <expression name="uri" type="constant">images/bullet.png</expression>
-                    </image>
+                    <label id="54">
+                        <property name="fontFamily">"FontAwesome"</property>
+                        <property name="fontSize">9pt</property>
+                        <property name="color">#6A8AC7</property>
+                        <property name="textAlign">center</property>
+                        <text-property name="text"></text-property>
+                    </label>
                 </cell>
                 <cell id="16">
                     <label id="41">
-                        <property name="fontFamily">"Verdana"</property>
                         <text-property name="text">Investment &amp; Spend Summary - Go</text-property>
                         <list-property name="action">
                             <structure>
                                 <property name="linkType">drill-through</property>
-                                <property name="reportName">My Portfolio.rptdocument</property>
+                                <property name="reportName">My Portfolio.rptdesign</property>
                                 <property name="targetWindow">_blank</property>
                                 <property name="targetFileType">report-document</property>
                             </structure>
@@ -128,16 +128,16 @@
             <row id="17">
                 <property name="verticalAlign">middle</property>
                 <cell id="18">
-                    <image id="25">
-                        <property name="height">0.11458333333333333in</property>
-                        <property name="width">0.15625in</property>
-                        <property name="source">file</property>
-                        <expression name="uri" type="constant">images/bullet.png</expression>
-                    </image>
+                    <label id="55">
+                        <property name="fontFamily">"FontAwesome"</property>
+                        <property name="fontSize">9pt</property>
+                        <property name="color">#6A8AC7</property>
+                        <property name="textAlign">center</property>
+                        <text-property name="text"></text-property>
+                    </label>
                 </cell>
                 <cell id="19">
                     <text id="29">
-                        <property name="fontFamily">"Verdana"</property>
                         <property name="contentType">auto</property>
                         <text-property name="content"><![CDATA[Home Equity Line of Credit]]></text-property>
                     </text>
@@ -148,7 +148,6 @@
                 <cell id="37"/>
                 <cell id="38">
                     <text id="39">
-                        <property name="fontFamily">"Verdana"</property>
                         <property name="contentType">auto</property>
                         <text-property name="content"><![CDATA[New Rate - 6% for 30k (3 hrs ago)]]></text-property>
                     </text>
@@ -157,16 +156,16 @@
             <row id="20">
                 <property name="verticalAlign">middle</property>
                 <cell id="21">
-                    <image id="26">
-                        <property name="height">0.11458333333333333in</property>
-                        <property name="width">0.15625in</property>
-                        <property name="source">file</property>
-                        <expression name="uri" type="constant">images/bullet.png</expression>
-                    </image>
+                    <label id="56">
+                        <property name="fontFamily">"FontAwesome"</property>
+                        <property name="fontSize">9pt</property>
+                        <property name="color">#6A8AC7</property>
+                        <property name="textAlign">center</property>
+                        <text-property name="text"></text-property>
+                    </label>
                 </cell>
                 <cell id="22">
                     <text id="30">
-                        <property name="fontFamily">"Verdana"</property>
                         <property name="contentType">auto</property>
                         <text-property name="content"><![CDATA[Power Bill Paid - $22.91 (6 hrs ago)]]></text-property>
                     </text>
@@ -175,21 +174,21 @@
             <row id="50">
                 <property name="verticalAlign">middle</property>
                 <cell id="51">
-                    <image id="49">
-                        <property name="height">0.11458333333333333in</property>
-                        <property name="width">0.15625in</property>
-                        <property name="source">file</property>
-                        <expression name="uri" type="constant">images/bullet.png</expression>
-                    </image>
+                    <label id="57">
+                        <property name="fontFamily">"FontAwesome"</property>
+                        <property name="fontSize">9pt</property>
+                        <property name="color">#6A8AC7</property>
+                        <property name="textAlign">center</property>
+                        <text-property name="text"></text-property>
+                    </label>
                 </cell>
                 <cell id="52">
                     <label id="47">
-                        <property name="fontFamily">"Verdana"</property>
                         <text-property name="text">Download Credit Card Statement.</text-property>
                         <list-property name="action">
                             <structure>
                                 <property name="linkType">hyperlink</property>
-                                <expression name="uri" type="constant">Composition/Report%20Designs/SF_Wealth_Credit_Card_Statement.pdf</expression>
+                                <expression name="uri" type="constant">http://localhost:8700/iportal/servlet/DownloadFile/SF_Wealth_Credit_Card_Statement.pdf?name=%2fApplications%2fSFWealthApp%2fComposition%2fReport%20Designs%2fSF_Wealth_Credit_Card_Statement%2epdf%3b1&amp;fileExtension=PDF</expression>
                                 <property name="targetWindow">_blank</property>
                             </structure>
                         </list-property>

@@ -242,7 +242,7 @@ reportContext.setPersistentGlobalVariable("g_dataPart", dataPart );
                     <property name="colSpan">2</property>
                     <property name="rowSpan">1</property>
                     <data id="54">
-                        <property name="fontFamily">"Verdana"</property>
+                        <property name="fontFamily">"Lato"</property>
                         <property name="fontSize">10pt</property>
                         <property name="fontWeight">bold</property>
                         <property name="dataSet">Data Set</property>
@@ -412,7 +412,7 @@ break
                             <variable-element name="dataXML">
                                 <expression name="value" type="javascript">var g_dataPart = reportContext.getPersistentGlobalVariable("g_dataPart" );&#13;
 &#13;
-"&lt;map animation='1' showShadow='1' showBevel='1' showMarkerLabels='1' fillColor='F1f1f1' borderColor='000000' baseFont='Verdana' baseFontSize='10' markerBorderColor='000000' markerBgColor='FF5904' markerRadius='6' legendPosition='bottom' useHoverColor='1' hoverColor='CFE3FA' showMarkerToolTip='1' numberPrefix='$' >&lt;data>" +  g_dataPart + "&lt;/data>&lt;colorRange> &lt;color minValue='0' maxValue='120000' displayValue='Above Average' color='008000' /> &lt;color minValue='120001' maxValue='190000' displayValue='Average' color='FFCC00' /> &lt;color minValue='190001' maxValue='1000000' displayValue='Below Average' color='B30000' /> &lt;/colorRange>&lt;/map>"</expression>
+"&lt;map animation='1' showShadow='1' showBevel='1' showMarkerLabels='1' fillColor='F1f1f1' borderColor='000000' baseFont='Lato' baseFontSize='10' markerBorderColor='000000' markerBgColor='FF5904' markerRadius='6' legendPosition='bottom' useHoverColor='1' hoverColor='CFE3FA' showMarkerToolTip='1' numberPrefix='$' >&lt;data>" +  g_dataPart + "&lt;/data>&lt;colorRange> &lt;color minValue='0' maxValue='120000' displayValue='Above Average' color='008000' /> &lt;color minValue='120001' maxValue='190000' displayValue='Average' color='FFCC00' /> &lt;color minValue='190001' maxValue='1000000' displayValue='Below Average' color='B30000' /> &lt;/colorRange>&lt;/map>"</expression>
                             </variable-element>
                         </property>
                     </extended-item>

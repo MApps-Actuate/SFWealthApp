@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
-    <property name="createdBy">Eclipse BIRT Designer Version 4.2.3.v20131216-0430 Build &lt;4.2.3.v20131216-0430></property>
+    <property name="createdBy">Eclipse BIRT Designer Version 4.4.0.v20150128-0131 Build &lt;4.2.3.v20150128-0131></property>
     <property name="units">in</property>
     <property name="iconFile">/templates/blank_report.gif</property>
     <property name="bidiLayoutOrientation">ltr</property>
@@ -167,17 +167,17 @@
     </page-setup>
     <body>
         <grid id="10">
-            <property name="width">4.3125in</property>
             <expression name="bookmark" type="javascript">"grid"</expression>
             <column id="11">
-                <property name="width">2.0416666666666665in</property>
+                <property name="width">5.083in</property>
             </column>
             <row id="12">
                 <cell id="13">
                     <property name="colSpan">1</property>
                     <property name="rowSpan">1</property>
                     <label id="16">
-                        <property name="fontFamily">"Calibri"</property>
+                        <property name="fontFamily">"Lato"</property>
+                        <property name="fontWeight">normal</property>
                         <property name="color">#808080</property>
                         <property name="textAlign">center</property>
                         <text-property name="text">How close am I to my world trip?</text-property>
@@ -265,7 +265,7 @@
   <Maps:BaseFontDefinition>
     <Value></Value>
     <Font>
-      <Name>Calibri</Name>
+      <Name>Lato</Name>
       <Size>12.0</Size>
       <Alignment/>
     </Font>
@@ -287,9 +287,9 @@
       <Maps:DisplayValue>Keep Investing</Maps:DisplayValue>
       <Maps:Color>
         <Transparency>255</Transparency>
-        <Red>102</Red>
-        <Green>176</Green>
-        <Blue>209</Blue>
+        <Red>106</Red>
+        <Green>138</Green>
+        <Blue>199</Blue>
       </Maps:Color>
     </Maps:Elements>
     <Maps:Gradient>false</Maps:Gradient>
@@ -306,8 +306,8 @@
 </Maps:MapModel>
 ]]></xml-property>
                         <property name="inheritColumns">true</property>
-                        <property name="height">2.396in</property>
-                        <property name="width">4.198in</property>
+                        <property name="height">3.208in</property>
+                        <property name="width">5.083in</property>
                         <property name="dataSet">Static Data Set</property>
                         <list-property name="boundDataColumns">
                             <structure>

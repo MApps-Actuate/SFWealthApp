@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
     <property name="comments">Copyright (c) 2007 &lt;&lt;Your Company Name here>></property>
-    <property name="createdBy">Eclipse BIRT Designer Version 4.2.3.v20131216-0430 Build &lt;4.2.3.v20131216-0430></property>
+    <property name="createdBy">Eclipse BIRT Designer Version 4.4.0.v20150128-0131 Build &lt;4.2.3.v20150128-0131></property>
     <html-property name="description">Creates a blank report with no predefined content.</html-property>
     <property name="units">in</property>
     <text-property name="displayName">Blank Report</text-property>
@@ -175,7 +175,7 @@
                 <cell id="70">
                     <property name="textAlign">center</property>
                     <label id="71">
-                        <property name="fontFamily">"Calibri"</property>
+                        <property name="fontFamily">"Lato"</property>
                         <property name="color">#808080</property>
                         <text-property name="text">How does my wealth compare to other clients in the US?</text-property>
                     </label>
@@ -276,7 +276,7 @@
   <Maps:BaseFontDefinition>
     <Value></Value>
     <Font>
-      <Name>Calibri</Name>
+      <Name>Lato</Name>
       <Size>12.0</Size>
       <Alignment/>
     </Font>
@@ -298,9 +298,9 @@
       <Maps:DisplayValue>Avg</Maps:DisplayValue>
       <Maps:Color>
         <Transparency>255</Transparency>
-        <Red>102</Red>
-        <Green>176</Green>
-        <Blue>209</Blue>
+        <Red>106</Red>
+        <Green>138</Green>
+        <Blue>199</Blue>
       </Maps:Color>
     </Maps:Elements>
     <Maps:Elements>
@@ -309,9 +309,9 @@
       <Maps:DisplayValue>Below Avg</Maps:DisplayValue>
       <Maps:Color>
         <Transparency>255</Transparency>
-        <Red>206</Red>
-        <Green>3</Green>
-        <Blue>21</Blue>
+        <Red>214</Red>
+        <Green>94</Green>
+        <Blue>81</Blue>
       </Maps:Color>
     </Maps:Elements>
     <Maps:Color>
@@ -340,8 +340,8 @@
                             </structure>
                         </list-property>
                         <property name="inheritColumns">true</property>
-                        <property name="height">2.4in</property>
-                        <property name="width">4.2in</property>
+                        <property name="height">3.2083333333333335in</property>
+                        <property name="width">5.083333333333333in</property>
                         <property name="dataSet">map</property>
                         <list-property name="boundDataColumns">
                             <structure>

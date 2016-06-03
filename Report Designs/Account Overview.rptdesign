@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
-    <property name="createdBy">Eclipse BIRT Designer Version 4.2.3.v20131216-0430 Build &lt;4.2.3.v20131216-0430></property>
+    <property name="createdBy">Eclipse BIRT Designer Version 4.4.0.v20150128-0131 Build &lt;4.2.3.v20150128-0131></property>
     <property name="units">in</property>
     <method name="initialize"><![CDATA[var user = reportContext.getAppContext().get("ServerUserName");
 if (user != null)
@@ -292,17 +292,18 @@ if (user != null)
      </outline>
     </clientArea>
    </children>
-   <children _type="Legend" orientation="0" direction="0" position="1">
+   <children _type="Legend" orientation="0" direction="0">
     <outline>
-     <color _body=",,102,102,153"/>
+     <color _nil="1"/>
     </outline>
+    <cursor type="0"/>
     <clientArea>
      <outline>
       <color _nil="1"/>
      </outline>
     </clientArea>
     <text value="">
-     <font size="8.0"/>
+     <font name="Lato" size="10.0"/>
     </text>
     <separator visible="false">
      <color _nil="1"/>
@@ -327,6 +328,7 @@ if (user != null)
   <extendedProperties name="jschart.glass.style" value="false"/>
   <extendedProperties name="jschart.zoom" value="xy"/>
   <extendedProperties name="jschart.series.shadow" value="true"/>
+  <extendedProperties name="jschart.client.script" value="beforeGeneration: function(options)&#13;&#10;{&#13;&#10;options.legend.width = 900;&#13;&#10;options.legend.itemDistance = null;&#13;&#10;options.legend.itemWidth = null;&#13;&#10;options.legend.align = &quot;center&quot;;&#13;&#10;options.legend.verticalAlign = &quot;top&quot;;&#13;&#10;options.legend.x = 280;&#13;&#10;options.legend.y = 0;&#13;&#10;options.legend.borderWidth = 0;&#13;&#10;},"/>
   <sampleData>
    <baseSampleData dataSetRepresentation="&#039;A&#039;,&#039;B&#039;,&#039;C&#039;,&#039;D&#039;,&#039;E&#039;"/>
    <orthogonalSampleData dataSetRepresentation="5,4,12"/>
@@ -334,6 +336,7 @@ if (user != null)
    <orthogonalSampleData dataSetRepresentation="15.0,12.0,36.0" seriesDefinitionIndex="2"/>
    <orthogonalSampleData dataSetRepresentation="20.0,16.0,48.0" seriesDefinitionIndex="3"/>
   </sampleData>
+  <interactivity legendBehavior="1"/>
   <emptyMessage>
    <caption value="">
     <font>
@@ -346,7 +349,7 @@ if (user != null)
    </outline>
    <insets _body="0.0,2.0,0.0,3.0"/>
   </emptyMessage>
-  <axes staggered="false">
+  <axes>
    <title>
     <caption value="X-Axis Title">
      <font size="14.0" bold="true" rotation="0.0">
@@ -466,7 +469,7 @@ if (user != null)
     </lineAttributes>
     <label>
      <caption value="">
-      <font size="8.0"/>
+      <font name="Lato"/>
       <color _body=",255,128,128,128"/>
      </caption>
      <background _nil="1"/>
@@ -520,7 +523,7 @@ if (user != null)
    </lineAttributes>
    <label>
     <caption value="">
-     <font size="8.0" rotation="0.0"/>
+     <font name="Lato" rotation="0.0"/>
      <color _body=",255,145,145,145"/>
     </caption>
     <background _nil="1"/>
@@ -562,7 +565,7 @@ if (user != null)
             <property name="outputFormat">JS</property>
             <property name="inheritColumns">true</property>
             <property name="height">3.40625in</property>
-            <property name="width">3.9791666666666665in</property>
+            <property name="width">4.364583333333333in</property>
             <expression name="bookmark" type="javascript">"html5"</expression>
             <property name="dataSet">Data Set CSV</property>
             <list-property name="boundDataColumns">
@@ -587,7 +590,7 @@ if (user != null)
                     <property name="dataType">decimal</property>
                 </structure>
             </list-property>
-            <property name="theme">ThemesReportItems3.Modern</property>
+            <property name="theme">ThemesReportItems3.bleu</property>
         </extended-item>
     </body>
 </report>

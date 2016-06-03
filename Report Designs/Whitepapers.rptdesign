@@ -15,7 +15,7 @@
         <structure>
             <property name="fileName">CSS/style.css</property>
             <property name="useExternalCss">true</property>
-            <property name="externalCssURI">http://fonts.googleapis.com/css?family=Raleway</property>
+            <property name="externalCssURI">http://fonts.googleapis.com/css?family=Lato</property>
         </structure>
     </list-property>
     <styles>
@@ -65,7 +65,7 @@
     <body>
         <grid id="8">
             <property name="backgroundColor">#EAEFF3</property>
-            <property name="fontFamily">"Raleway"</property>
+            <property name="fontFamily">"Lato"</property>
             <property name="height">1.8020833333333333in</property>
             <property name="width">3.1354166666666665in</property>
             <list-property name="boundDataColumns">
@@ -122,12 +122,12 @@
                             </cell>
                             <cell id="153">
                                 <text id="436">
-                                    <property name="fontFamily">"Raleway"</property>
+                                    <property name="fontFamily">"Lato"</property>
                                     <property name="fontSize">14pt</property>
                                     <property name="color">#646464</property>
                                     <property name="marginBottom">8pt</property>
                                     <property name="contentType">html</property>
-                                    <text-property name="content"><![CDATA[<a href="http://www.actuate.com/info/top-tips-high-performance-birt-content/" style="text-decoration:none;color:rgb(100,100,100);font-family:Raleway;font-size:12pt"
+                                    <text-property name="content"><![CDATA[<a href="http://www.actuate.com/info/top-tips-high-performance-birt-content/" style="text-decoration:none;color:rgb(100,100,100);font-family:Lato;font-size:12pt"
 onmouseover="this.style.color = 'silver'"
 onmouseout="this.style.color = 'rgb(100,100,100)'">Top Tips for Designing High-Performance BIRT Content</a>
 ]]></text-property>
@@ -173,7 +173,7 @@ onmouseout="this.style.color = 'rgb(100,100,100)'">5 Best Practices for Designin
                                     <property name="color">#646464</property>
                                     <property name="marginBottom">8pt</property>
                                     <property name="contentType">html</property>
-                                    <text-property name="content"><![CDATA[<a href="http://www.actuate.com/info/whitepaper-11-questions-best-choice/" style="text-decoration:none;color:rgb(100,100,100);font-family:Raleway;font-size:12pt"
+                                    <text-property name="content"><![CDATA[<a href="http://www.actuate.com/info/whitepaper-11-questions-best-choice/" style="text-decoration:none;color:rgb(100,100,100);font-family:Lato;font-size:12pt"
 onmouseover="this.style.color = 'silver'"
 onmouseout="this.style.color = 'rgb(100,100,100)'">The Best Choice - 11 Questions: Build or Buy Enterprise Software?</a>
 ]]></text-property>

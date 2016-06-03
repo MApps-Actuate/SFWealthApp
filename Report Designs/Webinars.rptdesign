@@ -15,7 +15,7 @@
         <structure>
             <property name="fileName">CSS/style.css</property>
             <property name="useExternalCss">true</property>
-            <property name="externalCssURI">http://fonts.googleapis.com/css?family=Raleway</property>
+            <property name="externalCssURI">http://fonts.googleapis.com/css?family=Lato</property>
         </structure>
     </list-property>
     <styles>
@@ -65,7 +65,7 @@
     <body>
         <grid id="8">
             <property name="backgroundColor">#EAEFF3</property>
-            <property name="fontFamily">"Raleway"</property>
+            <property name="fontFamily">"Lato"</property>
             <property name="height">2.875in</property>
             <property name="width">3.1354166666666665in</property>
             <list-property name="boundDataColumns">
@@ -85,7 +85,7 @@
                 <property name="height">2.875in</property>
                 <cell id="61">
                     <grid id="73">
-                        <property name="fontFamily">"Raleway"</property>
+                        <property name="fontFamily">"Lato"</property>
                         <property name="width">3.1354166666666665in</property>
                         <list-property name="boundDataColumns">
                             <structure>
@@ -142,7 +142,7 @@
                                             <text id="433">
                                                 <property name="fontSize">12pt</property>
                                                 <property name="contentType">html</property>
-                                                <text-property name="content"><![CDATA[<a href="http://www.actuate.com/info/web-q313-birt301/" style="text-decoration:none;color:rgb(100,100,100);font-family:Raleway;font-size:12pt"
+                                                <text-property name="content"><![CDATA[<a href="http://www.actuate.com/info/web-q313-birt301/" style="text-decoration:none;color:rgb(100,100,100);font-family:Lato;font-size:12pt"
 onmouseover="this.style.color = 'tan'"
 onmouseout="this.style.color = 'rgb(100,100,100)'">Big Data in the Mainstream</a>
 ]]></text-property>
@@ -207,7 +207,7 @@ onmouseout="this.style.color = 'rgb(100,100,100)'">Big Data in the Mainstream</a
                                             <property name="rowSpan">1</property>
                                             <text id="434">
                                                 <property name="contentType">html</property>
-                                                <text-property name="content"><![CDATA[<a href="http://www.actuate.com/info/webcast-sdtimes-5-best-practices/" style="text-decoration:none;color:rgb(100,100,100);font-family:Raleway;font-size:12pt"
+                                                <text-property name="content"><![CDATA[<a href="http://www.actuate.com/info/webcast-sdtimes-5-best-practices/" style="text-decoration:none;color:rgb(100,100,100);font-family:Lato;font-size:12pt"
 onmouseover="this.style.color = 'tan'"
 onmouseout="this.style.color = 'rgb(100,100,100)'">5 Best Practices for Designing Data-Driven Apps</a>
 ]]></text-property>
@@ -278,7 +278,7 @@ onmouseout="this.style.color = 'rgb(100,100,100)'">5 Best Practices for Designin
                                                         <property name="rowSpan">1</property>
                                                         <text id="435">
                                                             <property name="contentType">html</property>
-                                                            <text-property name="content"><![CDATA[<a href="http://www.actuate.com/info/wsem-q413-tdwi-datavisualizations/" style="text-decoration:none;color:rgb(100,100,100);font-family:Raleway;font-size:12pt"
+                                                            <text-property name="content"><![CDATA[<a href="http://www.actuate.com/info/wsem-q413-tdwi-datavisualizations/" style="text-decoration:none;color:rgb(100,100,100);font-family:Lato;font-size:12pt"
 onmouseover="this.style.color = 'silver'"
 onmouseout="this.style.color = 'rgb(100,100,100)'">5 Best Practices for Data Visualization Success</a>
 ]]></text-property>

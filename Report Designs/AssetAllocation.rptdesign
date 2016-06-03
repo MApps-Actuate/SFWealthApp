@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
     <property name="comments">Copyright (c) 2006 &lt;&lt;Your Company Name here>></property>
-    <property name="createdBy">Eclipse BIRT Designer Version 4.2.3.v20131216-0430 Build &lt;4.2.3.v20131216-0430></property>
+    <property name="createdBy">Eclipse BIRT Designer Version 4.4.0.v20150710-0101 Build &lt;4.2.3.v20150710-0101></property>
     <property name="units">in</property>
     <property name="layoutPreference">auto layout</property>
     <list-property name="libraries">
@@ -204,7 +204,7 @@
      </outline>
     </clientArea>
    </children>
-   <children _type="Legend" position="1" itemType="1">
+   <children _type="Legend" visible="false" position="1" itemType="1">
     <outline>
      <color _nil="1"/>
     </outline>
@@ -250,10 +250,10 @@
    <seriesDefinitions>
     <query definition=""/>
     <seriesPalette/>
-    <series _type="PieSeries" seriesIdentifier="Series 1" labelPosition="5" leaderLineLength="1.0" innerRadius="40.0">
+    <series _type="PieSeries" seriesIdentifier="Series 1" labelPosition="5" leaderLineLength="1.0" innerRadius="60.0">
      <label>
       <caption>
-       <font name="Trebuchet MS" size="8.0" bold="false"/>
+       <font name="Lato" bold="false"/>
        <color _body=",255,128,128,128"/>
       </caption>
       <background _nil="1"/>
@@ -265,13 +265,11 @@
       <grouping/>
      </dataDefinition>
      <dataPoint separator=", ">
-      <components type="1">
-       <formatSpecifier _type="NumberFormatSpecifier" prefix="" suffix="" fractionDigits="0"/>
-      </components>
+      <components type="3"/>
      </dataPoint>
      <triggers condition="6">
       <action type="1">
-       <value _type="TooltipValue" text="" delay="200"/>
+       <value _type="TooltipValue" text="row[&quot;Account Type&quot;]" delay="200"/>
       </action>
      </triggers>
      <title>
@@ -326,7 +324,7 @@
                                 <property name="dataType">string</property>
                             </structure>
                         </list-property>
-                        <property name="theme">ThemesReportItems3.Modern</property>
+                        <property name="theme">ThemesReportItems3.bleu</property>
                     </extended-item>
                 </cell>
             </row>
@@ -348,7 +346,7 @@
                     <property name="textAlign">left</property>
                     <property name="verticalAlign">middle</property>
                     <table id="124">
-                        <property name="fontFamily">"Verdana"</property>
+                        <property name="fontFamily">"Lato"</property>
                         <property name="fontSize">8pt</property>
                         <property name="height">0.4895833333333333in</property>
                         <property name="width">3.5in</property>

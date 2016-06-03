@@ -21,13 +21,6 @@ chart4.getReportItem().getProperty("chart.instance").getTitle().getLabel().getCa
             <property name="namespace">ThemesReportItems3</property>
         </structure>
     </list-property>
-    <list-property name="cssStyleSheets">
-        <structure>
-            <property name="fileName">CSS/style.css</property>
-            <property name="useExternalCss">true</property>
-            <property name="externalCssURI">http://fonts.googleapis.com/css?family=Raleway</property>
-        </structure>
-    </list-property>
     <data-sources>
         <oda-data-source extensionID="com.actuate.data.oda.static" name="Data Source" id="187"/>
     </data-sources>
@@ -166,7 +159,7 @@ chart4.getReportItem().getProperty("chart.instance").getTitle().getLabel().getCa
         <report-item-theme type="Table" name="default-table" id="777">
             <styles>
                 <style name="table" id="896">
-                    <property name="fontFamily">"Verdana"</property>
+                    <property name="fontFamily">"Lato"</property>
                     <property name="fontSize">8pt</property>
                     <property name="color">#666666</property>
                     <property name="borderBottomColor">#DADADA</property>
@@ -270,22 +263,15 @@ chart4.getReportItem().getProperty("chart.instance").getTitle().getLabel().getCa
             <property name="leftMargin">0.25in</property>
             <property name="bottomMargin">0in</property>
             <property name="rightMargin">0.25in</property>
-            <property name="backgroundColor">#FFFFFF</property>
             <property name="showHeaderOnFirst">true</property>
             <property name="showFooterOnLast">false</property>
         </simple-master-page>
     </page-setup>
     <body>
         <grid id="1219">
-            <property name="backgroundColor">white</property>
-            <property name="width">4.041666666666667in</property>
+            <property name="fontFamily">"Lato"</property>
             <expression name="bookmark" type="javascript">"rings"</expression>
-            <column id="1220">
-                <property name="width">1.875in</property>
-            </column>
-            <column id="1251">
-                <property name="width">1.84375in</property>
-            </column>
+            <column id="1220"/>
             <row id="1222">
                 <cell id="1223">
                     <extended-item extensionName="Chart" name="Chart1" id="1224">
@@ -298,7 +284,7 @@ chart4.getReportItem().getProperty("chart.instance").getTitle().getLabel().getCa
     </outline>
     <label>
      <caption>
-      <font name="Verdana" size="16.0" bold="true" rotation="90.0"/>
+      <font name="Lato" size="16.0" bold="true" rotation="90.0"/>
       <color _body=",255,0,121,193"/>
      </caption>
      <background _nil="1"/>
@@ -342,13 +328,12 @@ chart4.getReportItem().getProperty("chart.instance").getTitle().getLabel().getCa
    <outline visible="false">
     <color _nil="1"/>
    </outline>
-   <background _body=",255,255,255,255"/>
    <cursor type="0"/>
   </block>
   <extendedProperties name="enable.area.alt" value="false"/>
   <extendedProperties name="enable.drill.category" value="true"/>
   <extendedProperties name="enable.drill.series" value="true"/>
-  <extendedProperties name="jschart.client.script" value="/**&#13;&#10; * Called before chart instance is initially created.&#13;&#10; *&#13;&#10; * @param options&#13;&#10; *            chart options&#13;&#10; */&#13;&#10;beforeGeneration: function(options)&#13;&#10;{&#13;&#10;    //You can change options here.&#13;&#10;    options.title = &#13;&#10;        {&#13;&#10;        verticalAlign: &#039;middle&#039;,&#13;&#10;        },&#13;&#10;    options.subtitle = &#13;&#10;        {&#13;&#10;        text: &#039;Credit Limit&#039;,&#13;&#10;        verticalAlign: &#039;bottom&#039;,&#13;&#10;        floating: true,&#13;&#10;        },&#13;&#10;    options.plotOptions = &#13;&#10;    {&#13;&#10;           pie: {&#13;&#10;            size: &quot;100%&quot;&#13;&#10;            }&#13;&#10;    },&#13;&#10;    options.chart = &#13;&#10;        {&#13;&#10;            spacingLeft: 0,&#13;&#10;            spacingRight:0,&#13;&#10;            spacingBottom:0,&#13;&#10;            spacingTop:0,&#13;&#10;        }&#13;&#10;},"/>
+  <extendedProperties name="jschart.client.script" value="/**&#13;&#10; * Called before chart instance is initially created.&#13;&#10; *&#13;&#10; * @param options&#13;&#10; *            chart options&#13;&#10; */&#13;&#10;beforeGeneration: function(options)&#13;&#10;{&#13;&#10;    //You can change options here.&#13;&#10;    options.title = &#13;&#10;        {&#13;&#10;        verticalAlign: &#039;middle&#039;,&#13;&#10;        },&#13;&#10;    options.subtitle = &#13;&#10;        {&#13;&#10;        text: &#039;Credit Limit&#039;,&#13;&#10;               style: {&#13;&#10;            fontFamily: &#039;Lato&#039;&#13;&#10;        },&#13;&#10;        verticalAlign: &#039;bottom&#039;,&#13;&#10;        floating: true,&#13;&#10;        },&#13;&#10;    options.plotOptions = &#13;&#10;    {&#13;&#10;           pie: {&#13;&#10;            size: &quot;100%&quot;&#13;&#10;            }&#13;&#10;    },&#13;&#10;    options.chart = &#13;&#10;        {&#13;&#10;            spacingLeft: 0,&#13;&#10;            spacingRight:0,&#13;&#10;            spacingBottom:0,&#13;&#10;            spacingTop:0,&#13;&#10;        }&#13;&#10;},"/>
   <extendedProperties name="jschart.series.shadow" value="false"/>
   <sampleData>
    <baseSampleData dataSetRepresentation="&#039;A&#039;,&#039;B&#039;,&#039;C&#039;,&#039;D&#039;,&#039;E&#039;"/>
@@ -365,7 +350,7 @@ chart4.getReportItem().getProperty("chart.instance").getTitle().getLabel().getCa
   <seriesDefinitions>
    <query definition=""/>
    <seriesPalette>
-    <entries _body=",255,0,121,193"/>
+    <entries _body=",255,106,138,199"/>
     <entries _body=",255,226,224,220"/>
     <entries _body=",255,232,172,57"/>
     <entries _body=",255,128,255,128"/>
@@ -401,7 +386,7 @@ chart4.getReportItem().getProperty("chart.instance").getTitle().getLabel().getCa
    <seriesDefinitions>
     <query definition=""/>
     <seriesPalette>
-     <entries _body=",255,0,121,193"/>
+     <entries _body=",255,106,138,199"/>
      <entries _body=",255,226,224,220"/>
      <entries _body=",255,232,172,57"/>
      <entries _body=",255,128,255,128"/>
@@ -436,6 +421,9 @@ chart4.getReportItem().getProperty("chart.instance").getTitle().getLabel().getCa
     </seriesPalette>
     <series _type="PieSeries" seriesIdentifier="Series 1" labelPosition="4" rotation="90.0" innerRadius="75.0" innerRadiusPercent="true">
      <label visible="false">
+      <caption>
+       <font name="Lato"/>
+      </caption>
       <background _nil="1"/>
       <outline>
        <color _nil="1"/>
@@ -487,9 +475,8 @@ chart4.getReportItem().getProperty("chart.instance").getTitle().getLabel().getCa
                         </list-property>
                         <property name="inheritColumns">false</property>
                         <property name="marginBottom">0pt</property>
-                        <property name="height">1.8in</property>
-                        <property name="width">1.7in</property>
-                        <expression name="bookmark" type="javascript">"Chart 1"</expression>
+                        <property name="height">1.6in</property>
+                        <property name="width">1.53in</property>
                         <property name="dataSet">Data Set</property>
                         <list-property name="boundDataColumns">
                             <structure>
@@ -510,7 +497,9 @@ chart4.getReportItem().getProperty("chart.instance").getTitle().getLabel().getCa
                         </list-property>
                     </extended-item>
                 </cell>
-                <cell id="1247">
+            </row>
+            <row id="1235">
+                <cell id="1236">
                     <extended-item extensionName="Chart" name="Chart2" id="176">
                         <xml-property name="xmlRepresentation"><![CDATA[<ActuateChart version="2.6.1">
  <ChartWithoutAxes version="2.6.1" type="Pie Chart" subType="Standard" script="&#10;/**&#10; * Called after populating the series dataset.&#10; * &#10; * @param series&#10; *            Series&#10; * @param dataSet&#10; *            DataSet&#10; * @param icsc&#10; *            IChartScriptContext&#10; */&#10;&#10;function afterDataSetFilled( series, dataSet, icsc )&#10;{&#10; if( series.getSeriesIdentifier() == &quot;Series 1&quot; )&#10; {&#10;  var list = dataSet.getValues();&#10;  }&#10;}&#10;&#10;">
@@ -521,7 +510,7 @@ chart4.getReportItem().getProperty("chart.instance").getTitle().getLabel().getCa
     </outline>
     <label>
      <caption>
-      <font name="Verdana" size="16.0" bold="true" rotation="90.0"/>
+      <font name="Lato" size="16.0" bold="true" rotation="90.0"/>
       <color _body=",255,0,121,193"/>
      </caption>
      <background _nil="1"/>
@@ -570,7 +559,7 @@ chart4.getReportItem().getProperty("chart.instance").getTitle().getLabel().getCa
   <extendedProperties name="enable.area.alt" value="false"/>
   <extendedProperties name="enable.drill.category" value="true"/>
   <extendedProperties name="enable.drill.series" value="true"/>
-  <extendedProperties name="jschart.client.script" value="/**&#13;&#10; * Called before chart instance is initially created.&#13;&#10; *&#13;&#10; * @param options&#13;&#10; *            chart options&#13;&#10; */&#13;&#10;beforeGeneration: function(options)&#13;&#10;{&#13;&#10;    //You can change options here.&#13;&#10;    options.title = &#13;&#10;        {&#13;&#10;        verticalAlign: &#039;middle&#039;,&#13;&#10;        },&#13;&#10;    options.subtitle = &#13;&#10;        {&#13;&#10;        text: &#039;Retirement Goal&#039;,&#13;&#10;        verticalAlign: &#039;bottom&#039;,&#13;&#10;        floating: true,&#13;&#10;        },&#13;&#10;    options.plotOptions = &#13;&#10;    {&#13;&#10;           pie: {&#13;&#10;            size: &quot;100%&quot;&#13;&#10;            }&#13;&#10;    },&#13;&#10;    options.chart = &#13;&#10;        {&#13;&#10;            spacingLeft: 0,&#13;&#10;            spacingRight:0,&#13;&#10;            spacingBottom:0,&#13;&#10;            spacingTop:0,&#13;&#10;        }&#13;&#10;},"/>
+  <extendedProperties name="jschart.client.script" value="/**&#13;&#10; * Called before chart instance is initially created.&#13;&#10; *&#13;&#10; * @param options&#13;&#10; *            chart options&#13;&#10; */&#13;&#10;beforeGeneration: function(options)&#13;&#10;{&#13;&#10;    //You can change options here.&#13;&#10;    options.title = &#13;&#10;        {&#13;&#10;        verticalAlign: &#039;middle&#039;,&#13;&#10;        },&#13;&#10;    options.subtitle = &#13;&#10;        {&#13;&#10;        text: &#039;Retirement Goal&#039;,&#13;&#10;            style: {&#13;&#10;                fontFamily: &#039;Lato&#039;&#13;&#10;            },&#13;&#10;        verticalAlign: &#039;bottom&#039;,&#13;&#10;        floating: true,&#13;&#10;        },&#13;&#10;    options.plotOptions = &#13;&#10;    {&#13;&#10;           pie: {&#13;&#10;            size: &quot;100%&quot;&#13;&#10;            }&#13;&#10;    },&#13;&#10;    options.chart = &#13;&#10;        {&#13;&#10;            spacingLeft: 0,&#13;&#10;            spacingRight:0,&#13;&#10;            spacingBottom:0,&#13;&#10;            spacingTop:0,&#13;&#10;        }&#13;&#10;},"/>
   <extendedProperties name="jschart.series.shadow" value="false"/>
   <sampleData>
    <baseSampleData dataSetRepresentation="&#039;A&#039;,&#039;B&#039;,&#039;C&#039;,&#039;D&#039;,&#039;E&#039;"/>
@@ -587,7 +576,7 @@ chart4.getReportItem().getProperty("chart.instance").getTitle().getLabel().getCa
   <seriesDefinitions>
    <query definition=""/>
    <seriesPalette>
-    <entries _body=",255,0,121,193"/>
+    <entries _body=",255,106,138,199"/>
     <entries _body=",255,226,224,220"/>
     <entries _body=",255,232,172,57"/>
     <entries _body=",255,128,255,128"/>
@@ -623,7 +612,7 @@ chart4.getReportItem().getProperty("chart.instance").getTitle().getLabel().getCa
    <seriesDefinitions>
     <query definition=""/>
     <seriesPalette>
-     <entries _body=",255,0,121,193"/>
+     <entries _body=",255,106,138,199"/>
      <entries _body=",255,226,224,220"/>
      <entries _body=",255,232,172,57"/>
      <entries _body=",255,128,255,128"/>
@@ -708,9 +697,8 @@ chart4.getReportItem().getProperty("chart.instance").getTitle().getLabel().getCa
                             </structure>
                         </list-property>
                         <property name="inheritColumns">false</property>
-                        <property name="height">1.8in</property>
-                        <property name="width">1.7in</property>
-                        <expression name="bookmark" type="javascript">"Chart 2"</expression>
+                        <property name="height">1.6in</property>
+                        <property name="width">1.53in</property>
                         <property name="dataSet">Data Set</property>
                         <list-property name="boundDataColumns">
                             <structure>
@@ -732,13 +720,8 @@ chart4.getReportItem().getProperty("chart.instance").getTitle().getLabel().getCa
                     </extended-item>
                 </cell>
             </row>
-            <row id="1252">
-                <property name="height">0.51in</property>
-                <cell id="1253"/>
-                <cell id="1254"/>
-            </row>
-            <row id="1235">
-                <cell id="1236">
+            <row id="1245">
+                <cell id="1246">
                     <extended-item extensionName="Chart" name="Chart3" id="177">
                         <xml-property name="xmlRepresentation"><![CDATA[<ActuateChart version="2.6.1">
  <ChartWithoutAxes version="2.6.1" type="Pie Chart" subType="Standard" script="&#10;/**&#10; * Called after populating the series dataset.&#10; * &#10; * @param series&#10; *            Series&#10; * @param dataSet&#10; *            DataSet&#10; * @param icsc&#10; *            IChartScriptContext&#10; */&#10;&#10;function afterDataSetFilled( series, dataSet, icsc )&#10;{&#10; if( series.getSeriesIdentifier() == &quot;Series 1&quot; )&#10; {&#10;  var list = dataSet.getValues();&#10;  }&#10;}&#10;&#10;">
@@ -749,7 +732,7 @@ chart4.getReportItem().getProperty("chart.instance").getTitle().getLabel().getCa
     </outline>
     <label>
      <caption>
-      <font name="Verdana" size="16.0" bold="true" rotation="90.0"/>
+      <font name="Lato" size="16.0" bold="true" rotation="90.0"/>
       <color _body=",255,0,121,193"/>
      </caption>
      <background _nil="1"/>
@@ -793,13 +776,12 @@ chart4.getReportItem().getProperty("chart.instance").getTitle().getLabel().getCa
    <outline>
     <color _nil="1"/>
    </outline>
-   <background _body=",255,255,255,255"/>
    <cursor type="0"/>
   </block>
   <extendedProperties name="enable.area.alt" value="false"/>
   <extendedProperties name="enable.drill.category" value="true"/>
   <extendedProperties name="enable.drill.series" value="true"/>
-  <extendedProperties name="jschart.client.script" value="/**&#13;&#10; * Called before chart instance is initially created.&#13;&#10; *&#13;&#10; * @param options&#13;&#10; *            chart options&#13;&#10; */&#13;&#10;beforeGeneration: function(options)&#13;&#10;{&#13;&#10;    //You can change options here.&#13;&#10;    options.title = &#13;&#10;        {&#13;&#10;        verticalAlign: &#039;middle&#039;,&#13;&#10;        },&#13;&#10;    options.subtitle = &#13;&#10;        {&#13;&#10;        text: &#039;Spending Limit&#039;,&#13;&#10;        verticalAlign: &#039;bottom&#039;,&#13;&#10;        floating: true,&#13;&#10;        },&#13;&#10;    options.plotOptions = &#13;&#10;    {&#13;&#10;           pie: {&#13;&#10;            size: &quot;100%&quot;&#13;&#10;            }&#13;&#10;    },&#13;&#10;    options.chart = &#13;&#10;        {&#13;&#10;            spacingLeft: 0,&#13;&#10;            spacingRight:0,&#13;&#10;            spacingBottom:0,&#13;&#10;            spacingTop:0,&#13;&#10;        }&#13;&#10;},"/>
+  <extendedProperties name="jschart.client.script" value="/**&#13;&#10; * Called before chart instance is initially created.&#13;&#10; *&#13;&#10; * @param options&#13;&#10; *            chart options&#13;&#10; */&#13;&#10;beforeGeneration: function(options)&#13;&#10;{&#13;&#10;    //You can change options here.&#13;&#10;    options.title = &#13;&#10;        {&#13;&#10;        verticalAlign: &#039;middle&#039;,&#13;&#10;        },&#13;&#10;    options.subtitle = &#13;&#10;        {&#13;&#10;        text: &#039;Spending Limit&#039;,&#13;&#10;            style: {&#13;&#10;                fontFamily: &#039;Lato&#039;&#13;&#10;            },&#13;&#10;        verticalAlign: &#039;bottom&#039;,&#13;&#10;        floating: true,&#13;&#10;        },&#13;&#10;    options.plotOptions = &#13;&#10;    {&#13;&#10;           pie: {&#13;&#10;            size: &quot;100%&quot;&#13;&#10;            }&#13;&#10;    },&#13;&#10;    options.chart = &#13;&#10;        {&#13;&#10;            spacingLeft: 0,&#13;&#10;            spacingRight:0,&#13;&#10;            spacingBottom:0,&#13;&#10;            spacingTop:0,&#13;&#10;        }&#13;&#10;},"/>
   <extendedProperties name="jschart.series.shadow" value="false"/>
   <sampleData>
    <baseSampleData dataSetRepresentation="&#039;A&#039;,&#039;B&#039;,&#039;C&#039;,&#039;D&#039;,&#039;E&#039;"/>
@@ -816,7 +798,7 @@ chart4.getReportItem().getProperty("chart.instance").getTitle().getLabel().getCa
   <seriesDefinitions>
    <query definition=""/>
    <seriesPalette>
-    <entries _body=",255,0,121,193"/>
+    <entries _body=",255,106,138,199"/>
     <entries _body=",255,226,224,220"/>
     <entries _body=",255,232,172,57"/>
     <entries _body=",255,128,255,128"/>
@@ -852,7 +834,7 @@ chart4.getReportItem().getProperty("chart.instance").getTitle().getLabel().getCa
    <seriesDefinitions>
     <query definition=""/>
     <seriesPalette>
-     <entries _body=",255,0,121,193"/>
+     <entries _body=",255,106,138,199"/>
      <entries _body=",255,226,224,220"/>
      <entries _body=",255,232,172,57"/>
      <entries _body=",255,128,255,128"/>
@@ -937,9 +919,8 @@ chart4.getReportItem().getProperty("chart.instance").getTitle().getLabel().getCa
                             </structure>
                         </list-property>
                         <property name="inheritColumns">false</property>
-                        <property name="height">1.8in</property>
-                        <property name="width">1.7in</property>
-                        <expression name="bookmark" type="javascript">"Chart 3"</expression>
+                        <property name="height">1.6in</property>
+                        <property name="width">1.53in</property>
                         <property name="dataSet">Data Set</property>
                         <list-property name="boundDataColumns">
                             <structure>
@@ -960,7 +941,9 @@ chart4.getReportItem().getProperty("chart.instance").getTitle().getLabel().getCa
                         </list-property>
                     </extended-item>
                 </cell>
-                <cell id="1248">
+            </row>
+            <row id="1240">
+                <cell id="1241">
                     <extended-item extensionName="Chart" name="Chart4" id="178">
                         <xml-property name="xmlRepresentation"><![CDATA[<ActuateChart version="2.6.1">
  <ChartWithoutAxes version="2.6.1" type="Pie Chart" subType="Standard" script="&#10;/**&#10; * Called after populating the series dataset.&#10; * &#10; * @param series&#10; *            Series&#10; * @param dataSet&#10; *            DataSet&#10; * @param icsc&#10; *            IChartScriptContext&#10; */&#10;&#10;function afterDataSetFilled( series, dataSet, icsc )&#10;{&#10; if( series.getSeriesIdentifier() == &quot;Series 1&quot; )&#10; {&#10;  var list = dataSet.getValues();&#10;  }&#10;}&#10;&#10;">
@@ -971,7 +954,7 @@ chart4.getReportItem().getProperty("chart.instance").getTitle().getLabel().getCa
     </outline>
     <label>
      <caption>
-      <font name="Verdana" size="16.0" bold="true" rotation="90.0"/>
+      <font name="Lato" size="16.0" bold="true" rotation="90.0"/>
       <color _body=",255,0,121,193"/>
      </caption>
      <background _nil="1"/>
@@ -1020,7 +1003,7 @@ chart4.getReportItem().getProperty("chart.instance").getTitle().getLabel().getCa
   <extendedProperties name="enable.area.alt" value="false"/>
   <extendedProperties name="enable.drill.category" value="true"/>
   <extendedProperties name="enable.drill.series" value="true"/>
-  <extendedProperties name="jschart.client.script" value="/**&#13;&#10; * Called before chart instance is initially created.&#13;&#10; *&#13;&#10; * @param options&#13;&#10; *            chart options&#13;&#10; */&#13;&#10;beforeGeneration: function(options)&#13;&#10;{&#13;&#10;    //You can change options here.&#13;&#10;    options.title = &#13;&#10;        {&#13;&#10;        verticalAlign: &#039;middle&#039;,&#13;&#10;        },&#13;&#10;    options.subtitle = &#13;&#10;        {&#13;&#10;        text: &#039;Loan Payoff&#039;,&#13;&#10;        verticalAlign: &#039;bottom&#039;,&#13;&#10;        floating: true,&#13;&#10;        },&#13;&#10;    options.plotOptions = &#13;&#10;    {&#13;&#10;           pie: {&#13;&#10;            size: &quot;100%&quot;&#13;&#10;            }&#13;&#10;    },&#13;&#10;    options.chart = &#13;&#10;        {&#13;&#10;            spacingLeft: 0,&#13;&#10;            spacingRight:0,&#13;&#10;            spacingBottom:0,&#13;&#10;            spacingTop:0,&#13;&#10;        }&#13;&#10;},"/>
+  <extendedProperties name="jschart.client.script" value="/**&#13;&#10; * Called before chart instance is initially created.&#13;&#10; *&#13;&#10; * @param options&#13;&#10; *            chart options&#13;&#10; */&#13;&#10;beforeGeneration: function(options)&#13;&#10;{&#13;&#10;    //You can change options here.&#13;&#10;    options.title = &#13;&#10;        {&#13;&#10;        verticalAlign: &#039;middle&#039;,&#13;&#10;        },&#13;&#10;    options.subtitle = &#13;&#10;        {&#13;&#10;        text: &#039;Loan Payoff&#039;,&#13;&#10;            style: {&#13;&#10;                fontFamily: &#039;Lato&#039;&#13;&#10;            },&#13;&#10;        verticalAlign: &#039;bottom&#039;,&#13;&#10;        floating: true,&#13;&#10;        },&#13;&#10;    options.plotOptions = &#13;&#10;    {&#13;&#10;           pie: {&#13;&#10;            size: &quot;100%&quot;&#13;&#10;            }&#13;&#10;    },&#13;&#10;    options.chart = &#13;&#10;        {&#13;&#10;            spacingLeft: 0,&#13;&#10;            spacingRight:0,&#13;&#10;            spacingBottom:0,&#13;&#10;            spacingTop:0,&#13;&#10;        }&#13;&#10;},"/>
   <extendedProperties name="jschart.series.shadow" value="false"/>
   <sampleData>
    <baseSampleData dataSetRepresentation="&#039;A&#039;,&#039;B&#039;,&#039;C&#039;,&#039;D&#039;,&#039;E&#039;"/>
@@ -1037,7 +1020,7 @@ chart4.getReportItem().getProperty("chart.instance").getTitle().getLabel().getCa
   <seriesDefinitions>
    <query definition=""/>
    <seriesPalette>
-    <entries _body=",255,0,121,193"/>
+    <entries _body=",255,106,138,199"/>
     <entries _body=",255,226,224,220"/>
     <entries _body=",255,232,172,57"/>
     <entries _body=",255,128,255,128"/>
@@ -1073,7 +1056,7 @@ chart4.getReportItem().getProperty("chart.instance").getTitle().getLabel().getCa
    <seriesDefinitions>
     <query definition=""/>
     <seriesPalette>
-     <entries _body=",255,0,121,193"/>
+     <entries _body=",255,106,138,199"/>
      <entries _body=",255,226,224,220"/>
      <entries _body=",255,232,172,57"/>
      <entries _body=",255,128,255,128"/>
@@ -1158,9 +1141,8 @@ chart4.getReportItem().getProperty("chart.instance").getTitle().getLabel().getCa
                             </structure>
                         </list-property>
                         <property name="inheritColumns">false</property>
-                        <property name="height">1.8in</property>
-                        <property name="width">1.7in</property>
-                        <expression name="bookmark" type="javascript">"Chart 4"</expression>
+                        <property name="height">1.6in</property>
+                        <property name="width">1.53in</property>
                         <property name="dataSet">Data Set</property>
                         <list-property name="boundDataColumns">
                             <structure>

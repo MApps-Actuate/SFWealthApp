@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
-    <property name="createdBy">Eclipse BIRT Designer Version 4.4.0.v20150128-0131 Build &lt;4.2.3.v20150128-0131></property>
+    <property name="createdBy">Eclipse BIRT Designer Version 4.6.0.v201603260016</property>
     <property name="units">in</property>
     <property name="iconFile">/templates/blank_report.gif</property>
     <property name="bidiLayoutOrientation">ltr</property>
@@ -518,7 +518,7 @@ this.getViewer().setUIOptions(uiOptions);]]></method>
     </outline>
     <label>
      <caption value="% Contribution to Active Risk ">
-      <font name="Arial" size="10.0" bold="false"/>
+      <font name="Lato" size="10.0" bold="false"/>
      </caption>
      <background _nil="1"/>
      <outline>

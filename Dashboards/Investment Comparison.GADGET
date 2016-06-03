@@ -41,12 +41,12 @@
                             <property name="height">362px</property>
                             <property name="width">391px</property>
                             <property name="title">Investment Account Comparison</property>
-                            <property name="externalGadgetURI">/Applications/SFWealthApp/Report Designs/AssetAllocation.rptdocument</property>
+                            <property name="externalGadgetURI">/Report Designs/AssetAllocation.rptdocument</property>
                             <property name="showTitle">false</property>
                             <property name="showBorder">false</property>
                             <property name="zIndex">22</property>
                             <property name="showScrollBar">false</property>
-                            <property name="height">362px</property>
+                            <property name="height">330px</property>
                             <property name="width">391px</property>
                             <property name="caption">
                                 <gadget-caption id="8">
@@ -72,7 +72,7 @@
                                     <property name="gadgetType">viewer</property>
                                     <property name="externalContentRef">
                                         <external-element-ref>
-                                            <property name="sourceFile">/Applications/SFWealthApp/Report Designs/AssetAllocation.rptdocument</property>
+                                            <property name="sourceFile">/Report Designs/AssetAllocation.rptdocument</property>
                                             <property name="targetBookmark">pie</property>
                                         </external-element-ref>
                                     </property>

@@ -14,7 +14,7 @@
     <list-property name="cssStyleSheets">
         <structure>
             <property name="useExternalCss">true</property>
-            <property name="externalCssURI">http://fonts.googleapis.com/css?family=Raleway</property>
+            <property name="externalCssURI">http://fonts.googleapis.com/css?family=Lato</property>
         </structure>
     </list-property>
     <method name="onContentUpdate"><![CDATA[var uiOptions = this.getViewer().getUIOptions();

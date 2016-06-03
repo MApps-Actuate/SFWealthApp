@@ -299,7 +299,7 @@
     </data-sets>
     <styles>
         <style name="report" id="4">
-            <property name="fontFamily">"Verdana"</property>
+            <property name="fontFamily">"Lato"</property>
             <property name="fontSize">10pt</property>
         </style>
         <style name="crosstab-cell" id="5">
@@ -406,7 +406,7 @@
     </outline>
     <label>
      <caption value="Managed ETF - Allocation">
-      <font name="Verdana" size="10.0" bold="true">
+      <font name="Lato" size="10.0" bold="true">
        <alignment _body="1,"/>
       </font>
      </caption>
@@ -436,7 +436,7 @@
      </outline>
     </clientArea>
     <text value="">
-     <font name="Verdana" size="8.0"/>
+     <font name="Lato" size="8.0"/>
     </text>
     <separator>
      <color _nil="1"/>
@@ -484,7 +484,7 @@
     <series _type="PieSeries" seriesIdentifier="" explosion="0" leaderLineStyle="0" leaderLineLength="10.0">
      <label>
       <caption value="">
-       <font name="Verdana" size="8.0"/>
+       <font name="Lato" size="8.0"/>
       </caption>
       <background _nil="1"/>
       <outline>

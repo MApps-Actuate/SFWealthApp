@@ -1475,7 +1475,7 @@ function runReportViewer() {
                                 <text id="126">
                                     <property name="contentType">html</property>
                                     <text-property name="content"><![CDATA[<form action="javascript:allocate()">
-<table width="98%" style="font-family:Arial: border:0">
+<table width="98%" style="font-family:Lato: border:0">
 <tr>
 <td align="left">
 	<select id="selAddLifeEvent" onchange="addLifeEvent()" style="font-size:13pt">

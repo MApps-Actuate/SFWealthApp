@@ -5,12 +5,6 @@
     <property name="iconFile">/templates/blank_report.gif</property>
     <property name="layoutPreference">fixed layout</property>
     <property name="bidiLayoutOrientation">ltr</property>
-    <list-property name="libraries">
-        <structure>
-            <property name="fileName">ThemesReportItems3.rptlibrary</property>
-            <property name="namespace">ThemesReportItems3</property>
-        </structure>
-    </list-property>
     <parameters>
         <scalar-parameter name="pUser" id="63">
             <property name="hidden">true</property>
@@ -376,11 +370,9 @@
                         <property name="marginTop">0pt</property>
                         <property name="textAlign">left</property>
                         <property name="pageBreakAfter">avoid</property>
-                        <property name="canShrink">true</property>
                         <property name="height">1.3125in</property>
                         <property name="width">3.1458333333333335in</property>
                         <property name="dataSet">Data Set CSV</property>
-                        <property name="theme">ThemesReportItems3.Modern Table</property>
                         <list-property name="boundDataColumns">
                             <structure>
                                 <property name="name">ACCT_ID</property>
@@ -444,7 +436,7 @@
                         </column>
                         <header>
                             <row id="10">
-                                <property name="fontFamily">"Verdana"</property>
+                                <property name="fontFamily">"Lato"</property>
                                 <property name="fontWeight">normal</property>
                                 <property name="color">#808080</property>
                                 <cell id="11">
@@ -493,6 +485,7 @@
                             <property name="pageBreakInside">avoid</property>
                             <header>
                                 <row id="44">
+                                    <property name="fontFamily">"Lato"</property>
                                     <property name="pageBreakAfter">avoid</property>
                                     <cell id="45">
                                         <property name="colSpan">3</property>
@@ -500,7 +493,7 @@
                                         <property name="backgroundColor">#E6E6E6</property>
                                         <data id="68">
                                             <property name="fontWeight">bold</property>
-                                            <property name="fontStyle">italic</property>
+                                            <property name="fontStyle">normal</property>
                                             <property name="resultSetColumn">ACCT_NAME</property>
                                         </data>
                                     </cell>
@@ -512,13 +505,14 @@
                         </group>
                         <detail>
                             <row id="15">
+                                <property name="fontFamily">"Lato"</property>
                                 <list-property name="highlightRules">
                                     <structure>
                                         <property name="operator">eq</property>
-                                        <property name="backgroundColor">#C3D3DD</property>
-                                        <expression name="testExpr">row.__rownum %2</expression>
+                                        <property name="backgroundColor">#F5F9FA</property>
+                                        <expression name="testExpr" type="javascript">row.__rownum %2</expression>
                                         <simple-property-list name="value1">
-                                            <value>0</value>
+                                            <value type="javascript">0</value>
                                         </simple-property-list>
                                     </structure>
                                 </list-property>
@@ -552,6 +546,7 @@
                         </detail>
                         <footer>
                             <row id="20">
+                                <property name="fontFamily">"Lato"</property>
                                 <property name="height">0.25in</property>
                                 <cell id="21"/>
                                 <cell id="22"/>

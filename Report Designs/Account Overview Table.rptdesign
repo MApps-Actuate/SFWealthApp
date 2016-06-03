@@ -408,7 +408,8 @@ if (user != null &amp;&amp; user != "anonymous")
                         <property name="borderBottomWidth">2px</property>
                         <property name="textAlign">left</property>
                         <label id="74">
-                            <property name="fontSize">8pt</property>
+                            <property name="fontFamily">"Lato"</property>
+                            <property name="fontSize">10pt</property>
                             <property name="fontWeight">normal</property>
                             <property name="color">#808080</property>
                             <text-property name="text">Account</text-property>
@@ -420,7 +421,8 @@ if (user != null &amp;&amp; user != "anonymous")
                         <property name="borderBottomWidth">2px</property>
                         <property name="textAlign">right</property>
                         <label id="86">
-                            <property name="fontSize">8pt</property>
+                            <property name="fontFamily">"Lato"</property>
+                            <property name="fontSize">10pt</property>
                             <property name="fontWeight">normal</property>
                             <property name="color">#808080</property>
                             <property name="textAlign">center</property>
@@ -433,7 +435,8 @@ if (user != null &amp;&amp; user != "anonymous")
                         <property name="borderBottomWidth">2px</property>
                         <property name="textAlign">right</property>
                         <label id="80">
-                            <property name="fontSize">8pt</property>
+                            <property name="fontFamily">"Lato"</property>
+                            <property name="fontSize">10pt</property>
                             <property name="fontWeight">normal</property>
                             <property name="color">#808080</property>
                             <property name="textAlign">center</property>
@@ -446,13 +449,6 @@ if (user != null &amp;&amp; user != "anonymous")
                         <property name="borderBottomWidth">2px</property>
                         <property name="paddingLeft">75px</property>
                         <property name="textAlign">left</property>
-                        <image id="148">
-                            <property name="height">16px</property>
-                            <property name="width">16px</property>
-                            <expression name="altText" type="constant">This spark chart shows change in this particular position over the users selected time period.  The high point is indicated with a green marker and the low point is indicated by a red marker.</expression>
-                            <property name="source">embed</property>
-                            <property name="imageName">information.png</property>
-                        </image>
                     </cell>
                     <cell id="136"/>
                 </row>
@@ -479,7 +475,8 @@ if (user != null &amp;&amp; user != "anonymous")
                             <property name="textAlign">left</property>
                             <property name="verticalAlign">middle</property>
                             <data id="145">
-                                <property name="fontSize">8pt</property>
+                                <property name="fontFamily">"Lato"</property>
+                                <property name="fontSize">10pt</property>
                                 <property name="resultSetColumn">ACCT_NAME</property>
                                 <list-property name="action">
                                     <structure>
@@ -507,7 +504,8 @@ if (user != null &amp;&amp; user != "anonymous")
                             <property name="textAlign">right</property>
                             <property name="verticalAlign">middle</property>
                             <data id="143">
-                                <property name="fontSize">8pt</property>
+                                <property name="fontFamily">"Lato"</property>
+                                <property name="fontSize">10pt</property>
                                 <structure name="numberFormat">
                                     <property name="category">Currency</property>
                                     <property name="pattern">$ #,##0.00;$ (#,##0.00)</property>
@@ -522,7 +520,8 @@ if (user != null &amp;&amp; user != "anonymous")
                             <property name="textAlign">right</property>
                             <property name="verticalAlign">middle</property>
                             <data id="144">
-                                <property name="fontSize">8pt</property>
+                                <property name="fontFamily">"Lato"</property>
+                                <property name="fontSize">10pt</property>
                                 <property name="color">#008000</property>
                                 <structure name="numberFormat">
                                     <property name="category">Currency</property>
@@ -545,12 +544,12 @@ if (user != null &amp;&amp; user != "anonymous")
                             <property name="borderBottomColor">#808080</property>
                             <property name="borderBottomStyle">solid</property>
                             <property name="borderBottomWidth">1px</property>
-                            <property name="paddingTop">10pt</property>
-                            <property name="paddingLeft">10pt</property>
-                            <property name="paddingBottom">3pt</property>
+                            <property name="paddingTop">1pt</property>
+                            <property name="paddingLeft">1pt</property>
+                            <property name="paddingBottom">1pt</property>
                             <extended-item extensionName="FlashGadgets" id="135">
                                 <xml-property name="xmlRepresentation"><![CDATA[<ActuateChart version="1.0">
- <Gadget backgroundColor="FEFEFE" borderColor="000000" borderThickness="1" borderTransparency="255" colorScheme="1" prefix="" showBorder="false" showGaugeLabels="false" showValueAboveNeedle="false" subTitle="" subType="" suffix="" title="" turnOffAnimation="false" turnOffDefaultAnimination="false" type="Spark" version="1.0.0">
+ <Gadget autoAbbreviation="false" backgroundColor="FEFEFE" borderColor="000000" borderThickness="1" borderTransparency="255" colorScheme="1" prefix="" showBorder="false" showGaugeLabels="false" showValueAboveNeedle="false" subTitle="" subType="" suffix="" title="" turnOffAnimation="false" turnOffDefaultAnimination="false" type="Spark" version="1.0.0">
   <gadgetPartsSupportingEffects _body="background"/>
   <gadgetPartsSupportingEffects _body="caption"/>
   <gadgetPartsSupportingEffects _body="subcaption"/>
@@ -721,7 +720,7 @@ if (user != null &amp;&amp; user != "anonymous")
   <gadgetPartsSupportingEffects _body="highlowvalue"/>
   <gadgetPartsSupportingEffects _body="trendlines"/>
   <gadgetPartsSupportingEffects _body="tooltip"/>
-  <scale autoAdjustMajorTickMarks="true" majorTickMarksCount="5" max="100" min="0" minorTickMarksCount="4"/>
+  <scale autoAdjustMajorTickMarks="true" majorTickMarksCount="5" minorTickMarksCount="4"/>
   <region endValue="35.0" label="A" startValue="0.0"/>
   <region endValue="70.0" label="B" startValue="35.0"/>
   <region endValue="100.0" label="C" startValue="70.0"/>
@@ -736,15 +735,17 @@ if (user != null &amp;&amp; user != "anonymous")
    <needle borderColor="000000" borderTransparency="255" borderWidth="1" fillColor="000000" fillTransparency="255" shape="0" size="10" tooltipShowValue="true"/>
   </linearGauge>
   <spark connectMissingData="false">
-   <anchor highColor="008000" lowColor="ce0315" shape="3" showCloseAnchor="false" showHighAnchor="true" showLowAnchor="true" showOpenAnchor="false" showOtherAnchors="false" size="4"/>
-   <sparkPlot lineTransparency="255" lineWidth="3" showCloseValue="false" showHighLowValue="false" showOpenValue="false"/>
+   <anchor highColor="008000" lowColor="ce0315" shape="3" showCloseAnchor="false" showHighAnchor="false" showLowAnchor="false" showOpenAnchor="false" showOtherAnchors="false" size="4"/>
+   <sparkPlot lineColor="3578ad" lineTransparency="255" lineWidth="4" showCloseValue="false" showHighLowValue="false" showOpenValue="false"/>
   </spark>
+  <paddingMargins topMargin="20"/>
  </Gadget>
 </ActuateChart>
 ]]></xml-property>
                                 <property name="inheritColumns">true</property>
-                                <property name="height">0.6041666666666666in</property>
-                                <property name="width">1.3541666666666667in</property>
+                                <property name="outputFormat">JS</property>
+                                <property name="height">0.7083333333333334in</property>
+                                <property name="width">0.90625in</property>
                             </extended-item>
                         </cell>
                         <cell id="137">

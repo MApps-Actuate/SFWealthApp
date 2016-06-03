@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
-    <property name="createdBy">Eclipse BIRT Designer Version 4.4.0.v20150710-0101 Build &lt;4.2.3.v20150710-0101></property>
+    <property name="createdBy">Eclipse BIRT Designer Version 4.2.3.v20131216-0430 Build &lt;4.2.3.v20131216-0430></property>
     <property name="units">in</property>
     <property name="iconFile">/templates/blank_report.gif</property>
     <property name="bidiLayoutOrientation">ltr</property>
@@ -15,7 +15,7 @@
         <structure>
             <property name="fileName">CSS/style.css</property>
             <property name="useExternalCss">true</property>
-            <property name="externalCssURI">http://fonts.googleapis.com/css?family=Raleway</property>
+            <property name="externalCssURI">http://fonts.googleapis.com/css?family=Lato</property>
         </structure>
     </list-property>
     <styles>
@@ -65,7 +65,7 @@
     <body>
         <grid id="382">
             <property name="backgroundColor">#EAEFF3</property>
-            <property name="fontFamily">"Raleway"</property>
+            <property name="fontFamily">"Lato"</property>
             <property name="fontSize">9pt</property>
             <property name="color">#646464</property>
             <property name="width">3.0625in</property>
@@ -94,11 +94,11 @@
                             </cell>
                             <cell id="472">
                                 <label id="395">
-                                    <property name="fontFamily">"Raleway"</property>
+                                    <property name="fontFamily">"Lato"</property>
                                     <property name="fontSize">12pt</property>
                                     <property name="marginLeft">0pt</property>
                                     <property name="marginBottom">5pt</property>
-                                    <text-property name="text">OpenText Gears Up for IoT at JavaOne</text-property>
+                                    <text-property name="text">Actuate Gears Up for IoT at JavaOne</text-property>
                                 </label>
                             </cell>
                         </row>
@@ -126,7 +126,7 @@
                             </cell>
                             <cell id="479">
                                 <label id="397">
-                                    <property name="fontFamily">"Raleway"</property>
+                                    <property name="fontFamily">"Lato"</property>
                                     <property name="fontSize">12pt</property>
                                     <property name="marginBottom">5pt</property>
                                     <text-property name="text">How upcoming changes to Asset Mgmt could impact your portfolio</text-property>
@@ -157,7 +157,7 @@
                             </cell>
                             <cell id="487">
                                 <label id="488">
-                                    <property name="fontFamily">"Raleway"</property>
+                                    <property name="fontFamily">"Lato"</property>
                                     <property name="fontSize">12pt</property>
                                     <property name="marginBottom">5pt</property>
                                     <text-property name="text">Recognized as Leader in Asset Management</text-property>
@@ -188,13 +188,13 @@
                             </cell>
                             <cell id="495">
                                 <label id="496">
-                                    <property name="fontFamily">"Raleway"</property>
+                                    <property name="fontFamily">"Lato"</property>
                                     <property name="fontSize">12pt</property>
                                     <property name="marginBottom">5pt</property>
                                     <text-property name="text">Top 10 Stocks </text-property>
                                 </label>
                                 <label id="414">
-                                    <property name="fontFamily">"Raleway"</property>
+                                    <property name="fontFamily">"Lato"</property>
                                     <property name="fontSize">10pt</property>
                                     <property name="color">blue</property>
                                     <property name="marginBottom">10pt</property>
@@ -208,7 +208,7 @@
         </grid>
         <grid id="398">
             <property name="backgroundColor">#EAEFF3</property>
-            <property name="fontFamily">"Raleway"</property>
+            <property name="fontFamily">"Lato"</property>
             <property name="fontSize">9pt</property>
             <property name="color">#646464</property>
             <property name="width">3.062in</property>
@@ -255,13 +255,13 @@
                                         </cell>
                                         <cell id="519">
                                             <label id="520">
-                                                <property name="fontFamily">"Raleway"</property>
+                                                <property name="fontFamily">"Lato"</property>
                                                 <property name="fontSize">12pt</property>
                                                 <property name="marginBottom">5pt</property>
                                                 <text-property name="text">Big Data Innovation Summit</text-property>
                                             </label>
                                             <data id="451">
-                                                <property name="fontFamily">"Raleway"</property>
+                                                <property name="fontFamily">"Lato"</property>
                                                 <property name="fontSize">10pt</property>
                                                 <property name="marginLeft">10pt</property>
                                                 <property name="marginBottom">8pt</property>
@@ -302,20 +302,20 @@
                                         </cell>
                                         <cell id="527">
                                             <label id="528">
-                                                <property name="fontFamily">"Raleway"</property>
+                                                <property name="fontFamily">"Lato"</property>
                                                 <property name="fontSize">12pt</property>
                                                 <property name="marginBottom">5pt</property>
                                                 <text-property name="text">Asset Mgmt Summit</text-property>
                                             </label>
                                             <data id="458">
-                                                <property name="fontFamily">"Raleway"</property>
+                                                <property name="fontFamily">"Lato"</property>
                                                 <property name="fontSize">10pt</property>
                                                 <property name="marginLeft">10pt</property>
                                                 <property name="marginBottom">8pt</property>
                                                 <property name="resultSetColumn">AssetMgmtSummit</property>
                                             </data>
                                             <label id="417">
-                                                <property name="fontFamily">"Raleway"</property>
+                                                <property name="fontFamily">"Lato"</property>
                                                 <property name="fontSize">10pt</property>
                                                 <property name="color">blue</property>
                                                 <property name="marginBottom">10pt</property>
@@ -332,7 +332,7 @@
         </grid>
         <grid id="418">
             <property name="backgroundColor">#EAEFF3</property>
-            <property name="fontFamily">"Raleway"</property>
+            <property name="fontFamily">"Lato"</property>
             <property name="fontSize">9pt</property>
             <property name="color">#646464</property>
             <property name="width">3.062in</property>
@@ -361,7 +361,7 @@
                             </cell>
                             <cell id="503">
                                 <label id="504">
-                                    <property name="fontFamily">"Raleway"</property>
+                                    <property name="fontFamily">"Lato"</property>
                                     <property name="fontSize">12pt</property>
                                     <property name="marginBottom">5pt</property>
                                     <text-property name="text">Upcoming Theatre Events</text-property>
@@ -392,13 +392,13 @@
                             </cell>
                             <cell id="511">
                                 <label id="512">
-                                    <property name="fontFamily">"Raleway"</property>
+                                    <property name="fontFamily">"Lato"</property>
                                     <property name="fontSize">12pt</property>
                                     <property name="marginBottom">5pt</property>
                                     <text-property name="text">Current Sport Schedule</text-property>
                                 </label>
                                 <label id="431">
-                                    <property name="fontFamily">"Raleway"</property>
+                                    <property name="fontFamily">"Lato"</property>
                                     <property name="fontSize">10pt</property>
                                     <property name="color">blue</property>
                                     <property name="marginBottom">10pt</property>

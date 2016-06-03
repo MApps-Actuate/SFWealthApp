@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
-    <property name="createdBy">Eclipse BIRT Designer Version 4.2.3.v20131216-0430 Build &lt;4.2.3.v20131216-0430></property>
+    <property name="createdBy">Eclipse BIRT Designer Version 4.4.0.v20150710-0101 Build &lt;4.2.3.v20150710-0101></property>
     <property name="units">in</property>
     <property name="iconFile">/templates/blank_report.gif</property>
     <property name="layoutPreference">auto layout</property>
@@ -58,7 +58,7 @@
     </page-setup>
     <body>
         <text id="7">
-            <property name="fontFamily">"Source Sans Pro"</property>
+            <property name="fontFamily">"Lato"</property>
             <property name="fontSize">10pt</property>
             <property name="contentType">html</property>
             <text-property name="content"><![CDATA[<span>The Retirement Roadmap Planner App helps you plan accordingly for your retirement. This interactive app allows you to:</span><div><div><br></div><div><ul><li>See the projected progress toward your retirement goals</font></li><li>Simulate changes to your contributions and investment style</li><li>Forecast account maturity by year, type and asset category</li></ul></div></div>]]></text-property>

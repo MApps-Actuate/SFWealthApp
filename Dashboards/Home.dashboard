@@ -2,7 +2,7 @@
 <report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
     <xml-property name="externalMetadata">
         <external-datamarts>
-            <datamart-node location="file:/C:/Actuate/iHub3/modules/BIRTiHub/iHub/shared/storage/file/084/071.dat">
+            <datamart-node location="file:/C:/Actuate/iHub3/modules/BIRTiHub/iHub/shared/storage/file/038/161.dat">
                 <reference-elements>NewDataMartDataSource;</reference-elements>
                 <datamart xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
                     <property name="createdBy">Eclipse BIRT Designer Version 2.6.1.v20100926-0604 Build &lt;2.6.1.v20100926-0604></property>
@@ -375,7 +375,7 @@
                     </cubes>
                 </datamart>
             </datamart-node>
-            <datamart-node location="file:/C:/Actuate/iHub3/modules/BIRTiHub/iHub/shared/storage/file/084/069.dat">
+            <datamart-node location="file:/C:/Actuate/iHub3/modules/BIRTiHub/iHub/shared/storage/file/038/159.dat">
                 <reference-elements>NewDataMartDataSource3;</reference-elements>
                 <datamart xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
                     <property name="createdBy">Eclipse BIRT Designer Version 4.2.3.v20131216-0430 Build &lt;4.2.3.v20131216-0430></property>
@@ -711,7 +711,7 @@
                                                     <list-property name="action">
                                                         <structure>
                                                             <property name="linkType">drill-through</property>
-                                                            <property name="reportName">^/Report Designs/MySpendDetail.rptdesign</property>
+                                                            <property name="reportName">/Applications/SFWealthApp/Report Designs/MySpendDetail.rptdesign</property>
                                                             <property name="targetWindow">_blank</property>
                                                             <property name="targetFileType">report-design</property>
                                                             <list-property name="paramBindings">
@@ -4162,331 +4162,166 @@
                     <property name="headerHTML">null</property>
                     <property name="footerHTML">null</property>
                     <property name="backgroundColor">RGB(255,255,255)</property>
-                    <property name="freeFormGadgets">
-                        <gadget name="acc13e72-94ad-45ea-9703-7eaa59867b522" id="1113">
-                            <property name="x">18px</property>
-                            <property name="y">576px</property>
-                            <property name="height">47px</property>
-                            <property name="width">536px</property>
-                            <property name="title">My Stocks</property>
-                            <property name="externalGadgetURI">http://hosting.gmodules.com/ig/gadgets/file/114391732817277679525/ESQuotesTicker.xml</property>
-                            <property name="showTitle">false</property>
-                            <property name="showBorder">false</property>
-                            <property name="zIndex">7</property>
-                            <property name="showScrollBar">false</property>
-                            <property name="height">47px</property>
-                            <property name="width">536px</property>
-                            <property name="caption">
-                                <gadget-caption id="1114">
-                                    <property name="showCaption">true</property>
-                                    <property name="horizontalAlignment">left</property>
-                                    <property name="fontFamily">"Raleway"</property>
-                                    <property name="fontSize">16pt</property>
-                                    <property name="fontWeight">normal</property>
-                                    <property name="fontStyle">normal</property>
-                                    <property name="color">#353535</property>
-                                    <property name="textUnderline">none</property>
-                                </gadget-caption>
-                            </property>
-                        </gadget>
-                        <gadget name="49fa8d6e-487e-4d49-aec5-6fa3dc2c6de22" id="16">
-                            <property name="x">10px</property>
-                            <property name="y">154px</property>
-                            <property name="height">158px</property>
-                            <property name="width">644px</property>
-                            <property name="zIndex">2</property>
-                            <property name="isVisible">false</property>
-                            <property name="height">158px</property>
-                            <property name="width">644px</property>
-                            <property name="content">
-                                <current-selections id="17"/>
-                            </property>
-                        </gadget>
-                        <gadget name="Gadget_4b42d611-cbcb-4125-8058-8ab89b878d5b" id="1118">
-                            <property name="x">18px</property>
-                            <property name="y">270px</property>
-                            <property name="height">239px</property>
-                            <property name="width">280px</property>
-                            <property name="title">Upcoming Webinars</property>
-                            <property name="externalGadgetURI">^/Report Designs/ProductInformation.rptdesign</property>
-                            <property name="showTitle">false</property>
-                            <property name="showBorder">false</property>
-                            <property name="zIndex">8</property>
-                            <property name="showScrollBar">false</property>
-                            <property name="height">239px</property>
-                            <property name="width">280px</property>
-                            <property name="caption">
-                                <gadget-caption id="1119">
-                                    <property name="showCaption">true</property>
-                                    <property name="horizontalAlignment">left</property>
-                                    <property name="fontFamily">"Raleway"</property>
-                                    <property name="fontSize">16pt</property>
-                                    <property name="color">#353535</property>
-                                </gadget-caption>
-                            </property>
-                            <property name="content">
-                                <data-view id="1120">
-                                    <list-property name="userProperties">
-                                        <structure>
-                                            <property name="name">showViewerToolbar</property>
-                                            <property name="type">boolean</property>
-                                        </structure>
-                                    </list-property>
-                                    <property name="showViewerToolbar">false</property>
-                                    <property name="gadgetType">viewer</property>
-                                    <property name="externalContentRef">
-                                        <external-element-ref>
-                                            <property name="sourceFile">^/Report Designs/Webinars.rptdesign</property>
-                                        </external-element-ref>
+                    <property name="sections">
+                        <section id="1067">
+                            <property name="width">52.600732600732606%</property>
+                            <property name="gadgets">
+                                <gadget name="Gadget_443dc893-e764-4a1e-997b-0e1134abb32d" id="1000">
+                                    <property name="height">515px</property>
+                                    <property name="title">Welcome Home</property>
+                                    <property name="externalGadgetURI">^/Report Designs/WelcomeHome.rptdocument</property>
+                                    <property name="showTitle">false</property>
+                                    <property name="showBorder">false</property>
+                                    <property name="zIndex">4</property>
+                                    <property name="showScrollBar">false</property>
+                                    <property name="height">515px</property>
+                                    <property name="caption">
+                                        <gadget-caption id="1001">
+                                            <property name="showCaption">true</property>
+                                            <property name="horizontalAlignment">left</property>
+                                            <property name="fontFamily">"Lato"</property>
+                                            <property name="fontSize">18pt</property>
+                                            <property name="fontWeight">normal</property>
+                                            <property name="fontStyle">normal</property>
+                                            <property name="color">#353535</property>
+                                            <property name="textUnderline">none</property>
+                                        </gadget-caption>
                                     </property>
-                                </data-view>
-                            </property>
-                        </gadget>
-                        <gadget name="Gadget_654b1af7-cb44-4b7e-b82d-b345ffaf4066" id="1124">
-                            <property name="x">1062px</property>
-                            <property name="y">18px</property>
-                            <property name="height">248px</property>
-                            <property name="width">280px</property>
-                            <property name="title">In the News</property>
-                            <property name="externalGadgetURI">^/Report Designs/ProductInformation.rptdesign</property>
-                            <property name="showTitle">false</property>
-                            <property name="showBorder">false</property>
-                            <property name="zIndex">9</property>
-                            <property name="showScrollBar">false</property>
-                            <property name="height">248px</property>
-                            <property name="width">280px</property>
-                            <property name="caption">
-                                <gadget-caption id="1125">
-                                    <property name="showCaption">true</property>
-                                    <property name="horizontalAlignment">left</property>
-                                    <property name="fontFamily">"Raleway"</property>
-                                    <property name="fontSize">16pt</property>
-                                    <property name="color">#353535</property>
-                                </gadget-caption>
-                            </property>
-                            <property name="content">
-                                <data-view id="1126">
-                                    <list-property name="userProperties">
-                                        <structure>
-                                            <property name="name">showViewerToolbar</property>
-                                            <property name="type">boolean</property>
-                                        </structure>
-                                    </list-property>
-                                    <property name="showViewerToolbar">false</property>
-                                    <property name="gadgetType">viewer</property>
-                                    <property name="externalContentRef">
-                                        <external-element-ref>
-                                            <property name="sourceFile">^/Report Designs/EventsInterestNews.rptdesign</property>
-                                            <property name="targetBookmark">News</property>
-                                        </external-element-ref>
+                                    <property name="content">
+                                        <data-view id="1002">
+                                            <list-property name="userProperties">
+                                                <structure>
+                                                    <property name="name">showViewerToolbar</property>
+                                                    <property name="type">boolean</property>
+                                                </structure>
+                                            </list-property>
+                                            <property name="showViewerToolbar">false</property>
+                                            <property name="gadgetType">viewer</property>
+                                            <property name="externalContentRef">
+                                                <external-element-ref>
+                                                    <property name="sourceFile">^/Report Designs/WelcomeHome.rptdocument</property>
+                                                </external-element-ref>
+                                            </property>
+                                        </data-view>
                                     </property>
-                                </data-view>
-                            </property>
-                        </gadget>
-                        <gadget name="Gadget_08685ed2-a166-4526-aca5-58128f958414" id="1130">
-                            <property name="x">1062px</property>
-                            <property name="y">324px</property>
-                            <property name="height">173px</property>
-                            <property name="width">280px</property>
-                            <property name="title">Events</property>
-                            <property name="externalGadgetURI">^/Report Designs/ProductInformation.rptdesign</property>
-                            <property name="showTitle">false</property>
-                            <property name="showBorder">false</property>
-                            <property name="zIndex">10</property>
-                            <property name="showScrollBar">false</property>
-                            <property name="height">173px</property>
-                            <property name="width">280px</property>
-                            <property name="caption">
-                                <gadget-caption id="1131">
-                                    <property name="showCaption">true</property>
-                                    <property name="horizontalAlignment">left</property>
-                                    <property name="fontFamily">"Raleway"</property>
-                                    <property name="fontSize">16pt</property>
-                                    <property name="color">#353535</property>
-                                </gadget-caption>
-                            </property>
-                            <property name="content">
-                                <data-view id="1132">
-                                    <list-property name="userProperties">
-                                        <structure>
-                                            <property name="name">showViewerToolbar</property>
-                                            <property name="type">boolean</property>
-                                        </structure>
-                                    </list-property>
-                                    <property name="showViewerToolbar">false</property>
-                                    <property name="gadgetType">viewer</property>
-                                    <property name="externalContentRef">
-                                        <external-element-ref>
-                                            <property name="sourceFile">^/Report Designs/EventsInterestNews.rptdesign</property>
-                                            <property name="targetBookmark">Events</property>
-                                        </external-element-ref>
+                                </gadget>
+                                <gadget name="acc13e72-94ad-45ea-9703-7eaa59867b522" id="1113">
+                                    <property name="height">75px</property>
+                                    <property name="title">My Stocks</property>
+                                    <property name="externalGadgetURI">http://hosting.gmodules.com/ig/gadgets/file/114391732817277679525/ESQuotesTicker.xml</property>
+                                    <property name="showTitle">false</property>
+                                    <property name="showBorder">false</property>
+                                    <property name="zIndex">7</property>
+                                    <property name="showScrollBar">false</property>
+                                    <property name="height">75px</property>
+                                    <property name="caption">
+                                        <gadget-caption id="1114">
+                                            <property name="showCaption">true</property>
+                                            <property name="horizontalAlignment">left</property>
+                                            <property name="fontFamily">"Lato"</property>
+                                            <property name="fontSize">18pt</property>
+                                            <property name="fontWeight">normal</property>
+                                            <property name="fontStyle">normal</property>
+                                            <property name="color">#353535</property>
+                                            <property name="textUnderline">none</property>
+                                        </gadget-caption>
                                     </property>
-                                </data-view>
-                            </property>
-                        </gadget>
-                        <gadget name="Gadget_b35724f4-2c44-4762-8c92-ff6afa4c0673" id="1133">
-                            <property name="x">1062px</property>
-                            <property name="y">558px</property>
-                            <property name="height">132px</property>
-                            <property name="width">280px</property>
-                            <property name="title">My Interests</property>
-                            <property name="externalGadgetURI">^/Report Designs/ProductInformation.rptdesign</property>
-                            <property name="showTitle">false</property>
-                            <property name="showBorder">false</property>
-                            <property name="zIndex">11</property>
-                            <property name="showScrollBar">false</property>
-                            <property name="height">132px</property>
-                            <property name="width">280px</property>
-                            <property name="caption">
-                                <gadget-caption id="1134">
-                                    <property name="showCaption">true</property>
-                                    <property name="horizontalAlignment">left</property>
-                                    <property name="fontFamily">"Raleway"</property>
-                                    <property name="fontSize">16pt</property>
-                                    <property name="color">#353535</property>
-                                </gadget-caption>
-                            </property>
-                            <property name="content">
-                                <data-view id="1135">
-                                    <list-property name="userProperties">
-                                        <structure>
-                                            <property name="name">showViewerToolbar</property>
-                                            <property name="type">boolean</property>
-                                        </structure>
-                                    </list-property>
-                                    <property name="showViewerToolbar">false</property>
-                                    <property name="gadgetType">viewer</property>
-                                    <property name="externalContentRef">
-                                        <external-element-ref>
-                                            <property name="sourceFile">^/Report Designs/EventsInterestNews.rptdesign</property>
-                                            <property name="targetBookmark">My Interests</property>
-                                        </external-element-ref>
+                                </gadget>
+                                <gadget name="49fa8d6e-487e-4d49-aec5-6fa3dc2c6de22" id="16">
+                                    <property name="zIndex">2</property>
+                                    <property name="isVisible">false</property>
+                                    <property name="content">
+                                        <current-selections id="17"/>
                                     </property>
-                                </data-view>
+                                </gadget>
                             </property>
-                        </gadget>
-                        <gadget name="Gadget_f7ba9d54-1179-4821-a897-2f89fcf41470" id="1142">
-                            <property name="x">702px</property>
-                            <property name="y">18px</property>
-                            <property name="height">690px</property>
-                            <property name="width">335px</property>
-                            <property name="title">My Portfolio</property>
-                            <property name="externalGadgetURI">^/Report Designs/PortfolioCharts.rptdocument</property>
-                            <property name="showTitle">false</property>
-                            <property name="showBorder">false</property>
-                            <property name="zIndex">12</property>
-                            <property name="showScrollBar">false</property>
-                            <property name="height">690px</property>
-                            <property name="width">335px</property>
-                            <property name="caption">
-                                <gadget-caption id="1143">
-                                    <property name="showCaption">true</property>
-                                    <property name="horizontalAlignment">left</property>
-                                    <property name="fontFamily">"Raleway"</property>
-                                    <property name="fontSize">16pt</property>
-                                    <property name="color">#353535</property>
-                                </gadget-caption>
-                            </property>
-                            <property name="content">
-                                <data-view id="1144">
-                                    <list-property name="userProperties">
-                                        <structure>
-                                            <property name="name">showViewerToolbar</property>
-                                            <property name="type">boolean</property>
-                                        </structure>
-                                    </list-property>
-                                    <property name="showViewerToolbar">false</property>
-                                    <property name="gadgetType">viewer</property>
-                                    <property name="externalContentRef">
-                                        <external-element-ref>
-                                            <property name="sourceFile">^/Report Designs/PortfolioCharts.rptdocument</property>
-                                        </external-element-ref>
+                        </section>
+                        <section id="1068">
+                            <property name="width">17.509157509157507%</property>
+                            <property name="gadgets">
+                                <gadget name="Gadget_63d1aba7-72d9-437b-9c2d-3dc7099d7796" id="1118">
+                                    <property name="height">659px</property>
+                                    <property name="title">My Current Status</property>
+                                    <property name="externalGadgetURI">^/Report Designs/Client PortfolioRINGS.rptdesign</property>
+                                    <property name="showTitle">false</property>
+                                    <property name="showBorder">false</property>
+                                    <property name="zIndex">8</property>
+                                    <property name="showScrollBar">false</property>
+                                    <property name="height">659px</property>
+                                    <property name="caption">
+                                        <gadget-caption id="1119">
+                                            <property name="showCaption">true</property>
+                                            <property name="horizontalAlignment">left</property>
+                                            <property name="fontFamily">"Lato"</property>
+                                            <property name="fontSize">18pt</property>
+                                            <property name="fontWeight">normal</property>
+                                            <property name="fontStyle">normal</property>
+                                            <property name="color">#353535</property>
+                                            <property name="textUnderline">none</property>
+                                        </gadget-caption>
                                     </property>
-                                </data-view>
-                            </property>
-                        </gadget>
-                        <gadget name="Gadget_85cd0f76-501a-43c2-9808-ecb11a580d5f" id="1166">
-                            <property name="x">324px</property>
-                            <property name="y">18px</property>
-                            <property name="height">439px</property>
-                            <property name="width">370px</property>
-                            <property name="title">Current Goals</property>
-                            <property name="externalGadgetURI">^/Report Designs/Client PortfolioRINGS.rptdocument</property>
-                            <property name="showTitle">false</property>
-                            <property name="showBorder">false</property>
-                            <property name="zIndex">13</property>
-                            <property name="showScrollBar">false</property>
-                            <property name="height">439px</property>
-                            <property name="width">370px</property>
-                            <property name="caption">
-                                <gadget-caption id="1167">
-                                    <property name="showCaption">true</property>
-                                    <property name="horizontalAlignment">left</property>
-                                    <property name="fontFamily">"Raleway"</property>
-                                    <property name="fontSize">16pt</property>
-                                    <property name="color">#353535</property>
-                                </gadget-caption>
-                            </property>
-                            <property name="content">
-                                <data-view id="1168">
-                                    <list-property name="userProperties">
-                                        <structure>
-                                            <property name="name">showViewerToolbar</property>
-                                            <property name="type">boolean</property>
-                                        </structure>
-                                    </list-property>
-                                    <property name="showViewerToolbar">false</property>
-                                    <property name="gadgetType">viewer</property>
-                                    <property name="externalContentRef">
-                                        <external-element-ref>
-                                            <property name="sourceFile">^/Report Designs/Client PortfolioRINGS.rptdocument</property>
-                                            <property name="targetBookmark">rings</property>
-                                        </external-element-ref>
+                                    <property name="content">
+                                        <data-view id="1120">
+                                            <list-property name="userProperties">
+                                                <structure>
+                                                    <property name="name">showViewerToolbar</property>
+                                                    <property name="type">boolean</property>
+                                                </structure>
+                                            </list-property>
+                                            <property name="showViewerToolbar">false</property>
+                                            <property name="gadgetType">viewer</property>
+                                            <property name="externalContentRef">
+                                                <external-element-ref>
+                                                    <property name="sourceFile">^/Report Designs/Client PortfolioRINGS.rptdesign</property>
+                                                    <property name="targetBookmark">rings</property>
+                                                </external-element-ref>
+                                            </property>
+                                        </data-view>
                                     </property>
-                                </data-view>
+                                </gadget>
                             </property>
-                        </gadget>
-                        <gadget name="Gadget_07dbeb8c-bdc6-429e-8baa-f8ce22e615e6" id="1172">
-                            <property name="x">18px</property>
-                            <property name="y">18px</property>
-                            <property name="height">188px</property>
-                            <property name="width">280px</property>
-                            <property name="title">White Papers</property>
-                            <property name="externalGadgetURI">^/Report Designs/Whitepapers.rptdocument</property>
-                            <property name="showTitle">false</property>
-                            <property name="showBorder">false</property>
-                            <property name="zIndex">14</property>
-                            <property name="showScrollBar">false</property>
-                            <property name="height">188px</property>
-                            <property name="width">280px</property>
-                            <property name="caption">
-                                <gadget-caption id="1173">
-                                    <property name="showCaption">true</property>
-                                    <property name="horizontalAlignment">left</property>
-                                    <property name="fontFamily">"Raleway"</property>
-                                    <property name="fontSize">16pt</property>
-                                    <property name="color">#353535</property>
-                                </gadget-caption>
-                            </property>
-                            <property name="content">
-                                <data-view id="1174">
-                                    <list-property name="userProperties">
-                                        <structure>
-                                            <property name="name">showViewerToolbar</property>
-                                            <property name="type">boolean</property>
-                                        </structure>
-                                    </list-property>
-                                    <property name="showViewerToolbar">false</property>
-                                    <property name="gadgetType">viewer</property>
-                                    <property name="externalContentRef">
-                                        <external-element-ref>
-                                            <property name="sourceFile">^/Report Designs/Whitepapers.rptdocument</property>
-                                            <property name="targetBookmark">White Papers</property>
-                                        </external-element-ref>
+                        </section>
+                        <section id="1069">
+                            <property name="width">29.89010989010989%</property>
+                            <property name="gadgets">
+                                <gadget name="Gadget_90312126-3434-40fd-bc1d-e14c6b248c35" id="1006">
+                                    <property name="height">665px</property>
+                                    <property name="title">Index Summary</property>
+                                    <property name="externalGadgetURI">^/Report Designs/PortfolioCharts.rptdocument</property>
+                                    <property name="showTitle">false</property>
+                                    <property name="showBorder">false</property>
+                                    <property name="zIndex">5</property>
+                                    <property name="showScrollBar">false</property>
+                                    <property name="height">665px</property>
+                                    <property name="caption">
+                                        <gadget-caption id="1007">
+                                            <property name="showCaption">true</property>
+                                            <property name="horizontalAlignment">left</property>
+                                            <property name="fontFamily">"Lato"</property>
+                                            <property name="fontSize">18pt</property>
+                                            <property name="color">#353535</property>
+                                        </gadget-caption>
                                     </property>
-                                </data-view>
+                                    <property name="content">
+                                        <data-view id="1008">
+                                            <list-property name="userProperties">
+                                                <structure>
+                                                    <property name="name">showViewerToolbar</property>
+                                                    <property name="type">boolean</property>
+                                                </structure>
+                                            </list-property>
+                                            <property name="showViewerToolbar">false</property>
+                                            <property name="gadgetType">viewer</property>
+                                            <property name="externalContentRef">
+                                                <external-element-ref>
+                                                    <property name="sourceFile">^/Report Designs/PortfolioCharts.rptdocument</property>
+                                                </external-element-ref>
+                                            </property>
+                                        </data-view>
+                                    </property>
+                                </gadget>
                             </property>
-                        </gadget>
+                        </section>
                     </property>
                 </tab-element>
             </property>
