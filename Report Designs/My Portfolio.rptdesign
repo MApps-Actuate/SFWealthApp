@@ -982,76 +982,9 @@ else
   </emptyMessage>
   <seriesDefinitions>
    <query definition=""/>
-   <seriesPalette>
-    <entries _body=",255,106,138,199"/>
-    <entries _body=",255,242,88,106"/>
-    <entries _body=",255,232,172,57"/>
-    <entries _body=",255,128,255,128"/>
-    <entries _body=",255,64,128,128"/>
-    <entries _body=",255,128,128,192"/>
-    <entries _body=",255,170,85,85"/>
-    <entries _body=",255,128,128,0"/>
-    <entries _body=",255,192,192,192"/>
-    <entries _body=",255,255,255,128"/>
-    <entries _body=",255,128,192,128"/>
-    <entries _body=",255,7,146,94"/>
-    <entries _body=",255,0,128,255"/>
-    <entries _body=",255,255,128,192"/>
-    <entries _body=",255,0,255,255"/>
-    <entries _body=",255,255,128,128"/>
-    <entries _body=",255,0,128,192"/>
-    <entries _body=",255,128,128,192"/>
-    <entries _body=",255,255,0,255"/>
-    <entries _body=",255,128,64,64"/>
-    <entries _body=",255,255,128,64"/>
-    <entries _body=",255,80,240,120"/>
-    <entries _body=",255,0,64,128"/>
-    <entries _body=",255,128,0,64"/>
-    <entries _body=",255,255,0,128"/>
-    <entries _body=",255,128,128,64"/>
-    <entries _body=",255,128,128,128"/>
-    <entries _body=",255,255,128,255"/>
-    <entries _body=",255,0,64,0"/>
-    <entries _body=",255,0,0,0"/>
-    <entries _body=",255,255,255,255"/>
-    <entries _body=",255,255,128,0"/>
-   </seriesPalette>
    <seriesDefinitions>
     <query definition=""/>
-    <seriesPalette>
-     <entries _body=",255,106,138,199"/>
-     <entries _body=",255,242,88,106"/>
-     <entries _body=",255,232,172,57"/>
-     <entries _body=",255,128,255,128"/>
-     <entries _body=",255,64,128,128"/>
-     <entries _body=",255,128,128,192"/>
-     <entries _body=",255,170,85,85"/>
-     <entries _body=",255,128,128,0"/>
-     <entries _body=",255,192,192,192"/>
-     <entries _body=",255,255,255,128"/>
-     <entries _body=",255,128,192,128"/>
-     <entries _body=",255,7,146,94"/>
-     <entries _body=",255,0,128,255"/>
-     <entries _body=",255,255,128,192"/>
-     <entries _body=",255,0,255,255"/>
-     <entries _body=",255,255,128,128"/>
-     <entries _body=",255,0,128,192"/>
-     <entries _body=",255,128,128,192"/>
-     <entries _body=",255,255,0,255"/>
-     <entries _body=",255,128,64,64"/>
-     <entries _body=",255,255,128,64"/>
-     <entries _body=",255,80,240,120"/>
-     <entries _body=",255,0,64,128"/>
-     <entries _body=",255,128,0,64"/>
-     <entries _body=",255,255,0,128"/>
-     <entries _body=",255,128,128,64"/>
-     <entries _body=",255,128,128,128"/>
-     <entries _body=",255,255,128,255"/>
-     <entries _body=",255,0,64,0"/>
-     <entries _body=",255,0,0,0"/>
-     <entries _body=",255,255,255,255"/>
-     <entries _body=",255,255,128,0"/>
-    </seriesPalette>
+    <seriesPalette/>
     <series _type="PieSeries" seriesIdentifier="" rotation="0.0" innerRadius="75.0" innerRadiusPercent="true">
      <label visible="false">
       <caption value=""/>
@@ -1106,7 +1039,7 @@ else
                                                     <property name="width">3.8333333333333335in</property>
                                                     <property name="zIndex">0</property>
                                                     <property name="allowExport">true</property>
-                                                    <property name="theme">ThemesReportItems3.Clean Blue</property>
+                                                    <property name="theme">ThemesReportItems3.Modern</property>
                                                 </extended-item>
                                             </property>
                                         </multi-views>

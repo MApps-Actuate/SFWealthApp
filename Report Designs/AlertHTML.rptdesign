@@ -50,6 +50,12 @@
         </simple-master-page>
     </page-setup>
     <body>
+        <text id="58">
+            <property name="contentType">html</property>
+            <text-property name="content"><![CDATA[<script>
+$("<style>").prop("type","text/css").html("a:link { color: #0000EE; } a:visited { color: #0000EE; } a:hover { color: #00EE00; }").appendTo("head");
+</script>]]></text-property>
+        </text>
         <grid id="8">
             <property name="fontFamily">"Lato"</property>
             <property name="width">3in</property>

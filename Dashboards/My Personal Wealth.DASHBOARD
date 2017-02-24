@@ -4299,7 +4299,7 @@
     </body>
     <property name="dashboardView">
         <dashboard id="2">
-            <property name="activeTab">049f219c-22c5-445b-8bb1-b28f150e1ef51</property>
+            <property name="activeTab">799ed753-f99f-4741-ac5c-4717d38cee13</property>
             <property name="tabs">
                 <tab-element name="799ed753-f99f-4741-ac5c-4717d38cee13" id="1113">
                     <property name="title">Home</property>
@@ -4317,17 +4317,17 @@
                         <section id="1073">
                             <property name="width">17.519685039370078%</property>
                             <property name="gadgets">
-                                <gadget name="Gadget_6e6d05e7-e310-40aa-9c14-5e4952821357" id="967">
-                                    <property name="height">162px</property>
+                                <gadget name="Gadget_5f790af3-d7ab-46e5-8320-1b2d4a6e1da7" id="1116">
+                                    <property name="height">159px</property>
                                     <property name="title">My Alerts</property>
-                                    <property name="externalGadgetURI">^/Report Designs/AlertHTML.rptdesign</property>
+                                    <property name="externalGadgetURI">/Applications/SFWealthApp/Report Designs/AlertHTML.rptdocument</property>
                                     <property name="showTitle">false</property>
                                     <property name="showBorder">false</property>
-                                    <property name="zIndex">31</property>
+                                    <property name="zIndex">36</property>
                                     <property name="showScrollBar">false</property>
-                                    <property name="height">162px</property>
+                                    <property name="height">159px</property>
                                     <property name="caption">
-                                        <gadget-caption id="968">
+                                        <gadget-caption id="1117">
                                             <property name="showCaption">true</property>
                                             <property name="horizontalAlignment">left</property>
                                             <property name="fontFamily">"Lato"</property>
@@ -4339,7 +4339,7 @@
                                         </gadget-caption>
                                     </property>
                                     <property name="content">
-                                        <data-view id="969">
+                                        <data-view id="1118">
                                             <list-property name="userProperties">
                                                 <structure>
                                                     <property name="name">showViewerToolbar</property>
@@ -4350,8 +4350,7 @@
                                             <property name="gadgetType">viewer</property>
                                             <property name="externalContentRef">
                                                 <external-element-ref>
-                                                    <property name="sourceFile">^/Report Designs/AlertHTML.rptdocument</property>
-                                                    <property name="targetBookmark">table</property>
+                                                    <property name="sourceFile">/Applications/SFWealthApp/Report Designs/AlertHTML.rptdocument</property>
                                                 </external-element-ref>
                                             </property>
                                         </data-view>
