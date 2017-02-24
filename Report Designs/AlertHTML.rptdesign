@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
-    <property name="createdBy">Eclipse BIRT Designer Version 4.4.0.v20150710-0101 Build &lt;4.2.3.v20150710-0101></property>
+    <property name="createdBy">Eclipse BIRT Designer Version 4.6.0.v201603302314</property>
     <property name="units">in</property>
     <property name="iconFile">/templates/blank_report.gif</property>
     <property name="bidiLayoutOrientation">ltr</property>
@@ -120,6 +120,14 @@
                                 <property name="reportName">My Portfolio.rptdesign</property>
                                 <property name="targetWindow">_blank</property>
                                 <property name="targetFileType">report-document</property>
+                                <list-property name="paramBindings">
+                                    <structure>
+                                        <property name="paramName">__launchiv</property>
+                                        <simple-property-list name="expression">
+                                            <value type="javascript">true</value>
+                                        </simple-property-list>
+                                    </structure>
+                                </list-property>
                             </structure>
                         </list-property>
                     </label>

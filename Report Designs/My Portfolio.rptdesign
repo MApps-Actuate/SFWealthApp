@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
-    <property name="createdBy">Eclipse BIRT Designer Version 4.6.0.v201601291629 Build &lt;@BUILD@></property>
+    <property name="createdBy">Eclipse BIRT Designer Version 4.6.0.v201603302314</property>
     <property name="units">in</property>
     <property name="iconFile">/templates/blank_report.gif</property>
     <property name="layoutPreference">auto layout</property>
@@ -897,20 +897,20 @@ else
                                             <property name="views">
                                                 <extended-item extensionName="Chart" name="Asset Chart" id="485">
                                                     <xml-property name="xmlRepresentation"><![CDATA[<ActuateChart version="2.6.1">
- <ChartWithAxes version="2.6.1" type="Bar Chart" subType="Side-by-side" units="Points" seriesThickness="15.0" orientation="0">
+ <ChartWithoutAxes version="2.6.1" type="Pie Chart" subType="Standard" units="Points" seriesThickness="15.0">
   <description value="">
    <font>
     <alignment/>
    </font>
   </description>
   <block>
-   <children _type="TitleBlock" visible="true">
+   <children _type="TitleBlock" anchor="0" visible="true">
     <insets _body="0.0,0.0,0.0,0.0"/>
     <outline>
      <color _nil="1"/>
     </outline>
     <label>
-     <caption value="My Asset Allocation">
+     <caption value="My Assets">
       <font name="Verdana" size="8.0" bold="true">
        <alignment _body="1,"/>
       </font>
@@ -932,7 +932,7 @@ else
      </outline>
     </clientArea>
    </children>
-   <children _type="Legend" visible="false" orientation="0" position="1" itemType="0">
+   <children _type="Legend" orientation="1" position="3" itemType="1">
     <outline>
      <color _nil="1"/>
     </outline>
@@ -961,12 +961,13 @@ else
     <color _nil="1"/>
    </outline>
    <background _body=",0,255,255,255"/>
+   <cursor type="0"/>
   </block>
   <extendedProperties name="enable.area.alt" value="false"/>
   <extendedProperties name="enable.drill.category" value="true"/>
   <extendedProperties name="enable.drill.series" value="true"/>
   <extendedProperties name="jschart.series.shadow" value="true"/>
-  <extendedProperties name="jschart.client.script" value="beforeRendering: function(options, chart)&#13;&#10;&#13;&#10;{&#13;&#10;&#13;&#10;            //You can change options here.&#13;&#10;&#13;&#10;            options.plotOptions = {&#13;&#10;&#13;&#10;                        series : {&#13;&#10;&#13;&#10;                                    pointPadding: 0,&#13;&#10;                                    groupPadding: 0.05&#13;&#10;                        }&#13;&#10;&#13;&#10;            };&#13;&#10;&#13;&#10;},"/>
+  <extendedProperties name="jschart.client.script" value="/**&#13;&#10; * Called before chart instance is initially created.&#13;&#10; *&#13;&#10; * @param options&#13;&#10; *            chart options&#13;&#10; */&#13;&#10;beforeGeneration: function(options)&#13;&#10;{&#13;&#10;    //You can change options here.&#13;&#10;    options.title = &#13;&#10;        {&#13;&#10;        verticalAlign: &#039;middle&#039;,&#13;&#10;        floating: true,&#13;&#10;        },&#13;&#10;    options.plotOptions = &#13;&#10;    {&#13;&#10;           pie: {&#13;&#10;            size: &quot;100%&quot;&#13;&#10;            }&#13;&#10;    },&#13;&#10;    options.chart = &#13;&#10;        {&#13;&#10;            spacingLeft: 0,&#13;&#10;            spacingRight:0,&#13;&#10;            spacingBottom:0,&#13;&#10;            spacingTop:0,&#13;&#10;            marginLeft:65,&#13;&#10;        }&#13;&#10;},"/>
   <sampleData>
    <baseSampleData dataSetRepresentation="&#039;A&#039;,&#039;B&#039;,&#039;C&#039;,&#039;D&#039;,&#039;E&#039;"/>
    <orthogonalSampleData dataSetRepresentation="6,4,12,8,10"/>
@@ -979,109 +980,42 @@ else
     <color _body=",128,127,127,127"/>
    </outline>
   </emptyMessage>
-  <axes>
-   <title>
-    <background _nil="1"/>
-    <outline>
-     <color _nil="1"/>
-    </outline>
-   </title>
-   <associatedAxes primaryAxis="true">
-    <title>
-     <background _nil="1"/>
-     <outline>
-      <color _nil="1"/>
-     </outline>
-    </title>
-    <seriesDefinitions>
-     <query definition=""/>
-     <seriesPalette>
-      <entries _body=",255,106,138,199"/>
-      <entries _body=",255,242,88,106"/>
-      <entries _body=",255,232,172,57"/>
-      <entries _body=",255,128,255,128"/>
-      <entries _body=",255,64,128,128"/>
-      <entries _body=",255,128,128,192"/>
-      <entries _body=",255,170,85,85"/>
-      <entries _body=",255,128,128,0"/>
-      <entries _body=",255,192,192,192"/>
-      <entries _body=",255,255,255,128"/>
-      <entries _body=",255,128,192,128"/>
-      <entries _body=",255,7,146,94"/>
-      <entries _body=",255,0,128,255"/>
-      <entries _body=",255,255,128,192"/>
-      <entries _body=",255,0,255,255"/>
-      <entries _body=",255,255,128,128"/>
-      <entries _body=",255,0,128,192"/>
-      <entries _body=",255,128,128,192"/>
-      <entries _body=",255,255,0,255"/>
-      <entries _body=",255,128,64,64"/>
-      <entries _body=",255,255,128,64"/>
-      <entries _body=",255,80,240,120"/>
-      <entries _body=",255,0,64,128"/>
-      <entries _body=",255,128,0,64"/>
-      <entries _body=",255,255,0,128"/>
-      <entries _body=",255,128,128,64"/>
-      <entries _body=",255,128,128,128"/>
-      <entries _body=",255,255,128,255"/>
-      <entries _body=",255,0,64,0"/>
-      <entries _body=",255,0,0,0"/>
-      <entries _body=",255,255,255,255"/>
-      <entries _body=",255,255,128,0"/>
-     </seriesPalette>
-     <series _type="BarSeries" seriesIdentifier="" stacked="false" riser="0">
-      <label visible="false">
-       <caption value=""/>
-       <background _nil="1"/>
-       <outline>
-        <color _nil="1"/>
-       </outline>
-      </label>
-      <dataDefinition definition="row[&quot;Value&quot;]">
-       <grouping enabled="true" aggregateExpression="Min"/>
-      </dataDefinition>
-      <dataPoint suffix="" separator=", ">
-       <components type="3">
-        <formatSpecifier _type="JavaNumberFormatSpecifier" pattern="##.##%"/>
-       </components>
-      </dataPoint>
-      <triggers condition="6">
-       <action type="1">
-        <value _type="TooltipValue" text="" delay="200"/>
-       </action>
-      </triggers>
-      <curveFitting _nil="1"/>
-     </series>
-    </seriesDefinitions>
-    <lineAttributes>
-     <color _nil="1"/>
-    </lineAttributes>
-    <label>
-     <background _nil="1"/>
-     <outline>
-      <color _nil="1"/>
-     </outline>
-    </label>
-    <majorGrid>
-     <lineAttributes visible="true">
-      <color _body=",255,234,234,234"/>
-     </lineAttributes>
-     <tickAttributes>
-      <color _nil="1"/>
-     </tickAttributes>
-    </majorGrid>
-    <minorGrid>
-     <lineAttributes>
-      <color _nil="1"/>
-     </lineAttributes>
-     <tickAttributes>
-      <color _nil="1"/>
-     </tickAttributes>
-    </minorGrid>
-    <origin>
-     <value _nil="1"/>
-    </origin>
-   </associatedAxes>
+  <seriesDefinitions>
+   <query definition=""/>
+   <seriesPalette>
+    <entries _body=",255,106,138,199"/>
+    <entries _body=",255,242,88,106"/>
+    <entries _body=",255,232,172,57"/>
+    <entries _body=",255,128,255,128"/>
+    <entries _body=",255,64,128,128"/>
+    <entries _body=",255,128,128,192"/>
+    <entries _body=",255,170,85,85"/>
+    <entries _body=",255,128,128,0"/>
+    <entries _body=",255,192,192,192"/>
+    <entries _body=",255,255,255,128"/>
+    <entries _body=",255,128,192,128"/>
+    <entries _body=",255,7,146,94"/>
+    <entries _body=",255,0,128,255"/>
+    <entries _body=",255,255,128,192"/>
+    <entries _body=",255,0,255,255"/>
+    <entries _body=",255,255,128,128"/>
+    <entries _body=",255,0,128,192"/>
+    <entries _body=",255,128,128,192"/>
+    <entries _body=",255,255,0,255"/>
+    <entries _body=",255,128,64,64"/>
+    <entries _body=",255,255,128,64"/>
+    <entries _body=",255,80,240,120"/>
+    <entries _body=",255,0,64,128"/>
+    <entries _body=",255,128,0,64"/>
+    <entries _body=",255,255,0,128"/>
+    <entries _body=",255,128,128,64"/>
+    <entries _body=",255,128,128,128"/>
+    <entries _body=",255,255,128,255"/>
+    <entries _body=",255,0,64,0"/>
+    <entries _body=",255,0,0,0"/>
+    <entries _body=",255,255,255,255"/>
+    <entries _body=",255,255,128,0"/>
+   </seriesPalette>
    <seriesDefinitions>
     <query definition=""/>
     <seriesPalette>
@@ -1118,54 +1052,52 @@ else
      <entries _body=",255,255,255,255"/>
      <entries _body=",255,255,128,0"/>
     </seriesPalette>
-    <series seriesIdentifier="Asset Class">
-     <label>
+    <series _type="PieSeries" seriesIdentifier="" rotation="0.0" innerRadius="75.0" innerRadiusPercent="true">
+     <label visible="false">
       <caption value=""/>
       <background _nil="1"/>
       <outline>
        <color _nil="1"/>
       </outline>
      </label>
-     <dataDefinition definition="row[&quot;Accounts&quot;]"/>
-     <dataPoint separator=", ">
-      <components type="1"/>
+     <dataDefinition definition="row[&quot;Value&quot;]">
+      <grouping enabled="true" aggregateExpression="Min"/>
+     </dataDefinition>
+     <dataPoint suffix="" separator=", ">
+      <components type="3">
+       <formatSpecifier _type="JavaNumberFormatSpecifier" pattern="##.##%"/>
+      </components>
      </dataPoint>
-     <curveFitting _nil="1"/>
+     <triggers condition="6">
+      <action type="1">
+       <value _type="TooltipValue" text="" delay="200"/>
+      </action>
+     </triggers>
+     <title>
+      <background _nil="1"/>
+      <outline>
+       <color _nil="1"/>
+      </outline>
+     </title>
     </series>
+    <grouping/>
    </seriesDefinitions>
-   <lineAttributes>
-    <color _nil="1"/>
-   </lineAttributes>
-   <label>
-    <background _nil="1"/>
-    <outline>
-     <color _nil="1"/>
-    </outline>
-   </label>
-   <majorGrid>
-    <lineAttributes>
-     <color _nil="1"/>
-    </lineAttributes>
-    <tickAttributes>
-     <color _nil="1"/>
-    </tickAttributes>
-   </majorGrid>
-   <minorGrid>
-    <lineAttributes>
-     <color _nil="1"/>
-    </lineAttributes>
-    <tickAttributes>
-     <color _nil="1"/>
-    </tickAttributes>
-   </minorGrid>
-   <origin>
-    <value _nil="1"/>
-   </origin>
-  </axes>
-  <rotation>
-   <angles/>
-  </rotation>
- </ChartWithAxes>
+   <series seriesIdentifier="Asset Class">
+    <label>
+     <caption value=""/>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </label>
+    <dataDefinition definition="row[&quot;Accounts&quot;]"/>
+    <dataPoint separator=", ">
+     <components type="1"/>
+    </dataPoint>
+    <curveFitting _nil="1"/>
+   </series>
+  </seriesDefinitions>
+ </ChartWithoutAxes>
 </ActuateChart>
 ]]></xml-property>
                                                     <property name="outputFormat">JS</property>

@@ -61,7 +61,7 @@ function renderDashboard(dashboardName) {
 	
 	if (birtApp.dashboard) {
 		birtApp.dashboard.onUnload();
-		birtApp.dashbaord = null;
+		birtApp.dashboard = null;
 	}
 	
     // the DOM element id "dashboardContainer" is actually hard coded inside of dashboard.js.  
@@ -69,15 +69,15 @@ function renderDashboard(dashboardName) {
 	birtApp.dashboard = new actuate.Dashboard("dashboardContainer", true);
 	birtApp.dashboard.setDashboardName(dashboardName);
 					
-	if (birtApp.editMode)
-		birtApp.dashboard.setIsDesigner(true);			
+	if (birtApp.editMode) 
+		birtApp.dashboard.setIsDesigner(true);	
 	
 	birtApp.dashboard.submit(function () {
 		// do this to remove horizontal scrolling when a vertical scroll bar is needed for dashboard 
 		$(".actuate-widget-panel-body .actuate-widget-panel-body-noheader .actuate-widget-panel-body-noborder").css({overflowX: "hidden"});
 
 		if (birtApp.submitCallback)
-			birtApp.submitCallback();
+			if (birtApp.hideNav) $("button:contains('Hide')").click();  // Hide the dashboard edit mode toolbar
 	});
 }
 
