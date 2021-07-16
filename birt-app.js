@@ -59,6 +59,12 @@ function renderApp() {
 
 function renderDashboard(dashboardName) {
 	
+	var width = $("#dashboardContainer").width();
+	//var height = $("#dashboardContainer").height();
+	var height = $(window).height();
+	//console.log (width);
+	//console.log (height);
+	
 	if (birtApp.dashboard) {
 		birtApp.dashboard.onUnload();
 		birtApp.dashboard = null;
@@ -69,16 +75,13 @@ function renderDashboard(dashboardName) {
 	birtApp.dashboard = new actuate.Dashboard("dashboardContainer", true);
 	birtApp.dashboard.setDashboardName(dashboardName);
 					
-	if (birtApp.editMode) 
-		birtApp.dashboard.setIsDesigner(true);	
-	
-	birtApp.dashboard.submit(function () {
-		// do this to remove horizontal scrolling when a vertical scroll bar is needed for dashboard 
-		$(".actuate-widget-panel-body .actuate-widget-panel-body-noheader .actuate-widget-panel-body-noborder").css({overflowX: "hidden"});
-
-		if (birtApp.submitCallback)
-			if (birtApp.hideNav) $("button:contains('Hide')").click();  // Hide the dashboard edit mode toolbar
-	});
+//if (birtApp.editMode) 
+	//	birtApp.dashboard.setIsDesigner(true);	
+	//debugger;
+	birtApp.dashboard.setIsDesigner(false);
+	birtApp.dashboard.setHeight(height);
+	birtApp.dashboard.setWidth(width)
+	birtApp.dashboard.submit( function() {} );
 }
 
 function renderReport(reportName, reportParameters) {

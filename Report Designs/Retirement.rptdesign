@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
-    <property name="createdBy">Eclipse BIRT Designer Version 4.4.0.v20150710-0101 Build &lt;4.2.3.v20150710-0101></property>
+    <property name="createdBy">Eclipse BIRT Designer Version 4.11.0.v202104210725</property>
     <property name="units">in</property>
     <property name="iconFile">/templates/blank_report.gif</property>
     <property name="layoutPreference">auto layout</property>
@@ -843,7 +843,7 @@ Click a specific point on the chart to highlight the details for that year.</DIV
                                 <property name="dataType">integer</property>
                             </structure>
                         </list-property>
-                        <property name="theme">ThemesReportItems3.bleu</property>
+                        <property name="theme">ThemesReportItems3.Clean Blue</property>
                     </extended-item>
                 </cell>
                 <cell id="39">
@@ -1012,7 +1012,7 @@ Click a specific point on the chart to highlight the details for that year.</DIV
                                 <property name="dataType">integer</property>
                             </structure>
                         </list-property>
-                        <property name="theme">ThemesReportItems3.bleu</property>
+                        <property name="theme">ThemesReportItems3.Clean Blue</property>
                     </extended-item>
                 </cell>
             </row>
@@ -1052,7 +1052,7 @@ Click a specific point on the chart to highlight the details for that year.</DIV
                                                     <property name="category">Percent</property>
                                                     <property name="pattern">###0%{RoundingMode=HALF_UP}</property>
                                                 </structure>
-                                                <expression name="bookmark" type="javascript">"Col_"+data["DateYear"]+"-Type_"+data["Type"]+"_"+ new Date().getTime() + String.fromCharCode(97 + Math.floor(Math.random() * 26));</expression>
+                                                <expression name="bookmark" type="javascript">"Col_"+data["DateYear"]+"-Type_"+data["Type"]+"_"+ new Date().getTime() + String.fromCharCode(97 + Math.floor(Math.random() * 26)) + String.fromCharCode(97 + Math.floor(Math.random() * 26));</expression>
                                                 <property name="resultSetColumn">Allocation_Asset/Asset_DateYear/DateYear</property>
                                             </data>
                                         </property>

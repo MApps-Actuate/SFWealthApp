@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 4.11.0.v202104210725</property>
+    <property name="units">in</property>
+    <property name="iconFile">/templates/blank_report.gif</property>
+    <property name="layoutPreference">auto layout</property>
+    <property name="bidiLayoutOrientation">ltr</property>
+    <property name="imageDPI">96</property>
+    <property name="responsiveReport">true</property>
+    <page-setup>
+        <simple-master-page name="Simple MasterPage" id="2">
+            <property name="orientation">auto</property>
+            <page-footer>
+                <text id="3">
+                    <property name="contentType">html</property>
+                    <text-property name="content"><![CDATA[<value-of>new Date()</value-of>]]></text-property>
+                </text>
+            </page-footer>
+        </simple-master-page>
+    </page-setup>
+    <body>
+        <grid id="5">
+            <property name="width">645px</property>
+            <expression name="bookmark" type="javascript">"myStocks"</expression>
+            <column id="6"/>
+            <row id="7">
+                <cell id="8">
+                    <text id="9">
+                        <property name="contentType">html</property>
+                        <text-property name="content"><![CDATA[<!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+  <div class="tradingview-widget-container__widget"></div>
+
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+  {
+  "symbols": [
+    {
+      "description": "OpenText NASDQ",
+      "proName": "NASDAQ:OTEX"
+    },
+    {
+      "description": "OpenText TSX",
+      "proName": "TSX:OTEX"
+    },
+    {
+      "description": "IBM",
+      "proName": "NYSE:IBM"
+    },
+    {
+      "description": "Apple",
+      "proName": "NASDAQ:AAPL"
+    },
+    {
+      "description": "INTEL",
+      "proName": "NASDAQ:INTC"
+    },
+    {
+      "description": "Google",
+      "proName": "NASDAQ:GOOGL"
+    }
+  ],
+  "showSymbolLogo": true,
+  "colorTheme": "light",
+  "isTransparent": true,
+  "displayMode": "compact",
+  "locale": "en"
+}
+  </script>
+</div>
+<!-- TradingView Widget END -->]]></text-property>
+                    </text>
+                </cell>
+            </row>
+        </grid>
+    </body>
+</report>
