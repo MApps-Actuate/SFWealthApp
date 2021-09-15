@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
-    <property name="createdBy">Eclipse BIRT Designer Version 4.6.0.v201601291629 Build &lt;@BUILD@></property>
+    <property name="createdBy">Eclipse BIRT Designer Version 4.4.0.v20150710-0101 Build &lt;4.2.3.v20150710-0101></property>
     <property name="units">in</property>
     <property name="iconFile">/templates/blank_report.gif</property>
     <property name="layoutPreference">auto layout</property>
@@ -8,7 +8,7 @@
     <property name="imageDPI">96</property>
     <list-property name="libraries">
         <structure>
-            <property name="fileName">/ThemesReportItems3.rptlibrary</property>
+            <property name="fileName">ThemesReportItems3.rptlibrary</property>
             <property name="namespace">ThemesReportItems3</property>
         </structure>
     </list-property>
@@ -423,7 +423,7 @@ if ((window["__firstView"] === undefined)||(window["__firstView"]==false)) {
     </page-setup>
     <body>
         <grid id="10">
-            <property name="fontFamily">"Source Sans Pro"</property>
+            <property name="fontFamily">"Raleway"</property>
             <property name="width">8.614583333333334in</property>
             <expression name="bookmark" type="javascript">"AllocationPlan"</expression>
             <column id="36">
@@ -446,11 +446,9 @@ if ((window["__firstView"] === undefined)||(window["__firstView"]==false)) {
                 <cell id="32">
                     <property name="paddingLeft">5pt</property>
                     <label id="37">
-                        <property name="fontFamily">"Verdana"</property>
                         <text-property name="text">Retirement Year:</text-property>
                     </label>
                     <text id="25">
-                        <property name="fontFamily">"Verdana"</property>
                         <property name="paddingLeft">10pt</property>
                         <property name="textAlign">center</property>
                         <property name="contentType">html</property>
@@ -458,9 +456,17 @@ if ((window["__firstView"] === undefined)||(window["__firstView"]==false)) {
 <br><br>
 
 <script>
-//get selected strategy
-var strategy = 	window["saveStrat"];
-populateDropdown(strategy);
+
+//Populate year dropdown
+var rYear = document.getElementById("retireYear");
+var d = new Date();
+var n = d.getFullYear();
+for (i=0; i<50; i++) {
+    var opt = document.createElement('option');
+    opt.innerHTML = n + i;
+    opt.value = n + i;
+    rYear.appendChild(opt);
+}
 
 //set dropdown to selected year
 document.getElementById("retireYear").value=<VALUE-OF>params["pRetireYear"].value</VALUE-OF>;
@@ -468,32 +474,12 @@ document.getElementById("retireYear").value=<VALUE-OF>params["pRetireYear"].valu
 //Client Side variable for chart scripting
 RetireYearParam=<VALUE-OF>params["pRetireYear"].value</VALUE-OF>;
 
-function populateDropdown(strategy) {
-	var aCon = ["2016","2019","2021","2024","2026","2031","2036","2041","2046","2051","2061"];
-	var aMod = ["2016","2018","2021","2024","2026","2029","2031","2034","2036","2041","2046","2051","2056","2061","2071"];
-	var aAgg = 	["2016","2019","2021","2023","2026","2029","2031","2034","2036","2039","2041","2046","2051","2056","2061","2066","2076"];
-
-	var aYears = aMod;
-	if (strategy == "Conservative") aYears = aCon;
-	if (strategy == "Aggressive") aYears = aAgg;
-
-	//Populate year dropdown
-	var rYear = document.getElementById("retireYear");
-
-	for (i=0; i<aYears.length; i++) {
-    	var opt = document.createElement('option');
-    	opt.innerHTML = aYears[i];
-    	opt.value = aYears[i];
-    	rYear.appendChild(opt);
-	}
-}
-
 function retireYearSelect(yr) {
 	if (bviewer == null) return;
 	
 	//get selected strategy
 	var strategy = $('input[name="strategy"]:checked').val();
-
+	
 	//reset onContentUpdate
 	window["__firstView"]=false;
 	
@@ -514,11 +500,9 @@ function retireYearSelect(yr) {
                 <cell id="30">
                     <property name="paddingBottom">10pt</property>
                     <label id="43">
-                        <property name="fontFamily">"Verdana"</property>
                         <text-property name="text">Strategy:</text-property>
                     </label>
                     <text id="28">
-                        <property name="fontFamily">"Verdana"</property>
                         <property name="paddingLeft">10pt</property>
                         <property name="textAlign">left</property>
                         <property name="contentType">html</property>
@@ -534,13 +518,8 @@ document.getElementById("<VALUE-OF>params["pStrategy"].value</VALUE-OF>").checke
 function strategySelect(strategy) {
 	if (bviewer == null) return;
 	
-	// Populate year dropdown
-	window["saveStrat"]=strategy;
-	populateDropdown(strategy);
-	
 	//get year selected
-	//var ryr = document.getElementById("retireYear").value;
-	var ryr = 2041;
+	var ryr = document.getElementById("retireYear").value;
 	
 	//reset onContentUpdate
 	window["__firstView"]=false;
@@ -562,7 +541,6 @@ function strategySelect(strategy) {
                     <property name="colSpan">3</property>
                     <property name="rowSpan">1</property>
                     <text id="250">
-                        <property name="fontFamily">"Verdana"</property>
                         <property name="borderBottomStyle">none</property>
                         <property name="borderLeftStyle">none</property>
                         <property name="borderRightStyle">none</property>
@@ -865,7 +843,7 @@ Click a specific point on the chart to highlight the details for that year.</DIV
                                 <property name="dataType">integer</property>
                             </structure>
                         </list-property>
-                        <property name="theme">ThemesReportItems3.Modern</property>
+                        <property name="theme">ThemesReportItems3.bleu</property>
                     </extended-item>
                 </cell>
                 <cell id="39">
@@ -948,40 +926,9 @@ Click a specific point on the chart to highlight the details for that year.</DIV
   </emptyMessage>
   <seriesDefinitions sorting="1">
    <query definition=""/>
-   <seriesPalette>
-    <entries _body=",255,154,204,0"/>
-    <entries _body=",255,255,128,64"/>
-    <entries _body=",255,255,102,0"/>
-    <entries _body=",255,80,240,120"/>
-    <entries _body=",255,0,64,128"/>
-    <entries _body=",255,128,0,64"/>
-    <entries _body=",255,255,0,128"/>
-    <entries _body=",255,128,128,64"/>
-    <entries _body=",255,128,128,128"/>
-    <entries _body=",255,255,128,255"/>
-    <entries _body=",255,0,64,0"/>
-    <entries _body=",255,0,0,0"/>
-    <entries _body=",255,255,255,255"/>
-    <entries _body=",255,255,128,0"/>
-   </seriesPalette>
    <seriesDefinitions>
     <query definition=""/>
-    <seriesPalette>
-     <entries _body=",255,154,204,0"/>
-     <entries _body=",255,255,128,64"/>
-     <entries _body=",255,255,102,0"/>
-     <entries _body=",255,80,240,120"/>
-     <entries _body=",255,0,64,128"/>
-     <entries _body=",255,128,0,64"/>
-     <entries _body=",255,255,0,128"/>
-     <entries _body=",255,128,128,64"/>
-     <entries _body=",255,128,128,128"/>
-     <entries _body=",255,255,128,255"/>
-     <entries _body=",255,0,64,0"/>
-     <entries _body=",255,0,0,0"/>
-     <entries _body=",255,255,255,255"/>
-     <entries _body=",255,255,128,0"/>
-    </seriesPalette>
+    <seriesPalette/>
     <series _type="PieSeries" seriesIdentifier="Series 1" explosionExpression="0" leaderLineLength="0.0" rotation="105.0" innerRadius="70.0" innerRadiusPercent="false">
      <label visible="true">
       <background _nil="1"/>
@@ -1065,7 +1012,7 @@ Click a specific point on the chart to highlight the details for that year.</DIV
                                 <property name="dataType">integer</property>
                             </structure>
                         </list-property>
-                        <property name="theme">ThemesReportItems3.Modern</property>
+                        <property name="theme">ThemesReportItems3.bleu</property>
                     </extended-item>
                 </cell>
             </row>
@@ -1118,6 +1065,7 @@ Click a specific point on the chart to highlight the details for that year.</DIV
                                         <property name="color">white</property>
                                         <property name="content">
                                             <data id="236">
+                                                <property name="fontWeight">normal</property>
                                                 <property name="fontStyle">normal</property>
                                                 <property name="color">#000000</property>
                                                 <structure name="numberFormat">
@@ -1134,6 +1082,7 @@ Click a specific point on the chart to highlight the details for that year.</DIV
                                         <property name="color">white</property>
                                         <property name="content">
                                             <data id="240">
+                                                <property name="fontWeight">normal</property>
                                                 <property name="fontStyle">normal</property>
                                                 <property name="color">black</property>
                                                 <structure name="numberFormat">
@@ -1166,6 +1115,7 @@ Click a specific point on the chart to highlight the details for that year.</DIV
                                                         <property name="content">
                                                             <data name="Type" id="206">
                                                                 <property name="fontWeight">normal</property>
+                                                                <property name="color">black</property>
                                                                 <property name="whiteSpace">nowrap</property>
                                                                 <property name="resultSetColumn">Type</property>
                                                             </data>
@@ -1179,7 +1129,7 @@ Click a specific point on the chart to highlight the details for that year.</DIV
                                                         <property name="content">
                                                             <data name="Type_TOTAL" id="237">
                                                                 <property name="fontWeight">bold</property>
-                                                                <property name="color">#000000</property>
+                                                                <property name="color">#FFFFFF</property>
                                                                 <property name="marginRight">2pt</property>
                                                                 <property name="paddingRight">1pt</property>
                                                                 <structure name="numberFormat">
@@ -1207,6 +1157,7 @@ Click a specific point on the chart to highlight the details for that year.</DIV
                                                         <property name="content">
                                                             <data name="Asset Category" id="212">
                                                                 <property name="fontWeight">normal</property>
+                                                                <property name="color">black</property>
                                                                 <property name="whiteSpace">nowrap</property>
                                                                 <property name="resultSetColumn">Asset Category</property>
                                                             </data>
@@ -1219,7 +1170,7 @@ Click a specific point on the chart to highlight the details for that year.</DIV
                                                     <extended-item extensionName="CrosstabCell" id="238">
                                                         <property name="content">
                                                             <data name="Asset Category_TOTAL" id="241">
-                                                                <property name="color">black</property>
+                                                                <property name="color">#FFFFFF</property>
                                                                 <property name="marginRight">2pt</property>
                                                                 <property name="paddingRight">1pt</property>
                                                                 <structure name="numberFormat">
@@ -1246,6 +1197,7 @@ Click a specific point on the chart to highlight the details for that year.</DIV
                                                         <property name="content">
                                                             <data name="Asset" id="218">
                                                                 <property name="fontWeight">normal</property>
+                                                                <property name="color">black</property>
                                                                 <property name="whiteSpace">nowrap</property>
                                                                 <property name="resultSetColumn">Asset</property>
                                                             </data>
@@ -1274,6 +1226,7 @@ Click a specific point on the chart to highlight the details for that year.</DIV
                                                         <property name="content">
                                                             <data name="DateYear" id="224">
                                                                 <property name="fontWeight">normal</property>
+                                                                <property name="color">black</property>
                                                                 <structure name="numberFormat">
                                                                     <property name="category">Fixed</property>
                                                                     <property name="pattern">###0{RoundingMode=UNNECESSARY}</property>
@@ -1297,6 +1250,7 @@ Click a specific point on the chart to highlight the details for that year.</DIV
                                 <property name="content">
                                     <label id="207">
                                         <property name="fontWeight">normal</property>
+                                        <property name="color">black</property>
                                         <property name="textAlign">left</property>
                                         <text-property name="text">Type</text-property>
                                     </label>
@@ -1307,6 +1261,7 @@ Click a specific point on the chart to highlight the details for that year.</DIV
                                 <property name="content">
                                     <label id="213">
                                         <property name="fontWeight">normal</property>
+                                        <property name="color">black</property>
                                         <property name="textAlign">left</property>
                                         <text-property name="text">Asset Category</text-property>
                                     </label>
@@ -1317,6 +1272,7 @@ Click a specific point on the chart to highlight the details for that year.</DIV
                                 <property name="content">
                                     <label id="219">
                                         <property name="fontWeight">normal</property>
+                                        <property name="color">black</property>
                                         <property name="textAlign">left</property>
                                         <text-property name="text">Asset</text-property>
                                     </label>
@@ -1327,7 +1283,7 @@ Click a specific point on the chart to highlight the details for that year.</DIV
                             <extended-item extensionName="CrosstabCell" id="211"/>
                             <extended-item extensionName="CrosstabCell" id="217"/>
                         </property>
-                        <property name="fontFamily">"Source Sans Pro"</property>
+                        <property name="color">black</property>
                         <expression name="bookmark" type="javascript">"CTAllocations"</expression>
                         <list-property name="boundDataColumns">
                             <structure>
@@ -1391,7 +1347,7 @@ Click a specific point on the chart to highlight the details for that year.</DIV
                                 <property name="dataType">string</property>
                             </structure>
                         </list-property>
-                        <property name="theme">ThemesReportItems3.modern-crosstab</property>
+                        <property name="theme">ThemesReportItems3.clean blue-crosstab</property>
                         <property name="linkedDataModel">Data Model</property>
                     </extended-item>
                 </cell>

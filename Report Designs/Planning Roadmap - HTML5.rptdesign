@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
-    <property name="createdBy">Eclipse BIRT Designer Version 4.11.0.v202104210725</property>
+    <property name="createdBy">Eclipse BIRT Designer Version 4.2.3.v20131216-0430 Build &lt;4.2.3.v20131216-0430></property>
     <text-property name="title">Planning Roadmap</text-property>
     <html-property name="description">An Application within a Report.&#13;
 &#13;
@@ -48,20 +48,6 @@ retirementAmountAtAgeGoal = 0;
     <property name="iconFile">/templates/blank_report.gif</property>
     <property name="layoutPreference">auto layout</property>
     <property name="bidiLayoutOrientation">ltr</property>
-    <method name="onContentUpdate"><![CDATA[vwr = this.getViewer();
-
-// Get the Viewer's current UI Options
-var uiOptions = this.getViewer().getUIOptions();
-
-// Remove ability for user to change interactivity options
-uiOptions.enableEditReport(false);
-
-// Set the modified UI Options back into the Viewer
-this.getViewer().setUIOptions(uiOptions);
-
-// If Interactivity is not enabled, enable it
-if (!this.getViewer().isInteractive())
-	this.getViewer().enableIV();]]></method>
     <parameters>
         <scalar-parameter name="pMonthlyContribution" id="104">
             <property name="hidden">true</property>
@@ -69,7 +55,7 @@ if (!this.getViewer().isInteractive())
             <property name="dataType">integer</property>
             <property name="distinct">true</property>
             <simple-property-list name="defaultValue">
-                <value type="constant">5000</value>
+                <value type="constant">10000</value>
             </simple-property-list>
             <list-property name="selectionList"/>
             <property name="paramType">simple</property>
@@ -143,7 +129,7 @@ if (!this.getViewer().isInteractive())
             <property name="dataType">string</property>
             <property name="distinct">true</property>
             <simple-property-list name="defaultValue">
-                <value type="constant">202604,202803,203001,202509</value>
+                <value type="constant">201604,201803,202001,201509</value>
             </simple-property-list>
             <list-property name="selectionList"/>
             <property name="paramType">simple</property>
@@ -159,22 +145,6 @@ if (!this.getViewer().isInteractive())
             <property name="distinct">true</property>
             <simple-property-list name="defaultValue">
                 <value type="constant">1300000,125000,1200000,75000</value>
-            </simple-property-list>
-            <list-property name="selectionList"/>
-            <property name="paramType">simple</property>
-            <property name="controlType">text-box</property>
-            <structure name="format">
-                <property name="category">Unformatted</property>
-            </structure>
-        </scalar-parameter>
-        <scalar-parameter name="pNotes" id="440">
-            <property name="hidden">true</property>
-            <property name="valueType">static</property>
-            <property name="isRequired">false</property>
-            <property name="dataType">string</property>
-            <property name="distinct">true</property>
-            <simple-property-list name="defaultValue">
-                <value type="constant">Don't forget to plan for the kid's college tuition and expenses!</value>
             </simple-property-list>
             <list-property name="selectionList"/>
             <property name="paramType">simple</property>
@@ -398,7 +368,6 @@ reportContext.setPersistentGlobalVariable("retirementGoalAgeValue", "" + retirem
 reportContext.setPersistentGlobalVariable("baseChartRows", "" + totalBaseRows);
 reportContext.setPersistentGlobalVariable("totalChartRows", "" + totalRecs);	
 reportContext.setPersistentGlobalVariable("retirementAmountAchievedYearMonthVar", "" + retirementAmountAchievedYearMonth);
-reportContext.setPersistentGlobalVariable("allLifeEventNames", lifeEventNames.join(","));
 
 var json = "{";
 
@@ -411,7 +380,6 @@ for (var i = 0; i < lifeEventStates.length; i++) {
 	json += "state:" + lifeEventStates[i];
 	json += ",rec:" + lifeEventRecs[i];
 	json += ",type:" + lifeEventTypes[i]; 
-	json += ",name:'" + lifeEventNames[i] +"'";
 	json += "}";	
 }
 json += "]";
@@ -435,32 +403,22 @@ vars["planningData"] = json;
 ]]></method>
         </script-data-set>
         <oda-data-set extensionID="com.actuate.data.oda.static.dataSet" name="Data Set Static" id="424">
-            <list-property name="computedColumns">
-                <structure>
-                    <property name="name">MNTH_END_YYYYMM</property>
-                    <expression name="expression" type="javascript">var yr = (new Date().getFullYear() + row["offset"]).toString();&#13;
-var mth = BirtStr.right(row["MNTH_END_YYYYMM_orig"],2);&#13;
-parseInt(yr + mth);</expression>
-                    <property name="dataType">integer</property>
-                </structure>
-                <structure>
-                    <property name="name">BIRTH_YEAR</property>
-                    <expression name="expression" type="javascript">new Date().getFullYear() -50</expression>
-                    <property name="dataType">integer</property>
-                </structure>
-            </list-property>
             <list-property name="columnHints">
                 <structure>
-                    <property name="columnName">BIRTH_YEAR_orig</property>
+                    <property name="columnName">BIRTH_YEAR</property>
                     <property name="analysis">measure</property>
-                    <text-property name="displayName">BIRTH_YEAR_orig</text-property>
-                    <text-property name="heading">BIRTH_YEAR_orig</text-property>
+                    <text-property name="displayName">BIRTH_YEAR</text-property>
+                    <property name="onColumnLayout">false</property>
+                    <text-property name="heading">BIRTH_YEAR</text-property>
+                    <property name="analysisColumn">BIRTH_YEAR</property>
                 </structure>
                 <structure>
-                    <property name="columnName">MNTH_END_YYYYMM_orig</property>
+                    <property name="columnName">MNTH_END_YYYYMM</property>
                     <property name="analysis">measure</property>
-                    <text-property name="displayName">MNTH_END_YYYYMM_orig</text-property>
-                    <text-property name="heading">MNTH_END_YYYYMM_orig</text-property>
+                    <text-property name="displayName">MNTH_END_YYYYMM</text-property>
+                    <property name="onColumnLayout">false</property>
+                    <text-property name="heading">MNTH_END_YYYYMM</text-property>
+                    <property name="analysisColumn">MNTH_END_YYYYMM</property>
                 </structure>
                 <structure>
                     <property name="columnName">totalnetworth</property>
@@ -468,6 +426,7 @@ parseInt(yr + mth);</expression>
                     <text-property name="displayName">totalnetworth</text-property>
                     <property name="onColumnLayout">false</property>
                     <text-property name="heading">totalnetworth</text-property>
+                    <property name="analysisColumn">totalnetworth</property>
                 </structure>
                 <structure>
                     <property name="columnName">retirementage</property>
@@ -475,6 +434,7 @@ parseInt(yr + mth);</expression>
                     <text-property name="displayName">retirementage</text-property>
                     <property name="onColumnLayout">false</property>
                     <text-property name="heading">retirementage</text-property>
+                    <property name="analysisColumn">retirementage</property>
                 </structure>
                 <structure>
                     <property name="columnName">retirementamt</property>
@@ -482,20 +442,7 @@ parseInt(yr + mth);</expression>
                     <text-property name="displayName">retirementamt</text-property>
                     <property name="onColumnLayout">false</property>
                     <text-property name="heading">retirementamt</text-property>
-                </structure>
-                <structure>
-                    <property name="columnName">offset</property>
-                    <property name="analysis">measure</property>
-                    <text-property name="displayName">offset</text-property>
-                    <text-property name="heading">offset</text-property>
-                </structure>
-                <structure>
-                    <property name="columnName">MNTH_END_YYYYMM</property>
-                    <property name="analysis">measure</property>
-                </structure>
-                <structure>
-                    <property name="columnName">BIRTH_YEAR</property>
-                    <property name="analysis">measure</property>
+                    <property name="analysisColumn">retirementamt</property>
                 </structure>
             </list-property>
             <list-property name="parameters"/>
@@ -503,12 +450,12 @@ parseInt(yr + mth);</expression>
                 <list-property name="resultSet">
                     <structure>
                         <property name="position">1</property>
-                        <property name="name">BIRTH_YEAR_orig</property>
+                        <property name="name">BIRTH_YEAR</property>
                         <property name="dataType">integer</property>
                     </structure>
                     <structure>
                         <property name="position">2</property>
-                        <property name="name">MNTH_END_YYYYMM_orig</property>
+                        <property name="name">MNTH_END_YYYYMM</property>
                         <property name="dataType">integer</property>
                     </structure>
                     <structure>
@@ -526,35 +473,16 @@ parseInt(yr + mth);</expression>
                         <property name="name">retirementamt</property>
                         <property name="dataType">integer</property>
                     </structure>
-                    <structure>
-                        <property name="position">6</property>
-                        <property name="name">offset</property>
-                        <property name="dataType">integer</property>
-                    </structure>
-                    <structure>
-                        <property name="position">7</property>
-                        <property name="name">MNTH_END_YYYYMM</property>
-                        <property name="dataType">integer</property>
-                    </structure>
-                    <structure>
-                        <property name="position">8</property>
-                        <property name="name">BIRTH_YEAR</property>
-                        <property name="dataType">integer</property>
-                    </structure>
                 </list-property>
             </structure>
             <method name="beforeOpen"><![CDATA[curRow = 0;
-dataRows = [];
-curYear = new Date().getFullYear();]]></method>
+dataRows = [];]]></method>
             <method name="onFetch"><![CDATA[dataRows[curRow] = [];
-dataRows[curRow][0] = curYear -50;
-var yr = (curYear + row["offset"]).toString(); //calculate year
-var mth = BirtStr.right(row["MNTH_END_YYYYMM"],2); //get month
-var yrmth = parseInt(yr + mth); //YYYYMM
-dataRows[curRow][1] = yrmth;
-dataRows[curRow][2] = row[3]; //totalnetworth
-dataRows[curRow][3] = row[4]; //retirementage
-dataRows[curRow][4] = row[5]; //retirementamt
+dataRows[curRow][0] = row[1];
+dataRows[curRow][1] = row[2];
+dataRows[curRow][2] = row[3];
+dataRows[curRow][3] = row[4];
+dataRows[curRow][4] = row[5];
 curRow++;
 totalBaseRows = curRow;
 ]]></method>
@@ -562,15 +490,15 @@ totalBaseRows = curRow;
             <list-property name="resultSet">
                 <structure>
                     <property name="position">1</property>
-                    <property name="name">BIRTH_YEAR_orig</property>
-                    <property name="nativeName">BIRTH_YEAR_orig</property>
+                    <property name="name">BIRTH_YEAR</property>
+                    <property name="nativeName">BIRTH_YEAR</property>
                     <property name="dataType">integer</property>
                     <property name="nativeDataType">3</property>
                 </structure>
                 <structure>
                     <property name="position">2</property>
-                    <property name="name">MNTH_END_YYYYMM_orig</property>
-                    <property name="nativeName">MNTH_END_YYYYMM_orig</property>
+                    <property name="name">MNTH_END_YYYYMM</property>
+                    <property name="nativeName">MNTH_END_YYYYMM</property>
                     <property name="dataType">integer</property>
                     <property name="nativeDataType">3</property>
                 </structure>
@@ -595,19 +523,12 @@ totalBaseRows = curRow;
                     <property name="dataType">integer</property>
                     <property name="nativeDataType">3</property>
                 </structure>
-                <structure>
-                    <property name="position">6</property>
-                    <property name="name">offset</property>
-                    <property name="nativeName">offset</property>
-                    <property name="dataType">integer</property>
-                    <property name="nativeDataType">3</property>
-                </structure>
             </list-property>
-            <xml-property name="queryText"><![CDATA[{"Columns":["BIRTH_YEAR_orig","MNTH_END_YYYYMM_orig","totalnetworth","retirementage","retirementamt","offset"],"Types":[3,3,3,3,3,3]}]]></xml-property>
+            <xml-property name="queryText"><![CDATA[{"Columns":["BIRTH_YEAR","MNTH_END_YYYYMM","totalnetworth","retirementage","retirementamt"],"Types":[3,3,3,3,3]}]]></xml-property>
             <list-property name="privateDriverProperties">
                 <ex-property>
                     <name>DATA</name>
-                    <value>[["1971","201502","2559445","65","7000000","-5"],["1971","201503","3271609","65","7000000","-5"],["1971","201504","3305542","65","7000000","-5"],["1971","201505","3240576","65","7000000","-5"],["1971","201506","3236523","65","7000000","-5"],["1971","201507","3229570","65","7000000","-5"],["1971","201508","3254909","65","7000000","-5"],["1971","201509","3385682","65","7000000","-5"],["1971","201510","3414568","65","7000000","-5"],["1971","201511","3494568","65","7000000","-5"],["1971","201512","3554685","65","7000000","-5"],["1971","201601","3684568","65","7000000","-4"],["1971","201602","3746584","65","7000000","-4"],["1971","201603","3896854","65","7000000","-4"],["1971","201604","3995684","65","7000000","-4"],["1971","201605","4020153","65","7000000","-4"],["1971","201606","4035864","65","7000000","-4"],["1971","201607","4143584","65","7000000","-4"],["1971","201608","4243548","65","7000000","-4"],["1971","201609","4238546","65","7000000","-4"],["1971","201610","4558439","65","7000000","-4"],["1971","201611","4407121","65","7000000","-4"],["1971","201612","4377603","65","7000000","-4"],["1971","201701","4118641","65","7000000","-3"],["1971","201702","4044868","65","7000000","-3"],["1971","201703","4021930","65","7000000","-3"],["1971","201704","4177208","65","7000000","-3"],["1971","201705","4295232","65","7000000","-3"],["1971","201706","4024594","65","7000000","-3"],["1971","201707","3988386","65","7000000","-3"],["1971","201708","4018513","65","7000000","-3"],["1971","201709","3690097","65","7000000","-3"],["1971","201710","3170617","65","7000000","-3"],["1971","201711","2973597","65","7000000","-3"],["1971","201712","3057271","65","7000000","-3"],["1971","201801","2899499","65","7000000","-2"],["1971","201802","2660175","65","7000000","-2"],["1971","201803","2803818","65","7000000","-2"],["1971","201804","3041812","65","7000000","-2"],["1971","201805","3210867","65","7000000","-2"],["1971","201806","3209218","65","7000000","-2"],["1971","201807","3421761","65","7000000","-2"],["1971","201808","3525780","65","7000000","-2"],["1971","201809","3578246","65","7000000","-2"],["1971","201810","3601971","65","7000000","-2"],["1971","201811","3617354","65","7000000","-2"],["1971","201812","3694424","65","7000000","-2"],["1971","201901","3776285","65","7000000","-1"],["1971","201902","3864627","65","7000000","-1"],["1971","201903","3946485","65","7000000","-1"],["1971","201904","3955469","65","7000000","-1"],["1971","201905","3994118","65","7000000","-1"],["1971","201906","4039064","65","7000000","-1"],["1971","201907","4076838","65","7000000","-1"],["1971","201908","4106363","65","7000000","-1"],["1971","201909","4174434","65","7000000","-1"],["1971","201910","4252475","65","7000000","-1"],["1971","201911","4340814","65","7000000","-1"],["1971","201912","4443072","65","7000000","-1"],["1971","202001","4558439","65","7000000","0"],["1971","202002","4636425","65","7000000","0"],["1971","202003","4742643","65","7000000","0"],["1971","202004","4836935","65","7000000","0"]]</value>
+                    <value>[["1961","200902","2559445","65","7000000"],["1961","200903","3271609","65","7000000"],["1961","200904","3305542","65","7000000"],["1961","200905","3240576","65","7000000"],["1961","200906","3236523","65","7000000"],["1961","200907","3229570","65","7000000"],["1961","200908","3254909","65","7000000"],["1961","200909","3385682","65","7000000"],["1961","200910","3414568","65","7000000"],["1961","200911","3494568","65","7000000"],["1961","200912","3554685","65","7000000"],["1961","201001","3684568","65","7000000"],["1961","201002","3746584","65","7000000"],["1961","201003","3896854","65","7000000"],["1961","201004","3995684","65","7000000"],["1961","201005","4020153","65","7000000"],["1961","201006","4035864","65","7000000"],["1961","201007","4143584","65","7000000"],["1961","201008","4243548","65","7000000"],["1961","201009","4238546","65","7000000"],["1961","201010","4558439","65","7000000"],["1961","201011","4407121","65","7000000"],["1961","201012","4377603","65","7000000"],["1961","201101","4118641","65","7000000"],["1961","201102","4044868","65","7000000"],["1961","201103","4021930","65","7000000"],["1961","201104","4177208","65","7000000"],["1961","201105","4295232","65","7000000"],["1961","201106","4024594","65","7000000"],["1961","201107","3988386","65","7000000"],["1961","201108","4018513","65","7000000"],["1961","201109","3690097","65","7000000"],["1961","201110","3170617","65","7000000"],["1961","201111","2973597","65","7000000"],["1961","201112","3057271","65","7000000"],["1961","201201","2899499","65","7000000"],["1961","201202","2660175","65","7000000"],["1961","201203","2803818","65","7000000"],["1961","201204","3041812","65","7000000"],["1961","201205","3210867","65","7000000"],["1961","201206","3209218","65","7000000"],["1961","201207","3421761","65","7000000"],["1961","201208","3525780","65","7000000"],["1961","201209","3578246","65","7000000"],["1961","201210","3601971","65","7000000"],["1961","201211","3617354","65","7000000"],["1961","201212","3694424","65","7000000"],["1961","201301","3776285","65","7000000"],["1961","201302","3864627","65","7000000"],["1961","201303","3946485","65","7000000"],["1961","201304","3955469","65","7000000"],["1961","201305","3994118","65","7000000"],["1961","201306","4039064","65","7000000"],["1961","201307","4076838","65","7000000"],["1961","201308","4106363","65","7000000"],["1961","201309","4174434","65","7000000"],["1961","201310","4252475","65","7000000"],["1961","201311","4340814","65","7000000"],["1961","201312","4443072","65","7000000"],["1961","201401","4558439","65","7000000"],["1961","201402","4636425","65","7000000"],["1961","201403","4742643","65","7000000"],["1961","201404","4836935","65","7000000"]]</value>
                 </ex-property>
             </list-property>
         </oda-data-set>
@@ -944,8 +865,7 @@ totalBaseRows = curRow;
                     </table>
                     <text id="431">
                         <property name="contentType">html</property>
-                        <text-property name="content"><![CDATA[<script src="https://use.fontawesome.com/3edbcdbcb7.js"></script>
-<script>
+                        <text-property name="content"><![CDATA[<script>
 var planningData = <VALUE-OF>vars["planningData"]</VALUE-OF>;
 </script>]]></text-property>
                     </text>
@@ -1004,12 +924,11 @@ var planningData = <VALUE-OF>vars["planningData"]</VALUE-OF>;
     <color _body=",255,51,51,51"/>
    </outline>
    <background _body=",255,255,255,255"/>
-   <cursor type="0"/>
   </block>
   <extendedProperties name="enable.area.alt" value="false"/>
   <extendedProperties name="enable.drill.category" value="true"/>
   <extendedProperties name="enable.drill.series" value="true"/>
-  <extendedProperties name="jschart.client.script" value="beforeRendering: function(options, chart)&#13;&#10;{&#13;&#10;    options.plotOptions = {&#13;&#10;        area: {&#13;&#10;            animation: {duration:1500},&#13;&#10;            shadow:true,&#13;&#10;            lineWidth:1&#13;&#10;        }&#13;&#10;    };&#13;&#10;    &#13;&#10;    options.xAxis = {&#13;&#10;        startOnTick: true,&#13;&#10;        endOnTick: true,&#13;&#10;        maxPadding: 0&#13;&#10;         &#13;&#10;    };&#13;&#10;},&#13;&#10;&#13;&#10;afterRendering: function(chart)&#13;&#10;{  &#13;&#10;&#13;&#10;    // Goal Amount line&#13;&#10;    chart.getCore().yAxis[0].addPlotLine({&#13;&#10;     color: &quot;#C0C0C0&quot;,&#13;&#10;     width: 1,&#13;&#10;     zIndex: 5,&#13;&#10;     value: planningData.goalAmount,&#13;&#10;     label: {&#13;&#10;      text: &quot;Retirement Goal amount: &quot; + planningData.goalAmountValue,&#13;&#10;      align: &quot;right&quot;,&#13;&#10;         style: {&#13;&#10;          color: &quot;black&quot;, // &quot;#C0C0C1&quot;,&#13;&#10;          fontSize: &quot;9pt&quot;&#13;&#10;         },&#13;&#10;         x: -10&#13;&#10;     },&#13;&#10;     id: &quot;goalAmountLine&quot;&#13;&#10;    });&#13;&#10;&#13;&#10;    // Goal Age line&#13;&#10;    chart.getCore().xAxis[0].addPlotLine({&#13;&#10;        color: &quot;#C0C0C0&quot;,&#13;&#10;        width: 1,&#13;&#10;        zIndex: 5,&#13;&#10;        value: planningData.goalAge,&#13;&#10;        label: {&#13;&#10;         text: &quot;Years: &quot; + planningData.goalAgeValue,&#13;&#10;         rotation: 270,&#13;&#10;         verticalAlign: &quot;middle&quot;,&#13;&#10;         style: {&#13;&#10;          color: &quot;black&quot;, // &quot;#C0C0C0&quot;,&#13;&#10;          fontSize: &quot;10pt&quot;&#13;&#10;         },&#13;&#10;         x: 14&#13;&#10;        },&#13;&#10;        id: &quot;goalAgeLine&quot;&#13;&#10;    });&#13;&#10;    &#13;&#10;    // Actual/Projected dividing line&#13;&#10;    chart.getCore().xAxis[0].addPlotLine({&#13;&#10;        color: &quot;grey&quot;,&#13;&#10;        width: 1,&#13;&#10;        dashStyle: &quot;Dash&quot;,&#13;&#10;        zIndex: 5,&#13;&#10;        value: planningData.baseChartRows,&#13;&#10;        id: &quot;actualProjectedLine&quot;&#13;&#10;    });&#13;&#10;   &#13;&#10;    // Actual section band &#13;&#10;    chart.getCore().xAxis[0].addPlotBand({&#13;&#10;     from: 0,&#13;&#10;     to: planningData.baseChartRows,&#13;&#10;     label: {&#13;&#10;      text: &quot;Actual&quot;,&#13;&#10;      verticalAlign: &quot;top&quot;,&#13;&#10;      style: {&#13;&#10;       color: &quot;black&quot;,&#13;&#10;       fontWeight: &quot;bold&quot;,&#13;&#10;       fontSize: &quot;9pt&quot;&#13;&#10;      }&#13;&#10;     },&#13;&#10;     id: &quot;actualBand&quot;&#13;&#10;    });&#13;&#10;    &#13;&#10;    // Projected section band &#13;&#10;    chart.getCore().xAxis[0].addPlotBand({&#13;&#10;     from: planningData.baseChartRows,&#13;&#10;     to: planningData.totalChartRows,&#13;&#10;     label: {&#13;&#10;      text: &quot;Projected&quot;,&#13;&#10;      verticalAlign: &quot;top&quot;,&#13;&#10;      style: {&#13;&#10;       color: &quot;black&quot;,&#13;&#10;       fontWeight: &quot;bold&quot;,&#13;&#10;       fontSize: &quot;9pt&quot;&#13;&#10;      }&#13;&#10;     },&#13;&#10;     id: &quot;projectedBand&quot;&#13;&#10;    });&#13;&#10;},&#13;&#10;&#13;&#10;beforeDrawDataPoint: function(point, pointOptions, chart, seriesIndex, pointIndex)&#13;&#10;{&#13;&#10;&#13;&#10;    if (pointOptions.y == 0) {&#13;&#10;        if (seriesIndex == 0 &amp;&amp; pointIndex &gt;= planningData.baseChartRows)&#13;&#10;            pointOptions.y = null;&#13;&#10;        else if (seriesIndex == 1 &amp;&amp; pointIndex &lt;= planningData.baseChartRows)&#13;&#10;            pointOptions.y = null;&#13;&#10;    }&#13;&#10;&#13;&#10;    if (seriesIndex == 1) {&#13;&#10;    &#13;&#10;&#13;&#10;&#13;&#10;        for (var i = 0; i &lt; planningData.events.length; i++) {&#13;&#10;         if (planningData.events[i].state &amp;&amp; pointIndex == planningData.events[i].rec) {&#13;&#10;          var type = planningData.events[i].type;    &#13;&#10;          var name = planningData.events[i].name;&#13;&#10;          // If you want images on Info Console path&#13;&#10;          var markerURL = &quot;&quot;; //&quot;images/&quot;;&#13;&#10;          // If you want images in the Resources of the Application on the iHub&#13;&#10;          //var markerURL = &quot;servlet/DownloadFile?name=/Resources/images/&quot;;&#13;&#10;          //var markerURL = &quot;servlet/DownloadFile?name=/Applications/Retirement Roadmap/images/&quot;;&#13;&#10;                    if (type == 1)&#13;&#10;                  markerURL += &quot;\uf015&quot;; //&quot;Home.png&quot;;&#13;&#10;                 else if (type == 2)&#13;&#10;                        markerURL += &quot;\uf1b9&quot;; //&quot;Vehicle.png&quot;;&#13;&#10;                    else if (type == 3)&#13;&#10;                        markerURL += &quot;\uf19d&quot;; //&quot;College.png&quot;;&#13;&#10;                    else if (type == 4)&#13;&#10;                        markerURL += &quot;\uf004&quot;; // &quot;Wedding.png&quot;;&#13;&#10;                    else if (type == 5)&#13;&#10;                        markerURL += &quot;\uf072&quot;; //&quot;Vacation.png&quot;;&#13;&#10;                    else if (type == 6)&#13;&#10;                        markerURL += &quot;\uf08d&quot;; //&quot;Misc.png&quot;;&#13;&#10;                        &#13;&#10;          //pointOptions.marker.symbol = &quot;url(&quot; + markerURL + &quot;)&quot;;&#13;&#10;         // hasMarker = true;&#13;&#10;         &#13;&#10;         &#13;&#10;        pointOptions.dataLabels = {&#13;&#10;        enabled: true,&#13;&#10;                    useHTML: true,&#13;&#10;                    formatter: function() {&#13;&#10;                        //return &#039;&lt;div  style=&quot;position:absolute;bottom:-27px;left:-27px;&quot;&gt;&lt;img src=&quot;&#039; + markerURL + &#039;&quot;&gt;&lt;/div&gt;&#039;;&#13;&#10;                        return &#039;&lt;div  style=&quot;position:absolute;bottom:-27px;left:-27px;&quot;&gt;&lt;span title=&quot;&#039; + name + &#039;&quot;&gt;&lt;font face=&quot;FontAwesome&quot; size=&quot;6pt&quot; color=&quot;teal&quot;&gt;&#039; + markerURL + &#039;&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;&#039;;&#13;&#10;                        } &#13;&#10;        }  &#13;&#10;    &#13;&#10;         &#13;&#10;         &#13;&#10;         &#13;&#10;         }   //if&#13;&#10;        }  // for&#13;&#10;        &#13;&#10;        //if (!hasMarker)&#13;&#10;      // If you want images on Info Console path&#13;&#10;      //pointOptions.marker.symbol = &quot;url(images/1x1Pixel.png)&quot;;&#13;&#10;          // If you want images in the Resources of the Application on the iHub&#13;&#10;           //pointOptions.marker.symbol = &quot;url(servlet/DownloadFile?name=/Resources/images/1x1Pixel.png)&quot;;&#13;&#10;           //pointOptions.marker.symbol = &quot;url(servlet/DownloadFile?name=/Applications/Retirement Roadmap/images/1x1Pixel.png)&quot;;&#13;&#10;           &#13;&#10;&#13;&#10;    &#13;&#10;    &#13;&#10;    }  //  if (seriesIndex == 1)&#13;&#10;},"/>
+  <extendedProperties name="jschart.client.script" value="beforeRendering: function(options, chart)&#13;&#10;{&#13;&#10;    options.plotOptions = {&#13;&#10;        area: {&#13;&#10;            animation: {duration:1500},&#13;&#10;            shadow:true,&#13;&#10;            lineWidth:1&#13;&#10;        }&#13;&#10;    };&#13;&#10;    &#13;&#10;    options.xAxis = {&#13;&#10;        startOnTick: true,&#13;&#10;        endOnTick: true,&#13;&#10;        maxPadding: 0&#13;&#10;         &#13;&#10;    };&#13;&#10;},&#13;&#10;&#13;&#10;afterRendering: function(chart)&#13;&#10;{  &#13;&#10;&#13;&#10;    // Goal Amount line&#13;&#10;    chart.getCore().yAxis[0].addPlotLine({&#13;&#10;     color: &quot;#C0C0C0&quot;,&#13;&#10;     width: 1,&#13;&#10;     zIndex: 5,&#13;&#10;     value: planningData.goalAmount,&#13;&#10;     label: {&#13;&#10;      text: &quot;Retirement Goal amount: &quot; + planningData.goalAmountValue,&#13;&#10;      align: &quot;right&quot;,&#13;&#10;         style: {&#13;&#10;          color: &quot;#C0C0C0&quot;,&#13;&#10;          fontSize: &quot;9pt&quot;&#13;&#10;         },&#13;&#10;         x: -10&#13;&#10;     },&#13;&#10;     id: &quot;goalAmountLine&quot;&#13;&#10;    });&#13;&#10;&#13;&#10;    // Goal Age line&#13;&#10;    chart.getCore().xAxis[0].addPlotLine({&#13;&#10;        color: &quot;#C0C0C0&quot;,&#13;&#10;        width: 1,&#13;&#10;        zIndex: 5,&#13;&#10;        value: planningData.goalAge,&#13;&#10;        label: {&#13;&#10;         text: &quot;Years: &quot; + planningData.goalAgeValue,&#13;&#10;         rotation: 270,&#13;&#10;         verticalAlign: &quot;middle&quot;,&#13;&#10;         style: {&#13;&#10;          color: &quot;#C0C0C0&quot;,&#13;&#10;          fontSize: &quot;10pt&quot;&#13;&#10;         },&#13;&#10;         x: 14&#13;&#10;        },&#13;&#10;        id: &quot;goalAgeLine&quot;&#13;&#10;    });&#13;&#10;    &#13;&#10;    // Actual/Projected dividing line&#13;&#10;    chart.getCore().xAxis[0].addPlotLine({&#13;&#10;        color: &quot;grey&quot;,&#13;&#10;        width: 1,&#13;&#10;        dashStyle: &quot;Dash&quot;,&#13;&#10;        zIndex: 5,&#13;&#10;        value: planningData.baseChartRows,&#13;&#10;        id: &quot;actualProjectedLine&quot;&#13;&#10;    });&#13;&#10;   &#13;&#10;    // Actual section band &#13;&#10;    chart.getCore().xAxis[0].addPlotBand({&#13;&#10;     from: 0,&#13;&#10;     to: planningData.baseChartRows,&#13;&#10;     label: {&#13;&#10;      text: &quot;Actual&quot;,&#13;&#10;      verticalAlign: &quot;top&quot;,&#13;&#10;      style: {&#13;&#10;       color: &quot;black&quot;,&#13;&#10;       fontWeight: &quot;bold&quot;,&#13;&#10;       fontSize: &quot;9pt&quot;&#13;&#10;      }&#13;&#10;     },&#13;&#10;     id: &quot;actualBand&quot;&#13;&#10;    });&#13;&#10;    &#13;&#10;    // Projected section band &#13;&#10;    chart.getCore().xAxis[0].addPlotBand({&#13;&#10;     from: planningData.baseChartRows,&#13;&#10;     to: planningData.totalChartRows,&#13;&#10;     label: {&#13;&#10;      text: &quot;Projected&quot;,&#13;&#10;      verticalAlign: &quot;top&quot;,&#13;&#10;      style: {&#13;&#10;       color: &quot;black&quot;,&#13;&#10;       fontWeight: &quot;bold&quot;,&#13;&#10;       fontSize: &quot;9pt&quot;&#13;&#10;      }&#13;&#10;     },&#13;&#10;     id: &quot;projectedBand&quot;&#13;&#10;    });&#13;&#10;},&#13;&#10;&#13;&#10;beforeDrawDataPoint: function(point, pointOptions, chart, seriesIndex, pointIndex)&#13;&#10;{&#13;&#10;&#13;&#10;    if (pointOptions.y == 0) {&#13;&#10;        if (seriesIndex == 0 &amp;&amp; pointIndex &gt;= planningData.baseChartRows)&#13;&#10;            pointOptions.y = null;&#13;&#10;        else if (seriesIndex == 1 &amp;&amp; pointIndex &lt;= planningData.baseChartRows)&#13;&#10;            pointOptions.y = null;&#13;&#10;    }&#13;&#10;&#13;&#10;    if (seriesIndex == 1) {&#13;&#10;    &#13;&#10;&#13;&#10;&#13;&#10;        for (var i = 0; i &lt; planningData.events.length; i++) {&#13;&#10;         if (planningData.events[i].state &amp;&amp; pointIndex == planningData.events[i].rec) {&#13;&#10;          var type = planningData.events[i].type;    &#13;&#10;          // If you want images on Info Console path&#13;&#10;          var markerURL = &quot;images/&quot;;&#13;&#10;          // If you want images in the Resources of the Application on the iHub&#13;&#10;          //var markerURL = &quot;servlet/DownloadFile?name=/Resources/images/&quot;;&#13;&#10;          //var markerURL = &quot;servlet/DownloadFile?name=/Applications/Retirement Roadmap/images/&quot;;&#13;&#10;                    if (type == 1)&#13;&#10;                  markerURL += &quot;Home.png&quot;;&#13;&#10;                 else if (type == 2)&#13;&#10;                        markerURL += &quot;Vehicle.png&quot;;&#13;&#10;                    else if (type == 3)&#13;&#10;                        markerURL += &quot;College.png&quot;;&#13;&#10;                    else if (type == 4)&#13;&#10;                        markerURL += &quot;Wedding.png&quot;;&#13;&#10;                    else if (type == 5)&#13;&#10;                        markerURL += &quot;Vacation.png&quot;;&#13;&#10;                    else if (type == 6)&#13;&#10;                        markerURL += &quot;Misc.png&quot;;&#13;&#10;                        &#13;&#10;          //pointOptions.marker.symbol = &quot;url(&quot; + markerURL + &quot;)&quot;;&#13;&#10;         // hasMarker = true;&#13;&#10;         &#13;&#10;         &#13;&#10;        pointOptions.dataLabels = {&#13;&#10;        enabled: true,&#13;&#10;                    useHTML: true,&#13;&#10;                    formatter: function() {&#13;&#10;                        return &#039;&lt;div  style=&quot;position:absolute;bottom:-27px;left:-27px;&quot;&gt;&lt;img src=&quot;&#039; + markerURL + &#039;&quot;&gt;&lt;/div&gt;&#039;;&#13;&#10;                        } &#13;&#10;        }  &#13;&#10;    &#13;&#10;         &#13;&#10;         &#13;&#10;         &#13;&#10;         }   //if&#13;&#10;        }  // for&#13;&#10;        &#13;&#10;        //if (!hasMarker)&#13;&#10;      // If you want images on Info Console path&#13;&#10;      //pointOptions.marker.symbol = &quot;url(images/1x1Pixel.png)&quot;;&#13;&#10;          // If you want images in the Resources of the Application on the iHub&#13;&#10;           //pointOptions.marker.symbol = &quot;url(servlet/DownloadFile?name=/Resources/images/1x1Pixel.png)&quot;;&#13;&#10;           //pointOptions.marker.symbol = &quot;url(servlet/DownloadFile?name=/Applications/Retirement Roadmap/images/1x1Pixel.png)&quot;;&#13;&#10;           &#13;&#10;&#13;&#10;    &#13;&#10;    &#13;&#10;    }  //  if (seriesIndex == 1)&#13;&#10;},"/>
   <extendedProperties name="jschart.zoom" value="x"/>
   <extendedProperties name="jschart.animation" value="true"/>
   <extendedProperties name="keep.hierarchy.category" value="false"/>
@@ -1376,11 +1295,10 @@ function addLifeEvent() {
 
 	var idx = lifeEventStates.length;
 	lifeEventStates[idx] = 1;
-	lifeEventNames[idx] = typeNames[type - 1]; // + " event";
+	lifeEventNames[idx] = typeNames[type - 1] + " event";
 	lifeEventTypes[idx] = type;
 	lifeEventAmounts[idx] = 500000;
-	var yr = new Date().getFullYear() + 5;
-	lifeEventDates[idx] = yr + "09"; //"202009";
+	lifeEventDates[idx] = "202009";
 
 	displayLifeEvents();
 	displayLifeEventEdit(null, idx);
@@ -1514,7 +1432,6 @@ function getRunReportParams() {
 	params["pLifeEventNames"] = lifeEventNames.join(",");
 	params["pLifeEventAmounts"] = lifeEventAmounts.join(",");
 	params["pLifeEventDates"] = lifeEventDates.join(",");
-	params["pNotes"] = $("[id*='_Notes']").text();
 
 	return params;
 }
@@ -1558,7 +1475,7 @@ function runReportViewer() {
                                 <text id="126">
                                     <property name="contentType">html</property>
                                     <text-property name="content"><![CDATA[<form action="javascript:allocate()">
-<table width="98%" style="font-family:Arial: border:0">
+<table width="98%" style="font-family:Lato: border:0">
 <tr>
 <td align="left">
 	<select id="selAddLifeEvent" onchange="addLifeEvent()" style="font-size:13pt">
@@ -1626,34 +1543,6 @@ Please contact your Financial Advisor to help you plan for and acheive your inve
 initLifeEvents();
 </script>]]></text-property>
                                 </text>
-                            </cell>
-                        </row>
-                        <row id="436">
-                            <cell id="437">
-                                <property name="paddingTop">10pt</property>
-                                <property name="paddingLeft">1pt</property>
-                                <property name="textAlign">left</property>
-                                <text id="438">
-                                    <property name="fontSize">10pt</property>
-                                    <property name="fontWeight">bold</property>
-                                    <property name="color">gray</property>
-                                    <property name="textUnderline">underline</property>
-                                    <property name="marginTop">2pt</property>
-                                    <property name="marginBottom">4pt</property>
-                                    <property name="paddingLeft">2pt</property>
-                                    <property name="contentType">auto</property>
-                                    <text-property name="content"><![CDATA[Notes:]]></text-property>
-                                </text>
-                                <label name="Notes" id="439">
-                                    <property name="color">gray</property>
-                                    <property name="paddingTop">2pt</property>
-                                    <property name="paddingLeft">2pt</property>
-                                    <property name="paddingBottom">2pt</property>
-                                    <property name="paddingRight">2pt</property>
-                                    <expression name="bookmark" type="javascript">"Notes"</expression>
-                                    <method name="onPrepare"><![CDATA[this.text = params["pNotes"].value;]]></method>
-                                    <text-property name="text">Don't forget to plan for the kid's college!</text-property>
-                                </label>
                             </cell>
                         </row>
                     </grid>

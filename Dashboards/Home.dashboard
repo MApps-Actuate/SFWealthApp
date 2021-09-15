@@ -3383,18 +3383,8 @@
                     <property name="name">dashboardTheme</property>
                     <property name="type">string</property>
                 </structure>
-                <structure>
-                    <property name="name">enableGlobalFilter</property>
-                    <property name="type">boolean</property>
-                </structure>
-                <structure>
-                    <property name="name">dashboardLayout</property>
-                    <property name="type">string</property>
-                </structure>
             </list-property>
             <property name="dashboardTheme">ThemesReportItems3.Classic:Light</property>
-            <property name="enableGlobalFilter">false</property>
-            <property name="dashboardLayout">3</property>
             <property name="activeTab">3596098d-5ae6-490b-8c7d-437cd1c60c7b1</property>
             <property name="tabs">
                 <tab-element name="3596098d-5ae6-490b-8c7d-437cd1c60c7b1" id="15">
@@ -3403,13 +3393,8 @@
                             <property name="name">tabTheme</property>
                             <property name="type">string</property>
                         </structure>
-                        <structure>
-                            <property name="name">responsiveView</property>
-                            <property name="type">boolean</property>
-                        </structure>
                     </list-property>
                     <property name="tabTheme">ThemesReportItems3.Classic:Light</property>
-                    <property name="responsiveView">false</property>
                     <property name="title">Home</property>
                     <property name="showHeader">false</property>
                     <property name="showFooter">false</property>
@@ -3458,68 +3443,32 @@
                                         </data-view>
                                     </property>
                                 </gadget>
+                                <gadget name="acc13e72-94ad-45ea-9703-7eaa59867b522" id="1113">
+                                    <property name="title">My Stocks</property>
+                                    <property name="externalGadgetURI">http://hosting.gmodules.com/ig/gadgets/file/114391732817277679525/ESQuotesTicker.xml</property>
+                                    <property name="showTitle">false</property>
+                                    <property name="showBorder">false</property>
+                                    <property name="zIndex">7</property>
+                                    <property name="showScrollBar">false</property>
+                                    <property name="height">75px</property>
+                                    <property name="caption">
+                                        <gadget-caption id="1114">
+                                            <property name="showCaption">true</property>
+                                            <property name="horizontalAlignment">left</property>
+                                            <property name="fontFamily">"Lato"</property>
+                                            <property name="fontSize">18pt</property>
+                                            <property name="fontWeight">normal</property>
+                                            <property name="fontStyle">normal</property>
+                                            <property name="color">#353535</property>
+                                            <property name="textUnderline">none</property>
+                                        </gadget-caption>
+                                    </property>
+                                </gadget>
                                 <gadget name="49fa8d6e-487e-4d49-aec5-6fa3dc2c6de22" id="16">
                                     <property name="zIndex">2</property>
                                     <property name="isVisible">false</property>
                                     <property name="content">
                                         <current-selections id="17"/>
-                                    </property>
-                                </gadget>
-                                <gadget name="Gadget_74364e83-8044-4a29-ab97-6d1f0ce3d2c5" id="1131">
-                                    <list-property name="userProperties">
-                                        <structure>
-                                            <property name="name">userPreferences</property>
-                                            <property name="type">string</property>
-                                        </structure>
-                                        <structure>
-                                            <property name="name">builderType</property>
-                                            <property name="type">string</property>
-                                        </structure>
-                                    </list-property>
-                                    <property name="userPreferences">{"gadget-caption":{}}</property>
-                                    <property name="builderType">Reportlet</property>
-                                    <property name="title">My Stocks</property>
-                                    <property name="externalGadgetURI">^/Report Designs/mystocks.rptdesign</property>
-                                    <property name="showTitle">true</property>
-                                    <property name="showBorder">false</property>
-                                    <property name="zIndex">9</property>
-                                    <property name="showScrollBar">false</property>
-                                    <property name="height">75px</property>
-                                    <property name="width">645px</property>
-                                    <property name="caption">
-                                        <gadget-caption id="1132">
-                                            <property name="showCaption">true</property>
-                                            <property name="horizontalAlignment">left</property>
-                                            <property name="fontFamily">"Lato"</property>
-                                            <property name="fontSize">16pt</property>
-                                            <property name="fontWeight">normal</property>
-                                            <property name="fontStyle">normal</property>
-                                            <property name="color">#333333</property>
-                                            <property name="textUnderline">none</property>
-                                        </gadget-caption>
-                                    </property>
-                                    <property name="content">
-                                        <data-view id="1133">
-                                            <list-property name="userProperties">
-                                                <structure>
-                                                    <property name="name">showViewerToolbar</property>
-                                                    <property name="type">boolean</property>
-                                                </structure>
-                                                <structure>
-                                                    <property name="name">enableSmartViz</property>
-                                                    <property name="type">boolean</property>
-                                                </structure>
-                                            </list-property>
-                                            <property name="showViewerToolbar">false</property>
-                                            <property name="enableSmartViz">true</property>
-                                            <property name="gadgetType">viewer</property>
-                                            <property name="externalContentRef">
-                                                <external-element-ref>
-                                                    <property name="sourceFile">^/Report Designs/mystocks.rptdesign</property>
-                                                    <property name="targetBookmark">myStocks</property>
-                                                </external-element-ref>
-                                            </property>
-                                        </data-view>
                                     </property>
                                 </gadget>
                             </property>

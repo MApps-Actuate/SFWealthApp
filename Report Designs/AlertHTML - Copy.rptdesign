@@ -123,7 +123,7 @@ $("<style>").prop("type","text/css").html("a:link { color: #0000EE; } a:visited 
                         <list-property name="action">
                             <structure>
                                 <property name="linkType">drill-through</property>
-                                <property name="reportName">Portfolio Statement4.rptdesign</property>
+                                <property name="reportName">My Portfolio.rptdesign</property>
                                 <property name="targetWindow">_blank</property>
                                 <property name="targetFileType">report-document</property>
                                 <list-property name="paramBindings">

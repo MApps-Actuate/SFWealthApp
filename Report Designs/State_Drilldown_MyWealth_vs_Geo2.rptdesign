@@ -15,7 +15,7 @@
             <property name="dataType">string</property>
             <property name="distinct">true</property>
             <simple-property-list name="defaultValue">
-                <value type="constant">KY</value>
+                <value type="constant">AK</value>
             </simple-property-list>
             <list-property name="selectionList"/>
             <property name="paramType">simple</property>
@@ -38,7 +38,7 @@
         </oda-data-source>
     </data-sources>
     <data-sets>
-        <oda-data-set extensionID="org.eclipse.datatools.connectivity.oda.flatfile.dataSet" name="Data Set11" id="81">
+        <oda-data-set extensionID="org.eclipse.datatools.connectivity.oda.flatfile.dataSet" name="Data Set" id="46">
             <list-property name="columnHints">
                 <structure>
                     <property name="columnName">Per_capita_income</property>
@@ -59,12 +59,13 @@
             <list-property name="filter">
                 <structure>
                     <property name="operator">eq</property>
-                    <expression name="expr" type="javascript">row["State"]</expression>
+                    <expression name="expr">row["State"]</expression>
                     <simple-property-list name="value1">
-                        <value type="javascript">params["State"].value</value>
+                        <value>params["State"].value</value>
                     </simple-property-list>
                 </structure>
             </list-property>
+            <list-property name="parameters"/>
             <structure name="cachedMetaData">
                 <list-property name="resultSet">
                     <structure>
@@ -134,8 +135,24 @@
         <design:resultColumnDefinitions>
           <design:attributes>
             <design:identifier>
-              <design:name>State</design:name>
+              <design:name>County_ID</design:name>
               <design:position>2</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>4</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>County_ID</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>State</design:name>
+              <design:position>3</design:position>
             </design:identifier>
             <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
             <design:precision>-1</design:precision>
@@ -147,24 +164,7 @@
             <design:formattingHints/>
           </design:usageHints>
         </design:resultColumnDefinitions>
-        <design:resultColumnDefinitions>
-          <design:attributes>
-            <design:identifier>
-              <design:name>County_ID</design:name>
-              <design:position>3</design:position>
-            </design:identifier>
-            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
-            <design:precision>-1</design:precision>
-            <design:scale>-1</design:scale>
-            <design:nullability>Unknown</design:nullability>
-          </design:attributes>
-          <design:usageHints>
-            <design:label>County_ID</design:label>
-            <design:formattingHints/>
-          </design:usageHints>
-        </design:resultColumnDefinitions>
       </design:resultSetColumns>
-      <design:criteria/>
     </design:resultSetDefinitions>
   </design:ResultSets>
 </model:DesignValues>]]></xml-property>
@@ -209,20 +209,249 @@
         </simple-master-page>
     </page-setup>
     <body>
-        <extended-item extensionName="Map" id="79">
+        <grid id="8">
+            <property name="marginTop">0pt</property>
+            <property name="verticalAlign">top</property>
+            <property name="canShrink">false</property>
+            <property name="width">100%</property>
+            <method name="onCreate"><![CDATA[dataPart = "";]]></method>
+            <column id="9"/>
+            <column id="10"/>
+            <row id="11">
+                <cell id="12">
+                    <property name="colSpan">2</property>
+                    <property name="rowSpan">1</property>
+                    <table id="29">
+                        <property name="width">100%</property>
+                        <property name="dataSet">Data Set</property>
+                        <list-property name="visibility">
+                            <structure>
+                                <property name="format">all</property>
+                                <expression name="valueExpr">true</expression>
+                            </structure>
+                        </list-property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">Per_capita_income</property>
+                                <expression name="expression">dataSetRow["Per_capita_income"]</expression>
+                                <property name="dataType">float</property>
+                            </structure>
+                            <structure>
+                                <property name="name">State</property>
+                                <expression name="expression">dataSetRow["State"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">County_ID</property>
+                                <expression name="expression">dataSetRow["County_ID"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                        </list-property>
+                        <property name="pageBreakInterval">50</property>
+                        <column id="39"/>
+                        <detail>
+                            <row id="33">
+                                <method name="onCreate"><![CDATA[var oneLine = "<entity id='" + this.getRowData().getColumnValue("County_ID") + "' value='" + this.getRowData().getColumnValue("Per_capita_income") + "' /> ";
+dataPart = dataPart + oneLine;
+reportContext.setPersistentGlobalVariable("g_dataPart", dataPart );
+]]></method>
+                                <cell id="34"/>
+                            </row>
+                        </detail>
+                    </table>
+                </cell>
+            </row>
+            <row id="14">
+                <property name="textAlign">center</property>
+                <cell id="15">
+                    <property name="colSpan">2</property>
+                    <property name="rowSpan">1</property>
+                    <data id="54">
+                        <property name="fontFamily">"Lato"</property>
+                        <property name="fontSize">10pt</property>
+                        <property name="fontWeight">bold</property>
+                        <property name="dataSet">Data Set</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">State</property>
+                                <text-property name="displayName">State</text-property>
+                                <expression name="expression">"My Wealth vs Average for " + dataSetRow["State"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                        </list-property>
+                        <property name="resultSetColumn">State</property>
+                    </data>
+                    <extended-item extensionName="GeneralFlash" id="42">
+                        <property name="contentType">library</property>
+                        <expression name="contentFile">switch (params["State"].value)
+{
+case (params["State"].value = "AL"):
+"/resources/Flash Object Library/Flash Maps/FCMap_Alabama.swf";
+break
+case (params["State"].value = "AK") :
+"/resources/Flash Object Library/Flash Maps/FCMap_Alaska.swf";
+break
+case (params["State"].value = "AZ") :
+"/resources/Flash Object Library/Flash Maps/FCMap_Arizona.swf";
+break
+case (params["State"].value = "CA") :
+"/resources/Flash Object Library/Flash Maps/FCMap_California.swf";
+break
+case (params["State"].value = "CO") :
+"/resources/Flash Object Library/Flash Maps/FCMap_Colorado.swf";
+break
+case (params["State"].value = "CT") :
+"/resources/Flash Object Library/Flash Maps/FCMap_Connecticut.swf";
+break
+case (params["State"].value = "DC") :
+"/resources/Flash Object Library/Flash Maps/FCMap_DistrictofColumbia.swf";
+break
+case (params["State"].value = "DE") :
+"/resources/Flash Object Library/Flash Maps/FCMap_Delaware.swf";
+break
+case (params["State"].value = "FL") :
+"/resources/Flash Object Library/Flash Maps/FCMap_Florida.swf";
+break
+case (params["State"].value = "GA") :
+"/resources/Flash Object Library/Flash Maps/FCMap_Georgia.swf";
+break
+case (params["State"].value = "HI") :
+"/resources/Flash Object Library/Flash Maps/FCMap_Hawaii.swf";
+break
+case (params["State"].value = "ID") :
+"/resources/Flash Object Library/Flash Maps/FCMap_Idaho.swf";
+break
+case (params["State"].value = "IL") :
+"/resources/Flash Object Library/Flash Maps/FCMap_Illinois.swf";
+break
+case (params["State"].value = "IN") :
+"/resources/Flash Object Library/Flash Maps/FCMap_Indiana.swf";
+break
+case (params["State"].value = "IA") :
+"/resources/Flash Object Library/Flash Maps/FCMap_Iowa.swf";
+break
+case (params["State"].value = "KS") :
+"/resources/Flash Object Library/Flash Maps/FCMap_Kansas.swf";
+break
+case (params["State"].value = "KY") :
+"/resources/Flash Object Library/Flash Maps/FCMap_Kentucky.swf";
+break
+case (params["State"].value = "LA") :
+"/resources/Flash Object Library/Flash Maps/FCMap_Louisiana.swf";
+break
+case (params["State"].value = "ME") :
+"/resources/Flash Object Library/Flash Maps/FCMap_Maine.swf";
+break
+case (params["State"].value = "MD") :
+"/resources/Flash Object Library/Flash Maps/FCMap_Maryland.swf";
+break
+case (params["State"].value = "MA") :
+"/resources/Flash Object Library/Flash Maps/FCMap_Massachusetts.swf";
+break
+case (params["State"].value = "MI") :
+"/resources/Flash Object Library/Flash Maps/FCMap_Michigan.swf";
+break
+case (params["State"].value = "MN") :
+"/resources/Flash Object Library/Flash Maps/FCMap_Minnesota.swf";
+break
+case (params["State"].value = "MS") :
+"/resources/Flash Object Library/Flash Maps/FCMap_Mississippi.swf";
+break
+case (params["State"].value = "MO") :
+"/resources/Flash Object Library/Flash Maps/FCMap_Missouri.swf";
+break
+case (params["State"].value = "MT") :
+"/resources/Flash Object Library/Flash Maps/FCMap_Montana.swf";
+break
+case (params["State"].value = "NE") :
+"/resources/Flash Object Library/Flash Maps/FCMap_Nebraska.swf";
+break
+case (params["State"].value = "NV") :
+"/resources/Flash Object Library/Flash Maps/FCMap_Nevada.swf";
+break
+case (params["State"].value = "NH") :
+"/resources/Flash Object Library/Flash Maps/FCMap_NewHampshire.swf";
+break
+case (params["State"].value = "NJ") :
+"/resources/Flash Object Library/Flash Maps/FCMap_NewJersey.swf";
+break
+case (params["State"].value = "NM") :
+"/resources/Flash Object Library/Flash Maps/FCMap_NewMexico.swf";
+break
+case (params["State"].value = "NY") :
+"/resources/Flash Object Library/Flash Maps/FCMap_NewYork.swf";
+break
+case (params["State"].value = "NC") :
+"/resources/Flash Object Library/Flash Maps/FCMap_NorthCarolina.swf";
+break
+case (params["State"].value = "ND") :
+"/resources/Flash Object Library/Flash Maps/FCMap_NorthDakota.swf";
+break
+case (params["State"].value = "OH") :
+"/resources/Flash Object Library/Flash Maps/FCMap_Ohio.swf";
+break
+case (params["State"].value = "OK") :
+"/resources/Flash Object Library/Flash Maps/FCMap_Oklahoma.swf";
+break
+case (params["State"].value = "PA") :
+"/resources/Flash Object Library/Flash Maps/FCMap_Pennsylvania.swf";
+break
+case (params["State"].value = "RI") :
+"/resources/Flash Object Library/Flash Maps/FCMap_RhodeIsland.swf";
+break
+case (params["State"].value = "SC") :
+"/resources/Flash Object Library/Flash Maps/FCMap_SouthCarolina.swf";
+break
+case (params["State"].value = "SD") :
+"/resources/Flash Object Library/Flash Maps/FCMap_SouthDakota.swf";
+break
+case (params["State"].value = "TN") :
+"/resources/Flash Object Library/Flash Maps/FCMap_Tennessee.swf";
+break
+case (params["State"].value = "TX") :
+"/resources/Flash Object Library/Flash Maps/FCMap_Texas.swf";
+break
+case (params["State"].value = "UT") :
+"/resources/Flash Object Library/Flash Maps/FCMap_Utah.swf";
+break
+case (params["State"].value = "VT") :
+"/resources/Flash Object Library/Flash Maps/FCMap_Vermont.swf";
+break
+case (params["State"].value = "VA") :
+"/resources/Flash Object Library/Flash Maps/FCMap_Virginia.swf";
+break
+case (params["State"].value = "WA") :
+"/resources/Flash Object Library/Flash Maps/FCMap_Washington.swf";
+break
+case (params["State"].value = "WV") :
+"/resources/Flash Object Library/Flash Maps/FCMap_WestVirginia.swf";
+break
+case (params["State"].value = "WI") :
+"/resources/Flash Object Library/Flash Maps/FCMap_Wisconsin.swf";
+break
+case (params["State"].value = "WY") :
+"/resources/Flash Object Library/Flash Maps/FCMap_Wyoming.swf";
+break
+}</expression>
+                        <property name="variables">
+                            <variable-element name="dataXML">
+                                <expression name="value" type="javascript">var g_dataPart = reportContext.getPersistentGlobalVariable("g_dataPart" );&#13;
+&#13;
+"&lt;map animation='1' showShadow='1' showBevel='1' showMarkerLabels='1' fillColor='F1f1f1' borderColor='000000' baseFont='Lato' baseFontSize='10' markerBorderColor='000000' markerBgColor='FF5904' markerRadius='6' legendPosition='bottom' useHoverColor='1' hoverColor='CFE3FA' showMarkerToolTip='1' numberPrefix='$' >&lt;data>" +  g_dataPart + "&lt;/data>&lt;colorRange> &lt;color minValue='0' maxValue='120000' displayValue='Above Average' color='008000' /> &lt;color minValue='120001' maxValue='190000' displayValue='Average' color='FFCC00' /> &lt;color minValue='190001' maxValue='1000000' displayValue='Below Average' color='B30000' /> &lt;/colorRange>&lt;/map>"</expression>
+                            </variable-element>
+                        </property>
+                    </extended-item>
+                </cell>
+            </row>
+        </grid>
+        <extended-item extensionName="Map" id="55">
             <xml-property name="xmlRepresentation"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
 <Maps:MapModel xmlns:Maps="http://www.birt.actuate.com/Maps">
-  <Maps:Type>Kentucky</Maps:Type>
+  <Maps:Type>Alaska</Maps:Type>
   <Maps:AreaDefinition>
-    <Maps:Border>
-      <Visible>false</Visible>
-    </Maps:Border>
+    <Maps:Border/>
   </Maps:AreaDefinition>
   <Maps:MapDefinition>
-    <Maps:ShowLabels>false</Maps:ShowLabels>
-    <Maps:IncludeNameInLabels>true</Maps:IncludeNameInLabels>
-    <Maps:IncludeValueInLabels>false</Maps:IncludeValueInLabels>
-    <Maps:UseSNameInToolTip>true</Maps:UseSNameInToolTip>
     <Maps:Border>
       <Style>Solid</Style>
       <Thickness>1</Thickness>
@@ -236,22 +465,16 @@
     </Maps:Border>
     <Maps:Background>
       <Transparency>255</Transparency>
-      <Red>145</Red>
-      <Green>145</Green>
-      <Blue>145</Blue>
+      <Red>221</Red>
+      <Green>221</Green>
+      <Blue>221</Blue>
     </Maps:Background>
-    <Maps:ConnectorLine>
-      <Transparency>255</Transparency>
-      <Red>0</Red>
-      <Green>0</Green>
-      <Blue>0</Blue>
-    </Maps:ConnectorLine>
-    <Maps:UseHoverColor>true</Maps:UseHoverColor>
+    <Maps:UseHoverColor>false</Maps:UseHoverColor>
     <Maps:HoverColor>
-      <Transparency>255</Transparency>
-      <Red>204</Red>
+      <Transparency>0</Transparency>
+      <Red>255</Red>
       <Green>255</Green>
-      <Blue>204</Blue>
+      <Blue>255</Blue>
     </Maps:HoverColor>
     <Maps:EntityQuery>
       <Definition>row[&quot;County_ID&quot;]</Definition>
@@ -268,21 +491,6 @@
         <AggregateExpression>Sum</AggregateExpression>
       </Grouping>
     </Maps:ValueQuery>
-    <Maps:ShowTooltip>true</Maps:ShowTooltip>
-    <Maps:Tooltip>
-      <Text></Text>
-      <Delay>200</Delay>
-    </Maps:Tooltip>
-    <Maps:Hyperlink>
-      <BaseUrl></BaseUrl>
-      <Target></Target>
-      <BaseParameterName></BaseParameterName>
-      <ValueParameterName></ValueParameterName>
-    </Maps:Hyperlink>
-    <Maps:UseInvokeScript>false</Maps:UseInvokeScript>
-    <Maps:InvokeScript>
-      <Script></Script>
-    </Maps:InvokeScript>
   </Maps:MapDefinition>
   <Maps:LegendDefinition/>
   <Maps:FormatDefinition>
@@ -296,61 +504,22 @@
     </Font>
     <Color>
       <Transparency>255</Transparency>
-      <Red>0</Red>
-      <Green>0</Green>
-      <Blue>0</Blue>
+      <Red>85</Red>
+      <Green>85</Green>
+      <Blue>85</Blue>
     </Color>
   </Maps:BaseFontDefinition>
   <Maps:ColorRange>
-    <Maps:Elements>
-      <Maps:MinValue>95000.0</Maps:MinValue>
-      <Maps:MaxValue>150000.0</Maps:MaxValue>
-      <Maps:DisplayValue>Below Avg</Maps:DisplayValue>
-      <Maps:Color>
-        <Transparency>255</Transparency>
-        <Red>214</Red>
-        <Green>40</Green>
-        <Blue>31</Blue>
-      </Maps:Color>
-    </Maps:Elements>
-    <Maps:Elements>
-      <Maps:MinValue>150000.0</Maps:MinValue>
-      <Maps:MaxValue>160000.0</Maps:MaxValue>
-      <Maps:DisplayValue>Avg</Maps:DisplayValue>
-      <Maps:Color>
-        <Transparency>255</Transparency>
-        <Red>51</Red>
-        <Green>102</Green>
-        <Blue>255</Blue>
-      </Maps:Color>
-    </Maps:Elements>
-    <Maps:Elements>
-      <Maps:MinValue>160000.0</Maps:MinValue>
-      <Maps:MaxValue>260000.0</Maps:MaxValue>
-      <Maps:DisplayValue>Above Avg</Maps:DisplayValue>
-      <Maps:Color>
-        <Transparency>255</Transparency>
-        <Red>0</Red>
-        <Green>128</Green>
-        <Blue>0</Blue>
-      </Maps:Color>
-    </Maps:Elements>
-    <Maps:Gradient>false</Maps:Gradient>
     <Maps:Color>
       <Transparency>255</Transparency>
-      <Red>0</Red>
-      <Green>128</Green>
-      <Blue>0</Blue>
+      <Red>255</Red>
+      <Green>255</Green>
+      <Blue>255</Blue>
     </Maps:Color>
-    <Maps:StartLabel>AD</Maps:StartLabel>
-    <Maps:EndLabel>WY</Maps:EndLabel>
   </Maps:ColorRange>
-  <Maps:Script></Maps:Script>
 </Maps:MapModel>
 ]]></xml-property>
             <property name="inheritColumns">true</property>
-            <property name="height">70%</property>
-            <property name="width">50%</property>
             <list-property name="filter">
                 <structure>
                     <property name="operator">eq</property>
@@ -361,7 +530,7 @@
                     <property name="updateAggregation">true</property>
                 </structure>
             </list-property>
-            <property name="dataSet">Data Set11</property>
+            <property name="dataSet">Data Set</property>
             <list-property name="boundDataColumns">
                 <structure>
                     <property name="name">Per_capita_income</property>

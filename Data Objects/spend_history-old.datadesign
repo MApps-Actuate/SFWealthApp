@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <datamart xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
-    <property name="createdBy">Eclipse BIRT Designer Version 4.11.0.v202104210725</property>
+    <property name="createdBy">Eclipse BIRT Designer Version 4.11.0.v202101151752</property>
+    <list-property name="userProperties">
+        <structure>
+            <property name="name">Spend History.spend data.x</property>
+            <property name="type">integer</property>
+            <property name="isVisible">false</property>
+        </structure>
+        <structure>
+            <property name="name">Spend History.spend data.y</property>
+            <property name="type">integer</property>
+            <property name="isVisible">false</property>
+        </structure>
+    </list-property>
+    <property name="Spend History.spend data.x">135</property>
+    <property name="Spend History.spend data.y">80</property>
     <data-sources>
         <oda-data-source extensionID="org.eclipse.datatools.connectivity.oda.flatfile" name="ff" id="2">
             <property name="HOME">Flatfiles/</property>
@@ -42,17 +56,8 @@
                     <property name="horizontalAlign">left</property>
                     <structure name="action">
                         <property name="targetWindow">_blank</property>
-                        <property name="linkType">drill-through</property>
-                        <property name="targetFileType">report-design</property>
-                        <property name="reportName">^/Report Designs/MySpendDetail.rptdesign</property>
-                        <list-property name="paramBindings">
-                            <structure>
-                                <property name="paramName">SpendCategory</property>
-                                <simple-property-list name="expression">
-                                    <value type="javascript">row["Category"]</value>
-                                </simple-property-list>
-                            </structure>
-                        </list-property>
+                        <property name="linkType">hyperlink</property>
+                        <expression name="uri" type="constant">/Report Designs/spending history.rptdesign</expression>
                     </structure>
                     <property name="indexColumn">false</property>
                     <property name="compressed">false</property>
@@ -70,9 +75,6 @@
                     <property name="analysis">dimension</property>
                     <text-property name="heading">spend category</text-property>
                     <property name="horizontalAlign">left</property>
-                    <structure name="action">
-                        <property name="linkType">none</property>
-                    </structure>
                     <property name="indexColumn">false</property>
                     <property name="compressed">false</property>
                 </structure>
@@ -414,56 +416,49 @@
         </tabular-cube>
     </cubes>
     <property name="linkedDataModels">
-        <linked-data-model name="Spend Data Model" id="37">
+        <linked-data-model name="Spend Data Model" id="22">
             <property name="aliasDataSets">
-                <alias-data-set name="spend data" id="46">
+                <alias-data-set name="spend data" id="31">
                     <property name="originDataSet">spend data</property>
                 </alias-data-set>
             </property>
             <property name="drillPaths">
-                <drill-path id="50">
+                <drill-path id="34">
                     <text-property name="displayName">Date</text-property>
                     <simple-property-list name="drillPathColumns">
                         <value>dataSetRow["Date"]["Month"]</value>
                         <value>dataSetRow["Date"]["DayOfMonth"]</value>
                     </simple-property-list>
                 </drill-path>
-                <drill-path id="51">
-                    <text-property name="displayName">Spend Category</text-property>
-                    <simple-property-list name="drillPathColumns">
-                        <value>dataSetRow["Category"]</value>
-                        <value>dataSetRow["Merchant"]</value>
-                    </simple-property-list>
-                </drill-path>
             </property>
             <property name="categories">
-                <category name="spend data" id="38">
+                <category name="spend data" id="23">
                     <property name="categoryColumns">
-                        <category-column name="Account" id="39">
+                        <category-column name="Account" id="24">
                             <property name="aliasDataSet">Spend Data Model/spend data</property>
                             <property name="resultSetColumnName">Account</property>
                         </category-column>
-                        <category-column name="Amount" id="40">
+                        <category-column name="Amount" id="25">
                             <property name="aliasDataSet">Spend Data Model/spend data</property>
                             <property name="resultSetColumnName">Amount</property>
                         </category-column>
-                        <category-column name="Date" id="41">
+                        <category-column name="Date" id="26">
                             <property name="aliasDataSet">Spend Data Model/spend data</property>
                             <property name="resultSetColumnName">Date</property>
                         </category-column>
-                        <category-column name="Merchant" id="42">
+                        <category-column name="Merchant" id="27">
                             <property name="aliasDataSet">Spend Data Model/spend data</property>
                             <property name="resultSetColumnName">Merchant</property>
                         </category-column>
-                        <category-column name="Reference" id="43">
+                        <category-column name="Reference" id="28">
                             <property name="aliasDataSet">Spend Data Model/spend data</property>
                             <property name="resultSetColumnName">Reference</property>
                         </category-column>
-                        <category-column name="Category" id="44">
+                        <category-column name="spend category" id="29">
                             <property name="aliasDataSet">Spend Data Model/spend data</property>
-                            <property name="resultSetColumnName">Category</property>
+                            <property name="resultSetColumnName">spend category</property>
                         </category-column>
-                        <category-column name="type" id="45">
+                        <category-column name="type" id="30">
                             <property name="aliasDataSet">Spend Data Model/spend data</property>
                             <property name="resultSetColumnName">type</property>
                         </category-column>
@@ -471,9 +466,9 @@
                 </category>
             </property>
             <property name="measureGroups">
-                <measure-group name="Spent" id="48">
+                <measure-group name="Spent" id="32">
                     <property name="measures">
-                        <measure name="Spend" id="49">
+                        <measure name="Spend" id="33">
                             <property name="aggregateFunction">sum</property>
                             <expression name="measureExpression" type="javascript">dataSetRow["Amount"]</expression>
                             <property name="isCalculated">false</property>
@@ -482,7 +477,7 @@
                             <property name="isVisible">true</property>
                             <structure name="format">
                                 <property name="category">Currency</property>
-                                <property name="pattern">#,##0.00{RoundingMode=HALF_UP}</property>
+                                <property name="pattern">###0.00{RoundingMode=HALF_UP}</property>
                             </structure>
                         </measure>
                     </property>

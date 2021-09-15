@@ -3,8 +3,8 @@
     <property name="layoutPreference">auto layout</property>
     <list-property name="libraries">
         <structure>
-            <property name="fileName">ThemesReportItems3.rptlibrary</property>
-            <property name="namespace">ThemesReportItems3</property>
+            <property name="fileName">themes/CleanBlueThemeReportItem.rptlibrary</property>
+            <property name="namespace">CleanBlueThemeReportItem</property>
         </structure>
     </list-property>
     <data-sources>
@@ -28,6 +28,10 @@
             <property name="datamartVersion">-1</property>
             <property name="accessType">latest</property>
         </data-mart-data-source>
+        <data-mart-data-source name="Data Source" id="1136">
+            <property name="datamartURL">Data Objects/spend_history</property>
+            <property name="accessType">latest</property>
+        </data-mart-data-source>
     </data-sources>
     <cubes>
         <data-mart-cube name="NewDataMartDataSource4::Spend History" id="95">
@@ -35,6 +39,12 @@
             <property name="dataObject">Spend History</property>
         </data-mart-cube>
     </cubes>
+    <property name="linkedDataModels">
+        <data-mart-linked-data-model name="Spend Data Model" id="1134">
+            <property name="dataSource">Data Source</property>
+            <property name="dataObject">Spend Data Model</property>
+        </data-mart-linked-data-model>
+    </property>
     <themes>
         <report-item-theme type="Table" name="default-table" id="4">
             <styles>
@@ -3378,6 +3388,7 @@
     <label>
      <caption value="">
       <font bold="false" italic="false" underline="false"/>
+      <color _body=",255,51,51,51"/>
      </caption>
      <background _nil="1"/>
      <outline>
@@ -3395,7 +3406,7 @@
      </outline>
     </clientArea>
    </children>
-   <children _type="Legend" visible="false" orientation="1" position="3" itemType="1">
+   <children _type="Legend" visible="false" orientation="1" position="3" itemType="1" wrappingSize="150.0">
     <outline>
      <color _nil="1"/>
     </outline>
@@ -3404,21 +3415,28 @@
       <color _nil="1"/>
      </outline>
     </clientArea>
+    <text>
+     <font size="10.0"/>
+     <color _body=",255,51,51,51"/>
+    </text>
     <separator>
      <color _nil="1"/>
     </separator>
     <title visible="true">
-     <caption value="Account/Account"/>
+     <caption value="Account/Account">
+      <color _body=",255,51,51,51"/>
+     </caption>
      <background _nil="1"/>
      <outline>
       <color _nil="1"/>
      </outline>
     </title>
    </children>
-   <bounds _body=",,322.5,"/>
+   <bounds _body=",,372.0,"/>
    <outline>
     <color _nil="1"/>
    </outline>
+   <background _body=",255,255,255,255"/>
   </block>
   <extendedProperties name="enable.area.alt" value="false"/>
   <extendedProperties name="enable.drill.category" value="true"/>
@@ -3427,6 +3445,7 @@
   <extendedProperties name="keep.hierarchy.series" value="true"/>
   <extendedProperties name="jschart.series.shadow" value="false"/>
   <extendedProperties name="jschart.client.script" value="beforeGeneration:function(o){if(o&amp;&amp;o.chart&amp;&amp;o.chart.renderTo){var r=document.getElementById(o.chart.renderTo);if(r.parentNode&amp;&amp;r.parentNode.id){var b=r.parentNode.id;var v=actuate.getViewer(b);if(v){v.enableGlobalFilter(o);}}}}"/>
+  <extendedProperties name="enable.legend.itemHoverStyle" value="#333333"/>
   <sampleData>
    <baseSampleData dataSetRepresentation="&#039;A&#039;,&#039;B&#039;,&#039;C&#039;,&#039;D&#039;,&#039;E&#039;"/>
    <orthogonalSampleData dataSetRepresentation="6,4,12,8,10" seriesDefinitionIndex="0"/>
@@ -3448,8 +3467,9 @@
      <label>
       <caption>
        <font bold="false" italic="false" underline="false"/>
+       <color _body=",255,102,102,102"/>
       </caption>
-      <background _nil="1"/>
+      <background _body=",0,0,0,0"/>
       <outline>
        <color _nil="1"/>
       </outline>
@@ -3469,6 +3489,7 @@
        <color _nil="1"/>
       </outline>
      </title>
+     <sliceOutline _body=",255,255,255,255"/>
     </series>
     <grouping/>
    </seriesDefinitions>
@@ -3506,7 +3527,7 @@
                 </filter-condition-element>
             </property>
             <property name="height">234pt</property>
-            <property name="width">322.5pt</property>
+            <property name="width">372pt</property>
             <list-property name="boundDataColumns">
                 <structure>
                     <property name="name">Account/Account</property>
@@ -3520,7 +3541,7 @@
                     <property name="aggregateFunction">SUM</property>
                 </structure>
             </list-property>
-            <property name="theme">ThemesReportItems3.bleu</property>
+            <property name="theme">CleanBlueThemeReportItem.Clean Blue</property>
             <list-property name="userProperties">
                 <structure>
                     <property name="name">copyHyperlink</property>
@@ -3546,6 +3567,7 @@
     <label>
      <caption value="">
       <font size="12.0" bold="false" italic="false" underline="false"/>
+      <color _body=",255,51,51,51"/>
      </caption>
      <background _nil="1"/>
      <outline>
@@ -3563,7 +3585,7 @@
      </outline>
     </clientArea>
    </children>
-   <children _type="Legend" visible="true" orientation="1" position="3">
+   <children _type="Legend" visible="true" orientation="1" position="3" wrappingSize="150.0">
     <outline>
      <color _nil="1"/>
     </outline>
@@ -3572,20 +3594,28 @@
       <color _nil="1"/>
      </outline>
     </clientArea>
+    <text>
+     <font size="10.0"/>
+     <color _body=",255,51,51,51"/>
+    </text>
     <separator>
      <color _nil="1"/>
     </separator>
     <title visible="true">
+     <caption>
+      <color _body=",255,51,51,51"/>
+     </caption>
      <background _nil="1"/>
      <outline>
       <color _nil="1"/>
      </outline>
     </title>
    </children>
-   <bounds _body=",,322.5,"/>
+   <bounds _body=",,372.0,"/>
    <outline>
     <color _nil="1"/>
    </outline>
+   <background _body=",255,255,255,255"/>
   </block>
   <extendedProperties name="enable.area.alt" value="false"/>
   <extendedProperties name="enable.drill.category" value="true"/>
@@ -3599,6 +3629,8 @@
   <extendedProperties name="jschart.zoom" value=""/>
   <extendedProperties name="jschart.series.shadow" value="false"/>
   <extendedProperties name="jschart.client.script" value="beforeGeneration:function(o){if(o&amp;&amp;o.chart&amp;&amp;o.chart.renderTo){var r=document.getElementById(o.chart.renderTo);if(r.parentNode&amp;&amp;r.parentNode.id){var b=r.parentNode.id;var v=actuate.getViewer(b);if(v){v.enableGlobalFilter(o);}}}}"/>
+  <extendedProperties name="enable.legend.itemHoverStyle" value="#333333"/>
+  <extendedProperties name="enable.column.pointPadding" value="0.02"/>
   <sampleData>
    <baseSampleData dataSetRepresentation="QWER"/>
    <orthogonalSampleData dataSetRepresentation="2.3" seriesDefinitionIndex="0"/>
@@ -3615,6 +3647,7 @@
    <title visible="false">
     <caption value="">
      <font bold="false" italic="false" underline="false"/>
+     <color _body=",255,102,102,102"/>
     </caption>
     <background _nil="1"/>
     <outline>
@@ -3625,6 +3658,7 @@
     <title visible="false">
      <caption value="">
       <font bold="false" italic="false" underline="false"/>
+      <color _body=",255,102,102,102"/>
      </caption>
      <background _nil="1"/>
      <outline>
@@ -3635,6 +3669,9 @@
      <query definition="data[&quot;Account/Account&quot;]"/>
      <series _type="BarSeries" seriesIdentifier="Spend/Amount" stacked="true">
       <label>
+       <caption>
+        <color _body=",255,102,102,102"/>
+       </caption>
        <background _nil="1"/>
        <outline>
         <color _nil="1"/>
@@ -3655,6 +3692,7 @@
     <label visible="true">
      <caption>
       <font bold="false" italic="false" underline="false" rotation="0.0"/>
+      <color _body=",255,102,102,102"/>
      </caption>
      <background _nil="1"/>
      <outline>
@@ -3664,7 +3702,7 @@
     <formatSpecifier _type="NumberFormatSpecifier" fractionDigits="0"/>
     <majorGrid>
      <lineAttributes>
-      <color _nil="1"/>
+      <color _body=",255,230,230,230"/>
      </lineAttributes>
      <tickAttributes>
       <color _nil="1"/>
@@ -3697,11 +3735,12 @@
     </series>
    </seriesDefinitions>
    <lineAttributes>
-    <color _nil="1"/>
+    <color _body=",255,204,204,204"/>
    </lineAttributes>
    <label visible="true">
     <caption>
      <font bold="false" italic="false" underline="false" rotation="0.0"/>
+     <color _body=",255,102,102,102"/>
     </caption>
     <background _nil="1"/>
     <outline>
@@ -3712,7 +3751,7 @@
     <lineAttributes>
      <color _nil="1"/>
     </lineAttributes>
-    <tickAttributes>
+    <tickAttributes visible="false">
      <color _nil="1"/>
     </tickAttributes>
    </majorGrid>
@@ -3754,7 +3793,7 @@
                 </filter-condition-element>
             </property>
             <property name="height">246pt</property>
-            <property name="width">322.5pt</property>
+            <property name="width">372pt</property>
             <list-property name="boundDataColumns">
                 <structure>
                     <property name="name">Spend Method/Method</property>
@@ -3773,7 +3812,7 @@
                     <property name="dataType">string</property>
                 </structure>
             </list-property>
-            <property name="theme">ThemesReportItems3.bleu</property>
+            <property name="theme">CleanBlueThemeReportItem.Clean Blue</property>
             <list-property name="userProperties">
                 <structure>
                     <property name="name">copyHyperlink</property>
@@ -3796,265 +3835,6 @@
         <text name="12a7423c-84d4-47a2-9adb-b9972f4c1d2d1" id="160">
             <text-property name="content"><![CDATA[http://localhost/custom/bank-splash.jpg]]></text-property>
         </text>
-        <extended-item extensionName="Chart" name="My Merchants_e90a6d23-4457-457a-a9d5-4f3afdf9388b" id="1055">
-            <property name="cube">NewDataMartDataSource4::Spend History</property>
-            <xml-property name="xmlRepresentation"><![CDATA[<ActuateChart version="2.6.1">
- <ChartWithAxes version="2.6.1" type="Bar Chart" subType="Stacked" orientation="0">
-  <block>
-   <children _type="TitleBlock" visible="false" auto="false">
-    <outline>
-     <color _nil="1"/>
-    </outline>
-    <label>
-     <caption value="">
-      <font size="12.0" bold="false" italic="false" underline="false"/>
-     </caption>
-     <background _nil="1"/>
-     <outline>
-      <color _nil="1"/>
-     </outline>
-    </label>
-   </children>
-   <children _type="Plot">
-    <outline>
-     <color _nil="1"/>
-    </outline>
-    <clientArea>
-     <outline>
-      <color _nil="1"/>
-     </outline>
-    </clientArea>
-   </children>
-   <children _type="Legend" visible="true" orientation="1" position="3">
-    <outline>
-     <color _nil="1"/>
-    </outline>
-    <clientArea>
-     <outline>
-      <color _nil="1"/>
-     </outline>
-    </clientArea>
-    <separator>
-     <color _nil="1"/>
-    </separator>
-    <title visible="true">
-     <background _nil="1"/>
-     <outline>
-      <color _nil="1"/>
-     </outline>
-    </title>
-   </children>
-   <bounds _body=",,418.5,"/>
-   <outline>
-    <color _nil="1"/>
-   </outline>
-  </block>
-  <extendedProperties name="enable.area.alt" value="false"/>
-  <extendedProperties name="enable.drill.category" value="true"/>
-  <extendedProperties name="enable.drill.series" value="true"/>
-  <extendedProperties name="jschart.range.selector" value="false"/>
-  <extendedProperties name="jschart.navigator" value="false"/>
-  <extendedProperties name="jschart.scroll" value="false"/>
-  <extendedProperties name="keep.hierarchy.category" value="true"/>
-  <extendedProperties name="keep.hierarchy.series" value="true"/>
-  <extendedProperties name="jschart.glass.style" value="false"/>
-  <extendedProperties name="jschart.zoom" value="xy"/>
-  <extendedProperties name="jschart.series.shadow" value="false"/>
-  <extendedProperties name="drilled.filters_" value="_@,_"/>
-  <extendedProperties name="enable.drill.proc_" value="true"/>
-  <extendedProperties name="jschart.client.script" value="beforeGeneration:function(o){if(o&amp;&amp;o.chart&amp;&amp;o.chart.renderTo){var r=document.getElementById(o.chart.renderTo);if(r.parentNode&amp;&amp;r.parentNode.id){var b=r.parentNode.id;var v=actuate.getViewer(b);if(v){v.enableGlobalFilter(o);}}}}"/>
-  <sampleData>
-   <baseSampleData dataSetRepresentation="QWER"/>
-   <orthogonalSampleData dataSetRepresentation="2.3" seriesDefinitionIndex="0"/>
-  </sampleData>
-  <interactivity enable="true" legendBehavior="1"/>
-  <emptyMessage visible="true">
-   <caption value="This chart contains no data."/>
-   <background _body=",64,127,127,127"/>
-   <outline>
-    <color _body=",128,127,127,127"/>
-   </outline>
-  </emptyMessage>
-  <axes type="2" gapWidth="0.5" labelPosition="1" staggered="false" interval="1" categoryAxis="true">
-   <title visible="false">
-    <caption value="">
-     <font bold="false" italic="false" underline="false" rotation="90.0"/>
-    </caption>
-    <background _nil="1"/>
-    <outline>
-     <color _nil="1"/>
-    </outline>
-   </title>
-   <associatedAxes type="0" labelPosition="2" staggered="false" primaryAxis="true" percent="false">
-    <title visible="false">
-     <caption value="">
-      <font bold="false" italic="false" underline="false" rotation="0.0"/>
-     </caption>
-     <background _nil="1"/>
-     <outline>
-      <color _nil="1"/>
-     </outline>
-    </title>
-    <seriesDefinitions sorting="0">
-     <query definition="data[&quot;Account/Account&quot;]"/>
-     <series _type="BarSeries" seriesIdentifier="Spend/Amount" labelPosition="4" stacked="true">
-      <label>
-       <background _nil="1"/>
-       <outline>
-        <color _nil="1"/>
-       </outline>
-      </label>
-      <dataDefinition definition="data[&quot;Spend/Amount&quot;]"/>
-      <triggers condition="6">
-       <action type="1">
-        <value _type="TooltipValue" text="" delay="0"/>
-       </action>
-      </triggers>
-      <curveFitting _nil="1"/>
-     </series>
-    </seriesDefinitions>
-    <lineAttributes>
-     <color _nil="1"/>
-    </lineAttributes>
-    <label visible="true">
-     <caption>
-      <font bold="false" italic="false" underline="false" rotation="0.0"/>
-     </caption>
-     <background _nil="1"/>
-     <outline>
-      <color _nil="1"/>
-     </outline>
-    </label>
-    <majorGrid>
-     <lineAttributes>
-      <color _nil="1"/>
-     </lineAttributes>
-     <tickAttributes>
-      <color _nil="1"/>
-     </tickAttributes>
-    </majorGrid>
-    <minorGrid>
-     <lineAttributes>
-      <color _nil="1"/>
-     </lineAttributes>
-     <tickAttributes>
-      <color _nil="1"/>
-     </tickAttributes>
-    </minorGrid>
-    <scale step="0.0" stepNumber="1"/>
-    <origin>
-     <value _nil="1"/>
-    </origin>
-   </associatedAxes>
-   <seriesDefinitions>
-    <query definition=""/>
-    <series seriesIdentifier="Spend Category/Category">
-     <label>
-      <background _nil="1"/>
-      <outline>
-       <color _nil="1"/>
-      </outline>
-     </label>
-     <dataDefinition definition="data[&quot;Spend Category/Category&quot;]"/>
-     <curveFitting _nil="1"/>
-    </series>
-   </seriesDefinitions>
-   <lineAttributes>
-    <color _nil="1"/>
-   </lineAttributes>
-   <label visible="true">
-    <caption>
-     <font bold="false" italic="false" underline="false" rotation="0.0"/>
-    </caption>
-    <background _nil="1"/>
-    <outline>
-     <color _nil="1"/>
-    </outline>
-   </label>
-   <majorGrid>
-    <lineAttributes>
-     <color _nil="1"/>
-    </lineAttributes>
-    <tickAttributes>
-     <color _nil="1"/>
-    </tickAttributes>
-   </majorGrid>
-   <minorGrid>
-    <lineAttributes>
-     <color _nil="1"/>
-    </lineAttributes>
-    <tickAttributes>
-     <color _nil="1"/>
-    </tickAttributes>
-   </minorGrid>
-   <origin>
-    <value _nil="1"/>
-   </origin>
-  </axes>
-  <rotation>
-   <angles/>
-  </rotation>
- </ChartWithAxes>
-</ActuateChart>
-]]></xml-property>
-            <property name="outputFormat">JS</property>
-            <property name="cubeFilter">
-                <filter-condition-element>
-                    <expression name="expr">dimension["Date"]["Month"]</expression>
-                    <property name="operator">between</property>
-                    <simple-property-list name="value1">
-                        <value type="constant">3</value>
-                    </simple-property-list>
-                    <expression name="value2" type="constant">8</expression>
-                    <property name="filterTarget">DataSet</property>
-                    <property name="updateAggregation">true</property>
-                    <list-property name="userProperties">
-                        <structure>
-                            <property name="name">customValue</property>
-                            <property name="type">string</property>
-                        </structure>
-                    </list-property>
-                </filter-condition-element>
-            </property>
-            <property name="height">265.5pt</property>
-            <property name="width">418.5pt</property>
-            <list-property name="boundDataColumns">
-                <structure>
-                    <property name="name">Spend Category/Category</property>
-                    <expression name="expression">dimension["Spend Category"]["Category"]</expression>
-                    <property name="dataType">string</property>
-                </structure>
-                <structure>
-                    <property name="name">Spend/Amount</property>
-                    <expression name="expression">measure["Amount"]</expression>
-                    <property name="dataType">float</property>
-                    <property name="aggregateFunction">SUM</property>
-                </structure>
-                <structure>
-                    <property name="name">Account/Account</property>
-                    <expression name="expression">dimension["Account"]["Account"]</expression>
-                    <property name="dataType">string</property>
-                </structure>
-                <structure>
-                    <property name="name">Spend Category/Merchant</property>
-                    <expression name="expression">dimension["Spend Category"]["Merchant"]</expression>
-                    <property name="dataType">string</property>
-                </structure>
-            </list-property>
-            <property name="theme">ThemesReportItems3.bleu</property>
-            <list-property name="userProperties">
-                <structure>
-                    <property name="name">copyHyperlink</property>
-                    <property name="type">string</property>
-                </structure>
-                <structure>
-                    <property name="name">createdBy</property>
-                    <property name="type">string</property>
-                </structure>
-            </list-property>
-            <property name="copyHyperlink">true</property>
-            <property name="createdBy">dashboard</property>
-        </extended-item>
         <extended-item extensionName="Chart" name="My Spend This Period_664743b7-2de1-462e-a644-d1aedceafe81" id="1062">
             <property name="cube">NewDataMartDataSource4::Spend History</property>
             <xml-property name="xmlRepresentation"><![CDATA[<ActuateChart version="2.6.1">
@@ -4067,6 +3847,7 @@
     <label>
      <caption value="">
       <font size="12.0" bold="false" italic="false" underline="false"/>
+      <color _body=",255,51,51,51"/>
      </caption>
      <background _nil="1"/>
      <outline>
@@ -4084,7 +3865,7 @@
      </outline>
     </clientArea>
    </children>
-   <children _type="Legend" visible="true" orientation="1" position="3">
+   <children _type="Legend" visible="true" orientation="1" position="3" wrappingSize="150.0">
     <outline>
      <color _nil="1"/>
     </outline>
@@ -4093,20 +3874,28 @@
       <color _nil="1"/>
      </outline>
     </clientArea>
+    <text>
+     <font size="10.0"/>
+     <color _body=",255,51,51,51"/>
+    </text>
     <separator>
      <color _nil="1"/>
     </separator>
     <title visible="true">
+     <caption>
+      <color _body=",255,51,51,51"/>
+     </caption>
      <background _nil="1"/>
      <outline>
       <color _nil="1"/>
      </outline>
     </title>
    </children>
-   <bounds _body=",,418.5,"/>
+   <bounds _body=",,631.5,"/>
    <outline>
     <color _nil="1"/>
    </outline>
+   <background _body=",255,255,255,255"/>
   </block>
   <extendedProperties name="enable.area.alt" value="false"/>
   <extendedProperties name="enable.drill.category" value="true"/>
@@ -4121,6 +3910,7 @@
   <extendedProperties name="drilled.filters_" value="_@,_"/>
   <extendedProperties name="enable.drill.proc_" value="true"/>
   <extendedProperties name="jschart.client.script" value="beforeGeneration:function(o){if(o&amp;&amp;o.chart&amp;&amp;o.chart.renderTo){var r=document.getElementById(o.chart.renderTo);if(r.parentNode&amp;&amp;r.parentNode.id){var b=r.parentNode.id;var v=actuate.getViewer(b);if(v){v.enableGlobalFilter(o);}}}}"/>
+  <extendedProperties name="enable.legend.itemHoverStyle" value="#333333"/>
   <sampleData>
    <baseSampleData dataSetRepresentation="01/25/2005"/>
    <orthogonalSampleData dataSetRepresentation="2.3" seriesDefinitionIndex="0"/>
@@ -4137,6 +3927,7 @@
    <title visible="false">
     <caption value="">
      <font bold="false" italic="false" underline="false"/>
+     <color _body=",255,102,102,102"/>
     </caption>
     <background _nil="1"/>
     <outline>
@@ -4147,6 +3938,7 @@
     <title visible="false">
      <caption value="">
       <font bold="false" italic="false" underline="false"/>
+      <color _body=",255,102,102,102"/>
      </caption>
      <background _nil="1"/>
      <outline>
@@ -4157,6 +3949,9 @@
      <query definition="data[&quot;Spend Method/Method&quot;]"/>
      <series _type="LineSeries" seriesIdentifier="Spend/Amount" stacked="false" paletteLineColor="true">
       <label>
+       <caption>
+        <color _body=",255,102,102,102"/>
+       </caption>
        <background _nil="1"/>
        <outline>
         <color _nil="1"/>
@@ -4183,6 +3978,7 @@
     <label visible="true">
      <caption>
       <font bold="false" italic="false" underline="false" rotation="0.0"/>
+      <color _body=",255,102,102,102"/>
      </caption>
      <background _nil="1"/>
      <outline>
@@ -4191,7 +3987,7 @@
     </label>
     <majorGrid>
      <lineAttributes>
-      <color _nil="1"/>
+      <color _body=",255,230,230,230"/>
      </lineAttributes>
      <tickAttributes>
       <color _nil="1"/>
@@ -4225,11 +4021,12 @@
     <grouping groupType="1"/>
    </seriesDefinitions>
    <lineAttributes>
-    <color _nil="1"/>
+    <color _body=",255,204,204,204"/>
    </lineAttributes>
    <label visible="true">
     <caption>
      <font bold="false" italic="false" underline="false" rotation="0.0"/>
+     <color _body=",255,102,102,102"/>
     </caption>
     <background _nil="1"/>
     <outline>
@@ -4240,7 +4037,7 @@
     <lineAttributes>
      <color _nil="1"/>
     </lineAttributes>
-    <tickAttributes>
+    <tickAttributes visible="true">
      <color _nil="1"/>
     </tickAttributes>
    </majorGrid>
@@ -4282,7 +4079,7 @@
                 </filter-condition-element>
             </property>
             <property name="height">206.25pt</property>
-            <property name="width">418.5pt</property>
+            <property name="width">631.5pt</property>
             <list-property name="boundDataColumns">
                 <structure>
                     <property name="name">Date/Month/DateTime</property>
@@ -4306,7 +4103,7 @@
                     <property name="dataType">date-time</property>
                 </structure>
             </list-property>
-            <property name="theme">ThemesReportItems3.bleu</property>
+            <property name="theme">CleanBlueThemeReportItem.Clean Blue</property>
             <list-property name="userProperties">
                 <structure>
                     <property name="name">copyHyperlink</property>
@@ -4318,6 +4115,279 @@
                 </structure>
             </list-property>
             <property name="copyHyperlink">true</property>
+            <property name="createdBy">dashboard</property>
+        </extended-item>
+        <extended-item extensionName="Chart" name="Merchants-Chart" id="55">
+            <xml-property name="xmlRepresentation"><![CDATA[<ActuateChart version="2.6.1">
+ <ChartWithAxes version="2.6.1" type="Bar Chart" subType="Stacked" orientation="0">
+  <block>
+   <children _type="TitleBlock" visible="false">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <label>
+     <caption>
+      <color _body=",255,51,51,51"/>
+     </caption>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </label>
+   </children>
+   <children _type="Plot">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <clientArea>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </clientArea>
+   </children>
+   <children _type="Legend" orientation="1" wrappingSize="150.0">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <clientArea>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </clientArea>
+    <text>
+     <font size="10.0"/>
+     <color _body=",255,51,51,51"/>
+    </text>
+    <separator>
+     <color _nil="1"/>
+    </separator>
+    <title visible="false">
+     <caption>
+      <color _body=",255,51,51,51"/>
+     </caption>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </title>
+   </children>
+   <bounds _body="0.0,0.0,631.5,286.125"/>
+   <outline>
+    <color _nil="1"/>
+   </outline>
+   <background _body=",255,255,255,255"/>
+  </block>
+  <extendedProperties name="enable.area.alt" value="false"/>
+  <extendedProperties name="enable.drill.category" value="true"/>
+  <extendedProperties name="enable.drill.series" value="true"/>
+  <extendedProperties name="jschart.series.shadow" value="false"/>
+  <extendedProperties name="jschart.zoom" value="xy"/>
+  <extendedProperties name="drilled.filters_" value="_@,_"/>
+  <extendedProperties name="enable.drill.proc_" value="true"/>
+  <extendedProperties name="enable.legend.itemHoverStyle" value="#333333"/>
+  <extendedProperties name="enable.column.pointPadding" value="0.02"/>
+  <sampleData>
+   <baseSampleData dataSetRepresentation="A, B, C"/>
+   <orthogonalSampleData dataSetRepresentation="5,4,12" seriesDefinitionIndex="0"/>
+  </sampleData>
+  <emptyMessage>
+   <caption value="This chart contains no data."/>
+   <background _body=",64,127,127,127"/>
+   <outline>
+    <color _body=",128,127,127,127"/>
+   </outline>
+  </emptyMessage>
+  <axes>
+   <title>
+    <caption>
+     <color _body=",255,102,102,102"/>
+    </caption>
+    <background _nil="1"/>
+    <outline>
+     <color _nil="1"/>
+    </outline>
+   </title>
+   <associatedAxes primaryAxis="true" percent="false">
+    <title>
+     <caption>
+      <color _body=",255,102,102,102"/>
+     </caption>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </title>
+    <seriesDefinitions>
+     <query definition="row[&quot;Account&quot;]">
+      <grouping/>
+     </query>
+     <series _type="BarSeries" seriesIdentifier="" labelPosition="4" stacked="true" riser="0">
+      <label>
+       <caption>
+        <color _body=",255,102,102,102"/>
+       </caption>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dataDefinition definition="row[&quot;Spend&quot;]">
+       <grouping/>
+      </dataDefinition>
+      <triggers condition="6">
+       <action type="1">
+        <value _type="TooltipValue" text="" delay="200"/>
+       </action>
+      </triggers>
+      <curveFitting _nil="1"/>
+     </series>
+    </seriesDefinitions>
+    <lineAttributes>
+     <color _nil="1"/>
+    </lineAttributes>
+    <label>
+     <caption>
+      <color _body=",255,102,102,102"/>
+     </caption>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </label>
+    <formatSpecifier _type="NumberFormatSpecifier" prefix="" suffix="" fractionDigits="0"/>
+    <majorGrid>
+     <lineAttributes>
+      <color _body=",255,230,230,230"/>
+     </lineAttributes>
+     <tickAttributes>
+      <color _nil="1"/>
+     </tickAttributes>
+    </majorGrid>
+    <minorGrid>
+     <lineAttributes>
+      <color _nil="1"/>
+     </lineAttributes>
+     <tickAttributes>
+      <color _nil="1"/>
+     </tickAttributes>
+    </minorGrid>
+    <origin>
+     <value _nil="1"/>
+    </origin>
+   </associatedAxes>
+   <seriesDefinitions>
+    <query definition=""/>
+    <series seriesIdentifier="">
+     <label>
+      <background _nil="1"/>
+      <outline>
+       <color _nil="1"/>
+      </outline>
+     </label>
+     <dataDefinition definition="row[&quot;Category&quot;]"/>
+     <curveFitting _nil="1"/>
+    </series>
+    <grouping enabled="true"/>
+    <sortKey/>
+   </seriesDefinitions>
+   <lineAttributes>
+    <color _body=",255,204,204,204"/>
+   </lineAttributes>
+   <label>
+    <caption>
+     <color _body=",255,102,102,102"/>
+    </caption>
+    <background _nil="1"/>
+    <outline>
+     <color _nil="1"/>
+    </outline>
+   </label>
+   <majorGrid>
+    <lineAttributes>
+     <color _nil="1"/>
+    </lineAttributes>
+    <tickAttributes visible="false">
+     <color _nil="1"/>
+    </tickAttributes>
+   </majorGrid>
+   <minorGrid>
+    <lineAttributes>
+     <color _nil="1"/>
+    </lineAttributes>
+    <tickAttributes>
+     <color _nil="1"/>
+    </tickAttributes>
+   </minorGrid>
+   <origin>
+    <value _nil="1"/>
+   </origin>
+  </axes>
+  <rotation>
+   <angles/>
+  </rotation>
+ </ChartWithAxes>
+</ActuateChart>
+]]></xml-property>
+            <property name="outputFormat">JS</property>
+            <list-property name="action">
+                <structure>
+                    <property name="targetWindow">_blank</property>
+                    <property name="linkType">drill-through</property>
+                    <property name="targetFileType">report-design</property>
+                    <property name="reportName">^/Report Designs/MySpendDetail.rptdesign</property>
+                    <list-property name="paramBindings">
+                        <structure>
+                            <property name="paramName">SpendCategory</property>
+                            <simple-property-list name="expression">
+                                <value type="javascript">row["Category"]</value>
+                            </simple-property-list>
+                        </structure>
+                    </list-property>
+                </structure>
+            </list-property>
+            <property name="inheritColumns">true</property>
+            <property name="fontFamily">sans-serif</property>
+            <property name="fontSize">10pt</property>
+            <property name="height">286.125pt</property>
+            <property name="width">631.5pt</property>
+            <expression name="bookmark" type="javascript">"MerchantsChart"</expression>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">Category</property>
+                    <text-property name="displayName">Category</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Category"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Account</property>
+                    <text-property name="displayName">Account</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Account"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Spend</property>
+                    <expression name="expression" type="javascript">measure["Spend"]</expression>
+                    <property name="dataType">float</property>
+                </structure>
+                <structure>
+                    <property name="name">Merchant</property>
+                    <expression name="expression">dataSetRow["Merchant"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+            </list-property>
+            <property name="theme">CleanBlueThemeReportItem.Clean Blue</property>
+            <property name="linkedDataModel">Spend Data Model</property>
+            <list-property name="userProperties">
+                <structure>
+                    <property name="name">reportLibrary</property>
+                    <property name="type">string</property>
+                </structure>
+                <structure>
+                    <property name="name">createdBy</property>
+                    <property name="type">string</property>
+                </structure>
+            </list-property>
+            <property name="reportLibrary">true</property>
             <property name="createdBy">dashboard</property>
         </extended-item>
     </body>
@@ -4337,7 +4407,7 @@
                     <property name="type">string</property>
                 </structure>
             </list-property>
-            <property name="dashboardTheme">ThemesReportItems3.Classic:Light</property>
+            <property name="dashboardTheme">CleanBlueThemeReportItem.Clean Blue:Light</property>
             <property name="enableGlobalFilter">true</property>
             <property name="dashboardLayout">smartLayout</property>
             <property name="activeTab">799ed753-f99f-4741-ac5c-4717d38cee13</property>
@@ -4361,7 +4431,7 @@
                             <property name="type">string</property>
                         </structure>
                     </list-property>
-                    <property name="tabTheme">ThemesReportItems3.Classic:Light</property>
+                    <property name="tabTheme">CleanBlueThemeReportItem.Clean Blue:Light</property>
                     <property name="title">My Spending History</property>
                     <property name="showHeader">false</property>
                     <property name="showFooter">false</property>
@@ -4373,6 +4443,13 @@
                             <property name="width">17.519685039370078%</property>
                             <property name="gadgets">
                                 <gadget name="Gadget_5f790af3-d7ab-46e5-8320-1b2d4a6e1da7" id="1116">
+                                    <list-property name="userProperties">
+                                        <structure>
+                                            <property name="name">userPreferences</property>
+                                            <property name="type">string</property>
+                                        </structure>
+                                    </list-property>
+                                    <property name="userPreferences">{}</property>
                                     <property name="title">My Alerts</property>
                                     <property name="externalGadgetURI">^/Report Designs/AlertHTML.rptdesign</property>
                                     <property name="showTitle">false</property>
@@ -4385,10 +4462,10 @@
                                             <property name="showCaption">true</property>
                                             <property name="horizontalAlignment">left</property>
                                             <property name="fontFamily">"Lato"</property>
-                                            <property name="fontSize">18pt</property>
+                                            <property name="fontSize">16pt</property>
                                             <property name="fontWeight">normal</property>
                                             <property name="fontStyle">normal</property>
-                                            <property name="color">#353535</property>
+                                            <property name="color">#333333</property>
                                             <property name="textUnderline">none</property>
                                         </gadget-caption>
                                     </property>
@@ -4411,8 +4488,22 @@
                                     </property>
                                 </gadget>
                                 <gadget name="872fc000-1dbd-4d2d-a889-a7c22733340a1" id="91">
+                                    <list-property name="userProperties">
+                                        <structure>
+                                            <property name="name">userPreferences</property>
+                                            <property name="type">string</property>
+                                        </structure>
+                                    </list-property>
+                                    <property name="userPreferences">{}</property>
                                     <property name="zIndex">1</property>
                                     <property name="isVisible">false</property>
+                                    <property name="caption">
+                                        <gadget-caption id="1141">
+                                            <property name="fontFamily">"Lato"</property>
+                                            <property name="fontSize">16pt</property>
+                                            <property name="color">#333333</property>
+                                        </gadget-caption>
+                                    </property>
                                     <property name="content">
                                         <current-selections id="92"/>
                                     </property>
@@ -4435,50 +4526,57 @@
                             </property>
                         </section>
                         <section id="1074">
-                            <property name="width">46.39107611548556%</property>
+                            <property name="width">51.633986928104584%</property>
                             <property name="gadgets">
-                                <gadget name="Gadget_1eed2406-fae5-4a25-9f27-0d90e4f2db3b" id="1053">
+                                <gadget name="Gadget_2927b84e-1614-44e2-a576-0cdf8fa611ec" id="1138">
+                                    <list-property name="userProperties">
+                                        <structure>
+                                            <property name="name">userPreferences</property>
+                                            <property name="type">string</property>
+                                        </structure>
+                                    </list-property>
+                                    <property name="userPreferences">{"gadget-caption":{}}</property>
                                     <property name="title">My Merchants</property>
-                                    <property name="showTitle">false</property>
+                                    <property name="showTitle">true</property>
                                     <property name="showBorder">false</property>
-                                    <property name="zIndex">35</property>
+                                    <property name="zIndex">39</property>
                                     <property name="showScrollBar">false</property>
-                                    <property name="height">365px</property>
+                                    <property name="height">328px</property>
+                                    <property name="width">688px</property>
                                     <property name="caption">
-                                        <gadget-caption id="1054">
+                                        <gadget-caption id="1139">
                                             <property name="showCaption">true</property>
                                             <property name="horizontalAlignment">left</property>
                                             <property name="fontFamily">"Lato"</property>
-                                            <property name="fontSize">18pt</property>
+                                            <property name="fontSize">16pt</property>
                                             <property name="fontWeight">normal</property>
                                             <property name="fontStyle">normal</property>
-                                            <property name="color">#353535</property>
+                                            <property name="color">#333333</property>
                                             <property name="textUnderline">none</property>
                                         </gadget-caption>
                                     </property>
                                     <property name="content">
-                                        <data-view id="1056">
+                                        <data-view id="1140">
+                                            <list-property name="userProperties">
+                                                <structure>
+                                                    <property name="name">reportlibrary</property>
+                                                    <property name="type">string</property>
+                                                </structure>
+                                            </list-property>
+                                            <property name="reportlibrary">{"reportLibrary":"/Applications/SFWealthApp-21Jul/SF Wealth.rptlibrary","reportItem":"Merchants-Chart"}</property>
                                             <property name="gadgetType">viewer</property>
-                                            <property name="internalReportLetRef">My Merchants_e90a6d23-4457-457a-a9d5-4f3afdf9388b</property>
+                                            <property name="internalReportLetRef">Merchants-Chart</property>
                                         </data-view>
-                                    </property>
-                                    <property name="subscribeTo">
-                                        <event-subscriber>
-                                            <property name="eventName">SELECT_EVENT:SEMANTIC_filter</property>
-                                            <property name="eventObjects">
-                                                <event-object>
-                                                    <property name="gadget">Gadget_e7e4f03d-777c-4b3c-ab21-49454ea11d93</property>
-                                                    <property name="dirty">false</property>
-                                                </event-object>
-                                                <event-object>
-                                                    <property name="gadget">Gadget_c3c02eba-1f76-43a2-8462-2e30269fdb1e</property>
-                                                    <property name="dirty">false</property>
-                                                </event-object>
-                                            </property>
-                                        </event-subscriber>
                                     </property>
                                 </gadget>
                                 <gadget name="Gadget_a7dd0954-e852-4629-9243-4240849a6534" id="1060">
+                                    <list-property name="userProperties">
+                                        <structure>
+                                            <property name="name">userPreferences</property>
+                                            <property name="type">string</property>
+                                        </structure>
+                                    </list-property>
+                                    <property name="userPreferences">{}</property>
                                     <property name="title">My Spend This Period</property>
                                     <property name="showTitle">false</property>
                                     <property name="showBorder">false</property>
@@ -4490,10 +4588,10 @@
                                             <property name="showCaption">true</property>
                                             <property name="horizontalAlignment">left</property>
                                             <property name="fontFamily">"Lato"</property>
-                                            <property name="fontSize">18pt</property>
+                                            <property name="fontSize">16pt</property>
                                             <property name="fontWeight">normal</property>
                                             <property name="fontStyle">normal</property>
-                                            <property name="color">#353535</property>
+                                            <property name="color">#333333</property>
                                             <property name="textUnderline">none</property>
                                         </gadget-caption>
                                     </property>
@@ -4522,9 +4620,16 @@
                             </property>
                         </section>
                         <section id="1075">
-                            <property name="width">36.08923884514436%</property>
+                            <property name="width">30.84967320261438%</property>
                             <property name="gadgets">
                                 <gadget name="Gadget_8e7ba04a-48f8-4bf0-86de-179aeb89e6e41" id="110">
+                                    <list-property name="userProperties">
+                                        <structure>
+                                            <property name="name">userPreferences</property>
+                                            <property name="type">string</property>
+                                        </structure>
+                                    </list-property>
+                                    <property name="userPreferences">{}</property>
                                     <property name="title">Percent Spend By Payment Method</property>
                                     <property name="showTitle">false</property>
                                     <property name="showBorder">false</property>
@@ -4536,10 +4641,10 @@
                                             <property name="showCaption">true</property>
                                             <property name="horizontalAlignment">left</property>
                                             <property name="fontFamily">"Lato"</property>
-                                            <property name="fontSize">18pt</property>
+                                            <property name="fontSize">16pt</property>
                                             <property name="fontWeight">normal</property>
                                             <property name="fontStyle">normal</property>
-                                            <property name="color">#353535</property>
+                                            <property name="color">#333333</property>
                                             <property name="textUnderline">none</property>
                                         </gadget-caption>
                                     </property>
@@ -4566,6 +4671,13 @@
                                     </property>
                                 </gadget>
                                 <gadget name="Gadget_49cf5979-54a3-47ae-bf20-497f231adb9a1" id="107">
+                                    <list-property name="userProperties">
+                                        <structure>
+                                            <property name="name">userPreferences</property>
+                                            <property name="type">string</property>
+                                        </structure>
+                                    </list-property>
+                                    <property name="userPreferences">{}</property>
                                     <property name="title">My Spend By Account</property>
                                     <property name="showTitle">false</property>
                                     <property name="showBorder">false</property>
@@ -4577,10 +4689,10 @@
                                             <property name="showCaption">true</property>
                                             <property name="horizontalAlignment">left</property>
                                             <property name="fontFamily">"Lato"</property>
-                                            <property name="fontSize">18pt</property>
+                                            <property name="fontSize">16pt</property>
                                             <property name="fontWeight">normal</property>
                                             <property name="fontStyle">normal</property>
-                                            <property name="color">#353535</property>
+                                            <property name="color">#333333</property>
                                             <property name="textUnderline">none</property>
                                         </gadget-caption>
                                     </property>
@@ -4611,6 +4723,13 @@
                     </property>
                     <property name="freeFormGadgets">
                         <gadget name="Gadget_c3c02eba-1f76-43a2-8462-2e30269fdb1e" id="1021">
+                            <list-property name="userProperties">
+                                <structure>
+                                    <property name="name">userPreferences</property>
+                                    <property name="type">string</property>
+                                </structure>
+                            </list-property>
+                            <property name="userPreferences">{}</property>
                             <property name="x">4px</property>
                             <property name="y">677px</property>
                             <property name="title">Month Range</property>
@@ -4625,10 +4744,10 @@
                                     <property name="showCaption">true</property>
                                     <property name="horizontalAlignment">left</property>
                                     <property name="fontFamily">"Lato"</property>
-                                    <property name="fontSize">18pt</property>
+                                    <property name="fontSize">16pt</property>
                                     <property name="fontWeight">normal</property>
                                     <property name="fontStyle">normal</property>
-                                    <property name="color">#353535</property>
+                                    <property name="color">#333333</property>
                                     <property name="textUnderline">none</property>
                                 </gadget-caption>
                             </property>
@@ -4676,10 +4795,6 @@
                                             <property name="dirty">false</property>
                                         </event-object>
                                         <event-object>
-                                            <property name="gadget">Gadget_1eed2406-fae5-4a25-9f27-0d90e4f2db3b</property>
-                                            <property name="dirty">false</property>
-                                        </event-object>
-                                        <event-object>
                                             <property name="gadget">Gadget_a7dd0954-e852-4629-9243-4240849a6534</property>
                                             <property name="dirty">false</property>
                                         </event-object>
@@ -4699,6 +4814,13 @@
                             </property>
                         </gadget>
                         <gadget name="Gadget_e7e4f03d-777c-4b3c-ab21-49454ea11d93" id="1012">
+                            <list-property name="userProperties">
+                                <structure>
+                                    <property name="name">userPreferences</property>
+                                    <property name="type">string</property>
+                                </structure>
+                            </list-property>
+                            <property name="userPreferences">{}</property>
                             <property name="x">8px</property>
                             <property name="y">276px</property>
                             <property name="title">Click a Category</property>
@@ -4713,10 +4835,10 @@
                                     <property name="showCaption">true</property>
                                     <property name="horizontalAlignment">left</property>
                                     <property name="fontFamily">"Lato"</property>
-                                    <property name="fontSize">18pt</property>
+                                    <property name="fontSize">16pt</property>
                                     <property name="fontWeight">normal</property>
                                     <property name="fontStyle">normal</property>
-                                    <property name="color">#353535</property>
+                                    <property name="color">#333333</property>
                                     <property name="textUnderline">none</property>
                                 </gadget-caption>
                             </property>
@@ -4753,10 +4875,6 @@
                                             <property name="dirty">false</property>
                                         </event-object>
                                         <event-object>
-                                            <property name="gadget">Gadget_1eed2406-fae5-4a25-9f27-0d90e4f2db3b</property>
-                                            <property name="dirty">false</property>
-                                        </event-object>
-                                        <event-object>
                                             <property name="gadget">Gadget_a7dd0954-e852-4629-9243-4240849a6534</property>
                                             <property name="dirty">false</property>
                                         </event-object>
@@ -4784,7 +4902,7 @@
                             <property name="type">string</property>
                         </structure>
                     </list-property>
-                    <property name="tabTheme">ThemesReportItems3.Classic:Light</property>
+                    <property name="tabTheme">CleanBlueThemeReportItem.Clean Blue:Light</property>
                     <property name="title">My Wealth</property>
                     <property name="showHeader">false</property>
                     <property name="showFooter">false</property>
@@ -4796,9 +4914,23 @@
                             <property name="width">28.21522309711286%</property>
                             <property name="gadgets">
                                 <gadget name="7d72f8c7-b11e-4fe0-9849-b2838c18c62d2" id="125">
+                                    <list-property name="userProperties">
+                                        <structure>
+                                            <property name="name">userPreferences</property>
+                                            <property name="type">string</property>
+                                        </structure>
+                                    </list-property>
+                                    <property name="userPreferences">{}</property>
                                     <property name="zIndex">7</property>
                                     <property name="isVisible">false</property>
                                     <property name="height">47px</property>
+                                    <property name="caption">
+                                        <gadget-caption id="1142">
+                                            <property name="fontFamily">"Lato"</property>
+                                            <property name="fontSize">16pt</property>
+                                            <property name="color">#333333</property>
+                                        </gadget-caption>
+                                    </property>
                                     <property name="content">
                                         <current-selections id="126"/>
                                     </property>
@@ -4815,6 +4947,13 @@
                                     </property>
                                 </gadget>
                                 <gadget name="Gadget_691236c0-a227-42af-aa53-c5aa6267b243" id="128">
+                                    <list-property name="userProperties">
+                                        <structure>
+                                            <property name="name">userPreferences</property>
+                                            <property name="type">string</property>
+                                        </structure>
+                                    </list-property>
+                                    <property name="userPreferences">{}</property>
                                     <property name="title">My Account Update</property>
                                     <property name="externalGadgetURI">^/Report Designs/Account Overview Table.rptdesign</property>
                                     <property name="showTitle">false</property>
@@ -4827,10 +4966,10 @@
                                             <property name="showCaption">true</property>
                                             <property name="horizontalAlignment">left</property>
                                             <property name="fontFamily">"Lato"</property>
-                                            <property name="fontSize">18pt</property>
+                                            <property name="fontSize">16pt</property>
                                             <property name="fontWeight">normal</property>
                                             <property name="fontStyle">normal</property>
-                                            <property name="color">#353535</property>
+                                            <property name="color">#333333</property>
                                             <property name="textUnderline">none</property>
                                         </gadget-caption>
                                     </property>
@@ -4854,6 +4993,13 @@
                                     </property>
                                 </gadget>
                                 <gadget name="Gadget_0f3fc0bc-9382-4a2d-ad6e-f036010e29e8" id="130">
+                                    <list-property name="userProperties">
+                                        <structure>
+                                            <property name="name">userPreferences</property>
+                                            <property name="type">string</property>
+                                        </structure>
+                                    </list-property>
+                                    <property name="userPreferences">{}</property>
                                     <property name="title">My Transaction History</property>
                                     <property name="externalGadgetURI">^/Report Designs/TransactionHistory.rptdesign</property>
                                     <property name="showTitle">false</property>
@@ -4865,10 +5011,10 @@
                                         <gadget-caption id="1049">
                                             <property name="showCaption">true</property>
                                             <property name="fontFamily">"Lato"</property>
-                                            <property name="fontSize">18pt</property>
+                                            <property name="fontSize">16pt</property>
                                             <property name="fontWeight">normal</property>
                                             <property name="fontStyle">normal</property>
-                                            <property name="color">#353535</property>
+                                            <property name="color">#333333</property>
                                             <property name="textUnderline">none</property>
                                         </gadget-caption>
                                     </property>
@@ -4897,6 +5043,13 @@
                             <property name="width">28.6745406824147%</property>
                             <property name="gadgets">
                                 <gadget name="Gadget_748c94e6-dce7-4388-906a-96fb431df7f4" id="975">
+                                    <list-property name="userProperties">
+                                        <structure>
+                                            <property name="name">userPreferences</property>
+                                            <property name="type">string</property>
+                                        </structure>
+                                    </list-property>
+                                    <property name="userPreferences">{}</property>
                                     <property name="title">A</property>
                                     <property name="externalGadgetURI">^/Report Designs/My Wealth vs Indices.rptdesign</property>
                                     <property name="showTitle">false</property>
@@ -4908,6 +5061,9 @@
                                         <gadget-caption id="976">
                                             <property name="showCaption">true</property>
                                             <property name="horizontalAlignment">left</property>
+                                            <property name="fontFamily">"Lato"</property>
+                                            <property name="fontSize">16pt</property>
+                                            <property name="color">#333333</property>
                                         </gadget-caption>
                                     </property>
                                     <property name="content">
@@ -4950,6 +5106,13 @@
                                     </property>
                                 </gadget>
                                 <gadget name="Gadget_9bdd651e-d57d-45b8-89d8-14234d155e38" id="1043">
+                                    <list-property name="userProperties">
+                                        <structure>
+                                            <property name="name">userPreferences</property>
+                                            <property name="type">string</property>
+                                        </structure>
+                                    </list-property>
+                                    <property name="userPreferences">{}</property>
                                     <property name="title">My Account Performance At-A-Glance</property>
                                     <property name="externalGadgetURI">^/Report Designs/Account Overview.rptdocument</property>
                                     <property name="showTitle">false</property>
@@ -4962,10 +5125,10 @@
                                             <property name="showCaption">true</property>
                                             <property name="horizontalAlignment">left</property>
                                             <property name="fontFamily">"Lato"</property>
-                                            <property name="fontSize">18pt</property>
+                                            <property name="fontSize">16pt</property>
                                             <property name="fontWeight">normal</property>
                                             <property name="fontStyle">normal</property>
-                                            <property name="color">#353535</property>
+                                            <property name="color">#333333</property>
                                             <property name="textUnderline">none</property>
                                         </gadget-caption>
                                     </property>
@@ -4994,6 +5157,13 @@
                             <property name="width">43.110236220472444%</property>
                             <property name="gadgets">
                                 <gadget name="Gadget_aaeb6255-810d-4177-b65f-ecd5f0d3cdd912" id="137">
+                                    <list-property name="userProperties">
+                                        <structure>
+                                            <property name="name">userPreferences</property>
+                                            <property name="type">string</property>
+                                        </structure>
+                                    </list-property>
+                                    <property name="userPreferences">{}</property>
                                     <property name="title">My Wealth vs. State Avg</property>
                                     <property name="externalGadgetURI">^/Report Designs/My Wealth vs Geo.rptdesign</property>
                                     <property name="showTitle">false</property>
@@ -5006,8 +5176,8 @@
                                             <property name="showCaption">true</property>
                                             <property name="horizontalAlignment">left</property>
                                             <property name="fontFamily">"Lato"</property>
-                                            <property name="fontSize">18pt</property>
-                                            <property name="color">#353535</property>
+                                            <property name="fontSize">16pt</property>
+                                            <property name="color">#333333</property>
                                         </gadget-caption>
                                     </property>
                                     <property name="content">
@@ -5030,6 +5200,13 @@
                                     </property>
                                 </gadget>
                                 <gadget name="Gadget_1869f32b-d96e-47be-8bff-4b6a62796d351212" id="135">
+                                    <list-property name="userProperties">
+                                        <structure>
+                                            <property name="name">userPreferences</property>
+                                            <property name="type">string</property>
+                                        </structure>
+                                    </list-property>
+                                    <property name="userPreferences">{}</property>
                                     <property name="title">My Travel Goal Progress</property>
                                     <property name="externalGadgetURI">^/Report Designs/world_trip.rptdesign</property>
                                     <property name="showTitle">false</property>
@@ -5042,8 +5219,8 @@
                                             <property name="showCaption">true</property>
                                             <property name="horizontalAlignment">left</property>
                                             <property name="fontFamily">"Lato"</property>
-                                            <property name="fontSize">18pt</property>
-                                            <property name="color">#353535</property>
+                                            <property name="fontSize">16pt</property>
+                                            <property name="color">#333333</property>
                                         </gadget-caption>
                                     </property>
                                     <property name="content">
@@ -5070,6 +5247,13 @@
                     </property>
                     <property name="freeFormGadgets">
                         <gadget name="Gadget_ceb90994-45c3-4d33-9593-9c1b412327ac" id="981">
+                            <list-property name="userProperties">
+                                <structure>
+                                    <property name="name">userPreferences</property>
+                                    <property name="type">string</property>
+                                </structure>
+                            </list-property>
+                            <property name="userPreferences">{}</property>
                             <property name="x">580px</property>
                             <property name="y">16px</property>
                             <property name="title">My Wealth vs. Market Indices</property>
@@ -5083,10 +5267,10 @@
                                     <property name="showCaption">true</property>
                                     <property name="horizontalAlignment">left</property>
                                     <property name="fontFamily">"Lato"</property>
-                                    <property name="fontSize">18pt</property>
+                                    <property name="fontSize">16pt</property>
                                     <property name="fontWeight">normal</property>
                                     <property name="fontStyle">normal</property>
-                                    <property name="color">#353535</property>
+                                    <property name="color">#333333</property>
                                     <property name="textUnderline">none</property>
                                 </gadget-caption>
                             </property>
@@ -5134,8 +5318,15 @@
                             </property>
                         </gadget>
                         <gadget name="Gadget_ac63871f-ad6b-40bf-b079-7a1876294af4" id="123">
-                            <property name="x">1527px</property>
-                            <property name="y">10px</property>
+                            <list-property name="userProperties">
+                                <structure>
+                                    <property name="name">userPreferences</property>
+                                    <property name="type">string</property>
+                                </structure>
+                            </list-property>
+                            <property name="userPreferences">{}</property>
+                            <property name="x">2112.666666030884px</property>
+                            <property name="y">16.666656494140625px</property>
                             <property name="title">My Current Status</property>
                             <property name="externalGadgetURI">^/Report Designs/term_goal.rptdesign</property>
                             <property name="showTitle">false</property>
@@ -5149,10 +5340,10 @@
                                     <property name="showCaption">true</property>
                                     <property name="horizontalAlignment">left</property>
                                     <property name="fontFamily">"Lato"</property>
-                                    <property name="fontSize">18pt</property>
+                                    <property name="fontSize">16pt</property>
                                     <property name="fontWeight">normal</property>
                                     <property name="fontStyle">normal</property>
-                                    <property name="color">#353535</property>
+                                    <property name="color">#333333</property>
                                     <property name="textUnderline">none</property>
                                 </gadget-caption>
                             </property>
@@ -5194,10 +5385,17 @@
                     </list-property>
                     <property name="smartLayout">{"details":{"type":"component","componentName":"Gadget_d57258dc-fb1c-4a6e-a13d-849a35ca20cf"},"mainHeight":816}</property>
                     <property name="responsiveView">true</property>
-                    <property name="tabTheme">ThemesReportItems3.Classic:Light</property>
+                    <property name="tabTheme">CleanBlueThemeReportItem.Clean Blue:Light</property>
                     <property name="title">Retirement Roadmap</property>
                     <property name="freeFormGadgets">
                         <gadget name="bfde4d57-0538-4fe9-929f-868ce0a89f86" id="1120">
+                            <list-property name="userProperties">
+                                <structure>
+                                    <property name="name">userPreferences</property>
+                                    <property name="type">string</property>
+                                </structure>
+                            </list-property>
+                            <property name="userPreferences">{}</property>
                             <property name="x">100px</property>
                             <property name="y">100px</property>
                             <property name="zIndex">1</property>
@@ -5211,7 +5409,7 @@
                                     <property name="fontFamily">"Lato"</property>
                                     <property name="fontSize">16pt</property>
                                     <property name="fontWeight">bold</property>
-                                    <property name="color">#000000</property>
+                                    <property name="color">#333333</property>
                                 </gadget-caption>
                             </property>
                             <property name="content">
@@ -5301,7 +5499,7 @@
                             <property name="type">boolean</property>
                         </structure>
                     </list-property>
-                    <property name="tabTheme">ThemesReportItems3.Classic:Light</property>
+                    <property name="tabTheme">CleanBlueThemeReportItem.Clean Blue:Light</property>
                     <property name="responsiveView">true</property>
                     <property name="title">Portfolio Performance</property>
                     <property name="showHeader">false</property>
@@ -5314,6 +5512,13 @@
                             <property name="width">100%</property>
                             <property name="gadgets">
                                 <gadget name="Gadget_6ec15be4-ccbe-4d02-812c-6326d8a752d7" id="144">
+                                    <list-property name="userProperties">
+                                        <structure>
+                                            <property name="name">userPreferences</property>
+                                            <property name="type">string</property>
+                                        </structure>
+                                    </list-property>
+                                    <property name="userPreferences">{}</property>
                                     <property name="title">Portfolio Performance</property>
                                     <property name="externalGadgetURI">^/Report Designs/Portfolio Performance Dashboard_NoHTML.rptdesign</property>
                                     <property name="showTitle">false</property>
@@ -5326,8 +5531,8 @@
                                             <property name="showCaption">true</property>
                                             <property name="horizontalAlignment">left</property>
                                             <property name="fontFamily">"Lato"</property>
-                                            <property name="fontSize">18pt</property>
-                                            <property name="color">#353535</property>
+                                            <property name="fontSize">16pt</property>
+                                            <property name="color">#333333</property>
                                         </gadget-caption>
                                     </property>
                                     <property name="content">
@@ -5349,8 +5554,22 @@
                                     </property>
                                 </gadget>
                                 <gadget name="87a03aea-a9a9-481a-8019-a4b7f745a17b" id="146">
+                                    <list-property name="userProperties">
+                                        <structure>
+                                            <property name="name">userPreferences</property>
+                                            <property name="type">string</property>
+                                        </structure>
+                                    </list-property>
+                                    <property name="userPreferences">{}</property>
                                     <property name="zIndex">1</property>
                                     <property name="isVisible">false</property>
+                                    <property name="caption">
+                                        <gadget-caption id="1143">
+                                            <property name="fontFamily">"Lato"</property>
+                                            <property name="fontSize">16pt</property>
+                                            <property name="color">#333333</property>
+                                        </gadget-caption>
+                                    </property>
                                     <property name="content">
                                         <current-selections id="147"/>
                                     </property>
