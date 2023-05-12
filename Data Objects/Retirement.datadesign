@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <datamart xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
-    <property name="createdBy">Eclipse BIRT Designer Version 4.11.0.v202101151752</property>
+    <property name="createdBy">Eclipse BIRT Designer Version 4.11.0.v202104210725</property>
     <list-property name="propertyBindings">
         <structure>
             <property name="name">queryText</property>
@@ -9,14 +9,6 @@
         <structure>
             <property name="name">WORKSHEETS</property>
             <property name="id">4</property>
-        </structure>
-        <structure>
-            <property name="name">queryText</property>
-            <property name="id">3</property>
-        </structure>
-        <structure>
-            <property name="name">WORKSHEETS</property>
-            <property name="id">3</property>
         </structure>
     </list-property>
     <data-sources>
@@ -28,8 +20,6 @@
     </data-sources>
     <data-sets>
         <oda-data-set extensionID="org.eclipse.birt.report.data.oda.excel.dataSet" name="Allocations" id="3">
-            <property name="isVisible">true</property>
-            <property name="nullsOrdering">nulls lowest</property>
             <list-property name="computedColumns">
                 <structure>
                     <property name="name">DateYear</property>
@@ -39,16 +29,63 @@
             </list-property>
             <list-property name="columnHints">
                 <structure>
+                    <property name="columnName">Strategy</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Strategy</text-property>
+                    <text-property name="heading">Strategy</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
                     <property name="columnName">Years</property>
                     <property name="analysis">dimension</property>
                     <text-property name="displayName">Years</text-property>
                     <text-property name="heading">Years</text-property>
+                    <property name="horizontalAlign">left</property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Asset Category</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Asset Category</text-property>
+                    <text-property name="heading">Asset Category</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Asset</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Asset</text-property>
+                    <text-property name="heading">Asset</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Allocation</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Allocation</text-property>
+                    <text-property name="heading">Allocation</text-property>
+                    <property name="horizontalAlign">left</property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Type</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Type</text-property>
+                    <text-property name="heading">Type</text-property>
                     <property name="indexColumn">false</property>
                     <property name="compressed">false</property>
                 </structure>
                 <structure>
                     <property name="columnName">DateYear</property>
                     <property name="analysis">measure</property>
+                    <property name="horizontalAlign">left</property>
+                    <structure name="valueFormat">
+                        <property name="category">Short Date</property>
+                        <property name="pattern">Short Date</property>
+                    </structure>
                     <property name="indexColumn">false</property>
                     <property name="compressed">false</property>
                 </structure>
@@ -61,17 +98,49 @@
                         <value type="javascript">BirtDateTime.year(BirtDateTime.today())-params["pYearRetire"].value</value>
                     </simple-property-list>
                 </structure>
+                <structure>
+                    <property name="operator">eq</property>
+                    <expression name="expr" type="javascript">row["Strategy"]</expression>
+                    <simple-property-list name="value1">
+                        <value type="javascript">params["pStrategy"].value</value>
+                    </simple-property-list>
+                </structure>
             </list-property>
             <list-property name="parameters"/>
             <structure name="cachedMetaData">
                 <list-property name="resultSet">
                     <structure>
                         <property name="position">1</property>
-                        <property name="name">Years</property>
+                        <property name="name">Strategy</property>
                         <property name="dataType">string</property>
                     </structure>
                     <structure>
                         <property name="position">2</property>
+                        <property name="name">Years</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">Asset Category</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">Asset</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">Allocation</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">6</property>
+                        <property name="name">Type</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">7</property>
                         <property name="name">DateYear</property>
                         <property name="dataType">integer</property>
                     </structure>
@@ -81,13 +150,48 @@
             <list-property name="resultSet">
                 <structure>
                     <property name="position">1</property>
+                    <property name="name">Strategy</property>
+                    <property name="nativeName">Strategy</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
                     <property name="name">Years</property>
                     <property name="nativeName">Years</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">Asset Category</property>
+                    <property name="nativeName">Asset Category</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">Asset</property>
+                    <property name="nativeName">Asset</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">5</property>
+                    <property name="name">Allocation</property>
+                    <property name="nativeName">Allocation</property>
+                    <property name="dataType">decimal</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">6</property>
+                    <property name="name">Type</property>
+                    <property name="nativeName">Type</property>
                     <property name="dataType">string</property>
                     <property name="nativeDataType">12</property>
                 </structure>
             </list-property>
-            <xml-property name="queryText"><![CDATA[select "Years" from "/C:/Users/admin1/Desktop/SFWealthApp-master/SFWealthApp-master/Data/Retirement Allocation.xlsx" : {"Years","Years",STRING}]]></xml-property>
+            <xml-property name="queryText"><![CDATA[select "Strategy", "Years", "Asset Category", "Asset", "Allocation", "Type" from "/C:/workspaces/workspace21/Retirement/Data/Retirement Allocation.xlsx" : {"Strategy","Strategy",STRING;"Years","Years",STRING;"Asset Category","Asset Category",STRING;"Asset","Asset",STRING;"Allocation","Allocation",STRING;"Type","Type",STRING}]]></xml-property>
             <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
 <model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
   <Version>2.0</Version>
@@ -183,7 +287,7 @@
     </design:resultSetDefinitions>
   </design:ResultSets>
 </model:DesignValues>]]></xml-property>
-            <property name="WORKSHEETS">Year List</property>
+            <property name="WORKSHEETS">Stock Alloc Detail</property>
         </oda-data-set>
         <oda-data-set extensionID="org.eclipse.birt.report.data.oda.excel.dataSet" name="YearList old" id="4">
             <property name="isVisible">false</property>
@@ -247,7 +351,7 @@
                     <property name="nativeDataType">12</property>
                 </structure>
             </list-property>
-            <xml-property name="queryText"><![CDATA[select "Years" from "/C:/Users/admin1/Desktop/SFWealthApp-master/SFWealthApp-master/Data/Retirement Allocation.xlsx" : {"Years","Years",STRING}]]></xml-property>
+            <xml-property name="queryText"><![CDATA[select "Years" from "/Z:/Image Files/workspace/git/Retirement/Data/Retirement Allocation.xlsx" : {"Years","Years",STRING}]]></xml-property>
             <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
 <model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
   <Version>2.0</Version>
@@ -301,10 +405,33 @@
                     <property name="compressed">false</property>
                 </structure>
                 <structure>
-                    <property name="columnName">DateYear</property>
-                    <property name="analysis">measure</property>
+                    <property name="columnName">Strategy</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Strategy</text-property>
+                    <text-property name="heading">Strategy</text-property>
                     <property name="indexColumn">false</property>
                     <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Allocation</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Allocation</text-property>
+                    <text-property name="heading">Allocation</text-property>
+                    <property name="horizontalAlign">left</property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Type</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Type</text-property>
+                    <text-property name="heading">Type</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">DateYear</property>
+                    <property name="analysis">measure</property>
                 </structure>
             </list-property>
             <list-property name="filter">
@@ -315,8 +442,14 @@
                         <value type="javascript">BirtDateTime.year(BirtDateTime.today())-params["pYearRetire"].value</value>
                     </simple-property-list>
                 </structure>
+                <structure>
+                    <property name="operator">eq</property>
+                    <expression name="expr" type="javascript">row["Strategy"]</expression>
+                    <simple-property-list name="value1">
+                        <value type="javascript">params["pStrategy"].value</value>
+                    </simple-property-list>
+                </structure>
             </list-property>
-            <list-property name="parameters"/>
             <structure name="cachedMetaData">
                 <list-property name="resultSet">
                     <structure>
@@ -326,6 +459,21 @@
                     </structure>
                     <structure>
                         <property name="position">2</property>
+                        <property name="name">Strategy</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">Allocation</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">Type</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
                         <property name="name">DateYear</property>
                         <property name="dataType">integer</property>
                     </structure>
@@ -340,8 +488,29 @@
                     <property name="dataType">integer</property>
                     <property name="nativeDataType">12</property>
                 </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">Strategy</property>
+                    <property name="nativeName">Strategy</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">Allocation</property>
+                    <property name="nativeName">Allocation</property>
+                    <property name="dataType">decimal</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">Type</property>
+                    <property name="nativeName">Type</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
             </list-property>
-            <xml-property name="queryText"><![CDATA[select "Years" from "/C:/Users/admin1/Desktop/SFWealthApp-master/SFWealthApp-master/Data/Retirement Allocation.xlsx" : {"Years","Years",STRING}]]></xml-property>
+            <xml-property name="queryText"><![CDATA[select "Years", "Strategy", "Allocation", "Type" from "/Z:/Image Files/workspace/git/Retirement/Data/Retirement Allocation.xlsx" : {"Years","Years",STRING;"Strategy","Strategy",STRING;"Allocation","Allocation",STRING;"Type","Type",STRING}]]></xml-property>
             <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
 <model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
   <Version>2.0</Version>
@@ -437,7 +606,7 @@
     </design:resultSetDefinitions>
   </design:ResultSets>
 </model:DesignValues>]]></xml-property>
-            <property name="WORKSHEETS">Year List</property>
+            <property name="WORKSHEETS">Stock Alloc Summary</property>
         </oda-data-set>
         <oda-data-set extensionID="org.eclipse.birt.report.data.oda.excel.dataSet" name="YearList" id="33">
             <list-property name="computedColumns">
@@ -458,6 +627,22 @@
                     <property name="compressed">false</property>
                 </structure>
                 <structure>
+                    <property name="columnName">Type</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Type</text-property>
+                    <text-property name="heading">Type</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Strategy</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Strategy</text-property>
+                    <text-property name="heading">Strategy</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
                     <property name="columnName">DateYear</property>
                     <property name="analysis">measure</property>
                     <property name="indexColumn">false</property>
@@ -466,6 +651,13 @@
             </list-property>
             <list-property name="filter">
                 <structure>
+                    <property name="operator">eq</property>
+                    <expression name="expr" type="javascript">row["Type"]</expression>
+                    <simple-property-list name="value1">
+                        <value type="javascript">"Stocks"</value>
+                    </simple-property-list>
+                </structure>
+                <structure>
                     <property name="operator">ge</property>
                     <expression name="expr" type="javascript">row["Years"]</expression>
                     <simple-property-list name="value1">
@@ -473,7 +665,6 @@
                     </simple-property-list>
                 </structure>
             </list-property>
-            <list-property name="parameters"/>
             <list-property name="sortHints">
                 <structure>
                     <property name="columnName">dataSetRow["DateYear"]</property>
@@ -490,6 +681,16 @@
                     </structure>
                     <structure>
                         <property name="position">2</property>
+                        <property name="name">Type</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">Strategy</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
                         <property name="name">DateYear</property>
                         <property name="dataType">integer</property>
                     </structure>
@@ -504,8 +705,22 @@
                     <property name="dataType">integer</property>
                     <property name="nativeDataType">12</property>
                 </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">Type</property>
+                    <property name="nativeName">Type</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">Strategy</property>
+                    <property name="nativeName">Strategy</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
             </list-property>
-            <xml-property name="queryText"><![CDATA[select "Years" from "/C:/Users/admin1/Desktop/SFWealthApp-master/SFWealthApp-master/Data/Retirement Allocation.xlsx" : {"Years","Years",STRING}]]></xml-property>
+            <xml-property name="queryText"><![CDATA[select "Years", "Type", "Strategy" from "/Z:/Image Files/workspace/git/Retirement/Data/Retirement Allocation.xlsx" : {"Years","Years",STRING;"Type","Type",STRING;"Strategy","Strategy",STRING}]]></xml-property>
             <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
 <model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
   <Version>2.0</Version>
@@ -580,7 +795,7 @@
     </design:resultSetDefinitions>
   </design:ResultSets>
 </model:DesignValues>]]></xml-property>
-            <property name="WORKSHEETS">Year List</property>
+            <property name="WORKSHEETS">Stock Alloc Summary</property>
         </oda-data-set>
     </data-sets>
     <parameters>
