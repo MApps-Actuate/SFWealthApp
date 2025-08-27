@@ -1,0 +1,548 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 4.29.0.v202504021847</property>
+    <property name="units">in</property>
+    <property name="iconFile">/templates/blank_report.gif</property>
+    <property name="layoutPreference">auto layout</property>
+    <property name="bidiLayoutOrientation">ltr</property>
+    <property name="imageDPI">96</property>
+    <property name="responsiveReport">true</property>
+    <data-sources>
+        <oda-data-source extensionID="com.actuate.data.oda.static" name="Data Source" id="4"/>
+    </data-sources>
+    <data-sets>
+        <oda-data-set extensionID="com.actuate.data.oda.static.dataSet" name="Data Set" id="5">
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">EventDate</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">EventDate</text-property>
+                    <text-property name="heading">EventDate</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">EventName</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">EventName</text-property>
+                    <text-property name="heading">EventName</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">EventMinCost</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">EventMinCost</text-property>
+                    <text-property name="heading">EventMinCost</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">EventTotalCost</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">EventTotalCost</text-property>
+                    <text-property name="heading">EventTotalCost</text-property>
+                </structure>
+            </list-property>
+            <list-property name="parameters"/>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">EventDate</property>
+                        <property name="dataType">date</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">EventName</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">EventMinCost</property>
+                        <property name="dataType">float</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">EventTotalCost</property>
+                        <property name="dataType">float</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <method name="beforeOpen"><![CDATA[vars["Labels"] = "[";]]></method>
+            <method name="beforeClose"><![CDATA[vars["Labels"] = vars["Labels"].slice(0, -1) + "]";]]></method>
+            <method name="onFetch"><![CDATA[if (row["EventName"].length > 0)
+	vars["Labels"] = vars["Labels"] + '{"EventDate":"' + row["EventDate"] + '","EventName":"' + row["EventName"] + '"},';]]></method>
+            <property name="dataSource">Data Source</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">EventDate</property>
+                    <property name="nativeName">EventDate</property>
+                    <property name="dataType">date</property>
+                    <property name="nativeDataType">6</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">EventName</property>
+                    <property name="nativeName">EventName</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">1</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">EventMinCost</property>
+                    <property name="nativeName">EventMinCost</property>
+                    <property name="dataType">float</property>
+                    <property name="nativeDataType">4</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">EventTotalCost</property>
+                    <property name="nativeName">EventTotalCost</property>
+                    <property name="dataType">float</property>
+                    <property name="nativeDataType">4</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[{"Columns":["EventDate","EventName","EventMinCost","EventTotalCost"],"Types":[6,1,4,4]}]]></xml-property>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>EventDate</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>6</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+            <design:uiHints>
+              <design:displayName>EventDate</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>EventDate</design:label>
+            <design:formattingHints>
+              <design:displaySize>-1</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>EventName</design:name>
+              <design:position>2</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>1</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+            <design:uiHints>
+              <design:displayName>EventName</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>EventName</design:label>
+            <design:formattingHints>
+              <design:displaySize>-1</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>EventMinCost</design:name>
+              <design:position>3</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>4</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+            <design:uiHints>
+              <design:displayName>EventMinCost</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>EventMinCost</design:label>
+            <design:formattingHints>
+              <design:displaySize>-1</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>EventTotalCost</design:name>
+              <design:position>4</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>4</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+            <design:uiHints>
+              <design:displayName>EventTotalCost</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>EventTotalCost</design:label>
+            <design:formattingHints>
+              <design:displaySize>-1</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria/>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+            <list-property name="privateDriverProperties">
+                <ex-property>
+                    <name>DATA</name>
+                    <value>[["2025-08-14","Grand Canyon","5000","6000"],["2025-12-24","Holdays at Grandma's","2000","2500"],["2026-03-15","Disney World","10000","13000"],["2027-10-15","Winery Tours","2500","3000"],["2025-07-01","","0","0"],["2025-11-01","","0","0"],["2026-01-01","","0","0"],["2026-04-01","","0","0"],["2026-08-01","","0","0"],["2027-06-01","","0","0"]]</value>
+                </ex-property>
+            </list-property>
+        </oda-data-set>
+    </data-sets>
+    <page-setup>
+        <simple-master-page name="Simple MasterPage" id="2">
+            <property name="orientation">auto</property>
+            <page-footer>
+                <text id="3">
+                    <property name="contentType">html</property>
+                    <text-property name="content"><![CDATA[<value-of>new Date()</value-of>]]></text-property>
+                </text>
+            </page-footer>
+        </simple-master-page>
+    </page-setup>
+    <body>
+        <extended-item extensionName="Chart" id="6">
+            <xml-property name="xmlRepresentation"><![CDATA[<ActuateChart version="2.6.1">
+ <ChartWithAxes version="2.6.1" type="Bubble Chart" subType="Standard Bubble Chart">
+  <block>
+   <children _type="TitleBlock" visible="false">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <label>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </label>
+   </children>
+   <children _type="Plot">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <clientArea>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </clientArea>
+   </children>
+   <children _type="Legend" visible="false" position="0">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <cursor type="0"/>
+    <clientArea>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </clientArea>
+    <separator>
+     <color _nil="1"/>
+    </separator>
+    <title visible="false">
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </title>
+   </children>
+   <bounds _body="0.0,0.0,572.25,286.125"/>
+   <outline>
+    <color _nil="1"/>
+   </outline>
+   <cursor type="0"/>
+  </block>
+  <extendedProperties name="enable.area.alt" value="false"/>
+  <extendedProperties name="enable.drill.category" value="true"/>
+  <extendedProperties name="enable.drill.series" value="true"/>
+  <extendedProperties name="chart.palette.type" value="color"/>
+  <extendedProperties name="chart.palette.auto" value="false"/>
+  <extendedProperties name="jschart.client.script" value="afterRendering: function(chart)&#13;&#10;{&#13;&#10;    var labelData = JSON.parse(this.getReportVariable(&quot;Labels&quot;));&#13;&#10;    var series = chart.getCore().series[0]; // Get the first series&#13;&#10;    // Iterate through the points in reverse order&#13;&#10;    for (let i = series.data.length - 1; i &gt;= 0; i--) {&#13;&#10;        if (series.data[i].y === 0) {&#13;&#10;            series.data[i].remove(); // Remove the point if its value is zero&#13;&#10;        }&#13;&#10;    }&#13;&#10;    series.options.dataLabels= {&#13;&#10;            enabled: true, // Enable data labels&#13;&#10;            useHTML: true,&#13;&#10;            formatter: function() {&#13;&#10;                // Conditionally format data labels&#13;&#10;                let lbl = labelData.find(lbls =&gt; {&#13;&#10;  					// 1. Create a Date object from the event date string.&#13;&#10;  					var eventDate = new Date(lbls.EventDate);&#13;&#10;  					// 2. Set the day of the month to 1.&#13;&#10;  					//eventDate.setDate(0);&#13;&#10;  					// 3. Get the Date string&#13;&#10;  					var firstDayOfMonth = eventDate.toISOString().split(&quot;T&quot;)[0];&#13;&#10;  					var dt = new Date(this.x).toISOString().split(&quot;T&quot;)[0];&#13;&#10;  					// 4. Compare the timestamp of the first day of the month with this.x.&#13;&#10;  					return firstDayOfMonth === dt;&#13;&#10;                });&#13;&#10;&#13;&#10;                if (lbl !== undefined) {&#13;&#10;                    //return  &#039;&lt;div style=&quot;text-align: center !important; width: 100%;&quot;&gt;&#039; + lbl.EventName + &#039;&lt;br&gt;&#039; + this.y + &#039;&lt;/div&gt;&#039;;&#13;&#10;                    return lbl.EventName;&#13;&#10;                }&#13;&#10;                return null; // No label for other points&#13;&#10;            },&#13;&#10;            style: {&#13;&#10;                color: &#039;#000000&#039;, // Label color&#13;&#10;            },&#13;&#10;            backgroundColor: &#039;rgba(255, 255, 255, 1)&#039;, // Background color for visibility&#13;&#10;            borderColor: &#039;black&#039;, // Border color&#13;&#10;            borderWidth: 1, // Border width&#13;&#10;            borderRadius: 5,&#13;&#10;            align: &#039;center&#039;,&#13;&#10;            y: -5&#13;&#10;            &#13;&#10;        },&#13;&#10;    &#13;&#10;    chart.getCore().addSeries({&#13;&#10;        name:&#039;Savings Demand&#039;,&#13;&#10;        data: [&#13;&#10;            [0, 6000],&#13;&#10;            [1, 7500],&#13;&#10;            [2, 9500],&#13;&#10;            [3, 11500],&#13;&#10;            [4, 12500],&#13;&#10;            [5, 13000],&#13;&#10;            [6, 1000],&#13;&#10;            [7, 1800],&#13;&#10;            [8, 2400],&#13;&#10;            [9, 3500]&#13;&#10;        ],&#13;&#10;        type: &#039;areaspline&#039;,&#13;&#10;        visible: true,&#13;&#10;        zIndex: 1,&#13;&#10;        marker: {&#13;&#10;            enabled: false // Hide markers&#13;&#10;        },&#13;&#10;        //legend: {&#13;&#10;        //	layout: &#039;proximate&#039;&#13;&#10;        //},&#13;&#10;        //fillColor: &#039;rgba(30, 144, 255, 0.5)&#039;,&#13;&#10;        zones: [{&#13;&#10;            value: 5250, // Color below this value&#13;&#10;            color: &#039;rgba(3, 190, 90, 0.75)&#039; // below threshold&#13;&#10;        }, {&#13;&#10;            color: &#039;rgba(255, 99, 71, 0.25)&#039; // above threshold&#13;&#10;        }]&#13;&#10;        //showInLegend: true,&#13;&#10;    });&#13;&#10;    &#13;&#10;&#13;&#10;},&#13;&#10;&#13;&#10;/**&#13;&#10; * Called before chart instance is rendered.&#13;&#10; *&#13;&#10; * @param options&#13;&#10; *            chart options&#13;&#10; * @param  chart&#13;&#10; *             chart instance&#13;&#10; */&#13;&#10;beforeRendering: function(options, chart)&#13;&#10;{&#13;&#10;    options.series[0].showInLegend = false;&#13;&#10;    options.series[0].zIndex = 10;&#13;&#10;    var labelData = JSON.parse(this.getReportVariable(&quot;Labels&quot;));&#13;&#10;    options.tooltip= {&#13;&#10;        shared: false, // Disable shared tooltips&#13;&#10;        useHTML: true,&#13;&#10;        formatter: function() {&#13;&#10;            if (this.series.name === &#039;Known Cost&#039;) {&#13;&#10;                let lbl = labelData.find(lbls =&gt; {&#13;&#10;  					// 1. Create a Date object from the event date string.&#13;&#10;  					var eventDate = new Date(lbls.EventDate);&#13;&#10;  					// 2. Set the day of the month to 1.&#13;&#10;  					//eventDate.setDate(0);&#13;&#10;  					// 3. Get the Date string&#13;&#10;  					var firstDayOfMonth = eventDate.toISOString().split(&quot;T&quot;)[0];&#13;&#10;  					var dt = new Date(this.x).toISOString().split(&quot;T&quot;)[0];&#13;&#10;  					// 4. Compare the timestamp of the first day of the month with this.x.&#13;&#10;  					return firstDayOfMonth === dt;&#13;&#10;                });&#13;&#10;                if (lbl !== &#039;undefined&#039;) {&#13;&#10;                    return &#039;&lt;strong&gt;&#039; + lbl.EventName + &#039;&lt;/strong&gt;&lt;br&gt; &#039; + Highcharts.dateFormat(&#039;%A, %b %e, %Y&#039;, this.x) + &#039;&lt;br&gt;Est Total Spend: &#039; + this.point.z.toLocaleString() + &#039;&lt;br&gt;Known Costs: &#039; + this.y.toLocaleString() + &#039;&lt;br&gt;Est Spending Money: &#039; + (this.point.z-this.y).toLocaleString();&#13;&#10;                } else {&#13;&#10;                    return null;&#13;&#10;                }&#13;&#10;            } else if (this.series.name === &#039;Savings Demand&#039;) {&#13;&#10;                return &#039;&lt;strong&gt;Savings Demand:&lt;/strong&gt; &#039; + this.y.toLocaleString() + &#039; is the estimated savings you will need on &#039; + Highcharts.dateFormat(&#039;%b %e, %Y&#039;, this.x) + &#039; to meet your future trip expenses.&#039;;&#13;&#10;            }&#13;&#10;        }&#13;&#10;    }&#13;&#10;&#13;&#10;},"/>
+  <sampleData>
+   <baseSampleData dataSetRepresentation="01/05/2000,02/01/2000,04/12/2000,03/12/2000,02/29/2000"/>
+   <orthogonalSampleData dataSetRepresentation="6,4,12,8,10" seriesDefinitionIndex="0"/>
+  </sampleData>
+  <emptyMessage>
+   <caption value="This chart contains no data."/>
+   <background _body=",64,127,127,127"/>
+   <outline>
+    <color _body=",128,127,127,127"/>
+   </outline>
+  </emptyMessage>
+  <axes type="3">
+   <title>
+    <background _nil="1"/>
+    <outline>
+     <color _nil="1"/>
+    </outline>
+   </title>
+   <associatedAxes primaryAxis="true">
+    <title>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </title>
+    <seriesDefinitions>
+     <query definition=""/>
+     <seriesPalette>
+      <entries _body=",255,0,0,255"/>
+      <entries _body=",255,242,88,106"/>
+      <entries _body=",255,232,172,57"/>
+      <entries _body=",255,128,255,128"/>
+      <entries _body=",255,64,128,128"/>
+      <entries _body=",255,128,128,192"/>
+      <entries _body=",255,170,85,85"/>
+      <entries _body=",255,128,128,0"/>
+      <entries _body=",255,192,192,192"/>
+      <entries _body=",255,255,255,128"/>
+      <entries _body=",255,128,192,128"/>
+      <entries _body=",255,7,146,94"/>
+      <entries _body=",255,0,128,255"/>
+      <entries _body=",255,255,128,192"/>
+      <entries _body=",255,0,255,255"/>
+      <entries _body=",255,255,128,128"/>
+      <entries _body=",255,0,128,192"/>
+      <entries _body=",255,128,128,192"/>
+      <entries _body=",255,255,0,255"/>
+      <entries _body=",255,128,64,64"/>
+      <entries _body=",255,255,128,64"/>
+      <entries _body=",255,80,240,120"/>
+      <entries _body=",255,0,64,128"/>
+      <entries _body=",255,128,0,64"/>
+      <entries _body=",255,255,0,128"/>
+      <entries _body=",255,128,128,64"/>
+      <entries _body=",255,128,128,128"/>
+      <entries _body=",255,255,128,255"/>
+      <entries _body=",255,0,64,0"/>
+      <entries _body=",255,0,0,0"/>
+      <entries _body=",255,255,255,255"/>
+      <entries _body=",255,255,128,0"/>
+     </seriesPalette>
+     <series _type="BubbleSeries" seriesIdentifier="Known Cost">
+      <label visible="true">
+       <caption>
+        <color _body=",255,204,255,255"/>
+       </caption>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dataDefinition definition="row[&quot;EventMinCost&quot;]">
+       <grouping/>
+      </dataDefinition>
+      <dataDefinition definition="row[&quot;EventTotalCost&quot;]">
+       <grouping/>
+      </dataDefinition>
+      <curveFitting _nil="1"/>
+      <cursor type="0"/>
+      <markers>
+       <outline/>
+      </markers>
+      <lineAttributes>
+       <color _nil="1"/>
+      </lineAttributes>
+      <accLineAttributes>
+       <color _nil="1"/>
+      </accLineAttributes>
+     </series>
+    </seriesDefinitions>
+    <lineAttributes>
+     <color _nil="1"/>
+    </lineAttributes>
+    <label>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </label>
+    <markerLines labelAnchor="1">
+     <lineAttributes/>
+     <value _type="NumberDataElement" value="5225.0"/>
+     <label visible="true">
+      <caption value="Current Savings">
+       <font>
+        <alignment/>
+       </font>
+      </caption>
+      <outline/>
+      <insets/>
+     </label>
+     <cursor type="0"/>
+    </markerLines>
+    <markerRanges labelAnchor="1">
+     <outline/>
+     <fill _body=",132,3,207,105"/>
+     <startValue _type="NumberDataElement" value="0.0"/>
+     <endValue _type="NumberDataElement" value="5225.0"/>
+     <label visible="false">
+      <caption value="Current Savings">
+       <font rotation="0.0">
+        <alignment/>
+       </font>
+      </caption>
+      <outline/>
+      <insets/>
+     </label>
+     <cursor type="0"/>
+    </markerRanges>
+    <majorGrid>
+     <lineAttributes>
+      <color _nil="1"/>
+     </lineAttributes>
+     <tickAttributes>
+      <color _nil="1"/>
+     </tickAttributes>
+    </majorGrid>
+    <minorGrid>
+     <lineAttributes>
+      <color _nil="1"/>
+     </lineAttributes>
+     <tickAttributes>
+      <color _nil="1"/>
+     </tickAttributes>
+    </minorGrid>
+    <origin type="0">
+     <value _nil="1"/>
+    </origin>
+   </associatedAxes>
+   <seriesDefinitions sorting="0">
+    <query definition=""/>
+    <seriesPalette>
+     <entries _body=",255,0,0,255"/>
+     <entries _body=",255,242,88,106"/>
+     <entries _body=",255,232,172,57"/>
+     <entries _body=",255,128,255,128"/>
+     <entries _body=",255,64,128,128"/>
+     <entries _body=",255,128,128,192"/>
+     <entries _body=",255,170,85,85"/>
+     <entries _body=",255,128,128,0"/>
+     <entries _body=",255,192,192,192"/>
+     <entries _body=",255,255,255,128"/>
+     <entries _body=",255,128,192,128"/>
+     <entries _body=",255,7,146,94"/>
+     <entries _body=",255,0,128,255"/>
+     <entries _body=",255,255,128,192"/>
+     <entries _body=",255,0,255,255"/>
+     <entries _body=",255,255,128,128"/>
+     <entries _body=",255,0,128,192"/>
+     <entries _body=",255,128,128,192"/>
+     <entries _body=",255,255,0,255"/>
+     <entries _body=",255,128,64,64"/>
+     <entries _body=",255,255,128,64"/>
+     <entries _body=",255,80,240,120"/>
+     <entries _body=",255,0,64,128"/>
+     <entries _body=",255,128,0,64"/>
+     <entries _body=",255,255,0,128"/>
+     <entries _body=",255,128,128,64"/>
+     <entries _body=",255,128,128,128"/>
+     <entries _body=",255,255,128,255"/>
+     <entries _body=",255,0,64,0"/>
+     <entries _body=",255,0,0,0"/>
+     <entries _body=",255,255,255,255"/>
+     <entries _body=",255,255,128,0"/>
+    </seriesPalette>
+    <series seriesIdentifier="">
+     <label>
+      <background _nil="1"/>
+      <outline>
+       <color _nil="1"/>
+      </outline>
+     </label>
+     <dataDefinition definition="row[&quot;EventDate&quot;]"/>
+     <curveFitting _nil="1"/>
+    </series>
+    <grouping enabled="true" groupType="1"/>
+    <sortKey definition="row[&quot;EventDate&quot;]"/>
+   </seriesDefinitions>
+   <lineAttributes>
+    <color _nil="1"/>
+   </lineAttributes>
+   <label>
+    <background _nil="1"/>
+    <outline>
+     <color _nil="1"/>
+    </outline>
+   </label>
+   <majorGrid>
+    <lineAttributes>
+     <color _nil="1"/>
+    </lineAttributes>
+    <tickAttributes>
+     <color _nil="1"/>
+    </tickAttributes>
+   </majorGrid>
+   <minorGrid>
+    <lineAttributes>
+     <color _nil="1"/>
+    </lineAttributes>
+    <tickAttributes>
+     <color _nil="1"/>
+    </tickAttributes>
+   </minorGrid>
+   <scale>
+    <min _type="DateTimeDataElement" value="1754020800000"/>
+   </scale>
+   <origin type="0">
+    <value _nil="1"/>
+   </origin>
+  </axes>
+  <rotation>
+   <angles/>
+  </rotation>
+ </ChartWithAxes>
+</ActuateChart>
+]]></xml-property>
+            <property name="outputFormat">JS</property>
+            <property name="inheritColumns">true</property>
+            <property name="height">286.125pt</property>
+            <property name="width">100%</property>
+            <property name="dataSet">Data Set</property>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">EventDate</property>
+                    <text-property name="displayName">EventDate</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["EventDate"]</expression>
+                    <property name="dataType">date</property>
+                </structure>
+                <structure>
+                    <property name="name">EventName</property>
+                    <text-property name="displayName">EventName</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["EventName"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">EventMinCost</property>
+                    <text-property name="displayName">EventMinCost</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["EventMinCost"]</expression>
+                    <property name="dataType">float</property>
+                </structure>
+                <structure>
+                    <property name="name">EventTotalCost</property>
+                    <text-property name="displayName">EventTotalCost</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["EventTotalCost"]</expression>
+                    <property name="dataType">float</property>
+                </structure>
+            </list-property>
+        </extended-item>
+    </body>
+    <property name="pageVariables">
+        <variable-element name="Labels">
+            <property name="type">report</property>
+        </variable-element>
+    </property>
+</report>

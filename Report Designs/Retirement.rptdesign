@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
-    <property name="createdBy">Eclipse BIRT Designer Version 4.11.0.v202104210725</property>
+    <property name="createdBy">Eclipse BIRT Designer Version 4.29.0.v202504021847</property>
     <property name="units">in</property>
     <property name="iconFile">/templates/blank_report.gif</property>
     <property name="layoutPreference">auto layout</property>
@@ -28,7 +28,7 @@ if ((window["__firstView"] === undefined)||(window["__firstView"]==false)) {
 	var pieChart = bpagecontents.getChartByBookmark("Pie");
 	pieChart.setFilters(new actuate.data.Filter("DateYear", "=", RetireYearParam));
 	pieChart.setChartTitle(RetireYearParam);
-	pieChart.submit();
+	//pieChart.submit();
 
 }
 
@@ -257,6 +257,23 @@ if ((window["__firstView"] === undefined)||(window["__firstView"]==false)) {
                     <property name="indexColumn">false</property>
                     <property name="compressed">false</property>
                 </structure>
+                <structure>
+                    <property name="columnName">Strategy</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Strategy</text-property>
+                    <text-property name="heading">Strategy</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+            </list-property>
+            <list-property name="filter">
+                <structure>
+                    <property name="operator">eq</property>
+                    <expression name="expr" type="javascript">row["Strategy"]</expression>
+                    <simple-property-list name="value1">
+                        <value>params["pStrategy"].value</value>
+                    </simple-property-list>
+                </structure>
             </list-property>
             <structure name="cachedMetaData">
                 <list-property name="resultSet">
@@ -265,8 +282,17 @@ if ((window["__firstView"] === undefined)||(window["__firstView"]==false)) {
                         <property name="name">DateYear</property>
                         <property name="dataType">integer</property>
                     </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">Strategy</property>
+                        <property name="dataType">string</property>
+                    </structure>
                 </list-property>
             </structure>
+            <method name="onFetch"><![CDATA[if (vars["yearList"] !== null) 
+	vars["yearList"] += row["DateYear"] + ",";
+else
+	vars["yearList"] = row["DateYear"] + ",";]]></method>
             <property name="dataSource">Data Source</property>
             <property name="dataObject">YearList</property>
             <list-property name="selectedColumns">
@@ -274,6 +300,11 @@ if ((window["__firstView"] === undefined)||(window["__firstView"]==false)) {
                     <property name="position">1</property>
                     <property name="name">DateYear</property>
                     <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">Strategy</property>
+                    <property name="dataType">string</property>
                 </structure>
             </list-property>
         </data-mart-data-set>
@@ -445,6 +476,53 @@ if ((window["__firstView"] === undefined)||(window["__firstView"]==false)) {
                 <property name="height">0.65625in</property>
                 <cell id="32">
                     <property name="paddingLeft">5pt</property>
+                    <table id="270">
+                        <property name="dataSet">YearList</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">DateYear</property>
+                                <text-property name="displayName">DateYear</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["DateYear"]</expression>
+                                <property name="dataType">integer</property>
+                            </structure>
+                        </list-property>
+                        <column id="279"/>
+                        <header>
+                            <row id="271">
+                                <cell id="272"/>
+                            </row>
+                        </header>
+                        <property name="captionFontSize">16pt</property>
+                        <property name="captionTextAlignment">left</property>
+                    </table>
+                    <text id="259">
+                        <property name="contentType">html</property>
+                        <text-property name="content"><![CDATA[<div id="vwrId"></div>
+<script>
+ bviewer = this.actuate.getViewer("vwrId");
+ //set handle to contents
+bpagecontents = bviewer.getCurrentPageContent();
+
+//set handle to viewer id, needed to get column bookmarks
+window["vwrId"] = bviewer.getId();
+
+//Client Side variable for chart scripting
+RetireYearParam=<VALUE-OF>params["pRetireYear"].value</VALUE-OF>;
+
+if ((window["__firstView"] === undefined)||(window["__firstView"]==false)) {
+	window["__firstView"] = true;
+	
+	var yrs = "<VALUE-OF>vars["yearList"]</VALUE-OF>";
+	
+	//Set client side filter on Pie Chart at first load
+	var pieChart = bpagecontents.getChartByBookmark("Pie");
+	pieChart.setFilters(new actuate.data.Filter("DateYear", "=", RetireYearParam));
+	pieChart.setChartTitle(RetireYearParam);
+	pieChart.submit();
+
+}
+</script>]]></text-property>
+                    </text>
                     <label id="37">
                         <text-property name="text">Retirement Year:</text-property>
                     </label>
@@ -459,13 +537,21 @@ if ((window["__firstView"] === undefined)||(window["__firstView"]==false)) {
 
 //Populate year dropdown
 var rYear = document.getElementById("retireYear");
-var d = new Date();
-var n = d.getFullYear();
-for (i=0; i<50; i++) {
-    var opt = document.createElement('option');
-    opt.innerHTML = n + i;
-    opt.value = n + i;
-    rYear.appendChild(opt);
+//var d = new Date();
+//var n = d.getFullYear();
+//for (i=0; i<50; i++) {
+//    var opt = document.createElement('option');
+//    opt.innerHTML = n + i;
+//    opt.value = n + i;
+//    rYear.appendChild(opt);
+//}
+
+var arrYear = yrs.split(",");
+for (var i=0; i < arrYear.length; i++) {
+	var opt = document.createElement('option');
+	opt.innerHTML = arrYear[i];
+	opt.value = arrYear[i];
+	rYear.appendChild(opt);
 }
 
 //set dropdown to selected year
@@ -677,7 +763,7 @@ Click a specific point on the chart to highlight the details for that year.</DIV
       </dataPoint>
       <triggers condition="2">
        <action type="3">
-        <value _type="ScriptValue" script="var viewer = actuate.getViewer(evt.srcElement || evt.originalTarget);&#13;&#10;&#13;&#10;//update browser variable&#13;&#10;window[&quot;selected&quot;]=categoryData;&#13;&#10;&#13;&#10;//filter chart with clicked data point&#13;&#10;var pieChart = viewer.getChart(&quot;Pie&quot;);&#13;&#10;pieChart.setFilters(new actuate.data.Filter(&quot;DateYear&quot;, &quot;=&quot;, categoryData));&#13;&#10;pieChart.setChartTitle(categoryData);&#13;&#10;pieChart.submit();"/>
+        <value _type="ScriptValue" script="//var viewer = actuate.getViewer(evt.srcElement || evt.originalTarget);&#13;&#10;var viewer = this.actuate.getViewer(&#039;vwrId&#039;);&#13;&#10;&#13;&#10;//update browser variable&#13;&#10;window[&quot;selected&quot;]=categoryData;&#13;&#10;&#13;&#10;//filter chart with clicked data point&#13;&#10;var pieChart = viewer.getChart(&quot;Pie&quot;);&#13;&#10;pieChart.setFilters(new actuate.data.Filter(&quot;DateYear&quot;, &quot;=&quot;, categoryData));&#13;&#10;pieChart.setChartTitle(categoryData);&#13;&#10;pieChart.submit();"/>
        </action>
       </triggers>
       <curveFitting _nil="1"/>
@@ -773,7 +859,6 @@ Click a specific point on the chart to highlight the details for that year.</DIV
      <color _nil="1"/>
     </outline>
    </label>
-   <formatSpecifier _type="JavaNumberFormatSpecifier" pattern="####"/>
    <majorGrid>
     <lineAttributes>
      <color _nil="1"/>
@@ -858,7 +943,7 @@ Click a specific point on the chart to highlight the details for that year.</DIV
      <color _nil="1"/>
     </outline>
     <label>
-     <caption>
+     <caption value="Allocations">
       <font size="12.0" rotation="0.0"/>
      </caption>
      <background _nil="1"/>
@@ -911,7 +996,7 @@ Click a specific point on the chart to highlight the details for that year.</DIV
   <extendedProperties name="enable.drill.category" value="true"/>
   <extendedProperties name="enable.drill.series" value="true"/>
   <extendedProperties name="jschart.series.shadow" value="false"/>
-  <extendedProperties name="jschart.client.script" value="/**&#13;&#10; * Called before chart instance is rendered.&#13;&#10; *&#13;&#10; * @param options&#13;&#10; *            chart options&#13;&#10; * @param  chart&#13;&#10; *             chart instance&#13;&#10; */&#13;&#10;beforeRendering: function(options, chart)&#13;&#10;{&#13;&#10;&#13;&#10;    //set colors from browser variable&#13;&#10;    if (window[&quot;colors&quot;] !== undefined) {&#13;&#10;        options.colors[0] = window[&quot;colors&quot;][1];&#13;&#10;        options.colors[1] = window[&quot;colors&quot;][0];&#13;&#10;    }&#13;&#10;    &#13;&#10;    //adjust chart layout to fill space&#13;&#10;    options.chart.spacingLeft = -10;&#13;&#10;    options.title.x=10;&#13;&#10;    options.title.margin = -100;&#13;&#10;    options.legend.margin = -100;&#13;&#10;&#13;&#10;    //set colors for crosstab highlighting using slice colors&#13;&#10;    var bondsColor = options.colors[1]; // &#039;#FF8040&#039;;&#13;&#10;    var stocksColor = options.colors[0]; //&#039;#9ACC00&#039;;&#13;&#10;    var yearColor = &#039;black&#039;;&#13;&#10;    &#13;&#10;    //column heading&#13;&#10;    $(&#039;[id*=&#039;+window[&quot;vwrId&quot;]+&#039;_DateYear_&#039;+window[&quot;selected&quot;]+&#039;]&#039;)&#13;&#10;        .css(&#039;background-color&#039;,&#039;&#039;)&#13;&#10;        .css(&#039;background-color&#039;,yearColor)&#13;&#10;        .css(&#039;color&#039;,&#039;white&#039;);&#13;&#10;    &#13;&#10;    //Bonds&#13;&#10;    $(&#039;[id*=&#039;+window[&quot;vwrId&quot;]+&#039;_Col_&#039;+window[&quot;selected&quot;]+&#039;-Type_Bonds]&#039;)&#13;&#10;        .css(&#039;background-color&#039;,&#039;&#039;)&#13;&#10;        .css(&#039;background-color&#039;,bondsColor);&#13;&#10;    &#13;&#10;    //Stocks&#13;&#10;    $(&#039;[id*=&#039;+window[&quot;vwrId&quot;]+&#039;_Col_&#039;+window[&quot;selected&quot;]+&#039;-Type_Stocks]&#039;)&#13;&#10;        .css(&#039;background-color&#039;,&#039;&#039;)&#13;&#10;        .css(&#039;background-color&#039;,stocksColor);&#13;&#10;        &#13;&#10;},"/>
+  <extendedProperties name="jschart.client.script" value="/**&#13;&#10; * Called before chart instance is rendered.&#13;&#10; *&#13;&#10; * @param options&#13;&#10; *            chart options&#13;&#10; * @param  chart&#13;&#10; *             chart instance&#13;&#10; */&#13;&#10;beforeRendering: function(options, chart)&#13;&#10;{&#13;&#10;        &#13;&#10;    //set colors from browser variable&#13;&#10;    if (window[&quot;colors&quot;] !== undefined) {&#13;&#10;        options.colors[0] = window[&quot;colors&quot;][1];&#13;&#10;        options.colors[1] = window[&quot;colors&quot;][0];&#13;&#10;    }&#13;&#10;    &#13;&#10;    //adjust chart layout to fill space&#13;&#10;    options.chart.spacingLeft = -10;&#13;&#10;    options.title.x=10;&#13;&#10;    options.title.margin = -100;&#13;&#10;    options.legend.margin = -100;&#13;&#10;&#13;&#10;    //set colors for crosstab highlighting using slice colors&#13;&#10;    var bondsColor = options.colors[1]; // &#039;#FF8040&#039;;&#13;&#10;    var stocksColor = options.colors[0]; //&#039;#9ACC00&#039;;&#13;&#10;    var yearColor = &#039;black&#039;;&#13;&#10;    &#13;&#10;    //column heading&#13;&#10;    $(&#039;[id*=&#039;+window[&quot;vwrId&quot;]+&#039;_DateYear_&#039;+window[&quot;selected&quot;]+&#039;]&#039;)&#13;&#10;        .css(&#039;background-color&#039;,&#039;&#039;)&#13;&#10;        .css(&#039;background-color&#039;,yearColor)&#13;&#10;        .css(&#039;color&#039;,&#039;white&#039;);&#13;&#10;    &#13;&#10;    //Bonds&#13;&#10;    $(&#039;[id*=&#039;+window[&quot;vwrId&quot;]+&#039;_Col_&#039;+window[&quot;selected&quot;]+&#039;-Type_Bonds]&#039;)&#13;&#10;        .css(&#039;background-color&#039;,&#039;&#039;)&#13;&#10;        .css(&#039;background-color&#039;,bondsColor);&#13;&#10;    &#13;&#10;    //Stocks&#13;&#10;    $(&#039;[id*=&#039;+window[&quot;vwrId&quot;]+&#039;_Col_&#039;+window[&quot;selected&quot;]+&#039;-Type_Stocks]&#039;)&#13;&#10;        .css(&#039;background-color&#039;,&#039;&#039;)&#13;&#10;        .css(&#039;background-color&#039;,stocksColor);&#13;&#10;        &#13;&#10;},"/>
   <sampleData>
    <baseSampleData dataSetRepresentation="&#039;A&#039;,&#039;B&#039;,&#039;C&#039;,&#039;D&#039;,&#039;E&#039;"/>
    <orthogonalSampleData dataSetRepresentation="6,4,12,8,10" seriesDefinitionIndex="0"/>
@@ -1354,4 +1439,9 @@ Click a specific point on the chart to highlight the details for that year.</DIV
             </row>
         </grid>
     </body>
+    <property name="pageVariables">
+        <variable-element name="yearList">
+            <property name="type">report</property>
+        </variable-element>
+    </property>
 </report>

@@ -4412,6 +4412,44 @@
             <property name="dashboardLayout">smartLayout</property>
             <property name="activeTab">799ed753-f99f-4741-ac5c-4717d38cee13</property>
             <property name="tabs">
+                <tab-element name="c2557663-3dfd-4e5a-b274-786cd53e97ab" id="898">
+                    <list-property name="userProperties">
+                        <structure>
+                            <property name="name">smartLayout</property>
+                            <property name="type">string</property>
+                        </structure>
+                        <structure>
+                            <property name="name">responsiveView</property>
+                            <property name="type">boolean</property>
+                        </structure>
+                    </list-property>
+                    <property name="smartLayout">{"mainHeight":0}</property>
+                    <property name="responsiveView">true</property>
+                    <property name="title">sf wealth</property>
+                    <property name="freeFormGadgets">
+                        <gadget name="0767f515-6cfd-4117-9c7c-1c7757a6a2f9" id="899">
+                            <property name="x">100px</property>
+                            <property name="y">100px</property>
+                            <property name="zIndex">1</property>
+                            <property name="isVisible">false</property>
+                            <property name="height">150px</property>
+                            <property name="width">400px</property>
+                            <property name="caption">
+                                <gadget-caption id="901">
+                                    <property name="showCaption">true</property>
+                                    <property name="horizontalAlignment">left</property>
+                                    <property name="fontFamily">"Lato"</property>
+                                    <property name="fontSize">16pt</property>
+                                    <property name="fontWeight">bold</property>
+                                    <property name="color">#000000</property>
+                                </gadget-caption>
+                            </property>
+                            <property name="content">
+                                <current-selections id="900"/>
+                            </property>
+                        </gadget>
+                    </property>
+                </tab-element>			
                 <tab-element name="799ed753-f99f-4741-ac5c-4717d38cee13" id="1113">
                     <list-property name="userProperties">
                         <structure>
@@ -5387,6 +5425,7 @@
                     <property name="responsiveView">true</property>
                     <property name="tabTheme">CleanBlueThemeReportItem.Clean Blue:Light</property>
                     <property name="title">Retirement Roadmap</property>
+                    <property name="backgroundColor">#ffffff</property>
                     <property name="freeFormGadgets">
                         <gadget name="bfde4d57-0538-4fe9-929f-868ce0a89f86" id="1120">
                             <list-property name="userProperties">
@@ -5576,6 +5615,146 @@
                                 </gadget>
                             </property>
                         </section>
+                    </property>
+                </tab-element>
+                <tab-element name="9c1ee78d-e395-4c22-a398-39e88fc7b6f8" id="1144">
+                    <list-property name="userProperties">
+                        <structure>
+                            <property name="name">smartLayout</property>
+                            <property name="type">string</property>
+                        </structure>
+                        <structure>
+                            <property name="name">responsiveView</property>
+                            <property name="type">boolean</property>
+                        </structure>
+                        <structure>
+                            <property name="name">tabTheme</property>
+                            <property name="type">string</property>
+                        </structure>
+                    </list-property>
+                    <property name="smartLayout">{"details":{"type":"component","componentName":"Gadget_842b431f-a63e-4fd4-984a-cf1e73b5dbbb"},"mainHeight":1963}</property>
+                    <property name="responsiveView">true</property>
+                    <property name="tabTheme">CleanBlueThemeReportItem.Clean Blue:Light</property>
+                    <property name="title">Forecast</property>
+                    <property name="backgroundColor">#ffffff</property>
+                    <property name="freeFormGadgets">
+                        <gadget name="bc5739b7-cfab-402e-9112-6bc158e5f336" id="1145">
+                            <property name="x">100px</property>
+                            <property name="y">100px</property>
+                            <property name="zIndex">1</property>
+                            <property name="isVisible">false</property>
+                            <property name="height">150px</property>
+                            <property name="width">400px</property>
+                            <property name="caption">
+                                <gadget-caption id="1147">
+                                    <property name="showCaption">true</property>
+                                    <property name="horizontalAlignment">left</property>
+                                    <property name="fontFamily">"Lato"</property>
+                                    <property name="fontSize">16pt</property>
+                                    <property name="fontWeight">bold</property>
+                                    <property name="color">#000000</property>
+                                </gadget-caption>
+                            </property>
+                            <property name="content">
+                                <current-selections id="1146"/>
+                            </property>
+                        </gadget>
+                        <gadget name="Gadget_842b431f-a63e-4fd4-984a-cf1e73b5dbbb" id="1151">
+                            <list-property name="userProperties">
+                                <structure>
+                                    <property name="name">userPreferences</property>
+                                    <property name="type">string</property>
+                                </structure>
+                                <structure>
+                                    <property name="name">builderType</property>
+                                    <property name="type">string</property>
+                                </structure>
+                            </list-property>
+                            <property name="userPreferences">{"gadget-caption":{}}</property>
+                            <property name="builderType">Reportlet</property>
+                            <property name="x">140px</property>
+                            <property name="y">90px</property>
+                            <property name="title">Untitled 1</property>
+                            <property name="externalGadgetURI">^/Report Designs/Commodities Predictions SFWealth.rptdocument</property>
+                            <property name="showTitle">false</property>
+                            <property name="showBorder">false</property>
+                            <property name="zIndex">2</property>
+                            <property name="showScrollBar">false</property>
+                            <property name="height">260px</property>
+                            <property name="width">1256px</property>
+                            <property name="caption">
+                                <gadget-caption id="1152">
+                                    <property name="showCaption">false</property>
+                                    <property name="horizontalAlignment">left</property>
+                                    <property name="fontFamily">"Lato"</property>
+                                    <property name="fontSize">16pt</property>
+                                    <property name="fontWeight">normal</property>
+                                    <property name="fontStyle">normal</property>
+                                    <property name="color">#333333</property>
+                                    <property name="textUnderline">none</property>
+                                </gadget-caption>
+                            </property>
+                            <property name="content">
+                                <data-view id="1153">
+                                    <list-property name="userProperties">
+                                        <structure>
+                                            <property name="name">showViewerToolbar</property>
+                                            <property name="type">boolean</property>
+                                        </structure>
+                                        <structure>
+                                            <property name="name">enableSmartViz</property>
+                                            <property name="type">boolean</property>
+                                        </structure>
+                                    </list-property>
+                                    <property name="showViewerToolbar">false</property>
+                                    <property name="enableSmartViz">true</property>
+                                    <property name="gadgetType">viewer</property>
+                                    <property name="externalContentRef">
+                                        <external-element-ref>
+                                            <property name="sourceFile">^/Report Designs/Commodities Predictions SFWealth.rptdocument</property>
+                                            <property name="targetBookmark">predictionCharts</property>
+                                        </external-element-ref>
+                                    </property>
+                                    <property name="paramSettings">
+                                        <param-setting>
+                                            <property name="paramName">pModel</property>
+                                            <property name="displayText">null</property>
+                                            <expression name="value">Spread</expression>
+                                            <property name="isHidden">true</property>
+                                            <expression name="defaultValue" type="javascript">Spread</expression>
+                                        </param-setting>
+                                        <param-setting>
+                                            <property name="paramName">pPredictions</property>
+                                            <property name="displayText">null</property>
+                                            <expression name="value">12</expression>
+                                            <property name="isHidden">true</property>
+                                            <expression name="defaultValue" type="javascript">12</expression>
+                                        </param-setting>
+                                        <param-setting>
+                                            <property name="paramName">pLag</property>
+                                            <property name="displayText">null</property>
+                                            <expression name="value">4</expression>
+                                            <property name="isHidden">true</property>
+                                            <expression name="defaultValue" type="javascript">4</expression>
+                                        </param-setting>
+                                        <param-setting>
+                                            <property name="paramName">pLambda</property>
+                                            <property name="displayText">null</property>
+                                            <expression name="value">9000</expression>
+                                            <property name="isHidden">true</property>
+                                            <expression name="defaultValue" type="javascript">9000</expression>
+                                        </param-setting>
+                                        <param-setting>
+                                            <property name="paramName">pAnalysisType</property>
+                                            <property name="displayText">Autoregressive Integrated Moving Average</property>
+                                            <expression name="value">ARIMA</expression>
+                                            <property name="isHidden">true</property>
+                                            <expression name="defaultValue" type="javascript">ARIMA</expression>
+                                        </param-setting>
+                                    </property>
+                                </data-view>
+                            </property>
+                        </gadget>
                     </property>
                 </tab-element>
             </property>

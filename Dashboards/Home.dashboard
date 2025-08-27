@@ -3375,7 +3375,9 @@
         <text name="12a7423c-84d4-47a2-9adb-b9972f4c1d2d1" id="160">
             <text-property name="content"><![CDATA[http://localhost/custom/bank-splash.jpg]]></text-property>
         </text>
-    </body>
+        <text name="b7a6ea11-1807-4569-9936-bf2bfa659408" id="1139">
+            <text-property name="content"><![CDATA[https://td-mag.eimdemo.com/iportal/cryptocoins.html]]></text-property>
+        </text>    </body>
     <property name="dashboardView">
         <dashboard id="2">
             <list-property name="userProperties">
@@ -3471,23 +3473,23 @@
                                             <property name="name">userPreferences</property>
                                             <property name="type">string</property>
                                         </structure>
-                                        <structure>
-                                            <property name="name">builderType</property>
-                                            <property name="type">string</property>
-                                        </structure>
+												   
+																						
+																				   
+													
                                     </list-property>
                                     <property name="userPreferences">{"gadget-caption":{}}</property>
-                                    <property name="builderType">Reportlet</property>
-                                    <property name="title">My Stocks</property>
-                                    <property name="externalGadgetURI">^/Report Designs/mystocks.rptdesign</property>
-                                    <property name="showTitle">true</property>
+																					 
+                                    <property name="title">Crypto Coins</property>
+                                    <property name="gadgetContentType">url</property>
+                                    <property name="showTitle">false</property>
                                     <property name="showBorder">false</property>
-                                    <property name="zIndex">9</property>
+                                    <property name="zIndex">10</property>
                                     <property name="showScrollBar">false</property>
-                                    <property name="height">75px</property>
-                                    <property name="width">645px</property>
+                                    <property name="height">344px</property>
+                                    <property name="width">621px</property>
                                     <property name="caption">
-                                        <gadget-caption id="1132">
+                                        <gadget-caption id="1138">
                                             <property name="showCaption">true</property>
                                             <property name="horizontalAlignment">left</property>
                                             <property name="fontFamily">"Lato"</property>
@@ -3498,27 +3500,27 @@
                                             <property name="textUnderline">none</property>
                                         </gadget-caption>
                                     </property>
-                                    <property name="content">
-                                        <data-view id="1133">
-                                            <list-property name="userProperties">
-                                                <structure>
-                                                    <property name="name">showViewerToolbar</property>
-                                                    <property name="type">boolean</property>
-                                                </structure>
-                                                <structure>
-                                                    <property name="name">enableSmartViz</property>
-                                                    <property name="type">boolean</property>
-                                                </structure>
-                                            </list-property>
-                                            <property name="showViewerToolbar">false</property>
-                                            <property name="enableSmartViz">true</property>
-                                            <property name="gadgetType">viewer</property>
-                                            <property name="externalContentRef">
-                                                <external-element-ref>
-                                                    <property name="sourceFile">^/Report Designs/mystocks.rptdesign</property>
-                                                    <property name="targetBookmark">myStocks</property>
-                                                </external-element-ref>
-                                            </property>
+                                   <property name="content">
+                                        <data-view id="1140">
+																				 
+														   
+																									  
+																							
+															
+														   
+																								   
+																							
+															
+															
+																							   
+																						   
+                                            <property name="gadgetType">embedded</property>
+                                            <property name="internalReportLetRef">b7a6ea11-1807-4569-9936-bf2bfa659408</property>
+																	  
+																															  
+																									   
+																	   
+													   
                                         </data-view>
                                     </property>
                                 </gadget>

@@ -7,12 +7,12 @@
 		<vendor name="TACO BELL" cat="Restaurant" />
 		<vendor name="BURGER KING" cat="Restaurant" />
 		<vendor name="TGI FRIDAYS" cat="Restaurant" />
-		<vendor name="BOB'S BAR AND GRILL" cat="Restaurant" />
+		<vendor name="TIKI BAR AND GRILL" cat="Restaurant" />
 		<vendor name="JACK-IN-THE-BOX" cat="Restaurant" />
 		<vendor name="MCDONALD'S" cat="Restaurant" />
 		<vendor name="ICHIBAN SUSHI" cat="Restaurant" />
 		<vendor name="FORMOSA CAFE" cat="Restaurant" />
-		<vendor name="STEVE'S WINE AND SPIRITS" cat="Restaurant" />
+		<vendor name="CLEM'S WINE AND SPIRITS" cat="Restaurant" />
 		<vendor name="SHELL OIL" cat="Automobile" />
 		<vendor name="TEXACO OIL" cat="Automobile" />
 		<vendor name="MOBIL" cat="Automobile" />
@@ -34,17 +34,17 @@
 		<vendor name="FOSSIL" cat="Clothing and Personal" />
 		<vendor name="AMAZON" cat="Discretionary" />
 		<vendor name="ALDO" cat="Discretionary" />
-		<vendor name="DONNA'S SWEETS" cat="Discretionary" />
-		<vendor name="DISH NETWORK" cat="Entertainment" />
+		<vendor name="COLDSTONE" cat="Discretionary" />
+		<vendor name="NETFLIX" cat="Entertainment" />
 		<vendor name="DIRECTV" cat="Entertainment" />
 		<vendor name="BARNES &amp; NOBLE" cat="Entertainment" />
 		<vendor name="DISNEY STORE" cat="Entertainment" />
 		<vendor name="BEST BUY" cat="Entertainment" />
-		<vendor name="TOYS R US" cat="Entertainment" />
+		<vendor name="MICROCENTER" cat="Entertainment" />
 		<vendor name="VERIZON WIRELESS" cat="Wireless" />
 		<vendor name="AT&amp;T WIRELESS" cat="Wireless" />
-		<vendor name="SPRINT WIRELESS" cat="Wireless" />
-		<vendor name="SEARS" cat="Misc" />
+		<vendor name="T-MOBILE" cat="Wireless" />
+		<vendor name="WHOLE FOODS" cat="Misc" />
 		<vendor name="WALGREEN'S" cat="Misc" />
 		<vendor name="7-ELEVEN" cat="Misc" />
 	</vendors>

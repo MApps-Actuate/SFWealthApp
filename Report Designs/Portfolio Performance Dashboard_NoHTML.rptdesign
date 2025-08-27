@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
-    <property name="createdBy">Eclipse BIRT Designer Version 4.2.3.v20131216-0430 Build &lt;4.2.3.v20131216-0430></property>
+    <property name="createdBy">Eclipse BIRT Designer Version 4.29.0.v202504021847</property>
     <property name="units">in</property>
     <property name="iconFile">/templates/blank_report.gif</property>
     <property name="bidiLayoutOrientation">ltr</property>
@@ -994,7 +994,7 @@ uiOptions.enableSaveDocument(false);
                     <structure>
                         <property name="position">9</property>
                         <property name="name">Portfolio_Date</property>
-                        <property name="dataType">string</property>
+                        <property name="dataType">date</property>
                     </structure>
                 </list-property>
             </structure>
@@ -1060,11 +1060,11 @@ uiOptions.enableSaveDocument(false);
                     <property name="position">9</property>
                     <property name="name">Portfolio_Date</property>
                     <property name="nativeName">Portfolio_Date</property>
-                    <property name="dataType">string</property>
-                    <property name="nativeDataType">12</property>
+                    <property name="dataType">date</property>
+                    <property name="nativeDataType">91</property>
                 </structure>
             </list-property>
-            <xml-property name="queryText"><![CDATA[select "Mkt_Value", "Active_Weight", "Total_Risk", "Active_Risk", "Value-At-Risk-Mkt", "Value-At-Risk", "Beta(Bmk)", "Effective_Duration", "Portfolio_Date" from "TotalPlan.csv" : {"Mkt_Value","Mkt_Value",STRING;"Active_Weight","Active_Weight",STRING;"Total_Risk","Total_Risk",STRING;"Active_Risk","Active_Risk",STRING;"Value-At-Risk-Mkt","Value-At-Risk-Mkt",STRING;"Value-At-Risk","Value-At-Risk",STRING;"Beta(Bmk)","Beta(Bmk)",STRING;"Effective_Duration","Effective_Duration",STRING;"Portfolio_Date","Portfolio_Date",STRING}]]></xml-property>
+            <xml-property name="queryText"><![CDATA[select "Mkt_Value", "Active_Weight", "Total_Risk", "Active_Risk", "Value-At-Risk-Mkt", "Value-At-Risk", "Beta(Bmk)", "Effective_Duration", "Portfolio_Date" from "TotalPlan.csv" : {"Mkt_Value","Mkt_Value",STRING;"Active_Weight","Active_Weight",STRING;"Total_Risk","Total_Risk",STRING;"Active_Risk","Active_Risk",STRING;"Value-At-Risk-Mkt","Value-At-Risk-Mkt",STRING;"Value-At-Risk","Value-At-Risk",STRING;"Beta(Bmk)","Beta(Bmk)",STRING;"Effective_Duration","Effective_Duration",STRING;"Portfolio_Date","Portfolio_Date",DATE}]]></xml-property>
             <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
 <model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
   <Version>2.0</Version>
@@ -1871,7 +1871,7 @@ last1%2;</expression>
                                 <property name="rowSpan">2</property>
                                 <label id="493">
                                     <property name="paddingTop">10pt</property>
-                                    <text-property name="text">January 31,2013</text-property>
+                                    <text-property name="text">January 31, 2025</text-property>
                                 </label>
                             </cell>
                             <cell id="576">
@@ -4004,7 +4004,7 @@ last1%2;</expression>
   <extendedProperties name="enable.area.alt" value="false"/>
   <extendedProperties name="enable.drill.category" value="true"/>
   <extendedProperties name="enable.drill.series" value="true"/>
-  <extendedProperties name="jschart.client.script" value=""/>
+  <extendedProperties name="jschart.client.script" value="beforeRendering: function(options, chart)&#13;&#10;{&#13;&#10;    options.legend.margin = 0;&#13;&#10;},"/>
   <extendedProperties name="jschart.zoom" value="xy"/>
   <extendedProperties name="keep.hierarchy.category" value="false"/>
   <extendedProperties name="keep.hierarchy.series" value="false"/>
@@ -4456,7 +4456,7 @@ last1%2;</expression>
   <extendedProperties name="enable.area.alt" value="false"/>
   <extendedProperties name="enable.drill.category" value="true"/>
   <extendedProperties name="enable.drill.series" value="true"/>
-  <extendedProperties name="jschart.client.script" value=""/>
+  <extendedProperties name="jschart.client.script" value="beforeRendering: function(options, chart)&#13;&#10;{&#13;&#10;    options.legend.margin = 0;&#13;&#10;},"/>
   <extendedProperties name="jschart.zoom" value="xy"/>
   <extendedProperties name="keep.hierarchy.category" value="false"/>
   <extendedProperties name="keep.hierarchy.series" value="false"/>
@@ -4934,23 +4934,19 @@ last1%2;</expression>
   <extendedProperties name="enable.area.alt" value="false"/>
   <extendedProperties name="enable.drill.category" value="true"/>
   <extendedProperties name="enable.drill.series" value="true"/>
-  <extendedProperties name="jschart.client.script" value=""/>
+  <extendedProperties name="jschart.client.script" value="beforeRendering: function(options, chart)&#13;&#10;{&#13;&#10;    options.legend.margin = 0;&#13;&#10;},"/>
   <extendedProperties name="jschart.zoom" value="xy"/>
   <extendedProperties name="keep.hierarchy.category" value="false"/>
   <extendedProperties name="keep.hierarchy.series" value="false"/>
   <extendedProperties name="jschart.series.shadow" value="true"/>
+  <extendedProperties name="chart.palette.type" value="color"/>
+  <extendedProperties name="chart.marker.auto" value="true"/>
   <sampleData>
    <baseSampleData dataSetRepresentation="01/05/2000,02/01/2000,04/12/2000,03/12/2000,02/29/2000"/>
    <orthogonalSampleData dataSetRepresentation="6,4,12,8,10" seriesDefinitionIndex="0"/>
    <orthogonalSampleData dataSetRepresentation="12.0,8.0,24.0,16.0,20.0" seriesDefinitionIndex="1"/>
    <orthogonalSampleData dataSetRepresentation="18.0,12.0,36.0,24.0,30.0" seriesDefinitionIndex="2"/>
    <orthogonalSampleData dataSetRepresentation="24.0,16.0,48.0,32.0,40.0" seriesDefinitionIndex="3"/>
-   <orthogonalSampleData dataSetRepresentation="30.0,20.0,60.0,40.0,50.0" seriesDefinitionIndex="4"/>
-   <orthogonalSampleData dataSetRepresentation="36.0,24.0,72.0,48.0,60.0" seriesDefinitionIndex="5"/>
-   <orthogonalSampleData dataSetRepresentation="42.0,28.0,84.0,56.0,70.0" seriesDefinitionIndex="6"/>
-   <orthogonalSampleData dataSetRepresentation="48.0,32.0,96.0,64.0,80.0" seriesDefinitionIndex="7"/>
-   <orthogonalSampleData dataSetRepresentation="54.0,36.0,108.0,72.0,90.0" seriesDefinitionIndex="8"/>
-   <orthogonalSampleData dataSetRepresentation="60.0,40.0,120.0,80.0,100.0" seriesDefinitionIndex="9"/>
   </sampleData>
   <interactivity enable="true"/>
   <emptyMessage>
@@ -4980,10 +4976,10 @@ last1%2;</expression>
     <seriesDefinitions>
      <query definition=""/>
      <seriesPalette>
-      <entries _body=",255,0,121,193"/>
-      <entries _body=",255,241,90,34"/>
-      <entries _body=",255,19,181,234"/>
-      <entries _body=",255,250,166,26"/>
+      <entries _body=",255,102,176,209"/>
+      <entries _body=",255,53,120,173"/>
+      <entries _body=",255,158,204,76"/>
+      <entries _body=",255,46,152,140"/>
       <entries _body=",255,154,204,0"/>
       <entries _body=",255,255,204,0"/>
       <entries _body=",255,51,153,102"/>
@@ -5032,10 +5028,10 @@ last1%2;</expression>
        </action>
       </triggers>
       <curveFitting _nil="1"/>
-      <markers visible="false">
+      <markers type="0" size="4" visible="false">
        <outline/>
       </markers>
-      <lineAttributes>
+      <lineAttributes thickness="2">
        <color _nil="1"/>
       </lineAttributes>
      </series>
@@ -5043,9 +5039,9 @@ last1%2;</expression>
     <seriesDefinitions>
      <query definition=""/>
      <seriesPalette>
-      <entries _body=",255,241,90,34"/>
-      <entries _body=",255,19,181,234"/>
-      <entries _body=",255,250,166,26"/>
+      <entries _body=",255,53,120,173"/>
+      <entries _body=",255,158,204,76"/>
+      <entries _body=",255,46,152,140"/>
       <entries _body=",255,154,204,0"/>
       <entries _body=",255,255,204,0"/>
       <entries _body=",255,51,153,102"/>
@@ -5074,7 +5070,7 @@ last1%2;</expression>
       <entries _body=",255,0,0,0"/>
       <entries _body=",255,255,255,255"/>
       <entries _body=",255,255,128,0"/>
-      <entries _body=",255,0,121,193"/>
+      <entries _body=",255,102,176,209"/>
      </seriesPalette>
      <series _type="LineSeries" seriesIdentifier="Term Structure" stacked="false">
       <label>
@@ -5095,10 +5091,10 @@ last1%2;</expression>
        </action>
       </triggers>
       <curveFitting _nil="1"/>
-      <markers visible="false">
+      <markers type="1" size="4" visible="false">
        <outline/>
       </markers>
-      <lineAttributes>
+      <lineAttributes thickness="2">
        <color _nil="1"/>
       </lineAttributes>
      </series>
@@ -5106,8 +5102,8 @@ last1%2;</expression>
     <seriesDefinitions>
      <query definition=""/>
      <seriesPalette>
-      <entries _body=",255,19,181,234"/>
-      <entries _body=",255,250,166,26"/>
+      <entries _body=",255,158,204,76"/>
+      <entries _body=",255,46,152,140"/>
       <entries _body=",255,154,204,0"/>
       <entries _body=",255,255,204,0"/>
       <entries _body=",255,51,153,102"/>
@@ -5136,8 +5132,8 @@ last1%2;</expression>
       <entries _body=",255,0,0,0"/>
       <entries _body=",255,255,255,255"/>
       <entries _body=",255,255,128,0"/>
-      <entries _body=",255,0,121,193"/>
-      <entries _body=",255,241,90,34"/>
+      <entries _body=",255,102,176,209"/>
+      <entries _body=",255,53,120,173"/>
      </seriesPalette>
      <series _type="LineSeries" seriesIdentifier="Style" stacked="false">
       <label>
@@ -5158,10 +5154,10 @@ last1%2;</expression>
        </action>
       </triggers>
       <curveFitting _nil="1"/>
-      <markers visible="false">
+      <markers type="2" size="4" visible="false">
        <outline/>
       </markers>
-      <lineAttributes>
+      <lineAttributes thickness="2">
        <color _nil="1"/>
       </lineAttributes>
      </series>
@@ -5169,7 +5165,7 @@ last1%2;</expression>
     <seriesDefinitions>
      <query definition=""/>
      <seriesPalette>
-      <entries _body=",255,250,166,26"/>
+      <entries _body=",255,46,152,140"/>
       <entries _body=",255,154,204,0"/>
       <entries _body=",255,255,204,0"/>
       <entries _body=",255,51,153,102"/>
@@ -5198,9 +5194,9 @@ last1%2;</expression>
       <entries _body=",255,0,0,0"/>
       <entries _body=",255,255,255,255"/>
       <entries _body=",255,255,128,0"/>
-      <entries _body=",255,0,121,193"/>
-      <entries _body=",255,241,90,34"/>
-      <entries _body=",255,19,181,234"/>
+      <entries _body=",255,102,176,209"/>
+      <entries _body=",255,53,120,173"/>
+      <entries _body=",255,158,204,76"/>
      </seriesPalette>
      <series _type="LineSeries" seriesIdentifier="Spread" stacked="false">
       <label>
@@ -5221,403 +5217,10 @@ last1%2;</expression>
        </action>
       </triggers>
       <curveFitting _nil="1"/>
-      <markers visible="false">
+      <markers type="3" size="4" visible="false">
        <outline/>
       </markers>
-      <lineAttributes>
-       <color _nil="1"/>
-      </lineAttributes>
-     </series>
-    </seriesDefinitions>
-    <seriesDefinitions>
-     <query definition=""/>
-     <seriesPalette>
-      <entries _body=",255,154,204,0"/>
-      <entries _body=",255,255,204,0"/>
-      <entries _body=",255,51,153,102"/>
-      <entries _body=",255,102,102,153"/>
-      <entries _body=",255,0,128,128"/>
-      <entries _body=",255,244,47,47"/>
-      <entries _body=",255,128,192,128"/>
-      <entries _body=",255,7,146,94"/>
-      <entries _body=",255,0,128,255"/>
-      <entries _body=",255,255,128,192"/>
-      <entries _body=",255,0,255,255"/>
-      <entries _body=",255,255,128,128"/>
-      <entries _body=",255,0,128,192"/>
-      <entries _body=",255,128,128,192"/>
-      <entries _body=",255,255,0,255"/>
-      <entries _body=",255,128,64,64"/>
-      <entries _body=",255,255,128,64"/>
-      <entries _body=",255,80,240,120"/>
-      <entries _body=",255,0,64,128"/>
-      <entries _body=",255,128,0,64"/>
-      <entries _body=",255,255,0,128"/>
-      <entries _body=",255,128,128,64"/>
-      <entries _body=",255,128,128,128"/>
-      <entries _body=",255,255,128,255"/>
-      <entries _body=",255,0,64,0"/>
-      <entries _body=",255,0,0,0"/>
-      <entries _body=",255,255,255,255"/>
-      <entries _body=",255,255,128,0"/>
-      <entries _body=",255,0,121,193"/>
-      <entries _body=",255,241,90,34"/>
-      <entries _body=",255,19,181,234"/>
-      <entries _body=",255,250,166,26"/>
-     </seriesPalette>
-     <series _type="LineSeries" seriesIdentifier="Selection Risk" stacked="false">
-      <label>
-       <background _nil="1"/>
-       <outline>
-        <color _nil="1"/>
-       </outline>
-      </label>
-      <dataDefinition definition="row[&quot;Selection Risk&quot;]">
-       <grouping/>
-      </dataDefinition>
-      <dataPoint separator=", ">
-       <components type="1"/>
-      </dataPoint>
-      <triggers condition="6">
-       <action type="1">
-        <value _type="TooltipValue" text="" delay="200"/>
-       </action>
-      </triggers>
-      <curveFitting _nil="1"/>
-      <markers visible="false">
-       <outline/>
-      </markers>
-      <lineAttributes>
-       <color _nil="1"/>
-      </lineAttributes>
-     </series>
-    </seriesDefinitions>
-    <seriesDefinitions>
-     <query definition=""/>
-     <seriesPalette>
-      <entries _body=",255,255,204,0"/>
-      <entries _body=",255,51,153,102"/>
-      <entries _body=",255,102,102,153"/>
-      <entries _body=",255,0,128,128"/>
-      <entries _body=",255,244,47,47"/>
-      <entries _body=",255,128,192,128"/>
-      <entries _body=",255,7,146,94"/>
-      <entries _body=",255,0,128,255"/>
-      <entries _body=",255,255,128,192"/>
-      <entries _body=",255,0,255,255"/>
-      <entries _body=",255,255,128,128"/>
-      <entries _body=",255,0,128,192"/>
-      <entries _body=",255,128,128,192"/>
-      <entries _body=",255,255,0,255"/>
-      <entries _body=",255,128,64,64"/>
-      <entries _body=",255,255,128,64"/>
-      <entries _body=",255,80,240,120"/>
-      <entries _body=",255,0,64,128"/>
-      <entries _body=",255,128,0,64"/>
-      <entries _body=",255,255,0,128"/>
-      <entries _body=",255,128,128,64"/>
-      <entries _body=",255,128,128,128"/>
-      <entries _body=",255,255,128,255"/>
-      <entries _body=",255,0,64,0"/>
-      <entries _body=",255,0,0,0"/>
-      <entries _body=",255,255,255,255"/>
-      <entries _body=",255,255,128,0"/>
-      <entries _body=",255,0,121,193"/>
-      <entries _body=",255,241,90,34"/>
-      <entries _body=",255,19,181,234"/>
-      <entries _body=",255,250,166,26"/>
-      <entries _body=",255,154,204,0"/>
-     </seriesPalette>
-     <series _type="LineSeries" seriesIdentifier="Industry" stacked="false">
-      <label>
-       <background _nil="1"/>
-       <outline>
-        <color _nil="1"/>
-       </outline>
-      </label>
-      <dataDefinition definition="row[&quot;Industry&quot;]">
-       <grouping/>
-      </dataDefinition>
-      <dataPoint separator=", ">
-       <components type="1"/>
-      </dataPoint>
-      <triggers condition="6">
-       <action type="1">
-        <value _type="TooltipValue" text="" delay="200"/>
-       </action>
-      </triggers>
-      <triggers condition="2">
-       <action type="0">
-        <value _type="MultiURLValues">
-         <uRLValues baseUrl="&lt;structure&gt;&#10;    &lt;property name=&quot;linkType&quot;&gt;drill-through&lt;/property&gt;&#10;    &lt;property name=&quot;reportName&quot;&gt;ContributionActiveRisk.rptdesign&lt;/property&gt;&#10;    &lt;property name=&quot;targetWindow&quot;&gt;_blank&lt;/property&gt;&#10;    &lt;property name=&quot;targetFileType&quot;&gt;report-design&lt;/property&gt;&#10;&lt;/structure&gt;&#10;" baseParameterName="" valueParameterName="" seriesParameterName="">
-          <label>
-           <caption value="Chart"/>
-          </label>
-         </uRLValues>
-         <propertiesMap key="MenuItem" value="color:Black;fontSize:10pt;paddingLeft:10px;paddingRight:10px;paddingTop:2px;paddingBottom:2px"/>
-         <propertiesMap key="Menu" value="zIndex:99999;backgroundColor:#FAFFF8;width:auto;height:auto;border:1px solid #333333;filter:progid:DXImageTransform.Microsoft.Shadow(Color:#333333,Direction=120,strength=5)"/>
-         <propertiesMap key="OnMouseOut" value="backgroundColor:#FAFFF8;color:#000000"/>
-         <propertiesMap key="OnMouseOver" value="backgroundColor:#245DDB;color:#FFFFFF"/>
-        </value>
-       </action>
-      </triggers>
-      <curveFitting _nil="1"/>
-      <markers visible="false">
-       <outline/>
-      </markers>
-      <lineAttributes>
-       <color _nil="1"/>
-      </lineAttributes>
-     </series>
-    </seriesDefinitions>
-    <seriesDefinitions>
-     <query definition=""/>
-     <seriesPalette>
-      <entries _body=",255,51,153,102"/>
-      <entries _body=",255,102,102,153"/>
-      <entries _body=",255,0,128,128"/>
-      <entries _body=",255,244,47,47"/>
-      <entries _body=",255,128,192,128"/>
-      <entries _body=",255,7,146,94"/>
-      <entries _body=",255,0,128,255"/>
-      <entries _body=",255,255,128,192"/>
-      <entries _body=",255,0,255,255"/>
-      <entries _body=",255,255,128,128"/>
-      <entries _body=",255,0,128,192"/>
-      <entries _body=",255,128,128,192"/>
-      <entries _body=",255,255,0,255"/>
-      <entries _body=",255,128,64,64"/>
-      <entries _body=",255,255,128,64"/>
-      <entries _body=",255,80,240,120"/>
-      <entries _body=",255,0,64,128"/>
-      <entries _body=",255,128,0,64"/>
-      <entries _body=",255,255,0,128"/>
-      <entries _body=",255,128,128,64"/>
-      <entries _body=",255,128,128,128"/>
-      <entries _body=",255,255,128,255"/>
-      <entries _body=",255,0,64,0"/>
-      <entries _body=",255,0,0,0"/>
-      <entries _body=",255,255,255,255"/>
-      <entries _body=",255,255,128,0"/>
-      <entries _body=",255,0,121,193"/>
-      <entries _body=",255,241,90,34"/>
-      <entries _body=",255,19,181,234"/>
-      <entries _body=",255,250,166,26"/>
-      <entries _body=",255,154,204,0"/>
-      <entries _body=",255,255,204,0"/>
-     </seriesPalette>
-     <series _type="LineSeries" seriesIdentifier="Factor Interaction" stacked="false">
-      <label>
-       <background _nil="1"/>
-       <outline>
-        <color _nil="1"/>
-       </outline>
-      </label>
-      <dataDefinition definition="row[&quot;Factor Interaction&quot;]">
-       <grouping/>
-      </dataDefinition>
-      <dataPoint separator=", ">
-       <components type="1"/>
-      </dataPoint>
-      <triggers condition="6">
-       <action type="1">
-        <value _type="TooltipValue" text="" delay="200"/>
-       </action>
-      </triggers>
-      <curveFitting _nil="1"/>
-      <markers visible="false">
-       <outline/>
-      </markers>
-      <lineAttributes>
-       <color _nil="1"/>
-      </lineAttributes>
-     </series>
-    </seriesDefinitions>
-    <seriesDefinitions>
-     <query definition=""/>
-     <seriesPalette>
-      <entries _body=",255,102,102,153"/>
-      <entries _body=",255,0,128,128"/>
-      <entries _body=",255,244,47,47"/>
-      <entries _body=",255,128,192,128"/>
-      <entries _body=",255,7,146,94"/>
-      <entries _body=",255,0,128,255"/>
-      <entries _body=",255,255,128,192"/>
-      <entries _body=",255,0,255,255"/>
-      <entries _body=",255,255,128,128"/>
-      <entries _body=",255,0,128,192"/>
-      <entries _body=",255,128,128,192"/>
-      <entries _body=",255,255,0,255"/>
-      <entries _body=",255,128,64,64"/>
-      <entries _body=",255,255,128,64"/>
-      <entries _body=",255,80,240,120"/>
-      <entries _body=",255,0,64,128"/>
-      <entries _body=",255,128,0,64"/>
-      <entries _body=",255,255,0,128"/>
-      <entries _body=",255,128,128,64"/>
-      <entries _body=",255,128,128,128"/>
-      <entries _body=",255,255,128,255"/>
-      <entries _body=",255,0,64,0"/>
-      <entries _body=",255,0,0,0"/>
-      <entries _body=",255,255,255,255"/>
-      <entries _body=",255,255,128,0"/>
-      <entries _body=",255,0,121,193"/>
-      <entries _body=",255,241,90,34"/>
-      <entries _body=",255,19,181,234"/>
-      <entries _body=",255,250,166,26"/>
-      <entries _body=",255,154,204,0"/>
-      <entries _body=",255,255,204,0"/>
-      <entries _body=",255,51,153,102"/>
-     </seriesPalette>
-     <series _type="LineSeries" seriesIdentifier="Emerging Markets" stacked="false">
-      <label>
-       <background _nil="1"/>
-       <outline>
-        <color _nil="1"/>
-       </outline>
-      </label>
-      <dataDefinition definition="row[&quot;Emerging Market&quot;]">
-       <grouping/>
-      </dataDefinition>
-      <dataPoint separator=", ">
-       <components type="1"/>
-      </dataPoint>
-      <triggers condition="6">
-       <action type="1">
-        <value _type="TooltipValue" text="" delay="200"/>
-       </action>
-      </triggers>
-      <curveFitting _nil="1"/>
-      <markers visible="false">
-       <outline/>
-      </markers>
-      <lineAttributes>
-       <color _nil="1"/>
-      </lineAttributes>
-     </series>
-    </seriesDefinitions>
-    <seriesDefinitions>
-     <query definition=""/>
-     <seriesPalette>
-      <entries _body=",255,0,128,128"/>
-      <entries _body=",255,244,47,47"/>
-      <entries _body=",255,128,192,128"/>
-      <entries _body=",255,7,146,94"/>
-      <entries _body=",255,0,128,255"/>
-      <entries _body=",255,255,128,192"/>
-      <entries _body=",255,0,255,255"/>
-      <entries _body=",255,255,128,128"/>
-      <entries _body=",255,0,128,192"/>
-      <entries _body=",255,128,128,192"/>
-      <entries _body=",255,255,0,255"/>
-      <entries _body=",255,128,64,64"/>
-      <entries _body=",255,255,128,64"/>
-      <entries _body=",255,80,240,120"/>
-      <entries _body=",255,0,64,128"/>
-      <entries _body=",255,128,0,64"/>
-      <entries _body=",255,255,0,128"/>
-      <entries _body=",255,128,128,64"/>
-      <entries _body=",255,128,128,128"/>
-      <entries _body=",255,255,128,255"/>
-      <entries _body=",255,0,64,0"/>
-      <entries _body=",255,0,0,0"/>
-      <entries _body=",255,255,255,255"/>
-      <entries _body=",255,255,128,0"/>
-      <entries _body=",255,0,121,193"/>
-      <entries _body=",255,241,90,34"/>
-      <entries _body=",255,19,181,234"/>
-      <entries _body=",255,250,166,26"/>
-      <entries _body=",255,154,204,0"/>
-      <entries _body=",255,255,204,0"/>
-      <entries _body=",255,51,153,102"/>
-      <entries _body=",255,102,102,153"/>
-     </seriesPalette>
-     <series _type="LineSeries" seriesIdentifier="Currenct/Market Interaction" stacked="false">
-      <label>
-       <background _nil="1"/>
-       <outline>
-        <color _nil="1"/>
-       </outline>
-      </label>
-      <dataDefinition definition="row[&quot;Currency/Market Interaction&quot;]">
-       <grouping/>
-      </dataDefinition>
-      <dataPoint separator=", ">
-       <components type="1"/>
-      </dataPoint>
-      <triggers condition="6">
-       <action type="1">
-        <value _type="TooltipValue" text="" delay="200"/>
-       </action>
-      </triggers>
-      <curveFitting _nil="1"/>
-      <markers visible="false">
-       <outline/>
-      </markers>
-      <lineAttributes>
-       <color _nil="1"/>
-      </lineAttributes>
-     </series>
-    </seriesDefinitions>
-    <seriesDefinitions>
-     <query definition=""/>
-     <seriesPalette>
-      <entries _body=",255,244,47,47"/>
-      <entries _body=",255,128,192,128"/>
-      <entries _body=",255,7,146,94"/>
-      <entries _body=",255,0,128,255"/>
-      <entries _body=",255,255,128,192"/>
-      <entries _body=",255,0,255,255"/>
-      <entries _body=",255,255,128,128"/>
-      <entries _body=",255,0,128,192"/>
-      <entries _body=",255,128,128,192"/>
-      <entries _body=",255,255,0,255"/>
-      <entries _body=",255,128,64,64"/>
-      <entries _body=",255,255,128,64"/>
-      <entries _body=",255,80,240,120"/>
-      <entries _body=",255,0,64,128"/>
-      <entries _body=",255,128,0,64"/>
-      <entries _body=",255,255,0,128"/>
-      <entries _body=",255,128,128,64"/>
-      <entries _body=",255,128,128,128"/>
-      <entries _body=",255,255,128,255"/>
-      <entries _body=",255,0,64,0"/>
-      <entries _body=",255,0,0,0"/>
-      <entries _body=",255,255,255,255"/>
-      <entries _body=",255,255,128,0"/>
-      <entries _body=",255,0,121,193"/>
-      <entries _body=",255,241,90,34"/>
-      <entries _body=",255,19,181,234"/>
-      <entries _body=",255,250,166,26"/>
-      <entries _body=",255,154,204,0"/>
-      <entries _body=",255,255,204,0"/>
-      <entries _body=",255,51,153,102"/>
-      <entries _body=",255,102,102,153"/>
-      <entries _body=",255,0,128,128"/>
-     </seriesPalette>
-     <series _type="LineSeries" seriesIdentifier="Currency Risk" stacked="false">
-      <label>
-       <background _nil="1"/>
-       <outline>
-        <color _nil="1"/>
-       </outline>
-      </label>
-      <dataDefinition definition="row[&quot;Currency Risk&quot;]">
-       <grouping/>
-      </dataDefinition>
-      <dataPoint separator=", ">
-       <components type="1"/>
-      </dataPoint>
-      <triggers condition="6">
-       <action type="1">
-        <value _type="TooltipValue" text="" delay="200"/>
-       </action>
-      </triggers>
-      <curveFitting _nil="1"/>
-      <markers visible="false">
-       <outline/>
-      </markers>
-      <lineAttributes>
+      <lineAttributes thickness="2">
        <color _nil="1"/>
       </lineAttributes>
      </series>
@@ -5659,10 +5262,10 @@ last1%2;</expression>
    <seriesDefinitions>
     <query definition=""/>
     <seriesPalette>
-     <entries _body=",255,0,121,193"/>
-     <entries _body=",255,241,90,34"/>
-     <entries _body=",255,19,181,234"/>
-     <entries _body=",255,250,166,26"/>
+     <entries _body=",255,102,176,209"/>
+     <entries _body=",255,53,120,173"/>
+     <entries _body=",255,158,204,76"/>
+     <entries _body=",255,46,152,140"/>
      <entries _body=",255,154,204,0"/>
      <entries _body=",255,255,204,0"/>
      <entries _body=",255,51,153,102"/>
@@ -5748,7 +5351,7 @@ last1%2;</expression>
  </ChartWithAxes>
 </ActuateChart>
 ]]></xml-property>
-                                    <property name="outputFormat">PNG</property>
+                                    <property name="outputFormat">JS</property>
                                     <list-property name="action">
                                         <structure>
                                             <property name="toolTip">Click for larger chart</property>

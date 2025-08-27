@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
-    <property name="createdBy">Eclipse BIRT Designer Version 4.2.3.v20131216-0430 Build &lt;4.2.3.v20131216-0430></property>
+    <property name="createdBy">Eclipse BIRT Designer Version 4.29.0.v202504021847</property>
     <property name="units">in</property>
     <property name="iconFile">/templates/blank_report.gif</property>
     <property name="bidiLayoutOrientation">ltr</property>
@@ -50,11 +50,17 @@
         </simple-master-page>
     </page-setup>
     <body>
+        <text id="8">
+            <property name="contentType">html</property>
+            <text-property name="content"><![CDATA[<style>
+iframe { border-color: white; }
+</style>]]></text-property>
+        </text>
         <image id="7">
             <property name="height">5.354166666666667in</property>
             <property name="width">6.9375in</property>
             <property name="source">file</property>
-            <expression name="uri" type="constant">^/images/bank-splash.jpg</expression>
+            <expression name="uri" type="constant">images/bank-splash.jpg</expression>
         </image>
     </body>
 </report>

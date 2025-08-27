@@ -1,0 +1,1299 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 4.29.0.v202504021847</property>
+    <html-property name="description">WizardTemplateChoicePage.message.BlankAuto</html-property>
+    <list-property name="propertyBindings">
+        <structure>
+            <property name="name">queryText</property>
+            <property name="id">382</property>
+        </structure>
+        <structure>
+            <property name="name">queryTimeOut</property>
+            <property name="id">382</property>
+        </structure>
+        <structure>
+            <property name="name">rowFetchSize</property>
+            <property name="id">382</property>
+        </structure>
+    </list-property>
+    <property name="units">in</property>
+    <property name="theme">ThemesReportItems31.Clean Blue</property>
+    <property name="iconFile">/templates/blank_report.gif</property>
+    <property name="layoutPreference">auto layout</property>
+    <property name="bidiLayoutOrientation">ltr</property>
+    <property name="imageDPI">96</property>
+    <list-property name="libraries">
+        <structure>
+            <property name="fileName">/ThemesReportItems31.rptlibrary</property>
+            <property name="namespace">ThemesReportItems31</property>
+        </structure>
+    </list-property>
+    <method name="onContentUpdate"><![CDATA[//set handle to viewer
+bviewer = this.getViewer();
+
+// Get the Viewer's current UI Options
+var uiOptions = this.getViewer().getUIOptions();
+
+// Remove ability for user to change interactivity options
+uiOptions.enableEditReport(false);
+
+// Set the modified UI Options back into the Viewer
+this.getViewer().setUIOptions(uiOptions);
+
+// If Interactivity is not enabled, enable it
+if (!this.getViewer().isInteractive())
+	this.getViewer().enableIV();]]></method>
+    <property name="responsiveReport">true</property>
+    <parameters>
+        <scalar-parameter name="pModel" id="383">
+            <property name="valueType">static</property>
+            <property name="isRequired">true</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="javascript">"Spread"</value>
+            </simple-property-list>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="concealValue">false</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="pPredictions" id="639">
+            <text-property name="promptText">Number of Predictions</text-property>
+            <property name="valueType">static</property>
+            <property name="dataType">integer</property>
+            <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="constant">12</value>
+            </simple-property-list>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="pLag" id="640">
+            <text-property name="promptText">Lag Value</text-property>
+            <property name="valueType">static</property>
+            <property name="dataType">integer</property>
+            <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="constant">4</value>
+            </simple-property-list>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="pLambda" id="699">
+            <text-property name="promptText">Lambda</text-property>
+            <property name="valueType">static</property>
+            <property name="dataType">integer</property>
+            <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="constant">9000</value>
+            </simple-property-list>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="pAnalysisType" id="725">
+            <text-property name="promptText">Analysis Type</text-property>
+            <property name="valueType">static</property>
+            <property name="sortBy">label</property>
+            <property name="sortDirection">asc</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="constant">ARIMA</value>
+            </simple-property-list>
+            <list-property name="selectionList">
+                <structure>
+                    <property name="value">AUTOREGRESSOR</property>
+                    <property name="label">Auto Regression</property>
+                </structure>
+                <structure>
+                    <property name="value">MOVING_AVERAGE</property>
+                    <property name="label">Moving Average</property>
+                </structure>
+                <structure>
+                    <property name="value">ARIMA</property>
+                    <property name="label">Autoregressive Integrated Moving Average</property>
+                </structure>
+            </list-property>
+            <property name="paramType">simple</property>
+            <property name="controlType">list-box</property>
+            <property name="mustMatch">true</property>
+            <property name="fixedOrder">false</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+    </parameters>
+    <data-sources>
+        <data-mart-data-source name="Data Source" id="7">
+            <property name="datamartURL">Data Objects/VerticaDemo</property>
+            <property name="accessType">latest</property>
+        </data-mart-data-source>
+        <oda-data-source extensionID="org.eclipse.birt.report.data.oda.jdbc" name="Vertica Data Source" id="290">
+            <property name="comments">password Pass$123</property>
+            <list-property name="privateDriverProperties">
+                <ex-property>
+                    <name>contentBidiFormatStr</name>
+                    <value>ILYNN</value>
+                </ex-property>
+                <ex-property>
+                    <name>disabledContentBidiFormatStr</name>
+                </ex-property>
+                <ex-property>
+                    <name>disabledMetadataBidiFormatStr</name>
+                </ex-property>
+                <ex-property>
+                    <name>metadataBidiFormatStr</name>
+                    <value>ILYNN</value>
+                </ex-property>
+            </list-property>
+            <property name="odaDriverClass">com.vertica.jdbc.Driver</property>
+            <property name="odaURL">jdbc:vertica://vm-gvitale.eastus.cloudapp.azure.com:9933</property>
+            <property name="odaUser">dbadmin</property>
+            <encrypted-property name="odaPassword" encryptionID="otjce">OTJC01AAAADFXN32tvDrVa5Z2h81DIWDFi5Zi7AKTaMKOFicJ+6z1QjWOF</encrypted-property>
+        </oda-data-source>
+    </data-sources>
+    <data-sets>
+        <data-mart-data-set name="Commodities Data Set" id="8">
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">date</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">date</text-property>
+                    <text-property name="heading">date</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">date</property>
+                        <property name="dataType">date</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">commodityValue</property>
+                        <property name="dataType">float</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">commodity</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="needsCache">false</property>
+            <method name="beforeOpen"><![CDATA[//var logger = java.util.logging.Logger.getLogger("birt.report.logger");
+//logger.warning (BirtDateTime.now() + ' Commodities : ' + params["pModel"].value);]]></method>
+            <property name="dataSource">Data Source</property>
+            <property name="dataObject">Commodities Data Set</property>
+            <list-property name="selectedColumns">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">date</property>
+                    <property name="dataType">date</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">commodityValue</property>
+                    <property name="dataType">float</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">commodity</property>
+                    <property name="dataType">string</property>
+                </structure>
+            </list-property>
+        </data-mart-data-set>
+        <data-mart-data-set name="Correlations Data Set" id="58">
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">variable_name_1</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">variable_name_1</text-property>
+                    <text-property name="heading">variable_name_1</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">variable_name_2</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">variable_name_2</text-property>
+                    <text-property name="heading">variable_name_2</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">corr_value</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">corr_value</text-property>
+                    <text-property name="heading">corr_value</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">number_of_ignored_input_rows</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">number_of_ignored_input_rows</text-property>
+                    <text-property name="heading">number_of_ignored_input_rows</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">number_of_processed_input_rows</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">number_of_processed_input_rows</text-property>
+                    <text-property name="heading">number_of_processed_input_rows</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">variable_name_1</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">variable_name_2</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">corr_value</property>
+                        <property name="dataType">float</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">number_of_ignored_input_rows</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">number_of_processed_input_rows</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Data Source</property>
+            <property name="dataObject">Correlations Data Set</property>
+            <list-property name="selectedColumns">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">variable_name_1</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">variable_name_2</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">corr_value</property>
+                    <property name="dataType">float</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">number_of_ignored_input_rows</property>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="position">5</property>
+                    <property name="name">number_of_processed_input_rows</property>
+                    <property name="dataType">decimal</property>
+                </structure>
+            </list-property>
+        </data-mart-data-set>
+        <data-mart-data-set name="Distinct Commodities Data Set" id="360">
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">commodity</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">commodity</text-property>
+                    <text-property name="heading">commodity</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">CommodityTitle</property>
+                    <property name="analysis">attribute</property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">commodity</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">CommodityTitle</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <method name="beforeOpen"><![CDATA[//var logger = java.util.logging.Logger.getLogger("birt.report.logger");
+//logger.warning (BirtDateTime.now() + ' Distinct Commodities : ' + params["pModel"].value);]]></method>
+            <property name="dataSource">Data Source</property>
+            <property name="dataObject">Distinct Commodities Data Set</property>
+            <list-property name="selectedColumns">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">commodity</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">CommodityTitle</property>
+                    <property name="dataType">string</property>
+                </structure>
+            </list-property>
+        </data-mart-data-set>
+        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.JdbcSelectDataSet" name="Create AR" id="382">
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">AUTOREGRESSOR</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">AUTOREGRESSOR</text-property>
+                    <text-property name="heading">AUTOREGRESSOR</text-property>
+                </structure>
+            </list-property>
+            <list-property name="parameters"/>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">AUTOREGRESSOR</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="needsCache">false</property>
+            <method name="beforeOpen"><![CDATA[//var logger = java.util.logging.Logger.getLogger("birt.report.logger");
+//logger.warning (BirtDateTime.now() + ' Create AR : ' + params["pModel"].value);
+this.queryText = this.queryText.replace("VVVV", params["pAnalysisType"].value);
+this.queryText = this.queryText.replace("YY", params["pModel"].value);
+this.queryText = this.queryText.replace("XXXX", 'AR_' + params["pModel"].value);
+this.queryText = this.queryText.replace("LLLL", params["pLag"].value.toString());
+this.queryText = this.queryText.replace("ZZZZ", params["pLambda"].value.toString());]]></method>
+            <property name="dataSource">Vertica Data Source</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">AUTOREGRESSOR</property>
+                    <property name="nativeName">AUTOREGRESSOR</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[select VVVV('XXXX', 'commodities.commodities_ct', 'YY', 'date' USING PARAMETERS p=LLLL, regularization='L2', lambda=ZZZZ, compute_mse=true) as AUTOREGRESSOR;
+]]></xml-property>
+        </oda-data-set>
+        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.JdbcSelectDataSet" name="Create AR Test" id="656">
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">AUTOREGRESSOR</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">AUTOREGRESSOR</text-property>
+                    <text-property name="heading">AUTOREGRESSOR</text-property>
+                </structure>
+            </list-property>
+            <list-property name="parameters"/>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">AUTOREGRESSOR</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="needsCache">false</property>
+            <method name="beforeOpen"><![CDATA[var logger = java.util.logging.Logger.getLogger("birt.report.logger");
+logger.warning (BirtDateTime.now() + ' Create AR Test: ' + params["pModel"].value);
+this.queryText = this.queryText.replace("VVVV", params["pAnalysisType"].value);
+this.queryText = this.queryText.replace("YY", params["pModel"].value);
+this.queryText = this.queryText.replace("XXXX", 'AR_' + params["pModel"].value + "_Test");
+this.queryText = this.queryText.replace("LLLL", params["pLag"].value.toString());
+this.queryText = this.queryText.replace("ZZZZ", params["pLambda"].value.toString());]]></method>
+            <property name="dataSource">Vertica Data Source</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">AUTOREGRESSOR</property>
+                    <property name="nativeName">AUTOREGRESSOR</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[select VVVV('XXXX', 'commodities.TestData', 'YY', 'date' USING PARAMETERS p=LLLL, regularization='L2', lambda=ZZZZ, compute_mse=true) as AUTOREGRESSOR;
+--select MOVING_AVERAGE('XXXX', 'commodities.TestData', 'YY', 'date' USING PARAMETERS q=LLLL, regularization='L2', lambda=ZZZZ, compute_mse=true) as AUTOREGRESSOR;
+]]></xml-property>
+        </oda-data-set>
+        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.JdbcSelectDataSet" name="dropModels" id="422">
+            <property name="newHandlerOnEachEvent">false</property>
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">dropMyModel</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">dropMyModel</text-property>
+                    <text-property name="heading">dropMyModel</text-property>
+                </structure>
+            </list-property>
+            <list-property name="parameters"/>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">dropMyModel</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="needsCache">false</property>
+            <method name="beforeOpen"><![CDATA[//var logger = java.util.logging.Logger.getLogger("birt.report.logger");
+//logger.warning (BirtDateTime.now() + ' Drop Model : ' + params["pModel"].value);
+this.queryText = this.queryText.replace("XXXX", 'AR_' + params["pModel"].value );]]></method>
+            <property name="dataSource">Vertica Data Source</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">dropMyModel</property>
+                    <property name="nativeName">dropMyModel</property>
+                    <property name="dataType">decimal</property>
+                    <property name="nativeDataType">-5</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[call commodities.dropMyModel('XXXX');]]></xml-property>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>dropMyModel</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>-5</design:nativeDataTypeCode>
+            <design:precision>19</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>dropMyModel</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>dropMyModel</design:label>
+            <design:formattingHints>
+              <design:displaySize>20</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria/>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+        </oda-data-set>
+        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.JdbcSelectDataSet" name="dropTestModels" id="657">
+            <property name="newHandlerOnEachEvent">false</property>
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">dropMyModel</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">dropMyModel</text-property>
+                    <text-property name="heading">dropMyModel</text-property>
+                </structure>
+            </list-property>
+            <list-property name="parameters"/>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">dropMyModel</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="needsCache">false</property>
+            <method name="beforeOpen"><![CDATA[var logger = java.util.logging.Logger.getLogger("birt.report.logger");
+logger.warning (BirtDateTime.now() + ' Drop Test Model : ' + params["pModel"].value);
+this.queryText = this.queryText.replace("XXXX", 'AR_' + params["pModel"].value + "_Test");]]></method>
+            <property name="dataSource">Vertica Data Source</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">dropMyModel</property>
+                    <property name="nativeName">dropMyModel</property>
+                    <property name="dataType">decimal</property>
+                    <property name="nativeDataType">-5</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[call commodities.dropMyModel('XXXX');]]></xml-property>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>dropMyModel</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>-5</design:nativeDataTypeCode>
+            <design:precision>19</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>dropMyModel</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>dropMyModel</design:label>
+            <design:formattingHints>
+              <design:displaySize>20</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria/>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+        </oda-data-set>
+        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.JdbcSelectDataSet" name="Combined Data Set" id="609">
+            <list-property name="columnHints"/>
+            <list-property name="parameters"/>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">date</property>
+                        <property name="dataType">date</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">commodity</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">commodityValue</property>
+                        <property name="dataType">float</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">prediction</property>
+                        <property name="dataType">float</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="needsCache">false</property>
+            <method name="beforeOpen"><![CDATA[//var logger = java.util.logging.Logger.getLogger("birt.report.logger");
+//logger.warning (BirtDateTime.now() + ' Combined : ' + params["pModel"].value);
+this.queryText = this.queryText.replace("VVVV", params["pAnalysisType"].value);
+this.queryText = this.queryText.replace("YY", params["pModel"].value);
+this.queryText = this.queryText.replace("XXXX", 'AR_' + params["pModel"].value);
+this.queryText = this.queryText.replace("WWWW", params["pPredictions"].value.toString());]]></method>
+            <property name="dataSource">Vertica Data Source</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">date</property>
+                    <property name="nativeName">date</property>
+                    <property name="dataType">date</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">commodity</property>
+                    <property name="nativeName">commodity</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">commodityValue</property>
+                    <property name="nativeName">commodityValue</property>
+                    <property name="dataType">float</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">prediction</property>
+                    <property name="nativeName">prediction</property>
+                    <property name="dataType">float</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[select ADD_MONTHS((select max("date") from commodities.commodities c where commodity = 'YY'), ROW_NUMBER() OVER (PARTITION BY NULL)) as "date", 'YY' as commodity, NULL::FLOAT  as commodityValue, * from (select PREDICT_VVVV(YY USING PARAMETERS model_name='XXXX', npredictions=WWWW) OVER(ORDER BY date) from commodities.commodities_ct) myPred
+union
+select "date", commodity, commodityValue, NULL as prediction from commodities.commodities c where commodity = 'YY' 
+order by "date"
+
+--run this from the server after data updates:
+--CALL commodities.createCT('commodities.date','commodity','commodityValue','commodities.commodities','commodities.commodities_ct');]]></xml-property>
+        </oda-data-set>
+        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.JdbcSelectDataSet" name="Combined Test Data Set" id="658">
+            <list-property name="columnHints"/>
+            <list-property name="parameters"/>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">date</property>
+                        <property name="dataType">date</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">commodity</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">commodityValue</property>
+                        <property name="dataType">float</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">prediction</property>
+                        <property name="dataType">float</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="needsCache">false</property>
+            <method name="beforeOpen"><![CDATA[var logger = java.util.logging.Logger.getLogger("birt.report.logger");
+logger.warning (BirtDateTime.now() + ' Combined Test: ' + params["pModel"].value);
+this.queryText = this.queryText.replace("VVVV", params["pAnalysisType"].value);
+this.queryText = this.queryText.replace("YY", params["pModel"].value);
+this.queryText = this.queryText.replace("XXXX", 'AR_' + params["pModel"].value + "_Test");
+this.queryText = this.queryText.replace("WWWW", "83"); //params["pPredictions"].value.toString());]]></method>
+            <property name="dataSource">Vertica Data Source</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">date</property>
+                    <property name="nativeName">date</property>
+                    <property name="dataType">date</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">commodity</property>
+                    <property name="nativeName">commodity</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">commodityValue</property>
+                    <property name="nativeName">commodityValue</property>
+                    <property name="dataType">float</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">prediction</property>
+                    <property name="nativeName">prediction</property>
+                    <property name="dataType">float</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[select ADD_MONTHS((select max("date") from commodities.TestData c where "YY" IS NOT NULL), ROW_NUMBER() OVER (PARTITION BY NULL)) as "date", 'YY' as commodity, NULL::FLOAT  as commodityValue, * from (select PREDICT_VVVV(YY USING PARAMETERS model_name='XXXX', npredictions=WWWW) OVER(ORDER BY date) from commodities.TestData) myPred
+--select ADD_MONTHS((select max("date") from commodities.TestData c where "YY" IS NOT NULL), ROW_NUMBER() OVER (PARTITION BY NULL)) as "date", 'YY' as commodity, NULL::FLOAT  as commodityValue, * from (select PREDICT_MOVING_AVERAGE(YY USING PARAMETERS model_name='XXXX', npredictions=WWWW) OVER(ORDER BY date) from commodities.TestData) myPred
+
+union
+select "date", commodity, commodityValue, NULL as prediction from commodities.commodities c where commodity = 'YY' 
+order by "date"]]></xml-property>
+        </oda-data-set>
+        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.JdbcSelectDataSet" name="UpdateData" id="730">
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">createCT</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">createCT</text-property>
+                    <text-property name="heading">createCT</text-property>
+                </structure>
+            </list-property>
+            <list-property name="parameters"/>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">createCT</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Vertica Data Source</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">createCT</property>
+                    <property name="nativeName">createCT</property>
+                    <property name="dataType">decimal</property>
+                    <property name="nativeDataType">-5</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[CALL commodities.createCT('commodities.date','commodity','commodityValue','commodities.commodities','commodities.commodities_ct');
+--run this only when the commodities table data changes]]></xml-property>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>createCT</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>-5</design:nativeDataTypeCode>
+            <design:precision>19</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>createCT</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>createCT</design:label>
+            <design:formattingHints>
+              <design:displaySize>20</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria/>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+        </oda-data-set>
+    </data-sets>
+    <property name="linkedDataModels">
+        <data-mart-linked-data-model name="Commodities Data Model" id="60">
+            <property name="dataSource">Data Source</property>
+            <property name="dataObject">Commodities Data Model</property>
+        </data-mart-linked-data-model>
+    </property>
+    <styles>
+        <style name="report" id="4">
+            <property name="fontFamily">sans-serif</property>
+            <property name="fontSize">10pt</property>
+        </style>
+        <style name="crosstab-cell" id="5">
+            <property name="borderBottomColor">#CCCCCC</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">1pt</property>
+            <property name="borderLeftColor">#CCCCCC</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">1pt</property>
+            <property name="borderRightColor">#CCCCCC</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">1pt</property>
+            <property name="borderTopColor">#CCCCCC</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">1pt</property>
+        </style>
+        <style name="crosstab" id="6">
+            <property name="borderBottomColor">#CCCCCC</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">1pt</property>
+            <property name="borderLeftColor">#CCCCCC</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">1pt</property>
+            <property name="borderRightColor">#CCCCCC</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">1pt</property>
+            <property name="borderTopColor">#CCCCCC</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">1pt</property>
+        </style>
+    </styles>
+    <page-setup>
+        <simple-master-page name="Simple MasterPage" id="2">
+            <property name="orientation">auto</property>
+            <page-footer>
+                <text id="3">
+                    <property name="contentType">html</property>
+                    <text-property name="content"><![CDATA[<value-of>new Date()</value-of>]]></text-property>
+                </text>
+            </page-footer>
+        </simple-master-page>
+    </page-setup>
+    <body>
+        <table id="659">
+            <property name="borderBottomColor">#3578AD</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">10px</property>
+            <property name="borderLeftColor">#3578AD</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">10px</property>
+            <property name="borderRightColor">#3578AD</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">10px</property>
+            <property name="borderTopColor">#3578AD</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">10px</property>
+            <property name="dataSet">Distinct Commodities Data Set</property>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">commodity</property>
+                    <text-property name="displayName">commodity</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["commodity"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">CommodityTitle</property>
+                    <text-property name="displayName">CommodityTitle</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["CommodityTitle"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+            </list-property>
+            <expression name="bookmark" type="javascript">"predictionCharts"</expression>
+            <property name="pageBreakInterval">0</property>
+            <list-property name="sort">
+                <structure>
+                    <expression name="key" type="javascript">row["commodity"]</expression>
+                    <property name="direction">asc</property>
+                    <property name="strength">-1</property>
+                </structure>
+            </list-property>
+            <column id="697"/>
+            <column id="698"/>
+            <detail>
+                <row id="677">
+                    <method name="onCreate"><![CDATA[var logger = java.util.logging.Logger.getLogger("birt.report.logger");
+logger.warning (BirtDateTime.now() + ' Table : ' + this.getRowData().getColumnValue("commodity"));
+params["pModel"].value = this.getRowData().getColumnValue("commodity");]]></method>
+                    <cell id="678">
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">1px</property>
+                        <property name="borderLeftStyle">none</property>
+                        <property name="borderRightStyle">none</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">1px</property>
+                        <table id="679">
+                            <property name="borderBottomStyle">none</property>
+                            <property name="borderLeftStyle">none</property>
+                            <property name="borderRightStyle">none</property>
+                            <property name="borderTopStyle">none</property>
+                            <property name="dataSet">dropModels</property>
+                            <list-property name="boundDataColumns">
+                                <structure>
+                                    <property name="name">dropMyModel</property>
+                                    <text-property name="displayName">dropMyModel</text-property>
+                                    <expression name="expression" type="javascript">dataSetRow["dropMyModel"]</expression>
+                                    <property name="dataType">decimal</property>
+                                </structure>
+                            </list-property>
+                            <column id="682"/>
+                            <detail>
+                                <row id="680">
+                                    <cell id="681">
+                                        <property name="borderBottomStyle">none</property>
+                                        <property name="borderLeftStyle">none</property>
+                                        <property name="borderRightStyle">none</property>
+                                        <property name="borderTopStyle">none</property>
+                                    </cell>
+                                </row>
+                            </detail>
+                            <property name="captionFontSize">1.1vw</property>
+                            <property name="captionTextAlignment">left</property>
+                        </table>
+                        <table id="683">
+                            <property name="borderBottomStyle">none</property>
+                            <property name="borderLeftStyle">none</property>
+                            <property name="borderRightStyle">none</property>
+                            <property name="borderTopStyle">none</property>
+                            <property name="dataSet">Create AR</property>
+                            <list-property name="boundDataColumns">
+                                <structure>
+                                    <property name="name">AUTOREGRESSOR</property>
+                                    <text-property name="displayName">AUTOREGRESSOR</text-property>
+                                    <expression name="expression" type="javascript">dataSetRow["AUTOREGRESSOR"]</expression>
+                                    <property name="dataType">string</property>
+                                </structure>
+                            </list-property>
+                            <column id="686"/>
+                            <detail>
+                                <row id="684">
+                                    <cell id="685">
+                                        <property name="borderBottomStyle">none</property>
+                                        <property name="borderLeftStyle">none</property>
+                                        <property name="borderRightStyle">none</property>
+                                        <property name="borderTopStyle">none</property>
+                                    </cell>
+                                </row>
+                            </detail>
+                            <property name="captionFontSize">1.1vw</property>
+                            <property name="captionTextAlignment">left</property>
+                        </table>
+                    </cell>
+                    <cell id="691">
+                        <data id="726">
+                            <property name="backgroundAttachment">scroll</property>
+                            <property name="backgroundPositionX">0%</property>
+                            <property name="backgroundPositionY">0%</property>
+                            <property name="backgroundRepeat">repeat</property>
+                            <property name="fontFamily">sans-serif</property>
+                            <property name="fontSize">14pt</property>
+                            <property name="fontWeight">bold</property>
+                            <property name="fontStyle">normal</property>
+                            <property name="fontVariant">normal</property>
+                            <property name="color">#666666</property>
+                            <property name="textLineThrough">none</property>
+                            <property name="textOverline">none</property>
+                            <property name="textUnderline">none</property>
+                            <property name="borderBottomColor">black</property>
+                            <property name="borderBottomStyle">none</property>
+                            <property name="borderBottomWidth">medium</property>
+                            <property name="borderLeftColor">black</property>
+                            <property name="borderLeftStyle">none</property>
+                            <property name="borderLeftWidth">medium</property>
+                            <property name="borderRightColor">black</property>
+                            <property name="borderRightStyle">none</property>
+                            <property name="borderRightWidth">medium</property>
+                            <property name="borderTopColor">black</property>
+                            <property name="borderTopStyle">none</property>
+                            <property name="borderTopWidth">medium</property>
+                            <property name="marginTop">4pt</property>
+                            <property name="marginLeft">4pt</property>
+                            <property name="marginBottom">0pt</property>
+                            <property name="marginRight">0pt</property>
+                            <property name="paddingTop">1pt</property>
+                            <property name="paddingLeft">1pt</property>
+                            <property name="paddingBottom">1pt</property>
+                            <property name="paddingRight">1pt</property>
+                            <property name="letterSpacing">normal</property>
+                            <property name="lineHeight">normal</property>
+                            <property name="orphans">2</property>
+                            <property name="textTransform">none</property>
+                            <property name="whiteSpace">normal</property>
+                            <property name="widows">2</property>
+                            <property name="wordSpacing">normal</property>
+                            <property name="display">block</property>
+                            <property name="pageBreakAfter">auto</property>
+                            <property name="pageBreakBefore">auto</property>
+                            <property name="pageBreakInside">auto</property>
+                            <property name="showIfBlank">false</property>
+                            <property name="canShrink">false</property>
+                            <property name="overflow">hidden</property>
+                            <property name="resultSetColumn">CommodityTitle</property>
+                        </data>
+                        <extended-item extensionName="Chart" id="693">
+                            <xml-property name="xmlRepresentation"><![CDATA[<ActuateChart version="2.6.1">
+ <ChartWithAxes version="2.6.1" type="Line Chart" subType="Overlay">
+  <block>
+   <children _type="TitleBlock" visible="false">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <label>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </label>
+   </children>
+   <children _type="Plot">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <clientArea>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </clientArea>
+   </children>
+   <children _type="Legend" orientation="0" position="0">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <clientArea>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </clientArea>
+    <separator>
+     <color _nil="1"/>
+    </separator>
+    <title>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </title>
+   </children>
+   <bounds _body="0.0,0.0,0.0,129.75"/>
+   <outline>
+    <color _nil="1"/>
+   </outline>
+  </block>
+  <extendedProperties name="enable.area.alt" value="false"/>
+  <extendedProperties name="enable.drill.category" value="true"/>
+  <extendedProperties name="enable.drill.series" value="true"/>
+  <extendedProperties name="jschart.zoom" value="xy"/>
+  <extendedProperties name="jschart.series.shadow" value="false"/>
+  <extendedProperties name="jschart.client.script" value="/**&#13;&#10; * Called after chart instance is rendered.&#13;&#10; *&#13;&#10; * @param chart&#13;&#10; *            chart instance&#13;&#10; */&#13;&#10;afterRendering: function(chart)&#13;&#10;{&#13;&#10;    chart.setXAxisRange(new Date(&#039;2024-05-01&#039;).getTime(), new Date(&#039;2026-06-01&#039;).getTime());&#13;&#10;},"/>
+  <extendedProperties name="jschart.navigator" value="true"/>
+  <sampleData>
+   <baseSampleData dataSetRepresentation="01/05/2000,02/01/2000,04/12/2000,03/12/2000,02/29/2000"/>
+   <orthogonalSampleData dataSetRepresentation="6,4,12,8,10" seriesDefinitionIndex="0"/>
+   <orthogonalSampleData dataSetRepresentation="12.0,8.0,24.0,16.0,20.0" seriesDefinitionIndex="1"/>
+  </sampleData>
+  <emptyMessage>
+   <caption value="This chart contains no data."/>
+   <background _body=",64,127,127,127"/>
+   <outline>
+    <color _body=",128,127,127,127"/>
+   </outline>
+  </emptyMessage>
+  <axes type="3" interval="4">
+   <title>
+    <background _nil="1"/>
+    <outline>
+     <color _nil="1"/>
+    </outline>
+   </title>
+   <associatedAxes primaryAxis="true" percent="false">
+    <title>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </title>
+    <seriesDefinitions>
+     <query definition=""/>
+     <series _type="LineSeries" seriesIdentifier="Past Value" stacked="false">
+      <label>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dataDefinition definition="row[&quot;commodityValue&quot;]">
+       <grouping/>
+      </dataDefinition>
+      <triggers condition="6">
+       <action type="1">
+        <value _type="TooltipValue" text="" delay="200"/>
+       </action>
+      </triggers>
+      <curveFitting _nil="1"/>
+      <markers>
+       <outline/>
+      </markers>
+      <lineAttributes>
+       <color _nil="1"/>
+      </lineAttributes>
+     </series>
+    </seriesDefinitions>
+    <seriesDefinitions>
+     <query definition=""/>
+     <series _type="LineSeries" seriesIdentifier="Prediction" stacked="false" curve="true">
+      <label>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dataDefinition definition="row[&quot;prediction&quot;]">
+       <grouping/>
+      </dataDefinition>
+      <triggers condition="6">
+       <action type="1">
+        <value _type="TooltipValue" text="" delay="200"/>
+       </action>
+      </triggers>
+      <curveFitting _nil="1"/>
+      <markers>
+       <outline/>
+      </markers>
+      <lineAttributes style="1">
+       <color _nil="1"/>
+      </lineAttributes>
+     </series>
+    </seriesDefinitions>
+    <lineAttributes>
+     <color _nil="1"/>
+    </lineAttributes>
+    <label>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </label>
+    <majorGrid>
+     <lineAttributes visible="true">
+      <color _nil="1"/>
+     </lineAttributes>
+     <tickAttributes>
+      <color _nil="1"/>
+     </tickAttributes>
+    </majorGrid>
+    <minorGrid>
+     <lineAttributes>
+      <color _nil="1"/>
+     </lineAttributes>
+     <tickAttributes>
+      <color _nil="1"/>
+     </tickAttributes>
+    </minorGrid>
+    <origin>
+     <value _nil="1"/>
+    </origin>
+   </associatedAxes>
+   <seriesDefinitions>
+    <query definition=""/>
+    <series seriesIdentifier="">
+     <label>
+      <background _nil="1"/>
+      <outline>
+       <color _nil="1"/>
+      </outline>
+     </label>
+     <dataDefinition definition="row[&quot;date&quot;]"/>
+     <curveFitting _nil="1"/>
+    </series>
+    <grouping enabled="true" groupingUnit="5" groupType="1"/>
+    <sortKey/>
+   </seriesDefinitions>
+   <lineAttributes>
+    <color _nil="1"/>
+   </lineAttributes>
+   <label>
+    <background _nil="1"/>
+    <outline>
+     <color _nil="1"/>
+    </outline>
+   </label>
+   <majorGrid>
+    <lineAttributes>
+     <color _nil="1"/>
+    </lineAttributes>
+    <tickAttributes>
+     <color _nil="1"/>
+    </tickAttributes>
+   </majorGrid>
+   <minorGrid>
+    <lineAttributes>
+     <color _nil="1"/>
+    </lineAttributes>
+    <tickAttributes>
+     <color _nil="1"/>
+    </tickAttributes>
+   </minorGrid>
+   <origin>
+    <value _nil="1"/>
+   </origin>
+  </axes>
+  <rotation>
+   <angles/>
+  </rotation>
+ </ChartWithAxes>
+</ActuateChart>
+]]></xml-property>
+                            <property name="outputFormat">JS</property>
+                            <property name="inheritColumns">false</property>
+                            <property name="height">200pt</property>
+                            <property name="width">100%</property>
+                            <property name="dataSet">Combined Data Set</property>
+                            <list-property name="boundDataColumns">
+                                <structure>
+                                    <property name="name">date</property>
+                                    <text-property name="displayName">date</text-property>
+                                    <expression name="expression" type="javascript">dataSetRow["date"]</expression>
+                                    <property name="dataType">date</property>
+                                </structure>
+                                <structure>
+                                    <property name="name">commodity</property>
+                                    <text-property name="displayName">commodity</text-property>
+                                    <expression name="expression" type="javascript">dataSetRow["commodity"]</expression>
+                                    <property name="dataType">string</property>
+                                </structure>
+                                <structure>
+                                    <property name="name">commodityValue</property>
+                                    <text-property name="displayName">commodityValue</text-property>
+                                    <expression name="expression" type="javascript">dataSetRow["commodityValue"]</expression>
+                                    <property name="dataType">float</property>
+                                </structure>
+                                <structure>
+                                    <property name="name">prediction</property>
+                                    <text-property name="displayName">prediction</text-property>
+                                    <expression name="expression" type="javascript">dataSetRow["prediction"]</expression>
+                                    <property name="dataType">float</property>
+                                </structure>
+                            </list-property>
+                            <property name="theme">ThemesReportItems31.Chart-Modern</property>
+                        </extended-item>
+                    </cell>
+                </row>
+                <row id="727">
+                    <method name="onCreate"><![CDATA[var logger = java.util.logging.Logger.getLogger("birt.report.logger");
+logger.warning (BirtDateTime.now() + ' Table : ' + this.getRowData().getColumnValue("commodity"));
+params["pModel"].value = this.getRowData().getColumnValue("commodity");]]></method>
+                    <property name="backgroundColor">#3578AD</property>
+                    <property name="height">10px</property>
+                    <cell id="728">
+                        <property name="colSpan">2</property>
+                        <property name="rowSpan">1</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">1px</property>
+                        <property name="borderLeftStyle">none</property>
+                        <property name="borderRightStyle">none</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">1px</property>
+                    </cell>
+                </row>
+            </detail>
+            <property name="captionFontSize">1.1vw</property>
+            <property name="captionTextAlignment">left</property>
+        </table>
+    </body>
+    <property name="thumbnail">
+        iVBORw0KGgoAAAANSUhEUgAAALgAAADlCAMAAADX/c3cAAADAFBMVEUAAAD////PomuXkHZ/iHzAwMBt
+        gn9ifoK5m2/kqGbW1tbFnm3MzMxzhH6MjHmllHTvrGTdpmje3t6ymHGTjnfFxcXMmWZ7hnyslnL2rmPW
+        pGlmgIHoqmWSjni2mnCdknVsgoCFinq9nG7MmWbmpWsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAN+Hl9AAACI0lEQVR4nO3V2Y7aQBQAUYedELZABGHH
+        //+RY5iBsBglaiXVc6MqufvBT0dX3Xbxs65JXZv7+k9Na1vV1Xjd4GXlbcU/dteyk9xl+Qj/EjDhdMLp
+        ej3hbMLphNMJp9vthLNV8MkkNyIl4XTC6YTThYXPZsLZhNMJpxNOFxm+2eRGpCScbrkUziacTjidcLrI
+        8H4/NyIl4XTC6YTTjcfC2YTTCaeLDJ9OcyNSEk4nnE44nXA64XRh4fu9cDbhdMLpKvhqlRuRknA64XTC
+        6cLCm03hbMLphNMJp4sMbzRyI1ISThcWPp8LZxNOJ5wuLHy7Fc4mnE44nXA64XSjUVz4YJAbkZJwOuF0
+        wumE0wmnE04XFn48CmcTTiecroKXZW5ESsLphNMJpwsLb7WEswmnE05XwXu93IiUhNMJpxNOJ5xusSh2
+        u9yIlITTCacTTiecLjJ8NsuNSEk43XAonE04nXA64XSR4ctlbkRKwumE0wmn63SEswmnE04nnC4yfDzO
+        jUjpcBDOJpxOON0TvN1u/zj37dLXa9/fy2W967+DF1VXevEJ4ev1C/hpxYSfwNVTVOrLFgl+nvdp4ucV
+        CH466+/o4jryXNa7fgMv7iYe46icL2cR76h8fA6Lj4sZ5nJ++h9QBd/vb1+EhUdJOF1YeLcrnE04nXC6
+        M7yq+dD80va20VPHp1pPLR4a1tS57XBt/Vj3V0UNu979J+y/4D68dndvewPPryQJnh8+HgAAAABJRU5E
+        rkJggg==
+</property>
+</report>
