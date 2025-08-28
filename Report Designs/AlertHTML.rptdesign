@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
-    <property name="createdBy">Eclipse BIRT Designer Version 4.6.0.v201603302314</property>
+    <property name="createdBy">Eclipse BIRT Designer Version 4.29.0.v202504021847</property>
     <property name="units">in</property>
     <property name="iconFile">/templates/blank_report.gif</property>
     <property name="bidiLayoutOrientation">ltr</property>
@@ -202,7 +202,7 @@ $("<style>").prop("type","text/css").html("a:link { color: #0000EE; } a:visited 
                         <list-property name="action">
                             <structure>
                                 <property name="linkType">hyperlink</property>
-                                <expression name="uri" type="constant">http://localhost:8700/iportal/servlet/DownloadFile/SF_Wealth_Credit_Card_Statement.pdf?name=%2fApplications%2fSFWealthApp%2fComposition%2fReport%20Designs%2fSF_Wealth_Credit_Card_Statement%2epdf%3b1&amp;fileExtension=PDF</expression>
+                                <expression name="uri" type="constant">/iportal/servlet/DownloadFile/SF_Wealth_Credit_Card_Statement.pdf?name=%2fApplications%2fSFWealthApp%2fReport Designs%2fSF_Wealth_Credit_Card_Statement.pdf&amp;fileExtension=PDF&amp;__vp=enterprise&amp;volume=RGVmYXVsdCBWb2x1bWU%3d%3a%3aRGVmYXVsdCBWb2x1bWU%3d&amp;showBanner=false&amp;locale=en_US</expression>
                                 <property name="targetWindow">_blank</property>
                             </structure>
                         </list-property>
