@@ -3,8 +3,8 @@
     <property name="layoutPreference">auto layout</property>
     <list-property name="libraries">
         <structure>
-            <property name="fileName">ThemesReportItems3.rptlibrary</property>
-            <property name="namespace">ThemesReportItems3</property>
+            <property name="fileName">themes/CleanBlueThemeReportItem.rptlibrary</property>
+            <property name="namespace">CleanBlueThemeReportItem</property>
         </structure>
     </list-property>
     <data-sources>
@@ -3377,7 +3377,8 @@
         </text>
         <text name="b7a6ea11-1807-4569-9936-bf2bfa659408" id="1139">
             <text-property name="content"><![CDATA[https://td-mag.eimdemo.com/iportal/cryptocoins.html]]></text-property>
-        </text>    </body>
+        </text>
+    </body>
     <property name="dashboardView">
         <dashboard id="2">
             <list-property name="userProperties">
@@ -3393,10 +3394,15 @@
                     <property name="name">dashboardLayout</property>
                     <property name="type">string</property>
                 </structure>
+                <structure>
+                    <property name="name">themeCustomFormatOverride</property>
+                    <property name="type">string</property>
+                </structure>
             </list-property>
-            <property name="dashboardTheme">ThemesReportItems3.Classic:Light</property>
+            <property name="dashboardTheme">CleanBlueThemeReportItem.Clean Blue:Light</property>
             <property name="enableGlobalFilter">false</property>
             <property name="dashboardLayout">3</property>
+            <property name="themeCustomFormatOverride">false</property>
             <property name="activeTab">3596098d-5ae6-490b-8c7d-437cd1c60c7b1</property>
             <property name="tabs">
                 <tab-element name="3596098d-5ae6-490b-8c7d-437cd1c60c7b1" id="15">
@@ -3410,19 +3416,26 @@
                             <property name="type">boolean</property>
                         </structure>
                     </list-property>
-                    <property name="tabTheme">ThemesReportItems3.Classic:Light</property>
+                    <property name="tabTheme">CleanBlueThemeReportItem.Clean Blue:Light</property>
                     <property name="responsiveView">false</property>
                     <property name="title">Home</property>
                     <property name="showHeader">false</property>
                     <property name="showFooter">false</property>
-                    <property name="headerHTML">null</property>
+                    <property name="headerHTML">dddd</property>
                     <property name="footerHTML">null</property>
-                    <property name="backgroundColor">RGB(255,255,255)</property>
+                    <property name="backgroundColor">#ffffff</property>
                     <property name="sections">
                         <section id="1067">
                             <property name="width">52.600732600732606%</property>
                             <property name="gadgets">
                                 <gadget name="Gadget_443dc893-e764-4a1e-997b-0e1134abb32d" id="1000">
+                                    <list-property name="userProperties">
+                                        <structure>
+                                            <property name="name">userPreferences</property>
+                                            <property name="type">string</property>
+                                        </structure>
+                                    </list-property>
+                                    <property name="userPreferences">{}</property>
                                     <property name="title">Welcome Home</property>
                                     <property name="externalGadgetURI">^/Report Designs/WelcomeHome.rptdocument</property>
                                     <property name="showTitle">false</property>
@@ -3435,10 +3448,10 @@
                                             <property name="showCaption">true</property>
                                             <property name="horizontalAlignment">left</property>
                                             <property name="fontFamily">"Lato"</property>
-                                            <property name="fontSize">18pt</property>
+                                            <property name="fontSize">16pt</property>
                                             <property name="fontWeight">normal</property>
                                             <property name="fontStyle">normal</property>
-                                            <property name="color">#353535</property>
+                                            <property name="color">#333333</property>
                                             <property name="textUnderline">none</property>
                                         </gadget-caption>
                                     </property>
@@ -3461,8 +3474,22 @@
                                     </property>
                                 </gadget>
                                 <gadget name="49fa8d6e-487e-4d49-aec5-6fa3dc2c6de22" id="16">
+                                    <list-property name="userProperties">
+                                        <structure>
+                                            <property name="name">userPreferences</property>
+                                            <property name="type">string</property>
+                                        </structure>
+                                    </list-property>
+                                    <property name="userPreferences">{}</property>
                                     <property name="zIndex">2</property>
                                     <property name="isVisible">false</property>
+                                    <property name="caption">
+                                        <gadget-caption id="1144">
+                                            <property name="fontFamily">"Lato"</property>
+                                            <property name="fontSize">16pt</property>
+                                            <property name="color">#333333</property>
+                                        </gadget-caption>
+                                    </property>
                                     <property name="content">
                                         <current-selections id="17"/>
                                     </property>
@@ -3473,13 +3500,8 @@
                                             <property name="name">userPreferences</property>
                                             <property name="type">string</property>
                                         </structure>
-												   
-																						
-																				   
-													
                                     </list-property>
                                     <property name="userPreferences">{"gadget-caption":{}}</property>
-																					 
                                     <property name="title">Crypto Coins</property>
                                     <property name="gadgetContentType">url</property>
                                     <property name="showTitle">false</property>
@@ -3500,27 +3522,10 @@
                                             <property name="textUnderline">none</property>
                                         </gadget-caption>
                                     </property>
-                                   <property name="content">
+                                    <property name="content">
                                         <data-view id="1140">
-																				 
-														   
-																									  
-																							
-															
-														   
-																								   
-																							
-															
-															
-																							   
-																						   
                                             <property name="gadgetType">embedded</property>
                                             <property name="internalReportLetRef">b7a6ea11-1807-4569-9936-bf2bfa659408</property>
-																	  
-																															  
-																									   
-																	   
-													   
                                         </data-view>
                                     </property>
                                 </gadget>
@@ -3530,6 +3535,13 @@
                             <property name="width">17.509157509157507%</property>
                             <property name="gadgets">
                                 <gadget name="Gadget_63d1aba7-72d9-437b-9c2d-3dc7099d7796" id="1118">
+                                    <list-property name="userProperties">
+                                        <structure>
+                                            <property name="name">userPreferences</property>
+                                            <property name="type">string</property>
+                                        </structure>
+                                    </list-property>
+                                    <property name="userPreferences">{}</property>
                                     <property name="title">My Current Status</property>
                                     <property name="externalGadgetURI">^/Report Designs/Client PortfolioRINGS.rptdesign</property>
                                     <property name="showTitle">false</property>
@@ -3542,10 +3554,10 @@
                                             <property name="showCaption">true</property>
                                             <property name="horizontalAlignment">left</property>
                                             <property name="fontFamily">"Lato"</property>
-                                            <property name="fontSize">18pt</property>
+                                            <property name="fontSize">16pt</property>
                                             <property name="fontWeight">normal</property>
                                             <property name="fontStyle">normal</property>
-                                            <property name="color">#353535</property>
+                                            <property name="color">#333333</property>
                                             <property name="textUnderline">none</property>
                                         </gadget-caption>
                                     </property>
@@ -3574,6 +3586,13 @@
                             <property name="width">29.89010989010989%</property>
                             <property name="gadgets">
                                 <gadget name="Gadget_90312126-3434-40fd-bc1d-e14c6b248c35" id="1006">
+                                    <list-property name="userProperties">
+                                        <structure>
+                                            <property name="name">userPreferences</property>
+                                            <property name="type">string</property>
+                                        </structure>
+                                    </list-property>
+                                    <property name="userPreferences">{}</property>
                                     <property name="title">Index Summary</property>
                                     <property name="externalGadgetURI">^/Report Designs/PortfolioCharts.rptdocument</property>
                                     <property name="showTitle">false</property>
@@ -3586,8 +3605,8 @@
                                             <property name="showCaption">true</property>
                                             <property name="horizontalAlignment">left</property>
                                             <property name="fontFamily">"Lato"</property>
-                                            <property name="fontSize">18pt</property>
-                                            <property name="color">#353535</property>
+                                            <property name="fontSize">16pt</property>
+                                            <property name="color">#333333</property>
                                         </gadget-caption>
                                     </property>
                                     <property name="content">

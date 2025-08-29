@@ -1,780 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
-    <xml-property name="externalMetadata">
-        <external-datamarts>
-            <datamart-node location="file:/C:/Actuate3/BIRTiHubVisualization/modules/BIRTiHub/iHub/shared/storage/file/023/015.dat">
-                <reference-elements>NewDataMartDataSource;</reference-elements>
-                <datamart xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
-                    <property name="createdBy">Eclipse BIRT Designer Version 2.6.1.v20100926-0604 Build &lt;2.6.1.v20100926-0604></property>
-                    <data-sources>
-                        <oda-data-source extensionID="org.eclipse.datatools.connectivity.oda.flatfile" name="Data Source" id="2">
-                            <property name="HOME">C:\data</property>
-                            <property name="DELIMTYPE">COMMA</property>
-                            <property name="CHARSET">UTF-8</property>
-                            <property name="INCLCOLUMNNAME">YES</property>
-                            <property name="INCLTYPELINE">YES</property>
-                        </oda-data-source>
-                    </data-sources>
-                    <data-sets>
-                        <oda-data-set extensionID="org.eclipse.datatools.connectivity.oda.flatfile.dataSet" name="Data Set" id="3">
-                            <list-property name="columnHints">
-                                <structure>
-                                    <property name="columnName">Account</property>
-                                    <property name="analysis">attribute</property>
-                                </structure>
-                                <structure>
-                                    <property name="columnName">Amount</property>
-                                    <text-property name="heading">Amount</text-property>
-                                </structure>
-                                <structure>
-                                    <property name="columnName">Amt</property>
-                                    <text-property name="heading">Amt</text-property>
-                                </structure>
-                                <structure>
-                                    <property name="columnName">Merchant</property>
-                                    <text-property name="heading">Merchant</text-property>
-                                </structure>
-                                <structure>
-                                    <property name="columnName">Reference #</property>
-                                    <text-property name="heading">Reference #</text-property>
-                                </structure>
-                                <structure>
-                                    <property name="columnName">spend category</property>
-                                    <text-property name="heading">spend category</text-property>
-                                </structure>
-                                <structure>
-                                    <property name="columnName">Date</property>
-                                    <text-property name="heading">Date</text-property>
-                                </structure>
-                                <structure>
-                                    <property name="columnName">type</property>
-                                    <text-property name="heading">type</text-property>
-                                </structure>
-                            </list-property>
-                            <list-property name="filter">
-                                <structure>
-                                    <property name="operator">ne</property>
-                                    <expression name="expr" type="javascript">row["type"]</expression>
-                                    <simple-property-list name="value1">
-                                        <value type="javascript">"INTEREST"</value>
-                                    </simple-property-list>
-                                </structure>
-                            </list-property>
-                            <structure name="cachedMetaData">
-                                <list-property name="resultSet">
-                                    <structure>
-                                        <property name="position">1</property>
-                                        <property name="name">Account</property>
-                                        <property name="dataType">string</property>
-                                    </structure>
-                                    <structure>
-                                        <property name="position">2</property>
-                                        <property name="name">Amount</property>
-                                        <property name="dataType">float</property>
-                                    </structure>
-                                    <structure>
-                                        <property name="position">3</property>
-                                        <property name="name">Amt</property>
-                                        <property name="dataType">float</property>
-                                    </structure>
-                                    <structure>
-                                        <property name="position">4</property>
-                                        <property name="name">Merchant</property>
-                                        <property name="dataType">string</property>
-                                    </structure>
-                                    <structure>
-                                        <property name="position">5</property>
-                                        <property name="name">Reference #</property>
-                                        <property name="dataType">float</property>
-                                    </structure>
-                                    <structure>
-                                        <property name="position">6</property>
-                                        <property name="name">spend category</property>
-                                        <property name="dataType">string</property>
-                                    </structure>
-                                    <structure>
-                                        <property name="position">7</property>
-                                        <property name="name">Date</property>
-                                        <property name="dataType">date</property>
-                                    </structure>
-                                    <structure>
-                                        <property name="position">8</property>
-                                        <property name="name">type</property>
-                                        <property name="dataType">string</property>
-                                    </structure>
-                                </list-property>
-                            </structure>
-                            <property name="dataSource">Data Source</property>
-                            <list-property name="resultSet">
-                                <structure>
-                                    <property name="position">1</property>
-                                    <property name="name">Account</property>
-                                    <property name="nativeName">Account</property>
-                                    <property name="dataType">string</property>
-                                </structure>
-                                <structure>
-                                    <property name="position">2</property>
-                                    <property name="name">Amount</property>
-                                    <property name="nativeName">Amount</property>
-                                    <property name="dataType">float</property>
-                                </structure>
-                                <structure>
-                                    <property name="position">3</property>
-                                    <property name="name">Amt</property>
-                                    <property name="nativeName">Amt</property>
-                                    <property name="dataType">float</property>
-                                </structure>
-                                <structure>
-                                    <property name="position">4</property>
-                                    <property name="name">Merchant</property>
-                                    <property name="nativeName">Merchant</property>
-                                    <property name="dataType">string</property>
-                                </structure>
-                                <structure>
-                                    <property name="position">5</property>
-                                    <property name="name">Reference #</property>
-                                    <property name="nativeName">Reference #</property>
-                                    <property name="dataType">float</property>
-                                </structure>
-                                <structure>
-                                    <property name="position">6</property>
-                                    <property name="name">spend category</property>
-                                    <property name="nativeName">spend category</property>
-                                    <property name="dataType">string</property>
-                                </structure>
-                                <structure>
-                                    <property name="position">7</property>
-                                    <property name="name">Date</property>
-                                    <property name="nativeName">Date</property>
-                                    <property name="dataType">date</property>
-                                </structure>
-                                <structure>
-                                    <property name="position">8</property>
-                                    <property name="name">type</property>
-                                    <property name="nativeName">type</property>
-                                    <property name="dataType">string</property>
-                                </structure>
-                            </list-property>
-                            <xml-property name="queryText"><![CDATA[select "Account", "Amount", "Amt", "Merchant", "Reference #", "spend category", "Date", "type" from SPEND.csv : {"Account","Account",STRING;"Amount","Amount",DOUBLE;"Amt","Amt",DOUBLE;"Merchant","Merchant",STRING;"Reference #","Reference #",DOUBLE;"spend category","spend category",STRING;"Date","Date",DATE;"type","type",STRING}]]></xml-property>
-                            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
-<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
-  <Version>1.0</Version>
-  <design:ResultSets derivedMetaData="true">
-    <design:resultSetDefinitions>
-      <design:resultSetColumns>
-        <design:resultColumnDefinitions>
-          <design:attributes>
-            <design:name>Account</design:name>
-            <design:position>1</design:position>
-            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
-            <design:precision>-1</design:precision>
-            <design:scale>-1</design:scale>
-            <design:nullability>Unknown</design:nullability>
-          </design:attributes>
-          <design:usageHints>
-            <design:label>Account</design:label>
-            <design:formattingHints/>
-          </design:usageHints>
-        </design:resultColumnDefinitions>
-        <design:resultColumnDefinitions>
-          <design:attributes>
-            <design:name>Amount</design:name>
-            <design:position>2</design:position>
-            <design:nativeDataTypeCode>8</design:nativeDataTypeCode>
-            <design:precision>-1</design:precision>
-            <design:scale>-1</design:scale>
-            <design:nullability>Unknown</design:nullability>
-          </design:attributes>
-          <design:usageHints>
-            <design:label>Amount</design:label>
-            <design:formattingHints/>
-          </design:usageHints>
-        </design:resultColumnDefinitions>
-        <design:resultColumnDefinitions>
-          <design:attributes>
-            <design:name>Description</design:name>
-            <design:position>3</design:position>
-            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
-            <design:precision>-1</design:precision>
-            <design:scale>-1</design:scale>
-            <design:nullability>Unknown</design:nullability>
-          </design:attributes>
-          <design:usageHints>
-            <design:label>Description</design:label>
-            <design:formattingHints/>
-          </design:usageHints>
-        </design:resultColumnDefinitions>
-        <design:resultColumnDefinitions>
-          <design:attributes>
-            <design:name>Reference #</design:name>
-            <design:position>4</design:position>
-            <design:nativeDataTypeCode>8</design:nativeDataTypeCode>
-            <design:precision>-1</design:precision>
-            <design:scale>-1</design:scale>
-            <design:nullability>Unknown</design:nullability>
-          </design:attributes>
-          <design:usageHints>
-            <design:label>Reference #</design:label>
-            <design:formattingHints/>
-          </design:usageHints>
-        </design:resultColumnDefinitions>
-        <design:resultColumnDefinitions>
-          <design:attributes>
-            <design:name>spend category</design:name>
-            <design:position>5</design:position>
-            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
-            <design:precision>-1</design:precision>
-            <design:scale>-1</design:scale>
-            <design:nullability>Unknown</design:nullability>
-          </design:attributes>
-          <design:usageHints>
-            <design:label>spend category</design:label>
-            <design:formattingHints/>
-          </design:usageHints>
-        </design:resultColumnDefinitions>
-        <design:resultColumnDefinitions>
-          <design:attributes>
-            <design:name>Date</design:name>
-            <design:position>6</design:position>
-            <design:nativeDataTypeCode>91</design:nativeDataTypeCode>
-            <design:precision>-1</design:precision>
-            <design:scale>-1</design:scale>
-            <design:nullability>Unknown</design:nullability>
-          </design:attributes>
-          <design:usageHints>
-            <design:label>Date</design:label>
-            <design:formattingHints/>
-          </design:usageHints>
-        </design:resultColumnDefinitions>
-        <design:resultColumnDefinitions>
-          <design:attributes>
-            <design:name>type</design:name>
-            <design:position>7</design:position>
-            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
-            <design:precision>-1</design:precision>
-            <design:scale>-1</design:scale>
-            <design:nullability>Unknown</design:nullability>
-          </design:attributes>
-          <design:usageHints>
-            <design:label>type</design:label>
-            <design:formattingHints/>
-          </design:usageHints>
-        </design:resultColumnDefinitions>
-      </design:resultSetColumns>
-      <design:criteria/>
-    </design:resultSetDefinitions>
-  </design:ResultSets>
-</model:DesignValues>]]></xml-property>
-                        </oda-data-set>
-                    </data-sets>
-                    <cubes>
-                        <tabular-cube name="Data Cube" id="4">
-                            <property name="dimensions">
-                                <tabular-dimension name="Group" id="7">
-                                    <property name="isTimeType">true</property>
-                                    <property name="defaultHierarchy">NewTabularHierarchy</property>
-                                    <property name="hierarchies">
-                                        <tabular-hierarchy name="NewTabularHierarchy" id="8">
-                                            <property name="levels">
-                                                <tabular-level name="Year" id="9">
-                                                    <property name="dataType">integer</property>
-                                                    <property name="dateTimeLevelType">year</property>
-                                                    <list-property name="attributes">
-                                                        <structure>
-                                                            <property name="name">DateTime</property>
-                                                            <property name="dataType">date-time</property>
-                                                        </structure>
-                                                    </list-property>
-                                                    <property name="columnName">Date</property>
-                                                </tabular-level>
-                                                <tabular-level name="Month" id="10">
-                                                    <property name="dataType">integer</property>
-                                                    <property name="dateTimeLevelType">month</property>
-                                                    <property name="dateTimeFormat">MMM</property>
-                                                    <list-property name="attributes">
-                                                        <structure>
-                                                            <property name="name">DateTime</property>
-                                                            <property name="dataType">date-time</property>
-                                                        </structure>
-                                                    </list-property>
-                                                    <property name="columnName">Date</property>
-                                                </tabular-level>
-                                                <tabular-level name="Day Of Month" id="11">
-                                                    <property name="dataType">integer</property>
-                                                    <property name="dateTimeLevelType">day-of-month</property>
-                                                    <list-property name="attributes">
-                                                        <structure>
-                                                            <property name="name">DateTime</property>
-                                                            <property name="dataType">date-time</property>
-                                                        </structure>
-                                                    </list-property>
-                                                    <property name="columnName">Date</property>
-                                                </tabular-level>
-                                            </property>
-                                        </tabular-hierarchy>
-                                    </property>
-                                </tabular-dimension>
-                                <tabular-dimension name="Spend Category" id="12">
-                                    <property name="defaultHierarchy">NewTabularHierarchy1</property>
-                                    <property name="hierarchies">
-                                        <tabular-hierarchy name="NewTabularHierarchy1" id="13">
-                                            <property name="levels">
-                                                <tabular-level name="Category" id="14">
-                                                    <property name="dataType">string</property>
-                                                    <property name="levelType">dynamic</property>
-                                                    <property name="columnName">spend category</property>
-                                                </tabular-level>
-                                                <tabular-level name="Merchant" id="26">
-                                                    <property name="dataType">string</property>
-                                                    <property name="columnName">Merchant</property>
-                                                </tabular-level>
-                                            </property>
-                                        </tabular-hierarchy>
-                                    </property>
-                                </tabular-dimension>
-                                <tabular-dimension name="Spend Type" id="16">
-                                    <property name="defaultHierarchy">NewTabularHierarchy2</property>
-                                    <property name="hierarchies">
-                                        <tabular-hierarchy name="NewTabularHierarchy2" id="17">
-                                            <property name="levels">
-                                                <tabular-level name="Type" id="18">
-                                                    <property name="dataType">string</property>
-                                                    <property name="levelType">dynamic</property>
-                                                    <property name="columnName">type</property>
-                                                </tabular-level>
-                                            </property>
-                                        </tabular-hierarchy>
-                                    </property>
-                                </tabular-dimension>
-                                <tabular-dimension name="Accounts" id="19">
-                                    <property name="defaultHierarchy">NewTabularHierarchy3</property>
-                                    <property name="hierarchies">
-                                        <tabular-hierarchy name="NewTabularHierarchy3" id="20">
-                                            <property name="levels">
-                                                <tabular-level name="Account" id="21">
-                                                    <property name="dataType">string</property>
-                                                    <property name="columnName">Account</property>
-                                                </tabular-level>
-                                            </property>
-                                        </tabular-hierarchy>
-                                    </property>
-                                </tabular-dimension>
-                            </property>
-                            <property name="measureGroups">
-                                <tabular-measure-group name="Summary Field" id="24">
-                                    <property name="measures">
-                                        <tabular-measure name="Amt" id="25">
-                                            <expression name="measureExpression" type="javascript">dataSetRow["Amt"]</expression>
-                                            <property name="dataType">float</property>
-                                        </tabular-measure>
-                                    </property>
-                                </tabular-measure-group>
-                            </property>
-                            <property name="dataSet">Data Set</property>
-                        </tabular-cube>
-                    </cubes>
-                </datamart>
-            </datamart-node>
-            <datamart-node location="file:/C:/Actuate3/BIRTiHubVisualization/modules/BIRTiHub/iHub/shared/storage/file/023/013.dat">
-                <reference-elements>NewDataMartDataSource3;</reference-elements>
-                <datamart xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
-                    <property name="createdBy">Eclipse BIRT Designer Version 4.2.3.v20131216-0430 Build &lt;4.2.3.v20131216-0430></property>
-                    <data-sources>
-                        <oda-data-source extensionID="org.eclipse.datatools.connectivity.oda.flatfile" name="ff" id="2">
-                            <property name="HOME">Flatfiles/</property>
-                            <property name="DELIMTYPE">COMMA</property>
-                            <property name="CHARSET">UTF-8</property>
-                            <property name="INCLCOLUMNNAME">YES</property>
-                            <property name="INCLTYPELINE">YES</property>
-                            <property name="TRAILNULLCOLS">NO</property>
-                        </oda-data-source>
-                    </data-sources>
-                    <data-sets>
-                        <oda-data-set extensionID="org.eclipse.datatools.connectivity.oda.flatfile.dataSet" name="spend data" id="4">
-                            <list-property name="columnHints">
-                                <structure>
-                                    <property name="columnName">Account</property>
-                                    <property name="analysis">dimension</property>
-                                    <text-property name="heading">Account</text-property>
-                                    <property name="indexColumn">false</property>
-                                    <property name="compressed">false</property>
-                                </structure>
-                                <structure>
-                                    <property name="columnName">Amount</property>
-                                    <property name="analysis">measure</property>
-                                    <text-property name="heading">Amount</text-property>
-                                    <property name="indexColumn">false</property>
-                                    <property name="compressed">false</property>
-                                </structure>
-                                <structure>
-                                    <property name="columnName">Date</property>
-                                    <property name="analysis">dimension</property>
-                                    <text-property name="heading">Date</text-property>
-                                    <property name="indexColumn">false</property>
-                                    <property name="compressed">false</property>
-                                </structure>
-                                <structure>
-                                    <property name="columnName">Merchant</property>
-                                    <property name="analysis">dimension</property>
-                                    <text-property name="heading">Merchant</text-property>
-                                    <property name="indexColumn">false</property>
-                                    <property name="compressed">false</property>
-                                </structure>
-                                <structure>
-                                    <property name="columnName">Reference</property>
-                                    <property name="analysis">dimension</property>
-                                    <text-property name="heading">Reference</text-property>
-                                    <property name="indexColumn">false</property>
-                                    <property name="compressed">false</property>
-                                </structure>
-                                <structure>
-                                    <property name="columnName">spend category</property>
-                                    <property name="analysis">dimension</property>
-                                    <text-property name="heading">spend category</text-property>
-                                    <property name="indexColumn">false</property>
-                                    <property name="compressed">false</property>
-                                </structure>
-                                <structure>
-                                    <property name="columnName">type</property>
-                                    <property name="analysis">dimension</property>
-                                    <text-property name="heading">type</text-property>
-                                    <property name="indexColumn">false</property>
-                                    <property name="compressed">false</property>
-                                </structure>
-                            </list-property>
-                            <structure name="cachedMetaData">
-                                <list-property name="resultSet">
-                                    <structure>
-                                        <property name="position">1</property>
-                                        <property name="name">Account</property>
-                                        <property name="dataType">string</property>
-                                    </structure>
-                                    <structure>
-                                        <property name="position">2</property>
-                                        <property name="name">Amount</property>
-                                        <property name="dataType">float</property>
-                                    </structure>
-                                    <structure>
-                                        <property name="position">3</property>
-                                        <property name="name">Date</property>
-                                        <property name="dataType">date</property>
-                                    </structure>
-                                    <structure>
-                                        <property name="position">4</property>
-                                        <property name="name">Merchant</property>
-                                        <property name="dataType">string</property>
-                                    </structure>
-                                    <structure>
-                                        <property name="position">5</property>
-                                        <property name="name">Reference</property>
-                                        <property name="dataType">string</property>
-                                    </structure>
-                                    <structure>
-                                        <property name="position">6</property>
-                                        <property name="name">spend category</property>
-                                        <property name="dataType">string</property>
-                                    </structure>
-                                    <structure>
-                                        <property name="position">7</property>
-                                        <property name="name">type</property>
-                                        <property name="dataType">string</property>
-                                    </structure>
-                                </list-property>
-                            </structure>
-                            <property name="dataSource">ff</property>
-                            <list-property name="resultSet">
-                                <structure>
-                                    <property name="position">1</property>
-                                    <property name="name">Account</property>
-                                    <property name="nativeName">Account</property>
-                                    <property name="dataType">string</property>
-                                    <property name="nativeDataType">12</property>
-                                </structure>
-                                <structure>
-                                    <property name="position">2</property>
-                                    <property name="name">Amount</property>
-                                    <property name="nativeName">Amount</property>
-                                    <property name="dataType">float</property>
-                                    <property name="nativeDataType">8</property>
-                                </structure>
-                                <structure>
-                                    <property name="position">3</property>
-                                    <property name="name">Date</property>
-                                    <property name="nativeName">Date</property>
-                                    <property name="dataType">date</property>
-                                    <property name="nativeDataType">91</property>
-                                </structure>
-                                <structure>
-                                    <property name="position">4</property>
-                                    <property name="name">Merchant</property>
-                                    <property name="nativeName">Merchant</property>
-                                    <property name="dataType">string</property>
-                                    <property name="nativeDataType">12</property>
-                                </structure>
-                                <structure>
-                                    <property name="position">5</property>
-                                    <property name="name">Reference</property>
-                                    <property name="nativeName">Reference</property>
-                                    <property name="dataType">string</property>
-                                    <property name="nativeDataType">12</property>
-                                </structure>
-                                <structure>
-                                    <property name="position">6</property>
-                                    <property name="name">spend category</property>
-                                    <property name="nativeName">spend category</property>
-                                    <property name="dataType">string</property>
-                                    <property name="nativeDataType">12</property>
-                                </structure>
-                                <structure>
-                                    <property name="position">7</property>
-                                    <property name="name">type</property>
-                                    <property name="nativeName">type</property>
-                                    <property name="dataType">string</property>
-                                    <property name="nativeDataType">12</property>
-                                </structure>
-                            </list-property>
-                            <xml-property name="queryText"><![CDATA[select "Account", "Amount", "Date", "Merchant", "Reference", "spend category", "type" from "creditdata_6mos.csv" : {"Account","Account",STRING;"Amount","Amount",DOUBLE;"Date","Date",DATE;"Merchant","Merchant",STRING;"Reference","Reference",STRING;"spend category","spend category",STRING;"type","type",STRING}]]></xml-property>
-                            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
-<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
-  <Version>2.0</Version>
-  <design:ResultSets derivedMetaData="true">
-    <design:resultSetDefinitions>
-      <design:resultSetColumns>
-        <design:resultColumnDefinitions>
-          <design:attributes>
-            <design:identifier>
-              <design:name>Account</design:name>
-              <design:position>1</design:position>
-            </design:identifier>
-            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
-            <design:precision>-1</design:precision>
-            <design:scale>-1</design:scale>
-            <design:nullability>Unknown</design:nullability>
-          </design:attributes>
-          <design:usageHints>
-            <design:label>Account</design:label>
-            <design:formattingHints/>
-          </design:usageHints>
-        </design:resultColumnDefinitions>
-        <design:resultColumnDefinitions>
-          <design:attributes>
-            <design:identifier>
-              <design:name>Amount</design:name>
-              <design:position>2</design:position>
-            </design:identifier>
-            <design:nativeDataTypeCode>8</design:nativeDataTypeCode>
-            <design:precision>-1</design:precision>
-            <design:scale>-1</design:scale>
-            <design:nullability>Unknown</design:nullability>
-          </design:attributes>
-          <design:usageHints>
-            <design:label>Amount</design:label>
-            <design:formattingHints/>
-          </design:usageHints>
-        </design:resultColumnDefinitions>
-        <design:resultColumnDefinitions>
-          <design:attributes>
-            <design:identifier>
-              <design:name>Date</design:name>
-              <design:position>3</design:position>
-            </design:identifier>
-            <design:nativeDataTypeCode>91</design:nativeDataTypeCode>
-            <design:precision>-1</design:precision>
-            <design:scale>-1</design:scale>
-            <design:nullability>Unknown</design:nullability>
-          </design:attributes>
-          <design:usageHints>
-            <design:label>Date</design:label>
-            <design:formattingHints/>
-          </design:usageHints>
-        </design:resultColumnDefinitions>
-        <design:resultColumnDefinitions>
-          <design:attributes>
-            <design:identifier>
-              <design:name>Merchant</design:name>
-              <design:position>4</design:position>
-            </design:identifier>
-            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
-            <design:precision>-1</design:precision>
-            <design:scale>-1</design:scale>
-            <design:nullability>Unknown</design:nullability>
-          </design:attributes>
-          <design:usageHints>
-            <design:label>Merchant</design:label>
-            <design:formattingHints/>
-          </design:usageHints>
-        </design:resultColumnDefinitions>
-        <design:resultColumnDefinitions>
-          <design:attributes>
-            <design:identifier>
-              <design:name>Reference</design:name>
-              <design:position>5</design:position>
-            </design:identifier>
-            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
-            <design:precision>-1</design:precision>
-            <design:scale>-1</design:scale>
-            <design:nullability>Unknown</design:nullability>
-          </design:attributes>
-          <design:usageHints>
-            <design:label>Reference</design:label>
-            <design:formattingHints/>
-          </design:usageHints>
-        </design:resultColumnDefinitions>
-        <design:resultColumnDefinitions>
-          <design:attributes>
-            <design:identifier>
-              <design:name>spend category</design:name>
-              <design:position>6</design:position>
-            </design:identifier>
-            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
-            <design:precision>-1</design:precision>
-            <design:scale>-1</design:scale>
-            <design:nullability>Unknown</design:nullability>
-          </design:attributes>
-          <design:usageHints>
-            <design:label>spend category</design:label>
-            <design:formattingHints/>
-          </design:usageHints>
-        </design:resultColumnDefinitions>
-        <design:resultColumnDefinitions>
-          <design:attributes>
-            <design:identifier>
-              <design:name>type</design:name>
-              <design:position>7</design:position>
-            </design:identifier>
-            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
-            <design:precision>-1</design:precision>
-            <design:scale>-1</design:scale>
-            <design:nullability>Unknown</design:nullability>
-          </design:attributes>
-          <design:usageHints>
-            <design:label>type</design:label>
-            <design:formattingHints/>
-          </design:usageHints>
-        </design:resultColumnDefinitions>
-      </design:resultSetColumns>
-      <design:criteria/>
-    </design:resultSetDefinitions>
-  </design:ResultSets>
-</model:DesignValues>]]></xml-property>
-                        </oda-data-set>
-                    </data-sets>
-                    <cubes>
-                        <tabular-cube name="Spend History" id="5">
-                            <property name="dimensions">
-                                <tabular-dimension name="Date" id="8">
-                                    <property name="isTimeType">true</property>
-                                    <property name="defaultHierarchy">NewTabularHierarchy1</property>
-                                    <property name="hierarchies">
-                                        <tabular-hierarchy name="NewTabularHierarchy1" id="9">
-                                            <property name="levels">
-                                                <tabular-level name="Month" id="10">
-                                                    <property name="dataType">integer</property>
-                                                    <property name="dateTimeLevelType">month</property>
-                                                    <property name="dateTimeFormat">MMM</property>
-                                                    <list-property name="attributes">
-                                                        <structure>
-                                                            <property name="name">DateTime</property>
-                                                            <property name="dataType">date-time</property>
-                                                        </structure>
-                                                    </list-property>
-                                                    <property name="columnName">Date</property>
-                                                </tabular-level>
-                                                <tabular-level name="Day" id="11">
-                                                    <property name="dataType">integer</property>
-                                                    <property name="dateTimeLevelType">day-of-month</property>
-                                                    <list-property name="attributes">
-                                                        <structure>
-                                                            <property name="name">DateTime</property>
-                                                            <property name="dataType">date-time</property>
-                                                        </structure>
-                                                    </list-property>
-                                                    <property name="columnName">Date</property>
-                                                </tabular-level>
-                                            </property>
-                                        </tabular-hierarchy>
-                                    </property>
-                                </tabular-dimension>
-                                <tabular-dimension name="Spend Category" id="12">
-                                    <property name="defaultHierarchy">NewTabularHierarchy2</property>
-                                    <property name="hierarchies">
-                                        <tabular-hierarchy name="NewTabularHierarchy2" id="13">
-                                            <property name="levels">
-                                                <tabular-level name="Category" id="14">
-                                                    <property name="dataType">string</property>
-                                                    <property name="levelType">dynamic</property>
-                                                    <property name="columnName">spend category</property>
-                                                </tabular-level>
-                                                <tabular-level name="Merchant" id="15">
-                                                    <property name="dataType">string</property>
-                                                    <property name="levelType">dynamic</property>
-                                                    <list-property name="action">
-                                                        <structure>
-                                                            <property name="linkType">drill-through</property>
-                                                            <property name="reportName">/Applications/SFWealthApp/Report Designs/MySpendDetail.rptdesign</property>
-                                                            <property name="targetWindow">_blank</property>
-                                                            <property name="targetFileType">report-design</property>
-                                                            <list-property name="paramBindings">
-                                                                <structure>
-                                                                    <property name="paramName">SpendCategory</property>
-                                                                    <simple-property-list name="expression">
-                                                                        <value type="javascript">dimension["Spend Category"]["Category"]</value>
-                                                                    </simple-property-list>
-                                                                </structure>
-                                                            </list-property>
-                                                        </structure>
-                                                    </list-property>
-                                                    <property name="columnName">Merchant</property>
-                                                </tabular-level>
-                                            </property>
-                                        </tabular-hierarchy>
-                                    </property>
-                                </tabular-dimension>
-                                <tabular-dimension name="Account" id="16">
-                                    <property name="defaultHierarchy">NewTabularHierarchy3</property>
-                                    <property name="hierarchies">
-                                        <tabular-hierarchy name="NewTabularHierarchy3" id="17">
-                                            <property name="levels">
-                                                <tabular-level name="Account" id="18">
-                                                    <property name="dataType">string</property>
-                                                    <property name="columnName">Account</property>
-                                                </tabular-level>
-                                            </property>
-                                        </tabular-hierarchy>
-                                    </property>
-                                </tabular-dimension>
-                                <tabular-dimension name="Spend Method" id="19">
-                                    <property name="defaultHierarchy">NewTabularHierarchy4</property>
-                                    <property name="hierarchies">
-                                        <tabular-hierarchy name="NewTabularHierarchy4" id="20">
-                                            <property name="levels">
-                                                <tabular-level name="Method" id="21">
-                                                    <property name="dataType">string</property>
-                                                    <property name="levelType">dynamic</property>
-                                                    <property name="columnName">type</property>
-                                                </tabular-level>
-                                            </property>
-                                        </tabular-hierarchy>
-                                    </property>
-                                </tabular-dimension>
-                            </property>
-                            <property name="measureGroups">
-                                <tabular-measure-group name="Spend" id="6">
-                                    <property name="measures">
-                                        <tabular-measure name="Amount" id="7">
-                                            <expression name="measureExpression" type="javascript">dataSetRow["Amount"]</expression>
-                                            <property name="dataType">float</property>
-                                        </tabular-measure>
-                                    </property>
-                                </tabular-measure-group>
-                            </property>
-                            <property name="dataSet">spend data</property>
-                        </tabular-cube>
-                    </cubes>
-                </datamart>
-            </datamart-node>
-        </external-datamarts>
-    </xml-property>
     <property name="layoutPreference">auto layout</property>
     <list-property name="libraries">
         <structure>
@@ -4190,7 +3415,7 @@
      </outline>
     </title>
    </children>
-   <bounds _body=",,408.0,"/>
+   <bounds _body=",,340.5,"/>
    <outline>
     <color _nil="1"/>
    </outline>
@@ -4201,6 +3426,7 @@
   <extendedProperties name="keep.hierarchy.category" value="true"/>
   <extendedProperties name="keep.hierarchy.series" value="true"/>
   <extendedProperties name="jschart.series.shadow" value="false"/>
+  <extendedProperties name="jschart.client.script" value="beforeGeneration:function(o){if(o&amp;&amp;o.chart&amp;&amp;o.chart.renderTo){var r=document.getElementById(o.chart.renderTo);if(r.parentNode&amp;&amp;r.parentNode.id){var b=r.parentNode.id;var v=actuate.getViewer(b);if(v){v.enableGlobalFilter(o);}}}}"/>
   <sampleData>
    <baseSampleData dataSetRepresentation="&#039;A&#039;,&#039;B&#039;,&#039;C&#039;,&#039;D&#039;,&#039;E&#039;"/>
    <orthogonalSampleData dataSetRepresentation="6,4,12,8,10" seriesDefinitionIndex="0"/>
@@ -4280,7 +3506,7 @@
                 </filter-condition-element>
             </property>
             <property name="height">234pt</property>
-            <property name="width">408pt</property>
+            <property name="width">340.5pt</property>
             <list-property name="boundDataColumns">
                 <structure>
                     <property name="name">Account/Account</property>
@@ -4300,8 +3526,13 @@
                     <property name="name">copyHyperlink</property>
                     <property name="type">string</property>
                 </structure>
+                <structure>
+                    <property name="name">createdBy</property>
+                    <property name="type">string</property>
+                </structure>
             </list-property>
             <property name="copyHyperlink">true</property>
+            <property name="createdBy">dashboard</property>
         </extended-item>
         <extended-item extensionName="Chart" name="Bar Chart - Data Cube_2932b7ba-211b-498f-813d-b03dff5600dd1" id="112">
             <property name="cube">NewDataMartDataSource4::Spend History</property>
@@ -4351,7 +3582,7 @@
      </outline>
     </title>
    </children>
-   <bounds _body=",,408.0,"/>
+   <bounds _body=",,340.5,"/>
    <outline>
     <color _nil="1"/>
    </outline>
@@ -4367,6 +3598,7 @@
   <extendedProperties name="jschart.glass.style" value="false"/>
   <extendedProperties name="jschart.zoom" value=""/>
   <extendedProperties name="jschart.series.shadow" value="false"/>
+  <extendedProperties name="jschart.client.script" value="beforeGeneration:function(o){if(o&amp;&amp;o.chart&amp;&amp;o.chart.renderTo){var r=document.getElementById(o.chart.renderTo);if(r.parentNode&amp;&amp;r.parentNode.id){var b=r.parentNode.id;var v=actuate.getViewer(b);if(v){v.enableGlobalFilter(o);}}}}"/>
   <sampleData>
    <baseSampleData dataSetRepresentation="QWER"/>
    <orthogonalSampleData dataSetRepresentation="2.3" seriesDefinitionIndex="0"/>
@@ -4522,7 +3754,7 @@
                 </filter-condition-element>
             </property>
             <property name="height">246pt</property>
-            <property name="width">408pt</property>
+            <property name="width">340.5pt</property>
             <list-property name="boundDataColumns">
                 <structure>
                     <property name="name">Spend Method/Method</property>
@@ -4547,8 +3779,13 @@
                     <property name="name">copyHyperlink</property>
                     <property name="type">string</property>
                 </structure>
+                <structure>
+                    <property name="name">createdBy</property>
+                    <property name="type">string</property>
+                </structure>
             </list-property>
             <property name="copyHyperlink">true</property>
+            <property name="createdBy">dashboard</property>
         </extended-item>
         <text name="e545eea4-be44-4c41-b3eb-cbc2d6ba5d95" id="151">
             <text-property name="content"><![CDATA[<ul><li><font face="verdana" size="1">Add a life event expenditure to the chart by selecting a category in the "Add Life Event" drop down</font></li></ul><ul><li><font face="verdana" size="1">Adjust Monthly Contribution amount and/or Investment Style to balance your investment plan</font></li></ul><ul><li><font face="verdana" size="1">Click "Re-Allocate" to see the impact of your choices on your retirement goals</font><br></li></ul>]]></text-property>
@@ -4607,7 +3844,7 @@
      </outline>
     </title>
    </children>
-   <bounds _body=",,477.75,"/>
+   <bounds _body=",,396.75,"/>
    <outline>
     <color _nil="1"/>
    </outline>
@@ -4625,6 +3862,7 @@
   <extendedProperties name="jschart.series.shadow" value="false"/>
   <extendedProperties name="drilled.filters_" value="_@,_"/>
   <extendedProperties name="enable.drill.proc_" value="true"/>
+  <extendedProperties name="jschart.client.script" value="beforeGeneration:function(o){if(o&amp;&amp;o.chart&amp;&amp;o.chart.renderTo){var r=document.getElementById(o.chart.renderTo);if(r.parentNode&amp;&amp;r.parentNode.id){var b=r.parentNode.id;var v=actuate.getViewer(b);if(v){v.enableGlobalFilter(o);}}}}"/>
   <sampleData>
    <baseSampleData dataSetRepresentation="QWER"/>
    <orthogonalSampleData dataSetRepresentation="2.3" seriesDefinitionIndex="0"/>
@@ -4779,7 +4017,7 @@
                 </filter-condition-element>
             </property>
             <property name="height">265.5pt</property>
-            <property name="width">477.75pt</property>
+            <property name="width">396.75pt</property>
             <list-property name="boundDataColumns">
                 <structure>
                     <property name="name">Spend Category/Category</property>
@@ -4809,8 +4047,13 @@
                     <property name="name">copyHyperlink</property>
                     <property name="type">string</property>
                 </structure>
+                <structure>
+                    <property name="name">createdBy</property>
+                    <property name="type">string</property>
+                </structure>
             </list-property>
             <property name="copyHyperlink">true</property>
+            <property name="createdBy">dashboard</property>
         </extended-item>
         <extended-item extensionName="Chart" name="My Spend This Period_664743b7-2de1-462e-a644-d1aedceafe81" id="1062">
             <property name="cube">NewDataMartDataSource4::Spend History</property>
@@ -4860,7 +4103,7 @@
      </outline>
     </title>
    </children>
-   <bounds _body=",,477.75,"/>
+   <bounds _body=",,396.75,"/>
    <outline>
     <color _nil="1"/>
    </outline>
@@ -4875,6 +4118,7 @@
   <extendedProperties name="keep.hierarchy.series" value="true"/>
   <extendedProperties name="jschart.zoom" value="xy"/>
   <extendedProperties name="jschart.series.shadow" value="false"/>
+  <extendedProperties name="jschart.client.script" value="beforeGeneration:function(o){if(o&amp;&amp;o.chart&amp;&amp;o.chart.renderTo){var r=document.getElementById(o.chart.renderTo);if(r.parentNode&amp;&amp;r.parentNode.id){var b=r.parentNode.id;var v=actuate.getViewer(b);if(v){v.enableGlobalFilter(o);}}}}"/>
   <sampleData>
    <baseSampleData dataSetRepresentation="01/25/2005"/>
    <orthogonalSampleData dataSetRepresentation="2.3" seriesDefinitionIndex="0"/>
@@ -5036,7 +4280,7 @@
                 </filter-condition-element>
             </property>
             <property name="height">206.25pt</property>
-            <property name="width">477.75pt</property>
+            <property name="width">396.75pt</property>
             <list-property name="boundDataColumns">
                 <structure>
                     <property name="name">Date/Month/DateTime</property>
@@ -5061,8 +4305,13 @@
                     <property name="name">copyHyperlink</property>
                     <property name="type">string</property>
                 </structure>
+                <structure>
+                    <property name="name">createdBy</property>
+                    <property name="type">string</property>
+                </structure>
             </list-property>
             <property name="copyHyperlink">true</property>
+            <property name="createdBy">dashboard</property>
         </extended-item>
     </body>
     <property name="dashboardView">
@@ -5081,7 +4330,6 @@
                             <property name="width">17.913385826771652%</property>
                             <property name="gadgets">
                                 <gadget name="Gadget_6e6d05e7-e310-40aa-9c14-5e4952821357" id="967">
-                                    <property name="height">162px</property>
                                     <property name="title">My Alerts</property>
                                     <property name="externalGadgetURI">^/Report Designs/AlertHTML.rptdesign</property>
                                     <property name="showTitle">false</property>
@@ -5121,7 +4369,6 @@
                                     </property>
                                 </gadget>
                                 <gadget name="Gadget_e7e4f03d-777c-4b3c-ab21-49454ea11d93" id="1012">
-                                    <property name="height">319px</property>
                                     <property name="title">Click a Category</property>
                                     <property name="showTitle">false</property>
                                     <property name="showBorder">false</property>
@@ -5197,7 +4444,6 @@
                                     </property>
                                 </gadget>
                                 <gadget name="Gadget_c3c02eba-1f76-43a2-8462-2e30269fdb1e" id="1021">
-                                    <property name="height">91px</property>
                                     <property name="title">Month Range</property>
                                     <property name="showTitle">false</property>
                                     <property name="showBorder">false</property>
@@ -5311,7 +4557,6 @@
                             <property name="width">44.09448818897638%</property>
                             <property name="gadgets">
                                 <gadget name="Gadget_1eed2406-fae5-4a25-9f27-0d90e4f2db3b" id="1053">
-                                    <property name="height">365px</property>
                                     <property name="title">My Merchants</property>
                                     <property name="showTitle">false</property>
                                     <property name="showBorder">false</property>
@@ -5353,7 +4598,6 @@
                                     </property>
                                 </gadget>
                                 <gadget name="Gadget_a7dd0954-e852-4629-9243-4240849a6534" id="1060">
-                                    <property name="height">310px</property>
                                     <property name="title">My Spend This Period</property>
                                     <property name="showTitle">false</property>
                                     <property name="showBorder">false</property>
@@ -5400,7 +4644,6 @@
                             <property name="width">37.99212598425197%</property>
                             <property name="gadgets">
                                 <gadget name="Gadget_8e7ba04a-48f8-4bf0-86de-179aeb89e6e41" id="110">
-                                    <property name="height">365px</property>
                                     <property name="title">Percent Spend By Payment Method</property>
                                     <property name="showTitle">false</property>
                                     <property name="showBorder">false</property>
@@ -5442,7 +4685,6 @@
                                     </property>
                                 </gadget>
                                 <gadget name="Gadget_49cf5979-54a3-47ae-bf20-497f231adb9a1" id="107">
-                                    <property name="height">347px</property>
                                     <property name="title">My Spend By Account</property>
                                     <property name="showTitle">false</property>
                                     <property name="showBorder">false</property>

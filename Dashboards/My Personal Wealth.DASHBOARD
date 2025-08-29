@@ -3432,7 +3432,7 @@
      </outline>
     </title>
    </children>
-   <bounds _body=",,372.0,"/>
+   <bounds _body=",,273.75,"/>
    <outline>
     <color _nil="1"/>
    </outline>
@@ -3527,7 +3527,7 @@
                 </filter-condition-element>
             </property>
             <property name="height">234pt</property>
-            <property name="width">372pt</property>
+            <property name="width">273.75pt</property>
             <list-property name="boundDataColumns">
                 <structure>
                     <property name="name">Account/Account</property>
@@ -3611,7 +3611,7 @@
      </outline>
     </title>
    </children>
-   <bounds _body=",,372.0,"/>
+   <bounds _body=",,273.75,"/>
    <outline>
     <color _nil="1"/>
    </outline>
@@ -3793,7 +3793,7 @@
                 </filter-condition-element>
             </property>
             <property name="height">246pt</property>
-            <property name="width">372pt</property>
+            <property name="width">273.75pt</property>
             <list-property name="boundDataColumns">
                 <structure>
                     <property name="name">Spend Method/Method</property>
@@ -3891,7 +3891,7 @@
      </outline>
     </title>
    </children>
-   <bounds _body=",,631.5,"/>
+   <bounds _body=",,467.25,"/>
    <outline>
     <color _nil="1"/>
    </outline>
@@ -4079,7 +4079,7 @@
                 </filter-condition-element>
             </property>
             <property name="height">206.25pt</property>
-            <property name="width">631.5pt</property>
+            <property name="width">467.25pt</property>
             <list-property name="boundDataColumns">
                 <structure>
                     <property name="name">Date/Month/DateTime</property>
@@ -4171,7 +4171,7 @@
      </outline>
     </title>
    </children>
-   <bounds _body="0.0,0.0,631.5,286.125"/>
+   <bounds _body="0.0,0.0,467.25,286.125"/>
    <outline>
     <color _nil="1"/>
    </outline>
@@ -4349,7 +4349,7 @@
             <property name="fontFamily">sans-serif</property>
             <property name="fontSize">10pt</property>
             <property name="height">286.125pt</property>
-            <property name="width">631.5pt</property>
+            <property name="width">467.25pt</property>
             <expression name="bookmark" type="javascript">"MerchantsChart"</expression>
             <list-property name="boundDataColumns">
                 <structure>
@@ -4410,7 +4410,7 @@
             <property name="dashboardTheme">CleanBlueThemeReportItem.Clean Blue:Light</property>
             <property name="enableGlobalFilter">true</property>
             <property name="dashboardLayout">smartLayout</property>
-            <property name="activeTab">799ed753-f99f-4741-ac5c-4717d38cee13</property>
+            <property name="activeTab">31d6b1b4-6e61-4c3d-84a3-0d04c91bb8961</property>
             <property name="tabs">
                 <tab-element name="c2557663-3dfd-4e5a-b274-786cd53e97ab" id="898">
                     <list-property name="userProperties">
@@ -4435,7 +4435,7 @@
                             <property name="height">150px</property>
                             <property name="width">400px</property>
                             <property name="caption">
-                                <gadget-caption id="901">
+                                <gadget-caption id="1155">
                                     <property name="showCaption">true</property>
                                     <property name="horizontalAlignment">left</property>
                                     <property name="fontFamily">"Lato"</property>
@@ -4449,15 +4449,8 @@
                             </property>
                         </gadget>
                     </property>
-                </tab-element>			
-                <tab-element name="799ed753-f99f-4741-ac5c-4717d38cee13" id="1113">
-                    <list-property name="userProperties">
-                        <structure>
-                            <property name="name">tabTheme</property>
-                            <property name="type">string</property>
-                        </structure>
-                    </list-property>
-                    <property name="tabTheme">ThemesReportItems3.Classic:Light</property>
+                </tab-element>
+                <tab-element name="6ba85367-33f5-438a-93a1-9fac56d129f6" id="1168">
                     <property name="title">Home</property>
                     <property name="externalTab">^/Dashboards/Home.dashboard</property>
                     <property name="externalTabName">3596098d-5ae6-490b-8c7d-437cd1c60c7b1</property>
@@ -5087,7 +5080,7 @@
                                             <property name="type">string</property>
                                         </structure>
                                     </list-property>
-                                    <property name="userPreferences">{}</property>
+                                    <property name="userPreferences">{"gadget-caption":{}}</property>
                                     <property name="title">A</property>
                                     <property name="externalGadgetURI">^/Report Designs/My Wealth vs Indices.rptdesign</property>
                                     <property name="showTitle">false</property>
@@ -5095,13 +5088,17 @@
                                     <property name="zIndex">6</property>
                                     <property name="showScrollBar">false</property>
                                     <property name="height">330px</property>
+                                    <property name="width">346px</property>
                                     <property name="caption">
                                         <gadget-caption id="976">
-                                            <property name="showCaption">true</property>
+                                            <property name="showCaption">false</property>
                                             <property name="horizontalAlignment">left</property>
                                             <property name="fontFamily">"Lato"</property>
                                             <property name="fontSize">16pt</property>
+                                            <property name="fontWeight">normal</property>
+                                            <property name="fontStyle">normal</property>
                                             <property name="color">#333333</property>
+                                            <property name="textUnderline">none</property>
                                         </gadget-caption>
                                     </property>
                                     <property name="content">
@@ -5292,14 +5289,14 @@
                                 </structure>
                             </list-property>
                             <property name="userPreferences">{}</property>
-                            <property name="x">580px</property>
-                            <property name="y">16px</property>
+                            <property name="x">576px</property>
+                            <property name="y">-14px</property>
                             <property name="title">My Wealth vs. Market Indices</property>
                             <property name="showTitle">false</property>
                             <property name="showBorder">false</property>
                             <property name="zIndex">27</property>
-                            <property name="height">49px</property>
-                            <property name="width">406px</property>
+                            <property name="height">33px</property>
+                            <property name="width">354px</property>
                             <property name="caption">
                                 <gadget-caption id="982">
                                     <property name="showCaption">true</property>
@@ -5515,14 +5512,7 @@
                         </gadget>
                     </property>
                 </tab-element>
-                <tab-element name="afb82672-6949-4a4a-a6a5-a104356af961" id="1115">
-                    <list-property name="userProperties">
-                        <structure>
-                            <property name="name">tabTheme</property>
-                            <property name="type">string</property>
-                        </structure>
-                    </list-property>
-                    <property name="tabTheme">ThemesReportItems3.Classic:Light</property>
+                <tab-element name="b5731ba0-6ace-4f3a-9fab-0a8a218c0c6e" id="1170">
                     <property name="title">Investment Strategy</property>
                     <property name="externalTab">^/Dashboards/Retirement.dashboard</property>
                     <property name="externalTabName">a85ab8ca-5c7e-4d97-9024-ba6434bf4881</property>

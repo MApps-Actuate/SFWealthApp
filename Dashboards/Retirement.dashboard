@@ -3,8 +3,8 @@
     <property name="layoutPreference">auto layout</property>
     <list-property name="libraries">
         <structure>
-            <property name="fileName">ThemesReportItems3.rptlibrary</property>
-            <property name="namespace">ThemesReportItems3</property>
+            <property name="fileName">themes/CleanBlueThemeReportItem.rptlibrary</property>
+            <property name="namespace">CleanBlueThemeReportItem</property>
         </structure>
     </list-property>
     <data-sources>
@@ -3378,16 +3378,42 @@
     </body>
     <property name="dashboardView">
         <dashboard id="2">
+            <list-property name="userProperties">
+                <structure>
+                    <property name="name">themeCustomFormatOverride</property>
+                    <property name="type">string</property>
+                </structure>
+                <structure>
+                    <property name="name">dashboardTheme</property>
+                    <property name="type">string</property>
+                </structure>
+            </list-property>
+            <property name="themeCustomFormatOverride">false</property>
+            <property name="dashboardTheme">CleanBlueThemeReportItem.Clean Blue:Light</property>
             <property name="activeTab">a85ab8ca-5c7e-4d97-9024-ba6434bf4881</property>
             <property name="tabs">
                 <tab-element name="a85ab8ca-5c7e-4d97-9024-ba6434bf4881" id="1088">
-                    <property name="title">Retirement Roadmap</property>
+                    <list-property name="userProperties">
+                        <structure>
+                            <property name="name">tabTheme</property>
+                            <property name="type">string</property>
+                        </structure>
+                    </list-property>
+                    <property name="tabTheme">CleanBlueThemeReportItem.Clean Blue:Light</property>
+                    <property name="title">Investment Strategy</property>
                     <property name="backgroundColor">RGB(255,255,255)</property>
                     <property name="sections">
                         <section id="1089">
                             <property name="width">29.28104575163399%</property>
                             <property name="gadgets">
                                 <gadget name="Gadget_1e60ced4-f984-4be0-b040-aa4ab313168f" id="1107">
+                                    <list-property name="userProperties">
+                                        <structure>
+                                            <property name="name">userPreferences</property>
+                                            <property name="type">string</property>
+                                        </structure>
+                                    </list-property>
+                                    <property name="userPreferences">{}</property>
                                     <property name="title">Retirement Planner App</property>
                                     <property name="externalGadgetURI">^/Report Designs/roadmap descr.rptdesign</property>
                                     <property name="showTitle">false</property>
@@ -3400,10 +3426,10 @@
                                             <property name="showCaption">true</property>
                                             <property name="horizontalAlignment">left</property>
                                             <property name="fontFamily">"Lato"</property>
-                                            <property name="fontSize">18pt</property>
+                                            <property name="fontSize">16pt</property>
                                             <property name="fontWeight">normal</property>
                                             <property name="fontStyle">normal</property>
-                                            <property name="color">#353535</property>
+                                            <property name="color">#333333</property>
                                             <property name="textUnderline">none</property>
                                         </gadget-caption>
                                     </property>
@@ -3426,6 +3452,13 @@
                                     </property>
                                 </gadget>
                                 <gadget name="64785e37-4d0d-49b0-a9b2-bdcea2213e06" id="1091">
+                                    <list-property name="userProperties">
+                                        <structure>
+                                            <property name="name">userPreferences</property>
+                                            <property name="type">string</property>
+                                        </structure>
+                                    </list-property>
+                                    <property name="userPreferences">{}</property>
                                     <property name="zIndex">1</property>
                                     <property name="isVisible">false</property>
                                     <property name="height">150px</property>
@@ -3434,9 +3467,9 @@
                                             <property name="showCaption">true</property>
                                             <property name="horizontalAlignment">left</property>
                                             <property name="fontFamily">"Lato"</property>
-                                            <property name="fontSize">24pt</property>
+                                            <property name="fontSize">16pt</property>
                                             <property name="fontWeight">bold</property>
-                                            <property name="color">#000000</property>
+                                            <property name="color">#333333</property>
                                         </gadget-caption>
                                     </property>
                                     <property name="content">
@@ -3469,10 +3502,10 @@
                                             <property name="showCaption">false</property>
                                             <property name="horizontalAlignment">left</property>
                                             <property name="fontFamily">"Lato"</property>
-                                            <property name="fontSize">18pt</property>
+                                            <property name="fontSize">16pt</property>
                                             <property name="fontWeight">normal</property>
                                             <property name="fontStyle">normal</property>
-                                            <property name="color">#353535</property>
+                                            <property name="color">#333333</property>
                                             <property name="textUnderline">none</property>
                                         </gadget-caption>
                                     </property>
