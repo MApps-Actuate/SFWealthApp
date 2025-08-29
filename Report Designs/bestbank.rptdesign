@@ -4013,7 +4013,7 @@ Payment</text-property>
                                                 <property name="textAlign">center</property>
                                                 <label id="362">
                                                     <property name="fontFamily">"Lato"</property>
-                                                    <text-property name="text">PLEASE DETACH AND RETURN PORTION BELOW WITH PAYMENT OR LOG ON TO www.pillar.com TO MAKE YOUR PAYMENT ONLINE</text-property>
+                                                    <text-property name="text">PLEASE DETACH AND RETURN PORTION BELOW WITH PAYMENT OR LOG ON TO www.sfwealth.com TO MAKE YOUR PAYMENT ONLINE</text-property>
                                                 </label>
                                             </cell>
                                         </row>
@@ -4961,7 +4961,7 @@ Payment</text-property>
                                                         <cell id="524">
                                                             <label id="1069">
                                                                 <property name="fontSize">9pt</property>
-                                                                <text-property name="text">www.sfw.com</text-property>
+                                                                <text-property name="text">www.sfwealth.com</text-property>
                                                             </label>
                                                         </cell>
                                                     </row>
