@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
-    <property name="createdBy">Eclipse BIRT Designer Version 4.4.0.v20150128-0131 Build &lt;4.2.3.v20150128-0131></property>
+    <property name="createdBy">Eclipse BIRT Designer Version 4.29.0.v202504021847</property>
     <property name="units">in</property>
     <property name="iconFile">/templates/blank_report.gif</property>
     <property name="layoutPreference">auto layout</property>
@@ -102,7 +102,7 @@
                 </structure>
                 <structure>
                     <property name="name">Dateplus</property>
-                    <expression name="expression" type="javascript">BirtDateTime.addYear(row["Date"], 4)</expression>
+                    <expression name="expression" type="javascript">BirtDateTime.addYear(row["Date"], 1)</expression>
                     <property name="dataType">date-time</property>
                 </structure>
             </list-property>
@@ -110,6 +110,7 @@
                 <structure>
                     <property name="columnName">Date</property>
                     <property name="analysis">dimension</property>
+                    <text-property name="displayName">Mon-Year</text-property>
                     <text-property name="heading">Date</text-property>
                 </structure>
                 <structure>
@@ -142,7 +143,7 @@
                     <property name="operator">gt</property>
                     <expression name="expr" type="javascript">row["Date"]</expression>
                     <simple-property-list name="value1">
-                        <value type="javascript">DateTimeSpan.addDate(new Date(2012,8,1), -params["pYearsBack"].value, 0, 0)</value>
+                        <value type="javascript">DateTimeSpan.addDate(new Date(2025,8,1), -params["pYearsBack"].value, 0, 0)</value>
                     </simple-property-list>
                 </structure>
             </list-property>
@@ -481,6 +482,7 @@
    <outline>
     <color _nil="1"/>
    </outline>
+   <cursor type="0"/>
   </block>
   <extendedProperties name="enable.area.alt" value="false"/>
   <extendedProperties name="enable.drill.category" value="true"/>
@@ -670,14 +672,14 @@
        <color _nil="1"/>
       </outline>
      </label>
-     <dataDefinition definition="BirtDateTime.addYear(row[&quot;Date&quot;], 1)"/>
+     <dataDefinition definition="row[&quot;Dateplus&quot;]"/>
      <dataPoint separator=", ">
       <components type="1"/>
      </dataPoint>
      <curveFitting _nil="1"/>
     </series>
     <grouping enabled="true" groupingUnit="5" groupType="1"/>
-    <sortKey definition="BirtDateTime.addYear(row[&quot;Date&quot;], 1)"/>
+    <sortKey definition="row[&quot;Dateplus&quot;]"/>
    </seriesDefinitions>
    <lineAttributes>
     <color _nil="1"/>
@@ -721,7 +723,7 @@
                         <property name="outputFormat">JS</property>
                         <property name="inheritColumns">false</property>
                         <property name="height">3.0833333333333335in</property>
-                        <property name="width">4.365in</property>
+                        <property name="width">4.5in</property>
                         <property name="dataSet">Data Set</property>
                         <list-property name="boundDataColumns">
                             <structure>
@@ -771,8 +773,10 @@
                             </structure>
                             <structure>
                                 <property name="name">Dateplus</property>
+                                <text-property name="displayName">Mon-Year</text-property>
                                 <expression name="expression" type="javascript">dataSetRow["Dateplus"]</expression>
                                 <property name="dataType">date-time</property>
+                                <property name="allowExport">true</property>
                             </structure>
                         </list-property>
                         <property name="theme">ThemesReportItems3.bleu</property>

@@ -3432,7 +3432,7 @@
      </outline>
     </title>
    </children>
-   <bounds _body=",,273.75,"/>
+   <bounds _body=",,342.75,"/>
    <outline>
     <color _nil="1"/>
    </outline>
@@ -3508,26 +3508,8 @@
 </ActuateChart>
 ]]></xml-property>
             <property name="outputFormat">JS</property>
-            <property name="cubeFilter">
-                <filter-condition-element>
-                    <expression name="expr">dimension["Date"]["Month"]</expression>
-                    <property name="operator">between</property>
-                    <simple-property-list name="value1">
-                        <value type="constant">3</value>
-                    </simple-property-list>
-                    <expression name="value2" type="constant">8</expression>
-                    <property name="filterTarget">DataSet</property>
-                    <property name="updateAggregation">true</property>
-                    <list-property name="userProperties">
-                        <structure>
-                            <property name="name">customValue</property>
-                            <property name="type">string</property>
-                        </structure>
-                    </list-property>
-                </filter-condition-element>
-            </property>
             <property name="height">234pt</property>
-            <property name="width">273.75pt</property>
+            <property name="width">342.75pt</property>
             <list-property name="boundDataColumns">
                 <structure>
                     <property name="name">Account/Account</property>
@@ -3611,7 +3593,7 @@
      </outline>
     </title>
    </children>
-   <bounds _body=",,273.75,"/>
+   <bounds _body=",,342.75,"/>
    <outline>
     <color _nil="1"/>
    </outline>
@@ -3774,26 +3756,8 @@
 </ActuateChart>
 ]]></xml-property>
             <property name="outputFormat">JS</property>
-            <property name="cubeFilter">
-                <filter-condition-element>
-                    <expression name="expr">dimension["Date"]["Month"]</expression>
-                    <property name="operator">between</property>
-                    <simple-property-list name="value1">
-                        <value type="constant">3</value>
-                    </simple-property-list>
-                    <expression name="value2" type="constant">8</expression>
-                    <property name="filterTarget">DataSet</property>
-                    <property name="updateAggregation">true</property>
-                    <list-property name="userProperties">
-                        <structure>
-                            <property name="name">customValue</property>
-                            <property name="type">string</property>
-                        </structure>
-                    </list-property>
-                </filter-condition-element>
-            </property>
             <property name="height">246pt</property>
-            <property name="width">273.75pt</property>
+            <property name="width">342.75pt</property>
             <list-property name="boundDataColumns">
                 <structure>
                     <property name="name">Spend Method/Method</property>
@@ -3891,7 +3855,7 @@
      </outline>
     </title>
    </children>
-   <bounds _body=",,467.25,"/>
+   <bounds _body=",,570.0,"/>
    <outline>
     <color _nil="1"/>
    </outline>
@@ -4060,26 +4024,8 @@
 </ActuateChart>
 ]]></xml-property>
             <property name="outputFormat">JS</property>
-            <property name="cubeFilter">
-                <filter-condition-element>
-                    <expression name="expr">dimension["Date"]["Month"]</expression>
-                    <property name="operator">between</property>
-                    <simple-property-list name="value1">
-                        <value type="constant">3</value>
-                    </simple-property-list>
-                    <expression name="value2" type="constant">8</expression>
-                    <property name="filterTarget">DataSet</property>
-                    <property name="updateAggregation">true</property>
-                    <list-property name="userProperties">
-                        <structure>
-                            <property name="name">customValue</property>
-                            <property name="type">string</property>
-                        </structure>
-                    </list-property>
-                </filter-condition-element>
-            </property>
             <property name="height">206.25pt</property>
-            <property name="width">467.25pt</property>
+            <property name="width">570pt</property>
             <list-property name="boundDataColumns">
                 <structure>
                     <property name="name">Date/Month/DateTime</property>
@@ -4171,7 +4117,7 @@
      </outline>
     </title>
    </children>
-   <bounds _body="0.0,0.0,467.25,286.125"/>
+   <bounds _body="0.0,0.0,570.0,286.125"/>
    <outline>
     <color _nil="1"/>
    </outline>
@@ -4349,7 +4295,7 @@
             <property name="fontFamily">sans-serif</property>
             <property name="fontSize">10pt</property>
             <property name="height">286.125pt</property>
-            <property name="width">467.25pt</property>
+            <property name="width">570pt</property>
             <expression name="bookmark" type="javascript">"MerchantsChart"</expression>
             <list-property name="boundDataColumns">
                 <structure>
@@ -4410,7 +4356,7 @@
             <property name="dashboardTheme">CleanBlueThemeReportItem.Clean Blue:Light</property>
             <property name="enableGlobalFilter">true</property>
             <property name="dashboardLayout">smartLayout</property>
-            <property name="activeTab">31d6b1b4-6e61-4c3d-84a3-0d04c91bb8961</property>
+            <property name="activeTab">6ba85367-33f5-438a-93a1-9fac56d129f6</property>
             <property name="tabs">
                 <tab-element name="c2557663-3dfd-4e5a-b274-786cd53e97ab" id="898">
                     <list-property name="userProperties">
@@ -4471,7 +4417,7 @@
                     <property name="backgroundColor">RGB(255,255,255)</property>
                     <property name="sections">
                         <section id="1073">
-                            <property name="width">17.519685039370078%</property>
+                            <property name="width">18.6046511627907%</property>
                             <property name="gadgets">
                                 <gadget name="Gadget_5f790af3-d7ab-46e5-8320-1b2d4a6e1da7" id="1116">
                                     <list-property name="userProperties">
@@ -4546,10 +4492,6 @@
                                                     <property name="gadget">Gadget_e7e4f03d-777c-4b3c-ab21-49454ea11d93</property>
                                                     <property name="dirty">false</property>
                                                 </event-object>
-                                                <event-object>
-                                                    <property name="gadget">Gadget_c3c02eba-1f76-43a2-8462-2e30269fdb1e</property>
-                                                    <property name="dirty">false</property>
-                                                </event-object>
                                             </property>
                                         </event-subscriber>
                                     </property>
@@ -4557,7 +4499,7 @@
                             </property>
                         </section>
                         <section id="1074">
-                            <property name="width">51.633986928104584%</property>
+                            <property name="width">50.521251002405776%</property>
                             <property name="gadgets">
                                 <gadget name="Gadget_2927b84e-1614-44e2-a576-0cdf8fa611ec" id="1138">
                                     <list-property name="userProperties">
@@ -4640,10 +4582,6 @@
                                                     <property name="gadget">Gadget_e7e4f03d-777c-4b3c-ab21-49454ea11d93</property>
                                                     <property name="dirty">false</property>
                                                 </event-object>
-                                                <event-object>
-                                                    <property name="gadget">Gadget_c3c02eba-1f76-43a2-8462-2e30269fdb1e</property>
-                                                    <property name="dirty">false</property>
-                                                </event-object>
                                             </property>
                                         </event-subscriber>
                                     </property>
@@ -4693,10 +4631,6 @@
                                                     <property name="gadget">Gadget_e7e4f03d-777c-4b3c-ab21-49454ea11d93</property>
                                                     <property name="dirty">false</property>
                                                 </event-object>
-                                                <event-object>
-                                                    <property name="gadget">Gadget_c3c02eba-1f76-43a2-8462-2e30269fdb1e</property>
-                                                    <property name="dirty">false</property>
-                                                </event-object>
                                             </property>
                                         </event-subscriber>
                                     </property>
@@ -4741,10 +4675,6 @@
                                                     <property name="gadget">Gadget_e7e4f03d-777c-4b3c-ab21-49454ea11d93</property>
                                                     <property name="dirty">false</property>
                                                 </event-object>
-                                                <event-object>
-                                                    <property name="gadget">Gadget_c3c02eba-1f76-43a2-8462-2e30269fdb1e</property>
-                                                    <property name="dirty">false</property>
-                                                </event-object>
                                             </property>
                                         </event-subscriber>
                                     </property>
@@ -4753,97 +4683,6 @@
                         </section>
                     </property>
                     <property name="freeFormGadgets">
-                        <gadget name="Gadget_c3c02eba-1f76-43a2-8462-2e30269fdb1e" id="1021">
-                            <list-property name="userProperties">
-                                <structure>
-                                    <property name="name">userPreferences</property>
-                                    <property name="type">string</property>
-                                </structure>
-                            </list-property>
-                            <property name="userPreferences">{}</property>
-                            <property name="x">4px</property>
-                            <property name="y">677px</property>
-                            <property name="title">Month Range</property>
-                            <property name="showTitle">false</property>
-                            <property name="showBorder">false</property>
-                            <property name="zIndex">37</property>
-                            <property name="showScrollBar">false</property>
-                            <property name="height">91px</property>
-                            <property name="width">298px</property>
-                            <property name="caption">
-                                <gadget-caption id="1022">
-                                    <property name="showCaption">true</property>
-                                    <property name="horizontalAlignment">left</property>
-                                    <property name="fontFamily">"Lato"</property>
-                                    <property name="fontSize">16pt</property>
-                                    <property name="fontWeight">normal</property>
-                                    <property name="fontStyle">normal</property>
-                                    <property name="color">#333333</property>
-                                    <property name="textUnderline">none</property>
-                                </gadget-caption>
-                            </property>
-                            <property name="content">
-                                <slider-data-selector id="1023">
-                                    <property name="cube">NewDataMartDataSource4::Spend History</property>
-                                    <simple-property-list name="columnNames">
-                                        <value>Date/Month</value>
-                                        <value>Date/Month</value>
-                                    </simple-property-list>
-                                    <simple-property-list name="selectedValues">
-                                        <value>3</value>
-                                        <value>8</value>
-                                    </simple-property-list>
-                                    <property name="orientation">horizontal</property>
-                                    <property name="thumbType">dual</property>
-                                    <expression name="defaultValue1" type="javascript">3</expression>
-                                    <expression name="defaultValue2" type="javascript">9</expression>
-                                    <property name="autoAdjustTickMarks">true</property>
-                                    <property name="tickInterval">1</property>
-                                    <property name="autoRange">true</property>
-                                    <property name="minValue">0</property>
-                                    <property name="maxValue">100</property>
-                                    <property name="showTickMarks">true</property>
-                                </slider-data-selector>
-                            </property>
-                            <property name="observers">
-                                <event-subscriber>
-                                    <property name="eventName">SELECT_EVENT:SEMANTIC_filter</property>
-                                    <property name="eventObjects">
-                                        <event-object>
-                                            <property name="gadget">872fc000-1dbd-4d2d-a889-a7c22733340a1</property>
-                                            <property name="dirty">false</property>
-                                        </event-object>
-                                        <event-object>
-                                            <property name="gadget">Gadget_49cf5979-54a3-47ae-bf20-497f231adb9a1</property>
-                                            <property name="dirty">false</property>
-                                        </event-object>
-                                        <event-object>
-                                            <property name="gadget">Gadget_8e7ba04a-48f8-4bf0-86de-179aeb89e6e41</property>
-                                            <property name="dirty">false</property>
-                                        </event-object>
-                                        <event-object>
-                                            <property name="gadget">Gadget_e7e4f03d-777c-4b3c-ab21-49454ea11d93</property>
-                                            <property name="dirty">false</property>
-                                        </event-object>
-                                        <event-object>
-                                            <property name="gadget">Gadget_a7dd0954-e852-4629-9243-4240849a6534</property>
-                                            <property name="dirty">false</property>
-                                        </event-object>
-                                    </property>
-                                </event-subscriber>
-                            </property>
-                            <property name="subscribeTo">
-                                <event-subscriber>
-                                    <property name="eventName">SELECT_EVENT:SEMANTIC_filter</property>
-                                    <property name="eventObjects">
-                                        <event-object>
-                                            <property name="gadget">Gadget_e7e4f03d-777c-4b3c-ab21-49454ea11d93</property>
-                                            <property name="dirty">false</property>
-                                        </event-object>
-                                    </property>
-                                </event-subscriber>
-                            </property>
-                        </gadget>
                         <gadget name="Gadget_e7e4f03d-777c-4b3c-ab21-49454ea11d93" id="1012">
                             <list-property name="userProperties">
                                 <structure>
@@ -4859,8 +4698,8 @@
                             <property name="showBorder">false</property>
                             <property name="zIndex">38</property>
                             <property name="showScrollBar">false</property>
-                            <property name="height">412px</property>
-                            <property name="width">298px</property>
+                            <property name="height">406px</property>
+                            <property name="width">209px</property>
                             <property name="caption">
                                 <gadget-caption id="1013">
                                     <property name="showCaption">true</property>
@@ -4902,22 +4741,7 @@
                                             <property name="dirty">false</property>
                                         </event-object>
                                         <event-object>
-                                            <property name="gadget">Gadget_c3c02eba-1f76-43a2-8462-2e30269fdb1e</property>
-                                            <property name="dirty">false</property>
-                                        </event-object>
-                                        <event-object>
                                             <property name="gadget">Gadget_a7dd0954-e852-4629-9243-4240849a6534</property>
-                                            <property name="dirty">false</property>
-                                        </event-object>
-                                    </property>
-                                </event-subscriber>
-                            </property>
-                            <property name="subscribeTo">
-                                <event-subscriber>
-                                    <property name="eventName">SELECT_EVENT:SEMANTIC_filter</property>
-                                    <property name="eventObjects">
-                                        <event-object>
-                                            <property name="gadget">Gadget_c3c02eba-1f76-43a2-8462-2e30269fdb1e</property>
                                             <property name="dirty">false</property>
                                         </event-object>
                                     </property>
