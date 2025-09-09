@@ -169,21 +169,30 @@
             <column id="100"/>
             <header>
                 <row id="143">
+                    <property name="fontSize">10pt</property>
                     <property name="color">#FFFFFF</property>
                     <property name="textAlign">left</property>
+                    <property name="height">0.4583333333333333in</property>
                     <cell id="144">
                         <property name="colSpan">3</property>
                         <property name="rowSpan">1</property>
-                        <property name="backgroundColor">#6A8AC7</property>
+                        <property name="backgroundColor">white</property>
+                        <property name="borderBottomStyle">none</property>
+                        <property name="borderLeftStyle">none</property>
+                        <property name="borderRightStyle">none</property>
+                        <property name="borderTopStyle">none</property>
                         <property name="paddingLeft">10pt</property>
                         <data id="152">
                             <property name="fontFamily">"Lato"</property>
-                            <property name="fontWeight">bold</property>
+                            <property name="fontSize">12pt</property>
+                            <property name="fontWeight">normal</property>
+                            <property name="color">black</property>
                             <list-property name="boundDataColumns">
                                 <structure>
                                     <property name="name">SpendCategory</property>
-                                    <expression name="expression" type="javascript">params["SpendCategory"] + ' Spending'</expression>
+                                    <expression name="expression" type="javascript">params["SpendCategory"] + ' Spending for Daniel J. Morris'</expression>
                                     <property name="dataType">string</property>
+                                    <property name="allowExport">true</property>
                                 </structure>
                             </list-property>
                             <property name="resultSetColumn">SpendCategory</property>
@@ -192,63 +201,82 @@
                     <cell id="155">
                         <property name="colSpan">3</property>
                         <property name="rowSpan">1</property>
-                        <property name="backgroundColor">#6A8AC7</property>
+                        <property name="backgroundColor">white</property>
+                        <property name="borderBottomStyle">none</property>
+                        <property name="borderLeftStyle">none</property>
+                        <property name="borderRightStyle">none</property>
+                        <property name="borderTopStyle">none</property>
                         <property name="paddingLeft">10pt</property>
-                        <label id="150">
-                            <property name="fontFamily">"Lato"</property>
-                            <property name="fontWeight">bold</property>
-                            <text-property name="text">Customer: Dan Morris</text-property>
-                        </label>
                     </cell>
                 </row>
                 <row id="50">
+                    <property name="backgroundColor">white</property>
                     <property name="backgroundImage">banner_bg.png</property>
                     <property name="color">#FFFFFF</property>
+                    <property name="borderBottomStyle">solid</property>
+                    <property name="borderBottomWidth">medium</property>
                     <property name="textAlign">left</property>
                     <cell id="51">
-                        <property name="backgroundColor">#6A8AC7</property>
+                        <property name="backgroundColor">white</property>
                         <property name="paddingLeft">10pt</property>
                         <label id="52">
                             <property name="fontFamily">"Lato"</property>
+                            <property name="fontSize">8pt</property>
+                            <property name="color">gray</property>
                             <text-property name="text">Account</text-property>
                         </label>
                     </cell>
                     <cell id="53">
-                        <property name="backgroundColor">#6A8AC7</property>
+                        <property name="backgroundColor">white</property>
                         <property name="paddingLeft">10pt</property>
                         <label id="64">
                             <property name="fontFamily">"Lato"</property>
+                            <property name="fontSize">8pt</property>
+                            <property name="fontWeight">normal</property>
+                            <property name="color">gray</property>
                             <property name="textAlign">left</property>
                             <text-property name="text">Date</text-property>
                         </label>
                     </cell>
                     <cell id="57">
-                        <property name="backgroundColor">#6A8AC7</property>
+                        <property name="backgroundColor">white</property>
                         <property name="paddingLeft">20pt</property>
                         <label id="58">
                             <property name="fontFamily">"Lato"</property>
+                            <property name="fontSize">8pt</property>
+                            <property name="fontWeight">normal</property>
+                            <property name="color">gray</property>
                             <text-property name="text">Detail</text-property>
                         </label>
                     </cell>
                     <cell id="59">
-                        <property name="backgroundColor">#6A8AC7</property>
+                        <property name="backgroundColor">white</property>
                         <label id="60">
                             <property name="fontFamily">"Lato"</property>
+                            <property name="fontSize">8pt</property>
+                            <property name="fontWeight">normal</property>
+                            <property name="color">gray</property>
                             <text-property name="text">Ref #</text-property>
                         </label>
                     </cell>
                     <cell id="63">
-                        <property name="backgroundColor">#6A8AC7</property>
+                        <property name="backgroundColor">white</property>
                         <label id="54">
                             <property name="fontFamily">"Lato"</property>
+                            <property name="fontSize">8pt</property>
+                            <property name="fontWeight">normal</property>
+                            <property name="color">gray</property>
                             <property name="textAlign">right</property>
                             <text-property name="text">Amount</text-property>
                         </label>
                     </cell>
                     <cell id="65">
-                        <property name="backgroundColor">#6A8AC7</property>
+                        <property name="backgroundColor">white</property>
                         <label id="66">
                             <property name="fontFamily">"Lato"</property>
+                            <property name="fontSize">8pt</property>
+                            <property name="fontWeight">normal</property>
+                            <property name="color">gray</property>
                             <property name="textAlign">right</property>
                             <text-property name="text">Type</text-property>
                         </label>
@@ -270,14 +298,16 @@
                 <property name="pageBreakInside">auto</property>
                 <header>
                     <row id="122">
-                        <property name="backgroundColor">#DCD9FF</property>
+                        <property name="backgroundColor">#E6E6E6</property>
                         <property name="textAlign">left</property>
                         <cell id="123">
                             <property name="paddingLeft">10pt</property>
                             <data id="138">
                                 <property name="fontFamily">"Lato"</property>
+                                <property name="fontSize">8pt</property>
                                 <property name="fontWeight">bold</property>
-                                <property name="fontStyle">italic</property>
+                                <property name="fontStyle">normal</property>
+                                <property name="color">#000000</property>
                                 <property name="resultSetColumn">Account</property>
                             </data>
                         </cell>
@@ -312,6 +342,8 @@
                         <property name="paddingLeft">10pt</property>
                         <data id="81">
                             <property name="fontFamily">"Lato"</property>
+                            <property name="fontSize">8pt</property>
+                            <property name="color">#000000</property>
                             <property name="textAlign">left</property>
                             <property name="whiteSpace">nowrap</property>
                             <property name="resultSetColumn">Date</property>
@@ -321,6 +353,8 @@
                         <property name="paddingLeft">20pt</property>
                         <data id="75">
                             <property name="fontFamily">"Lato"</property>
+                            <property name="fontSize">8pt</property>
+                            <property name="color">#000000</property>
                             <structure name="stringFormat">
                                 <property name="category">Custom</property>
                             </structure>
@@ -334,6 +368,8 @@
                     <cell id="76">
                         <data id="77">
                             <property name="fontFamily">"Lato"</property>
+                            <property name="fontSize">8pt</property>
+                            <property name="color">#000000</property>
                             <property name="textAlign">right</property>
                             <property name="whiteSpace">nowrap</property>
                             <property name="resultSetColumn">Reference #</property>
@@ -342,6 +378,8 @@
                     <cell id="80">
                         <data id="71">
                             <property name="fontFamily">"Lato"</property>
+                            <property name="fontSize">8pt</property>
+                            <property name="color">#000000</property>
                             <property name="textAlign">right</property>
                             <property name="whiteSpace">nowrap</property>
                             <property name="resultSetColumn">Amount</property>
@@ -350,6 +388,8 @@
                     <cell id="82">
                         <data id="83">
                             <property name="fontFamily">"Lato"</property>
+                            <property name="fontSize">8pt</property>
+                            <property name="color">#000000</property>
                             <property name="textAlign">right</property>
                             <property name="whiteSpace">nowrap</property>
                             <property name="resultSetColumn">type</property>
