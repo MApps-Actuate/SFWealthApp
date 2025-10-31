@@ -1,5 +1,16 @@
 ACCT_ID,ACCT_NAME,ISS_PRICE_AM,TRADE_DATE_QY,ITEM_ISS_NM,ISS_SHRT_DESC_TX,Total
-1,Managed ETF,16.28,475.06,EMERY EMERGING MARKETS,ZZZ,7733.91
-1,Managed ETF,41.36,139.3,MORRIS ENTERPRISE,ZZZ,5761.42
-1,Managed ETF,13.99,330.42,SMITH NATURAL RESOURCES,ZZZ,4322.55
-1,Managed ETF,1,104007.51,GLOBAL MONEY MARKET,ZZZ,104007.51
+33131,Managed Retirement,47.3,1500,Vanguard Target 2050 Fund,,70950
+33131,Managed Retirement,32.2,1100,Fidelity Balanced Fund,,35420
+33131,Managed Retirement,28.7,1200,T. Rowe Price Growth Fund,,34424
+83169,Active Trading,187.6,330,Apple Inc,,61908
+83169,Active Trading,248.3,250,Tesla Inc,,62075
+83169,Active Trading,468.6,180,NVIDIA Corporation,,84348
+83169,Active Trading,508.4,68,SPDR S&P 500 ETF,,34741
+83305,Finance One,104.2,120,Corporate Bond A1,,12504
+83305,Finance One,98.1,85,Municipal Bond B3,,8338.5
+83305,Finance One,95,80,Preferred Stock Fund,,7600
+83305,Finance One,40.05,50,Short-Term Treasury Bill,,2002.5
+98535,Managed ETF,257.4,210,Vanguard Total Market ETF,,54054
+98535,Managed ETF,81.1,620,SCHD Dividend ETF,,50282
+98535,Managed ETF,96.9,240,iShares Global REIT,,23256
+98535,Managed ETF,184,100,SPDR Gold Shares,,18400

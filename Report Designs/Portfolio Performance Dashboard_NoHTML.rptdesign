@@ -1726,7 +1726,7 @@ last1%2;</expression>
             <property name="orientation">landscape</property>
             <property name="topMargin">0.25in</property>
             <property name="bottomMargin">0.25in</property>
-            <property name="height">9in</property>
+            <property name="height">9.25in</property>
             <property name="width">15in</property>
             <property name="showHeaderOnFirst">false</property>
             <property name="showFooterOnLast">false</property>
@@ -1748,8 +1748,13 @@ last1%2;</expression>
             <column id="389">
                 <property name="width">75%</property>
             </column>
-            <column id="390">
+            <column id="1253">
                 <property name="textAlign">center</property>
+                <property name="width">2%</property>
+            </column>
+            <column id="390">
+                <property name="textAlign">left</property>
+                <property name="width">23%</property>
             </column>
             <row id="546">
                 <cell id="547">
@@ -1801,16 +1806,7 @@ last1%2;</expression>
                                 <label id="492">
                                     <property name="fontSize">12pt</property>
                                     <property name="fontWeight">bold</property>
-                                    <list-property name="visibility">
-                                        <structure>
-                                            <property name="format">html</property>
-                                            <expression name="valueExpr" type="javascript">true</expression>
-                                        </structure>
-                                        <structure>
-                                            <property name="format">xhtml</property>
-                                            <expression name="valueExpr" type="javascript">true</expression>
-                                        </structure>
-                                    </list-property>
+                                    <property name="paddingLeft">8pt</property>
                                     <text-property name="text">Portfolio Performance Dashboard</text-property>
                                 </label>
                             </cell>
@@ -1870,8 +1866,9 @@ last1%2;</expression>
                                 <property name="colSpan">1</property>
                                 <property name="rowSpan">2</property>
                                 <label id="493">
-                                    <property name="paddingTop">10pt</property>
-                                    <text-property name="text">January 31, 2025</text-property>
+                                    <property name="paddingTop">1pt</property>
+                                    <property name="paddingLeft">8pt</property>
+                                    <text-property name="text">October 31, 2025</text-property>
                                 </label>
                             </cell>
                             <cell id="576">
@@ -1979,6 +1976,19 @@ last1%2;</expression>
                         </row>
                     </grid>
                 </cell>
+                <cell id="1250">
+                    <property name="borderBottomColor">#4B4B4B</property>
+                    <property name="borderBottomStyle">solid</property>
+                    <property name="borderBottomWidth">thin</property>
+                    <property name="paddingTop">0pt</property>
+                    <property name="paddingLeft">0pt</property>
+                    <property name="paddingBottom">0pt</property>
+                    <property name="paddingRight">0pt</property>
+                    <property name="verticalAlign">bottom</property>
+                    <label id="1257">
+                        <text-property name="text"> </text-property>
+                    </label>
+                </cell>
                 <cell id="548">
                     <property name="borderBottomColor">#4B4B4B</property>
                     <property name="borderBottomStyle">solid</property>
@@ -1989,6 +1999,9 @@ last1%2;</expression>
                     <property name="paddingRight">0pt</property>
                     <property name="verticalAlign">bottom</property>
                     <label id="542">
+                        <property name="paddingLeft">1pt</property>
+                        <property name="paddingBottom">0pt</property>
+                        <property name="textAlign">left</property>
                         <text-property name="text">Portfolio Comparisons</text-property>
                     </label>
                 </cell>
@@ -2134,11 +2147,13 @@ last1%2;</expression>
                         </header>
                         <detail>
                             <row id="776">
+                                <expression name="bookmark" type="javascript">"thePortfolio_" + row.__rownum;</expression>
+                                <property name="verticalAlign">middle</property>
                                 <list-property name="highlightRules">
                                     <structure>
                                         <property name="operator">eq</property>
                                         <property name="backgroundColor">#F9F7F4</property>
-                                        <expression name="testExpr" type="javascript">row.__rownum%2</expression>
+                                        <expression name="testExpr" type="javascript">(row.__rownum % 2)</expression>
                                         <simple-property-list name="value1">
                                             <value type="javascript">1</value>
                                         </simple-property-list>
@@ -2146,6 +2161,9 @@ last1%2;</expression>
                                 </list-property>
                                 <cell id="777">
                                     <data id="809">
+                                        <property name="paddingTop">3pt</property>
+                                        <property name="paddingLeft">8pt</property>
+                                        <property name="paddingBottom">3pt</property>
                                         <property name="resultSetColumn">Portfolio</property>
                                     </data>
                                 </cell>
@@ -2166,6 +2184,8 @@ last1%2;</expression>
                                 </cell>
                                 <cell id="1000">
                                     <data id="1004">
+                                        <property name="paddingTop">3pt</property>
+                                        <property name="paddingBottom">3pt</property>
                                         <structure name="numberFormat">
                                             <property name="category">Percent</property>
                                             <property name="pattern">###0.00%{RoundingMode=HALF_UP}</property>
@@ -2177,7 +2197,7 @@ last1%2;</expression>
                                 <cell id="1017">
                                     <extended-item extensionName="Chart" id="1020">
                                         <xml-property name="xmlRepresentation"><![CDATA[<ActuateChart version="2.6.1">
- <ChartWithAxes version="2.6.1" type="Bar Chart" subType="Side-by-side" script="function beforeDrawDataPoint( dph, fill, icsc )&#13;&#10;{&#13;&#10; if( dph.getBaseDisplayValue() == &quot;20130131&quot; ){&#13;&#10;    importPackage( Packages.org.eclipse.birt.chart.model.attribute.impl );&#13;&#10;        fill.set(60,152,171);&#13;&#10;    }&#13;&#10;&#13;&#10;}&#13;&#10;&#13;&#10;">
+ <ChartWithAxes version="2.6.1" type="Bar Chart" subType="Side-by-side" script="function beforeDrawDataPoint( dph, fill, icsc )&#13;&#10;{&#13;&#10; if( dph.getBaseDisplayValue() == &quot;20250131&quot; ){&#13;&#10;    importPackage( Packages.org.eclipse.birt.chart.model.attribute.impl );&#13;&#10;        fill.set(60,152,171);&#13;&#10;    }&#13;&#10;&#13;&#10;}&#13;&#10;&#13;&#10;">
   <description value="">
    <font>
     <alignment/>
@@ -2489,6 +2509,8 @@ last1%2;</expression>
                                 </cell>
                                 <cell id="1041">
                                     <data id="1051">
+                                        <property name="paddingTop">3pt</property>
+                                        <property name="paddingBottom">3pt</property>
                                         <structure name="numberFormat">
                                             <property name="category">Fixed</property>
                                             <property name="pattern">#,##0{RoundingMode=HALF_UP}</property>
@@ -2884,7 +2906,7 @@ last1%2;</expression>
                                 <cell id="1012">
                                     <extended-item extensionName="Chart" id="1015">
                                         <xml-property name="xmlRepresentation"><![CDATA[<ActuateChart version="2.6.1">
- <ChartWithAxes version="2.6.1" type="Line Chart" subType="Overlay" script="&#10;maxVal = 100;&#10;minVal = 0;&#10;&#10;function afterDataSetFilled(series, dataSet, icsc) {&#10; importPackage(Packages.org.eclipse.birt.chart.model.type.impl);&#10; importPackage(Packages.org.eclipse.birt.chart.util);&#10; &#10; var ps = PluginSettings.instance();&#10; var dsp = ps.getDataSetProcessor(series.getClass());&#10;&#10; maxVal = parseInt(dsp.getMaximum(dataSet), 10);&#10; minVal = parseInt(dsp.getMinimum(dataSet), 10);&#10;}&#10;&#10;&#10;function beforeGeneration(chart, icsc) {&#10; importPackage(Packages.org.eclipse.birt.chart.model.data.impl);&#10;&#10; var xAxis = chart.getBaseAxes()[0];&#10; var yAxis = chart.getOrthogonalAxes(xAxis, true)[0]&#10; var yscale = yAxis.getScale();&#10; yscale.setMin(NumberDataElementImpl.create(minVal - 10000))&#10; yscale.setMax(NumberDataElementImpl.create(maxVal + 10000))&#10; yAxis.setScale(yscale);&#10;}&#10;&#10;&#10;function beforeDrawMarker( marker, dph, icsc )&#10;{&#10; var dataVal = parseInt(dph.getOrthogonalValue(), 10);&#10; if (dph.getIndex() &lt; 11) {&#10;  marker.setVisible(false);&#10; }&#10;}&#10;" unitSpacing="0.0">
+ <ChartWithAxes version="2.6.1" type="Line Chart" subType="Overlay" script="//logger = java.util.logging.Logger.getLogger(&quot;birt.report.logger&quot;);&#10;&#10;&#10;maxVal = 100;&#10;minVal = 0;&#10;&#10;function afterDataSetFilled(series, dataSet, icsc) {&#10; importPackage(Packages.org.eclipse.birt.chart.model.type.impl);&#10; importPackage(Packages.org.eclipse.birt.chart.util);&#10; &#10; var ps = PluginSettings.instance();&#10; var dsp = ps.getDataSetProcessor(series.getClass());&#10;&#10; maxVal = parseInt(dsp.getMaximum(dataSet), 10);&#10; minVal = parseInt(dsp.getMinimum(dataSet), 10);&#10; &#10; //logger.warning (minVal);&#10; //logger.warning (maxVal);&#10; &#10;}&#10;&#10;&#10;function beforeGeneration(chart, icsc) {&#10; importPackage(Packages.org.eclipse.birt.chart.model.data.impl);&#10;&#10; var xAxis = chart.getBaseAxes()[0];&#10; var yAxis = chart.getOrthogonalAxes(xAxis, true)[0]&#10; var yscale = yAxis.getScale();&#10; //yscale.setMin(NumberDataElementImpl.create(minVal - 10000))&#10; //yscale.setMax(NumberDataElementImpl.create(maxVal + 10000))&#10; //yscale.setMin(NumberDataElementImpl.create(minVal - 100000))&#10; //yscale.setMax(NumberDataElementImpl.create(maxVal + 100000))&#10; yAxis.setScale(yscale);&#10;}&#10;&#10;&#10;function beforeDrawMarker( marker, dph, icsc )&#10;{&#10; var dataVal = parseInt(dph.getOrthogonalValue(), 10);&#10; if (dph.getIndex() &lt; 11) {&#10;  marker.setVisible(false);&#10; }&#10;}&#10;" unitSpacing="0.0">
   <description value="">
    <font>
     <alignment/>
@@ -2895,6 +2917,7 @@ last1%2;</expression>
     <outline>
      <color _nil="1"/>
     </outline>
+    <cursor type="0"/>
     <label>
      <background _nil="1"/>
      <outline>
@@ -2939,6 +2962,7 @@ last1%2;</expression>
     <color _nil="1"/>
    </outline>
    <background _body=",0,255,255,255"/>
+   <cursor type="0"/>
   </block>
   <extendedProperties name="enable.area.alt" value="false"/>
   <extendedProperties name="enable.drill.category" value="true"/>
@@ -2946,6 +2970,7 @@ last1%2;</expression>
   <extendedProperties name="keep.hierarchy.category" value="false"/>
   <extendedProperties name="keep.hierarchy.series" value="false"/>
   <extendedProperties name="jschart.series.shadow" value="true"/>
+  <extendedProperties name="enable.data.summarize" value="false"/>
   <sampleData>
    <baseSampleData dataSetRepresentation="&#039;A&#039;,&#039;B&#039;,&#039;C&#039;,&#039;D&#039;,&#039;E&#039;"/>
    <orthogonalSampleData dataSetRepresentation="6,4,12,8,10" seriesDefinitionIndex="0"/>
@@ -3030,10 +3055,11 @@ last1%2;</expression>
       <markers type="3" size="2">
        <outline visible="false"/>
       </markers>
-      <lineAttributes thickness="2">
+      <lineAttributes>
        <color _nil="1"/>
       </lineAttributes>
      </series>
+     <grouping _nil="1"/>
     </seriesDefinitions>
     <lineAttributes visible="false">
      <color _nil="1"/>
@@ -3204,6 +3230,8 @@ last1%2;</expression>
                                 <cell id="1045">
                                     <property name="paddingRight">3pt</property>
                                     <data id="1049">
+                                        <property name="paddingTop">3pt</property>
+                                        <property name="paddingBottom">3pt</property>
                                         <structure name="numberFormat">
                                             <property name="category">Fixed</property>
                                             <property name="pattern">#,##0.00{RoundingMode=HALF_UP}</property>
@@ -3920,7 +3948,19 @@ last1%2;</expression>
                         </detail>
                         <footer>
                             <row id="787">
-                                <cell id="788"/>
+                                <cell id="788">
+                                    <text id="1249">
+                                        <property name="contentType">html</property>
+                                        <text-property name="content"><![CDATA[<script>
+const rows = document.querySelectorAll('tr[id*="thePortfolio_"]');
+rows.forEach((row, index) => {
+  if (index % 2 === 1) {
+    row.style.backgroundColor = "#F9F7F4";
+  }
+});
+</script>]]></text-property>
+                                    </text>
+                                </cell>
                                 <cell id="1007"/>
                                 <cell id="1001"/>
                                 <cell id="1018"/>
@@ -3934,6 +3974,12 @@ last1%2;</expression>
                         </footer>
                     </table>
                 </cell>
+                <cell id="1251">
+                    <property name="paddingTop">0pt</property>
+                    <property name="paddingLeft">0pt</property>
+                    <property name="paddingBottom">0pt</property>
+                    <property name="paddingRight">0pt</property>
+                </cell>
                 <cell id="393">
                     <property name="paddingTop">0pt</property>
                     <property name="paddingLeft">0pt</property>
@@ -3945,17 +3991,27 @@ last1%2;</expression>
                         <row id="538">
                             <cell id="539">
                                 <property name="paddingLeft">0pt</property>
-                                <extended-item extensionName="Chart" id="1032">
+                                <property name="textAlign">center</property>
+                                <label id="1247">
+                                    <property name="fontWeight">200</property>
+                                    <property name="color">#4B4B4B</property>
+                                    <property name="paddingTop">8px</property>
+                                    <property name="paddingLeft">1pt</property>
+                                    <property name="paddingBottom">0pt</property>
+                                    <property name="textAlign">left</property>
+                                    <text-property name="text">Active Risk vs. Beta</text-property>
+                                </label>
+                                <extended-item extensionName="Chart" id="1248">
                                     <xml-property name="xmlRepresentation"><![CDATA[<ActuateChart version="2.6.1">
  <ChartWithAxes version="2.6.1" type="Line Chart" subType="Overlay">
   <block>
-   <children _type="TitleBlock">
+   <children _type="TitleBlock" visible="false">
     <outline>
      <color _nil="1"/>
     </outline>
     <label>
      <caption value="Active Risk vs. Beta">
-      <font name="Arial" size="10.0" bold="false"/>
+      <font name="canada-type-gibson" size="10.0" bold="false"/>
      </caption>
      <background _nil="1"/>
      <outline>
@@ -3968,12 +4024,12 @@ last1%2;</expression>
      <color _nil="1"/>
     </outline>
     <clientArea>
-     <outline>
-      <color _nil="1"/>
+     <outline thickness="1" visible="true">
+      <color _body=",255,210,210,210"/>
      </outline>
     </clientArea>
    </children>
-   <children _type="Legend" orientation="0" position="1">
+   <children _type="Legend" visible="false">
     <outline>
      <color _nil="1"/>
     </outline>
@@ -3990,6 +4046,9 @@ last1%2;</expression>
      <color _nil="1"/>
     </separator>
     <title>
+     <caption>
+      <font name="canada-type-gibson"/>
+     </caption>
      <background _nil="1"/>
      <outline>
       <color _nil="1"/>
@@ -4004,11 +4063,12 @@ last1%2;</expression>
   <extendedProperties name="enable.area.alt" value="false"/>
   <extendedProperties name="enable.drill.category" value="true"/>
   <extendedProperties name="enable.drill.series" value="true"/>
-  <extendedProperties name="jschart.client.script" value="beforeRendering: function(options, chart)&#13;&#10;{&#13;&#10;    options.legend.margin = 0;&#13;&#10;},"/>
+  <extendedProperties name="jschart.client.script" value="beforeDrawDataPoint: function(point, pointOptions, chart, seriesIndex, pointIndex)&#13;&#10;{&#13;&#10;&#13;&#10;if (seriesIndex == 0) {&#13;&#10;    if ( (chart._chart.series[0].data.length - 1) == pointIndex) {&#13;&#10;        chart._chart.options.series[0].data[pointIndex].dataLabels = {enabled:true};&#13;&#10;    }&#13;&#10;}&#13;&#10;&#13;&#10;if (seriesIndex == 1) {&#13;&#10;    if ( (chart._chart.series[1].data.length - 1) == pointIndex) {&#13;&#10;        chart._chart.options.series[1].data[pointIndex].dataLabels = {enabled:true};&#13;&#10;    }&#13;&#10;}&#13;&#10;&#13;&#10;&#13;&#10;},&#13;&#10;&#13;&#10;&#13;&#10;beforeDrawSeries: function(series, seriesOptions, chart, seriesIndex)&#13;&#10;{&#13;&#10;seriesOptions.dataLabels =  {&#13;&#10;    enabled:false,&#13;&#10;    crop: false,&#13;&#10;    overflow: &#039;none&#039;,&#13;&#10;    align: &#039;left&#039;,&#13;&#10;    y: 5,&#13;&#10;    formatter: function() {&#13;&#10;        return &#039;&lt;span sty&#039;+&#039;le=&quot;color:&#039;+this.series.color+&#039;&quot;&gt;&#039;+this.series.name+&#039;&lt;/span&gt;&#039;;&#13;&#10;    }&#13;&#10;};&#13;&#10;&#13;&#10;},&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;beforeGeneration: function(options)&#13;&#10;{&#13;&#10;options.chart.spacingTop=0;&#13;&#10;//options.chart.spacingBottom=15;&#13;&#10;&#13;&#10;//options.chart.margin = [0,0,0,0];&#13;&#10;&#13;&#10;options.chart.spacingLeft=20;&#13;&#10;options.chart.marginRight=65;&#13;&#10;&#13;&#10;},&#13;&#10;&#13;&#10;&#13;&#10;beforeDrawAxis: function(axis, axisOptions, chart, axisIndex)&#13;&#10;{&#13;&#10;if ((axis.coll == &#039;yAxis&#039;) &amp;&amp; (axisIndex == 1)) {&#13;&#10;    axisOptions.labels.formatter = function () {&#13;&#10;        if (this.isFirst || this.isLast) {&#13;&#10;            return this.value;&#13;&#10;        }&#13;&#10;        return &#039;&#039;;&#13;&#10;    }&#13;&#10;}&#13;&#10;},&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;afterRendering: function(chart)&#13;&#10;{&#13;&#10;    lastIndex = chart.getCore().series[0].xData.length - 1;&#13;&#10;    chart.getCore().series[0].data[lastIndex].update({&#13;&#10;                        marker: {&#13;&#10;                            enabled: true,&#13;&#10;                            symbol: &#039;circle&#039;&#13;&#10;                        }&#13;&#10;                    }, true);&#13;&#10;    chart.getCore().series[1].data[lastIndex].update({&#13;&#10;                        marker: {&#13;&#10;                            enabled: true,&#13;&#10;                            symbol: &#039;circle&#039;&#13;&#10;                        }&#13;&#10;                    }, true);&#13;&#10;},"/>
   <extendedProperties name="jschart.zoom" value="xy"/>
-  <extendedProperties name="keep.hierarchy.category" value="false"/>
-  <extendedProperties name="keep.hierarchy.series" value="false"/>
-  <extendedProperties name="jschart.series.shadow" value="true"/>
+  <extendedProperties name="jschart.series.shadow" value="false"/>
+  <extendedProperties name="jschart.animation" value="false"/>
+  <extendedProperties name="chart.palette.type" value="color"/>
+  <extendedProperties name="chart.marker.auto" value="true"/>
   <sampleData>
    <baseSampleData dataSetRepresentation="01/05/2000,02/01/2000,04/12/2000,03/12/2000,02/29/2000"/>
    <orthogonalSampleData dataSetRepresentation="6,4,12,8,10" seriesDefinitionIndex="0"/>
@@ -4029,7 +4089,7 @@ last1%2;</expression>
     </outline>
    </title>
    <associatedAxes primaryAxis="true" percent="false">
-    <title>
+    <title visible="false">
      <background _nil="1"/>
      <outline>
       <color _nil="1"/>
@@ -4038,7 +4098,7 @@ last1%2;</expression>
     <seriesDefinitions>
      <query definition=""/>
      <seriesPalette>
-      <entries _body=",255,60,152,171"/>
+      <entries _body=",255,54,137,154"/>
       <entries _body=",255,242,88,106"/>
       <entries _body=",255,232,172,57"/>
       <entries _body=",255,128,255,128"/>
@@ -4071,8 +4131,8 @@ last1%2;</expression>
       <entries _body=",255,255,255,255"/>
       <entries _body=",255,255,128,0"/>
      </seriesPalette>
-     <series _type="LineSeries" seriesIdentifier="Active Risk" stacked="false">
-      <label>
+     <series _type="LineSeries" seriesIdentifier="Active Risk" stacked="false" curve="true">
+      <label visible="false">
        <background _nil="1"/>
        <outline>
         <color _nil="1"/>
@@ -4090,7 +4150,7 @@ last1%2;</expression>
        </action>
       </triggers>
       <curveFitting _nil="1"/>
-      <markers visible="false">
+      <markers type="0" size="4" visible="false">
        <outline/>
       </markers>
       <lineAttributes thickness="2">
@@ -4113,18 +4173,18 @@ last1%2;</expression>
     </label>
     <formatSpecifier _type="JavaNumberFormatSpecifier" pattern="0.0"/>
     <majorGrid>
-     <lineAttributes visible="true">
-      <color _nil="1"/>
+     <lineAttributes thickness="1" visible="true">
+      <color _body=",255,242,242,242"/>
      </lineAttributes>
-     <tickAttributes>
+     <tickAttributes visible="false">
       <color _nil="1"/>
      </tickAttributes>
     </majorGrid>
     <minorGrid>
-     <lineAttributes>
+     <lineAttributes visible="false">
       <color _nil="1"/>
      </lineAttributes>
-     <tickAttributes>
+     <tickAttributes visible="false">
       <color _nil="1"/>
      </tickAttributes>
     </minorGrid>
@@ -4133,7 +4193,7 @@ last1%2;</expression>
     </origin>
    </associatedAxes>
    <associatedAxes titlePosition="3" labelPosition="3" primaryAxis="false" percent="false">
-    <title>
+    <title visible="false">
      <background _nil="1"/>
      <outline>
       <color _nil="1"/>
@@ -4142,7 +4202,7 @@ last1%2;</expression>
     <seriesDefinitions>
      <query definition=""/>
      <seriesPalette>
-      <entries _body=",255,161,214,227"/>
+      <entries _body=",255,116,194,214"/>
       <entries _body=",255,232,172,57"/>
       <entries _body=",255,128,255,128"/>
       <entries _body=",255,64,128,128"/>
@@ -4175,8 +4235,8 @@ last1%2;</expression>
       <entries _body=",255,255,128,0"/>
       <entries _body=",255,80,166,218"/>
      </seriesPalette>
-     <series _type="LineSeries" seriesIdentifier="Beta (Bmk)" stacked="false">
-      <label>
+     <series _type="LineSeries" seriesIdentifier="Beta" stacked="false" curve="true">
+      <label visible="false">
        <background _nil="1"/>
        <outline>
         <color _nil="1"/>
@@ -4194,7 +4254,7 @@ last1%2;</expression>
        </action>
       </triggers>
       <curveFitting _nil="1"/>
-      <markers visible="false">
+      <markers type="0" size="4" visible="false">
        <outline/>
       </markers>
       <lineAttributes thickness="2">
@@ -4217,21 +4277,25 @@ last1%2;</expression>
     </label>
     <formatSpecifier _type="JavaNumberFormatSpecifier" pattern="0.0"/>
     <majorGrid>
-     <lineAttributes>
+     <lineAttributes visible="false">
       <color _nil="1"/>
      </lineAttributes>
-     <tickAttributes>
+     <tickAttributes visible="false">
       <color _nil="1"/>
      </tickAttributes>
     </majorGrid>
     <minorGrid>
-     <lineAttributes>
+     <lineAttributes visible="false">
       <color _nil="1"/>
      </lineAttributes>
-     <tickAttributes>
+     <tickAttributes visible="false">
       <color _nil="1"/>
      </tickAttributes>
     </minorGrid>
+    <scale>
+     <min _type="NumberDataElement" value="0.4"/>
+     <max _type="NumberDataElement" value="2.0"/>
+    </scale>
     <origin type="1">
      <value _nil="1"/>
     </origin>
@@ -4303,21 +4367,22 @@ last1%2;</expression>
    </label>
    <formatSpecifier _type="JavaDateFormatSpecifier" pattern="M/yy"/>
    <majorGrid>
-    <lineAttributes>
-     <color _nil="1"/>
+    <lineAttributes visible="false">
+     <color _body=",255,242,242,242"/>
     </lineAttributes>
-    <tickAttributes>
+    <tickAttributes visible="false">
      <color _nil="1"/>
     </tickAttributes>
    </majorGrid>
    <minorGrid>
-    <lineAttributes>
+    <lineAttributes visible="false">
      <color _nil="1"/>
     </lineAttributes>
-    <tickAttributes>
+    <tickAttributes visible="false">
      <color _nil="1"/>
     </tickAttributes>
    </minorGrid>
+   <scale tickBetweenCategories="false"/>
    <origin>
     <value _nil="1"/>
    </origin>
@@ -4341,7 +4406,7 @@ last1%2;</expression>
                                     </list-property>
                                     <property name="inheritColumns">false</property>
                                     <property name="height">2in</property>
-                                    <property name="width">3.4583333333333335in</property>
+                                    <property name="width">3.458in</property>
                                     <property name="dataSet">Total Plan Data Set</property>
                                     <list-property name="boundDataColumns">
                                         <structure>
@@ -4396,17 +4461,26 @@ last1%2;</expression>
                         <row id="540">
                             <cell id="541">
                                 <property name="paddingLeft">0pt</property>
+                                <label id="1254">
+                                    <property name="fontWeight">200</property>
+                                    <property name="color">#4B4B4B</property>
+                                    <property name="paddingTop">8px</property>
+                                    <property name="paddingLeft">1pt</property>
+                                    <property name="paddingBottom">0pt</property>
+                                    <property name="textAlign">left</property>
+                                    <text-property name="text">Market Value vs. Value at Risk (VaR)</text-property>
+                                </label>
                                 <extended-item extensionName="Chart" id="1033">
                                     <xml-property name="xmlRepresentation"><![CDATA[<ActuateChart version="2.6.1">
  <ChartWithAxes version="2.6.1" type="Line Chart" subType="Overlay">
   <block>
-   <children _type="TitleBlock">
+   <children _type="TitleBlock" visible="false">
     <outline>
      <color _nil="1"/>
     </outline>
     <label>
      <caption value="Market Value vs. VaR (Billions)">
-      <font name="Arial" size="10.0" bold="false"/>
+      <font name="canada-type-gibson" size="10.0" bold="false"/>
      </caption>
      <background _nil="1"/>
      <outline>
@@ -4419,12 +4493,12 @@ last1%2;</expression>
      <color _nil="1"/>
     </outline>
     <clientArea>
-     <outline>
-      <color _nil="1"/>
+     <outline thickness="1" visible="true">
+      <color _body=",255,210,210,210"/>
      </outline>
     </clientArea>
    </children>
-   <children _type="Legend" orientation="0" position="1">
+   <children _type="Legend" visible="false" orientation="0" position="1">
     <outline>
      <color _nil="1"/>
     </outline>
@@ -4456,11 +4530,12 @@ last1%2;</expression>
   <extendedProperties name="enable.area.alt" value="false"/>
   <extendedProperties name="enable.drill.category" value="true"/>
   <extendedProperties name="enable.drill.series" value="true"/>
-  <extendedProperties name="jschart.client.script" value="beforeRendering: function(options, chart)&#13;&#10;{&#13;&#10;    options.legend.margin = 0;&#13;&#10;},"/>
+  <extendedProperties name="jschart.client.script" value="beforeDrawDataPoint: function(point, pointOptions, chart, seriesIndex, pointIndex)&#13;&#10;{&#13;&#10;&#13;&#10;if (seriesIndex == 0) {&#13;&#10;    if ( (chart._chart.series[0].data.length - 1) == pointIndex) {&#13;&#10;        chart._chart.options.series[0].data[pointIndex].dataLabels = {enabled:true};&#13;&#10;    }&#13;&#10;}&#13;&#10;&#13;&#10;if (seriesIndex == 1) {&#13;&#10;    if ( (chart._chart.series[1].data.length - 1) == pointIndex) {&#13;&#10;        chart._chart.options.series[1].data[pointIndex].dataLabels = {enabled:true};&#13;&#10;    }&#13;&#10;}&#13;&#10;&#13;&#10;&#13;&#10;},&#13;&#10;&#13;&#10;&#13;&#10;beforeDrawSeries: function(series, seriesOptions, chart, seriesIndex)&#13;&#10;{&#13;&#10;seriesOptions.dataLabels =  {&#13;&#10;    enabled:false,&#13;&#10;    crop: false,&#13;&#10;    overflow: &#039;none&#039;,&#13;&#10;    align: &#039;left&#039;,&#13;&#10;    y: 5,&#13;&#10;    formatter: function() {&#13;&#10;        return &#039;&lt;span sty&#039;+&#039;le=&quot;color:&#039;+this.series.color+&#039;&quot;&gt;&#039;+this.series.name+&#039;&lt;/span&gt;&#039;;&#13;&#10;    }&#13;&#10;};&#13;&#10;&#13;&#10;},&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;beforeGeneration: function(options)&#13;&#10;{&#13;&#10;options.chart.spacingTop=0;&#13;&#10;//options.chart.spacingBottom=15;&#13;&#10;&#13;&#10;//options.chart.margin = [0,0,0,0];&#13;&#10;&#13;&#10;options.chart.spacingLeft=20;&#13;&#10;options.chart.marginRight=65;&#13;&#10;&#13;&#10;},&#13;&#10;&#13;&#10;&#13;&#10;beforeDrawAxis: function(axis, axisOptions, chart, axisIndex)&#13;&#10;{&#13;&#10;if ((axis.coll == &#039;yAxis&#039;) &amp;&amp; (axisIndex == 1)) {&#13;&#10;&#13;&#10;    axisOptions.labels.formatter = function () {&#13;&#10;        if (this.isFirst || this.isLast) {&#13;&#10;                    if (this.isFirst === undefined)&#13;&#10;                        return this.value.toFixed(2);&#13;&#10;                    var val = this.value;&#13;&#10;                    if (Math.abs(val) &gt;= 1000000000000) {&#13;&#10;                        val = parseInt(val / 100000000000) / 10;&#13;&#10;                        val = &quot;&quot; + val + &quot;T&quot;;&#13;&#10;                    } else if (Math.abs(val) &gt;= 1000000000) {&#13;&#10;                        val = parseInt(val / 100000000) / 10;&#13;&#10;                        val = &quot;&quot; + val + &quot;B&quot;;&#13;&#10;                    } else if (Math.abs(val) &gt;= 1000000) {&#13;&#10;                        val = parseInt(val / 100000) / 10;&#13;&#10;                        val = &quot;&quot; + val + &quot;M&quot;;&#13;&#10;                    } else if (Math.abs(val) &gt;= 1000) {&#13;&#10;                        val = parseInt(val / 100) / 10;&#13;&#10;                        val = &quot;&quot; + val + &quot;K&quot;;&#13;&#10;                    }&#13;&#10;                    return val;   &#13;&#10;        }&#13;&#10;        return &#039;&#039;;&#13;&#10;    }&#13;&#10;}&#13;&#10;},&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;afterRendering: function(chart)&#13;&#10;{&#13;&#10;    lastIndex = chart.getCore().series[0].xData.length - 1;&#13;&#10;    chart.getCore().series[0].data[lastIndex].update({&#13;&#10;                        marker: {&#13;&#10;                            enabled: true,&#13;&#10;                            symbol: &#039;circle&#039;&#13;&#10;                        }&#13;&#10;                    }, true);&#13;&#10;    chart.getCore().series[1].data[lastIndex].update({&#13;&#10;                        marker: {&#13;&#10;                            enabled: true,&#13;&#10;                            symbol: &#039;circle&#039;&#13;&#10;                        }&#13;&#10;                    }, true);&#13;&#10;},"/>
   <extendedProperties name="jschart.zoom" value="xy"/>
-  <extendedProperties name="keep.hierarchy.category" value="false"/>
-  <extendedProperties name="keep.hierarchy.series" value="false"/>
-  <extendedProperties name="jschart.series.shadow" value="true"/>
+  <extendedProperties name="jschart.series.shadow" value="false"/>
+  <extendedProperties name="jschart.animation" value="false"/>
+  <extendedProperties name="chart.palette.type" value="color"/>
+  <extendedProperties name="chart.marker.auto" value="true"/>
   <sampleData>
    <baseSampleData dataSetRepresentation="01/05/2000,02/01/2000,04/12/2000,03/12/2000,02/29/2000"/>
    <orthogonalSampleData dataSetRepresentation="6,4,12,8,10" seriesDefinitionIndex="0"/>
@@ -4474,7 +4549,7 @@ last1%2;</expression>
    </outline>
   </emptyMessage>
   <axes type="3" staggered="false" interval="3">
-   <title>
+   <title visible="false">
     <background _nil="1"/>
     <outline>
      <color _nil="1"/>
@@ -4493,7 +4568,7 @@ last1%2;</expression>
     <seriesDefinitions>
      <query definition=""/>
      <seriesPalette>
-      <entries _body=",255,60,152,171"/>
+      <entries _body=",255,54,137,154"/>
       <entries _body=",255,242,88,106"/>
       <entries _body=",255,232,172,57"/>
       <entries _body=",255,128,255,128"/>
@@ -4526,7 +4601,7 @@ last1%2;</expression>
       <entries _body=",255,255,255,255"/>
       <entries _body=",255,255,128,0"/>
      </seriesPalette>
-     <series _type="LineSeries" seriesIdentifier="Market Value" stacked="false" translucent="false">
+     <series _type="LineSeries" seriesIdentifier="MV" stacked="false" translucent="false" curve="true">
       <label>
        <background _nil="1"/>
        <outline>
@@ -4545,7 +4620,7 @@ last1%2;</expression>
        </action>
       </triggers>
       <curveFitting _nil="1"/>
-      <markers visible="false">
+      <markers type="0" size="4" visible="false">
        <outline/>
       </markers>
       <lineAttributes thickness="2">
@@ -4569,17 +4644,17 @@ last1%2;</expression>
     <formatSpecifier _type="JavaNumberFormatSpecifier" pattern="0.0" multiplier="1.0E-9"/>
     <majorGrid>
      <lineAttributes visible="true">
-      <color _nil="1"/>
+      <color _body=",255,242,242,242"/>
      </lineAttributes>
-     <tickAttributes>
+     <tickAttributes visible="false">
       <color _nil="1"/>
      </tickAttributes>
     </majorGrid>
     <minorGrid>
-     <lineAttributes>
+     <lineAttributes visible="false">
       <color _nil="1"/>
      </lineAttributes>
-     <tickAttributes>
+     <tickAttributes visible="false">
       <color _nil="1"/>
      </tickAttributes>
     </minorGrid>
@@ -4600,7 +4675,7 @@ last1%2;</expression>
     <seriesDefinitions>
      <query definition=""/>
      <seriesPalette>
-      <entries _body=",255,161,214,227"/>
+      <entries _body=",255,116,194,214"/>
       <entries _body=",255,232,172,57"/>
       <entries _body=",255,128,255,128"/>
       <entries _body=",255,64,128,128"/>
@@ -4633,7 +4708,7 @@ last1%2;</expression>
       <entries _body=",255,255,128,0"/>
       <entries _body=",255,80,166,218"/>
      </seriesPalette>
-     <series _type="LineSeries" seriesIdentifier="Value at Risk" stacked="false" translucent="false">
+     <series _type="LineSeries" seriesIdentifier="VaR" stacked="false" translucent="false" curve="true">
       <label>
        <background _nil="1"/>
        <outline>
@@ -4652,7 +4727,7 @@ last1%2;</expression>
        </action>
       </triggers>
       <curveFitting _nil="1"/>
-      <markers visible="false">
+      <markers type="0" size="4" visible="false">
        <outline/>
       </markers>
       <lineAttributes thickness="2">
@@ -4675,21 +4750,25 @@ last1%2;</expression>
     </label>
     <formatSpecifier _type="JavaNumberFormatSpecifier" pattern="0.0" multiplier="1.0E-9"/>
     <majorGrid>
-     <lineAttributes>
+     <lineAttributes visible="false">
       <color _nil="1"/>
      </lineAttributes>
-     <tickAttributes>
+     <tickAttributes visible="false">
       <color _nil="1"/>
      </tickAttributes>
     </majorGrid>
     <minorGrid>
-     <lineAttributes>
+     <lineAttributes visible="false">
       <color _nil="1"/>
      </lineAttributes>
-     <tickAttributes>
+     <tickAttributes visible="false">
       <color _nil="1"/>
      </tickAttributes>
     </minorGrid>
+    <scale>
+     <min _type="NumberDataElement" value="4.0E8"/>
+     <max _type="NumberDataElement" value="1.6E9"/>
+    </scale>
     <origin type="1">
      <value _nil="1"/>
     </origin>
@@ -4761,21 +4840,22 @@ last1%2;</expression>
    </label>
    <formatSpecifier _type="JavaDateFormatSpecifier" pattern="M/yy"/>
    <majorGrid>
-    <lineAttributes>
-     <color _nil="1"/>
+    <lineAttributes visible="false">
+     <color _body=",255,242,242,242"/>
     </lineAttributes>
-    <tickAttributes>
+    <tickAttributes visible="false">
      <color _nil="1"/>
     </tickAttributes>
    </majorGrid>
    <minorGrid>
-    <lineAttributes>
+    <lineAttributes visible="false">
      <color _nil="1"/>
     </lineAttributes>
-    <tickAttributes>
+    <tickAttributes visible="false">
      <color _nil="1"/>
     </tickAttributes>
    </minorGrid>
+   <scale tickBetweenCategories="false"/>
    <origin>
     <value _nil="1"/>
    </origin>
@@ -4854,17 +4934,27 @@ last1%2;</expression>
                         <row id="1036">
                             <cell id="1037">
                                 <property name="paddingLeft">0pt</property>
+                                <label id="1255">
+                                    <property name="fontWeight">200</property>
+                                    <property name="color">#4B4B4B</property>
+                                    <property name="paddingTop">8px</property>
+                                    <property name="paddingLeft">1pt</property>
+                                    <property name="paddingBottom">0pt</property>
+                                    <property name="textAlign">left</property>
+                                    <text-property name="text">Percentage Contribution to Active Risk</text-property>
+                                </label>
                                 <extended-item extensionName="Chart" id="1038">
                                     <xml-property name="xmlRepresentation"><![CDATA[<ActuateChart version="2.6.1">
  <ChartWithAxes version="2.6.1" type="Line Chart" subType="Overlay" dimension="0">
   <block>
-   <children _type="TitleBlock">
+   <children _type="TitleBlock" visible="false">
     <outline>
      <color _nil="1"/>
     </outline>
+    <cursor type="0"/>
     <label>
      <caption value="% Contribution to Active Risk ">
-      <font name="Arial" size="10.0" bold="false"/>
+      <font name="canada-type-gibson" size="10.0" bold="false"/>
      </caption>
      <background _nil="1"/>
      <outline>
@@ -4877,13 +4967,13 @@ last1%2;</expression>
      <color _nil="1"/>
     </outline>
     <clientArea>
-     <outline>
-      <color _nil="1"/>
+     <outline thickness="1" visible="true">
+      <color _body=",255,210,210,210"/>
      </outline>
     </clientArea>
    </children>
-   <children _type="Legend" stretch="2" orientation="0" position="1">
-    <outline>
+   <children _type="Legend" stretch="2" visible="false" orientation="0" position="1">
+    <outline visible="false">
      <color _nil="1"/>
     </outline>
     <triggers condition="2">
@@ -4918,7 +5008,7 @@ last1%2;</expression>
    <triggers condition="2">
     <action type="0">
      <value _type="MultiURLValues">
-      <uRLValues baseUrl="&lt;structure&gt;&#10;    &lt;property name=&quot;linkType&quot;&gt;drill-through&lt;/property&gt;&#10;    &lt;property name=&quot;toolTip&quot;&gt;Click for larger chart&lt;/property&gt;&#10;    &lt;property name=&quot;reportName&quot;&gt;ContributionActiveRisk.rptdesign&lt;/property&gt;&#10;    &lt;property name=&quot;targetWindow&quot;&gt;_blank&lt;/property&gt;&#10;    &lt;property name=&quot;targetFileType&quot;&gt;report-design&lt;/property&gt;&#10;&lt;/structure&gt;&#10;" baseParameterName="" valueParameterName="" seriesParameterName="">
+      <uRLValues baseUrl="&lt;structure&gt;&#10;    &lt;property name=&quot;linkType&quot;&gt;drill-through&lt;/property&gt;&#10;    &lt;property name=&quot;toolTip&quot;&gt;Click for larger chart&lt;/property&gt;&#10;    &lt;property name=&quot;reportName&quot;&gt;ContributionActiveRisk.rptdocument&lt;/property&gt;&#10;    &lt;property name=&quot;targetWindow&quot;&gt;_blank&lt;/property&gt;&#10;    &lt;property name=&quot;targetFileType&quot;&gt;report-document&lt;/property&gt;&#10;&lt;/structure&gt;&#10;" baseParameterName="" valueParameterName="" seriesParameterName="">
        <label>
         <caption value="Larger Chart"/>
        </label>
@@ -4934,13 +5024,13 @@ last1%2;</expression>
   <extendedProperties name="enable.area.alt" value="false"/>
   <extendedProperties name="enable.drill.category" value="true"/>
   <extendedProperties name="enable.drill.series" value="true"/>
-  <extendedProperties name="jschart.client.script" value="beforeRendering: function(options, chart)&#13;&#10;{&#13;&#10;    options.legend.margin = 0;&#13;&#10;},"/>
+  <extendedProperties name="jschart.client.script" value="beforeDrawDataPoint: function(point, pointOptions, chart, seriesIndex, pointIndex)&#13;&#10;{&#13;&#10;&#13;&#10;if (seriesIndex == 0) {&#13;&#10;    if ( (chart._chart.series[0].data.length - 1) == pointIndex) {&#13;&#10;        chart._chart.options.series[0].data[pointIndex].dataLabels = {enabled:true};&#13;&#10;    }&#13;&#10;}&#13;&#10;&#13;&#10;if (seriesIndex == 1) {&#13;&#10;    if ( (chart._chart.series[1].data.length - 1) == pointIndex) {&#13;&#10;        chart._chart.options.series[1].data[pointIndex].dataLabels = {enabled:true};&#13;&#10;    }&#13;&#10;}&#13;&#10;&#13;&#10;if (seriesIndex == 2) {&#13;&#10;    if ( (chart._chart.series[2].data.length - 1) == pointIndex) {&#13;&#10;        chart._chart.options.series[2].data[pointIndex].dataLabels = {enabled:true};&#13;&#10;    }&#13;&#10;}&#13;&#10;&#13;&#10;if (seriesIndex == 3) {&#13;&#10;    if ( (chart._chart.series[3].data.length - 1) == pointIndex) {&#13;&#10;        chart._chart.options.series[3].data[pointIndex].dataLabels = {enabled:true};&#13;&#10;    }&#13;&#10;}&#13;&#10;&#13;&#10;},&#13;&#10;&#13;&#10;&#13;&#10;beforeDrawSeries: function(series, seriesOptions, chart, seriesIndex)&#13;&#10;{&#13;&#10;var theOffset = [-4,16,24,32];&#13;&#10;&#13;&#10;seriesOptions.dataLabels =  {&#13;&#10;    enabled:false,&#13;&#10;    crop: false,&#13;&#10;    overflow: &#039;none&#039;,&#13;&#10;    align: &#039;left&#039;,&#13;&#10;    allowOverlap: true,&#13;&#10;    y: theOffset[seriesIndex],&#13;&#10;    style: {&#13;&#10;            fontSize:&#039;9px&#039;&#13;&#10;    },&#13;&#10;    formatter: function() {&#13;&#10;        return &#039;&lt;span sty&#039;+&#039;le=&quot;color:&#039;+this.series.color+&#039;&quot;&gt;&#039;+this.series.name+&#039;&lt;/span&gt;&#039;;&#13;&#10;    }&#13;&#10;};&#13;&#10;&#13;&#10;},&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;beforeGeneration: function(options)&#13;&#10;{&#13;&#10;options.chart.spacingTop=0;&#13;&#10;//options.chart.spacingBottom=15;&#13;&#10;&#13;&#10;//options.chart.margin = [0,0,0,0];&#13;&#10;&#13;&#10;&#13;&#10;options.chart.spacingLeft=20;&#13;&#10;options.chart.marginRight=65;&#13;&#10;&#13;&#10;&#13;&#10;},&#13;&#10;&#13;&#10;&#13;&#10;beforeDrawAxis: function(axis, axisOptions, chart, axisIndex)&#13;&#10;{&#13;&#10;if ((axis.coll == &#039;yAxis&#039;) &amp;&amp; (axisIndex == 1)) {&#13;&#10;    axisOptions.labels.formatter = function () {&#13;&#10;        if (this.isFirst || this.isLast) {&#13;&#10;            return this.value;&#13;&#10;        }&#13;&#10;        return &#039;&#039;;&#13;&#10;    }&#13;&#10;}&#13;&#10;},&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;afterRendering: function(chart)&#13;&#10;{&#13;&#10;    lastIndex = chart.getCore().series[0].xData.length - 1;&#13;&#10;    &#13;&#10;    for (i=0;i &lt; chart.getCore().series.length; i++) {&#13;&#10;    &#13;&#10;    chart.getCore().series[i].data[lastIndex].update({&#13;&#10;                        marker: {&#13;&#10;                            enabled: true,&#13;&#10;                            symbol: &#039;circle&#039;&#13;&#10;                        }&#13;&#10;                    }, true);&#13;&#10;    }&#13;&#10;},"/>
   <extendedProperties name="jschart.zoom" value="xy"/>
-  <extendedProperties name="keep.hierarchy.category" value="false"/>
-  <extendedProperties name="keep.hierarchy.series" value="false"/>
-  <extendedProperties name="jschart.series.shadow" value="true"/>
+  <extendedProperties name="jschart.series.shadow" value="false"/>
+  <extendedProperties name="jschart.animation" value="false"/>
   <extendedProperties name="chart.palette.type" value="color"/>
   <extendedProperties name="chart.marker.auto" value="true"/>
+  <extendedProperties name="chart.palette.auto" value="false"/>
   <sampleData>
    <baseSampleData dataSetRepresentation="01/05/2000,02/01/2000,04/12/2000,03/12/2000,02/29/2000"/>
    <orthogonalSampleData dataSetRepresentation="6,4,12,8,10" seriesDefinitionIndex="0"/>
@@ -4956,8 +5046,8 @@ last1%2;</expression>
     <color _body=",128,127,127,127"/>
    </outline>
   </emptyMessage>
-  <axes type="3" staggered="false" interval="3">
-   <title>
+  <axes type="3" staggered="false" interval="9">
+   <title visible="false">
     <background _nil="1"/>
     <outline>
      <color _nil="1"/>
@@ -4976,16 +5066,16 @@ last1%2;</expression>
     <seriesDefinitions>
      <query definition=""/>
      <seriesPalette>
-      <entries _body=",255,102,176,209"/>
-      <entries _body=",255,53,120,173"/>
-      <entries _body=",255,158,204,76"/>
-      <entries _body=",255,46,152,140"/>
-      <entries _body=",255,154,204,0"/>
-      <entries _body=",255,255,204,0"/>
-      <entries _body=",255,51,153,102"/>
-      <entries _body=",255,102,102,153"/>
-      <entries _body=",255,0,128,128"/>
-      <entries _body=",255,244,47,47"/>
+      <entries _body=",255,54,137,154"/>
+      <entries _body=",255,116,194,214"/>
+      <entries _body=",255,39,59,110"/>
+      <entries _body=",255,5,104,54"/>
+      <entries _body=",255,64,128,128"/>
+      <entries _body=",255,128,128,192"/>
+      <entries _body=",255,170,85,85"/>
+      <entries _body=",255,128,128,0"/>
+      <entries _body=",255,192,192,192"/>
+      <entries _body=",255,255,255,128"/>
       <entries _body=",255,128,192,128"/>
       <entries _body=",255,7,146,94"/>
       <entries _body=",255,0,128,255"/>
@@ -5009,14 +5099,14 @@ last1%2;</expression>
       <entries _body=",255,255,255,255"/>
       <entries _body=",255,255,128,0"/>
      </seriesPalette>
-     <series _type="LineSeries" seriesIdentifier="Covariance" stacked="false">
+     <series _type="LineSeries" seriesIdentifier="Covariance" stacked="false" curve="true">
       <label>
        <background _nil="1"/>
        <outline>
         <color _nil="1"/>
        </outline>
       </label>
-      <dataDefinition definition="row[&quot;Covariance&quot;]">
+      <dataDefinition definition="row[&quot;Currency Risk&quot;]">
        <grouping/>
       </dataDefinition>
       <dataPoint separator=", ">
@@ -5039,15 +5129,15 @@ last1%2;</expression>
     <seriesDefinitions>
      <query definition=""/>
      <seriesPalette>
-      <entries _body=",255,53,120,173"/>
-      <entries _body=",255,158,204,76"/>
-      <entries _body=",255,46,152,140"/>
-      <entries _body=",255,154,204,0"/>
-      <entries _body=",255,255,204,0"/>
-      <entries _body=",255,51,153,102"/>
-      <entries _body=",255,102,102,153"/>
-      <entries _body=",255,0,128,128"/>
-      <entries _body=",255,244,47,47"/>
+      <entries _body=",255,116,194,214"/>
+      <entries _body=",255,232,172,57"/>
+      <entries _body=",255,5,104,54"/>
+      <entries _body=",255,64,128,128"/>
+      <entries _body=",255,128,128,192"/>
+      <entries _body=",255,170,85,85"/>
+      <entries _body=",255,128,128,0"/>
+      <entries _body=",255,192,192,192"/>
+      <entries _body=",255,255,255,128"/>
       <entries _body=",255,128,192,128"/>
       <entries _body=",255,7,146,94"/>
       <entries _body=",255,0,128,255"/>
@@ -5070,16 +5160,16 @@ last1%2;</expression>
       <entries _body=",255,0,0,0"/>
       <entries _body=",255,255,255,255"/>
       <entries _body=",255,255,128,0"/>
-      <entries _body=",255,102,176,209"/>
+      <entries _body=",255,8,83,211"/>
      </seriesPalette>
-     <series _type="LineSeries" seriesIdentifier="Term Structure" stacked="false">
+     <series _type="LineSeries" seriesIdentifier="Term Struct" stacked="false" curve="true">
       <label>
        <background _nil="1"/>
        <outline>
         <color _nil="1"/>
        </outline>
       </label>
-      <dataDefinition definition="row[&quot;Term Structure&quot;]">
+      <dataDefinition definition="row[&quot;Industry&quot;]">
        <grouping/>
       </dataDefinition>
       <dataPoint separator=", ">
@@ -5102,14 +5192,14 @@ last1%2;</expression>
     <seriesDefinitions>
      <query definition=""/>
      <seriesPalette>
-      <entries _body=",255,158,204,76"/>
-      <entries _body=",255,46,152,140"/>
-      <entries _body=",255,154,204,0"/>
-      <entries _body=",255,255,204,0"/>
-      <entries _body=",255,51,153,102"/>
-      <entries _body=",255,102,102,153"/>
-      <entries _body=",255,0,128,128"/>
-      <entries _body=",255,244,47,47"/>
+      <entries _body=",255,39,59,110"/>
+      <entries _body=",255,5,104,54"/>
+      <entries _body=",255,64,128,128"/>
+      <entries _body=",255,128,128,192"/>
+      <entries _body=",255,170,85,85"/>
+      <entries _body=",255,128,128,0"/>
+      <entries _body=",255,192,192,192"/>
+      <entries _body=",255,255,255,128"/>
       <entries _body=",255,128,192,128"/>
       <entries _body=",255,7,146,94"/>
       <entries _body=",255,0,128,255"/>
@@ -5132,17 +5222,17 @@ last1%2;</expression>
       <entries _body=",255,0,0,0"/>
       <entries _body=",255,255,255,255"/>
       <entries _body=",255,255,128,0"/>
-      <entries _body=",255,102,176,209"/>
-      <entries _body=",255,53,120,173"/>
+      <entries _body=",255,8,83,211"/>
+      <entries _body=",255,8,153,80"/>
      </seriesPalette>
-     <series _type="LineSeries" seriesIdentifier="Style" stacked="false">
+     <series _type="LineSeries" seriesIdentifier="Currency Risk" stacked="false" curve="true">
       <label>
        <background _nil="1"/>
        <outline>
         <color _nil="1"/>
        </outline>
       </label>
-      <dataDefinition definition="row[&quot;Style&quot;]">
+      <dataDefinition definition="row[&quot;Term Structure&quot;]">
        <grouping/>
       </dataDefinition>
       <dataPoint separator=", ">
@@ -5165,13 +5255,13 @@ last1%2;</expression>
     <seriesDefinitions>
      <query definition=""/>
      <seriesPalette>
-      <entries _body=",255,46,152,140"/>
-      <entries _body=",255,154,204,0"/>
-      <entries _body=",255,255,204,0"/>
-      <entries _body=",255,51,153,102"/>
-      <entries _body=",255,102,102,153"/>
-      <entries _body=",255,0,128,128"/>
-      <entries _body=",255,244,47,47"/>
+      <entries _body=",255,5,104,54"/>
+      <entries _body=",255,64,128,128"/>
+      <entries _body=",255,128,128,192"/>
+      <entries _body=",255,170,85,85"/>
+      <entries _body=",255,128,128,0"/>
+      <entries _body=",255,192,192,192"/>
+      <entries _body=",255,255,255,128"/>
       <entries _body=",255,128,192,128"/>
       <entries _body=",255,7,146,94"/>
       <entries _body=",255,0,128,255"/>
@@ -5194,18 +5284,18 @@ last1%2;</expression>
       <entries _body=",255,0,0,0"/>
       <entries _body=",255,255,255,255"/>
       <entries _body=",255,255,128,0"/>
-      <entries _body=",255,102,176,209"/>
-      <entries _body=",255,53,120,173"/>
-      <entries _body=",255,158,204,76"/>
+      <entries _body=",255,8,83,211"/>
+      <entries _body=",255,8,153,80"/>
+      <entries _body=",255,39,59,110"/>
      </seriesPalette>
-     <series _type="LineSeries" seriesIdentifier="Spread" stacked="false">
+     <series _type="LineSeries" seriesIdentifier="Spread" stacked="false" curve="true">
       <label>
        <background _nil="1"/>
        <outline>
         <color _nil="1"/>
        </outline>
       </label>
-      <dataDefinition definition="row[&quot;Spread&quot;]">
+      <dataDefinition definition="row[&quot;Factor Interaction&quot;]">
        <grouping/>
       </dataDefinition>
       <dataPoint separator=", ">
@@ -5240,10 +5330,10 @@ last1%2;</expression>
     </label>
     <formatSpecifier _type="NumberFormatSpecifier" prefix="" suffix="" fractionDigits="0"/>
     <majorGrid>
-     <lineAttributes visible="true">
-      <color _nil="1"/>
+     <lineAttributes thickness="1" visible="true">
+      <color _body=",255,242,242,242"/>
      </lineAttributes>
-     <tickAttributes>
+     <tickAttributes visible="false">
       <color _nil="1"/>
      </tickAttributes>
     </majorGrid>
@@ -5251,27 +5341,32 @@ last1%2;</expression>
      <lineAttributes visible="false">
       <color _nil="1"/>
      </lineAttributes>
-     <tickAttributes>
+     <tickAttributes visible="false">
       <color _nil="1"/>
      </tickAttributes>
     </minorGrid>
+    <scale>
+     <min _type="NumberDataElement" value="-2.5"/>
+     <max _type="NumberDataElement" value="1.5"/>
+    </scale>
     <origin>
      <value _nil="1"/>
     </origin>
+    <cursor type="0"/>
    </associatedAxes>
    <seriesDefinitions>
     <query definition=""/>
     <seriesPalette>
-     <entries _body=",255,102,176,209"/>
-     <entries _body=",255,53,120,173"/>
-     <entries _body=",255,158,204,76"/>
-     <entries _body=",255,46,152,140"/>
-     <entries _body=",255,154,204,0"/>
-     <entries _body=",255,255,204,0"/>
-     <entries _body=",255,51,153,102"/>
-     <entries _body=",255,102,102,153"/>
-     <entries _body=",255,0,128,128"/>
-     <entries _body=",255,244,47,47"/>
+     <entries _body=",255,8,83,211"/>
+     <entries _body=",255,8,153,80"/>
+     <entries _body=",255,39,59,110"/>
+     <entries _body=",255,5,104,54"/>
+     <entries _body=",255,64,128,128"/>
+     <entries _body=",255,128,128,192"/>
+     <entries _body=",255,170,85,85"/>
+     <entries _body=",255,128,128,0"/>
+     <entries _body=",255,192,192,192"/>
+     <entries _body=",255,255,255,128"/>
      <entries _body=",255,128,192,128"/>
      <entries _body=",255,7,146,94"/>
      <entries _body=",255,0,128,255"/>
@@ -5326,24 +5421,26 @@ last1%2;</expression>
    </label>
    <formatSpecifier _type="JavaDateFormatSpecifier" pattern="M/yy"/>
    <majorGrid>
-    <lineAttributes>
-     <color _nil="1"/>
+    <lineAttributes visible="false">
+     <color _body=",255,242,242,242"/>
     </lineAttributes>
-    <tickAttributes>
+    <tickAttributes visible="false">
      <color _nil="1"/>
     </tickAttributes>
    </majorGrid>
    <minorGrid>
-    <lineAttributes>
+    <lineAttributes visible="false">
      <color _nil="1"/>
     </lineAttributes>
-    <tickAttributes>
+    <tickAttributes visible="false">
      <color _nil="1"/>
     </tickAttributes>
    </minorGrid>
+   <scale tickBetweenCategories="false"/>
    <origin>
     <value _nil="1"/>
    </origin>
+   <cursor type="0"/>
   </axes>
   <rotation>
    <angles/>
@@ -5357,8 +5454,8 @@ last1%2;</expression>
                                             <property name="toolTip">Click for larger chart</property>
                                             <property name="targetWindow">_blank</property>
                                             <property name="linkType">drill-through</property>
-                                            <property name="targetFileType">report-design</property>
-                                            <property name="reportName">ContributionActiveRisk.rptdesign</property>
+                                            <property name="targetFileType">report-document</property>
+                                            <property name="reportName">ContributionActiveRisk.rptdocument</property>
                                         </structure>
                                     </list-property>
                                     <list-property name="filter">
@@ -5372,7 +5469,7 @@ last1%2;</expression>
                                         </structure>
                                     </list-property>
                                     <property name="inheritColumns">false</property>
-                                    <property name="height">2.5in</property>
+                                    <property name="height">2in</property>
                                     <property name="width">3.458in</property>
                                     <property name="dataSet">TS1 Data Set</property>
                                     <list-property name="boundDataColumns">
@@ -5445,7 +5542,7 @@ last1%2;</expression>
             </row>
             <row id="549">
                 <cell id="550">
-                    <property name="colSpan">2</property>
+                    <property name="colSpan">3</property>
                     <property name="rowSpan">1</property>
                     <property name="borderTopColor">#4B4B4B</property>
                     <property name="borderTopStyle">solid</property>
@@ -5460,6 +5557,10 @@ last1%2;</expression>
     </body>
     <property name="pageVariables">
         <variable-element name="g_dataXML">
+            <property name="type">report</property>
+        </variable-element>
+        <variable-element name="rv_rowCounter">
+            <expression name="value" type="javascript">0</expression>
             <property name="type">report</property>
         </variable-element>
     </property>

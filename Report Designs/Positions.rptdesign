@@ -15,14 +15,15 @@
 	this.getViewer().enableIV();]]></method>
     <parameters>
         <scalar-parameter name="pAccount" id="9">
-            <property name="hidden">true</property>
+            <property name="hidden">false</property>
             <property name="valueType">static</property>
             <property name="isRequired">true</property>
             <property name="dataType">integer</property>
             <property name="distinct">true</property>
             <simple-property-list name="defaultValue">
-                <value type="constant">71057540</value>
+                <value type="constant">98535</value>
             </simple-property-list>
+            <list-property name="selectionList"/>
             <property name="paramType">simple</property>
             <property name="concealValue">false</property>
             <property name="controlType">text-box</property>
@@ -78,6 +79,15 @@
                     <property name="columnName">Total</property>
                     <property name="analysis">measure</property>
                     <text-property name="heading">Total</text-property>
+                </structure>
+            </list-property>
+            <list-property name="filter">
+                <structure>
+                    <property name="operator">eq</property>
+                    <expression name="expr" type="javascript">row["ACCT_ID"]</expression>
+                    <simple-property-list name="value1">
+                        <value type="javascript">params["pAccount"].value</value>
+                    </simple-property-list>
                 </structure>
             </list-property>
             <list-property name="parameters"/>
