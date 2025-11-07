@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
-    <property name="createdBy">Eclipse BIRT Designer Version 4.2.3.v20131216-0430 Build &lt;4.2.3.v20131216-0430></property>
+    <property name="createdBy">Eclipse BIRT Designer Version 4.29.0.v202504021847</property>
     <property name="units">in</property>
     <method name="initialize"><![CDATA[var user = reportContext.getAppContext().get("ServerUserName");
 if (user != null &amp;&amp; user != "anonymous")
@@ -489,7 +489,7 @@ if (user != null &amp;&amp; user != "anonymous")
                                             <structure>
                                                 <property name="paramName">pAccount</property>
                                                 <simple-property-list name="expression">
-                                                    <value>row["ACCT_ID"]</value>
+                                                    <value type="javascript">row["ACCT_NAME"]</value>
                                                 </simple-property-list>
                                             </structure>
                                         </list-property>

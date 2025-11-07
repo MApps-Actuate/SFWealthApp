@@ -18,15 +18,25 @@
             <property name="hidden">false</property>
             <property name="valueType">static</property>
             <property name="isRequired">true</property>
-            <property name="dataType">integer</property>
+            <property name="dataType">string</property>
             <property name="distinct">true</property>
             <simple-property-list name="defaultValue">
-                <value type="constant">98535</value>
+                <value type="constant">Managed ETF</value>
             </simple-property-list>
-            <list-property name="selectionList"/>
+            <list-property name="selectionList">
+                <structure>
+                    <property name="value">Managed ETF</property>
+                    <property name="label">Managed ETF</property>
+                </structure>
+                <structure>
+                    <property name="value">Active Trading</property>
+                    <property name="label">Active Trading</property>
+                </structure>
+            </list-property>
             <property name="paramType">simple</property>
-            <property name="concealValue">false</property>
-            <property name="controlType">text-box</property>
+            <property name="controlType">list-box</property>
+            <property name="mustMatch">true</property>
+            <property name="fixedOrder">true</property>
             <structure name="format">
                 <property name="category">Unformatted</property>
             </structure>
@@ -84,7 +94,7 @@
             <list-property name="filter">
                 <structure>
                     <property name="operator">eq</property>
-                    <expression name="expr" type="javascript">row["ACCT_ID"]</expression>
+                    <expression name="expr" type="javascript">row["ACCT_NAME"]</expression>
                     <simple-property-list name="value1">
                         <value type="javascript">params["pAccount"].value</value>
                     </simple-property-list>
@@ -130,6 +140,9 @@
                     </structure>
                 </list-property>
             </structure>
+            <method name="onFetch"><![CDATA[
+
+]]></method>
             <property name="dataSource">Data Source CSV</property>
             <list-property name="resultSet">
                 <structure>
@@ -356,6 +369,29 @@
         </simple-master-page>
     </page-setup>
     <body>
+        <text id="542">
+            <method name="onCreate"><![CDATA[// Get the ACCT_NAME global variable
+var acct = reportContext.getPersistentGlobalVariable("ACCT_NAME");
+// Output it in a <script> tag or as a hidden input for JavaScript consumption
+this.content = "<script>window.ACCT_NAME = '" + acct + "';</script>";
+]]></method>
+            <property name="contentType">html</property>
+            <text-property name="content"><![CDATA[<div id='detailrpt'></div>
+<script>
+// Get the Viewer's current UI Options
+//var uiOptions = this.actuate.getViewer('detailrpt').getUIOptions();
+ 
+// Remove ability for user to change interactivity options
+//uiOptions.enableEditReport(false);
+ 
+// Set the modified UI Options back into the Viewer
+//this.actuate.getViewer('detailrpt').setUIOptions(uiOptions);
+ 
+// If Interactivity is not enabled, enable it
+if (!this.actuate.getViewer('detailrpt').isInteractive())
+	this.actuate.getViewer('detailrpt').enableIV();
+</script>]]></text-property>
+        </text>
         <table id="483">
             <property name="fontSize">8pt</property>
             <property name="color">#000000</property>
@@ -405,14 +441,14 @@
                     <property name="views">
                         <extended-item extensionName="Chart" name="NewChart1" id="524">
                             <xml-property name="xmlRepresentation"><![CDATA[<ActuateChart version="2.6.1">
- <ChartWithoutAxes version="2.6.1" type="Pie Chart" subType="Standard" dimension="0" units="Points" seriesThickness="15.0">
+ <ChartWithoutAxes version="2.6.1" type="Pie Chart" subType="Standard" dimension="0" script="&#10;/**&#10; * Called before generation of chart model to GeneratedChartState.&#10; * &#10; * @param chart&#10; *            Chart&#10; * @param icsc&#10; *            IChartScriptContext&#10; */&#10;&#10;function beforeGeneration(chart, icsc) {&#10;  var title = icsc.getExternalContext().getScriptable().getParameterValue(&quot;pAccount&quot;);&#10;  chart.getTitle().getLabel().getCaption().setValue(title);&#10;}&#10;" units="Points" seriesThickness="15.0">
   <block>
-   <children _type="TitleBlock">
+   <children _type="TitleBlock" auto="false">
     <outline>
      <color _nil="1"/>
     </outline>
     <label>
-     <caption value="Managed ETF - Allocation">
+     <caption>
       <font name="Lato" size="10.0" bold="true">
        <alignment _body="1,"/>
       </font>
@@ -437,6 +473,7 @@
     <outline>
      <color _nil="1"/>
     </outline>
+    <cursor type="0"/>
     <clientArea>
      <outline>
       <color _nil="1"/>
@@ -461,11 +498,13 @@
     <color _nil="1"/>
    </outline>
    <background _body=",255,255,255,255"/>
+   <cursor type="0"/>
   </block>
   <extendedProperties name="enable.area.alt" value="false"/>
   <extendedProperties name="enable.drill.category" value="true"/>
   <extendedProperties name="enable.drill.series" value="true"/>
   <extendedProperties name="jschart.series.shadow" value="true"/>
+  <extendedProperties name="jschart.client.script" value="/**&#13;&#10; * Called before chart instance is initially created.&#13;&#10; *&#13;&#10; * @param options&#13;&#10; *            chart options&#13;&#10; */&#13;&#10;beforeGeneration: function(options)&#13;&#10;{&#13;&#10;    //options.title.text = &quot;Asset %&quot;;&#13;&#10;},"/>
   <sampleData>
    <baseSampleData dataSetRepresentation="&#039;A&#039;,&#039;B&#039;,&#039;C&#039;,&#039;D&#039;,&#039;E&#039;"/>
    <orthogonalSampleData dataSetRepresentation="6,4,12,8,10"/>
@@ -486,7 +525,9 @@
   <seriesDefinitions>
    <query definition=""/>
    <seriesDefinitions>
-    <query definition=""/>
+    <query definition="row[&quot;ACCT_NAME&quot;]">
+     <grouping/>
+    </query>
     <seriesPalette/>
     <series _type="PieSeries" seriesIdentifier="" explosion="0" leaderLineStyle="0" leaderLineLength="10.0">
      <label>
@@ -498,7 +539,9 @@
        <color _nil="1"/>
       </outline>
      </label>
-     <dataDefinition definition="row[&quot;Total&quot;]"/>
+     <dataDefinition definition="row[&quot;Total&quot;]">
+      <grouping/>
+     </dataDefinition>
      <dataPoint separator=", ">
       <components type="1"/>
      </dataPoint>
