@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
-    <property name="createdBy">Eclipse BIRT Designer Version 4.4.0.v20150128-0131 Build &lt;4.2.3.v20150128-0131></property>
+    <property name="createdBy">Eclipse BIRT Designer Version 4.29.0.v202504021847</property>
     <property name="units">in</property>
     <method name="beforeRender"><![CDATA[var rr = reportContext.getReportRunnable();
 var chart1 	= rr.designHandle.getDesignHandle().findElement("Chart1");
@@ -159,7 +159,7 @@ chart4.getReportItem().getProperty("chart.instance").getTitle().getLabel().getCa
         <report-item-theme type="Table" name="default-table" id="777">
             <styles>
                 <style name="table" id="896">
-                    <property name="fontFamily">"Lato"</property>
+                    <property name="fontFamily">"canada-type-gibson"</property>
                     <property name="fontSize">8pt</property>
                     <property name="color">#666666</property>
                     <property name="borderBottomColor">#DADADA</property>
@@ -269,24 +269,37 @@ chart4.getReportItem().getProperty("chart.instance").getTitle().getLabel().getCa
     </page-setup>
     <body>
         <grid id="1219">
-            <property name="fontFamily">"Lato"</property>
+            <property name="fontFamily">"canada-type-gibson"</property>
+            <property name="textAlign">center</property>
             <expression name="bookmark" type="javascript">"rings"</expression>
             <column id="1220"/>
+            <column id="1264"/>
+            <row id="1265">
+                <cell id="1266">
+                    <property name="colSpan">2</property>
+                    <property name="rowSpan">1</property>
+                    <property name="textAlign">center</property>
+                    <label id="1247">
+                        <property name="fontWeight">200</property>
+                        <property name="color">#333333</property>
+                        <property name="paddingBottom">0pt</property>
+                        <text-property name="text">Credit Limit</text-property>
+                    </label>
+                </cell>
+            </row>
             <row id="1222">
                 <cell id="1223">
-                    <extended-item extensionName="Chart" name="Chart1" id="1224">
+                    <property name="textAlign">center</property>
+                    <property name="verticalAlign">middle</property>
+                    <extended-item extensionName="Chart" name="Chart1" id="62">
                         <xml-property name="xmlRepresentation"><![CDATA[<ActuateChart version="2.6.1">
- <ChartWithoutAxes version="2.6.1" type="Pie Chart" subType="Standard" script="&#10;/**&#10; * Called after populating the series dataset.&#10; * &#10; * @param series&#10; *            Series&#10; * @param dataSet&#10; *            DataSet&#10; * @param icsc&#10; *            IChartScriptContext&#10; */&#10;&#10;function afterDataSetFilled( series, dataSet, icsc )&#10;{&#10; if( series.getSeriesIdentifier() == &quot;Series 1&quot; )&#10; {&#10;  var list = dataSet.getValues();&#10;  }&#10;}&#10;&#10;">
+ <ChartWithoutAxes version="2.6.1" type="Pie Chart" subType="Standard">
   <block>
-   <children _type="TitleBlock" visible="true">
+   <children _type="TitleBlock" visible="false">
     <outline>
      <color _nil="1"/>
     </outline>
     <label>
-     <caption>
-      <font name="Lato" size="16.0" bold="true" rotation="90.0"/>
-      <color _body=",255,0,121,193"/>
-     </caption>
      <background _nil="1"/>
      <outline>
       <color _nil="1"/>
@@ -298,7 +311,7 @@ chart4.getReportItem().getProperty("chart.instance").getTitle().getLabel().getCa
      <color _nil="1"/>
     </outline>
     <clientArea>
-     <outline visible="false">
+     <outline>
       <color _nil="1"/>
      </outline>
     </clientArea>
@@ -307,7 +320,6 @@ chart4.getReportItem().getProperty("chart.instance").getTitle().getLabel().getCa
     <outline>
      <color _nil="1"/>
     </outline>
-    <cursor type="0"/>
     <clientArea>
      <outline>
       <color _nil="1"/>
@@ -323,18 +335,17 @@ chart4.getReportItem().getProperty("chart.instance").getTitle().getLabel().getCa
      </outline>
     </title>
    </children>
-   <bounds _body="0.0,0.0,572.25,286.125"/>
-   <insets _body="0.0,0.0,0.0,0.0"/>
-   <outline visible="false">
+   <bounds _body="0.0,0.0,305.25,139.5"/>
+   <outline>
     <color _nil="1"/>
    </outline>
-   <cursor type="0"/>
   </block>
   <extendedProperties name="enable.area.alt" value="false"/>
   <extendedProperties name="enable.drill.category" value="true"/>
   <extendedProperties name="enable.drill.series" value="true"/>
-  <extendedProperties name="jschart.client.script" value="/**&#13;&#10; * Called before chart instance is initially created.&#13;&#10; *&#13;&#10; * @param options&#13;&#10; *            chart options&#13;&#10; */&#13;&#10;beforeGeneration: function(options)&#13;&#10;{&#13;&#10;    //You can change options here.&#13;&#10;    options.title = &#13;&#10;        {&#13;&#10;        verticalAlign: &#039;middle&#039;,&#13;&#10;        },&#13;&#10;    options.subtitle = &#13;&#10;        {&#13;&#10;        text: &#039;Credit Limit&#039;,&#13;&#10;               style: {&#13;&#10;            fontFamily: &#039;Lato&#039;&#13;&#10;        },&#13;&#10;        verticalAlign: &#039;bottom&#039;,&#13;&#10;        floating: true,&#13;&#10;        },&#13;&#10;    options.plotOptions = &#13;&#10;    {&#13;&#10;           pie: {&#13;&#10;            size: &quot;100%&quot;&#13;&#10;            }&#13;&#10;    },&#13;&#10;    options.chart = &#13;&#10;        {&#13;&#10;            spacingLeft: 0,&#13;&#10;            spacingRight:0,&#13;&#10;            spacingBottom:0,&#13;&#10;            spacingTop:0,&#13;&#10;        }&#13;&#10;},"/>
+  <extendedProperties name="jschart.animation" value="false"/>
   <extendedProperties name="jschart.series.shadow" value="false"/>
+  <extendedProperties name="jschart.client.script" value="beforeGeneration: function(options)&#13;&#10;{&#13;&#10;//////////  HELPER FUNCTION TO CLONE JAVASCRIPT OBJECT&#13;&#10;///&#13;&#10;///&#13;&#10;function clone(obj) {&#13;&#10;    var copy;&#13;&#10;&#13;&#10;    if (null == obj || &quot;object&quot; != typeof obj) return obj;&#13;&#10;&#13;&#10;    // Handle Array&#13;&#10;    if (obj instanceof Array) {&#13;&#10;        copy = [];&#13;&#10;        for (var i = 0, len = obj.length; i &lt; len; i++) {&#13;&#10;            copy[i] = clone(obj[i]);&#13;&#10;        }&#13;&#10;        return copy;&#13;&#10;    }&#13;&#10;&#13;&#10;    // Handle Object&#13;&#10;    if (obj instanceof Object) {&#13;&#10;        copy = {};&#13;&#10;        for (var attr in obj) {&#13;&#10;            if (obj.hasOwnProperty(attr)) copy[attr] = clone(obj[attr]);&#13;&#10;        }&#13;&#10;        return copy;&#13;&#10;    }&#13;&#10;    throw new Error(&quot;Unable to copy obj.&quot;);&#13;&#10;}&#13;&#10;&#13;&#10;//&#13;&#10;// For the inner donut/pie/arc, we need to fill the other side (100 - row)&#13;&#10;// &#13;&#10;    var element = {};&#13;&#10;    element.name = &#039;filler&#039;;&#13;&#10;    element.y=(100 - options.series[0].data[0].y);&#13;&#10;    options.series[0].data.push(element);&#13;&#10;&#13;&#10;    //UNCOMMENT FOR STOP LIGHT COLORS&#13;&#10;    //&#13;&#10;    //if (options.series[0].data[0].y &lt;= 50) options.colors = [&#039;#722b22&#039;];&#13;&#10;    //else if (options.series[0].data[0].y &gt; 50 &amp;&amp; options.series[0].data[0].y &lt; 89) options.colors = [&#039;#e08e18&#039;];&#13;&#10;    //else options.colors = [&#039;#227247&#039;];&#13;&#10;    options.colors = [&#039;#273b6e&#039;];&#13;&#10;//&#13;&#10;// Create an outer donut/pie/arc.  Make it 100% and change the innerSize and Size.&#13;&#10;//&#13;&#10;    var copy = clone(options.series[0]);&#13;&#10;    copy.data.pop();&#13;&#10;    copy.data.pop();&#13;&#10;&#13;&#10;    element = {};&#13;&#10;    element.name = &#039;small-inner&#039;;&#13;&#10;    element.y = 100;&#13;&#10;    element.color = &#039;#D4D8E2&#039;;&#13;&#10;&#13;&#10;    copy.data.push(element);&#13;&#10;    &#13;&#10;    copy.size=&#039;93%&#039;;&#13;&#10;    copy.innerSize=&#039;85%&#039;;&#13;&#10;&#13;&#10;// &#13;&#10;// Instead of pushing, we unshift and put it in the front of the array so it will display on the bottom&#13;&#10;// &#13;&#10;    options.series.unshift (copy);&#13;&#10;&#13;&#10;//&#13;&#10;// Make the top slice larger&#13;&#10;//&#13;&#10;    options.series[1].size=&#039;100%&#039;;&#13;&#10;    options.series[1].innerSize=&#039;70%&#039;;&#13;&#10;&#13;&#10;&#13;&#10;//&#13;&#10;// Add the text&#13;&#10;//&#13;&#10;        options.title = {&#13;&#10;            useHTML: true,&#13;&#10;            verticalAlign: &#039;middle&#039;,&#13;&#10;            style: {&#13;&#10;                fontFamily: &#039;canada-type-gibson,Dotum,canada-type-gibson&#039;&#13;&#10;            },&#13;&#10;            text: &#039;&lt;div style=&quot;position:absolute;top:4px;left:-22px&quot;&gt;&lt;tspan style=&quot;color:#6B98E5;font-size:24px;font-weight:800;&quot;&gt;&#039; + options.series[1].data[0].y + &#039;%&lt;/tspan&gt;&lt;/div&gt;&#039;&#13;&#10;        };&#13;&#10;&#13;&#10;&#13;&#10;options.chart.spacingTop=0;&#13;&#10;//options.chart.spacingBottom=15;&#13;&#10;&#13;&#10;//options.chart.margin = [0,0,0,0];&#13;&#10;&#13;&#10;options.chart.marginTop=0;&#13;&#10;options.chart.marginLeft=0;&#13;&#10;options.chart.marginRight=0;&#13;&#10;options.chart.marginBottom=2;&#13;&#10;},"/>
   <sampleData>
    <baseSampleData dataSetRepresentation="&#039;A&#039;,&#039;B&#039;,&#039;C&#039;,&#039;D&#039;,&#039;E&#039;"/>
    <orthogonalSampleData dataSetRepresentation="6,4,12,8,10" seriesDefinitionIndex="0"/>
@@ -350,10 +361,10 @@ chart4.getReportItem().getProperty("chart.instance").getTitle().getLabel().getCa
   <seriesDefinitions>
    <query definition=""/>
    <seriesPalette>
-    <entries _body=",255,106,138,199"/>
-    <entries _body=",255,226,224,220"/>
-    <entries _body=",255,232,172,57"/>
-    <entries _body=",255,128,255,128"/>
+    <entries _body=",255,95,146,222"/>
+    <entries _body=",0,255,255,255"/>
+    <entries _body=",0,255,255,255"/>
+    <entries _body=",0,255,255,255"/>
     <entries _body=",255,64,128,128"/>
     <entries _body=",255,128,128,192"/>
     <entries _body=",255,170,85,85"/>
@@ -386,10 +397,10 @@ chart4.getReportItem().getProperty("chart.instance").getTitle().getLabel().getCa
    <seriesDefinitions>
     <query definition=""/>
     <seriesPalette>
-     <entries _body=",255,106,138,199"/>
-     <entries _body=",255,226,224,220"/>
-     <entries _body=",255,232,172,57"/>
-     <entries _body=",255,128,255,128"/>
+     <entries _body=",255,95,146,222"/>
+     <entries _body=",0,255,255,255"/>
+     <entries _body=",0,255,255,255"/>
+     <entries _body=",0,255,255,255"/>
      <entries _body=",255,64,128,128"/>
      <entries _body=",255,128,128,192"/>
      <entries _body=",255,170,85,85"/>
@@ -419,24 +430,16 @@ chart4.getReportItem().getProperty("chart.instance").getTitle().getLabel().getCa
      <entries _body=",255,255,255,255"/>
      <entries _body=",255,255,128,0"/>
     </seriesPalette>
-    <series _type="PieSeries" seriesIdentifier="Series 1" labelPosition="4" rotation="90.0" innerRadius="75.0" innerRadiusPercent="true">
+    <series _type="PieSeries" seriesIdentifier="Series 1" rotation="90.0" innerRadius="130.0" innerRadiusPercent="false">
      <label visible="false">
-      <caption>
-       <font name="Lato"/>
-      </caption>
       <background _nil="1"/>
       <outline>
        <color _nil="1"/>
       </outline>
      </label>
      <dataDefinition definition="row[&quot;Amt&quot;]">
-      <grouping>
-       <aggregateParameters _body="0"/>
-      </grouping>
+      <grouping/>
      </dataDefinition>
-     <dataPoint prefix="" separator="">
-      <components type="3"/>
-     </dataPoint>
      <cursor type="0"/>
      <title>
       <background _nil="1"/>
@@ -445,6 +448,7 @@ chart4.getReportItem().getProperty("chart.instance").getTitle().getLabel().getCa
       </outline>
      </title>
      <leaderLineAttributes visible="false"/>
+     <sliceOutline _body=",0,255,255,255"/>
     </series>
    </seriesDefinitions>
    <series seriesIdentifier="">
@@ -454,7 +458,7 @@ chart4.getReportItem().getProperty("chart.instance").getTitle().getLabel().getCa
       <color _nil="1"/>
      </outline>
     </label>
-    <dataDefinition definition="row[&quot;CurrentOrGoal&quot;]"/>
+    <dataDefinition definition="row[&quot;Metric&quot;]"/>
     <curveFitting _nil="1"/>
    </series>
    <grouping enabled="true"/>
@@ -472,47 +476,92 @@ chart4.getReportItem().getProperty("chart.instance").getTitle().getLabel().getCa
                                 </simple-property-list>
                                 <property name="updateAggregation">true</property>
                             </structure>
+                            <structure>
+                                <property name="operator">eq</property>
+                                <expression name="expr" type="javascript">row["CurrentOrGoal"]</expression>
+                                <simple-property-list name="value1">
+                                    <value type="javascript">"C"</value>
+                                </simple-property-list>
+                                <property name="updateAggregation">true</property>
+                            </structure>
                         </list-property>
                         <property name="inheritColumns">false</property>
-                        <property name="marginBottom">0pt</property>
-                        <property name="height">1.6in</property>
-                        <property name="width">1.53in</property>
+                        <property name="height">120pt</property>
+                        <property name="width">220pt</property>
                         <property name="dataSet">Data Set</property>
                         <list-property name="boundDataColumns">
                             <structure>
                                 <property name="name">Metric</property>
+                                <text-property name="displayName">Metric</text-property>
                                 <expression name="expression" type="javascript">dataSetRow["Metric"]</expression>
                                 <property name="dataType">string</property>
                             </structure>
                             <structure>
                                 <property name="name">Amt</property>
-                                <expression name="expression" type="javascript">dataSetRow["Amt"]</expression>
+                                <text-property name="displayName">Amt</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["Amt"] + ( Math.floor(Math.random() * 8) - 0 ) * 1;</expression>
                                 <property name="dataType">float</property>
+                                <property name="allowExport">true</property>
                             </structure>
                             <structure>
                                 <property name="name">CurrentOrGoal</property>
+                                <text-property name="displayName">CurrentOrGoal</text-property>
                                 <expression name="expression" type="javascript">dataSetRow["CurrentOrGoal"]</expression>
                                 <property name="dataType">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">amt_new</property>
+                                <expression name="expression" type="javascript">row["Amt"]</expression>
+                                <property name="dataType">float</property>
+                                <property name="allowExport">true</property>
                             </structure>
                         </list-property>
                     </extended-item>
                 </cell>
+                <cell id="1260">
+                    <property name="textAlign">center</property>
+                    <property name="verticalAlign">middle</property>
+                    <text-data id="1250">
+                        <property name="fontSize">22px</property>
+                        <property name="fontWeight">400</property>
+                        <property name="color">#777777</property>
+                        <property name="paddingRight">100px</property>
+                        <property name="dataBindingRef">Chart1</property>
+                        <expression name="valueExpr">var creditLimit = 20000 + (Math.floor(Math.random() * 9) * 2500);&#13;
+var currentCreditLimit = (row["amt_new"]/100) * creditLimit;&#13;
+&#13;
+'$' + Formatter.format(currentCreditLimit,  '#,##0{RoundingMode=HALF_UP}') + ' ╱ $' + Formatter.format(creditLimit,  '#,##0{RoundingMode=HALF_UP}');</expression>
+                        <property name="contentType">html</property>
+                    </text-data>
+                </cell>
+            </row>
+            <row id="1268">
+                <cell id="1269">
+                    <property name="colSpan">2</property>
+                    <property name="rowSpan">1</property>
+                    <property name="textAlign">center</property>
+                    <label id="1248">
+                        <property name="fontWeight">200</property>
+                        <property name="color">#333333</property>
+                        <property name="paddingTop">26px</property>
+                        <property name="paddingBottom">0pt</property>
+                        <text-property name="text">Retirement Goal</text-property>
+                    </label>
+                </cell>
             </row>
             <row id="1235">
                 <cell id="1236">
-                    <extended-item extensionName="Chart" name="Chart2" id="176">
+                    <property name="textAlign">center</property>
+                    <property name="verticalAlign">middle</property>
+                    <extended-item extensionName="Chart" name="Chart2" id="1251">
                         <xml-property name="xmlRepresentation"><![CDATA[<ActuateChart version="2.6.1">
- <ChartWithoutAxes version="2.6.1" type="Pie Chart" subType="Standard" script="&#10;/**&#10; * Called after populating the series dataset.&#10; * &#10; * @param series&#10; *            Series&#10; * @param dataSet&#10; *            DataSet&#10; * @param icsc&#10; *            IChartScriptContext&#10; */&#10;&#10;function afterDataSetFilled( series, dataSet, icsc )&#10;{&#10; if( series.getSeriesIdentifier() == &quot;Series 1&quot; )&#10; {&#10;  var list = dataSet.getValues();&#10;  }&#10;}&#10;&#10;">
+ <ChartWithoutAxes version="2.6.1" type="Pie Chart" subType="Standard">
   <block>
-   <children _type="TitleBlock" anchor="0">
+   <children _type="TitleBlock" visible="false">
     <outline>
      <color _nil="1"/>
     </outline>
     <label>
-     <caption>
-      <font name="Lato" size="16.0" bold="true" rotation="90.0"/>
-      <color _body=",255,0,121,193"/>
-     </caption>
      <background _nil="1"/>
      <outline>
       <color _nil="1"/>
@@ -533,7 +582,6 @@ chart4.getReportItem().getProperty("chart.instance").getTitle().getLabel().getCa
     <outline>
      <color _nil="1"/>
     </outline>
-    <cursor type="0"/>
     <clientArea>
      <outline>
       <color _nil="1"/>
@@ -549,18 +597,17 @@ chart4.getReportItem().getProperty("chart.instance").getTitle().getLabel().getCa
      </outline>
     </title>
    </children>
-   <bounds _body="0.0,0.0,572.25,286.125"/>
-   <insets _body="0.0,0.0,0.0,0.0"/>
-   <outline visible="false">
+   <bounds _body="0.0,0.0,305.25,139.5"/>
+   <outline>
     <color _nil="1"/>
    </outline>
-   <cursor type="0"/>
   </block>
   <extendedProperties name="enable.area.alt" value="false"/>
   <extendedProperties name="enable.drill.category" value="true"/>
   <extendedProperties name="enable.drill.series" value="true"/>
-  <extendedProperties name="jschart.client.script" value="/**&#13;&#10; * Called before chart instance is initially created.&#13;&#10; *&#13;&#10; * @param options&#13;&#10; *            chart options&#13;&#10; */&#13;&#10;beforeGeneration: function(options)&#13;&#10;{&#13;&#10;    //You can change options here.&#13;&#10;    options.title = &#13;&#10;        {&#13;&#10;        verticalAlign: &#039;middle&#039;,&#13;&#10;        },&#13;&#10;    options.subtitle = &#13;&#10;        {&#13;&#10;        text: &#039;Retirement Goal&#039;,&#13;&#10;            style: {&#13;&#10;                fontFamily: &#039;Lato&#039;&#13;&#10;            },&#13;&#10;        verticalAlign: &#039;bottom&#039;,&#13;&#10;        floating: true,&#13;&#10;        },&#13;&#10;    options.plotOptions = &#13;&#10;    {&#13;&#10;           pie: {&#13;&#10;            size: &quot;100%&quot;&#13;&#10;            }&#13;&#10;    },&#13;&#10;    options.chart = &#13;&#10;        {&#13;&#10;            spacingLeft: 0,&#13;&#10;            spacingRight:0,&#13;&#10;            spacingBottom:0,&#13;&#10;            spacingTop:0,&#13;&#10;        }&#13;&#10;},"/>
+  <extendedProperties name="jschart.animation" value="false"/>
   <extendedProperties name="jschart.series.shadow" value="false"/>
+  <extendedProperties name="jschart.client.script" value="beforeGeneration: function(options)&#13;&#10;{&#13;&#10;//////////  HELPER FUNCTION TO CLONE JAVASCRIPT OBJECT&#13;&#10;///&#13;&#10;///&#13;&#10;function clone(obj) {&#13;&#10;    var copy;&#13;&#10;&#13;&#10;    if (null == obj || &quot;object&quot; != typeof obj) return obj;&#13;&#10;&#13;&#10;    // Handle Array&#13;&#10;    if (obj instanceof Array) {&#13;&#10;        copy = [];&#13;&#10;        for (var i = 0, len = obj.length; i &lt; len; i++) {&#13;&#10;            copy[i] = clone(obj[i]);&#13;&#10;        }&#13;&#10;        return copy;&#13;&#10;    }&#13;&#10;&#13;&#10;    // Handle Object&#13;&#10;    if (obj instanceof Object) {&#13;&#10;        copy = {};&#13;&#10;        for (var attr in obj) {&#13;&#10;            if (obj.hasOwnProperty(attr)) copy[attr] = clone(obj[attr]);&#13;&#10;        }&#13;&#10;        return copy;&#13;&#10;    }&#13;&#10;    throw new Error(&quot;Unable to copy obj.&quot;);&#13;&#10;}&#13;&#10;&#13;&#10;//&#13;&#10;// For the inner donut/pie/arc, we need to fill the other side (100 - row)&#13;&#10;// &#13;&#10;    var element = {};&#13;&#10;    element.name = &#039;filler&#039;;&#13;&#10;    element.y=(100 - options.series[0].data[0].y);&#13;&#10;    options.series[0].data.push(element);&#13;&#10;&#13;&#10;    //UNCOMMENT FOR STOP LIGHT COLORS&#13;&#10;    //&#13;&#10;    //if (options.series[0].data[0].y &lt;= 50) options.colors = [&#039;#722b22&#039;];&#13;&#10;    //else if (options.series[0].data[0].y &gt; 50 &amp;&amp; options.series[0].data[0].y &lt; 89) options.colors = [&#039;#e08e18&#039;];&#13;&#10;    //else options.colors = [&#039;#227247&#039;];&#13;&#10;    options.colors = [&#039;#bdd1ec&#039;];&#13;&#10;//&#13;&#10;// Create an outer donut/pie/arc.  Make it 100% and change the innerSize and Size.&#13;&#10;//&#13;&#10;    var copy = clone(options.series[0]);&#13;&#10;    copy.data.pop();&#13;&#10;    copy.data.pop();&#13;&#10;&#13;&#10;    element = {};&#13;&#10;    element.name = &#039;small-inner&#039;;&#13;&#10;    element.y = 100;&#13;&#10;    element.color = &#039;#D4D8E2&#039;;&#13;&#10;&#13;&#10;    copy.data.push(element);&#13;&#10;    &#13;&#10;    copy.size=&#039;93%&#039;;&#13;&#10;    copy.innerSize=&#039;85%&#039;;&#13;&#10;&#13;&#10;// &#13;&#10;// Instead of pushing, we unshift and put it in the front of the array so it will display on the bottom&#13;&#10;// &#13;&#10;    options.series.unshift (copy);&#13;&#10;&#13;&#10;//&#13;&#10;// Make the top slice larger&#13;&#10;//&#13;&#10;    options.series[1].size=&#039;100%&#039;;&#13;&#10;    options.series[1].innerSize=&#039;70%&#039;;&#13;&#10;&#13;&#10;&#13;&#10;//&#13;&#10;// Add the text&#13;&#10;//&#13;&#10;        options.title = {&#13;&#10;            useHTML: true,&#13;&#10;            verticalAlign: &#039;middle&#039;,&#13;&#10;            style: {&#13;&#10;                fontFamily: &#039;canada-type-gibson,Dotum,canada-type-gibson&#039;&#13;&#10;            },&#13;&#10;            text: &#039;&lt;div style=&quot;position:absolute;top:4px;left:-22px&quot;&gt;&lt;tspan style=&quot;color:#6B98E5;font-size:24px;font-weight:800;&quot;&gt;&#039; + options.series[1].data[0].y + &#039;%&lt;/tspan&gt;&lt;/div&gt;&#039;&#13;&#10;        };&#13;&#10;&#13;&#10;&#13;&#10;options.chart.spacingTop=0;&#13;&#10;//options.chart.spacingBottom=15;&#13;&#10;&#13;&#10;//options.chart.margin = [0,0,0,0];&#13;&#10;&#13;&#10;options.chart.marginTop=0;&#13;&#10;options.chart.marginLeft=0;&#13;&#10;options.chart.marginRight=0;&#13;&#10;options.chart.marginBottom=2;&#13;&#10;},"/>
   <sampleData>
    <baseSampleData dataSetRepresentation="&#039;A&#039;,&#039;B&#039;,&#039;C&#039;,&#039;D&#039;,&#039;E&#039;"/>
    <orthogonalSampleData dataSetRepresentation="6,4,12,8,10" seriesDefinitionIndex="0"/>
@@ -576,10 +623,10 @@ chart4.getReportItem().getProperty("chart.instance").getTitle().getLabel().getCa
   <seriesDefinitions>
    <query definition=""/>
    <seriesPalette>
-    <entries _body=",255,106,138,199"/>
-    <entries _body=",255,226,224,220"/>
-    <entries _body=",255,232,172,57"/>
-    <entries _body=",255,128,255,128"/>
+    <entries _body=",255,95,146,222"/>
+    <entries _body=",0,255,255,255"/>
+    <entries _body=",0,255,255,255"/>
+    <entries _body=",0,255,255,255"/>
     <entries _body=",255,64,128,128"/>
     <entries _body=",255,128,128,192"/>
     <entries _body=",255,170,85,85"/>
@@ -612,10 +659,10 @@ chart4.getReportItem().getProperty("chart.instance").getTitle().getLabel().getCa
    <seriesDefinitions>
     <query definition=""/>
     <seriesPalette>
-     <entries _body=",255,106,138,199"/>
-     <entries _body=",255,226,224,220"/>
-     <entries _body=",255,232,172,57"/>
-     <entries _body=",255,128,255,128"/>
+     <entries _body=",255,95,146,222"/>
+     <entries _body=",0,255,255,255"/>
+     <entries _body=",0,255,255,255"/>
+     <entries _body=",0,255,255,255"/>
      <entries _body=",255,64,128,128"/>
      <entries _body=",255,128,128,192"/>
      <entries _body=",255,170,85,85"/>
@@ -645,7 +692,7 @@ chart4.getReportItem().getProperty("chart.instance").getTitle().getLabel().getCa
      <entries _body=",255,255,255,255"/>
      <entries _body=",255,255,128,0"/>
     </seriesPalette>
-    <series _type="PieSeries" seriesIdentifier="Series 1" labelPosition="4" rotation="90.0" innerRadius="75.0" innerRadiusPercent="true">
+    <series _type="PieSeries" seriesIdentifier="Series 1" rotation="90.0" innerRadius="130.0" innerRadiusPercent="false">
      <label visible="false">
       <background _nil="1"/>
       <outline>
@@ -653,13 +700,8 @@ chart4.getReportItem().getProperty("chart.instance").getTitle().getLabel().getCa
       </outline>
      </label>
      <dataDefinition definition="row[&quot;Amt&quot;]">
-      <grouping>
-       <aggregateParameters _body="0"/>
-      </grouping>
+      <grouping/>
      </dataDefinition>
-     <dataPoint prefix="" separator="">
-      <components type="3"/>
-     </dataPoint>
      <cursor type="0"/>
      <title>
       <background _nil="1"/>
@@ -668,6 +710,7 @@ chart4.getReportItem().getProperty("chart.instance").getTitle().getLabel().getCa
       </outline>
      </title>
      <leaderLineAttributes visible="false"/>
+     <sliceOutline _body=",0,255,255,255"/>
     </series>
    </seriesDefinitions>
    <series seriesIdentifier="">
@@ -677,7 +720,7 @@ chart4.getReportItem().getProperty("chart.instance").getTitle().getLabel().getCa
       <color _nil="1"/>
      </outline>
     </label>
-    <dataDefinition definition="row[&quot;CurrentOrGoal&quot;]"/>
+    <dataDefinition definition="row[&quot;Metric&quot;]"/>
     <curveFitting _nil="1"/>
    </series>
    <grouping enabled="true"/>
@@ -695,46 +738,92 @@ chart4.getReportItem().getProperty("chart.instance").getTitle().getLabel().getCa
                                 </simple-property-list>
                                 <property name="updateAggregation">true</property>
                             </structure>
+                            <structure>
+                                <property name="operator">eq</property>
+                                <expression name="expr" type="javascript">row["CurrentOrGoal"]</expression>
+                                <simple-property-list name="value1">
+                                    <value type="javascript">"C"</value>
+                                </simple-property-list>
+                                <property name="updateAggregation">true</property>
+                            </structure>
                         </list-property>
                         <property name="inheritColumns">false</property>
-                        <property name="height">1.6in</property>
-                        <property name="width">1.53in</property>
+                        <property name="height">120pt</property>
+                        <property name="width">220pt</property>
                         <property name="dataSet">Data Set</property>
                         <list-property name="boundDataColumns">
                             <structure>
                                 <property name="name">Metric</property>
+                                <text-property name="displayName">Metric</text-property>
                                 <expression name="expression" type="javascript">dataSetRow["Metric"]</expression>
                                 <property name="dataType">string</property>
                             </structure>
                             <structure>
                                 <property name="name">Amt</property>
-                                <expression name="expression" type="javascript">dataSetRow["Amt"]</expression>
+                                <text-property name="displayName">Amt</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["Amt"]+ ( Math.floor(Math.random() * 9) + 2 ) * 4;</expression>
                                 <property name="dataType">float</property>
+                                <property name="allowExport">true</property>
                             </structure>
                             <structure>
                                 <property name="name">CurrentOrGoal</property>
+                                <text-property name="displayName">CurrentOrGoal</text-property>
                                 <expression name="expression" type="javascript">dataSetRow["CurrentOrGoal"]</expression>
                                 <property name="dataType">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">amt_new</property>
+                                <expression name="expression" type="javascript">row["Amt"]</expression>
+                                <property name="dataType">float</property>
+                                <property name="allowExport">true</property>
                             </structure>
                         </list-property>
                     </extended-item>
                 </cell>
+                <cell id="1261">
+                    <property name="textAlign">center</property>
+                    <property name="verticalAlign">middle</property>
+                    <text-data id="1254">
+                        <property name="fontSize">22px</property>
+                        <property name="fontWeight">400</property>
+                        <property name="color">#777777</property>
+                        <property name="paddingRight">100px</property>
+                        <property name="dataBindingRef">Chart2</property>
+                        <expression name="valueExpr">var creditLimit = 500000 + (Math.floor(Math.random() * 9) * 20000);&#13;
+var currentCreditLimit = (row["amt_new"]/100) * creditLimit;&#13;
+&#13;
+'$' + Formatter.format(currentCreditLimit,  '#,##0{RoundingMode=HALF_UP}') + ' ╱ $' + Formatter.format(creditLimit,  '#,##0{RoundingMode=HALF_UP}');</expression>
+                        <property name="contentType">html</property>
+                    </text-data>
+                </cell>
+            </row>
+            <row id="1271">
+                <cell id="1272">
+                    <property name="colSpan">2</property>
+                    <property name="rowSpan">1</property>
+                    <property name="textAlign">center</property>
+                    <label id="1259">
+                        <property name="fontWeight">200</property>
+                        <property name="color">#333333</property>
+                        <property name="paddingTop">26px</property>
+                        <property name="paddingBottom">0pt</property>
+                        <text-property name="text">Spending Limit</text-property>
+                    </label>
+                </cell>
             </row>
             <row id="1245">
                 <cell id="1246">
-                    <extended-item extensionName="Chart" name="Chart3" id="177">
+                    <property name="textAlign">center</property>
+                    <property name="verticalAlign">middle</property>
+                    <extended-item extensionName="Chart" name="Chart3" id="1257">
                         <xml-property name="xmlRepresentation"><![CDATA[<ActuateChart version="2.6.1">
- <ChartWithoutAxes version="2.6.1" type="Pie Chart" subType="Standard" script="&#10;/**&#10; * Called after populating the series dataset.&#10; * &#10; * @param series&#10; *            Series&#10; * @param dataSet&#10; *            DataSet&#10; * @param icsc&#10; *            IChartScriptContext&#10; */&#10;&#10;function afterDataSetFilled( series, dataSet, icsc )&#10;{&#10; if( series.getSeriesIdentifier() == &quot;Series 1&quot; )&#10; {&#10;  var list = dataSet.getValues();&#10;  }&#10;}&#10;&#10;">
+ <ChartWithoutAxes version="2.6.1" type="Pie Chart" subType="Standard">
   <block>
-   <children _type="TitleBlock" anchor="0">
+   <children _type="TitleBlock" visible="false">
     <outline>
      <color _nil="1"/>
     </outline>
     <label>
-     <caption>
-      <font name="Lato" size="16.0" bold="true" rotation="90.0"/>
-      <color _body=",255,0,121,193"/>
-     </caption>
      <background _nil="1"/>
      <outline>
       <color _nil="1"/>
@@ -755,7 +844,6 @@ chart4.getReportItem().getProperty("chart.instance").getTitle().getLabel().getCa
     <outline>
      <color _nil="1"/>
     </outline>
-    <cursor type="0"/>
     <clientArea>
      <outline>
       <color _nil="1"/>
@@ -771,18 +859,17 @@ chart4.getReportItem().getProperty("chart.instance").getTitle().getLabel().getCa
      </outline>
     </title>
    </children>
-   <bounds _body="0.0,0.0,572.25,286.125"/>
-   <insets _body="0.0,0.0,0.0,0.0"/>
+   <bounds _body="0.0,0.0,305.25,139.5"/>
    <outline>
     <color _nil="1"/>
    </outline>
-   <cursor type="0"/>
   </block>
   <extendedProperties name="enable.area.alt" value="false"/>
   <extendedProperties name="enable.drill.category" value="true"/>
   <extendedProperties name="enable.drill.series" value="true"/>
-  <extendedProperties name="jschart.client.script" value="/**&#13;&#10; * Called before chart instance is initially created.&#13;&#10; *&#13;&#10; * @param options&#13;&#10; *            chart options&#13;&#10; */&#13;&#10;beforeGeneration: function(options)&#13;&#10;{&#13;&#10;    //You can change options here.&#13;&#10;    options.title = &#13;&#10;        {&#13;&#10;        verticalAlign: &#039;middle&#039;,&#13;&#10;        },&#13;&#10;    options.subtitle = &#13;&#10;        {&#13;&#10;        text: &#039;Spending Limit&#039;,&#13;&#10;            style: {&#13;&#10;                fontFamily: &#039;Lato&#039;&#13;&#10;            },&#13;&#10;        verticalAlign: &#039;bottom&#039;,&#13;&#10;        floating: true,&#13;&#10;        },&#13;&#10;    options.plotOptions = &#13;&#10;    {&#13;&#10;           pie: {&#13;&#10;            size: &quot;100%&quot;&#13;&#10;            }&#13;&#10;    },&#13;&#10;    options.chart = &#13;&#10;        {&#13;&#10;            spacingLeft: 0,&#13;&#10;            spacingRight:0,&#13;&#10;            spacingBottom:0,&#13;&#10;            spacingTop:0,&#13;&#10;        }&#13;&#10;},"/>
+  <extendedProperties name="jschart.animation" value="false"/>
   <extendedProperties name="jschart.series.shadow" value="false"/>
+  <extendedProperties name="jschart.client.script" value="beforeGeneration: function(options)&#13;&#10;{&#13;&#10;//////////  HELPER FUNCTION TO CLONE JAVASCRIPT OBJECT&#13;&#10;///&#13;&#10;///&#13;&#10;function clone(obj) {&#13;&#10;    var copy;&#13;&#10;&#13;&#10;    if (null == obj || &quot;object&quot; != typeof obj) return obj;&#13;&#10;&#13;&#10;    // Handle Array&#13;&#10;    if (obj instanceof Array) {&#13;&#10;        copy = [];&#13;&#10;        for (var i = 0, len = obj.length; i &lt; len; i++) {&#13;&#10;            copy[i] = clone(obj[i]);&#13;&#10;        }&#13;&#10;        return copy;&#13;&#10;    }&#13;&#10;&#13;&#10;    // Handle Object&#13;&#10;    if (obj instanceof Object) {&#13;&#10;        copy = {};&#13;&#10;        for (var attr in obj) {&#13;&#10;            if (obj.hasOwnProperty(attr)) copy[attr] = clone(obj[attr]);&#13;&#10;        }&#13;&#10;        return copy;&#13;&#10;    }&#13;&#10;    throw new Error(&quot;Unable to copy obj.&quot;);&#13;&#10;}&#13;&#10;&#13;&#10;//&#13;&#10;// For the inner donut/pie/arc, we need to fill the other side (100 - row)&#13;&#10;// &#13;&#10;    var element = {};&#13;&#10;    element.name = &#039;filler&#039;;&#13;&#10;    element.y=(100 - options.series[0].data[0].y);&#13;&#10;    options.series[0].data.push(element);&#13;&#10;&#13;&#10;    //UNCOMMENT FOR STOP LIGHT COLORS&#13;&#10;    //&#13;&#10;    //if (options.series[0].data[0].y &lt;= 50) options.colors = [&#039;#722b22&#039;];&#13;&#10;    //else if (options.series[0].data[0].y &gt; 50 &amp;&amp; options.series[0].data[0].y &lt; 89) options.colors = [&#039;#e08e18&#039;];&#13;&#10;    //else options.colors = [&#039;#227247&#039;];&#13;&#10;    options.colors = [&#039;#0853d3&#039;];&#13;&#10;//&#13;&#10;// Create an outer donut/pie/arc.  Make it 100% and change the innerSize and Size.&#13;&#10;//&#13;&#10;    var copy = clone(options.series[0]);&#13;&#10;    copy.data.pop();&#13;&#10;    copy.data.pop();&#13;&#10;&#13;&#10;    element = {};&#13;&#10;    element.name = &#039;small-inner&#039;;&#13;&#10;    element.y = 100;&#13;&#10;    element.color = &#039;#D4D8E2&#039;;&#13;&#10;&#13;&#10;    copy.data.push(element);&#13;&#10;    &#13;&#10;    copy.size=&#039;93%&#039;;&#13;&#10;    copy.innerSize=&#039;85%&#039;;&#13;&#10;&#13;&#10;// &#13;&#10;// Instead of pushing, we unshift and put it in the front of the array so it will display on the bottom&#13;&#10;// &#13;&#10;    options.series.unshift (copy);&#13;&#10;&#13;&#10;//&#13;&#10;// Make the top slice larger&#13;&#10;//&#13;&#10;    options.series[1].size=&#039;100%&#039;;&#13;&#10;    options.series[1].innerSize=&#039;70%&#039;;&#13;&#10;&#13;&#10;&#13;&#10;//&#13;&#10;// Add the text&#13;&#10;//&#13;&#10;        options.title = {&#13;&#10;            useHTML: true,&#13;&#10;            verticalAlign: &#039;middle&#039;,&#13;&#10;            style: {&#13;&#10;                fontFamily: &#039;canada-type-gibson,Dotum,canada-type-gibson&#039;&#13;&#10;            },&#13;&#10;            text: &#039;&lt;div style=&quot;position:absolute;top:4px;left:-22px&quot;&gt;&lt;tspan style=&quot;color:#6B98E5;font-size:24px;font-weight:800;&quot;&gt;&#039; + options.series[1].data[0].y + &#039;%&lt;/tspan&gt;&lt;/div&gt;&#039;&#13;&#10;        };&#13;&#10;&#13;&#10;&#13;&#10;options.chart.spacingTop=0;&#13;&#10;//options.chart.spacingBottom=15;&#13;&#10;&#13;&#10;//options.chart.margin = [0,0,0,0];&#13;&#10;&#13;&#10;options.chart.marginTop=0;&#13;&#10;options.chart.marginLeft=0;&#13;&#10;options.chart.marginRight=0;&#13;&#10;options.chart.marginBottom=2;&#13;&#10;},"/>
   <sampleData>
    <baseSampleData dataSetRepresentation="&#039;A&#039;,&#039;B&#039;,&#039;C&#039;,&#039;D&#039;,&#039;E&#039;"/>
    <orthogonalSampleData dataSetRepresentation="6,4,12,8,10" seriesDefinitionIndex="0"/>
@@ -798,10 +885,10 @@ chart4.getReportItem().getProperty("chart.instance").getTitle().getLabel().getCa
   <seriesDefinitions>
    <query definition=""/>
    <seriesPalette>
-    <entries _body=",255,106,138,199"/>
-    <entries _body=",255,226,224,220"/>
-    <entries _body=",255,232,172,57"/>
-    <entries _body=",255,128,255,128"/>
+    <entries _body=",255,95,146,222"/>
+    <entries _body=",0,255,255,255"/>
+    <entries _body=",0,255,255,255"/>
+    <entries _body=",0,255,255,255"/>
     <entries _body=",255,64,128,128"/>
     <entries _body=",255,128,128,192"/>
     <entries _body=",255,170,85,85"/>
@@ -834,10 +921,10 @@ chart4.getReportItem().getProperty("chart.instance").getTitle().getLabel().getCa
    <seriesDefinitions>
     <query definition=""/>
     <seriesPalette>
-     <entries _body=",255,106,138,199"/>
-     <entries _body=",255,226,224,220"/>
-     <entries _body=",255,232,172,57"/>
-     <entries _body=",255,128,255,128"/>
+     <entries _body=",255,95,146,222"/>
+     <entries _body=",0,255,255,255"/>
+     <entries _body=",0,255,255,255"/>
+     <entries _body=",0,255,255,255"/>
      <entries _body=",255,64,128,128"/>
      <entries _body=",255,128,128,192"/>
      <entries _body=",255,170,85,85"/>
@@ -867,7 +954,7 @@ chart4.getReportItem().getProperty("chart.instance").getTitle().getLabel().getCa
      <entries _body=",255,255,255,255"/>
      <entries _body=",255,255,128,0"/>
     </seriesPalette>
-    <series _type="PieSeries" seriesIdentifier="Series 1" labelPosition="4" rotation="90.0" innerRadius="75.0" innerRadiusPercent="true">
+    <series _type="PieSeries" seriesIdentifier="Series 1" rotation="90.0" innerRadius="130.0" innerRadiusPercent="false">
      <label visible="false">
       <background _nil="1"/>
       <outline>
@@ -875,13 +962,8 @@ chart4.getReportItem().getProperty("chart.instance").getTitle().getLabel().getCa
       </outline>
      </label>
      <dataDefinition definition="row[&quot;Amt&quot;]">
-      <grouping>
-       <aggregateParameters _body="0"/>
-      </grouping>
+      <grouping/>
      </dataDefinition>
-     <dataPoint prefix="" separator="">
-      <components type="3"/>
-     </dataPoint>
      <cursor type="0"/>
      <title>
       <background _nil="1"/>
@@ -890,6 +972,7 @@ chart4.getReportItem().getProperty("chart.instance").getTitle().getLabel().getCa
       </outline>
      </title>
      <leaderLineAttributes visible="false"/>
+     <sliceOutline _body=",0,255,255,255"/>
     </series>
    </seriesDefinitions>
    <series seriesIdentifier="">
@@ -899,7 +982,7 @@ chart4.getReportItem().getProperty("chart.instance").getTitle().getLabel().getCa
       <color _nil="1"/>
      </outline>
     </label>
-    <dataDefinition definition="row[&quot;CurrentOrGoal&quot;]"/>
+    <dataDefinition definition="row[&quot;Metric&quot;]"/>
     <curveFitting _nil="1"/>
    </series>
    <grouping enabled="true"/>
@@ -917,46 +1000,91 @@ chart4.getReportItem().getProperty("chart.instance").getTitle().getLabel().getCa
                                 </simple-property-list>
                                 <property name="updateAggregation">true</property>
                             </structure>
+                            <structure>
+                                <property name="operator">eq</property>
+                                <expression name="expr" type="javascript">row["CurrentOrGoal"]</expression>
+                                <simple-property-list name="value1">
+                                    <value type="javascript">"C"</value>
+                                </simple-property-list>
+                                <property name="updateAggregation">true</property>
+                            </structure>
                         </list-property>
                         <property name="inheritColumns">false</property>
-                        <property name="height">1.6in</property>
-                        <property name="width">1.53in</property>
+                        <property name="height">120pt</property>
+                        <property name="width">220pt</property>
                         <property name="dataSet">Data Set</property>
                         <list-property name="boundDataColumns">
                             <structure>
                                 <property name="name">Metric</property>
+                                <text-property name="displayName">Metric</text-property>
                                 <expression name="expression" type="javascript">dataSetRow["Metric"]</expression>
                                 <property name="dataType">string</property>
                             </structure>
                             <structure>
                                 <property name="name">Amt</property>
-                                <expression name="expression" type="javascript">dataSetRow["Amt"]</expression>
+                                <text-property name="displayName">Amt</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["Amt"]+ ( Math.floor(Math.random() * 9) - 4 ) * 1;</expression>
                                 <property name="dataType">float</property>
+                                <property name="allowExport">true</property>
                             </structure>
                             <structure>
                                 <property name="name">CurrentOrGoal</property>
+                                <text-property name="displayName">CurrentOrGoal</text-property>
                                 <expression name="expression" type="javascript">dataSetRow["CurrentOrGoal"]</expression>
                                 <property name="dataType">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">amt_new</property>
+                                <expression name="expression" type="javascript">row["Amt"]</expression>
+                                <property name="dataType">float</property>
+                                <property name="allowExport">true</property>
                             </structure>
                         </list-property>
                     </extended-item>
                 </cell>
+                <cell id="1262">
+                    <property name="textAlign">center</property>
+                    <property name="verticalAlign">middle</property>
+                    <text-data id="1258">
+                        <property name="fontSize">22px</property>
+                        <property name="fontWeight">400</property>
+                        <property name="color">#777777</property>
+                        <property name="paddingRight">100px</property>
+                        <property name="dataBindingRef">Chart2</property>
+                        <expression name="valueExpr">var creditLimit = 250000 + (Math.floor(Math.random() * 9) * 10000);&#13;
+var currentCreditLimit = (row["amt_new"]/100) * creditLimit;&#13;
+&#13;
+'$' + Formatter.format(currentCreditLimit,  '#,##0{RoundingMode=HALF_UP}') + ' ╱ $' + Formatter.format(creditLimit,  '#,##0{RoundingMode=HALF_UP}');</expression>
+                        <property name="contentType">html</property>
+                    </text-data>
+                </cell>
+            </row>
+            <row id="1274">
+                <cell id="1275">
+                    <property name="colSpan">2</property>
+                    <property name="rowSpan">1</property>
+                    <label id="1277">
+                        <property name="fontWeight">200</property>
+                        <property name="color">#333333</property>
+                        <property name="paddingTop">26px</property>
+                        <property name="paddingBottom">0pt</property>
+                        <text-property name="text">Loan Payoff</text-property>
+                    </label>
+                </cell>
             </row>
             <row id="1240">
                 <cell id="1241">
-                    <extended-item extensionName="Chart" name="Chart4" id="178">
+                    <property name="textAlign">center</property>
+                    <property name="verticalAlign">middle</property>
+                    <extended-item extensionName="Chart" name="Chart4" id="1278">
                         <xml-property name="xmlRepresentation"><![CDATA[<ActuateChart version="2.6.1">
- <ChartWithoutAxes version="2.6.1" type="Pie Chart" subType="Standard" script="&#10;/**&#10; * Called after populating the series dataset.&#10; * &#10; * @param series&#10; *            Series&#10; * @param dataSet&#10; *            DataSet&#10; * @param icsc&#10; *            IChartScriptContext&#10; */&#10;&#10;function afterDataSetFilled( series, dataSet, icsc )&#10;{&#10; if( series.getSeriesIdentifier() == &quot;Series 1&quot; )&#10; {&#10;  var list = dataSet.getValues();&#10;  }&#10;}&#10;&#10;">
+ <ChartWithoutAxes version="2.6.1" type="Pie Chart" subType="Standard">
   <block>
-   <children _type="TitleBlock" anchor="0">
+   <children _type="TitleBlock" visible="false">
     <outline>
      <color _nil="1"/>
     </outline>
     <label>
-     <caption>
-      <font name="Lato" size="16.0" bold="true" rotation="90.0"/>
-      <color _body=",255,0,121,193"/>
-     </caption>
      <background _nil="1"/>
      <outline>
       <color _nil="1"/>
@@ -977,7 +1105,6 @@ chart4.getReportItem().getProperty("chart.instance").getTitle().getLabel().getCa
     <outline>
      <color _nil="1"/>
     </outline>
-    <cursor type="0"/>
     <clientArea>
      <outline>
       <color _nil="1"/>
@@ -993,18 +1120,17 @@ chart4.getReportItem().getProperty("chart.instance").getTitle().getLabel().getCa
      </outline>
     </title>
    </children>
-   <bounds _body="0.0,0.0,572.25,286.125"/>
-   <insets _body="0.0,0.0,0.0,0.0"/>
+   <bounds _body="0.0,0.0,305.25,139.5"/>
    <outline>
     <color _nil="1"/>
    </outline>
-   <cursor type="0"/>
   </block>
   <extendedProperties name="enable.area.alt" value="false"/>
   <extendedProperties name="enable.drill.category" value="true"/>
   <extendedProperties name="enable.drill.series" value="true"/>
-  <extendedProperties name="jschart.client.script" value="/**&#13;&#10; * Called before chart instance is initially created.&#13;&#10; *&#13;&#10; * @param options&#13;&#10; *            chart options&#13;&#10; */&#13;&#10;beforeGeneration: function(options)&#13;&#10;{&#13;&#10;    //You can change options here.&#13;&#10;    options.title = &#13;&#10;        {&#13;&#10;        verticalAlign: &#039;middle&#039;,&#13;&#10;        },&#13;&#10;    options.subtitle = &#13;&#10;        {&#13;&#10;        text: &#039;Loan Payoff&#039;,&#13;&#10;            style: {&#13;&#10;                fontFamily: &#039;Lato&#039;&#13;&#10;            },&#13;&#10;        verticalAlign: &#039;bottom&#039;,&#13;&#10;        floating: true,&#13;&#10;        },&#13;&#10;    options.plotOptions = &#13;&#10;    {&#13;&#10;           pie: {&#13;&#10;            size: &quot;100%&quot;&#13;&#10;            }&#13;&#10;    },&#13;&#10;    options.chart = &#13;&#10;        {&#13;&#10;            spacingLeft: 0,&#13;&#10;            spacingRight:0,&#13;&#10;            spacingBottom:0,&#13;&#10;            spacingTop:0,&#13;&#10;        }&#13;&#10;},"/>
+  <extendedProperties name="jschart.animation" value="false"/>
   <extendedProperties name="jschart.series.shadow" value="false"/>
+  <extendedProperties name="jschart.client.script" value="beforeGeneration: function(options)&#13;&#10;{&#13;&#10;//////////  HELPER FUNCTION TO CLONE JAVASCRIPT OBJECT&#13;&#10;///&#13;&#10;///&#13;&#10;function clone(obj) {&#13;&#10;    var copy;&#13;&#10;&#13;&#10;    if (null == obj || &quot;object&quot; != typeof obj) return obj;&#13;&#10;&#13;&#10;    // Handle Array&#13;&#10;    if (obj instanceof Array) {&#13;&#10;        copy = [];&#13;&#10;        for (var i = 0, len = obj.length; i &lt; len; i++) {&#13;&#10;            copy[i] = clone(obj[i]);&#13;&#10;        }&#13;&#10;        return copy;&#13;&#10;    }&#13;&#10;&#13;&#10;    // Handle Object&#13;&#10;    if (obj instanceof Object) {&#13;&#10;        copy = {};&#13;&#10;        for (var attr in obj) {&#13;&#10;            if (obj.hasOwnProperty(attr)) copy[attr] = clone(obj[attr]);&#13;&#10;        }&#13;&#10;        return copy;&#13;&#10;    }&#13;&#10;    throw new Error(&quot;Unable to copy obj.&quot;);&#13;&#10;}&#13;&#10;&#13;&#10;//&#13;&#10;// For the inner donut/pie/arc, we need to fill the other side (100 - row)&#13;&#10;// &#13;&#10;    var element = {};&#13;&#10;    element.name = &#039;filler&#039;;&#13;&#10;    element.y=(100 - options.series[0].data[0].y);&#13;&#10;    options.series[0].data.push(element);&#13;&#10;&#13;&#10;    //UNCOMMENT FOR STOP LIGHT COLORS&#13;&#10;    //&#13;&#10;    //if (options.series[0].data[0].y &lt;= 50) options.colors = [&#039;#722b22&#039;];&#13;&#10;    //else if (options.series[0].data[0].y &gt; 50 &amp;&amp; options.series[0].data[0].y &lt; 89) options.colors = [&#039;#e08e18&#039;];&#13;&#10;    //else options.colors = [&#039;#227247&#039;];&#13;&#10;    options.colors = [&#039;#bdd7fc&#039;];&#13;&#10;//&#13;&#10;// Create an outer donut/pie/arc.  Make it 100% and change the innerSize and Size.&#13;&#10;//&#13;&#10;    var copy = clone(options.series[0]);&#13;&#10;    copy.data.pop();&#13;&#10;    copy.data.pop();&#13;&#10;&#13;&#10;    element = {};&#13;&#10;    element.name = &#039;small-inner&#039;;&#13;&#10;    element.y = 100;&#13;&#10;    element.color = &#039;#D4D8E2&#039;;&#13;&#10;&#13;&#10;    copy.data.push(element);&#13;&#10;    &#13;&#10;    copy.size=&#039;93%&#039;;&#13;&#10;    copy.innerSize=&#039;85%&#039;;&#13;&#10;&#13;&#10;// &#13;&#10;// Instead of pushing, we unshift and put it in the front of the array so it will display on the bottom&#13;&#10;// &#13;&#10;    options.series.unshift (copy);&#13;&#10;&#13;&#10;//&#13;&#10;// Make the top slice larger&#13;&#10;//&#13;&#10;    options.series[1].size=&#039;100%&#039;;&#13;&#10;    options.series[1].innerSize=&#039;70%&#039;;&#13;&#10;&#13;&#10;&#13;&#10;//&#13;&#10;// Add the text&#13;&#10;//&#13;&#10;        options.title = {&#13;&#10;            useHTML: true,&#13;&#10;            verticalAlign: &#039;middle&#039;,&#13;&#10;            style: {&#13;&#10;                fontFamily: &#039;canada-type-gibson,Dotum,canada-type-gibson&#039;&#13;&#10;            },&#13;&#10;            text: &#039;&lt;div style=&quot;position:absolute;top:4px;left:-22px&quot;&gt;&lt;tspan style=&quot;color:#6B98E5;font-size:24px;font-weight:800;&quot;&gt;&#039; + options.series[1].data[0].y + &#039;%&lt;/tspan&gt;&lt;/div&gt;&#039;&#13;&#10;        };&#13;&#10;&#13;&#10;&#13;&#10;options.chart.spacingTop=0;&#13;&#10;//options.chart.spacingBottom=15;&#13;&#10;&#13;&#10;//options.chart.margin = [0,0,0,0];&#13;&#10;&#13;&#10;options.chart.marginTop=0;&#13;&#10;options.chart.marginLeft=0;&#13;&#10;options.chart.marginRight=0;&#13;&#10;options.chart.marginBottom=2;&#13;&#10;},"/>
   <sampleData>
    <baseSampleData dataSetRepresentation="&#039;A&#039;,&#039;B&#039;,&#039;C&#039;,&#039;D&#039;,&#039;E&#039;"/>
    <orthogonalSampleData dataSetRepresentation="6,4,12,8,10" seriesDefinitionIndex="0"/>
@@ -1020,10 +1146,10 @@ chart4.getReportItem().getProperty("chart.instance").getTitle().getLabel().getCa
   <seriesDefinitions>
    <query definition=""/>
    <seriesPalette>
-    <entries _body=",255,106,138,199"/>
-    <entries _body=",255,226,224,220"/>
-    <entries _body=",255,232,172,57"/>
-    <entries _body=",255,128,255,128"/>
+    <entries _body=",255,95,146,222"/>
+    <entries _body=",0,255,255,255"/>
+    <entries _body=",0,255,255,255"/>
+    <entries _body=",0,255,255,255"/>
     <entries _body=",255,64,128,128"/>
     <entries _body=",255,128,128,192"/>
     <entries _body=",255,170,85,85"/>
@@ -1056,10 +1182,10 @@ chart4.getReportItem().getProperty("chart.instance").getTitle().getLabel().getCa
    <seriesDefinitions>
     <query definition=""/>
     <seriesPalette>
-     <entries _body=",255,106,138,199"/>
-     <entries _body=",255,226,224,220"/>
-     <entries _body=",255,232,172,57"/>
-     <entries _body=",255,128,255,128"/>
+     <entries _body=",255,95,146,222"/>
+     <entries _body=",0,255,255,255"/>
+     <entries _body=",0,255,255,255"/>
+     <entries _body=",0,255,255,255"/>
      <entries _body=",255,64,128,128"/>
      <entries _body=",255,128,128,192"/>
      <entries _body=",255,170,85,85"/>
@@ -1089,7 +1215,7 @@ chart4.getReportItem().getProperty("chart.instance").getTitle().getLabel().getCa
      <entries _body=",255,255,255,255"/>
      <entries _body=",255,255,128,0"/>
     </seriesPalette>
-    <series _type="PieSeries" seriesIdentifier="Series 1" labelPosition="4" rotation="90.0" innerRadius="75.0" innerRadiusPercent="true">
+    <series _type="PieSeries" seriesIdentifier="Series 1" rotation="90.0" innerRadius="130.0" innerRadiusPercent="false">
      <label visible="false">
       <background _nil="1"/>
       <outline>
@@ -1097,13 +1223,8 @@ chart4.getReportItem().getProperty("chart.instance").getTitle().getLabel().getCa
       </outline>
      </label>
      <dataDefinition definition="row[&quot;Amt&quot;]">
-      <grouping enabled="true" aggregateExpression="Count">
-       <aggregateParameters _body="0"/>
-      </grouping>
+      <grouping/>
      </dataDefinition>
-     <dataPoint prefix="" separator="">
-      <components type="3"/>
-     </dataPoint>
      <cursor type="0"/>
      <title>
       <background _nil="1"/>
@@ -1112,6 +1233,7 @@ chart4.getReportItem().getProperty("chart.instance").getTitle().getLabel().getCa
       </outline>
      </title>
      <leaderLineAttributes visible="false"/>
+     <sliceOutline _body=",0,255,255,255"/>
     </series>
    </seriesDefinitions>
    <series seriesIdentifier="">
@@ -1121,7 +1243,7 @@ chart4.getReportItem().getProperty("chart.instance").getTitle().getLabel().getCa
       <color _nil="1"/>
      </outline>
     </label>
-    <dataDefinition definition="row[&quot;CurrentOrGoal&quot;]"/>
+    <dataDefinition definition="row[&quot;Metric&quot;]"/>
     <curveFitting _nil="1"/>
    </series>
    <grouping enabled="true"/>
@@ -1139,29 +1261,63 @@ chart4.getReportItem().getProperty("chart.instance").getTitle().getLabel().getCa
                                 </simple-property-list>
                                 <property name="updateAggregation">true</property>
                             </structure>
+                            <structure>
+                                <property name="operator">eq</property>
+                                <expression name="expr" type="javascript">row["CurrentOrGoal"]</expression>
+                                <simple-property-list name="value1">
+                                    <value type="javascript">"C"</value>
+                                </simple-property-list>
+                                <property name="updateAggregation">true</property>
+                            </structure>
                         </list-property>
                         <property name="inheritColumns">false</property>
-                        <property name="height">1.6in</property>
-                        <property name="width">1.53in</property>
+                        <property name="height">120pt</property>
+                        <property name="width">220pt</property>
                         <property name="dataSet">Data Set</property>
                         <list-property name="boundDataColumns">
                             <structure>
                                 <property name="name">Metric</property>
+                                <text-property name="displayName">Metric</text-property>
                                 <expression name="expression" type="javascript">dataSetRow["Metric"]</expression>
                                 <property name="dataType">string</property>
                             </structure>
                             <structure>
                                 <property name="name">Amt</property>
-                                <expression name="expression" type="javascript">dataSetRow["Amt"]</expression>
+                                <text-property name="displayName">Amt</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["Amt"] + ( Math.floor(Math.random() * 9) - 4 ) * 2;</expression>
                                 <property name="dataType">float</property>
+                                <property name="allowExport">true</property>
                             </structure>
                             <structure>
                                 <property name="name">CurrentOrGoal</property>
+                                <text-property name="displayName">CurrentOrGoal</text-property>
                                 <expression name="expression" type="javascript">dataSetRow["CurrentOrGoal"]</expression>
                                 <property name="dataType">string</property>
                             </structure>
+                            <structure>
+                                <property name="name">amt_new</property>
+                                <expression name="expression" type="javascript">row["Amt"]</expression>
+                                <property name="dataType">float</property>
+                                <property name="allowExport">true</property>
+                            </structure>
                         </list-property>
                     </extended-item>
+                </cell>
+                <cell id="1263">
+                    <property name="textAlign">center</property>
+                    <property name="verticalAlign">middle</property>
+                    <text-data id="1279">
+                        <property name="fontSize">22px</property>
+                        <property name="fontWeight">400</property>
+                        <property name="color">#777777</property>
+                        <property name="paddingRight">100px</property>
+                        <property name="dataBindingRef">Chart2</property>
+                        <expression name="valueExpr">var creditLimit = 300000 + (Math.floor(Math.random() * 9) * 25000);&#13;
+var currentCreditLimit = (row["amt_new"]/100) * creditLimit;&#13;
+&#13;
+'$' + Formatter.format(currentCreditLimit,  '#,##0{RoundingMode=HALF_UP}') + ' ╱ $' + Formatter.format(creditLimit,  '#,##0{RoundingMode=HALF_UP}');</expression>
+                        <property name="contentType">html</property>
+                    </text-data>
                 </cell>
             </row>
         </grid>
@@ -1291,6 +1447,10 @@ if (row["Metric"] == 'Loan Payoff')
                         </cell>
                         <cell id="262">
                             <data id="270">
+                                <structure name="numberFormat">
+                                    <property name="category">Currency</property>
+                                    <property name="pattern">#,##0.00{RoundingMode=HALF_UP}</property>
+                                </structure>
                                 <property name="resultSetColumn">current</property>
                             </data>
                             <data id="271">

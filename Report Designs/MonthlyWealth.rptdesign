@@ -1,0 +1,774 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 4.29.0.v202504021847</property>
+    <property name="units">in</property>
+    <property name="iconFile">/templates/blank_report.gif</property>
+    <property name="layoutPreference">auto layout</property>
+    <property name="bidiLayoutOrientation">ltr</property>
+    <property name="imageDPI">96</property>
+    <list-property name="libraries">
+        <structure>
+            <property name="fileName">ThemesReportItems3.rptlibrary</property>
+            <property name="namespace">ThemesReportItems3</property>
+        </structure>
+    </list-property>
+    <property name="responsiveReport">true</property>
+    <data-sources>
+        <oda-data-source extensionID="org.eclipse.birt.report.data.oda.excel" name="Data Source" id="4">
+            <property name="URI">Flatfiles/DebtWealthRatio.xlsx</property>
+            <property name="INCLCOLUMNNAME">yes</property>
+            <property name="INCLTYPELINE">no</property>
+        </oda-data-source>
+    </data-sources>
+    <data-sets>
+        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.excel.dataSet" name="Ratio Data Set" id="5">
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">YearMonth</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">YearMonth</text-property>
+                    <text-property name="heading">YearMonth</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">TotalSpend</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">TotalSpend</text-property>
+                    <text-property name="heading">TotalSpend</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">TotalWealth</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">TotalWealth</text-property>
+                    <text-property name="heading">TotalWealth</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">DebtWealthRatio</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">DebtWealthRatio</text-property>
+                    <text-property name="heading">DebtWealthRatio</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">WealthPct</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">WealthPct</text-property>
+                    <text-property name="heading">WealthPct</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">DebtPct</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">DebtPct</text-property>
+                    <text-property name="heading">DebtPct</text-property>
+                </structure>
+            </list-property>
+            <list-property name="parameters"/>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">YearMonth</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">TotalSpend</property>
+                        <property name="dataType">float</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">TotalWealth</property>
+                        <property name="dataType">float</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">DebtWealthRatio</property>
+                        <property name="dataType">float</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">WealthPct</property>
+                        <property name="dataType">float</property>
+                    </structure>
+                    <structure>
+                        <property name="position">6</property>
+                        <property name="name">DebtPct</property>
+                        <property name="dataType">float</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Data Source</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">YearMonth</property>
+                    <property name="nativeName">YearMonth</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">4</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">TotalSpend</property>
+                    <property name="nativeName">TotalSpend</property>
+                    <property name="dataType">float</property>
+                    <property name="nativeDataType">8</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">TotalWealth</property>
+                    <property name="nativeName">TotalWealth</property>
+                    <property name="dataType">float</property>
+                    <property name="nativeDataType">8</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">DebtWealthRatio</property>
+                    <property name="nativeName">DebtWealthRatio</property>
+                    <property name="dataType">float</property>
+                    <property name="nativeDataType">8</property>
+                </structure>
+                <structure>
+                    <property name="position">5</property>
+                    <property name="name">WealthPct</property>
+                    <property name="nativeName">WealthPct</property>
+                    <property name="dataType">float</property>
+                    <property name="nativeDataType">8</property>
+                </structure>
+                <structure>
+                    <property name="position">6</property>
+                    <property name="name">DebtPct</property>
+                    <property name="nativeName">DebtPct</property>
+                    <property name="dataType">float</property>
+                    <property name="nativeDataType">8</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[select "YearMonth", "TotalSpend", "TotalWealth", "DebtWealthRatio", "WealthPct", "DebtPct" from "/C:/workspaces/workspace24.4/SFWealthApp/Flatfiles/DebtWealthRatio.xlsx" : {"YearMonth","YearMonth",INT;"TotalSpend","TotalSpend",DOUBLE;"TotalWealth","TotalWealth",DOUBLE;"DebtWealthRatio","DebtWealthRatio",DOUBLE;"WealthPct","WealthPct",DOUBLE;"DebtPct","DebtPct",DOUBLE}]]></xml-property>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>YearMonth</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>4</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+            <design:uiHints>
+              <design:displayName>YearMonth</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>YearMonth</design:label>
+            <design:formattingHints>
+              <design:displaySize>0</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>TotalSpend</design:name>
+              <design:position>2</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>8</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+            <design:uiHints>
+              <design:displayName>TotalSpend</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>TotalSpend</design:label>
+            <design:formattingHints>
+              <design:displaySize>0</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>TotalWealth</design:name>
+              <design:position>3</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>8</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+            <design:uiHints>
+              <design:displayName>TotalWealth</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>TotalWealth</design:label>
+            <design:formattingHints>
+              <design:displaySize>0</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>DebtWealthRatio</design:name>
+              <design:position>4</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>8</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+            <design:uiHints>
+              <design:displayName>DebtWealthRatio</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>DebtWealthRatio</design:label>
+            <design:formattingHints>
+              <design:displaySize>0</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria/>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+            <property name="WORKSHEETS">Ratio</property>
+        </oda-data-set>
+        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.excel.dataSet" name="Wealth Data Set" id="9">
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">WealthCategory</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">WealthCategory</text-property>
+                    <text-property name="heading">WealthCategory</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">WealthAmount</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">WealthAmount</text-property>
+                    <text-property name="heading">WealthAmount</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">YearMonth</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">YearMonth</text-property>
+                    <text-property name="heading">YearMonth</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">StatementDate</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">StatementDate</text-property>
+                    <text-property name="heading">StatementDate</text-property>
+                </structure>
+            </list-property>
+            <list-property name="parameters"/>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">WealthCategory</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">WealthAmount</property>
+                        <property name="dataType">float</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">YearMonth</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">StatementDate</property>
+                        <property name="dataType">date</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Data Source</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">WealthCategory</property>
+                    <property name="nativeName">WealthCategory</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">WealthAmount</property>
+                    <property name="nativeName">WealthAmount</property>
+                    <property name="dataType">float</property>
+                    <property name="nativeDataType">8</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">YearMonth</property>
+                    <property name="nativeName">YearMonth</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">4</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">StatementDate</property>
+                    <property name="nativeName">StatementDate</property>
+                    <property name="dataType">date</property>
+                    <property name="nativeDataType">91</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[select "WealthCategory", "WealthAmount", "YearMonth", "StatementDate" from "/C:/workspaces/workspace24.4/SFWealthApp/Flatfiles/DebtWealthRatio.xlsx" : {"WealthCategory","WealthCategory",STRING;"WealthAmount","WealthAmount",DOUBLE;"YearMonth","YearMonth",INT;"StatementDate","StatementDate",DATE}]]></xml-property>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>WealthCategory</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+            <design:uiHints>
+              <design:displayName>WealthCategory</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>WealthCategory</design:label>
+            <design:formattingHints>
+              <design:displaySize>0</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>WealthAmount</design:name>
+              <design:position>2</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>8</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+            <design:uiHints>
+              <design:displayName>WealthAmount</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>WealthAmount</design:label>
+            <design:formattingHints>
+              <design:displaySize>0</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>YearMonth</design:name>
+              <design:position>3</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>4</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+            <design:uiHints>
+              <design:displayName>YearMonth</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>YearMonth</design:label>
+            <design:formattingHints>
+              <design:displaySize>0</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria/>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+            <property name="WORKSHEETS">Wealth</property>
+        </oda-data-set>
+    </data-sets>
+    <page-setup>
+        <simple-master-page name="Simple MasterPage" id="2">
+            <property name="orientation">auto</property>
+            <page-footer>
+                <text id="3">
+                    <property name="contentType">html</property>
+                    <text-property name="content"><![CDATA[<value-of>new Date()</value-of>]]></text-property>
+                </text>
+            </page-footer>
+        </simple-master-page>
+    </page-setup>
+    <body>
+        <grid name="grid" id="13">
+            <property name="height">330px</property>
+            <property name="width">527px</property>
+            <expression name="bookmark" type="javascript">"grid"</expression>
+            <property name="captionFontSize">1.1vw</property>
+            <property name="captionTextAlignment">left</property>
+            <column id="14"/>
+            <row id="15">
+                <cell id="16">
+                    <extended-item extensionName="Chart" id="12">
+                        <xml-property name="xmlRepresentation"><![CDATA[<ActuateChart version="2.6.1">
+ <ChartWithAxes version="2.6.1" type="Line Chart" subType="Overlay">
+  <block>
+   <children _type="TitleBlock" visible="false">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <label>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </label>
+   </children>
+   <children _type="Plot">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <clientArea>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </clientArea>
+   </children>
+   <children _type="Legend" visible="false">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <cursor type="0"/>
+    <clientArea>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </clientArea>
+    <separator>
+     <color _nil="1"/>
+    </separator>
+    <title>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </title>
+   </children>
+   <bounds _body="0.0,0.0,572.25,286.125"/>
+   <outline>
+    <color _nil="1"/>
+   </outline>
+  </block>
+  <extendedProperties name="enable.area.alt" value="false"/>
+  <extendedProperties name="enable.drill.category" value="true"/>
+  <extendedProperties name="enable.drill.series" value="true"/>
+  <extendedProperties name="jschart.series.shadow" value="false"/>
+  <extendedProperties name="chart.marker.auto" value="false"/>
+  <extendedProperties name="jschart.client.script" value="beforeDrawSeries: function(series, seriesOptions, chart, seriesIndex)&#13;&#10;{&#13;&#10;    seriesOptions.animation = {&quot;duration&quot;: 4000};&#13;&#10;},&#13;&#10;&#13;&#10;/**&#13;&#10; * Called before chart instance is initially created.&#13;&#10; *&#13;&#10; * @param options&#13;&#10; *            chart options&#13;&#10; */&#13;&#10;beforeGeneration: function(options)&#13;&#10;{&#13;&#10;    options.tooltip = {&#13;&#10;        shared: true,&#13;&#10;        animation: false,&#13;&#10;        backgroundColor: &quot;#fff&quot;,&#13;&#10;        borderRadius: 5,&#13;&#10;        borderColor: &quot;#e1e1e1&quot;,&#13;&#10;        borderWidth: 1,&#13;&#10;        style: {&#13;&#10;            color:&quot;#363636&quot;,&#13;&#10;            fontFamily: &quot;Arial&quot;,&#13;&#10;            fontSize: &quot;12px&quot;,&#13;&#10;            fontWeight: 400,&#13;&#10;            padding: &quot;10px&quot;&#13;&#10;        },&#13;&#10;        useHTML: true,&#13;&#10;        formatter:  function () {&#13;&#10;            var arrMonths = [&quot;Feb&quot;, &quot;Mar&quot;, &quot;Apr&quot;, &quot;May&quot; ,&quot;Jun&quot;, &quot;Jul&quot;, &quot;Aug&quot;, &quot;Sep&quot;, &quot;Oct&quot;, &quot;Nov&quot;, &quot;Dec&quot;];&#13;&#10;            var	dt = new Date(this.points[0].x);&#13;&#10;            var fdt = arrMonths[dt.getMonth()] + &quot;-&quot; + dt.getFullYear().toString().slice(-2);&#13;&#10;            var s = {&quot;Total&quot;:&quot;&amp;#9679;&quot;, &quot;Managed ETF&quot;:&quot;&amp;#9670;&quot;, &quot;Managed Retirement&quot;:&quot;&amp;#9632;&quot;, &quot;Active Trading&quot;:&quot;&amp;#9650;&quot;, &quot;Finance One&quot;:&quot;&amp;#9660;&quot;};&#13;&#10;            &#13;&#10;            var total = this.points[0].y;&#13;&#10;            myTooltip = &#039;&lt;table &gt;&lt;tbody&gt;&#039;;&#13;&#10;            myTooltip += &#039;&lt;tr&gt;&lt;td&gt;&#039;;&#13;&#10;            myTooltip += &#039;&lt;b&gt;&#039; + fdt + &#039;&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&#039;;&#13;&#10;            myTooltip += &#039;&lt;tr&gt;&lt;td&gt;&#039;;&#13;&#10;            myTooltip += &#039;&lt;b&gt;&#039; + this.points[0].series.name + &#039;:&lt;/b&gt;&lt;/td&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;td style=&quot;text-align: center;&quot;&gt;&#039; + s[this.points[0].series.name] + &#039;&lt;/td&gt;&lt;td style=&quot;text-align: right;&quot;&gt;&lt;b&gt;&amp;nbsp;&amp;nbsp;$&#039; + this.points[0].y.toLocaleString() + &#039;&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&#039;;&#13;&#10;            myTooltip += &#039;&lt;tr&gt;&lt;td&gt;&#039;;&#13;&#10;            myTooltip += &#039;&lt;b&gt;&#039; + this.points[1].series.name + &#039;:&lt;/b&gt;&lt;/td&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;td style=&quot;text-align: center;&quot;&gt;&#039; + s[this.points[1].series.name] + &#039;&lt;/td&gt;&lt;td style=&quot;text-align: right;&quot;&gt;&amp;nbsp;&amp;nbsp;$&#039; + this.points[1].y.toLocaleString() + &#039;&lt;/td&gt;&lt;td style=&quot;text-align: right;&quot;&gt; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;(&#039; + new Number((this.points[1].y / total)*100).toFixed(2).toLocaleString() + &quot;%)&quot; + &#039;&lt;/td&gt;&lt;/tr&gt;&#039;;&#13;&#10;            myTooltip += &#039;&lt;tr&gt;&lt;td&gt;&#039;;&#13;&#10;            myTooltip += &#039;&lt;b&gt;&#039; + this.points[2].series.name + &#039;:&lt;/b&gt;&lt;/td&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;td style=&quot;text-align: center;&quot;&gt;&#039; + s[this.points[2].series.name] + &#039;&lt;/td&gt;&lt;td style=&quot;text-align: right;&quot;&gt;&amp;nbsp;&amp;nbsp;$&#039; + this.points[2].y.toLocaleString() + &#039;&lt;/td&gt;&lt;td style=&quot;text-align: right;&quot;&gt; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;(&#039; + new Number((this.points[2].y / total)*100).toFixed(2).toLocaleString() + &quot;%)&quot; + &#039;&lt;/td&gt;&lt;/tr&gt;&#039;;&#13;&#10;            myTooltip += &#039;&lt;tr&gt;&lt;td&gt;&#039;;&#13;&#10;            myTooltip += &#039;&lt;b&gt;&#039; + this.points[3].series.name + &#039;:&lt;/b&gt;&lt;/td&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;td style=&quot;text-align: center;&quot;&gt;&#039; + s[this.points[3].series.name] + &#039;&lt;/td&gt;&lt;td style=&quot;text-align: right;&quot;&gt;&amp;nbsp;&amp;nbsp;$&#039; + this.points[3].y.toLocaleString() + &#039;&lt;/td&gt;&lt;td style=&quot;text-align: right;&quot;&gt; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;(&#039; + new Number((this.points[3].y / total)*100).toFixed(2).toLocaleString() + &quot;%)&quot; + &#039;&lt;/td&gt;&lt;/tr&gt;&#039;;&#13;&#10;            if (this.points.length == 5) {&#13;&#10;                myTooltip += &#039;&lt;tr&gt;&lt;td&gt;&#039;;&#13;&#10;                myTooltip += &#039;&lt;b&gt;&#039; + this.points[4].series.name + &#039;:&lt;/b&gt;&lt;/td&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;td style=&quot;text-align: center;&quot;&gt;&#039; + s[this.points[4].series.name] + &#039;&lt;/td&gt;&lt;td style=&quot;text-align: right;&quot;&gt;&amp;nbsp;&amp;nbsp;$&#039; + this.points[4].y.toLocaleString() + &#039;&lt;/td&gt;&lt;td style=&quot;text-align: right;&quot;&gt; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;(&#039; + new Number((this.points[4].y / total)*100).toFixed(2).toLocaleString() + &quot;%)&quot; + &#039;&lt;/td&gt;&lt;/tr&gt;&#039;;&#13;&#10;            }&#13;&#10;            myTooltip += &#039;&lt;/tbody&gt;&lt;/table&gt;&#039;;&#13;&#10;            return myTooltip;&#13;&#10;        } &#13;&#10;    };&#13;&#10;},"/>
+  <sampleData>
+   <baseSampleData dataSetRepresentation="01/05/2000,02/01/2000,04/12/2000,03/12/2000,02/29/2000"/>
+   <orthogonalSampleData dataSetRepresentation="6,4,12,8,10" seriesDefinitionIndex="0"/>
+   <orthogonalSampleData dataSetRepresentation="12.0,8.0,24.0,16.0,20.0" seriesDefinitionIndex="1"/>
+   <orthogonalSampleData dataSetRepresentation="18.0,12.0,36.0,24.0,30.0" seriesDefinitionIndex="2"/>
+   <orthogonalSampleData dataSetRepresentation="24.0,16.0,48.0,32.0,40.0" seriesDefinitionIndex="3"/>
+   <orthogonalSampleData dataSetRepresentation="30.0,20.0,60.0,40.0,50.0" seriesDefinitionIndex="4"/>
+  </sampleData>
+  <emptyMessage>
+   <caption value="This chart contains no data."/>
+   <background _body=",64,127,127,127"/>
+   <outline>
+    <color _body=",128,127,127,127"/>
+   </outline>
+  </emptyMessage>
+  <axes type="3">
+   <title>
+    <background _nil="1"/>
+    <outline>
+     <color _nil="1"/>
+    </outline>
+   </title>
+   <associatedAxes primaryAxis="true" percent="false">
+    <title>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </title>
+    <seriesDefinitions zOrder="1">
+     <query definition="">
+      <grouping/>
+     </query>
+     <series _type="LineSeries" seriesIdentifier="Total" stacked="false" translucent="false">
+      <label visible="true">
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dataDefinition definition="if (row[&quot;WealthCategory&quot;] == &quot;Total&quot;)&#13;&#10;	row[&quot;WealthAmount&quot;];">
+       <grouping/>
+      </dataDefinition>
+      <dataPoint prefix="$"/>
+      <curveFitting _nil="1"/>
+      <cursor type="0"/>
+      <markers>
+       <outline/>
+      </markers>
+      <lineAttributes>
+       <color _nil="1"/>
+      </lineAttributes>
+     </series>
+    </seriesDefinitions>
+    <seriesDefinitions>
+     <query definition="">
+      <grouping/>
+     </query>
+     <series _type="LineSeries" seriesIdentifier="Managed ETF" stacked="false" translucent="false">
+      <label>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dataDefinition definition="if (row[&quot;WealthCategory&quot;] == &quot;Managed ETF&quot;) &#13;&#10;	row[&quot;WealthAmount&quot;];">
+       <grouping/>
+      </dataDefinition>
+      <dataPoint prefix="$" separator=","/>
+      <triggers condition="6">
+       <action type="1">
+        <value _type="TooltipValue" text="" delay="200"/>
+       </action>
+      </triggers>
+      <curveFitting _nil="1"/>
+      <markers>
+       <outline/>
+      </markers>
+      <lineAttributes>
+       <color _nil="1"/>
+      </lineAttributes>
+     </series>
+    </seriesDefinitions>
+    <seriesDefinitions>
+     <query definition="">
+      <grouping/>
+     </query>
+     <series _type="LineSeries" seriesIdentifier="Managed Retirement" stacked="false" translucent="false">
+      <label>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dataDefinition definition="if (row[&quot;WealthCategory&quot;] == &quot;Managed Retirement&quot;)&#13;&#10;	row[&quot;WealthAmount&quot;];">
+       <grouping/>
+      </dataDefinition>
+      <dataPoint prefix="$"/>
+      <triggers condition="6">
+       <action type="1">
+        <value _type="TooltipValue" text="" delay="200"/>
+       </action>
+      </triggers>
+      <curveFitting _nil="1"/>
+      <markers>
+       <outline/>
+      </markers>
+      <lineAttributes>
+       <color _nil="1"/>
+      </lineAttributes>
+     </series>
+    </seriesDefinitions>
+    <seriesDefinitions>
+     <query definition="">
+      <grouping/>
+     </query>
+     <series _type="LineSeries" seriesIdentifier="Active Trading" stacked="false" translucent="false">
+      <label>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dataDefinition definition="if (row[&quot;WealthCategory&quot;] == &quot;Active Trading&quot;)&#13;&#10;	row[&quot;WealthAmount&quot;];">
+       <grouping/>
+      </dataDefinition>
+      <dataPoint prefix="$"/>
+      <triggers condition="6">
+       <action type="1">
+        <value _type="TooltipValue" text="" delay="200"/>
+       </action>
+      </triggers>
+      <curveFitting _nil="1"/>
+      <markers>
+       <outline/>
+      </markers>
+      <lineAttributes>
+       <color _nil="1"/>
+      </lineAttributes>
+     </series>
+    </seriesDefinitions>
+    <seriesDefinitions>
+     <query definition="">
+      <grouping/>
+     </query>
+     <series _type="LineSeries" seriesIdentifier="Finance One" stacked="false" translucent="false">
+      <label>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dataDefinition definition="if (row[&quot;WealthCategory&quot;] == &quot;Finance One&quot;)&#13;&#10;	row[&quot;WealthAmount&quot;];">
+       <grouping/>
+      </dataDefinition>
+      <dataPoint prefix="$"/>
+      <triggers condition="6">
+       <action type="1">
+        <value _type="TooltipValue" text="" delay="200"/>
+       </action>
+      </triggers>
+      <curveFitting _nil="1"/>
+      <markers>
+       <outline/>
+      </markers>
+      <lineAttributes>
+       <color _nil="1"/>
+      </lineAttributes>
+     </series>
+    </seriesDefinitions>
+    <lineAttributes>
+     <color _nil="1"/>
+    </lineAttributes>
+    <label>
+     <caption>
+      <font size="8.0"/>
+     </caption>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </label>
+    <formatSpecifier _type="JavaNumberFormatSpecifier" pattern="$##.###"/>
+    <majorGrid>
+     <lineAttributes visible="true">
+      <color _body=",255,192,192,192"/>
+     </lineAttributes>
+     <tickAttributes>
+      <color _nil="1"/>
+     </tickAttributes>
+    </majorGrid>
+    <minorGrid>
+     <lineAttributes>
+      <color _nil="1"/>
+     </lineAttributes>
+     <tickAttributes>
+      <color _nil="1"/>
+     </tickAttributes>
+    </minorGrid>
+    <origin>
+     <value _nil="1"/>
+    </origin>
+   </associatedAxes>
+   <seriesDefinitions>
+    <query definition=""/>
+    <series seriesIdentifier="">
+     <label>
+      <background _nil="1"/>
+      <outline>
+       <color _nil="1"/>
+      </outline>
+     </label>
+     <dataDefinition definition="row[&quot;StatementDate&quot;]"/>
+     <curveFitting _nil="1"/>
+    </series>
+    <grouping enabled="true"/>
+   </seriesDefinitions>
+   <lineAttributes>
+    <color _nil="1"/>
+   </lineAttributes>
+   <label>
+    <caption>
+     <font size="8.0" rotation="90.0"/>
+    </caption>
+    <background _nil="1"/>
+    <outline>
+     <color _nil="1"/>
+    </outline>
+   </label>
+   <formatSpecifier _type="JavaDateFormatSpecifier" pattern="MMM-yy"/>
+   <majorGrid>
+    <lineAttributes>
+     <color _nil="1"/>
+    </lineAttributes>
+    <tickAttributes>
+     <color _nil="1"/>
+    </tickAttributes>
+   </majorGrid>
+   <minorGrid>
+    <lineAttributes>
+     <color _nil="1"/>
+    </lineAttributes>
+    <tickAttributes>
+     <color _nil="1"/>
+    </tickAttributes>
+   </minorGrid>
+   <origin>
+    <value _nil="1"/>
+   </origin>
+  </axes>
+  <rotation>
+   <angles/>
+  </rotation>
+ </ChartWithAxes>
+</ActuateChart>
+]]></xml-property>
+                        <property name="outputFormat">JS</property>
+                        <property name="inheritColumns">false</property>
+                        <property name="fontFamily">sans-serif</property>
+                        <property name="height">250pt</property>
+                        <property name="width">527px</property>
+                        <property name="dataSet">Wealth Data Set</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">WealthCategory</property>
+                                <text-property name="displayName">WealthCategory</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["WealthCategory"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">WealthAmount</property>
+                                <text-property name="displayName">WealthAmount</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["WealthAmount"]</expression>
+                                <property name="dataType">float</property>
+                            </structure>
+                            <structure>
+                                <property name="name">YearMonth</property>
+                                <text-property name="displayName">YearMonth</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["YearMonth"]</expression>
+                                <property name="dataType">integer</property>
+                            </structure>
+                            <structure>
+                                <property name="name">StatementDate</property>
+                                <text-property name="displayName">StatementDate</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["StatementDate"]</expression>
+                                <property name="dataType">date</property>
+                                <property name="allowExport">true</property>
+                            </structure>
+                        </list-property>
+                        <property name="theme">ThemesReportItems3.bleu</property>
+                    </extended-item>
+                </cell>
+            </row>
+        </grid>
+    </body>
+</report>

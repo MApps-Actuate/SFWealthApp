@@ -450,13 +450,20 @@ else
         </style>
     </styles>
     <page-setup>
-        <simple-master-page name="Simple MasterPage" id="2"/>
+        <simple-master-page name="Simple MasterPage" id="2">
+            <property name="type">custom</property>
+            <property name="height">11in</property>
+            <property name="width">11in</property>
+        </simple-master-page>
     </page-setup>
     <body>
         <grid id="10">
             <property name="fontFamily">"Raleway"</property>
             <property name="width">8.614583333333334in</property>
             <expression name="bookmark" type="javascript">"AllocationPlan"</expression>
+            <column id="263">
+                <property name="width">32px</property>
+            </column>
             <column id="36">
                 <property name="width">1.5416666666666667in</property>
             </column>
@@ -474,6 +481,11 @@ else
             </column>
             <row id="29">
                 <property name="height">0.65625in</property>
+                <cell id="259">
+                    <property name="colSpan">1</property>
+                    <property name="rowSpan">4</property>
+                    <property name="paddingLeft">5pt</property>
+                </cell>
                 <cell id="32">
                     <property name="paddingLeft">5pt</property>
                     <table id="270">
@@ -495,7 +507,7 @@ else
                         <property name="captionFontSize">16pt</property>
                         <property name="captionTextAlignment">left</property>
                     </table>
-                    <text id="259">
+                    <text id="288">
                         <property name="contentType">html</property>
                         <text-property name="content"><![CDATA[<div id="vwrId"></div>
 <script>
@@ -524,6 +536,7 @@ if ((window["__firstView"] === undefined)||(window["__firstView"]==false)) {
 </script>]]></text-property>
                     </text>
                     <label id="37">
+                        <property name="paddingBottom">2pt</property>
                         <text-property name="text">Retirement Year:</text-property>
                     </label>
                     <text id="25">
@@ -586,6 +599,7 @@ function retireYearSelect(yr) {
                 <cell id="30">
                     <property name="paddingBottom">10pt</property>
                     <label id="43">
+                        <property name="paddingBottom">2pt</property>
                         <text-property name="text">Strategy:</text-property>
                     </label>
                     <text id="28">
@@ -854,6 +868,9 @@ Click a specific point on the chart to highlight the details for that year.</DIV
     <color _nil="1"/>
    </lineAttributes>
    <label>
+    <caption>
+     <font size="8.0"/>
+    </caption>
     <background _nil="1"/>
     <outline>
      <color _nil="1"/>
@@ -898,7 +915,7 @@ Click a specific point on the chart to highlight the details for that year.</DIV
                         </list-property>
                         <property name="inheritColumns">true</property>
                         <property name="height">2.3854166666666665in</property>
-                        <property name="width">4.572916666666667in</property>
+                        <property name="width">5.25in</property>
                         <expression name="bookmark" type="javascript">"AreaChart"</expression>
                         <property name="dataSet">Allocation Summary</property>
                         <list-property name="boundDataColumns">
@@ -944,7 +961,7 @@ Click a specific point on the chart to highlight the details for that year.</DIV
     </outline>
     <label>
      <caption value="Allocations">
-      <font size="12.0" rotation="0.0"/>
+      <font size="12.0" bold="true" rotation="0.0"/>
      </caption>
      <background _nil="1"/>
      <outline>
@@ -1057,7 +1074,7 @@ Click a specific point on the chart to highlight the details for that year.</DIV
                         <property name="outputFormat">JS</property>
                         <property name="inheritColumns">false</property>
                         <property name="height">2.3645833333333335in</property>
-                        <property name="width">3.875in</property>
+                        <property name="width">4in</property>
                         <expression name="bookmark" type="javascript">"Pie"</expression>
                         <property name="dataSet">Allocation Detail</property>
                         <list-property name="boundDataColumns">
@@ -1133,6 +1150,10 @@ Click a specific point on the chart to highlight the details for that year.</DIV
                                         <property name="width">151px</property>
                                         <property name="content">
                                             <data id="227">
+                                                <property name="paddingTop">2pt</property>
+                                                <property name="paddingLeft">2pt</property>
+                                                <property name="paddingBottom">2pt</property>
+                                                <property name="paddingRight">2pt</property>
                                                 <structure name="numberFormat">
                                                     <property name="category">Percent</property>
                                                     <property name="pattern">###0%{RoundingMode=HALF_UP}</property>
@@ -1148,15 +1169,22 @@ Click a specific point on the chart to highlight the details for that year.</DIV
                                         <property name="aggregationOnRow">Type/Type</property>
                                         <property name="aggregationOnColumn">DateYear/DateYear</property>
                                         <property name="color">white</property>
+                                        <property name="textAlign">right</property>
+                                        <property name="verticalAlign">middle</property>
                                         <property name="content">
                                             <data id="236">
                                                 <property name="fontWeight">normal</property>
                                                 <property name="fontStyle">normal</property>
                                                 <property name="color">#000000</property>
+                                                <property name="paddingTop">2pt</property>
+                                                <property name="paddingLeft">2pt</property>
+                                                <property name="paddingBottom">2pt</property>
+                                                <property name="paddingRight">2pt</property>
                                                 <structure name="numberFormat">
                                                     <property name="category">Percent</property>
                                                     <property name="pattern">###0%{RoundingMode=UNNECESSARY}</property>
                                                 </structure>
+                                                <property name="textAlign">right</property>
                                                 <property name="resultSetColumn">Allocation_Type/Type_DateYear/DateYear</property>
                                             </data>
                                         </property>
@@ -1165,15 +1193,21 @@ Click a specific point on the chart to highlight the details for that year.</DIV
                                         <property name="aggregationOnRow">Asset Category/Asset Category</property>
                                         <property name="aggregationOnColumn">DateYear/DateYear</property>
                                         <property name="color">white</property>
+                                        <property name="textAlign">right</property>
                                         <property name="content">
                                             <data id="240">
                                                 <property name="fontWeight">normal</property>
                                                 <property name="fontStyle">normal</property>
                                                 <property name="color">black</property>
+                                                <property name="paddingTop">2pt</property>
+                                                <property name="paddingLeft">2pt</property>
+                                                <property name="paddingBottom">2pt</property>
+                                                <property name="paddingRight">2pt</property>
                                                 <structure name="numberFormat">
                                                     <property name="category">Percent</property>
                                                     <property name="pattern">###0%{RoundingMode=UNNECESSARY}</property>
                                                 </structure>
+                                                <property name="textAlign">right</property>
                                                 <property name="resultSetColumn">Allocation_Asset Category/Asset Category_DateYear/DateYear</property>
                                             </data>
                                         </property>
@@ -1199,12 +1233,18 @@ Click a specific point on the chart to highlight the details for that year.</DIV
                                                     <extended-item extensionName="CrosstabCell" id="205">
                                                         <property name="content">
                                                             <data name="Type" id="206">
-                                                                <property name="fontWeight">normal</property>
+                                                                <property name="fontSize">9pt</property>
+                                                                <property name="fontWeight">bold</property>
                                                                 <property name="color">black</property>
+                                                                <property name="paddingTop">2pt</property>
+                                                                <property name="paddingLeft">5pt</property>
+                                                                <property name="paddingBottom">2pt</property>
+                                                                <property name="paddingRight">5pt</property>
                                                                 <property name="whiteSpace">nowrap</property>
                                                                 <property name="resultSetColumn">Type</property>
                                                             </data>
                                                         </property>
+                                                        <property name="fontSize">9pt</property>
                                                         <property name="backgroundColor">#FFFFFF</property>
                                                         <property name="width">82px</property>
                                                     </extended-item>
@@ -1213,10 +1253,14 @@ Click a specific point on the chart to highlight the details for that year.</DIV
                                                     <extended-item extensionName="CrosstabCell" id="234">
                                                         <property name="content">
                                                             <data name="Type_TOTAL" id="237">
+                                                                <property name="fontSize">9pt</property>
                                                                 <property name="fontWeight">bold</property>
                                                                 <property name="color">#FFFFFF</property>
                                                                 <property name="marginRight">2pt</property>
-                                                                <property name="paddingRight">1pt</property>
+                                                                <property name="paddingTop">2pt</property>
+                                                                <property name="paddingLeft">2pt</property>
+                                                                <property name="paddingBottom">2pt</property>
+                                                                <property name="paddingRight">2pt</property>
                                                                 <structure name="numberFormat">
                                                                     <property name="category">Percent</property>
                                                                     <property name="pattern">###0%{RoundingMode=UNNECESSARY}</property>
@@ -1225,7 +1269,9 @@ Click a specific point on the chart to highlight the details for that year.</DIV
                                                                 <property name="resultSetColumn">Type_TOTAL</property>
                                                             </data>
                                                         </property>
+                                                        <property name="fontSize">9pt</property>
                                                         <property name="color">white</property>
+                                                        <property name="verticalAlign">middle</property>
                                                     </extended-item>
                                                 </property>
                                             </extended-item>
@@ -1241,12 +1287,18 @@ Click a specific point on the chart to highlight the details for that year.</DIV
                                                     <extended-item extensionName="CrosstabCell" id="210">
                                                         <property name="content">
                                                             <data name="Asset Category" id="212">
+                                                                <property name="fontSize">9pt</property>
                                                                 <property name="fontWeight">normal</property>
                                                                 <property name="color">black</property>
+                                                                <property name="paddingTop">2pt</property>
+                                                                <property name="paddingLeft">2pt</property>
+                                                                <property name="paddingBottom">2pt</property>
+                                                                <property name="paddingRight">2pt</property>
                                                                 <property name="whiteSpace">nowrap</property>
                                                                 <property name="resultSetColumn">Asset Category</property>
                                                             </data>
                                                         </property>
+                                                        <property name="fontSize">9pt</property>
                                                         <property name="backgroundColor">#FFFFFF</property>
                                                         <property name="width">166px</property>
                                                     </extended-item>
@@ -1255,9 +1307,13 @@ Click a specific point on the chart to highlight the details for that year.</DIV
                                                     <extended-item extensionName="CrosstabCell" id="238">
                                                         <property name="content">
                                                             <data name="Asset Category_TOTAL" id="241">
+                                                                <property name="fontSize">9pt</property>
                                                                 <property name="color">#FFFFFF</property>
                                                                 <property name="marginRight">2pt</property>
-                                                                <property name="paddingRight">1pt</property>
+                                                                <property name="paddingTop">2pt</property>
+                                                                <property name="paddingLeft">2pt</property>
+                                                                <property name="paddingBottom">2pt</property>
+                                                                <property name="paddingRight">2pt</property>
                                                                 <structure name="numberFormat">
                                                                     <property name="category">Percent</property>
                                                                     <property name="pattern">###0%{RoundingMode=UNNECESSARY}</property>
@@ -1266,6 +1322,7 @@ Click a specific point on the chart to highlight the details for that year.</DIV
                                                                 <property name="resultSetColumn">Asset Category_TOTAL</property>
                                                             </data>
                                                         </property>
+                                                        <property name="fontSize">9pt</property>
                                                         <property name="color">white</property>
                                                     </extended-item>
                                                 </property>
@@ -1281,12 +1338,18 @@ Click a specific point on the chart to highlight the details for that year.</DIV
                                                     <extended-item extensionName="CrosstabCell" id="216">
                                                         <property name="content">
                                                             <data name="Asset" id="218">
+                                                                <property name="fontSize">9pt</property>
                                                                 <property name="fontWeight">normal</property>
                                                                 <property name="color">black</property>
+                                                                <property name="paddingTop">2pt</property>
+                                                                <property name="paddingLeft">2pt</property>
+                                                                <property name="paddingBottom">2pt</property>
+                                                                <property name="paddingRight">2pt</property>
                                                                 <property name="whiteSpace">nowrap</property>
                                                                 <property name="resultSetColumn">Asset</property>
                                                             </data>
                                                         </property>
+                                                        <property name="fontSize">9pt</property>
                                                         <property name="backgroundColor">white</property>
                                                         <property name="width">291px</property>
                                                     </extended-item>
@@ -1310,8 +1373,13 @@ Click a specific point on the chart to highlight the details for that year.</DIV
                                                     <extended-item extensionName="CrosstabCell" id="223">
                                                         <property name="content">
                                                             <data name="DateYear" id="224">
-                                                                <property name="fontWeight">normal</property>
+                                                                <property name="fontSize">9pt</property>
+                                                                <property name="fontWeight">bold</property>
                                                                 <property name="color">black</property>
+                                                                <property name="paddingTop">2pt</property>
+                                                                <property name="paddingLeft">8pt</property>
+                                                                <property name="paddingBottom">2pt</property>
+                                                                <property name="paddingRight">8pt</property>
                                                                 <structure name="numberFormat">
                                                                     <property name="category">Fixed</property>
                                                                     <property name="pattern">###0{RoundingMode=UNNECESSARY}</property>
@@ -1334,8 +1402,13 @@ Click a specific point on the chart to highlight the details for that year.</DIV
                             <extended-item extensionName="CrosstabCell" id="230">
                                 <property name="content">
                                     <label id="207">
+                                        <property name="fontSize">9pt</property>
                                         <property name="fontWeight">normal</property>
                                         <property name="color">black</property>
+                                        <property name="paddingTop">2pt</property>
+                                        <property name="paddingLeft">4pt</property>
+                                        <property name="paddingBottom">2pt</property>
+                                        <property name="paddingRight">1pt</property>
                                         <property name="textAlign">left</property>
                                         <text-property name="text">Type</text-property>
                                     </label>
@@ -1345,8 +1418,12 @@ Click a specific point on the chart to highlight the details for that year.</DIV
                             <extended-item extensionName="CrosstabCell" id="231">
                                 <property name="content">
                                     <label id="213">
+                                        <property name="fontSize">9pt</property>
                                         <property name="fontWeight">normal</property>
                                         <property name="color">black</property>
+                                        <property name="paddingTop">2pt</property>
+                                        <property name="paddingLeft">4pt</property>
+                                        <property name="paddingBottom">2pt</property>
                                         <property name="textAlign">left</property>
                                         <text-property name="text">Asset Category</text-property>
                                     </label>
@@ -1356,8 +1433,12 @@ Click a specific point on the chart to highlight the details for that year.</DIV
                             <extended-item extensionName="CrosstabCell" id="232">
                                 <property name="content">
                                     <label id="219">
+                                        <property name="fontSize">9pt</property>
                                         <property name="fontWeight">normal</property>
                                         <property name="color">black</property>
+                                        <property name="paddingTop">2pt</property>
+                                        <property name="paddingLeft">4pt</property>
+                                        <property name="paddingBottom">2pt</property>
                                         <property name="textAlign">left</property>
                                         <text-property name="text">Asset</text-property>
                                     </label>
@@ -1368,6 +1449,7 @@ Click a specific point on the chart to highlight the details for that year.</DIV
                             <extended-item extensionName="CrosstabCell" id="211"/>
                             <extended-item extensionName="CrosstabCell" id="217"/>
                         </property>
+                        <property name="fontSize">9pt</property>
                         <property name="color">black</property>
                         <expression name="bookmark" type="javascript">"CTAllocations"</expression>
                         <list-property name="boundDataColumns">

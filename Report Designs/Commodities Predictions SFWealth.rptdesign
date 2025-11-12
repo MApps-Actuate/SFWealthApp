@@ -165,7 +165,7 @@ if (!this.getViewer().isInteractive())
             <property name="odaDriverClass">com.vertica.jdbc.Driver</property>
             <property name="odaURL">jdbc:vertica://vm-gvitale.eastus.cloudapp.azure.com:9933</property>
             <property name="odaUser">dbadmin</property>
-            <encrypted-property name="odaPassword" encryptionID="otjce">OTJC01AAAADFXN32tvDrVa5Z2h81DIWDFi5Zi7AKTaMKOFicJ+6z1QjWOF</encrypted-property>
+            <encrypted-property name="odaPassword" encryptionID="otjce">OTJC01AAAADDJaVZe3mOhMKbnSjqRwW4bcYUYpPZAbm/TpjITCNornuNN9</encrypted-property>
         </oda-data-source>
     </data-sources>
     <data-sets>
@@ -325,6 +325,7 @@ if (!this.getViewer().isInteractive())
             </list-property>
         </data-mart-data-set>
         <data-mart-data-set name="Distinct Commodities Data Set" id="360">
+            <property name="nullsOrdering">nulls lowest</property>
             <list-property name="columnHints">
                 <structure>
                     <property name="columnName">commodity</property>
@@ -339,6 +340,7 @@ if (!this.getViewer().isInteractive())
                     <property name="analysis">attribute</property>
                 </structure>
             </list-property>
+            <list-property name="filter"/>
             <structure name="cachedMetaData">
                 <list-property name="resultSet">
                     <structure>
@@ -797,7 +799,7 @@ order by "date"]]></xml-property>
     </property>
     <styles>
         <style name="report" id="4">
-            <property name="fontFamily">sans-serif</property>
+            <property name="fontFamily">"Gibson W04 Regular"</property>
             <property name="fontSize">10pt</property>
         </style>
         <style name="crosstab-cell" id="5">
@@ -832,28 +834,22 @@ order by "date"]]></xml-property>
     <page-setup>
         <simple-master-page name="Simple MasterPage" id="2">
             <property name="orientation">auto</property>
-            <page-footer>
-                <text id="3">
-                    <property name="contentType">html</property>
-                    <text-property name="content"><![CDATA[<value-of>new Date()</value-of>]]></text-property>
-                </text>
-            </page-footer>
         </simple-master-page>
     </page-setup>
     <body>
         <table id="659">
-            <property name="borderBottomColor">#3578AD</property>
+            <property name="borderBottomColor">#FFFFFF</property>
             <property name="borderBottomStyle">solid</property>
-            <property name="borderBottomWidth">10px</property>
-            <property name="borderLeftColor">#3578AD</property>
+            <property name="borderBottomWidth">1px</property>
+            <property name="borderLeftColor">#FFFFFF</property>
             <property name="borderLeftStyle">solid</property>
-            <property name="borderLeftWidth">10px</property>
-            <property name="borderRightColor">#3578AD</property>
+            <property name="borderLeftWidth">1px</property>
+            <property name="borderRightColor">#FFFFFF</property>
             <property name="borderRightStyle">solid</property>
-            <property name="borderRightWidth">10px</property>
-            <property name="borderTopColor">#3578AD</property>
+            <property name="borderRightWidth">1px</property>
+            <property name="borderTopColor">#FFFFFF</property>
             <property name="borderTopStyle">solid</property>
-            <property name="borderTopWidth">10px</property>
+            <property name="borderTopWidth">1px</property>
             <property name="dataSet">Distinct Commodities Data Set</property>
             <list-property name="boundDataColumns">
                 <structure>
@@ -880,16 +876,49 @@ order by "date"]]></xml-property>
             </list-property>
             <column id="697"/>
             <column id="698"/>
+            <header>
+                <row id="733">
+                    <cell id="734">
+                        <property name="colSpan">2</property>
+                        <property name="rowSpan">1</property>
+                        <property name="backgroundColor">white</property>
+                        <property name="borderBottomStyle">none</property>
+                        <property name="borderLeftStyle">none</property>
+                        <property name="borderRightStyle">none</property>
+                        <property name="borderTopStyle">none</property>
+                        <property name="textAlign">center</property>
+                        <text id="731">
+                            <property name="contentType">html</property>
+                            <text-property name="content"><![CDATA[<script>
+var link = document.createElement('link');
+link.rel = 'stylesheet';
+link.href = 'https://td-mag.eimdemo.com/iportal/cwong/css/gibson.css';
+document.head.appendChild(link);
+</script>]]></text-property>
+                        </text>
+                        <text id="736">
+                            <property name="textAlign">center</property>
+                            <property name="contentType">html</property>
+                            <text-property name="content"><![CDATA[<div id="mySVGLegend"/>
+<script>
+	document.getElementById('mySVGLegend').innerHTML = '<svg version="1.1" class="highcharts-root" style="font-family: "Gibson W04 Regular"; font-size: 1rem; display: block; margin:0 auto;" xmlns="http://www.w3.org/2000/svg" height="20" width="100%" viewBox="0 0 100 20" role="img" aria-label=""><g><g class="highcharts-legend-item highcharts-line-series highcharts-color-0 highcharts-series-0" data-z-index="1" transform="translate(8,3)"><path fill="none" class="highcharts-graph" stroke-width="1" stroke-linecap="round" d="M 0.5 13 L 15.5 13" stroke="#4CA9E9"></path><text x="21" style="font-size: 0.8em; text-decoration: none; fill: rgb(51, 51, 51);" text-anchor="start" data-z-index="2" y="17">HISTORICAL</text></g><g class="highcharts-legend-item highcharts-line-series highcharts-color-1 highcharts-series-1" data-z-index="1" transform="translate(103.4000015258789,3)"><path fill="none" class="highcharts-graph" stroke-width="1" stroke-linecap="round" d="M 0.5 13 L 15.5 13" stroke="#88B345"></path><text x="21" y="17" style="font-size: 0.8em; text-decoration: none; fill: rgb(51, 51, 51);" text-anchor="start" data-z-index="2">PREDICTION</text></g></g></svg>';
+</script>]]></text-property>
+                        </text>
+                    </cell>
+                </row>
+            </header>
             <detail>
                 <row id="677">
                     <method name="onCreate"><![CDATA[var logger = java.util.logging.Logger.getLogger("birt.report.logger");
 logger.warning (BirtDateTime.now() + ' Table : ' + this.getRowData().getColumnValue("commodity"));
 params["pModel"].value = this.getRowData().getColumnValue("commodity");]]></method>
                     <cell id="678">
+                        <property name="borderBottomColor">#FFFFFF</property>
                         <property name="borderBottomStyle">solid</property>
                         <property name="borderBottomWidth">1px</property>
                         <property name="borderLeftStyle">none</property>
                         <property name="borderRightStyle">none</property>
+                        <property name="borderTopColor">#FFFFFF</property>
                         <property name="borderTopStyle">solid</property>
                         <property name="borderTopWidth">1px</property>
                         <table id="679">
@@ -950,14 +979,26 @@ params["pModel"].value = this.getRowData().getColumnValue("commodity");]]></meth
                         </table>
                     </cell>
                     <cell id="691">
+                        <property name="borderBottomColor">#FFFFFF</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">1px</property>
+                        <property name="borderLeftColor">#FFFFFF</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">1px</property>
+                        <property name="borderRightColor">#FFFFFF</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">1px</property>
+                        <property name="borderTopColor">#FFFFFF</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">1px</property>
                         <data id="726">
                             <property name="backgroundAttachment">scroll</property>
                             <property name="backgroundPositionX">0%</property>
                             <property name="backgroundPositionY">0%</property>
                             <property name="backgroundRepeat">repeat</property>
-                            <property name="fontFamily">sans-serif</property>
+                            <property name="fontFamily">"Gibson W04 Regular"</property>
                             <property name="fontSize">14pt</property>
-                            <property name="fontWeight">bold</property>
+                            <property name="fontWeight">600</property>
                             <property name="fontStyle">normal</property>
                             <property name="fontVariant">normal</property>
                             <property name="color">#666666</property>
@@ -1020,12 +1061,13 @@ params["pModel"].value = this.getRowData().getColumnValue("commodity");]]></meth
      <color _nil="1"/>
     </outline>
     <clientArea>
+     <background _body=",255,243,243,243"/>
      <outline>
       <color _nil="1"/>
      </outline>
     </clientArea>
    </children>
-   <children _type="Legend" orientation="0" position="0">
+   <children _type="Legend" visible="false" orientation="0" position="0">
     <outline>
      <color _nil="1"/>
     </outline>
@@ -1048,14 +1090,19 @@ params["pModel"].value = this.getRowData().getColumnValue("commodity");]]></meth
    <outline>
     <color _nil="1"/>
    </outline>
+   <background _body=",0,255,255,255"/>
   </block>
   <extendedProperties name="enable.area.alt" value="false"/>
   <extendedProperties name="enable.drill.category" value="true"/>
   <extendedProperties name="enable.drill.series" value="true"/>
   <extendedProperties name="jschart.zoom" value="xy"/>
   <extendedProperties name="jschart.series.shadow" value="false"/>
-  <extendedProperties name="jschart.client.script" value="/**&#13;&#10; * Called after chart instance is rendered.&#13;&#10; *&#13;&#10; * @param chart&#13;&#10; *            chart instance&#13;&#10; */&#13;&#10;afterRendering: function(chart)&#13;&#10;{&#13;&#10;    chart.setXAxisRange(new Date(&#039;2024-05-01&#039;).getTime(), new Date(&#039;2026-06-01&#039;).getTime());&#13;&#10;},"/>
+  <extendedProperties name="jschart.client.script" value="afterRendering: function(chart)&#13;&#10;{&#13;&#10;    chart.setXAxisRange(new Date(&#039;2024-05-01&#039;).getTime(), new Date(&#039;2026-06-01&#039;).getTime());&#13;&#10;    //chart.getCore().xAxis[0].addPlotLine({value: new Date().getTime(), width: 2});&#13;&#10;    chart.getCore().xAxis[0].addPlotLine({value: (new Date(&#039;2025-06-01&#039;).getTime()), width: 1, color: &#039;#BBB&#039;});&#13;&#10;},&#13;&#10;&#13;&#10;&#13;&#10;beforeGeneration: function(options)&#13;&#10;{&#13;&#10;// options.navigator.&#13;&#10;        &#13;&#10;},"/>
   <extendedProperties name="jschart.navigator" value="true"/>
+  <extendedProperties name="jschart.range.selector" value="true"/>
+  <extendedProperties name="chart.palette.type" value="color"/>
+  <extendedProperties name="chart.marker.auto" value="true"/>
+  <extendedProperties name="chart.palette.auto" value="false"/>
   <sampleData>
    <baseSampleData dataSetRepresentation="01/05/2000,02/01/2000,04/12/2000,03/12/2000,02/29/2000"/>
    <orthogonalSampleData dataSetRepresentation="6,4,12,8,10" seriesDefinitionIndex="0"/>
@@ -1084,6 +1131,40 @@ params["pModel"].value = this.getRowData().getColumnValue("commodity");]]></meth
     </title>
     <seriesDefinitions>
      <query definition=""/>
+     <seriesPalette>
+      <entries _body=",255,76,169,233"/>
+      <entries _body=",255,136,179,69"/>
+      <entries _body=",255,232,172,57"/>
+      <entries _body=",255,128,255,128"/>
+      <entries _body=",255,64,128,128"/>
+      <entries _body=",255,128,128,192"/>
+      <entries _body=",255,170,85,85"/>
+      <entries _body=",255,128,128,0"/>
+      <entries _body=",255,192,192,192"/>
+      <entries _body=",255,255,255,128"/>
+      <entries _body=",255,128,192,128"/>
+      <entries _body=",255,7,146,94"/>
+      <entries _body=",255,0,128,255"/>
+      <entries _body=",255,255,128,192"/>
+      <entries _body=",255,0,255,255"/>
+      <entries _body=",255,255,128,128"/>
+      <entries _body=",255,0,128,192"/>
+      <entries _body=",255,128,128,192"/>
+      <entries _body=",255,255,0,255"/>
+      <entries _body=",255,128,64,64"/>
+      <entries _body=",255,255,128,64"/>
+      <entries _body=",255,80,240,120"/>
+      <entries _body=",255,0,64,128"/>
+      <entries _body=",255,128,0,64"/>
+      <entries _body=",255,255,0,128"/>
+      <entries _body=",255,128,128,64"/>
+      <entries _body=",255,128,128,128"/>
+      <entries _body=",255,255,128,255"/>
+      <entries _body=",255,0,64,0"/>
+      <entries _body=",255,0,0,0"/>
+      <entries _body=",255,255,255,255"/>
+      <entries _body=",255,255,128,0"/>
+     </seriesPalette>
      <series _type="LineSeries" seriesIdentifier="Past Value" stacked="false">
       <label>
        <background _nil="1"/>
@@ -1100,7 +1181,7 @@ params["pModel"].value = this.getRowData().getColumnValue("commodity");]]></meth
        </action>
       </triggers>
       <curveFitting _nil="1"/>
-      <markers>
+      <markers type="0" size="4" visible="false">
        <outline/>
       </markers>
       <lineAttributes>
@@ -1110,6 +1191,40 @@ params["pModel"].value = this.getRowData().getColumnValue("commodity");]]></meth
     </seriesDefinitions>
     <seriesDefinitions>
      <query definition=""/>
+     <seriesPalette>
+      <entries _body=",255,136,179,69"/>
+      <entries _body=",255,232,172,57"/>
+      <entries _body=",255,128,255,128"/>
+      <entries _body=",255,64,128,128"/>
+      <entries _body=",255,128,128,192"/>
+      <entries _body=",255,170,85,85"/>
+      <entries _body=",255,128,128,0"/>
+      <entries _body=",255,192,192,192"/>
+      <entries _body=",255,255,255,128"/>
+      <entries _body=",255,128,192,128"/>
+      <entries _body=",255,7,146,94"/>
+      <entries _body=",255,0,128,255"/>
+      <entries _body=",255,255,128,192"/>
+      <entries _body=",255,0,255,255"/>
+      <entries _body=",255,255,128,128"/>
+      <entries _body=",255,0,128,192"/>
+      <entries _body=",255,128,128,192"/>
+      <entries _body=",255,255,0,255"/>
+      <entries _body=",255,128,64,64"/>
+      <entries _body=",255,255,128,64"/>
+      <entries _body=",255,80,240,120"/>
+      <entries _body=",255,0,64,128"/>
+      <entries _body=",255,128,0,64"/>
+      <entries _body=",255,255,0,128"/>
+      <entries _body=",255,128,128,64"/>
+      <entries _body=",255,128,128,128"/>
+      <entries _body=",255,255,128,255"/>
+      <entries _body=",255,0,64,0"/>
+      <entries _body=",255,0,0,0"/>
+      <entries _body=",255,255,255,255"/>
+      <entries _body=",255,255,128,0"/>
+      <entries _body=",255,76,169,233"/>
+     </seriesPalette>
      <series _type="LineSeries" seriesIdentifier="Prediction" stacked="false" curve="true">
       <label>
        <background _nil="1"/>
@@ -1126,7 +1241,7 @@ params["pModel"].value = this.getRowData().getColumnValue("commodity");]]></meth
        </action>
       </triggers>
       <curveFitting _nil="1"/>
-      <markers>
+      <markers type="1" size="4" visible="false">
        <outline/>
       </markers>
       <lineAttributes style="1">
@@ -1134,28 +1249,31 @@ params["pModel"].value = this.getRowData().getColumnValue("commodity");]]></meth
       </lineAttributes>
      </series>
     </seriesDefinitions>
-    <lineAttributes>
-     <color _nil="1"/>
+    <lineAttributes visible="true">
+     <color _body=",255,204,214,235"/>
     </lineAttributes>
     <label>
+     <caption>
+      <font name="Gibson W04 Regular" size="8.0" bold="true"/>
+     </caption>
      <background _nil="1"/>
      <outline>
       <color _nil="1"/>
      </outline>
     </label>
     <majorGrid>
-     <lineAttributes visible="true">
-      <color _nil="1"/>
+     <lineAttributes style="0" thickness="1" visible="true">
+      <color _body=",255,230,230,230"/>
      </lineAttributes>
-     <tickAttributes>
+     <tickAttributes visible="false">
       <color _nil="1"/>
      </tickAttributes>
     </majorGrid>
     <minorGrid>
-     <lineAttributes>
+     <lineAttributes visible="false">
       <color _nil="1"/>
      </lineAttributes>
-     <tickAttributes>
+     <tickAttributes visible="false">
       <color _nil="1"/>
      </tickAttributes>
     </minorGrid>
@@ -1165,6 +1283,40 @@ params["pModel"].value = this.getRowData().getColumnValue("commodity");]]></meth
    </associatedAxes>
    <seriesDefinitions>
     <query definition=""/>
+    <seriesPalette>
+     <entries _body=",255,76,169,233"/>
+     <entries _body=",255,136,179,69"/>
+     <entries _body=",255,232,172,57"/>
+     <entries _body=",255,128,255,128"/>
+     <entries _body=",255,64,128,128"/>
+     <entries _body=",255,128,128,192"/>
+     <entries _body=",255,170,85,85"/>
+     <entries _body=",255,128,128,0"/>
+     <entries _body=",255,192,192,192"/>
+     <entries _body=",255,255,255,128"/>
+     <entries _body=",255,128,192,128"/>
+     <entries _body=",255,7,146,94"/>
+     <entries _body=",255,0,128,255"/>
+     <entries _body=",255,255,128,192"/>
+     <entries _body=",255,0,255,255"/>
+     <entries _body=",255,255,128,128"/>
+     <entries _body=",255,0,128,192"/>
+     <entries _body=",255,128,128,192"/>
+     <entries _body=",255,255,0,255"/>
+     <entries _body=",255,128,64,64"/>
+     <entries _body=",255,255,128,64"/>
+     <entries _body=",255,80,240,120"/>
+     <entries _body=",255,0,64,128"/>
+     <entries _body=",255,128,0,64"/>
+     <entries _body=",255,255,0,128"/>
+     <entries _body=",255,128,128,64"/>
+     <entries _body=",255,128,128,128"/>
+     <entries _body=",255,255,128,255"/>
+     <entries _body=",255,0,64,0"/>
+     <entries _body=",255,0,0,0"/>
+     <entries _body=",255,255,255,255"/>
+     <entries _body=",255,255,128,0"/>
+    </seriesPalette>
     <series seriesIdentifier="">
      <label>
       <background _nil="1"/>
@@ -1179,9 +1331,12 @@ params["pModel"].value = this.getRowData().getColumnValue("commodity");]]></meth
     <sortKey/>
    </seriesDefinitions>
    <lineAttributes>
-    <color _nil="1"/>
+    <color _body=",255,204,214,235"/>
    </lineAttributes>
    <label>
+    <caption>
+     <font name="Gibson W04 Regular" size="8.0" bold="true"/>
+    </caption>
     <background _nil="1"/>
     <outline>
      <color _nil="1"/>
@@ -1192,7 +1347,7 @@ params["pModel"].value = this.getRowData().getColumnValue("commodity");]]></meth
      <color _nil="1"/>
     </lineAttributes>
     <tickAttributes>
-     <color _nil="1"/>
+     <color _body=",255,204,214,235"/>
     </tickAttributes>
    </majorGrid>
    <minorGrid>
@@ -1252,20 +1407,180 @@ params["pModel"].value = this.getRowData().getColumnValue("commodity");]]></meth
                     <method name="onCreate"><![CDATA[var logger = java.util.logging.Logger.getLogger("birt.report.logger");
 logger.warning (BirtDateTime.now() + ' Table : ' + this.getRowData().getColumnValue("commodity"));
 params["pModel"].value = this.getRowData().getColumnValue("commodity");]]></method>
-                    <property name="backgroundColor">#3578AD</property>
-                    <property name="height">10px</property>
+                    <property name="backgroundColor">#EFF5F9</property>
+                    <property name="height">22px</property>
                     <cell id="728">
                         <property name="colSpan">2</property>
                         <property name="rowSpan">1</property>
-                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomStyle">none</property>
                         <property name="borderBottomWidth">1px</property>
                         <property name="borderLeftStyle">none</property>
                         <property name="borderRightStyle">none</property>
-                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopStyle">none</property>
                         <property name="borderTopWidth">1px</property>
                     </cell>
                 </row>
             </detail>
+            <footer>
+                <row id="737">
+                    <cell id="738">
+                        <property name="colSpan">2</property>
+                        <property name="rowSpan">1</property>
+                        <property name="backgroundColor">white</property>
+                        <property name="borderBottomStyle">none</property>
+                        <property name="borderLeftStyle">none</property>
+                        <property name="borderRightStyle">none</property>
+                        <property name="borderTopStyle">none</property>
+                        <text id="732">
+                            <property name="contentType">html</property>
+                            <text-property name="content"><![CDATA[<script>
+// Change the fonts
+//
+document.querySelectorAll('*').forEach(el => {
+  const fontFamily = window.getComputedStyle(el).fontFamily;
+
+  if (fontFamily &amp;&amp; fontFamily.includes('Lato')) {
+	el.style.fontFamily = fontFamily.replace(/Lato/g, 'Gibson W04 Regular');
+  }
+  if (fontFamily &amp;&amp; fontFamily.includes('Lucida Grande')) {
+    el.style.fontFamily = fontFamily.replace(/Lucida Grande/g, 'Gibson W04 Regular');
+  }  
+});
+
+//
+// Add the rounded box to the date selectors
+//
+const groupElements = document.querySelectorAll('g.highcharts-input-group');
+
+groupElements.forEach(groupElement => {
+  const newRect = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
+  newRect.setAttribute('class', 'highcharts-label-box');
+  newRect.setAttribute('x', '-5');
+  newRect.setAttribute('y', '-4');
+  newRect.setAttribute('rx', '10');
+  newRect.setAttribute('ry', '10');
+  newRect.setAttribute('width', '177');
+  newRect.setAttribute('height', '28');
+  newRect.setAttribute('stroke', 'none');
+  newRect.setAttribute('stroke-width', '1');
+  newRect.setAttribute('style', 'fill: #f3f3f3;');
+
+  // Insert the new rect as the first child of each group element
+  groupElement.insertBefore(newRect, groupElement.firstChild);
+});
+
+//
+// Added the rounded box to the Zoom and apply a gradient
+//
+const groups = document.querySelectorAll('g.highcharts-range-selector-buttons');
+
+if (groups.length > 0) {
+  
+    const defs = document.createElementNS('http://www.w3.org/2000/svg', 'defs');
+        
+    const linearGradient = document.createElementNS('http://www.w3.org/2000/svg', 'linearGradient');
+    linearGradient.setAttribute('id', 'fadeGradient');
+    linearGradient.setAttribute('x1', '0');
+    linearGradient.setAttribute('y1', '0');
+    linearGradient.setAttribute('x2', '1');
+    linearGradient.setAttribute('y2', '0');
+
+    const stop1 = document.createElementNS('http://www.w3.org/2000/svg', 'stop');
+    stop1.setAttribute('offset', '0%');
+    stop1.setAttribute('stop-color', 'black');
+    stop1.setAttribute('stop-opacity', '0.13');
+
+    const stop2 = document.createElementNS('http://www.w3.org/2000/svg', 'stop');
+    stop2.setAttribute('offset', '100%');
+    stop2.setAttribute('stop-color', 'black');
+    stop2.setAttribute('stop-opacity', '0');
+
+    linearGradient.appendChild(stop1);
+    linearGradient.appendChild(stop2);
+    defs.appendChild(linearGradient);
+  
+  groups.forEach(group => {
+  
+  
+    // Find first <g class="highcharts-label" transform like "translate(X,0)"
+    const labelG = group.querySelector('g.highcharts-label[transform^="translate("]');
+    let rect1X = 34; // fallback x for rect1
+    if (labelG) {
+      const transform = labelG.getAttribute('transform');
+      const match = transform.match(/translate\(([-\d.]+),\s*0\)/);
+      if (match) {
+        const parsedX = parseFloat(match[1]);
+        if (!isNaN(parsedX)) {
+//console.log (parsedX);
+			if (parsedX == 40) rect1X = 34;
+			else if (parsedX == 59) rect1X = 45;
+			
+			else
+				rect1X = parsedX - 14;
+        }
+      }
+    }
+  
+    // Find first <g class="highcharts-no-tooltip highcharts-button highcharts-button-normal" transform like "translate(X,0)"
+    const buttonG = group.querySelector(
+      'g.highcharts-no-tooltip.highcharts-button.highcharts-button-normal[transform^="translate("]'
+    );
+
+    let rect2X = 82; // fallback for rect2
+    if (buttonG) {
+      const transform = buttonG.getAttribute('transform');
+      const match = transform.match(/translate\(([-\d.]+),\s*0\)/);
+      if (match) {
+        const parsedX = parseFloat(match[1]);
+        if (!isNaN(parsedX)) {
+//console.log (parsedX);        
+			if (parsedX == 80) rect2X = 81;
+			else if (parsedX == 97) rect2X = 87;
+			else
+				rect2X = parsedX - 5;
+        }
+      }
+    }
+  
+    // Create first rect
+    const rect1 = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
+    rect1.setAttribute('class', 'highcharts-label-box');
+   // rect1.setAttribute('x', '34');
+    rect1.setAttribute('x', rect1X.toString());
+    rect1.setAttribute('y', '-4');
+    rect1.setAttribute('rx', '10');
+    rect1.setAttribute('ry', '10');
+    rect1.setAttribute('width', '274');
+    rect1.setAttribute('height', '28');
+    rect1.setAttribute('stroke', 'none');
+    rect1.setAttribute('stroke-width', '1');
+    rect1.setAttribute('style', 'fill: #f3f3f3;');
+
+    // Create second rect with gradient fill
+    const rect2 = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
+    //rect2.setAttribute('x', '86');
+    //if (xValue <= 81) xValue= 86;
+    //rect2.setAttribute('x', (xValue-5).toString());
+    rect2.setAttribute('x', rect2X.toString());
+    rect2.setAttribute('y', '-4');
+    rect2.setAttribute('width', '7');
+    rect2.setAttribute('height', '28');
+    rect2.setAttribute('fill', 'url(#fadeGradient)');
+
+    // Insert both as first children (rect2 after rect1)
+    group.insertBefore(rect2, group.firstChild);
+	group.insertBefore(defs, group.firstChild);
+    group.insertBefore(rect1, group.firstChild);
+  });
+} else {
+  console.warn('No <g> elements found with class "highcharts-range-selector-buttons".');
+}
+
+</script>]]></text-property>
+                        </text>
+                    </cell>
+                </row>
+            </footer>
             <property name="captionFontSize">1.1vw</property>
             <property name="captionTextAlignment">left</property>
         </table>

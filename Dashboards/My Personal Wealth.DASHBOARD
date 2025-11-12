@@ -4136,7 +4136,7 @@
    <baseSampleData dataSetRepresentation="A, B, C"/>
    <orthogonalSampleData dataSetRepresentation="5,4,12" seriesDefinitionIndex="0"/>
   </sampleData>
-  <emptyMessage>
+  <emptyMessage visible="true">
    <caption value="This chart contains no data."/>
    <background _body=",64,127,127,127"/>
    <outline>
@@ -4541,6 +4541,18 @@
                                             <property name="internalReportLetRef">Merchants-Chart</property>
                                         </data-view>
                                     </property>
+                                    <property name="subscribeTo">
+                                        <event-subscriber>
+                                            <property name="eventName">SELECT_EVENT:SEMANTIC_filter</property>
+                                            <property name="eventObjects">
+                                                <event-object>
+                                                    <property name="appliedTo">Category</property>
+                                                    <property name="gadget">Gadget_e7e4f03d-777c-4b3c-ab21-49454ea11d93</property>
+                                                    <property name="dirty">false</property>
+                                                </event-object>
+                                            </property>
+                                        </event-subscriber>
+                                    </property>
                                 </gadget>
                                 <gadget name="Gadget_a7dd0954-e852-4629-9243-4240849a6534" id="1060">
                                     <list-property name="userProperties">
@@ -4742,6 +4754,11 @@
                                         </event-object>
                                         <event-object>
                                             <property name="gadget">Gadget_a7dd0954-e852-4629-9243-4240849a6534</property>
+                                            <property name="dirty">false</property>
+                                        </event-object>
+                                        <event-object>
+                                            <property name="appliedTo">Category</property>
+                                            <property name="gadget">Gadget_2927b84e-1614-44e2-a576-0cdf8fa611ec</property>
                                             <property name="dirty">false</property>
                                         </event-object>
                                     </property>
@@ -5023,8 +5040,8 @@
                                         </structure>
                                     </list-property>
                                     <property name="userPreferences">{}</property>
-                                    <property name="title">My Wealth vs. State Avg</property>
-                                    <property name="externalGadgetURI">^/Report Designs/My Wealth vs Geo.rptdesign</property>
+                                    <property name="title">Average Wealth by State</property>
+                                    <property name="externalGadgetURI">^/Report Designs/MyWealthvsGeo.rptdesign</property>
                                     <property name="showTitle">false</property>
                                     <property name="showBorder">false</property>
                                     <property name="zIndex">23</property>
@@ -5051,7 +5068,7 @@
                                             <property name="gadgetType">viewer</property>
                                             <property name="externalContentRef">
                                                 <external-element-ref>
-                                                    <property name="sourceFile">^/Report Designs/My Wealth vs Geo L.rptdocument</property>
+                                                    <property name="sourceFile">^/Report Designs/MyWealthvsGeo.rptdocument</property>
                                                     <property name="targetBookmark">map</property>
                                                 </external-element-ref>
                                             </property>
@@ -5066,8 +5083,8 @@
                                         </structure>
                                     </list-property>
                                     <property name="userPreferences">{}</property>
-                                    <property name="title">My Travel Goal Progress</property>
-                                    <property name="externalGadgetURI">^/Report Designs/world_trip.rptdesign</property>
+                                    <property name="title">My Wealth Timeline</property>
+                                    <property name="externalGadgetURI">^/Report Designs/MonthlyWealth.rptdesign</property>
                                     <property name="showTitle">false</property>
                                     <property name="showBorder">false</property>
                                     <property name="zIndex">26</property>
@@ -5094,7 +5111,7 @@
                                             <property name="gadgetType">viewer</property>
                                             <property name="externalContentRef">
                                                 <external-element-ref>
-                                                    <property name="sourceFile">^/Report Designs/world_trip.rptdocument</property>
+                                                    <property name="sourceFile">^/Report Designs/MonthlyWealth.rptdocument</property>
                                                     <property name="targetBookmark">grid</property>
                                                 </external-element-ref>
                                             </property>
@@ -5341,96 +5358,6 @@
                     <property name="externalTab">^/Dashboards/Retirement.dashboard</property>
                     <property name="externalTabName">a85ab8ca-5c7e-4d97-9024-ba6434bf4881</property>
                 </tab-element>
-                <tab-element name="26d62da6-da15-4ddb-9349-a6f447b1ed29" id="143">
-                    <list-property name="userProperties">
-                        <structure>
-                            <property name="name">tabTheme</property>
-                            <property name="type">string</property>
-                        </structure>
-                        <structure>
-                            <property name="name">responsiveView</property>
-                            <property name="type">boolean</property>
-                        </structure>
-                    </list-property>
-                    <property name="tabTheme">CleanBlueThemeReportItem.Clean Blue:Light</property>
-                    <property name="responsiveView">true</property>
-                    <property name="title">Portfolio Performance</property>
-                    <property name="showHeader">false</property>
-                    <property name="showFooter">false</property>
-                    <property name="headerHTML">null</property>
-                    <property name="footerHTML">null</property>
-                    <property name="backgroundColor">RGB(255,255,255)</property>
-                    <property name="sections">
-                        <section id="1084">
-                            <property name="width">100%</property>
-                            <property name="gadgets">
-                                <gadget name="Gadget_6ec15be4-ccbe-4d02-812c-6326d8a752d7" id="144">
-                                    <list-property name="userProperties">
-                                        <structure>
-                                            <property name="name">userPreferences</property>
-                                            <property name="type">string</property>
-                                        </structure>
-                                    </list-property>
-                                    <property name="userPreferences">{}</property>
-                                    <property name="title">Portfolio Performance</property>
-                                    <property name="externalGadgetURI">^/Report Designs/Portfolio Performance Dashboard_NoHTML.rptdesign</property>
-                                    <property name="showTitle">false</property>
-                                    <property name="showBorder">false</property>
-                                    <property name="zIndex">2</property>
-                                    <property name="showScrollBar">false</property>
-                                    <property name="height">628px</property>
-                                    <property name="caption">
-                                        <gadget-caption id="996">
-                                            <property name="showCaption">true</property>
-                                            <property name="horizontalAlignment">left</property>
-                                            <property name="fontFamily">"Lato"</property>
-                                            <property name="fontSize">16pt</property>
-                                            <property name="color">#333333</property>
-                                        </gadget-caption>
-                                    </property>
-                                    <property name="content">
-                                        <data-view id="145">
-                                            <list-property name="userProperties">
-                                                <structure>
-                                                    <property name="name">showViewerToolbar</property>
-                                                    <property name="type">boolean</property>
-                                                </structure>
-                                            </list-property>
-                                            <property name="showViewerToolbar">false</property>
-                                            <property name="gadgetType">viewer</property>
-                                            <property name="externalContentRef">
-                                                <external-element-ref>
-                                                    <property name="sourceFile">^/Report Designs/Portfolio Performance Dashboard_NoHTML.RPTDOCUMENT</property>
-                                                </external-element-ref>
-                                            </property>
-                                        </data-view>
-                                    </property>
-                                </gadget>
-                                <gadget name="87a03aea-a9a9-481a-8019-a4b7f745a17b" id="146">
-                                    <list-property name="userProperties">
-                                        <structure>
-                                            <property name="name">userPreferences</property>
-                                            <property name="type">string</property>
-                                        </structure>
-                                    </list-property>
-                                    <property name="userPreferences">{}</property>
-                                    <property name="zIndex">1</property>
-                                    <property name="isVisible">false</property>
-                                    <property name="caption">
-                                        <gadget-caption id="1143">
-                                            <property name="fontFamily">"Lato"</property>
-                                            <property name="fontSize">16pt</property>
-                                            <property name="color">#333333</property>
-                                        </gadget-caption>
-                                    </property>
-                                    <property name="content">
-                                        <current-selections id="147"/>
-                                    </property>
-                                </gadget>
-                            </property>
-                        </section>
-                    </property>
-                </tab-element>
                 <tab-element name="9c1ee78d-e395-4c22-a398-39e88fc7b6f8" id="1144">
                     <list-property name="userProperties">
                         <structure>
@@ -5569,6 +5496,96 @@
                                 </data-view>
                             </property>
                         </gadget>
+                    </property>
+                </tab-element>
+                <tab-element name="26d62da6-da15-4ddb-9349-a6f447b1ed29" id="143">
+                    <list-property name="userProperties">
+                        <structure>
+                            <property name="name">tabTheme</property>
+                            <property name="type">string</property>
+                        </structure>
+                        <structure>
+                            <property name="name">responsiveView</property>
+                            <property name="type">boolean</property>
+                        </structure>
+                    </list-property>
+                    <property name="tabTheme">CleanBlueThemeReportItem.Clean Blue:Light</property>
+                    <property name="responsiveView">false</property>
+                    <property name="title">Portfolio Performance</property>
+                    <property name="showHeader">false</property>
+                    <property name="showFooter">false</property>
+                    <property name="headerHTML">null</property>
+                    <property name="footerHTML">null</property>
+                    <property name="backgroundColor">RGB(255,255,255)</property>
+                    <property name="sections">
+                        <section id="1084">
+                            <property name="width">100%</property>
+                            <property name="gadgets">
+                                <gadget name="Gadget_6ec15be4-ccbe-4d02-812c-6326d8a752d7" id="144">
+                                    <list-property name="userProperties">
+                                        <structure>
+                                            <property name="name">userPreferences</property>
+                                            <property name="type">string</property>
+                                        </structure>
+                                    </list-property>
+                                    <property name="userPreferences">{}</property>
+                                    <property name="title">Portfolio Performance</property>
+                                    <property name="externalGadgetURI">^/Report Designs/Portfolio Performance Dashboard_Aviator.rptdesign</property>
+                                    <property name="showTitle">false</property>
+                                    <property name="showBorder">false</property>
+                                    <property name="zIndex">2</property>
+                                    <property name="showScrollBar">false</property>
+                                    <property name="height">900px</property>
+                                    <property name="caption">
+                                        <gadget-caption id="996">
+                                            <property name="showCaption">false</property>
+                                            <property name="horizontalAlignment">left</property>
+                                            <property name="fontFamily">"Lato"</property>
+                                            <property name="fontSize">16pt</property>
+                                            <property name="color">#333333</property>
+                                        </gadget-caption>
+                                    </property>
+                                    <property name="content">
+                                        <data-view id="145">
+                                            <list-property name="userProperties">
+                                                <structure>
+                                                    <property name="name">showViewerToolbar</property>
+                                                    <property name="type">boolean</property>
+                                                </structure>
+                                            </list-property>
+                                            <property name="showViewerToolbar">false</property>
+                                            <property name="gadgetType">viewer</property>
+                                            <property name="externalContentRef">
+                                                <external-element-ref>
+                                                    <property name="sourceFile">^/Report Designs/Portfolio Performance Dashboard_Aviator.RPTDOCUMENT</property>
+                                                </external-element-ref>
+                                            </property>
+                                        </data-view>
+                                    </property>
+                                </gadget>
+                                <gadget name="87a03aea-a9a9-481a-8019-a4b7f745a17b" id="146">
+                                    <list-property name="userProperties">
+                                        <structure>
+                                            <property name="name">userPreferences</property>
+                                            <property name="type">string</property>
+                                        </structure>
+                                    </list-property>
+                                    <property name="userPreferences">{}</property>
+                                    <property name="zIndex">1</property>
+                                    <property name="isVisible">false</property>
+                                    <property name="caption">
+                                        <gadget-caption id="1143">
+                                            <property name="fontFamily">"Lato"</property>
+                                            <property name="fontSize">16pt</property>
+                                            <property name="color">#333333</property>
+                                        </gadget-caption>
+                                    </property>
+                                    <property name="content">
+                                        <current-selections id="147"/>
+                                    </property>
+                                </gadget>
+                            </property>
+                        </section>
                     </property>
                 </tab-element>
             </property>

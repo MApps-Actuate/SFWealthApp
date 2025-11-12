@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
     <property name="createdBy">Eclipse BIRT Designer Version 4.29.0.v202504021847</property>
+    <list-property name="propertyBindings">
+        <structure>
+            <property name="name">queryText</property>
+            <property name="id">1039</property>
+        </structure>
+    </list-property>
     <property name="units">in</property>
     <property name="iconFile">/templates/blank_report.gif</property>
+    <property name="layoutPreference">auto layout</property>
     <property name="bidiLayoutOrientation">ltr</property>
-    <property name="imageDPI">96</property>
     <list-property name="libraries">
         <structure>
             <property name="fileName">ThemesReportItems3.rptlibrary</property>
             <property name="namespace">ThemesReportItems3</property>
-        </structure>
-    </list-property>
-    <list-property name="cssStyleSheets">
-        <structure>
-            <property name="useExternalCss">true</property>
-            <property name="externalCssURI">http://fonts.googleapis.com/css?family=Lato</property>
         </structure>
     </list-property>
     <method name="onContentUpdate"><![CDATA[var uiOptions = this.getViewer().getUIOptions();
@@ -1234,6 +1234,7 @@ uiOptions.enableSaveDocument(false);
 </model:DesignValues>]]></xml-property>
         </oda-data-set>
         <oda-data-set extensionID="org.eclipse.datatools.connectivity.oda.flatfile.dataSet" name="TS1 Data Set" id="1039">
+            <property name="nullsOrdering">nulls lowest</property>
             <list-property name="columnHints">
                 <structure>
                     <property name="columnName">Portfolio Date</property>
@@ -1296,15 +1297,7 @@ uiOptions.enableSaveDocument(false);
                     <text-property name="heading">Covariance</text-property>
                 </structure>
             </list-property>
-            <list-property name="filter">
-                <structure>
-                    <property name="operator">ge</property>
-                    <expression name="expr" type="javascript">row["Portfolio Date"]</expression>
-                    <simple-property-list name="value1">
-                        <value type="javascript">"2010-10-31"</value>
-                    </simple-property-list>
-                </structure>
-            </list-property>
+            <list-property name="filter"/>
             <list-property name="parameters"/>
             <structure name="cachedMetaData">
                 <list-property name="resultSet">
@@ -1663,116 +1656,152 @@ uiOptions.enableSaveDocument(false);
 </model:DesignValues>]]></xml-property>
         </oda-data-set>
     </data-sets>
-    <styles>
-        <style name="report" id="4">
-            <property name="fontFamily">sans-serif</property>
-            <property name="fontSize">10pt</property>
-        </style>
-        <style name="crosstab-cell" id="5">
-            <property name="borderBottomColor">#CCCCCC</property>
-            <property name="borderBottomStyle">solid</property>
-            <property name="borderBottomWidth">1pt</property>
-            <property name="borderLeftColor">#CCCCCC</property>
-            <property name="borderLeftStyle">solid</property>
-            <property name="borderLeftWidth">1pt</property>
-            <property name="borderRightColor">#CCCCCC</property>
-            <property name="borderRightStyle">solid</property>
-            <property name="borderRightWidth">1pt</property>
-            <property name="borderTopColor">#CCCCCC</property>
-            <property name="borderTopStyle">solid</property>
-            <property name="borderTopWidth">1pt</property>
-        </style>
-        <style name="crosstab" id="6">
-            <property name="borderBottomColor">#CCCCCC</property>
-            <property name="borderBottomStyle">solid</property>
-            <property name="borderBottomWidth">1pt</property>
-            <property name="borderLeftColor">#CCCCCC</property>
-            <property name="borderLeftStyle">solid</property>
-            <property name="borderLeftWidth">1pt</property>
-            <property name="borderRightColor">#CCCCCC</property>
-            <property name="borderRightStyle">solid</property>
-            <property name="borderRightWidth">1pt</property>
-            <property name="borderTopColor">#CCCCCC</property>
-            <property name="borderTopStyle">solid</property>
-            <property name="borderTopWidth">1pt</property>
-        </style>
-        <style name="AlternateColorStyle" id="386">
-            <list-property name="highlightRules">
-                <structure>
-                    <property name="operator">eq</property>
-                    <property name="backgroundColor">#F9F7F4</property>
-                    <expression name="testExpr" type="javascript">if( typeof last == 'undefined' ){&#13;
-last=0;&#13;
-}&#13;
-last++;&#13;
-last%2;</expression>
-                    <simple-property-list name="value1">
-                        <value type="javascript">0</value>
-                    </simple-property-list>
-                </structure>
-            </list-property>
-        </style>
-        <style name="ExtraBold" id="504">
-            <property name="fontWeight">bolder</property>
-        </style>
-        <style name="AlternateColorStyle1" id="696">
-            <list-property name="highlightRules">
-                <structure>
-                    <property name="operator">eq</property>
-                    <property name="backgroundColor">#F9F7F4</property>
-                    <expression name="testExpr" type="javascript">if( typeof last1 == 'undefined' ){&#13;
-last1=0;&#13;
-}&#13;
-last1++;&#13;
-last1%2;</expression>
-                    <simple-property-list name="value1">
-                        <value type="javascript">0</value>
-                    </simple-property-list>
-                </structure>
-            </list-property>
-        </style>
-    </styles>
+    <themes>
+        <report-item-theme type="Table" name="default-table" id="777">
+            <styles>
+                <style name="table" id="896">
+                    <property name="fontFamily">"canada-type-gibson"</property>
+                    <property name="fontSize">8pt</property>
+                    <property name="color">#666666</property>
+                    <property name="borderBottomColor">#DADADA</property>
+                    <property name="borderBottomStyle">solid</property>
+                    <property name="borderBottomWidth">1px</property>
+                    <property name="borderLeftColor">#DADADA</property>
+                    <property name="borderLeftStyle">solid</property>
+                    <property name="borderLeftWidth">1px</property>
+                    <property name="borderRightColor">#DADADA</property>
+                    <property name="borderRightStyle">solid</property>
+                    <property name="borderRightWidth">1px</property>
+                    <property name="borderTopColor">#DADADA</property>
+                    <property name="borderTopStyle">solid</property>
+                    <property name="borderTopWidth">1px</property>
+                </style>
+                <style name="table-detail-cell" id="918">
+                    <property name="backgroundColor">#FFFFFF</property>
+                    <property name="borderBottomColor">#DADADA</property>
+                    <property name="borderBottomStyle">solid</property>
+                    <property name="borderBottomWidth">1px</property>
+                    <property name="borderLeftColor">#DADADA</property>
+                    <property name="borderLeftStyle">solid</property>
+                    <property name="borderLeftWidth">1px</property>
+                    <property name="borderRightColor">#DADADA</property>
+                    <property name="borderRightStyle">solid</property>
+                    <property name="borderRightWidth">1px</property>
+                    <property name="borderTopColor">#DADADA</property>
+                    <property name="borderTopStyle">solid</property>
+                    <property name="borderTopWidth">1px</property>
+                </style>
+                <style name="table-header-cell" id="919">
+                    <property name="backgroundColor">#EDEEF3</property>
+                    <property name="fontWeight">bold</property>
+                    <property name="color">#666666</property>
+                    <property name="borderBottomColor">#DADADA</property>
+                    <property name="borderBottomStyle">solid</property>
+                    <property name="borderBottomWidth">1px</property>
+                    <property name="borderLeftColor">#DADADA</property>
+                    <property name="borderLeftStyle">solid</property>
+                    <property name="borderLeftWidth">1px</property>
+                    <property name="borderRightColor">#DADADA</property>
+                    <property name="borderRightStyle">solid</property>
+                    <property name="borderRightWidth">1px</property>
+                    <property name="borderTopColor">#DADADA</property>
+                    <property name="borderTopStyle">solid</property>
+                    <property name="borderTopWidth">1px</property>
+                </style>
+                <style name="table-group-header-cell" id="920">
+                    <property name="borderBottomColor">#DADADA</property>
+                    <property name="borderBottomStyle">solid</property>
+                    <property name="borderBottomWidth">1px</property>
+                    <property name="borderLeftColor">#DADADA</property>
+                    <property name="borderLeftStyle">solid</property>
+                    <property name="borderLeftWidth">1px</property>
+                    <property name="borderRightColor">#DADADA</property>
+                    <property name="borderRightStyle">solid</property>
+                    <property name="borderRightWidth">1px</property>
+                    <property name="borderTopColor">#DADADA</property>
+                    <property name="borderTopStyle">solid</property>
+                    <property name="borderTopWidth">1px</property>
+                </style>
+                <style name="table-group-footer-cell" id="921">
+                    <property name="borderBottomColor">#DADADA</property>
+                    <property name="borderBottomStyle">solid</property>
+                    <property name="borderBottomWidth">1px</property>
+                    <property name="borderLeftColor">#DADADA</property>
+                    <property name="borderLeftStyle">solid</property>
+                    <property name="borderLeftWidth">1px</property>
+                    <property name="borderRightColor">#DADADA</property>
+                    <property name="borderRightStyle">solid</property>
+                    <property name="borderRightWidth">1px</property>
+                    <property name="borderTopColor">#DADADA</property>
+                    <property name="borderTopStyle">solid</property>
+                    <property name="borderTopWidth">1px</property>
+                </style>
+                <style name="table-footer-cell" id="922">
+                    <property name="backgroundColor">#EDEEF3</property>
+                    <property name="fontWeight">bold</property>
+                    <property name="color">#666666</property>
+                    <property name="borderBottomColor">#DADADA</property>
+                    <property name="borderBottomStyle">solid</property>
+                    <property name="borderBottomWidth">1px</property>
+                    <property name="borderLeftColor">#DADADA</property>
+                    <property name="borderLeftStyle">solid</property>
+                    <property name="borderLeftWidth">1px</property>
+                    <property name="borderRightColor">#DADADA</property>
+                    <property name="borderRightStyle">solid</property>
+                    <property name="borderRightWidth">1px</property>
+                    <property name="borderTopColor">#DADADA</property>
+                    <property name="borderTopStyle">solid</property>
+                    <property name="borderTopWidth">1px</property>
+                </style>
+            </styles>
+        </report-item-theme>
+    </themes>
     <page-setup>
         <simple-master-page name="Simple MasterPage" id="2">
-            <property name="type">custom</property>
+            <property name="type">us-letter</property>
             <property name="orientation">landscape</property>
             <property name="topMargin">0.25in</property>
-            <property name="bottomMargin">0.25in</property>
-            <property name="height">9in</property>
-            <property name="width">15in</property>
-            <property name="showHeaderOnFirst">false</property>
+            <property name="leftMargin">0.25in</property>
+            <property name="bottomMargin">0in</property>
+            <property name="rightMargin">0.25in</property>
+            <property name="showHeaderOnFirst">true</property>
             <property name="showFooterOnLast">false</property>
-            <property name="headerHeight">0in</property>
-            <property name="footerHeight">0in</property>
-            <page-footer>
-                <text id="3">
-                    <property name="contentType">html</property>
-                    <text-property name="content"><![CDATA[<value-of>new Date()</value-of>]]></text-property>
-                </text>
-            </page-footer>
         </simple-master-page>
     </page-setup>
     <body>
-        <grid id="534">
-            <property name="height">1.1666666666666667in</property>
-            <expression name="bookmark" type="javascript">"charts"</expression>
-            <column id="535">
-                <property name="width">3.458in</property>
-            </column>
-            <row id="538">
-                <cell id="539">
-                    <property name="paddingLeft">0pt</property>
+        <grid id="1219">
+            <property name="fontFamily">"canada-type-gibson"</property>
+            <property name="textAlign">center</property>
+            <expression name="bookmark" type="javascript">"rings"</expression>
+            <column id="1220"/>
+            <row id="1265">
+                <cell id="1266">
+                    <property name="colSpan">1</property>
+                    <property name="rowSpan">1</property>
+                    <property name="textAlign">center</property>
+                    <label id="1247">
+                        <property name="fontWeight">200</property>
+                        <property name="color">#333333</property>
+                        <property name="paddingBottom">0pt</property>
+                        <text-property name="text">Active Risk vs. Beta</text-property>
+                    </label>
+                </cell>
+            </row>
+            <row id="1222">
+                <cell id="1223">
+                    <property name="textAlign">center</property>
+                    <property name="verticalAlign">middle</property>
                     <extended-item extensionName="Chart" id="1032">
                         <xml-property name="xmlRepresentation"><![CDATA[<ActuateChart version="2.6.1">
  <ChartWithAxes version="2.6.1" type="Line Chart" subType="Overlay">
   <block>
-   <children _type="TitleBlock">
+   <children _type="TitleBlock" visible="false">
     <outline>
      <color _nil="1"/>
     </outline>
     <label>
      <caption value="Active Risk vs. Beta">
-      <font name="Verdana" size="10.0" bold="false"/>
+      <font name="canada-type-gibson" size="10.0" bold="false"/>
      </caption>
      <background _nil="1"/>
      <outline>
@@ -1790,7 +1819,7 @@ last1%2;</expression>
      </outline>
     </clientArea>
    </children>
-   <children _type="Legend" orientation="0" position="1">
+   <children _type="Legend" visible="false">
     <outline>
      <color _nil="1"/>
     </outline>
@@ -1808,7 +1837,7 @@ last1%2;</expression>
     </separator>
     <title>
      <caption>
-      <font name="Verdana"/>
+      <font name="canada-type-gibson"/>
      </caption>
      <background _nil="1"/>
      <outline>
@@ -1824,9 +1853,12 @@ last1%2;</expression>
   <extendedProperties name="enable.area.alt" value="false"/>
   <extendedProperties name="enable.drill.category" value="true"/>
   <extendedProperties name="enable.drill.series" value="true"/>
-  <extendedProperties name="jschart.client.script" value="beforeRendering: function(options, chart)&#13;&#10;{&#13;&#10;    options.legend.margin = 0;&#13;&#10;},"/>
+  <extendedProperties name="jschart.client.script" value="beforeDrawDataPoint: function(point, pointOptions, chart, seriesIndex, pointIndex)&#13;&#10;{&#13;&#10;&#13;&#10;if (seriesIndex == 0) {&#13;&#10;    if ( (chart._chart.series[0].data.length - 1) == pointIndex) {&#13;&#10;        chart._chart.options.series[0].data[pointIndex].dataLabels = {enabled:true};&#13;&#10;    }&#13;&#10;}&#13;&#10;&#13;&#10;if (seriesIndex == 1) {&#13;&#10;    if ( (chart._chart.series[1].data.length - 1) == pointIndex) {&#13;&#10;        chart._chart.options.series[1].data[pointIndex].dataLabels = {enabled:true};&#13;&#10;    }&#13;&#10;}&#13;&#10;&#13;&#10;&#13;&#10;},&#13;&#10;&#13;&#10;&#13;&#10;beforeDrawSeries: function(series, seriesOptions, chart, seriesIndex)&#13;&#10;{&#13;&#10;seriesOptions.dataLabels =  {&#13;&#10;    enabled:false,&#13;&#10;    crop: false,&#13;&#10;    overflow: &#039;none&#039;,&#13;&#10;    align: &#039;left&#039;,&#13;&#10;    formatter: function() {&#13;&#10;        return &#039;&lt;span sty&#039;+&#039;le=&quot;color:&#039;+this.series.color+&#039;&quot;&gt;&#039;+this.series.name+&#039;&lt;/span&gt;&#039;;&#13;&#10;    }&#13;&#10;};&#13;&#10;&#13;&#10;},&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;beforeGeneration: function(options)&#13;&#10;{&#13;&#10;options.chart.spacingTop=0;&#13;&#10;//options.chart.spacingBottom=15;&#13;&#10;&#13;&#10;//options.chart.margin = [0,0,0,0];&#13;&#10;&#13;&#10;&#13;&#10;options.chart.marginRight=60;&#13;&#10;&#13;&#10;},&#13;&#10;&#13;&#10;&#13;&#10;beforeDrawAxis: function(axis, axisOptions, chart, axisIndex)&#13;&#10;{&#13;&#10;if ((axis.coll == &#039;yAxis&#039;) &amp;&amp; (axisIndex == 1)) {&#13;&#10;    axisOptions.labels.formatter = function () {&#13;&#10;        if (this.isFirst || this.isLast) {&#13;&#10;            return this.value;&#13;&#10;        }&#13;&#10;        return &#039;&#039;;&#13;&#10;    }&#13;&#10;}&#13;&#10;},&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;afterRendering: function(chart)&#13;&#10;{&#13;&#10;    lastIndex = chart.getCore().series[0].xData.length - 1;&#13;&#10;    chart.getCore().series[0].data[lastIndex].update({&#13;&#10;                        marker: {&#13;&#10;                            enabled: true,&#13;&#10;                            symbol: &#039;circle&#039;&#13;&#10;                        }&#13;&#10;                    }, true);&#13;&#10;    chart.getCore().series[1].data[lastIndex].update({&#13;&#10;                        marker: {&#13;&#10;                            enabled: true,&#13;&#10;                            symbol: &#039;circle&#039;&#13;&#10;                        }&#13;&#10;                    }, true);&#13;&#10;},"/>
   <extendedProperties name="jschart.zoom" value="xy"/>
-  <extendedProperties name="jschart.series.shadow" value="true"/>
+  <extendedProperties name="jschart.series.shadow" value="false"/>
+  <extendedProperties name="jschart.animation" value="false"/>
+  <extendedProperties name="chart.palette.type" value="color"/>
+  <extendedProperties name="chart.marker.auto" value="true"/>
   <sampleData>
    <baseSampleData dataSetRepresentation="01/05/2000,02/01/2000,04/12/2000,03/12/2000,02/29/2000"/>
    <orthogonalSampleData dataSetRepresentation="6,4,12,8,10" seriesDefinitionIndex="0"/>
@@ -1847,7 +1879,7 @@ last1%2;</expression>
     </outline>
    </title>
    <associatedAxes primaryAxis="true" percent="false">
-    <title>
+    <title visible="false">
      <background _nil="1"/>
      <outline>
       <color _nil="1"/>
@@ -1856,7 +1888,7 @@ last1%2;</expression>
     <seriesDefinitions>
      <query definition=""/>
      <seriesPalette>
-      <entries _body=",255,60,152,171"/>
+      <entries _body=",255,8,83,211"/>
       <entries _body=",255,242,88,106"/>
       <entries _body=",255,232,172,57"/>
       <entries _body=",255,128,255,128"/>
@@ -1889,8 +1921,8 @@ last1%2;</expression>
       <entries _body=",255,255,255,255"/>
       <entries _body=",255,255,128,0"/>
      </seriesPalette>
-     <series _type="LineSeries" seriesIdentifier="Active Risk" stacked="false">
-      <label>
+     <series _type="LineSeries" seriesIdentifier="Active Risk" stacked="false" curve="true">
+      <label visible="false">
        <background _nil="1"/>
        <outline>
         <color _nil="1"/>
@@ -1908,7 +1940,7 @@ last1%2;</expression>
        </action>
       </triggers>
       <curveFitting _nil="1"/>
-      <markers visible="false">
+      <markers type="0" size="4" visible="false">
        <outline/>
       </markers>
       <lineAttributes thickness="2">
@@ -1931,18 +1963,18 @@ last1%2;</expression>
     </label>
     <formatSpecifier _type="JavaNumberFormatSpecifier" pattern="0.0"/>
     <majorGrid>
-     <lineAttributes visible="true">
-      <color _nil="1"/>
+     <lineAttributes thickness="1" visible="true">
+      <color _body=",255,242,242,242"/>
      </lineAttributes>
-     <tickAttributes>
+     <tickAttributes visible="false">
       <color _nil="1"/>
      </tickAttributes>
     </majorGrid>
     <minorGrid>
-     <lineAttributes>
+     <lineAttributes visible="false">
       <color _nil="1"/>
      </lineAttributes>
-     <tickAttributes>
+     <tickAttributes visible="false">
       <color _nil="1"/>
      </tickAttributes>
     </minorGrid>
@@ -1951,7 +1983,7 @@ last1%2;</expression>
     </origin>
    </associatedAxes>
    <associatedAxes titlePosition="3" labelPosition="3" primaryAxis="false" percent="false">
-    <title>
+    <title visible="false">
      <background _nil="1"/>
      <outline>
       <color _nil="1"/>
@@ -1960,7 +1992,7 @@ last1%2;</expression>
     <seriesDefinitions>
      <query definition=""/>
      <seriesPalette>
-      <entries _body=",255,161,214,227"/>
+      <entries _body=",255,8,153,80"/>
       <entries _body=",255,232,172,57"/>
       <entries _body=",255,128,255,128"/>
       <entries _body=",255,64,128,128"/>
@@ -1993,8 +2025,8 @@ last1%2;</expression>
       <entries _body=",255,255,128,0"/>
       <entries _body=",255,80,166,218"/>
      </seriesPalette>
-     <series _type="LineSeries" seriesIdentifier="Beta (Bmk)" stacked="false">
-      <label>
+     <series _type="LineSeries" seriesIdentifier="Beta" stacked="false" curve="true">
+      <label visible="false">
        <background _nil="1"/>
        <outline>
         <color _nil="1"/>
@@ -2012,7 +2044,7 @@ last1%2;</expression>
        </action>
       </triggers>
       <curveFitting _nil="1"/>
-      <markers visible="false">
+      <markers type="0" size="4" visible="false">
        <outline/>
       </markers>
       <lineAttributes thickness="2">
@@ -2035,21 +2067,25 @@ last1%2;</expression>
     </label>
     <formatSpecifier _type="JavaNumberFormatSpecifier" pattern="0.0"/>
     <majorGrid>
-     <lineAttributes>
+     <lineAttributes visible="false">
       <color _nil="1"/>
      </lineAttributes>
-     <tickAttributes>
+     <tickAttributes visible="false">
       <color _nil="1"/>
      </tickAttributes>
     </majorGrid>
     <minorGrid>
-     <lineAttributes>
+     <lineAttributes visible="false">
       <color _nil="1"/>
      </lineAttributes>
-     <tickAttributes>
+     <tickAttributes visible="false">
       <color _nil="1"/>
      </tickAttributes>
     </minorGrid>
+    <scale>
+     <min _type="NumberDataElement" value="0.4"/>
+     <max _type="NumberDataElement" value="2.0"/>
+    </scale>
     <origin type="1">
      <value _nil="1"/>
     </origin>
@@ -2121,21 +2157,22 @@ last1%2;</expression>
    </label>
    <formatSpecifier _type="JavaDateFormatSpecifier" pattern="M/yy"/>
    <majorGrid>
-    <lineAttributes>
-     <color _nil="1"/>
+    <lineAttributes visible="false">
+     <color _body=",255,242,242,242"/>
     </lineAttributes>
-    <tickAttributes>
+    <tickAttributes visible="false">
      <color _nil="1"/>
     </tickAttributes>
    </majorGrid>
    <minorGrid>
-    <lineAttributes>
+    <lineAttributes visible="false">
      <color _nil="1"/>
     </lineAttributes>
-    <tickAttributes>
+    <tickAttributes visible="false">
      <color _nil="1"/>
     </tickAttributes>
    </minorGrid>
+   <scale tickBetweenCategories="false"/>
    <origin>
     <value _nil="1"/>
    </origin>
@@ -2158,8 +2195,8 @@ last1%2;</expression>
                             </structure>
                         </list-property>
                         <property name="inheritColumns">false</property>
-                        <property name="height">2in</property>
-                        <property name="width">3.4583333333333335in</property>
+                        <property name="height">120pt</property>
+                        <property name="width">280pt</property>
                         <property name="dataSet">Total Plan Data Set</property>
                         <list-property name="boundDataColumns">
                             <structure>
@@ -2212,20 +2249,35 @@ last1%2;</expression>
                     </extended-item>
                 </cell>
             </row>
-            <row id="540">
-                <cell id="541">
-                    <property name="paddingLeft">0pt</property>
+            <row id="1268">
+                <cell id="1269">
+                    <property name="colSpan">1</property>
+                    <property name="rowSpan">1</property>
+                    <property name="textAlign">center</property>
+                    <label id="1248">
+                        <property name="fontWeight">200</property>
+                        <property name="color">#333333</property>
+                        <property name="paddingTop">26px</property>
+                        <property name="paddingBottom">0pt</property>
+                        <text-property name="text">Market Value vs. VaR</text-property>
+                    </label>
+                </cell>
+            </row>
+            <row id="1235">
+                <cell id="1236">
+                    <property name="textAlign">center</property>
+                    <property name="verticalAlign">middle</property>
                     <extended-item extensionName="Chart" id="1033">
                         <xml-property name="xmlRepresentation"><![CDATA[<ActuateChart version="2.6.1">
  <ChartWithAxes version="2.6.1" type="Line Chart" subType="Overlay">
   <block>
-   <children _type="TitleBlock">
+   <children _type="TitleBlock" visible="false">
     <outline>
      <color _nil="1"/>
     </outline>
     <label>
      <caption value="Market Value vs. VaR (Billions)">
-      <font name="Verdana" size="10.0" bold="false"/>
+      <font name="canada-type-gibson" size="10.0" bold="false"/>
      </caption>
      <background _nil="1"/>
      <outline>
@@ -2243,7 +2295,7 @@ last1%2;</expression>
      </outline>
     </clientArea>
    </children>
-   <children _type="Legend" orientation="0" position="1">
+   <children _type="Legend" visible="false" orientation="0" position="1">
     <outline>
      <color _nil="1"/>
     </outline>
@@ -2275,9 +2327,12 @@ last1%2;</expression>
   <extendedProperties name="enable.area.alt" value="false"/>
   <extendedProperties name="enable.drill.category" value="true"/>
   <extendedProperties name="enable.drill.series" value="true"/>
-  <extendedProperties name="jschart.client.script" value="beforeRendering: function(options, chart)&#13;&#10;{&#13;&#10;    options.legend.margin = 0;&#13;&#10;},"/>
+  <extendedProperties name="jschart.client.script" value="beforeDrawDataPoint: function(point, pointOptions, chart, seriesIndex, pointIndex)&#13;&#10;{&#13;&#10;&#13;&#10;if (seriesIndex == 0) {&#13;&#10;    if ( (chart._chart.series[0].data.length - 1) == pointIndex) {&#13;&#10;        chart._chart.options.series[0].data[pointIndex].dataLabels = {enabled:true};&#13;&#10;    }&#13;&#10;}&#13;&#10;&#13;&#10;if (seriesIndex == 1) {&#13;&#10;    if ( (chart._chart.series[1].data.length - 1) == pointIndex) {&#13;&#10;        chart._chart.options.series[1].data[pointIndex].dataLabels = {enabled:true};&#13;&#10;    }&#13;&#10;}&#13;&#10;&#13;&#10;&#13;&#10;},&#13;&#10;&#13;&#10;&#13;&#10;beforeDrawSeries: function(series, seriesOptions, chart, seriesIndex)&#13;&#10;{&#13;&#10;seriesOptions.dataLabels =  {&#13;&#10;    enabled:false,&#13;&#10;    crop: false,&#13;&#10;    overflow: &#039;none&#039;,&#13;&#10;    align: &#039;left&#039;,&#13;&#10;    formatter: function() {&#13;&#10;        if (this.series.name == &#039;Market Value&#039;) theSeriesName = &#039;MV&#039;; else theSeriesName = &#039;VaR&#039;;&#13;&#10;        return &#039;&lt;span sty&#039;+&#039;le=&quot;color:&#039;+this.series.color+&#039;&quot;&gt;&#039;+theSeriesName+&#039;&lt;/span&gt;&#039;;&#13;&#10;    }&#13;&#10;};&#13;&#10;&#13;&#10;},&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;beforeGeneration: function(options)&#13;&#10;{&#13;&#10;options.chart.spacingTop=0;&#13;&#10;//options.chart.spacingBottom=15;&#13;&#10;&#13;&#10;//options.chart.margin = [0,0,0,0];&#13;&#10;&#13;&#10;&#13;&#10;options.chart.marginRight=60;&#13;&#10;&#13;&#10;},&#13;&#10;&#13;&#10;beforeDrawAxis: function(axis, axisOptions, chart, axisIndex)&#13;&#10;{&#13;&#10;if ((axis.coll == &#039;yAxis&#039;) &amp;&amp; (axisIndex == 1)) {&#13;&#10;&#13;&#10;    axisOptions.labels.formatter = function () {&#13;&#10;        if (this.isFirst || this.isLast) {&#13;&#10;                    if (this.isFirst === undefined)&#13;&#10;                        return this.value.toFixed(2);&#13;&#10;                    var val = this.value;&#13;&#10;                    if (Math.abs(val) &gt;= 1000000000000) {&#13;&#10;                        val = parseInt(val / 100000000000) / 10;&#13;&#10;                        val = &quot;&quot; + val + &quot;T&quot;;&#13;&#10;                    } else if (Math.abs(val) &gt;= 1000000000) {&#13;&#10;                        val = parseInt(val / 100000000) / 10;&#13;&#10;                        val = &quot;&quot; + val + &quot;B&quot;;&#13;&#10;                    } else if (Math.abs(val) &gt;= 1000000) {&#13;&#10;                        val = parseInt(val / 100000) / 10;&#13;&#10;                        val = &quot;&quot; + val + &quot;M&quot;;&#13;&#10;                    } else if (Math.abs(val) &gt;= 1000) {&#13;&#10;                        val = parseInt(val / 100) / 10;&#13;&#10;                        val = &quot;&quot; + val + &quot;K&quot;;&#13;&#10;                    }&#13;&#10;                    return val;   &#13;&#10;        }&#13;&#10;        return &#039;&#039;;&#13;&#10;    }&#13;&#10;}&#13;&#10;},&#13;&#10;&#13;&#10;&#13;&#10;afterRendering: function(chart)&#13;&#10;{&#13;&#10;    lastIndex = chart.getCore().series[0].xData.length - 1;&#13;&#10;    chart.getCore().series[0].data[lastIndex].update({&#13;&#10;                        marker: {&#13;&#10;                            enabled: true,&#13;&#10;                            symbol: &#039;circle&#039;&#13;&#10;                        }&#13;&#10;                    }, true);&#13;&#10;    chart.getCore().series[1].data[lastIndex].update({&#13;&#10;                        marker: {&#13;&#10;                            enabled: true,&#13;&#10;                            symbol: &#039;circle&#039;&#13;&#10;                        }&#13;&#10;                    }, true);&#13;&#10;},"/>
   <extendedProperties name="jschart.zoom" value="xy"/>
-  <extendedProperties name="jschart.series.shadow" value="true"/>
+  <extendedProperties name="jschart.series.shadow" value="false"/>
+  <extendedProperties name="jschart.animation" value="false"/>
+  <extendedProperties name="chart.palette.type" value="color"/>
+  <extendedProperties name="chart.marker.auto" value="true"/>
   <sampleData>
    <baseSampleData dataSetRepresentation="01/05/2000,02/01/2000,04/12/2000,03/12/2000,02/29/2000"/>
    <orthogonalSampleData dataSetRepresentation="6,4,12,8,10" seriesDefinitionIndex="0"/>
@@ -2291,7 +2346,7 @@ last1%2;</expression>
    </outline>
   </emptyMessage>
   <axes type="3" staggered="false" interval="3">
-   <title>
+   <title visible="false">
     <background _nil="1"/>
     <outline>
      <color _nil="1"/>
@@ -2310,7 +2365,7 @@ last1%2;</expression>
     <seriesDefinitions>
      <query definition=""/>
      <seriesPalette>
-      <entries _body=",255,60,152,171"/>
+      <entries _body=",255,8,83,211"/>
       <entries _body=",255,242,88,106"/>
       <entries _body=",255,232,172,57"/>
       <entries _body=",255,128,255,128"/>
@@ -2343,7 +2398,7 @@ last1%2;</expression>
       <entries _body=",255,255,255,255"/>
       <entries _body=",255,255,128,0"/>
      </seriesPalette>
-     <series _type="LineSeries" seriesIdentifier="Market Value" stacked="false" translucent="false">
+     <series _type="LineSeries" seriesIdentifier="Market Value" stacked="false" translucent="false" curve="true">
       <label>
        <background _nil="1"/>
        <outline>
@@ -2362,7 +2417,7 @@ last1%2;</expression>
        </action>
       </triggers>
       <curveFitting _nil="1"/>
-      <markers visible="false">
+      <markers type="0" size="4" visible="false">
        <outline/>
       </markers>
       <lineAttributes thickness="2">
@@ -2385,18 +2440,18 @@ last1%2;</expression>
     </label>
     <formatSpecifier _type="JavaNumberFormatSpecifier" pattern="0.0" multiplier="1.0E-9"/>
     <majorGrid>
-     <lineAttributes visible="true">
-      <color _nil="1"/>
+     <lineAttributes thickness="1" visible="true">
+      <color _body=",255,242,242,242"/>
      </lineAttributes>
-     <tickAttributes>
+     <tickAttributes visible="false">
       <color _nil="1"/>
      </tickAttributes>
     </majorGrid>
     <minorGrid>
-     <lineAttributes>
+     <lineAttributes visible="false">
       <color _nil="1"/>
      </lineAttributes>
-     <tickAttributes>
+     <tickAttributes visible="false">
       <color _nil="1"/>
      </tickAttributes>
     </minorGrid>
@@ -2417,7 +2472,7 @@ last1%2;</expression>
     <seriesDefinitions>
      <query definition=""/>
      <seriesPalette>
-      <entries _body=",255,161,214,227"/>
+      <entries _body=",255,8,153,80"/>
       <entries _body=",255,232,172,57"/>
       <entries _body=",255,128,255,128"/>
       <entries _body=",255,64,128,128"/>
@@ -2450,7 +2505,7 @@ last1%2;</expression>
       <entries _body=",255,255,128,0"/>
       <entries _body=",255,80,166,218"/>
      </seriesPalette>
-     <series _type="LineSeries" seriesIdentifier="Value at Risk" stacked="false" translucent="false">
+     <series _type="LineSeries" seriesIdentifier="Value at Risk" stacked="false" translucent="false" curve="true">
       <label>
        <background _nil="1"/>
        <outline>
@@ -2469,7 +2524,7 @@ last1%2;</expression>
        </action>
       </triggers>
       <curveFitting _nil="1"/>
-      <markers visible="false">
+      <markers type="0" size="4" visible="false">
        <outline/>
       </markers>
       <lineAttributes thickness="2">
@@ -2492,21 +2547,25 @@ last1%2;</expression>
     </label>
     <formatSpecifier _type="JavaNumberFormatSpecifier" pattern="0.0" multiplier="1.0E-9"/>
     <majorGrid>
-     <lineAttributes>
+     <lineAttributes visible="false">
       <color _nil="1"/>
      </lineAttributes>
-     <tickAttributes>
+     <tickAttributes visible="false">
       <color _nil="1"/>
      </tickAttributes>
     </majorGrid>
     <minorGrid>
-     <lineAttributes>
+     <lineAttributes visible="false">
       <color _nil="1"/>
      </lineAttributes>
-     <tickAttributes>
+     <tickAttributes visible="false">
       <color _nil="1"/>
      </tickAttributes>
     </minorGrid>
+    <scale>
+     <min _type="NumberDataElement" value="4.0E8"/>
+     <max _type="NumberDataElement" value="1.6E9"/>
+    </scale>
     <origin type="1">
      <value _nil="1"/>
     </origin>
@@ -2578,21 +2637,22 @@ last1%2;</expression>
    </label>
    <formatSpecifier _type="JavaDateFormatSpecifier" pattern="M/yy"/>
    <majorGrid>
-    <lineAttributes>
-     <color _nil="1"/>
+    <lineAttributes visible="false">
+     <color _body=",255,242,242,242"/>
     </lineAttributes>
-    <tickAttributes>
+    <tickAttributes visible="false">
      <color _nil="1"/>
     </tickAttributes>
    </majorGrid>
    <minorGrid>
-    <lineAttributes>
+    <lineAttributes visible="false">
      <color _nil="1"/>
     </lineAttributes>
-    <tickAttributes>
+    <tickAttributes visible="false">
      <color _nil="1"/>
     </tickAttributes>
    </minorGrid>
+   <scale tickBetweenCategories="false"/>
    <origin>
     <value _nil="1"/>
    </origin>
@@ -2615,8 +2675,8 @@ last1%2;</expression>
                             </structure>
                         </list-property>
                         <property name="inheritColumns">false</property>
-                        <property name="height">2in</property>
-                        <property name="width">3.458in</property>
+                        <property name="height">120pt</property>
+                        <property name="width">280pt</property>
                         <property name="dataSet">Total Plan Data Set</property>
                         <list-property name="boundDataColumns">
                             <structure>
@@ -2669,21 +2729,36 @@ last1%2;</expression>
                     </extended-item>
                 </cell>
             </row>
-            <row id="1036">
-                <cell id="1037">
-                    <property name="paddingLeft">0pt</property>
+            <row id="1271">
+                <cell id="1272">
+                    <property name="colSpan">1</property>
+                    <property name="rowSpan">1</property>
+                    <property name="textAlign">center</property>
+                    <label id="1259">
+                        <property name="fontWeight">200</property>
+                        <property name="color">#333333</property>
+                        <property name="paddingTop">26px</property>
+                        <property name="paddingBottom">0pt</property>
+                        <text-property name="text">% of Contribution to Active Risk</text-property>
+                    </label>
+                </cell>
+            </row>
+            <row id="1245">
+                <cell id="1246">
+                    <property name="textAlign">center</property>
+                    <property name="verticalAlign">middle</property>
                     <extended-item extensionName="Chart" id="1038">
                         <xml-property name="xmlRepresentation"><![CDATA[<ActuateChart version="2.6.1">
  <ChartWithAxes version="2.6.1" type="Line Chart" subType="Overlay" dimension="0">
   <block>
-   <children _type="TitleBlock">
+   <children _type="TitleBlock" visible="false">
     <outline>
      <color _nil="1"/>
     </outline>
     <cursor type="0"/>
     <label>
      <caption value="% Contribution to Active Risk ">
-      <font name="Verdana" size="10.0" bold="false"/>
+      <font name="canada-type-gibson" size="10.0" bold="false"/>
      </caption>
      <background _nil="1"/>
      <outline>
@@ -2701,7 +2776,7 @@ last1%2;</expression>
      </outline>
     </clientArea>
    </children>
-   <children _type="Legend" stretch="2" orientation="0" position="1">
+   <children _type="Legend" stretch="2" visible="false" orientation="0" position="1">
     <outline visible="false">
      <color _nil="1"/>
     </outline>
@@ -2753,9 +2828,13 @@ last1%2;</expression>
   <extendedProperties name="enable.area.alt" value="false"/>
   <extendedProperties name="enable.drill.category" value="true"/>
   <extendedProperties name="enable.drill.series" value="true"/>
-  <extendedProperties name="jschart.client.script" value="beforeRendering: function(options, chart)&#13;&#10;{&#13;&#10;    options.legend.margin = 0;&#13;&#10;},"/>
+  <extendedProperties name="jschart.client.script" value="beforeDrawDataPoint: function(point, pointOptions, chart, seriesIndex, pointIndex)&#13;&#10;{&#13;&#10;&#13;&#10;if (seriesIndex == 0) {&#13;&#10;    if ( (chart._chart.series[0].data.length - 1) == pointIndex) {&#13;&#10;        chart._chart.options.series[0].data[pointIndex].dataLabels = {enabled:true};&#13;&#10;    }&#13;&#10;}&#13;&#10;&#13;&#10;if (seriesIndex == 1) {&#13;&#10;    if ( (chart._chart.series[1].data.length - 1) == pointIndex) {&#13;&#10;        chart._chart.options.series[1].data[pointIndex].dataLabels = {enabled:true};&#13;&#10;    }&#13;&#10;}&#13;&#10;&#13;&#10;if (seriesIndex == 2) {&#13;&#10;    if ( (chart._chart.series[2].data.length - 1) == pointIndex) {&#13;&#10;        chart._chart.options.series[2].data[pointIndex].dataLabels = {enabled:true};&#13;&#10;    }&#13;&#10;}&#13;&#10;&#13;&#10;if (seriesIndex == 3) {&#13;&#10;    if ( (chart._chart.series[3].data.length - 1) == pointIndex) {&#13;&#10;        chart._chart.options.series[3].data[pointIndex].dataLabels = {enabled:true};&#13;&#10;    }&#13;&#10;}&#13;&#10;&#13;&#10;},&#13;&#10;&#13;&#10;&#13;&#10;beforeDrawSeries: function(series, seriesOptions, chart, seriesIndex)&#13;&#10;{&#13;&#10;seriesOptions.dataLabels =  {&#13;&#10;    enabled:false,&#13;&#10;    crop: false,&#13;&#10;    overflow: &#039;none&#039;,&#13;&#10;    align: &#039;left&#039;,&#13;&#10;    y: 5,&#13;&#10;    formatter: function() {&#13;&#10;        return &#039;&lt;span sty&#039;+&#039;le=&quot;color:&#039;+this.series.color+&#039;&quot;&gt;&#039;+this.series.name+&#039;&lt;/span&gt;&#039;;&#13;&#10;    }&#13;&#10;};&#13;&#10;&#13;&#10;},&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;beforeGeneration: function(options)&#13;&#10;{&#13;&#10;options.chart.spacingTop=0;&#13;&#10;//options.chart.spacingBottom=15;&#13;&#10;&#13;&#10;//options.chart.margin = [0,0,0,0];&#13;&#10;&#13;&#10;&#13;&#10;options.chart.marginRight=60;&#13;&#10;&#13;&#10;},&#13;&#10;&#13;&#10;&#13;&#10;beforeDrawAxis: function(axis, axisOptions, chart, axisIndex)&#13;&#10;{&#13;&#10;if ((axis.coll == &#039;yAxis&#039;) &amp;&amp; (axisIndex == 1)) {&#13;&#10;    axisOptions.labels.formatter = function () {&#13;&#10;        if (this.isFirst || this.isLast) {&#13;&#10;            return this.value;&#13;&#10;        }&#13;&#10;        return &#039;&#039;;&#13;&#10;    }&#13;&#10;}&#13;&#10;},&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;afterRendering: function(chart)&#13;&#10;{&#13;&#10;    lastIndex = chart.getCore().series[0].xData.length - 1;&#13;&#10;    &#13;&#10;    for (i=0;i &lt; chart.getCore().series.length; i++) {&#13;&#10;    &#13;&#10;    chart.getCore().series[i].data[lastIndex].update({&#13;&#10;                        marker: {&#13;&#10;                            enabled: true,&#13;&#10;                            symbol: &#039;circle&#039;&#13;&#10;                        }&#13;&#10;                    }, true);&#13;&#10;    }&#13;&#10;},"/>
   <extendedProperties name="jschart.zoom" value="xy"/>
-  <extendedProperties name="jschart.series.shadow" value="true"/>
+  <extendedProperties name="jschart.series.shadow" value="false"/>
+  <extendedProperties name="jschart.animation" value="false"/>
+  <extendedProperties name="chart.palette.type" value="color"/>
+  <extendedProperties name="chart.marker.auto" value="true"/>
+  <extendedProperties name="chart.palette.auto" value="false"/>
   <sampleData>
    <baseSampleData dataSetRepresentation="01/05/2000,02/01/2000,04/12/2000,03/12/2000,02/29/2000"/>
    <orthogonalSampleData dataSetRepresentation="6,4,12,8,10" seriesDefinitionIndex="0"/>
@@ -2772,7 +2851,7 @@ last1%2;</expression>
    </outline>
   </emptyMessage>
   <axes type="3" staggered="false" interval="3">
-   <title>
+   <title visible="false">
     <background _nil="1"/>
     <outline>
      <color _nil="1"/>
@@ -2790,7 +2869,41 @@ last1%2;</expression>
     </title>
     <seriesDefinitions>
      <query definition=""/>
-     <series _type="LineSeries" seriesIdentifier="Covariance" stacked="false">
+     <seriesPalette>
+      <entries _body=",255,8,83,211"/>
+      <entries _body=",255,8,153,80"/>
+      <entries _body=",255,39,59,110"/>
+      <entries _body=",255,5,104,54"/>
+      <entries _body=",255,64,128,128"/>
+      <entries _body=",255,128,128,192"/>
+      <entries _body=",255,170,85,85"/>
+      <entries _body=",255,128,128,0"/>
+      <entries _body=",255,192,192,192"/>
+      <entries _body=",255,255,255,128"/>
+      <entries _body=",255,128,192,128"/>
+      <entries _body=",255,7,146,94"/>
+      <entries _body=",255,0,128,255"/>
+      <entries _body=",255,255,128,192"/>
+      <entries _body=",255,0,255,255"/>
+      <entries _body=",255,255,128,128"/>
+      <entries _body=",255,0,128,192"/>
+      <entries _body=",255,128,128,192"/>
+      <entries _body=",255,255,0,255"/>
+      <entries _body=",255,128,64,64"/>
+      <entries _body=",255,255,128,64"/>
+      <entries _body=",255,80,240,120"/>
+      <entries _body=",255,0,64,128"/>
+      <entries _body=",255,128,0,64"/>
+      <entries _body=",255,255,0,128"/>
+      <entries _body=",255,128,128,64"/>
+      <entries _body=",255,128,128,128"/>
+      <entries _body=",255,255,128,255"/>
+      <entries _body=",255,0,64,0"/>
+      <entries _body=",255,0,0,0"/>
+      <entries _body=",255,255,255,255"/>
+      <entries _body=",255,255,128,0"/>
+     </seriesPalette>
+     <series _type="LineSeries" seriesIdentifier="Covariance" stacked="false" curve="true">
       <label>
        <background _nil="1"/>
        <outline>
@@ -2809,7 +2922,7 @@ last1%2;</expression>
        </action>
       </triggers>
       <curveFitting _nil="1"/>
-      <markers visible="false">
+      <markers type="0" size="4" visible="false">
        <outline/>
       </markers>
       <lineAttributes thickness="2">
@@ -2819,7 +2932,41 @@ last1%2;</expression>
     </seriesDefinitions>
     <seriesDefinitions>
      <query definition=""/>
-     <series _type="LineSeries" seriesIdentifier="Term Structure" stacked="false">
+     <seriesPalette>
+      <entries _body=",255,8,153,80"/>
+      <entries _body=",255,39,59,110"/>
+      <entries _body=",255,5,104,54"/>
+      <entries _body=",255,64,128,128"/>
+      <entries _body=",255,128,128,192"/>
+      <entries _body=",255,170,85,85"/>
+      <entries _body=",255,128,128,0"/>
+      <entries _body=",255,192,192,192"/>
+      <entries _body=",255,255,255,128"/>
+      <entries _body=",255,128,192,128"/>
+      <entries _body=",255,7,146,94"/>
+      <entries _body=",255,0,128,255"/>
+      <entries _body=",255,255,128,192"/>
+      <entries _body=",255,0,255,255"/>
+      <entries _body=",255,255,128,128"/>
+      <entries _body=",255,0,128,192"/>
+      <entries _body=",255,128,128,192"/>
+      <entries _body=",255,255,0,255"/>
+      <entries _body=",255,128,64,64"/>
+      <entries _body=",255,255,128,64"/>
+      <entries _body=",255,80,240,120"/>
+      <entries _body=",255,0,64,128"/>
+      <entries _body=",255,128,0,64"/>
+      <entries _body=",255,255,0,128"/>
+      <entries _body=",255,128,128,64"/>
+      <entries _body=",255,128,128,128"/>
+      <entries _body=",255,255,128,255"/>
+      <entries _body=",255,0,64,0"/>
+      <entries _body=",255,0,0,0"/>
+      <entries _body=",255,255,255,255"/>
+      <entries _body=",255,255,128,0"/>
+      <entries _body=",255,8,83,211"/>
+     </seriesPalette>
+     <series _type="LineSeries" seriesIdentifier="Term Structure" stacked="false" curve="true">
       <label>
        <background _nil="1"/>
        <outline>
@@ -2838,7 +2985,7 @@ last1%2;</expression>
        </action>
       </triggers>
       <curveFitting _nil="1"/>
-      <markers visible="false">
+      <markers type="1" size="4" visible="false">
        <outline/>
       </markers>
       <lineAttributes thickness="2">
@@ -2848,7 +2995,41 @@ last1%2;</expression>
     </seriesDefinitions>
     <seriesDefinitions>
      <query definition=""/>
-     <series _type="LineSeries" seriesIdentifier="Style" stacked="false">
+     <seriesPalette>
+      <entries _body=",255,39,59,110"/>
+      <entries _body=",255,5,104,54"/>
+      <entries _body=",255,64,128,128"/>
+      <entries _body=",255,128,128,192"/>
+      <entries _body=",255,170,85,85"/>
+      <entries _body=",255,128,128,0"/>
+      <entries _body=",255,192,192,192"/>
+      <entries _body=",255,255,255,128"/>
+      <entries _body=",255,128,192,128"/>
+      <entries _body=",255,7,146,94"/>
+      <entries _body=",255,0,128,255"/>
+      <entries _body=",255,255,128,192"/>
+      <entries _body=",255,0,255,255"/>
+      <entries _body=",255,255,128,128"/>
+      <entries _body=",255,0,128,192"/>
+      <entries _body=",255,128,128,192"/>
+      <entries _body=",255,255,0,255"/>
+      <entries _body=",255,128,64,64"/>
+      <entries _body=",255,255,128,64"/>
+      <entries _body=",255,80,240,120"/>
+      <entries _body=",255,0,64,128"/>
+      <entries _body=",255,128,0,64"/>
+      <entries _body=",255,255,0,128"/>
+      <entries _body=",255,128,128,64"/>
+      <entries _body=",255,128,128,128"/>
+      <entries _body=",255,255,128,255"/>
+      <entries _body=",255,0,64,0"/>
+      <entries _body=",255,0,0,0"/>
+      <entries _body=",255,255,255,255"/>
+      <entries _body=",255,255,128,0"/>
+      <entries _body=",255,8,83,211"/>
+      <entries _body=",255,8,153,80"/>
+     </seriesPalette>
+     <series _type="LineSeries" seriesIdentifier="Currency Risk" stacked="false" curve="true">
       <label>
        <background _nil="1"/>
        <outline>
@@ -2867,7 +3048,7 @@ last1%2;</expression>
        </action>
       </triggers>
       <curveFitting _nil="1"/>
-      <markers visible="false">
+      <markers type="2" size="4" visible="false">
        <outline/>
       </markers>
       <lineAttributes thickness="2">
@@ -2877,7 +3058,41 @@ last1%2;</expression>
     </seriesDefinitions>
     <seriesDefinitions>
      <query definition=""/>
-     <series _type="LineSeries" seriesIdentifier="Spread" stacked="false">
+     <seriesPalette>
+      <entries _body=",255,5,104,54"/>
+      <entries _body=",255,64,128,128"/>
+      <entries _body=",255,128,128,192"/>
+      <entries _body=",255,170,85,85"/>
+      <entries _body=",255,128,128,0"/>
+      <entries _body=",255,192,192,192"/>
+      <entries _body=",255,255,255,128"/>
+      <entries _body=",255,128,192,128"/>
+      <entries _body=",255,7,146,94"/>
+      <entries _body=",255,0,128,255"/>
+      <entries _body=",255,255,128,192"/>
+      <entries _body=",255,0,255,255"/>
+      <entries _body=",255,255,128,128"/>
+      <entries _body=",255,0,128,192"/>
+      <entries _body=",255,128,128,192"/>
+      <entries _body=",255,255,0,255"/>
+      <entries _body=",255,128,64,64"/>
+      <entries _body=",255,255,128,64"/>
+      <entries _body=",255,80,240,120"/>
+      <entries _body=",255,0,64,128"/>
+      <entries _body=",255,128,0,64"/>
+      <entries _body=",255,255,0,128"/>
+      <entries _body=",255,128,128,64"/>
+      <entries _body=",255,128,128,128"/>
+      <entries _body=",255,255,128,255"/>
+      <entries _body=",255,0,64,0"/>
+      <entries _body=",255,0,0,0"/>
+      <entries _body=",255,255,255,255"/>
+      <entries _body=",255,255,128,0"/>
+      <entries _body=",255,8,83,211"/>
+      <entries _body=",255,8,153,80"/>
+      <entries _body=",255,39,59,110"/>
+     </seriesPalette>
+     <series _type="LineSeries" seriesIdentifier="Spread" stacked="false" curve="true">
       <label>
        <background _nil="1"/>
        <outline>
@@ -2896,7 +3111,7 @@ last1%2;</expression>
        </action>
       </triggers>
       <curveFitting _nil="1"/>
-      <markers visible="false">
+      <markers type="3" size="4" visible="false">
        <outline/>
       </markers>
       <lineAttributes thickness="2">
@@ -2919,10 +3134,10 @@ last1%2;</expression>
     </label>
     <formatSpecifier _type="NumberFormatSpecifier" prefix="" suffix="" fractionDigits="0"/>
     <majorGrid>
-     <lineAttributes visible="true">
-      <color _nil="1"/>
+     <lineAttributes thickness="1" visible="true">
+      <color _body=",255,242,242,242"/>
      </lineAttributes>
-     <tickAttributes>
+     <tickAttributes visible="false">
       <color _nil="1"/>
      </tickAttributes>
     </majorGrid>
@@ -2930,10 +3145,14 @@ last1%2;</expression>
      <lineAttributes visible="false">
       <color _nil="1"/>
      </lineAttributes>
-     <tickAttributes>
+     <tickAttributes visible="false">
       <color _nil="1"/>
      </tickAttributes>
     </minorGrid>
+    <scale>
+     <min _type="NumberDataElement" value="-2.5"/>
+     <max _type="NumberDataElement" value="1.5"/>
+    </scale>
     <origin>
      <value _nil="1"/>
     </origin>
@@ -2941,6 +3160,40 @@ last1%2;</expression>
    </associatedAxes>
    <seriesDefinitions>
     <query definition=""/>
+    <seriesPalette>
+     <entries _body=",255,8,83,211"/>
+     <entries _body=",255,8,153,80"/>
+     <entries _body=",255,39,59,110"/>
+     <entries _body=",255,5,104,54"/>
+     <entries _body=",255,64,128,128"/>
+     <entries _body=",255,128,128,192"/>
+     <entries _body=",255,170,85,85"/>
+     <entries _body=",255,128,128,0"/>
+     <entries _body=",255,192,192,192"/>
+     <entries _body=",255,255,255,128"/>
+     <entries _body=",255,128,192,128"/>
+     <entries _body=",255,7,146,94"/>
+     <entries _body=",255,0,128,255"/>
+     <entries _body=",255,255,128,192"/>
+     <entries _body=",255,0,255,255"/>
+     <entries _body=",255,255,128,128"/>
+     <entries _body=",255,0,128,192"/>
+     <entries _body=",255,128,128,192"/>
+     <entries _body=",255,255,0,255"/>
+     <entries _body=",255,128,64,64"/>
+     <entries _body=",255,255,128,64"/>
+     <entries _body=",255,80,240,120"/>
+     <entries _body=",255,0,64,128"/>
+     <entries _body=",255,128,0,64"/>
+     <entries _body=",255,255,0,128"/>
+     <entries _body=",255,128,128,64"/>
+     <entries _body=",255,128,128,128"/>
+     <entries _body=",255,255,128,255"/>
+     <entries _body=",255,0,64,0"/>
+     <entries _body=",255,0,0,0"/>
+     <entries _body=",255,255,255,255"/>
+     <entries _body=",255,255,128,0"/>
+    </seriesPalette>
     <series seriesIdentifier="">
      <label>
       <background _nil="1"/>
@@ -2972,21 +3225,22 @@ last1%2;</expression>
    </label>
    <formatSpecifier _type="JavaDateFormatSpecifier" pattern="M/yy"/>
    <majorGrid>
-    <lineAttributes>
-     <color _nil="1"/>
+    <lineAttributes visible="false">
+     <color _body=",255,242,242,242"/>
     </lineAttributes>
-    <tickAttributes>
+    <tickAttributes visible="false">
      <color _nil="1"/>
     </tickAttributes>
    </majorGrid>
    <minorGrid>
-    <lineAttributes>
+    <lineAttributes visible="false">
      <color _nil="1"/>
     </lineAttributes>
-    <tickAttributes>
+    <tickAttributes visible="false">
      <color _nil="1"/>
     </tickAttributes>
    </minorGrid>
+   <scale tickBetweenCategories="false"/>
    <origin>
     <value _nil="1"/>
    </origin>
@@ -3019,8 +3273,8 @@ last1%2;</expression>
                             </structure>
                         </list-property>
                         <property name="inheritColumns">false</property>
-                        <property name="height">2.5in</property>
-                        <property name="width">3.458in</property>
+                        <property name="height">270pt</property>
+                        <property name="width">280pt</property>
                         <property name="dataSet">TS1 Data Set</property>
                         <list-property name="boundDataColumns">
                             <structure>

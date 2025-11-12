@@ -59,7 +59,7 @@ function renderApp() {
 
 function renderDashboard(dashboardName) {
 	
-	var width = $("#dashboardContainer").width();
+	var width = $("#dashboardContainer").width()*.99;
 	//var height = $("#dashboardContainer").height();
 	var height = $(window).height();
 	//console.log (width);
@@ -81,7 +81,58 @@ function renderDashboard(dashboardName) {
 	birtApp.dashboard.setIsDesigner(false);
 	birtApp.dashboard.setHeight(height);
 	birtApp.dashboard.setWidth(width)
-	birtApp.dashboard.submit( function() {} );
+	birtApp.dashboard.submit( function() {
+
+
+	// CWONG
+	// 2025-08-31		Clean-up / hack to make the dashboard show 100% in 25.2. 
+	//					Added the font switcheroo.
+		
+let node = document.getElementById("dashboardContainer");
+if (node && node.firstElementChild && node.firstElementChild.tagName === "DIV") {
+  node.firstElementChild.style.width = "100%";
+}
+for (let i = 0; i < 5; i++) {
+  if (node && node.firstElementChild && node.firstElementChild.tagName === "DIV") {
+    node = node.firstElementChild;
+  } else {
+    node = null;
+    break;
+  }
+}
+if (node) {
+  node.style.overflowX = "hidden";
+  //node.style.background = "white";
+}		
+		
+		
+		document.querySelectorAll('*').forEach(el => {
+  const fontFamily = window.getComputedStyle(el).fontFamily;
+  // Check if font-family includes "Lato"
+  if (fontFamily && fontFamily.includes('Lato')) {
+    el.style.fontFamily = fontFamily.replace(/Lato/g, 'canada-type-gibson');
+  }
+
+  if (fontFamily && fontFamily.includes('Verdana')) {
+    el.style.fontFamily = fontFamily.replace(/Verdana/g, 'canada-type-gibson');
+  }
+
+  if (fontFamily && fontFamily.includes('Arial')) {
+    el.style.fontFamily = fontFamily.replace(/Arial/g, 'canada-type-gibson');
+  }
+  
+  if (fontFamily && fontFamily.includes('Lucida Grande')) {
+    el.style.fontFamily = fontFamily.replace(/Lucida Grande/g, 'canada-type-gibson');
+  }  
+  if (fontFamily && fontFamily.includes('OpenText Sans')) {
+    el.style.fontFamily = fontFamily.replace(/OpenText Sans/g, 'canada-type-gibson');
+  }
+  if (fontFamily && fontFamily.includes('OpenTextSans')) {
+    el.style.fontFamily = fontFamily.replace(/OpenTextSans/g, 'canada-type-gibson');
+  }
+});		
+		
+	} );
 }
 
 function renderReport(reportName, reportParameters) {
