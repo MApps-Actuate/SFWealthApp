@@ -3987,7 +3987,7 @@ async function initAviator() {
 	document.getElementById("right-panel").innerHTML += '<intelligence-aviator host="https://mbir-cia-app-mbir.us.opentext.com" botId="75ae25f8-c305-423f-98aa-863c45bf6c9a"></intelligence-aviator>';
 
   const username = "tm-demouser@opentext.com";
-  const password = "demoUser@3";
+  const password = "demoUser@4";
   const tenentId = "4a6eb419-4a9e-4a79-adcd-be565066714f"; //OTSalesDM
 
   const authData = await login(tenentId, username, password);

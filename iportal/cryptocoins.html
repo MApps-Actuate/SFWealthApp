@@ -1,0 +1,38 @@
+<script>
+	// cwong workaround -- add LOGO
+	
+if ((window.parent["sfwealthLogo"] === undefined) || (window.parent["sfwealthLogo"] == false)) {
+  window.parent["sfwealthLogo"] = true;
+  const firstNavLink = window.parent.document.querySelector('a.nav-link');
+  if (firstNavLink && firstNavLink.parentElement) {
+     firstNavLink.parentElement.innerHTML = "<i class=''></i><IMG HEIGHT='28' WIDTH='153' SRC='https://td-mag.eimdemo.com/iportal/cwong/images/SFWealthLogo2024.png'></IMG>";
+  }
+}
+</script>
+
+<!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+  <div class="tradingview-widget-container__widget"></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-crypto-coins-heatmap.js" async>
+  {
+  "dataSource": "Crypto",
+  "blockSize": "market_cap_calc",
+  "blockColor": "24h_close_change|5",
+  "locale": "en",
+  "symbolUrl": "",
+  "colorTheme": "light",
+  "hasTopBar": false,
+  "isDataSetEnabled": false,
+  "isZoomEnabled": true,
+  "hasSymbolTooltip": true,
+  "isMonoSize": false,
+  "width": 620,
+  "height": 250
+}
+  </script>
+</div>
+<!-- TradingView Widget END -->
+<script>
+	//cwong workaround -- remove iframe border
+	this.frameElement.style.border = 'none';
+</script>
