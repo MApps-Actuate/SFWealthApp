@@ -3973,8 +3973,8 @@ rows.forEach((row, index) => {
                                     <property name="overflow">hidden</property>
                                     <expression name="bookmark" type="javascript">"aviatorPanel"</expression>
                                     <property name="contentType">html</property>
-                                    <text-property name="content"><![CDATA[
-				<div class="right-panel" id="right-panel">
+                                    <text-property name="content"><![CDATA[				<script src="https://mbir-cia-app-mbir.dev.ca.opentext.com/aviator/jsapi" type="text/javascript"></script>
+				<div class="right-panel" id="right-panel" style="overflow-y: scroll;">
 
 				</div>
 
@@ -3992,10 +3992,6 @@ async function initAviator() {
 
   const authData = await login(tenentId, username, password);
   if(authData?.access_token) {
-  	const jsapi = document.createElement('script');
-  	jsapi.src = "https://mbir-cia-app-mbir.dev.ca.opentext.com/aviator/jsapi"; //"https://mbir-cia-data-mbir.us.opentext.com/cia/api/v0/data-access/aviator/jsapi";
-  	jsapi.type = "text/javascript";
-  	document.head.appendChild(jsapi);
     const aviatorElement = document.querySelector("intelligence-aviator");
     if(aviatorElement){
       aviatorElement.setAttribute("token", authData.access_token);

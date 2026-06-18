@@ -3973,22 +3973,39 @@ rows.forEach((row, index) => {
                                     <property name="overflow">hidden</property>
                                     <expression name="bookmark" type="javascript">"aviatorPanel"</expression>
                                     <property name="contentType">html</property>
-                                    <text-property name="content"><![CDATA[				<script src="https://mbir-cia-app-mbir.dev.ca.opentext.com/aviator/jsapi" type="text/javascript"></script>
-				<div class="right-panel" id="right-panel" style="overflow-y: scroll;">
+                                    <text-property name="content"><![CDATA[
+				<div class="right-panel" id="right-panel">
 
 				</div>
 
 
 <script>
 
+  const username = "tm-demouser@opentext.com";
+  const password = "demoUser@5";
+  const tenentId = "4a6eb419-4a9e-4a79-adcd-be565066714f"; //OTSalesDM
+  
 async function initAviator() {
 
 	//workaround: tag is stripped when generating report
-	document.getElementById("right-panel").innerHTML += '<intelligence-aviator host="https://mbir-cia-app-mbir.us.opentext.com" botId="75ae25f8-c305-423f-98aa-863c45bf6c9a"></intelligence-aviator>';
+	document.getElementById("right-panel").innerHTML += '<intelligence-aviator host="https://mbir-cia-app-mbir.us.opentext.com" botId="bb034b6b-f4fb-4f0f-93fe-fe37b1b83e62"></intelligence-aviator>';
 
-  const username = "tm-demouser@opentext.com";
-  const password = "demoUser@3";
-  const tenentId = "4a6eb419-4a9e-4a79-adcd-be565066714f"; //OTSalesDM
+
+  const authData = await login(tenentId, username, password);
+  if(authData?.access_token) {
+  	const jsapi = document.createElement('script');
+  	jsapi.src = "https://mbir-cia-app-mbir.us.opentext.com/aviator/jsapi"; //"https://mbir-cia-app-mbir.dev.ca.opentext.com/aviator/jsapi"; //"https://mbir-cia-data-mbir.us.opentext.com/cia/api/v0/data-access/aviator/jsapi";
+  	jsapi.type = "text/javascript";
+  	document.head.appendChild(jsapi);
+    const aviatorElement = document.querySelector("intelligence-aviator");
+    if(aviatorElement){
+      aviatorElement.setAttribute("token", authData.access_token);
+      refreshAviator = (authData.expires_in - 60) * 1000; //get seconds, convert to milliseconds
+    }
+  }
+}
+
+async function aviatorKeepAlive() {
 
   const authData = await login(tenentId, username, password);
   if(authData?.access_token) {
@@ -4042,7 +4059,7 @@ async function login(tenantId, username, password) {
 }
 var refreshAviator = 780000;
 setInterval(function() { 
-						initAviator();
+						aviatorKeepAlive(); //initAviator();
 						//console.log("aviator keep alive");
 					}, refreshAviator);
 
@@ -4079,7 +4096,8 @@ function setRightPanelStyles() {
         // Scrolling and Layout
         //style.setProperty('display', 'flex', 'important');
         //style.setProperty('flex-direction', 'column');
-        style.setProperty('overflow', 'hidden', 'important');
+        style.setProperty('overflow-x', 'auto', 'important');
+        style.setProperty('overflow-y', 'hidden', 'important');
         
         // Optional: If you want to use the screen-relative sizing instead of 800px
         // style.setProperty('top', '50px', 'important'); 
